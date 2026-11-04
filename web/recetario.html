@@ -1,0 +1,1269 @@
+<title>Recetario de la Abuela</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&family=Young+Serif&display=swap">
+<style>
+/* Layout: single-column phone app (max 560px). Papel picado masthead, sticky search + category chips, recipe cards grouped by category, tabbed recipe detail (Tradicional / Olla exprés / Variantes), fixed bottom nav. Palette: talavera cobalt, chile red, maíz gold, nopal green on a blue-biased paper. */
+:root{
+  --paper:#F4F6FB; --card:#FFFFFF; --ink:#15203B; --muted:#57617D; --line:#DAE0ED;
+  --talavera:#1D4AA0; --talavera-soft:#E4EBFA;
+  --chile:#AE281D; --chile-soft:#FAE9E6;
+  --maiz:#D4951A; --maiz-soft:#FBF1DC;
+  --nopal:#2A7448; --nopal-soft:#E1F1E7;
+  --rosa:#C4336B; --on-accent:#FFFFFF;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --nav-h:64px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D1322; --card:#151D31; --ink:#E9EDF6; --muted:#9AA4BF; --line:#27324C;
+    --talavera:#8BAAF2; --talavera-soft:#1B2747;
+    --chile:#F2846F; --chile-soft:#35201E;
+    --maiz:#F0C35A; --maiz-soft:#30281A;
+    --nopal:#72C597; --nopal-soft:#163024;
+    --rosa:#EE80A9; --on-accent:#0D1322; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D1322; --card:#151D31; --ink:#E9EDF6; --muted:#9AA4BF; --line:#27324C;
+  --talavera:#8BAAF2; --talavera-soft:#1B2747;
+  --chile:#F2846F; --chile-soft:#35201E;
+  --maiz:#F0C35A; --maiz-soft:#30281A;
+  --nopal:#72C597; --nopal-soft:#163024;
+  --rosa:#EE80A9; --on-accent:#0D1322; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink); font-family:var(--f-body);
+  font-size:16px; line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:0 calc(var(--nav-h) + env(safe-area-inset-bottom, 0px) + 28px);
+  -webkit-tap-highlight-color:transparent;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--paper)}
+.app{max-width:560px;margin:0 auto}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+a{color:var(--talavera)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--talavera);outline-offset:2px;border-radius:6px}
+.label{font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* Papel picado */
+.picado{display:flex;justify-content:space-between;gap:6px;border-top:2px solid var(--muted);padding-top:0;margin-top:10px}
+.flag{flex:1 1 0;max-width:52px;aspect-ratio:60/68;background:var(--c);-webkit-mask:var(--picado) center/contain no-repeat;mask:var(--picado) center/contain no-repeat;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+.flag:nth-child(5n+1){--c:var(--chile)} .flag:nth-child(5n+2){--c:var(--maiz)} .flag:nth-child(5n+3){--c:var(--talavera)} .flag:nth-child(5n+4){--c:var(--rosa)} .flag:nth-child(5n){--c:var(--nopal)}
+.flag:nth-child(odd){animation-delay:-2.5s}
+.flag:nth-child(3n){animation-duration:6s}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@media (prefers-reduced-motion: reduce){.flag{animation:none}}
+
+/* Home */
+.mast{display:grid;gap:6px;padding-block:18px 6px}
+.mast h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.1rem, 9vw, 2.8rem);line-height:1.02;letter-spacing:-.01em}
+.mast h1 em{font-style:normal;color:var(--chile)}
+.mast p{margin:0;color:var(--muted);max-width:36ch}
+.filters{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--paper);display:grid;gap:10px;padding-block:12px 10px;border-bottom:1px solid var(--line)}
+.search{position:relative}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted);pointer-events:none}
+.search input{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px 11px 40px}
+.search input::placeholder{color:var(--muted)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 13px;font-size:.88rem;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip.pc[aria-pressed="true"]{background:var(--nopal);border-color:var(--nopal);color:var(--on-accent)}
+.count{font-size:.85rem;color:var(--muted);margin:14px 0 0}
+.cat{display:grid;gap:10px;margin-top:22px}
+.cat h2{font-family:var(--f-display);font-weight:400;font-size:1.4rem;display:flex;align-items:baseline;gap:10px}
+.cat h2 small{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 14px 14px 16px}
+.card:hover{border-color:var(--talavera)}
+.card .nm{font-family:var(--f-display);font-size:1.22rem;line-height:1.15}
+.card .en{color:var(--muted);font-size:.92rem}
+.card .chev{grid-row:1 / span 3;grid-column:2;color:var(--muted);display:flex;align-items:center;gap:6px}
+.card .chev .star{color:var(--maiz)}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.badge{font-size:.76rem;padding:3px 9px;border-radius:999px;background:var(--paper);color:var(--muted);border:1px solid var(--line);white-space:nowrap}
+.badge.pc{background:var(--nopal-soft);color:var(--nopal);border-color:transparent;font-weight:700}
+.badge.var{background:var(--talavera-soft);color:var(--talavera);border-color:transparent;font-weight:700}
+.empty{margin-top:28px;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:22px;color:var(--muted)}
+.empty strong{display:block;color:var(--ink);font-family:var(--f-display);font-weight:400;font-size:1.25rem;margin-bottom:4px}
+
+/* Detail */
+.topbar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--paper);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;padding-block:10px;border-bottom:1px solid var(--line)}
+.back{display:inline-flex;align-items:center;gap:4px;text-decoration:none;color:var(--talavera);font-weight:700;padding:6px 4px}
+.topbar .tt{font-family:var(--f-display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transition:opacity .2s}
+.topbar.scrolled .tt{opacity:1}
+.tools{display:flex;gap:6px}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:42px;height:42px;padding:0 10px;border-radius:12px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:.85rem;font-weight:700}
+.icon-btn svg{width:20px;height:20px}
+.icon-btn[aria-pressed="true"].fav{color:var(--maiz);border-color:var(--maiz)}
+.icon-btn[aria-pressed="true"].cook{background:var(--talavera);color:var(--on-accent);border-color:var(--talavera)}
+.cookmsg{font-size:.85rem;color:var(--muted);margin:8px 0 0}
+.hero{display:grid;gap:8px;padding-block:20px 6px}
+.eyebrow{color:var(--chile);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2rem, 8.5vw, 2.6rem);line-height:1.04}
+.hero .en{font-style:italic;color:var(--muted);font-size:1.05rem}
+.story{margin:6px 0 0;max-width:65ch}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:16px}
+.meta div{background:var(--card);padding:10px 12px;display:grid;gap:2px;min-width:0}
+.meta dt{font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.meta dd{margin:0;font-family:var(--f-mono);font-size:.9rem;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.meta .pcv dd{color:var(--nopal)}
+.tabs{display:flex;gap:4px;margin-top:22px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tab{flex:none;background:none;border:0;padding:10px 12px;cursor:pointer;font-weight:700;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--chile)}
+.tab .n{font-family:var(--f-mono);font-size:.78rem;margin-left:4px}
+.panel{display:grid;gap:22px;padding-top:18px}
+.panel h3{font-family:var(--f-display);font-weight:400;font-size:1.35rem;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.reset{background:none;border:0;color:var(--talavera);font-size:.85rem;font-weight:700;cursor:pointer;padding:4px 0;font-family:var(--f-body)}
+.group{font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--chile);margin:14px 0 4px}
+.group:first-child{margin-top:4px}
+.ings{list-style:none;margin:0;padding:0;display:grid}
+.ing{display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:start;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.ing input{appearance:none;-webkit-appearance:none;width:22px;height:22px;margin:1px 0 0;border:2px solid var(--muted);border-radius:6px;background:var(--card);display:grid;place-items:center;cursor:pointer}
+.ing input:checked{background:var(--nopal);border-color:var(--nopal)}
+.ing input:checked::after{content:"";width:6px;height:11px;border:solid var(--on-accent);border-width:0 2.5px 2.5px 0;transform:translateY(-1px) rotate(45deg)}
+.ing.done span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.step{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px 12px 12px;cursor:pointer;line-height:1.55}
+.step .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--talavera-soft);color:var(--talavera);font-family:var(--f-mono);font-size:.85rem}
+.step.done{background:transparent}
+.step.done .t{color:var(--muted)}
+.step.done .n{background:var(--nopal);color:var(--on-accent)}
+.hint{font-size:.85rem;color:var(--muted);margin:-12px 0 0}
+.secretos{background:var(--chile-soft);border-radius:16px;padding:16px 18px}
+.secretos h3{color:var(--chile);font-size:1.2rem}
+.secretos ul{margin:10px 0 0;padding-left:1.1em;display:grid;gap:8px}
+.pcbox{background:var(--nopal-soft);border-radius:16px;padding:16px 18px;display:grid;gap:6px}
+.pcbox .big{font-family:var(--f-mono);font-size:1.05rem;color:var(--nopal);font-variant-numeric:tabular-nums}
+.pcbox p{margin:0}
+.note{background:var(--maiz-soft);border-radius:14px;padding:12px 14px;margin:0}
+.note b{color:var(--ink)}
+details.var{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+details.var summary{list-style:none;cursor:pointer;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;align-items:center}
+details.var summary::-webkit-details-marker{display:none}
+details.var summary .nm{font-family:var(--f-display);font-size:1.25rem;line-height:1.15}
+details.var summary .en{color:var(--muted);font-size:.92rem}
+details.var summary .rg{color:var(--chile);font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700}
+details.var summary .tw{grid-row:1 / span 3;grid-column:2;transition:transform .2s;color:var(--muted)}
+details.var[open] summary .tw{transform:rotate(90deg)}
+details.var .vb{padding:0 16px 16px;display:grid;gap:16px}
+details.var .vb > p{margin:0;max-width:65ch}
+
+/* Despensa */
+.pantry{display:grid;gap:26px;padding-block:20px 0}
+.pantry > header h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2rem, 8.5vw, 2.6rem);line-height:1.04}
+.pantry > header p{margin:6px 0 0;color:var(--muted)}
+.pantry h2{font-family:var(--f-display);font-weight:400;font-size:1.4rem;margin-bottom:10px}
+.chiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:10px}
+.chilec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 14px;display:grid;gap:4px;align-content:start}
+.chilec .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.chilec .nm{font-family:var(--f-display);font-size:1.15rem}
+.heat{display:inline-flex;gap:3px}
+.heat i{width:8px;height:14px;border-radius:4px 4px 6px 6px;background:var(--line)}
+.heat i.on{background:var(--chile)}
+.chilec .f{font-size:.82rem;color:var(--muted)}
+.chilec .u{font-size:.88rem}
+.howto{margin:0;padding-left:1.3em;display:grid;gap:8px;max-width:65ch}
+.gloss{margin:0;display:grid;gap:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.gloss div{padding:12px 14px;border-bottom:1px solid var(--line)}
+.gloss div:last-child{border-bottom:0}
+.gloss dt{font-weight:700}
+.gloss dd{margin:2px 0 0;color:var(--muted)}
+.reading{margin:0;padding-left:1.1em;display:grid;gap:6px;color:var(--muted)}
+.reading i{color:var(--ink)}
+
+/* Bottom nav */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:8;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom, 0px);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.nav .in{max-width:560px;margin:0 auto;height:var(--nav-h);display:grid;grid-template-columns:repeat(3,1fr)}
+.nav a{display:grid;place-items:center;align-content:center;gap:2px;text-decoration:none;color:var(--muted);font-size:.75rem;font-weight:700;letter-spacing:.03em}
+.nav a svg{width:22px;height:22px}
+.nav a[aria-current="page"]{color:var(--chile)}
+
+/* Cook mode */
+html.cook body{font-size:19px}
+html.cook .step{padding:16px}
+html.cook .ing{padding:12px 0}
+</style>
+
+<div class="app" id="app"></div>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="in">
+    <a href="#recetas" data-nav="recetas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/><path d="M9 8h7M9 12h7"/></svg>Recetas</a>
+    <a href="#guardadas" data-nav="guardadas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>Guardadas</a>
+    <a href="#despensa" data-nav="despensa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3c0 2 1 3 3 3"/><path d="M11 6c4 0 7 3 7 7 0 4-3 8-6 8-5 0-7-6-6-11 .5-2.5 2.5-4 5-4z"/></svg>Despensa</a>
+  </div>
+</nav>
+
+<script>
+(function(){
+const PICADO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 68"><path fill-rule="evenodd" d="M0 0H60V60L52.5 68L45 60L37.5 68L30 60L22.5 68L15 60L7.5 68L0 60Z M21 27a9 9 0 1 0 18 0a9 9 0 1 0 -18 0Z M12 8l5 6-5 6-5-6Z M48 8l5 6-5 6-5-6Z M12 34l5 6-5 6-5-6Z M48 34l5 6-5 6-5-6Z M30 42l4 4.5-4 4.5-4-4.5Z M30 5l3 3.5-3 3.5-3-3.5Z"/></svg>';
+document.documentElement.style.setProperty('--picado', 'url("data:image/svg+xml,' + encodeURIComponent(PICADO) + '")');
+
+const CATS = [
+  ["desayunos","Desayunos"],["caldos","Caldos y Pozoles"],["guisos","Guisos y Carnes"],["moles","Moles"],["masa","Masa y Tortilla"],
+  ["frijoles","Frijoles y Arroz"],["salsas","Salsas"],["bebidas","Bebidas"],["pan","Panadería"],["postres","Postres"]
+];
+
+const R = [
+/* ---------------- CALDOS Y POZOLES ---------------- */
+{id:"pozole-rojo", name:"Pozole Rojo", en:"Red pork & hominy stew", cat:"caldos", region:"Jalisco", time:"4 h", yield:"10 bowls",
+ story:"Pozole goes back to pre-Hispanic Mexico, when cacahuazintle corn was cooked for ceremonies. In Jalisco it's red with guajillo and ancho, made with pork head or a mix of shoulder and bony cuts. It's what you make for 15 de septiembre, Nochebuena and New Year's. The broth should be brick red and thin, never a thick chili, and the garnish happens at the table.",
+ ing:[["La carne",["2 lb pork shoulder (espaldilla), in 3-inch chunks","2 lb pork neck bones or spine (espinazo)","2 pig's feet (manitas), split, optional but they give body","1 white onion, halved","1 head garlic, halved crosswise","5 quarts water","1 tbsp salt, plus more to taste"]],
+      ["El maíz",["2 lb precooked cacahuazintle hominy (maíz pozolero, sold in bags at Mexican markets), rinsed, or 2 cans (29 oz each) hominy, drained and rinsed"]],
+      ["El chile",["6 chiles guajillo","3 chiles ancho","1–2 chiles de árbol, optional, for heat","4 garlic cloves","¼ white onion","1 tsp Mexican oregano","Pinch of cumin, only if your family uses it"]],
+      ["Para servir",["Finely shredded green cabbage","Sliced radishes","Finely chopped white onion","Dried Mexican oregano","Ground chile piquín","Limes, in wedges","Tostadas"]]],
+ steps:["Put the meats, onion and garlic in your biggest pot with the water. Bring to a boil and skim the gray foam for the first 15 minutes so the broth stays clean.",
+  "If using bagged hominy, add it now. Lower to a gentle simmer, partly covered, and cook 2 to 2½ hours, until the meat is very tender and the kernels have opened like flowers (revienta). Add the salt only once the corn has bloomed; salting early keeps it hard.",
+  "Meanwhile, stem and seed the chiles. Toast them on a hot comal 10–20 seconds per side, just until fragrant and pliable. Cover with hot water and soak 15 minutes.",
+  "Blend the chiles with the garlic, onion, oregano and 1½ cups of the pork broth until completely smooth. Pour through a fine strainer, pressing with a spoon. Discard the skins.",
+  "Lift out the meat. Shred or cut it into bite-size pieces, pick the meat off the bones and feet, and return it to the pot. Discard bones, onion and garlic.",
+  "If using canned hominy, add it now. Stir in the strained chile and simmer 30 minutes. Season well with salt. It should be red and brothy, not thick.",
+  "Serve in deep bowls. Everyone garnishes their own: cabbage, radish, onion, oregano rubbed between the palms, chile piquín and a good squeeze of lime. Tostadas on the side."],
+ pc:{time:"45 min high pressure + 20 min natural release", total:"1 h 45",
+  steps:["Toast, soak, blend and strain the chiles exactly as in the traditional method.",
+   "Put the meats, onion, garlic and 1 tbsp salt in the pot. Add bagged hominy now if using. Add water to the max-fill line (about 3½ quarts in an 8-qt pot; use about two-thirds of the meat in a 6-qt).",
+   "Seal and cook at high pressure 45 minutes (55 if using pig's feet). Let the pressure release naturally for 20 minutes, then vent.",
+   "Remove the meat, shred it, discard the bones and aromatics, and return the meat.",
+   "Switch to Sauté. Add the strained chile and canned hominy if using. Simmer uncovered 20–30 minutes. Taste for salt and serve."],
+  note:"Plenty of abuelas already make pozole in a stovetop olla exprés. Count about 35 minutes from when the valve starts to rock."},
+ tips:["Strain the chile. The skins make the broth gritty and bitter.","Toast chiles until you smell them, only seconds. If they smoke, they'll taste bitter: throw them out and start over.","Pozole is better the next day. Chill it and lift off the fat if you like.","A weeknight version most families accept: bone-in chicken thighs instead of pork, about 1 hour on the stove."],
+ vars:[
+  {name:"Pozole Verde", en:"Green pozole with pumpkin seeds", region:"Guerrero",
+   note:"Thursdays in Guerrero are jueves pozolero. The green comes from pepitas, tomatillo and fresh herbs, and the table gets chicharrón, avocado and sometimes sardines.",
+   ing:["Pork and hominy from the base recipe (or 1 whole chicken)","1 cup raw hulled pepitas","1 lb tomatillos, husked","2–3 serranos or jalapeños","½ white onion","3 garlic cloves","2 hoja santa leaves (or 1 tsp anise seed)","1 large sprig epazote","½ bunch cilantro","4 romaine or radish leaves","2 tbsp lard","To serve: chicharrón, avocado, onion, oregano, lime, tostadas"],
+   steps:["Cook the meat and hominy as in the base recipe, steps 1, 2 and 5. Leave out the red chile.","Toast the pepitas in a dry pan, stirring, until they puff and pop but don't brown. Let cool.","Simmer the tomatillos and chiles in water 8 minutes, until olive green. Drain.","Blend the pepitas, tomatillos, chiles, onion, garlic, hoja santa, epazote, cilantro and lettuce with 2 cups broth until very smooth.","Heat the lard in a skillet and fry the green sauce 5 minutes, stirring.","Stir it into the pot and keep at a bare simmer 15 minutes. A hard boil makes the pepita sauce split.","Serve with the garnishes."],
+   pc:"Same pressure times for the meat. Add the green sauce on Sauté-Low and don't let it boil."},
+  {name:"Pozole Blanco", en:"White pozole", region:"Guerrero · Michoacán",
+   note:"The oldest style: pork, corn and salt in the broth, nothing else. All the chile is served on the side so each bowl is seasoned at the table.",
+   ing:["Everything from the base recipe except the red chile","Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water"],
+   steps:["Cook the meat and hominy as in the base, steps 1, 2 and 5. Skip the chile.","For the salsa, toast the chiles a few seconds, soak 10 minutes, blend with garlic, salt and water, and strain.","Serve the white broth with the salsa, onion, oregano, lime, cabbage and radish on the table."],
+   pc:"Same pressure times as the base recipe."}
+ ]},
+
+{id:"menudo-rojo", name:"Menudo Rojo", en:"Red tripe & hominy soup", cat:"caldos", region:"Chihuahua · Norte", time:"5 h", yield:"8 bowls",
+ story:"Sunday morning menudo is the norteño cure for a long Saturday night. The tripe is cleaned with lime and cooked slowly with pata de res, the beef foot that makes the broth sticky. Families start it on Saturday so it's ready for breakfast.",
+ ing:[["La carne",["4 lb beef honeycomb tripe (panal)","2 lb beef foot (pata de res), cut in pieces by the butcher","2 limes or ¼ cup white vinegar, for cleaning","1 white onion, halved","1 head garlic, halved","6 quarts water","2 tbsp salt"]],
+      ["El chile",["8 chiles guajillo","2 chiles ancho","3 garlic cloves","1 tsp Mexican oregano","½ tsp cumin seed"]],
+      ["El maíz",["1 can (29 oz) hominy, drained and rinsed"]],
+      ["Para servir",["Chopped white onion","Mexican oregano","Crushed chile piquín or chiltepín","Limes","Warm corn tortillas or bolillos"]]],
+ steps:["Clean the tripe: rinse it, rub it all over with lime halves (or vinegar) and a handful of salt, and rinse again under cold water. Trim excess fat and cut into 1½-inch squares.",
+  "Put the beef foot, tripe, onion and garlic in a large pot with the water. Bring to a boil and skim for 15 minutes.",
+  "Lower to a gentle simmer, partly covered, and cook 3½–4 hours. The tripe is ready when it's tender with a little chew and the beef foot is soft and gelatinous. Add hot water if it reduces too much.",
+  "Toast, soak and blend the chiles with the garlic, oregano, cumin and 1½ cups broth. Strain into the pot.",
+  "Add the hominy and salt. Simmer 30 minutes more. Pick the meat off the foot bones if you like, and discard the bones and aromatics.",
+  "Serve very hot with onion, oregano, chile piquín, lime and tortillas."],
+ pc:{time:"60 min high pressure + 20 min natural release", total:"1 h 45",
+  steps:["Clean and cut the tripe as in step 1.","Put the tripe, beef foot, onion, garlic and salt in the pot. Add water to the max-fill line.","High pressure 60 minutes. Natural release 20 minutes. If the tripe is still tough, seal again for 15 minutes.","Add the strained chile and the hominy. Simmer on Sauté 20 minutes."],
+  note:"Tripe varies a lot. Pre-cooked white tripe from the store needs only about 30 minutes."},
+ tips:["The pata is what makes your lips stick together. Don't skip it.","Lime and salt take away the barnyard smell. Rinse until the water runs clear.","Make it a day ahead. The fat sets on top and lifts right off."],
+ vars:[{name:"Menudo Blanco", en:"White menudo", region:"Sonora",
+  note:"In Sonora menudo is often white: no chile in the pot, and the heat comes from crushed chiltepín at the table.",
+  ing:["Everything from the base recipe except the chile","Chiltepín, crushed between your fingers","Chopped cilantro and onion"],
+  steps:["Cook the tripe and beef foot as in the base, steps 1–3.","Add the hominy and salt and simmer 30 minutes.","Serve with chiltepín, oregano, onion, cilantro and lime."],
+  pc:"Same pressure time as the base."}]},
+
+{id:"caldo-de-res", name:"Caldo de Res", en:"Beef & vegetable soup", cat:"caldos", region:"Centro · Norte", time:"3 h", yield:"8 bowls",
+ story:"The everyday soup of every Mexican home: beef shank with the bone and marrow, corn on the cob and whatever vegetables the market has. The rice goes in the bowl, not the pot.",
+ ing:[["La carne",["3 lb beef shank (chambarete), bone-in with marrow","1 lb beef short ribs (costilla de res), optional","½ white onion","4 garlic cloves","4 quarts water","1 tbsp salt"]],
+      ["Las verduras",["2 Roma tomatoes","3 ears of corn, each cut in 3 rounds","3 carrots, in thick pieces","2 medium potatoes, quartered","1 chayote, peeled and cut in wedges","2 Mexican zucchini (calabacitas), in thick pieces","¼ green cabbage, in wedges","Handful of cilantro sprigs","1 sprig hierbabuena (mint)"]],
+      ["Para servir",["Arroz rojo","Limes","Chopped onion and cilantro","Sliced serranos or salsa","Corn tortillas"]]],
+ steps:["Put the meat, onion and garlic in a big pot with the water. Bring to a boil and skim the foam for 15 minutes.",
+  "Add the salt, lower the heat and simmer partly covered 2 hours, until the meat is tender.",
+  "Blend the tomatoes with a cup of broth and strain into the pot. It gives the caldo a light color.",
+  "Add the vegetables by how long they take: corn and carrots first, 15 minutes; then potatoes and chayote, 10 minutes; then zucchini and cabbage, 8 minutes.",
+  "Turn off the heat and drop in the cilantro and mint. Taste for salt.",
+  "Put a spoon of arroz rojo in each bowl, add meat and vegetables, and ladle the broth over. Lime and chile at the table."],
+ pc:{time:"40 min high pressure + 15 min natural release", total:"1 h 10",
+  steps:["Put the meat, onion, garlic, salt and 3 quarts water in the pot. High pressure 40 minutes, natural release 15.","Add the strained tomato, corn, carrots, potatoes and chayote. High pressure 3 minutes, quick release.","Switch to Sauté, add the zucchini and cabbage, and simmer 5 minutes. Add the cilantro and mint off the heat."]},
+ tips:["Scoop the marrow out of the bone onto a hot tortilla with salt and salsa. That's the cook's reward.","Mint is the quiet secret in a lot of family caldos. One sprig is enough."],
+ vars:[{name:"Mole de Olla", en:"Chile-red beef soup with xoconostle", region:"Ciudad de México · Centro",
+  note:"Caldo de res's spicier cousin. The broth is tinted with dried chiles and soured with xoconostle, a tart cactus fruit.",
+  ing:["Meat and broth from the base, steps 1–2","3 chiles guajillo, 2 chiles ancho, 1 chile pasilla","2 Roma tomatoes, 2 garlic cloves, ¼ onion","1 tbsp lard","2 xoconostles, peeled, seeded and quartered (or the juice of 1 lime at the end)","2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes","2 sprigs epazote"],
+  steps:["Cook the meat as in the base.","Toast and soak the chiles. Blend with the tomatoes, garlic and onion, strain, and fry in the lard 5 minutes.","Add the chile to the broth with the corn, potatoes, chayote and xoconostle. Cook 15 minutes.","Add the green beans, zucchini and epazote and cook 8 minutes more.","Serve with chopped onion, serrano and lime."],
+  pc:"Same pressure steps as the base. Add the fried chile with the first batch of vegetables."}]},
+
+{id:"caldo-de-pollo", name:"Caldo de Pollo", en:"Chicken soup", cat:"caldos", region:"Toda la República", time:"1 h 15", yield:"6 bowls",
+ story:"The soup for colds, for heartbreak and for Sundays. Abuela used a gallina, an old laying hen with more flavor than a young chicken. The broth should be clear and golden.",
+ ing:[["El caldo",["1 whole chicken (or stewing hen), cut in pieces, skin on","½ white onion","3 garlic cloves","1 Roma tomato","1 celery stalk, optional","3 quarts water","2 tsp salt"]],
+      ["Las verduras",["2 carrots, in rounds","2 potatoes, in chunks","1 chayote, in wedges","2 zucchini, in chunks","½ cup cooked chickpeas, optional","Handful of cilantro"]],
+      ["Para servir",["Limes, chopped onion and cilantro, serrano","Diced avocado","Arroz rojo or white rice"]]],
+ steps:["Put the chicken, onion, garlic, tomato and celery in a pot with the water. Bring to a boil and skim well.",
+  "Add the salt and simmer gently 40 minutes (1½–2 hours for a hen). Keep it at a lazy bubble so the broth stays clear.",
+  "Remove the tomato and onion. Add the carrots and potatoes and cook 10 minutes. Add the chayote, zucchini and chickpeas and cook 8 minutes.",
+  "Add the cilantro off the heat. Serve with lime, onion, chile, avocado and rice."],
+ pc:{time:"15 min high pressure + 10 min natural release", total:"35 min",
+  steps:["Put the chicken, aromatics, salt and 2½ quarts water in the pot. High pressure 15 minutes (30 for a hen), natural release 10.","Remove the aromatics. Add the carrots, potatoes and chayote. High pressure 2 minutes, quick release.","On Sauté, add the zucchini and chickpeas for 4 minutes. Finish with cilantro."]},
+ tips:["Once the foam is skimmed, never let it boil hard or the broth turns cloudy.","Add a handful of rice or fideo to the pot for a heartier soup."],
+ vars:[{name:"Caldo Tlalpeño", en:"Smoky chipotle chicken soup", region:"Tlalpan, Ciudad de México",
+  note:"A chipotle chicken soup named for Tlalpan, once a stop on the old road south of the capital.",
+  ing:["Broth and shredded chicken from the base","2 chipotles en adobo (or 2 dried chipotles, toasted and soaked)","2 Roma tomatoes, ¼ onion, 1 garlic clove","1 tbsp oil","1 cup cooked chickpeas","2 carrots, diced, and ½ lb green beans, cut","2 sprigs epazote","To serve: avocado, cubes of queso panela or Oaxaca, lime"],
+  steps:["Blend the tomatoes, onion, garlic and chipotle with a cup of broth. Fry in the oil 5 minutes.","Add to the broth with the carrots and chickpeas and simmer 10 minutes.","Add the green beans, epazote and shredded chicken and simmer 5 minutes.","Serve over cubes of cheese and avocado, with lime."],
+  pc:"Use the base pressure steps and add the chipotle sauce with the carrots."}]},
+
+{id:"sopa-de-fideo", name:"Sopa de Fideo", en:"Toasted noodle soup in tomato broth", cat:"caldos", region:"Toda la República", time:"30 min", yield:"6 bowls",
+ story:"The first soup most Mexican kids learn to love. Everything depends on toasting the noodles to the color of a peanut shell before the tomato goes in.",
+ ing:[["Sopa",["7 oz fideo (thin coiled vermicelli)","3 tbsp oil or lard","3 Roma tomatoes","¼ white onion","1 garlic clove","6 cups hot chicken broth","1 tsp salt, or to taste","1 sprig cilantro (or a few leaves of epazote)"]],
+      ["Para servir",["Limes","Crema and crumbled queso fresco","Chopped chipotles en adobo, optional"]]],
+ steps:["Blend the tomatoes, onion and garlic with 1 cup of the broth until smooth.",
+  "Heat the oil in a pot over medium. Add the fideo, breaking up the coils, and stir constantly until deep golden. Don't walk away; it burns fast.",
+  "Pour the tomato purée through a strainer into the pot. It will sizzle. Fry, stirring, 3 minutes until it darkens.",
+  "Add the rest of the broth, the salt and the cilantro. Simmer 8–10 minutes, until the fideo is soft.",
+  "Serve with lime, and crema and queso if you like."],
+ pc:null, pcNote:"No pressure-cooker version. This soup is done in 30 minutes on the stove, and the noodles would turn to mush.",
+ tips:["If the fideo browns too fast, pull the pot off the heat. It keeps cooking in the hot oil."],
+ vars:[{name:"Sopa Seca de Fideo", en:"Dry fideo with chipotle", region:"Centro",
+  note:"A dry soup, cooked until the noodles absorb all the broth, and served as a course before the main dish.",
+  ing:["Same as the base, but only 2 cups broth","1–2 chipotles en adobo, blended with the tomato","Crema, queso fresco and avocado"],
+  steps:["Toast the fideo and fry the tomato-chipotle purée as in the base.","Add 2 cups broth, cover and cook on low 10 minutes until absorbed.","Top with crema, queso and avocado."]}]},
+
+{id:"albondigas", name:"Albóndigas en Caldillo", en:"Meatball soup with mint", cat:"caldos", region:"Norte · Centro", time:"1 h", yield:"6 bowls",
+ story:"Mexican meatballs carry raw rice inside, which swells as they cook and keeps them tender, and fresh mint, which is the flavor everyone remembers.",
+ ing:[["Albóndigas",["1 lb ground beef","½ lb ground pork","¼ cup long-grain rice, soaked 15 minutes in hot water and drained","1 egg","2 tbsp finely chopped hierbabuena (mint)","2 tbsp finely chopped onion","1 garlic clove, minced","½ tsp ground cumin","1 tsp salt and ¼ tsp black pepper"]],
+      ["Caldillo",["4 Roma tomatoes","¼ white onion","2 garlic cloves","1–2 chipotles en adobo, optional","1 tbsp oil","8 cups beef or chicken broth (or water)","2 carrots, diced","1 potato, diced","1 zucchini, diced","1 sprig hierbabuena","Salt"]]],
+ steps:["Mix all the albóndiga ingredients with your hands just until combined. Wet your hands and roll balls the size of a golf ball.",
+  "Blend the tomatoes, onion, garlic and chipotle. Heat the oil in a wide pot and fry the purée 5 minutes, until it darkens.",
+  "Add the broth and the mint sprig. Bring to a boil and add the carrots and potato.",
+  "Lower in the meatballs one at a time. Don't stir for the first 10 minutes so they can set.",
+  "Simmer 25–30 minutes, adding the zucchini for the last 10. Taste for salt.",
+  "Serve with tortillas and lime."],
+ pc:{time:"8 min high pressure + 10 min natural release", total:"30 min",
+  steps:["On Sauté, fry the tomato purée 5 minutes.","Add the broth, mint, carrots and potato. Gently set in the meatballs.","High pressure 8 minutes, natural release 10.","Add the zucchini and simmer on Sauté 3 minutes."]},
+ tips:["Some families tuck a piece of hard-boiled egg inside each meatball. Kids love finding it.","Keep your hands wet while rolling and the meat won't stick."],
+ vars:[]},
+
+/* ---------------- GUISOS Y CARNES ---------------- */
+{id:"birria-de-chivo", name:"Birria de Chivo", en:"Goat in chile adobo with consomé", cat:"guisos", region:"Jalisco", time:"5 h + overnight", yield:"10 plates",
+ story:"Birria comes from Jalisco, where goat was cooked in a pit or in a pot sealed shut with masa. The adobo is dried chiles, vinegar and warm spices, and the meat is served in a bowl of its own consomé.",
+ ing:[["La carne",["5 lb bone-in goat (or lamb shoulder, or a mix of beef chuck and short rib)","1 tbsp salt"]],
+      ["El adobo",["8 chiles guajillo","4 chiles ancho","2–4 chiles de árbol, optional","½ cup apple cider vinegar","6 garlic cloves","½ white onion","1 tsp Mexican oregano","½ tsp cumin seed","4 whole cloves","½ tsp black peppercorns","1-inch stick Mexican cinnamon (canela)","½-inch piece fresh ginger","½ tsp dried thyme"]],
+      ["El consomé",["2 Roma tomatoes, charred","3 bay leaves","2–3 cups water"]],
+      ["Para servir",["Chopped onion and cilantro","Mexican oregano","Limes","Salsa de chile de árbol","Corn tortillas"]]],
+ steps:["Stem and seed the chiles. Toast them on a comal a few seconds per side and soak in hot water 15 minutes.",
+  "Toast the cumin, cloves, peppercorns and cinnamon in a dry pan for 30 seconds.",
+  "Blend the chiles with the vinegar, spices, garlic, onion, oregano, ginger, thyme and salt, adding just enough soaking water to make a thick paste.",
+  "Rub the paste all over the meat. Cover and refrigerate overnight, or at least 4 hours.",
+  "Put a rack in a large Dutch oven with 2 cups water and the bay leaves underneath. Set the meat on the rack and scrape in all the adobo. Cover with foil and then the lid, sealing as tightly as you can. That's the home version of sealing the pot with masa.",
+  "Cook in a 325°F oven 3½–4 hours, until the meat falls off the bone.",
+  "Lift out the meat. Skim the red fat from the juices and save it. Blend the charred tomatoes with some of the juices, add them back, add water to make about 6 cups of consomé, and simmer 10 minutes. Season.",
+  "Serve the meat in bowls with hot consomé, onion, cilantro, oregano, lime, salsa and tortillas."],
+ pc:{time:"50 min high pressure + 20 min natural release", total:"1 h 30 + overnight",
+  steps:["Make the adobo and marinate as in steps 1–4.","Put the meat, all the adobo, the bay leaves and 2 cups water in the pot.","High pressure 50 minutes for goat or lamb, 60 for beef chuck. Natural release 20 minutes.","Lift out the meat. Skim and save the fat. Blend in the tomatoes and simmer the consomé on Sauté 10 minutes."],
+  note:"Don't skip the overnight marinade. The pressure cooker saves cooking time, not flavor time."},
+ tips:["Save the red fat from the top of the consomé to fry tortillas for tacos.","The vinegar matters. It cuts the richness and helps tenderize the meat."],
+ vars:[{name:"Birria de Res estilo Tijuana", en:"Beef birria quesatacos", region:"Tijuana, Baja California",
+  note:"The version that took over social media: the same adobo with beef, and tacos crisped in the red fat with melted cheese, dipped in consomé. Not the abuela original, but nobody complains.",
+  ing:["Adobo and consomé from the base","2 lb beef chuck, 2 lb short ribs, 1 lb oxtail","Queso Oaxaca or mozzarella, shredded","Corn tortillas","Chopped onion and cilantro"],
+  steps:["Marinate and cook the beef as in the base (4 hours in the oven or 60 minutes under pressure).","Shred the meat and keep the consomé hot.","Dip a tortilla in the red fat, lay it on a hot griddle, add cheese and meat, fold, and cook until crisp on both sides.","Serve with a cup of consomé topped with onion and cilantro for dipping."],
+  pc:"High pressure 60 minutes, natural release 20."}]},
+
+{id:"cochinita-pibil", name:"Cochinita Pibil", en:"Achiote pork in banana leaf", cat:"guisos", region:"Yucatán", time:"4 h + overnight", yield:"8 plates",
+ story:"Pibil means cooked in the pib, the Maya earth oven. Pork marinates in achiote and sour orange, then cooks wrapped in banana leaves until it falls apart. In Mérida it's breakfast, eaten in tacos and tortas.",
+ ing:[["La carne",["4 lb pork shoulder, in 3-inch chunks","1 lb banana leaves (frozen are fine)","2 tbsp lard, optional"]],
+      ["El recado",["3½ oz achiote paste (recado rojo)","1 cup naranja agria (sour orange) juice, or ⅔ cup orange juice plus ⅓ cup lime juice","4 garlic cloves","1 tsp salt","½ tsp Mexican oregano","¼ tsp ground cumin","¼ tsp ground allspice","¼ tsp black pepper"]],
+      ["Para servir",["Cebolla morada encurtida (see Variantes)","Xnipec or another habanero salsa","Corn tortillas or bolillos"]]],
+ steps:["Blend the achiote with the juice, garlic, salt and spices until smooth.",
+  "Coat the pork with it and marinate overnight, covered, in the fridge.",
+  "Pass the banana leaves quickly over a flame or burner until they turn shiny and soft. Line a Dutch oven or deep baking dish with them, letting them hang over the sides.",
+  "Add the pork and all the marinade, dot with the lard, and fold the leaves over to close the package. Cover with foil and the lid.",
+  "Bake at 325°F for 3½–4 hours, until the pork pulls apart with a fork.",
+  "Open the leaves and shred the pork in its juices. Serve with pickled onion and habanero salsa."],
+ pc:{time:"50 min high pressure + 20 min natural release", total:"1 h 15 + overnight",
+  steps:["Marinate the pork overnight.","Line the pot with softened banana leaves. Add the pork, the marinade and ½ cup water, and fold the leaves over.","High pressure 50 minutes, natural release 20.","Shred the pork. If the juices are thin, lift out the meat and reduce them on Sauté 5 minutes."]},
+ tips:["Seville oranges (naranja agria) are the real thing. Latin markets sell it bottled if you can't find fresh.","For tortas de cochinita, split a bolillo and fill it with pork, onions and a spoon of the juices. That's breakfast in Mérida."],
+ vars:[
+  {name:"Cebolla Morada Encurtida", en:"Pickled red onion with habanero", region:"Yucatán",
+   note:"Always on the table with cochinita.",
+   ing:["2 red onions, thinly sliced","1 habanero, thinly sliced (seeds out for less heat)","½ cup naranja agria or lime juice","½ tsp salt","¼ tsp Mexican oregano"],
+   steps:["Pour boiling water over the onion, wait 10 seconds and drain. It softens the bite and turns them bright pink.","Toss with the habanero, juice, salt and oregano.","Let stand at least 1 hour. Keeps a week in the fridge."]},
+  {name:"Xnipec", en:"Yucatecan habanero salsa", region:"Yucatán",
+   note:"Its Maya name means dog's nose, because it's spicy enough to make your nose wet.",
+   ing:["2 tomatoes, finely diced","½ red onion, finely diced","1–2 habaneros, minced","¼ cup chopped cilantro","Juice of 2 sour oranges or limes","Salt"],
+   steps:["Mix everything and let it sit 15 minutes before serving."]}
+ ]},
+
+{id:"carnitas", name:"Carnitas", en:"Pork simmered in lard", cat:"guisos", region:"Michoacán", time:"3 h", yield:"10 plates",
+ story:"In Michoacán, carnitas are made in big copper cazos, the pork simmering in lard until it's tender inside and crisp outside. Orange and a splash of milk or Coke help it brown. It's party food for weekends, baptisms and birthdays.",
+ ing:[["Carnitas",["5 lb pork shoulder, in 3-inch chunks (add some ribs or skin if you can)","2 lb lard (manteca), enough to almost cover","1 tbsp salt","1 orange, halved","½ cup whole milk or Mexican Coca-Cola, optional","4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional"]],
+      ["Para servir",["Corn tortillas","Salsa verde","Chopped onion and cilantro","Limes","Pickled jalapeños"]]],
+ steps:["Melt the lard in a heavy pot (cast iron or Dutch oven) over medium heat.",
+  "Add the pork, the salt, and the garlic and herbs if using. The lard should bubble gently, not fry hard. Cook 2 hours, stirring now and then, until the meat is tender.",
+  "Squeeze in the orange and drop in the halves. Add the milk or Coke. Cook 15 minutes.",
+  "Raise the heat to medium-high for the last 15–20 minutes so the pork turns golden brown and crisp at the edges. Watch for splatter.",
+  "Lift out with a slotted spoon and drain. Chop and serve with tortillas, salsa, onion, cilantro and lime.",
+  "Strain the lard when it cools and keep it in the fridge. It's gold for beans and tamales."],
+ pc:{time:"40 min high pressure + 15 min natural release, then broil", total:"1 h 10",
+  steps:["Put the pork, salt, orange juice and halves, garlic, bay leaves, ½ cup water and 3 tbsp lard in the pot.","High pressure 40 minutes, natural release 15.","Spread the meat on a sheet pan, break it into chunks, and drizzle with a few spoons of the fat and juices.","Broil 5–8 minutes until the edges crisp, or fry in batches in a hot cast-iron pan with lard."]},
+ tips:["Ask the carnicero for carnitas surtidas: maciza (lean), cuerito (skin), costilla (rib) and buche (stomach).","Don't stir much at first. Let the pork confit quietly."],
+ vars:[]},
+
+{id:"barbacoa", name:"Barbacoa de Res", en:"Slow-steamed beef cheeks", cat:"guisos", region:"Hidalgo · Norte", time:"5 h", yield:"8 plates",
+ story:"In Hidalgo, barbacoa is lamb wrapped in maguey leaves and cooked overnight in a pit, with a pot underneath catching the juices for consomé. In the north it's beef cheeks, sold by the pound on Sunday mornings. This home version steams beef with avocado leaves.",
+ ing:[["La carne",["3 lb beef cheeks (cachete), or chuck roast in large pieces","1 tbsp salt","1 tsp black pepper","1 tsp ground cumin","6 garlic cloves, mashed","1 white onion, quartered","3 bay leaves","6 dried avocado leaves, toasted (or 1 tsp anise seed)","Banana leaves, optional, for wrapping"]],
+      ["Consomé",["1 cup cooked chickpeas","¼ cup rice","1 carrot, diced","Chopped onion, cilantro, lime and salsa"]],
+      ["Para servir",["Salsa borracha (see Variantes)","Corn tortillas"]]],
+ steps:["Rub the meat with the salt, pepper, cumin and garlic. Let stand 1 hour, or overnight in the fridge.",
+  "Put a rack or steamer basket in a tall pot with 4 cups water, the onion and the bay leaves underneath.",
+  "Lay banana leaves on the rack if you have them, add the avocado leaves and the meat, and fold the banana leaves over.",
+  "Cover tightly and steam on low 4–5 hours, adding hot water when needed, until the meat shreds easily.",
+  "Shred the meat. For the consomé, strain the liquid from under the rack, add the chickpeas, rice and carrot, and simmer 20 minutes.",
+  "Serve the barbacoa in tortillas with salsa, and the consomé in a cup on the side."],
+ pc:{time:"65 min high pressure + 20 min natural release", total:"1 h 40",
+  steps:["Season the meat. Put the onion, bay leaves, avocado leaves and 1½ cups water in the pot and add the meat.","High pressure 65 minutes, natural release 20.","Shred the meat with a little of the liquid.","Strain the remaining liquid, add the chickpeas, rice and carrot, and cook on Sauté 15 minutes for consomé."]},
+ tips:["Mexican avocado leaves taste of anise. Toast them a few seconds on the comal before using.","Cheeks are full of collagen. Don't trim them too lean or you'll lose the silky texture."],
+ vars:[{name:"Salsa Borracha", en:"Pasilla salsa with beer or pulque", region:"Hidalgo",
+  note:"The classic partner for barbacoa, traditionally made with pulque.",
+  ing:["6 chiles pasilla","2 garlic cloves","¼ white onion","½ cup pulque or light Mexican beer","Salt","Crumbled queso añejo, to finish"],
+  steps:["Toast the pasillas briefly and soak 10 minutes.","Grind in the molcajete or blend with the garlic, onion, beer and salt. Keep it a little coarse.","Top with queso añejo and chopped onion."]}]},
+
+{id:"puerco-salsa-verde", name:"Puerco en Salsa Verde", en:"Pork in tomatillo salsa with purslane", cat:"guisos", region:"Centro", time:"1 h 30", yield:"6 plates",
+ story:"A weekday guisado. The pork cooks in a little water until the water is gone and it fries in its own fat, and then the salsa goes in. Verdolagas (purslane) add a lemony, juicy bite. Potatoes or nopales are just as common.",
+ ing:[["El puerco",["2½ lb pork shoulder or country ribs, in 1½-inch pieces","1 cup water","1 tsp salt","1 tbsp lard"]],
+      ["La salsa",["1½ lb tomatillos, husked","3–4 serranos","¼ white onion","2 garlic cloves","½ bunch cilantro","Pinch of cumin, optional","Salt"]],
+      ["La verdura",["1 lb verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 2 cups cooked nopales"]]],
+ steps:["Put the pork, water and salt in a wide pan. Cook uncovered over medium, stirring now and then, until the water is gone and the pork browns in its own fat, about 40 minutes. Add the lard if the pork is lean.",
+  "Meanwhile, simmer the tomatillos and serranos in water 8 minutes, until they turn olive green. Drain.",
+  "Blend them with the onion, garlic, cilantro and cumin.",
+  "Pour the salsa over the pork. It will sizzle. Season and simmer 20 minutes, until slightly thickened. (Potatoes go in now.)",
+  "Blanch the verdolagas 1 minute in boiling water, drain, and stir them into the pot for the last 5 minutes.",
+  "Serve with frijoles and tortillas."],
+ pc:{time:"20 min high pressure + 10 min natural release", total:"45 min",
+  steps:["Brown the pork in the lard on Sauté, in batches.","Blend the raw tomatillos, serranos, onion, garlic and cumin (no need to boil them first). Pour over the pork with ½ cup water. Add potatoes now if using.","High pressure 20 minutes, natural release 10.","Stir in the blanched verdolagas and the cilantro and simmer on Sauté 5 minutes."]},
+ tips:["Don't over-boil tomatillos. As soon as they turn from bright to olive green, take them out, or they burst and turn sour.","Purslane grows wild in a lot of gardens. It's free food."],
+ vars:[]},
+
+{id:"tinga-de-pollo", name:"Tinga de Pollo", en:"Chipotle shredded chicken", cat:"guisos", region:"Puebla", time:"45 min", yield:"6 plates",
+ story:"Tinga is from Puebla: lots of soft onion, tomato and smoky chipotle. It goes on tostadas with beans, crema and queso, and it's what you bring to a fiesta.",
+ ing:[["El pollo",["2 lb chicken thighs or breasts","¼ onion, 2 garlic cloves, 1 bay leaf and salt, for poaching"]],
+      ["La salsa",["2 tbsp lard or oil","2 white onions, thinly sliced","2 garlic cloves, minced","1½ lb ripe tomatoes (or 5 Roma)","2–4 chipotles en adobo, plus 1 tbsp of the adobo sauce","½ tsp Mexican oregano","2 bay leaves","Salt"]],
+      ["Para servir",["Tostadas","Frijoles refritos","Shredded lettuce","Crema, queso fresco and avocado"]]],
+ steps:["Simmer the chicken in water with the onion, garlic, bay leaf and salt for 20 minutes. Cool, shred and save 1 cup of the broth.",
+  "Blend the tomatoes with the chipotles and adobo sauce.",
+  "Heat the lard and cook the sliced onions over medium-low 8 minutes, until soft and translucent but not brown. Add the garlic for 1 minute.",
+  "Add the tomato-chipotle purée, oregano and bay leaves. Cook 8 minutes, until it darkens.",
+  "Add the chicken and ½ cup of the broth. Simmer 10 minutes until juicy but not soupy. Season.",
+  "Spread tostadas with beans, pile on the tinga, and top with lettuce, crema, queso and avocado."],
+ pc:{time:"10 min high pressure + 5 min natural release", total:"25 min",
+  steps:["On Sauté, soften the onions in the lard, then add the garlic.","Add the purée, oregano, bay leaves and ½ cup water. Nestle in the raw chicken thighs.","High pressure 10 minutes (8 for breasts), natural release 5.","Shred the chicken right in the sauce. Simmer on Sauté a few minutes to thicken."]},
+ tips:["Be generous with the onion. Tinga should be half onion.","Start with 2 chipotles and add more after tasting. The heat varies from can to can."],
+ vars:[{name:"Tinga Poblana de Puerco", en:"Pork and chorizo tinga", region:"Puebla",
+  note:"The original Puebla tinga is pork with chorizo, sometimes with potatoes.",
+  ing:["2 lb pork shoulder, cooked and shredded","6 oz Mexican chorizo","The same tinga sauce as the base","1 potato, diced and boiled, optional","Avocado, to serve"],
+  steps:["Fry the chorizo until it releases its fat. Add the onions and cook until soft.","Add the tomato-chipotle purée and cook 8 minutes, then add the pork and potato.","Simmer 10 minutes. Serve on tostadas with avocado."],
+  pc:"Cook the pork shoulder chunks at high pressure 35 minutes, natural release 10, then shred."}]},
+
+{id:"picadillo", name:"Picadillo", en:"Ground beef with potato and carrot", cat:"guisos", region:"Toda la República", time:"40 min", yield:"6 plates",
+ story:"Ground meat cooked with tomato, potato and carrot. Every family has its own, and it fills tacos dorados, gorditas, empanadas and chiles rellenos.",
+ ing:[["Picadillo",["1½ lb ground beef (or half beef, half pork)","2 tbsp oil","½ white onion, chopped","2 garlic cloves, minced","3 Roma tomatoes, blended","2 potatoes, in small cubes","2 carrots, in small cubes","½ cup peas, optional","1 serrano, minced, optional","½ tsp ground cumin","1 tsp salt and ¼ tsp pepper","1 cup water or broth"]]],
+ steps:["Brown the meat in the oil, breaking it up, until no pink remains. Spoon off the extra fat.",
+  "Add the onion, garlic and serrano and cook 3 minutes.",
+  "Add the tomato, cumin, salt and pepper and cook 5 minutes.",
+  "Add the potatoes, carrots and water. Cover and simmer 15 minutes until tender, adding the peas for the last 5.",
+  "Serve with rice, beans and tortillas, or use it as a filling."],
+ pc:null, pcNote:"No pressure-cooker version. Picadillo is done in 40 minutes in a skillet, and the browning is where the flavor comes from.",
+ tips:["Cut the potatoes and carrots small, about the size of a pea, so every bite gets some."],
+ vars:[{name:"Picadillo de Fiesta", en:"Sweet-savory festive picadillo", region:"Puebla",
+  note:"The fruit-and-nut filling for chiles en nogada in September. More work, and very good.",
+  ing:["1 lb ground pork plus ½ lb ground beef","½ onion and 2 garlic cloves, chopped; 3 tomatoes, blended","1 ripe plantain, 1 pear, 1 peach and 1 apple, all diced small","¼ cup raisins and ¼ cup slivered almonds","¼ cup diced acitrón or candied pineapple","½ tsp cinnamon and a pinch of cloves","Salt and 1 tsp sugar"],
+  steps:["Brown the meat with the onion and garlic.","Add the tomato and cook 5 minutes.","Add the fruit, nuts, raisins, acitrón and spices. Cook 15 minutes, until the fruit is tender but holds its shape.","Season with salt and a little sugar. Use to stuff roasted poblanos."]}]},
+
+{id:"chiles-rellenos", name:"Chiles Rellenos", en:"Cheese-stuffed poblanos in egg batter", cat:"guisos", region:"Puebla", time:"1 h 15", yield:"6 chiles",
+ story:"Roasted poblanos stuffed with cheese, wrapped in a fluffy egg batter, fried, and served in a thin tomato broth. They take patience. Abuela's are light and puffy, never greasy.",
+ ing:[["Chiles",["6 large poblano chiles, flat and straight","12 oz queso Oaxaca, Chihuahua or asadero, cut in sticks","Toothpicks"]],
+      ["Capeado (batter)",["5 eggs, separated, at room temperature","Pinch of salt","½ cup flour, for dusting","Oil for frying, about 1 inch deep"]],
+      ["Caldillo",["5 Roma tomatoes","¼ white onion","1 garlic clove","1 cup chicken broth","1 tbsp oil","1 bay leaf","Salt"]]],
+ steps:["Roast the poblanos directly over a gas flame (or under the broiler), turning, until blackened all over.",
+  "Put them in a bowl, cover with a plate or a plastic bag, and let them sweat 10 minutes.",
+  "Peel off the charred skin with your fingers. Don't rinse them, or you'll wash away the flavor. Cut a slit down one side and carefully pull out the seeds, leaving the stem on.",
+  "Stuff each chile with cheese and close the slit with a toothpick.",
+  "Make the caldillo: blend the tomatoes, onion and garlic, fry in the oil 5 minutes, add the broth and bay leaf, and simmer 10 minutes. It should be thin. Season.",
+  "Beat the egg whites with the salt to stiff peaks. Beat in the yolks one at a time, just until mixed.",
+  "Heat the oil to 350°F. Dust each chile with flour, shake off the extra, and dip in the batter to coat.",
+  "Fry 2–3 minutes per side, spooning hot oil over the top, until golden. Drain on paper towels and pull out the toothpicks.",
+  "Set the chiles in the hot caldillo for a minute and serve with arroz rojo and frijoles."],
+ pc:null, pcNote:"No pressure-cooker version. This one belongs to the open flame and the skillet.",
+ tips:["The flour is what makes the batter stick. Don't skip it.","Pick poblanos that are smooth and flat. They roast and peel evenly."],
+ vars:[{name:"Rellenos de Picadillo", en:"Picadillo-stuffed chiles", region:"Norte · Puebla",
+  note:"Stuffed with picadillo instead of cheese.",
+  ing:["6 roasted, peeled poblanos","3 cups picadillo (see Picadillo)","Batter and caldillo from the base"],
+  steps:["Fill the chiles with picadillo instead of cheese.","Batter, fry and serve in caldillo as in the base."]}]},
+
+/* ---------------- MOLES ---------------- */
+{id:"mole-poblano", name:"Mole Poblano", en:"Chile, chocolate and spice sauce with turkey", cat:"moles", region:"Puebla", time:"4 h", yield:"12 plates",
+ story:"Mole poblano is the dish for weddings, baptisms and Día de Muertos. Dozens of ingredients, each one fried or toasted on its own, then ground together and cooked slowly until the fat rises to the top. Abuelas make it in big batches with the whole family helping.",
+ ing:[["La carne",["1 turkey (guajolote), in pieces, or 2 chickens","1 white onion, 1 head garlic and salt","About 10 cups of the cooking broth"]],
+      ["Los chiles",["8 chiles mulato","6 chiles ancho","6 chiles pasilla","2 chiles chipotle mora, optional","1 tbsp of the chile seeds, saved"]],
+      ["Semillas y frutas",["⅓ cup sesame seeds, plus more for garnish","¼ cup almonds, skin on","¼ cup peanuts","2 tbsp pepitas","¼ cup raisins","1 very ripe plantain (black skin), sliced","1 stale corn tortilla","1 slice day-old bolillo or white bread"]],
+      ["Especias",["1-inch stick Mexican cinnamon (canela)","4 whole cloves","6 black peppercorns","3 allspice berries","¼ tsp anise seed","¼ tsp coriander seed","½ tsp dried thyme","½ tsp Mexican oregano"]],
+      ["Lo demás",["2 Roma tomatoes and 2 tomatillos, charred","½ white onion and 4 garlic cloves, charred","¾ cup lard","2 oz Mexican chocolate (½ tablet)","1–2 tbsp sugar, to taste","Salt"]]],
+ steps:["Simmer the turkey with the onion, garlic and salt until tender, about 1½ hours (40 minutes for chicken). Keep the broth.",
+  "Stem and seed the chiles, saving 1 tbsp of seeds. Fry the chiles a few seconds per side in hot lard, just until they blister and change color. Soak in hot broth 30 minutes.",
+  "In the same lard, fry each of these separately and set aside: almonds, peanuts, pepitas, raisins (until they puff), plantain (until dark golden), tortilla (until crisp) and bread (until golden).",
+  "On a dry comal, toast the sesame until golden, the saved chile seeds until very dark, and the spices for 30 seconds.",
+  "Blend the chiles with enough soaking liquid to make a smooth purée.",
+  "Blend the nuts, seeds, fruit, tortilla, bread, spices, tomatoes, tomatillos, onion and garlic with broth, in batches, until completely smooth. Strain both purées if you want a silky mole.",
+  "Heat 3 tbsp lard in a large heavy pot or cazuela until very hot. Pour in the chile purée all at once (stand back, it splatters). Fry it, stirring constantly, 15 minutes until it darkens and thickens. This is called frying the mole.",
+  "Add the nut purée and cook 20 minutes, stirring often.",
+  "Add the chocolate, sugar and salt, and enough broth that it coats the back of a spoon. Simmer on low 45–60 minutes, stirring often so it doesn't stick, until a sheen of fat rises to the surface.",
+  "Add the turkey and heat through. Serve with sesame seeds, arroz rojo and tortillas."],
+ pc:{time:"Turkey: 25 min high pressure + 15 min natural release", total:"Sauce still about 2 h",
+  steps:["Pressure-cook the turkey pieces with the onion, garlic, salt and water to the fill line: high pressure 25 minutes (12 for chicken), natural release 15. Keep the broth.","Make the mole sauce on the stove as in steps 2–9. The frying and slow simmer can't be rushed under pressure, and a thick mole will set off the burn warning."],
+  note:"Make a big batch of the fried mole paste. It freezes for months."},
+ tips:["Mole is better on the second day.","If you use store-bought mole paste, fry it in lard first, then thin it with broth and add a piece of Mexican chocolate. Not abuela's, but honest.","The fat rising to the top is how you know it's done."],
+ vars:[{name:"Pipián Verde", en:"Green pumpkin-seed mole", region:"Puebla · Tlaxcala · Centro",
+  note:"A pre-Hispanic green mole thickened with pepitas instead of nuts and dried chiles. Lighter and quicker than mole poblano.",
+  ing:["2 lb chicken pieces, poached, plus the broth","1 cup raw hulled pepitas","1 lb tomatillos","2–3 serranos","¼ onion and 2 garlic cloves","4 romaine or radish leaves","1 sprig epazote, 2 hoja santa leaves and a handful of cilantro","2 tbsp lard","Salt"],
+  steps:["Toast the pepitas until they pop but don't brown. Let cool.","Simmer the tomatillos and serranos 8 minutes and drain.","Blend everything except the chicken with 2 cups broth until very smooth.","Fry the sauce in the lard over medium 5 minutes, stirring, then thin with broth.","Simmer gently 15 minutes, never at a hard boil or it will split. Add the chicken and season."],
+  pc:"Cook the chicken at high pressure 12 minutes, natural release 10. Make the sauce on the stove."}]},
+
+/* ---------------- MASA Y TORTILLA ---------------- */
+{id:"tamales-rojos", name:"Tamales Rojos de Puerco", en:"Red chile pork tamales", cat:"masa", region:"Norte · Centro", time:"4 h", yield:"About 30",
+ story:"Tamales are a group effort. The tamalada, usually before Christmas, puts the whole family at the table spreading masa. Red pork tamales are the classic.",
+ ing:[["El relleno",["2½ lb pork shoulder, in large chunks","½ onion, 3 garlic cloves and 1 tbsp salt","8 chiles guajillo and 3 chiles ancho","2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano","2 tbsp lard"]],
+      ["La masa",["4 lb fresh unprepared masa for tamales (from a tortillería), or 6 cups masa harina for tamales mixed with about 5 cups warm broth","1¼ cups (10 oz) fresh pork lard, not hydrogenated","2 tsp baking powder","1 tbsp salt","1–2 cups warm pork broth","½ cup of the red chile sauce, for color"]],
+      ["Las hojas",["40 dried corn husks, soaked in hot water 1 hour"]]],
+ steps:["Cover the pork with water, add the onion, garlic and salt, and simmer 2 hours until tender. Shred and keep the broth.",
+  "Toast, soak and blend the chiles with the garlic, cumin, oregano and 1½ cups broth. Strain.",
+  "Fry the sauce in the lard 5 minutes. Set aside ½ cup for the masa. Add the pork to the rest and simmer 15 minutes until thick, not soupy. Let cool.",
+  "Beat the lard with a mixer 3–5 minutes until white and fluffy.",
+  "Add the masa a handful at a time, alternating with the broth, baking powder, salt and reserved chile. Beat 10 minutes. It should feel like soft peanut butter.",
+  "Do the float test: drop ½ tsp of masa into a glass of cold water. If it floats, it's ready. If it sinks, beat longer or add a little more lard.",
+  "Take a husk, smooth side up, wide end toward you. Spread 2–3 tbsp masa thinly over the top two-thirds, leaving a border at the sides. Add a spoonful of filling.",
+  "Fold the sides over each other, then fold the narrow tail up.",
+  "Fill the bottom of a tamalera with water below the rack. Stand the tamales upright, open end up. Cover with extra husks and a damp towel, then the lid.",
+  "Steam over medium 1¼–1½ hours. They're done when the husk peels away cleanly from the masa. Let rest 15 minutes before serving."],
+ pc:{time:"25 min high pressure + 15 min natural release", total:"1 h after assembly",
+  steps:["Make the filling and masa and assemble the tamales as above. The pork can also go under pressure: 35 minutes high, natural release 10.","Put the trivet in the pot with 1½ cups water. Stand the tamales upright, open end up, snug but not tight. A 6-qt pot holds 12–15.","High pressure 25 minutes, natural release 15.","Let rest 10 minutes. They firm up as they cool."],
+  note:"Reheat frozen tamales at high pressure 15 minutes with 1 cup water."},
+ tips:["Drop a coin in the water under the rack. While it rattles there's water; when it goes quiet, add more hot water.","Abuelas say never argue in the kitchen while tamales steam, or they'll come out raw. Some dance for them.","Fresh lard from the carnicería makes the masa taste right. The white blocks from the supermarket shelf don't."],
+ vars:[
+  {name:"Tamales de Rajas con Queso", en:"Poblano strip and cheese tamales", region:"Centro",
+   note:"The meatless favorite, for Lent or for anyone.",
+   ing:["Masa from the base, made without the chile and with chicken or vegetable broth","4 poblanos, roasted, peeled and cut in strips","12 oz queso Oaxaca or panela, in sticks","1 cup salsa verde"],
+   steps:["Spread masa on each husk.","Add a few poblano strips, a stick of cheese and a spoonful of salsa verde.","Fold and steam as in the base."],
+   pc:"Same as the base: high pressure 25 minutes, natural release 15."},
+  {name:"Tamales de Dulce", en:"Sweet pink tamales", region:"Centro",
+   note:"Sweet tamales for Christmas and Día de la Candelaria, served with champurrado.",
+   ing:["2 lb fresh masa (half the base)","⅔ cup lard","¾ cup sugar","1 tsp baking powder and ½ tsp salt","½ cup raisins","1 tsp ground cinnamon","A few drops of red food coloring (the traditional pink) or a little beet juice"],
+   steps:["Beat the lard until fluffy. Beat in the masa, sugar, baking powder, salt, cinnamon and color until a little ball floats in water.","Fold in the raisins.","Spread on husks with no filling, fold, and steam 1 hour."],
+   pc:"High pressure 20 minutes, natural release 15."}
+ ]},
+
+{id:"enchiladas-rojas", name:"Enchiladas Rojas", en:"Red chile enchiladas with queso fresco", cat:"masa", region:"Guanajuato · Centro", time:"45 min", yield:"4–6 plates",
+ story:"Tortillas dipped in red chile, fried and rolled around cheese and onion. In Guanajuato they come topped with fried potatoes and carrots, and they're called enchiladas mineras.",
+ ing:[["La salsa",["6 chiles guajillo","2 chiles ancho","2 garlic cloves","¼ white onion","½ tsp Mexican oregano","Pinch of cumin","2 cups broth or soaking water","1 tbsp lard","Salt"]],
+      ["Las enchiladas",["12 corn tortillas","Oil or lard for frying","2 cups crumbled queso fresco (or queso ranchero)","1 white onion, finely chopped"]],
+      ["Encima",["2 potatoes and 2 carrots, diced and boiled","Shredded lettuce","Crema","Pickled jalapeños"]]],
+ steps:["Toast and soak the chiles. Blend with the garlic, onion, oregano, cumin and 2 cups liquid. Strain.",
+  "Fry the sauce in the lard 5 minutes and season. It should be about as thick as cream. Keep warm.",
+  "Mix the queso and onion for the filling, saving some for the top.",
+  "Heat ½ inch of oil in a skillet. Pass each tortilla through the warm sauce, then fry it 10 seconds per side. (For less splatter, fry first and then dip.)",
+  "Fill with cheese and onion, roll, and set on a plate.",
+  "Fry the boiled potatoes and carrots in the same oil until golden.",
+  "Top with more sauce, the potatoes and carrots, lettuce, crema and the rest of the cheese."],
+ pc:null, pcNote:"No pressure-cooker version. Enchiladas are made at the skillet, one tortilla at a time.",
+ tips:["Work fast and serve right away. Enchiladas don't like to wait."],
+ vars:[{name:"Enfrijoladas", en:"Tortillas in black bean sauce", region:"Oaxaca",
+  note:"Tortillas bathed in a seasoned black bean sauce instead of chile.",
+  ing:["3 cups frijoles negros de la olla with their broth","1 chile pasilla or chipotle, toasted","2 dried avocado leaves, toasted","12 corn tortillas","Queso fresco, crema and onion; shredded chicken optional"],
+  steps:["Blend the beans with their broth, the chile and the avocado leaves until smooth, like thin cream.","Simmer 5 minutes and season.","Fry the tortillas lightly, dip them in the bean sauce, and fold in quarters or fill with cheese or chicken.","Top with crema, queso and onion."]}]},
+
+/* ---------------- DESAYUNOS ---------------- */
+{id:"huevos-rancheros", name:"Huevos Rancheros", en:"Ranch-style fried eggs in salsa ranchera", cat:"desayunos", region:"Centro · Norte", time:"25 min", yield:"2 plates",
+ story:"The almuerzo of the rancho: fried eggs on soft fried tortillas, covered with a cooked salsa of charred tomato and chile. The salsa is served warm, not raw like pico de gallo, and the beans go on the side.",
+ ing:[["Salsa ranchera",["4 Roma tomatoes (about 1 lb)","2 serranos or 1 jalapeño","¼ white onion, plus 2 thin slices of onion","1 garlic clove, unpeeled","1 tbsp lard or oil","Salt"]],
+      ["Los huevos",["4 corn tortillas","4 eggs","3–4 tbsp lard or oil, for the tortillas and eggs","Salt"]],
+      ["Para servir",["Frijoles refritos","Crumbled queso fresco","Sliced avocado","Chopped cilantro","More warm tortillas"]]],
+ steps:["Char the tomatoes, chiles, onion chunk and garlic on a dry comal, turning, until blistered and soft: about 8 minutes for the garlic and chiles, 12 for the tomatoes. Peel the garlic.",
+  "Blend or grind them in the molcajete with a pinch of salt. Keep it a little chunky.",
+  "Heat the lard in a small pan and fry the onion slices until soft. Pour in the salsa (it will sizzle) and simmer 5–8 minutes, until it darkens and thickens slightly. Season and keep warm.",
+  "In a skillet, heat a thin layer of lard. Fry each tortilla about 10 seconds per side, so it softens and puffs a little but doesn't turn into a tostada. Drain and set two on each plate.",
+  "In the same skillet, fry the eggs over medium-high, spooning hot fat over the whites until they set with lacy, crisp edges and the yolks stay runny. Salt them.",
+  "Set an egg on each tortilla and spoon the hot salsa over the whites, leaving the yolks showing.",
+  "Serve right away with refritos, queso fresco, avocado and cilantro."],
+ pc:null, pcNote:"No pressure-cooker version. Huevos rancheros are done in 25 minutes at the comal and skillet. If you want refritos on the side, the beans can come from the pressure cooker (see Frijoles de la Olla).",
+ tips:["Fry the tortillas soft, not crisp. You should be able to cut them with the side of your fork.","Make a double batch of salsa ranchera. It keeps 4 days in the fridge and saves the next breakfast.","Lard for the eggs gives the crisp edges abuela's had."],
+ vars:[
+  {name:"Huevos Divorciados", en:"Two eggs, two salsas", region:"Ciudad de México · Centro",
+   note:"The divorced eggs: one in red salsa, one in green, kept apart by a line of refried beans. Diner breakfast all over Mexico.",
+   ing:["2 fried tortillas and 2 fried eggs, as in the base","½ cup salsa ranchera (from the base)","½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)","½ cup frijoles refritos","Queso fresco and chilaquiles or totopos on the side, optional"],
+   steps:["Set the two tortillas side by side and put an egg on each.","Cover one with red salsa and the other with green.","Spoon a line of refried beans between them to keep them apart.","Top with queso fresco."]},
+  {name:"Huevos Motuleños", en:"Yucatecan stacked eggs with ham and plantain", region:"Motul, Yucatán",
+   note:"From the town of Motul: a crisp tortilla spread with black beans, a fried egg, tomato sauce, ham and peas, with fried plantain on the side.",
+   ing:["4 corn tortillas, fried crisp","1 cup refried black beans","4 eggs, fried","1 cup salsa ranchera made with habanero instead of serrano (or plain tomato sauce)","½ cup diced ham","½ cup cooked peas","½ cup crumbled queso fresco","1 ripe plantain, sliced and fried"],
+   steps:["Warm the salsa with the ham and peas for 3 minutes.","Spread each crisp tortilla with black beans and top with a fried egg.","Spoon the salsa with ham and peas over the eggs and sprinkle with queso.","Serve with the fried plantain."]}
+ ]},
+
+{id:"molletes", name:"Molletes", en:"Open-face bean and cheese bolillos", cat:"desayunos", region:"Ciudad de México · Centro", time:"20 min", yield:"4 plates",
+ story:"Bolillos split open, toasted with butter, spread with refried beans and broiled under melted cheese, then topped with cold pico de gallo. The breakfast of cafés and school mornings in the capital, and the best use for yesterday's bread.",
+ ing:[["Molletes",["4 bolillos (day-old is fine), or crusty French rolls","3 tbsp soft butter","2 cups frijoles refritos, warm and thick","2 cups shredded melting cheese: queso Chihuahua, manchego mexicano or Oaxaca"]],
+      ["Pico de gallo",["2 Roma tomatoes, finely diced","¼ white onion, finely diced","1 serrano, minced","¼ cup chopped cilantro","Juice of 1 lime","Salt"]],
+      ["Para servir",["Salsa verde or salsa roja","Sliced avocado, optional"]]],
+ steps:["Heat the broiler (or the oven to 425°F). Mix all the pico de gallo ingredients and let stand while you make the molletes.",
+  "Split the bolillos lengthwise. Pull out a little of the soft crumb so the beans have room.",
+  "Butter the cut sides and toast them, cut side up, 2–3 minutes until the edges are golden.",
+  "Spread each half generously with refritos, edge to edge so the bread doesn't burn.",
+  "Cover with cheese and broil 2–4 minutes, until melted and bubbling in spots.",
+  "Top with pico de gallo and serve with salsa on the side."],
+ pc:null, pcNote:"No pressure-cooker version for the molletes themselves, but the beans can come from the pressure cooker (see Frijoles de la Olla, then Frijoles Refritos).",
+ tips:["The refritos should be thick enough to hold a line. Runny beans make soggy bread.","Butter first, then toast, then beans. That way the bread stays crisp underneath."],
+ vars:[
+  {name:"Molletes con Chorizo", en:"Molletes with chorizo", region:"Centro",
+   note:"The most common add-on at fondas.",
+   ing:["Everything from the base","6 oz Mexican chorizo, casing removed"],
+   steps:["Fry the chorizo, breaking it up, until crisp. Drain off most of the fat (or fry the beans in it).","Spread the beans on the toasted bread, scatter chorizo over them, add the cheese and broil.","Top with pico de gallo."]},
+  {name:"Molletes Dulces", en:"Butter, sugar and cinnamon molletes", region:"Centro",
+   note:"The sweet version kids ask for, with a cup of café con leche or champurrado.",
+   ing:["4 bolillos, split","4 tbsp soft butter","¼ cup sugar mixed with 1 tsp ground canela"],
+   steps:["Butter the cut sides generously.","Sprinkle with the cinnamon sugar.","Broil 2–3 minutes, until the sugar melts and bubbles. Watch closely; it burns fast."]}
+ ]},
+
+{id:"huevos-a-la-mexicana", name:"Huevos a la Mexicana", en:"Eggs scrambled with tomato, onion and chile", cat:"desayunos", region:"Toda la República", time:"10 min", yield:"2 plates",
+ story:"Red tomato, white onion and green chile, the colors of the flag, scrambled with eggs. It's the breakfast every Mexican home makes without a recipe, and it's what goes into a taco on the way out the door.",
+ ing:[["Huevos",["4 eggs","1 tbsp lard or oil","¼ white onion, finely chopped","1–2 serranos, finely chopped (seeds in for more heat)","1 Roma tomato, chopped","Salt","1 tbsp chopped cilantro, optional"]],
+      ["Para servir",["Frijoles de la olla or refritos","Warm corn or flour tortillas","Salsa"]]],
+ steps:["Heat the lard in a skillet over medium. Add the onion and serrano and cook 2 minutes, until soft but not browned.",
+  "Add the tomato and a pinch of salt. Cook 2–3 minutes, until it softens and most of its juice cooks off.",
+  "Beat the eggs lightly with a pinch of salt and pour them into the pan.",
+  "Stir gently with a spatula over medium-low until just set, still soft and moist.",
+  "Add the cilantro if using and serve right away with beans, tortillas and salsa."],
+ pc:null, pcNote:"No pressure-cooker version. It's a 10-minute skillet breakfast.",
+ tips:["Let the tomato cook down first, or the eggs turn watery.","Some abuelas don't beat the eggs first: they crack them right into the pan and stir, so you get streaks of white and yolk.","Leftovers make the best tacos de huevo for lunch."],
+ vars:[
+  {name:"Huevos con Chorizo", en:"Eggs scrambled with chorizo", region:"Toda la República",
+   note:"The other everyday breakfast taco. Some families add a diced potato fried with the chorizo.",
+   ing:["4 eggs, lightly beaten","4 oz Mexican chorizo, casing removed","¼ onion, chopped, optional","1 small potato, diced small, optional","Salt, only if needed"],
+   steps:["Fry the chorizo in a dry skillet, breaking it up, until it releases its red fat, about 4 minutes. Add the onion and potato and cook until the potato is tender, about 8 minutes.","Pour off extra fat if there's a lot. Add the eggs and stir until just set.","Taste before salting; chorizo is salty."]},
+  {name:"Huevos con Nopales", en:"Eggs with cactus paddles", region:"Centro",
+   note:"A Lent favorite, and a way to stretch the eggs.",
+   ing:["4 eggs, lightly beaten","1 cup cooked nopales, in strips (from a jar, rinsed, or fresh and boiled)","Everything else from the base"],
+   steps:["Make the base through step 2, adding the nopales with the tomato and cooking until any slime has cooked off.","Add the eggs and stir until just set."]}
+ ]},
+
+{id:"machaca-con-huevo", name:"Machaca con Huevo", en:"Dried shredded beef scrambled with eggs", cat:"desayunos", region:"Sonora · Chihuahua · Nuevo León", time:"20 min", yield:"3 plates",
+ story:"Machaca is beef that was salted, sun-dried and pounded so it would keep for months on the ranches of the north. A small handful fried with onion, tomato and chile and scrambled with eggs makes a breakfast wrapped in flour tortillas, the tortilla of the north.",
+ ing:[["Machaca",["1 cup (about 2 oz) machaca (dried shredded beef, sold in bags at Mexican markets, or see Machaca Casera)","6 eggs","1 tbsp lard or oil","½ white onion, chopped","1 Roma tomato, chopped","1–2 jalapeños or serranos, chopped, or 1 roasted chile verde (Anaheim), in strips, the Sonora way","Salt, only if needed"]],
+      ["Para servir",["Warm flour tortillas","Frijoles de la olla or refritos","Salsa roja or chiltepín salsa"]]],
+ steps:["If your machaca is in big strands, pull it apart with your fingers. Taste a piece. If it's very salty or hard, soak it in warm water 5 minutes and squeeze it dry.",
+  "Heat the lard in a skillet over medium. Fry the machaca 1–2 minutes, stirring, until it smells toasty and crisps a little.",
+  "Add the onion and chile and cook 3 minutes until soft. Add the tomato and cook 2 minutes more.",
+  "Beat the eggs lightly without salt; the machaca is already salty.",
+  "Pour the eggs into the pan and stir gently over medium-low until just set, still soft and moist.",
+  "Taste, add salt only if needed, and serve right away with flour tortillas, beans and salsa."],
+ pc:null, pcNote:"The eggs are a quick skillet job, but you can make the machaca itself in the pressure cooker. See Machaca Casera under Variantes.",
+ tips:["Go easy on the salt. Taste the machaca first; most of it is salted.","In Monterrey they call this machacado con huevo and make it with more tomato and chile, almost saucy.","Leftover machaca keeps for weeks in a jar in the fridge."],
+ vars:[
+  {name:"Machaca Casera", en:"Homemade dried beef", region:"Sonora · Norte",
+   note:"Real sun-dried machaca is hard to find outside the north. This oven-dried version gets close.",
+   ing:["2 lb beef flank or skirt steak, in 3 pieces","½ onion and 3 garlic cloves","1 tbsp salt, plus more to taste","Juice of 1 lime","½ tsp black pepper"],
+   steps:["Simmer the beef with the onion, garlic, salt and water to cover 2 hours, until it shreds easily.","Drain and shred it very finely with two forks or your fingers.","Toss with the lime juice, pepper and a little more salt.","Spread thinly on sheet pans and dry in a 200°F oven 2–3 hours, stirring every 30 minutes, until dry and leathery but not burnt.","Pound it in a molcajete or pulse briefly in a food processor until it's fluffy and fine. Store in a jar in the fridge."],
+   pc:"Cook the beef with the onion, garlic, salt and 2 cups water at high pressure 35 minutes, natural release 15. Then shred, season and oven-dry as above."},
+  {name:"Burritos de Machaca", en:"Machaca breakfast burritos", region:"Sonora · Chihuahua",
+   note:"In Sonora and Ciudad Juárez burritos are slim and simple, just a filling and a thin flour tortilla. No rice inside.",
+   ing:["Machaca con huevo from the base","Large thin flour tortillas (sobaqueras if you can find them)","Frijoles refritos, optional"],
+   steps:["Warm the tortillas on the comal until soft and spotted.","Spread a thin line of beans if using, add a line of machaca con huevo, and roll tightly.","Set seam side down on the comal 30 seconds to seal. Eat with salsa."]}
+ ]},
+
+{id:"chilaquiles", name:"Chilaquiles Verdes", en:"Tortilla chips simmered in green salsa", cat:"desayunos", region:"Toda la República", time:"30 min", yield:"4 plates",
+ story:"Breakfast made from whatever tortillas are in the kitchen: fried, tossed in salsa or chile, and covered with crema and cheese, or cooked together with eggs. Some like them crunchy, some soft. Both are right.",
+ ing:[["Totopos",["12 corn tortillas, store-bought or homemade (even from the same morning), each cut in 6 wedges","Oil for frying","Salt"]],
+      ["Salsa verde",["1 lb tomatillos, husked","2–3 serranos","¼ white onion","1 garlic clove","Handful of cilantro","1 cup chicken broth","1 tbsp oil","1 sprig epazote, optional"]],
+      ["Encima",["Crema","Crumbled queso fresco","Thin onion rings","Avocado","Fried eggs or shredded chicken","Frijoles refritos on the side"]]],
+ steps:["Cut the tortillas. Store-bought tortillas fry fine as they are. Very fresh, moist homemade ones splatter less if they sit out on the counter a few minutes first.",
+  "Fry in hot oil in batches until golden. For crunchy chilaquiles fry them crisp; for soft ones, take them out while they're still a little chewy. Drain and salt.",
+  "Simmer the tomatillos and serranos 8 minutes. Blend with the onion, garlic, cilantro and broth.",
+  "Heat the oil in a wide pan and fry the salsa 5 minutes with the epazote.",
+  "Add the totopos and toss: 1 minute for crunchy, 3 for soft.",
+  "Serve right away with crema, queso, onion, avocado and an egg or chicken, with beans on the side."],
+ pc:null, pcNote:"No pressure-cooker version. Chilaquiles take 30 minutes and have to be eaten the moment they're ready.",
+ tips:["Drain the fried tortillas well. Fresher tortillas hold a little more oil.","Leftover red chile from enchiladas or tamales makes great chilaquiles."],
+ vars:[{name:"Chilaquiles con Huevo, Estilo de Casa", en:"Soft chilaquiles with red chile and eggs", region:"Mexican-American · Texas · California",
+  note:"How a lot of Mexican-American families make them: store-bought or same-morning tortillas fried soft, not crunchy like chips, then cooked in the pan with red chile and eggs.",
+  ing:["10–12 corn tortillas, store-bought or homemade, cut or torn into strips or pieces","¼ cup oil","4–6 eggs","1½ cups red chile (below), or leftover enchilada chile or salsa","Salt","Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water","To serve: shredded cheese or queso fresco, frijoles, warm tortillas"],
+  steps:["Make the chile: stem and seed the chiles, simmer them in the water 10 minutes, then blend with the garlic, cumin, oregano and salt. Strain.","Heat the oil in a large skillet over medium-high. Fry the tortilla pieces, stirring, 3–4 minutes, until golden in spots but still soft and a little chewy. Pour off extra oil.","For eggs fried first: push the tortillas to the side, crack the eggs into the pan and let them fry a minute until the whites start to set. Then break them up and mix them through the tortillas.","For scrambled: beat the eggs with a pinch of salt, pour them over the tortillas and stir until just set.","Pour in the chile and toss everything together. Simmer 1–2 minutes, until the tortillas soak it up.","Top with cheese and serve with beans and tortillas."]},
+  {name:"Chilaquiles Rojos", en:"Red chilaquiles", region:"Toda la República",
+  note:"The same method with a red salsa of tomato and dried chiles.",
+  ing:["Totopos from the base","4 Roma tomatoes","3 chiles guajillo and 2 chiles de árbol, toasted and soaked","1 garlic clove, ¼ onion and 1 cup broth"],
+  steps:["Blend the tomatoes, chiles, garlic, onion and broth, and strain.","Fry the salsa 5 minutes and season.","Toss with the totopos and top as in the base."]}]},
+
+/* ---------------- FRIJOLES Y ARROZ ---------------- */
+{id:"frijoles-de-olla", name:"Frijoles de la Olla", en:"Pot beans with epazote", cat:"frijoles", region:"Toda la República", time:"2 h 30", yield:"8 bowls",
+ story:"The pot that's always on abuela's stove. Pintos in the north, black beans in the center and south, cooked slowly with onion, lard and epazote. The broth matters as much as the beans.",
+ ing:[["Frijoles",["1 lb dried pinto or black beans","10 cups water","¼ white onion","2 garlic cloves","2 tbsp lard","2 tsp salt","1 sprig epazote (essential for black beans)"]]],
+ steps:["Spread the beans on a tray and pick out stones and broken beans. Rinse well.",
+  "Put the beans, water, onion, garlic and lard in a heavy pot (a clay olla if you have one). Bring to a boil.",
+  "Lower to a gentle simmer, partly covered, for 1½–2 hours. If you need more water, add hot water only. Cold water toughens the skins.",
+  "When the beans are soft, add the salt and epazote. Simmer 30 minutes more so the salt gets in.",
+  "Serve in bowls with their broth, chopped onion, cilantro, serrano and queso fresco, or use them for refritos."],
+ pc:{time:"45 min high pressure + full natural release", total:"1 h 15",
+  steps:["Rinse and pick over the beans. No soaking needed.","Put the beans, 8 cups water, onion, garlic and lard in the pot.","High pressure 45 minutes for pintos, 35 for black beans (10–12 if soaked overnight). Let the pressure release naturally, about 25 minutes.","Add the salt and epazote and simmer on Sauté 10–15 minutes."],
+  note:"Don't fill past the halfway line with beans and water. Beans foam."},
+ tips:["Salt goes in after the beans are soft.","Old beans take forever. Buy them where a lot of people buy beans."],
+ vars:[
+  {name:"Frijoles Refritos", en:"Refried beans", region:"Toda la República",
+   note:"Fried once, in plenty of lard. Refritos means well-fried, not fried twice.",
+   ing:["4 cups cooked beans plus 1 cup of their broth","3–4 tbsp lard (or bacon or chorizo fat)","¼ white onion, chopped","Queso fresco or Chihuahua, optional"],
+   steps:["Heat the lard in a wide skillet and fry the onion until golden. Take the onion out if you like.","Add the beans and broth and mash with a bean masher as they cook.","Keep cooking and stirring about 10 minutes, until thick enough to hold a line when you drag a spoon through. Add broth if it gets too thick.","Top with cheese."]},
+  {name:"Frijoles Charros", en:"Cowboy beans", region:"Nuevo León · Norte",
+   note:"For carne asada Sundays. Add a beer and they become frijoles borrachos.",
+   ing:["6 cups pinto beans de la olla with their broth","4 slices bacon, chopped","4 oz Mexican chorizo","2 hot dogs (salchichas) and 2 slices ham, chopped","½ onion, 2 tomatoes and 2 jalapeños, chopped","Handful of cilantro","1 Mexican beer, optional"],
+   steps:["Fry the bacon until crisp. Add the chorizo, then the salchicha and ham, and brown.","Add the onion, tomato and jalapeño and cook 5 minutes.","Add the beans with their broth (and the beer). Simmer 20 minutes.","Stir in the cilantro."],
+   pc:"Cook the beans under pressure as in the base, then finish on Sauté."}
+ ]},
+
+{id:"arroz-rojo", name:"Arroz Rojo", en:"Mexican red rice", cat:"frijoles", region:"Toda la República", time:"40 min", yield:"6 plates",
+ story:"Fried until golden before any liquid goes in, then cooked in tomato broth and left alone. It goes next to everything, and into caldo.",
+ ing:[["Arroz",["1½ cups long-grain white rice","3 tbsp oil","2 Roma tomatoes","¼ white onion","1 garlic clove","2¾ cups hot chicken broth","1 tsp salt","1 carrot, diced, and ½ cup peas, optional","1 sprig cilantro","1 serrano, whole"]]],
+ steps:["Soak the rice in hot water 10 minutes. Rinse until the water runs clear, then drain very well.",
+  "Heat the oil in a wide pot over medium. Add the rice and stir until it turns opaque and light golden and sounds like sand, about 8 minutes.",
+  "Blend the tomatoes, onion and garlic with ½ cup of the broth. Strain onto the rice and stir 2–3 minutes, until absorbed and the color deepens.",
+  "Add the rest of the broth, the salt, carrot, peas, cilantro and serrano. Bring to a boil.",
+  "Cover, turn the heat to its lowest setting and cook 18 minutes. Don't lift the lid or stir.",
+  "Turn off the heat and let rest 10 minutes, covered. Fluff with a fork."],
+ pc:{time:"4 min high pressure + 10 min natural release", total:"25 min",
+  steps:["Soak, rinse and drain the rice. Fry it in the oil on Sauté until golden.","Add the strained tomato purée and stir 2 minutes.","Add broth so the total liquid (purée plus broth) is 1¾ cups, then the salt, vegetables, cilantro and serrano. Scrape the bottom well so it won't set off the burn warning.","High pressure 4 minutes, natural release 10. Fluff."]},
+ tips:["Plenty of abuelas swap some of the salt for a spoon of Knorr caldo de tomate. Nobody has to know.","Lifting the lid lets out the steam, and you get rice that's raw on top and mushy underneath."],
+ vars:[{name:"Arroz Verde", en:"Green poblano rice", region:"Centro",
+  note:"The same method with a green purée instead of tomato.",
+  ing:["The same rice, broth and method as the base","Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth"],
+  steps:["Fry the rice as in the base.","Add the green purée instead of the tomato and cook 2 minutes.","Continue with the broth as in the base."],
+  pc:"Same pressure time as the base."}]},
+
+/* ---------------- SALSAS ---------------- */
+{id:"salsa-roja", name:"Salsa Roja de Molcajete", en:"Charred tomato salsa", cat:"salsas", region:"Centro", time:"20 min", yield:"1½ cups",
+ story:"Charred on the comal and ground in the volcanic-stone molcajete. Chunky, smoky, and on the table at every meal.",
+ ing:[["Salsa",["4 Roma tomatoes","2–3 serranos (or 4 chiles de árbol, toasted)","2 garlic cloves, unpeeled","¼ white onion, in one piece","Coarse salt","2–4 tbsp water"]]],
+ steps:["Heat a dry comal or cast-iron pan over medium-high. Char the tomatoes, chiles, garlic and onion, turning, until blistered and soft: about 8 minutes for the garlic and chiles, 12–15 for the tomatoes.",
+  "Peel the garlic and grind it with salt in the molcajete into a paste.",
+  "Add the chiles and grind them. Add the tomatoes one at a time and crush, then the onion.",
+  "Thin with a little water and keep it chunky. Taste for salt.",
+  "No molcajete? Pulse a few times in a blender. Don't purée."],
+ pc:null, pcNote:"No pressure-cooker version. Salsas come off the comal in minutes.",
+ tips:["Season a new molcajete by grinding a handful of raw rice in it, again and again, until the rice comes out white instead of gray."],
+ vars:[
+  {name:"Salsa Verde Cocida", en:"Cooked tomatillo salsa", region:"Centro",
+   note:"The everyday green salsa for tacos, carnitas and chilaquiles.",
+   ing:["1 lb tomatillos, husked","2–4 serranos","1 garlic clove","¼ white onion","Handful of cilantro","Salt"],
+   steps:["Simmer the tomatillos and chiles 8 minutes, until olive green.","Blend with the garlic, onion, cilantro, salt and a few spoons of the cooking water."]},
+  {name:"Salsa de Chile de Árbol", en:"Taquería árbol salsa", region:"Jalisco · Centro",
+   note:"The thin, fiery red salsa from the taquería.",
+   ing:["20 chiles de árbol, stems removed","4 tomatillos","2 garlic cloves","½ tsp salt","½ cup water","1 tsp vinegar, optional"],
+   steps:["Toast the chiles in a dry pan 30 seconds, stirring, until fragrant. Don't let them blacken.","Simmer the tomatillos 8 minutes.","Blend everything until smooth. Strain if you want it silky."]}
+ ]},
+
+/* ---------------- BEBIDAS ---------------- */
+{id:"cafe-de-olla", name:"Café de Olla", en:"Clay-pot coffee with piloncillo and cinnamon", cat:"bebidas", region:"Centro · Sur", time:"15 min", yield:"4 cups",
+ story:"Coffee brewed in a clay olla with piloncillo and canela. It's how coffee was made on ranchos and in markets before coffee makers, and it's still what abuela pours with pan dulce.",
+ ing:[["Café",["4 cups water","3 oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)","1 stick Mexican cinnamon (canela)","½ cup coarsely ground dark-roast coffee (Mexican, from Veracruz, Chiapas or Oaxaca, if you can)","2 whole cloves, optional","1 strip orange peel, optional","1 star anise, optional"]]],
+ steps:["Put the water, piloncillo, cinnamon and any spices in a clay olla or a saucepan. Bring to a boil and cook until the piloncillo dissolves, about 5 minutes.",
+  "Turn off the heat. Stir in the coffee, cover and let it steep 5 minutes.",
+  "Strain through a fine strainer or a cloth.",
+  "Serve hot in clay jarritos or mugs, with pan dulce."],
+ pc:null, pcNote:"No pressure-cooker version. It's a 15-minute steep.",
+ tips:["Never boil the coffee. Add it off the heat or it turns bitter.","A clay olla gives the coffee its earthy taste. Season a new one by boiling water in it a few times before the first coffee.","Use a coarse grind, like for a French press, so it strains clean."],
+ vars:[
+  {name:"Chocolate Caliente", en:"Mexican hot chocolate", region:"Oaxaca · Centro",
+   note:"Made with water in Oaxaca, with milk most other places. Frothed with a molinillo until foamy.",
+   ing:["4 cups whole milk or water","1 tablet (3 oz) Mexican chocolate, chopped","1 stick Mexican cinnamon","Pinch of salt"],
+   steps:["Heat the milk with the cinnamon until steaming. Don't let it boil over.","Add the chocolate and whisk until melted.","Take out the cinnamon and froth with a molinillo, rolling it between your palms, or a whisk, until the top is foamy.","Serve right away with pan dulce."]},
+  {name:"Café con Leche", en:"Coffee with hot milk", region:"Toda la República",
+   note:"Half café, half hot milk, for dunking conchas.",
+   ing:["2 cups café de olla","2 cups whole milk"],
+   steps:["Heat the milk until steaming.","Pour half coffee, half milk into each cup and sweeten to taste."]}
+ ]},
+
+{id:"champurrado", name:"Champurrado", en:"Chocolate masa atole", cat:"bebidas", region:"Centro · Oaxaca", time:"30 min", yield:"6 cups",
+ story:"A thick chocolate atole made with masa, sweetened with piloncillo and frothed with a wooden molinillo. It's for cold mornings, posadas and Día de Muertos, with tamales.",
+ ing:[["Champurrado",["½ cup masa harina (or 4 oz fresh masa)","2 cups warm water","4 cups whole milk (or water, the older way)","1 tablet (3 oz) Mexican chocolate, chopped","3–4 oz piloncillo, grated (or ⅓ cup brown sugar)","1 stick Mexican cinnamon (canela)","Pinch of salt","¼ tsp anise seed, optional"]]],
+ steps:["Whisk the masa into the warm water until there are no lumps. Strain.",
+  "In a pot, simmer the milk with the cinnamon, piloncillo, salt and anise for 10 minutes.",
+  "Add the chocolate and whisk until melted.",
+  "Pour in the masa mixture slowly, whisking constantly.",
+  "Simmer on low, stirring constantly, 10 minutes until thick enough to coat a spoon. Take out the cinnamon.",
+  "Froth with a molinillo, rolling it between your palms, or with a whisk. Serve hot."],
+ pc:null, pcNote:"No pressure-cooker version. Atole needs constant stirring, and masa scorches under pressure.",
+ tips:["Keep stirring. Masa sticks to the bottom and burns fast."],
+ vars:[{name:"Atole Blanco con Canela", en:"Cinnamon masa atole", region:"Centro",
+  note:"The plain atole underneath every flavored one.",
+  ing:["½ cup masa harina","6 cups water or milk","1 stick Mexican cinnamon","½ cup sugar or piloncillo","1 tsp vanilla"],
+  steps:["Dissolve the masa in 2 cups of the liquid and strain.","Simmer the rest of the liquid with the cinnamon and sugar.","Whisk in the masa and cook, stirring, 10 minutes until thick. Add the vanilla."]}]},
+
+{id:"agua-de-jamaica", name:"Agua de Jamaica", en:"Hibiscus agua fresca", cat:"bebidas", region:"Toda la República", time:"30 min", yield:"2 quarts",
+ story:"Deep red hibiscus water, tart and cold. A jug of agua fresca sits on the table at la comida, the big midday meal.",
+ ing:[["Agua",["1 cup dried jamaica (hibiscus) flowers","8 cups water","½–¾ cup sugar or grated piloncillo","1 stick Mexican cinnamon, optional","Ice"]]],
+ steps:["Rinse the flowers.",
+  "Boil 4 cups of the water with the flowers and cinnamon 5 minutes. Turn off the heat and steep 15 minutes.",
+  "Strain, pressing on the flowers. Stir in the sugar while it's warm.",
+  "Add the remaining 4 cups of cold water. Taste and adjust. Serve over ice."],
+ pc:null, pcNote:"No pressure-cooker version needed. It's a quick steep.",
+ tips:["The flowers make a second, lighter batch. Or sauté them with onion and garlic for tacos de jamaica."],
+ vars:[{name:"Horchata de Arroz", en:"Rice and cinnamon horchata", region:"Centro · Sur",
+  note:"Mexican horchata is made from rice and canela.",
+  ing:["1 cup long-grain white rice","1 stick Mexican cinnamon, broken","8 cups water, divided","½–¾ cup sugar","1 tsp vanilla","½ cup milk or evaporated milk, optional"],
+  steps:["Soak the rice and cinnamon in 4 cups hot water overnight.","Blend everything 2 minutes until very fine.","Strain through a cloth or a very fine strainer.","Add the remaining water, the sugar, vanilla and milk. Serve over ice, stirring before you pour because it settles."]}]},
+
+/* ---------------- PANADERÍA ---------------- */
+{id:"conchas", name:"Conchas", en:"Sweet shell-topped buns", cat:"pan", region:"Toda la República", time:"4 h", yield:"12 conchas",
+ story:"The best-known pan dulce: a soft, slightly sweet bun under a crunchy sugar topping scored like a seashell. Picked up warm from the panadería with tongs and a tray, and eaten with café or chocolate.",
+ ing:[["Masa (dough)",["4 cups (500 g) all-purpose or bread flour","½ cup (100 g) sugar","2¼ tsp (1 packet) instant yeast","1 tsp salt","¾ cup (180 ml) warm whole milk","3 eggs, at room temperature","1 tsp vanilla","6 tbsp (85 g) soft butter, plus a little melted butter for brushing"]],
+      ["Cubierta (topping)",["½ cup (65 g) all-purpose flour","½ cup (60 g) powdered sugar","¼ cup (50 g) vegetable shortening or soft butter","½ tsp vanilla","For chocolate topping: replace 2 tbsp of the flour with cocoa powder"]]],
+ steps:["Mix the flour, sugar, yeast and salt in a large bowl or stand mixer. Add the milk, eggs and vanilla and mix into a shaggy dough.",
+  "Knead 8–10 minutes (or with the dough hook on medium) until smooth. Add the butter a spoon at a time, kneading until each piece disappears. The dough should be soft, a little tacky and stretchy.",
+  "Cover and let rise in a warm place 1½–2 hours, until doubled.",
+  "Make the topping: mix the flour, powdered sugar, shortening and vanilla into a smooth paste like play dough. Divide into 12 balls.",
+  "Divide the dough into 12 pieces (about 70 g each). Roll each into a smooth ball and set on parchment-lined sheet pans, 3 inches apart. Press each down slightly and brush with a little melted butter.",
+  "Flatten each topping ball between two pieces of plastic into a 3½-inch disc. Lay it on a bun and press gently so it sticks.",
+  "Score the topping in a shell pattern with a concha cutter or a sharp knife: curved lines fanning out from one side. Cut only through the topping, not the dough.",
+  "Cover loosely and let rise 1 hour, until puffy. The topping will crack open along the lines.",
+  "Bake at 350°F for 18–20 minutes, until the bottoms are golden. The tops should stay pale.",
+  "Cool a few minutes and eat warm."],
+ pc:null, pcNote:"No pressure-cooker version. Bread needs the oven.",
+ tips:["Brushing the buns with butter before the topping goes on keeps it from sliding off.","If your kitchen is cold, let the dough rise in the oven with only the light on.","Conchas go stale fast. Freeze extras the same day and warm them 5 minutes in the oven."],
+ vars:[
+  {name:"Pan de Muerto", en:"Day of the Dead bread", region:"Centro",
+   note:"Made for the ofrenda in late October and early November. An orange-scented sweet bread decorated with dough bones and a round skull, brushed with butter and rolled in sugar.",
+   ing:["Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk","1 egg, beaten, for brushing","4 tbsp melted butter","½ cup sugar, for coating"],
+   steps:["Make the dough and let it rise as in the base, steps 1–3.","Set aside about a quarter of the dough. Divide the rest into 2 or 3 pieces and shape each into a smooth round loaf on a lined sheet pan.","With the reserved dough, roll ropes and press your fingers along them to make knobby bones (huesos). Lay 4 across each loaf in a cross, and set a small ball (the skull) in the center. Stick them on with a little beaten egg.","Let rise 1 hour, brush with beaten egg and bake at 350°F for 30–35 minutes, until deep golden.","While warm, brush all over with melted butter and roll or sprinkle with sugar."]},
+  {name:"Conchas de Chocolate", en:"Chocolate conchas", region:"Toda la República",
+   note:"Every panadería tray has white and chocolate side by side. Make half and half.",
+   ing:["Dough from the base","Topping from the base, with 2 tbsp of the flour replaced by cocoa powder"],
+   steps:["Make the topping with cocoa.","Top, score, rise and bake as in the base."]}
+ ]},
+
+{id:"bolillos", name:"Bolillos", en:"Crusty Mexican rolls", cat:"pan", region:"Centro · Toda la República", time:"3 h", yield:"10 rolls",
+ story:"Mexico's everyday bread: crackly crust, soft inside, pointed at both ends. It's for molletes, tortas, capirotada and dunking in caldo. Abuelas also say a bite of bolillo calms a scare (para el susto).",
+ ing:[["Bolillos",["4 cups (500 g) bread flour","1½ cups (350 ml) warm water","2¼ tsp (1 packet) instant yeast","1 tbsp sugar","2 tsp salt","2 tbsp lard or soft butter"]]],
+ steps:["Mix the flour, yeast, sugar and salt. Add the water and lard and mix into a dough.",
+  "Knead 10 minutes until smooth and elastic. Cover and let rise 1–1½ hours, until doubled.",
+  "Divide into 10 pieces (about 85 g). Flatten each into an oval, then roll it up tightly from a long side into a log, pressing the seam closed.",
+  "Roll the ends under your palms so they taper to points. Set seam side down on a lined sheet pan.",
+  "Cover and let rise 45 minutes, until puffy.",
+  "Heat the oven to 425°F with an empty pan on the bottom rack. Slash each roll once down the length, about ¼ inch deep.",
+  "Spray or brush the rolls with water. Put them in the oven and pour a cup of hot water into the empty pan for steam. Close the door fast.",
+  "Bake 20–25 minutes, until golden and they sound hollow when you tap the bottom. Cool on a rack."],
+ pc:null, pcNote:"No pressure-cooker version. Bread needs the oven, and steam in the oven is what makes the crust crackle.",
+ tips:["The steam is the secret to the thin, crackly crust. Don't skip the pan of water.","Day-old bolillos are perfect for molletes and capirotada."],
+ vars:[
+  {name:"Teleras", en:"Flat torta rolls", region:"Ciudad de México",
+   note:"The soft, flat roll for tortas, with two grooves across the top.",
+   ing:["Bolillo dough from the base"],
+   steps:["Divide the dough into 8 pieces and shape into flat ovals about ¾ inch thick.","Press two deep lines along the length of each with the handle of a wooden spoon, almost to the bottom.","Rise 45 minutes and bake at 400°F for 18–20 minutes, without steam, so the crust stays soft."]}
+ ]},
+
+/* ---------------- POSTRES ---------------- */
+{id:"arroz-con-leche", name:"Arroz con Leche", en:"Cinnamon rice pudding", cat:"postres", region:"Toda la República", time:"50 min", yield:"6 cups",
+ story:"Rice cooked first in water with cinnamon and lime peel, then slowly in milk. Every abuela has a strong opinion about raisins.",
+ ing:[["Arroz con leche",["1 cup long-grain white rice","2 cups water","1 stick Mexican cinnamon (canela)","1 strip lime peel, no white pith","Pinch of salt","4 cups whole milk","¾ cup sugar","1 tsp vanilla","⅓ cup raisins, optional","Ground cinnamon, to finish"]]],
+ steps:["Rinse the rice and soak 15 minutes. Drain.",
+  "Simmer the rice in the water with the cinnamon, lime peel and salt until the water is absorbed, about 15 minutes.",
+  "Add the milk and sugar. Simmer on low, stirring often, 25–30 minutes until creamy.",
+  "Take out the peel and cinnamon. Stir in the vanilla and raisins and cook 5 minutes more.",
+  "It thickens as it cools. Serve warm or cold with ground cinnamon."],
+ pc:{time:"12 min high pressure + 10 min natural release", total:"35 min",
+  steps:["Put the rice, water, cinnamon, lime peel and salt in the pot.","High pressure 12 minutes, natural release 10.","Switch to Sauté. Add the milk and sugar and stir constantly 8–10 minutes until creamy; it scorches easily.","Finish with the vanilla and raisins."]},
+ tips:["Use Mexican canela (Ceylon cinnamon), the soft, flaky kind. Cassia sticks are harder and spicier."],
+ vars:[{name:"Arroz con Leche Cremoso", en:"Extra-creamy rice pudding", region:"Toda la República",
+  note:"The richer version many families make now.",
+  ing:["The same rice, water and spices as the base","Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk"],
+  steps:["Cook the rice in the water as in the base.","Add 2 cups milk, the condensed milk and the evaporated milk. Simmer, stirring, 20 minutes."],
+  pc:"Same as the base. Add the canned milks on Sauté."}]},
+
+{id:"flan", name:"Flan de la Abuela", en:"Milk and egg caramel custard", cat:"postres", region:"Toda la República", time:"1 h 30 + chilling", yield:"8 slices",
+ story:"The old-style flan: whole milk infused with cinnamon and lime peel, plus eggs and sugar, baked in a water bath under a layer of dark caramel.",
+ ing:[["Caramelo",["¾ cup sugar","2 tbsp water"]],
+      ["Flan",["4 cups whole milk","¾ cup sugar","1 stick Mexican cinnamon","1 strip lime peel","6 eggs plus 3 yolks","1 tsp Mexican vanilla"]]],
+ steps:["Heat the milk with the sugar, cinnamon and lime peel until steaming. Turn off the heat and steep 15 minutes. Remove the cinnamon and peel and let cool until warm.",
+  "Make the caramel: cook the sugar and water in a small pan without stirring, swirling the pan, until deep amber. Pour into an 8- or 9-inch flan mold and tilt to coat the bottom.",
+  "Whisk the eggs and yolks gently. You don't want bubbles. Slowly whisk in the warm milk and the vanilla. Strain into the mold.",
+  "Cover with foil. Set the mold in a larger pan and pour in hot water halfway up the sides (baño maría).",
+  "Bake at 350°F 50–60 minutes, until the edges are set and the center jiggles like gelatin.",
+  "Cool, then chill at least 6 hours, ideally overnight.",
+  "Run a knife around the edge, put a plate on top and flip it in one quick move."],
+ pc:{time:"9 min high pressure + 10 min natural release (ramekins)", total:"35 min + chilling",
+  steps:["Make the custard and caramel as above, but divide among 6 heatproof ramekins that fit in your pot. Cover each with foil.","Put the trivet in the pot with 1½ cups water and stack the ramekins on it.","High pressure 9 minutes, natural release 10.","Cool, then chill at least 4 hours before unmolding."],
+  note:"For one mold that fits your pot, the time depends on its size and depth. Start at 20 minutes and check: the center should jiggle, not slosh."},
+ tips:["Strain the custard. That's what makes a flan smooth, with no holes.","Low and slow. An oven that's too hot gives a spongy flan full of bubbles."],
+ vars:[{name:"Flan Napolitano", en:"Cream cheese flan", region:"Toda la República",
+  note:"The popular modern flan: richer, denser and blended in a minute. Most families make this one now.",
+  ing:["Caramel from the base","1 can (14 oz) sweetened condensed milk","1 can (12 oz) evaporated milk","4 oz cream cheese, softened","5 eggs","1 tsp vanilla"],
+  steps:["Blend everything 1 minute.","Pour over the caramel, cover, and bake in a water bath at 350°F 50–60 minutes.","Chill overnight and unmold."],
+  pc:"Same as the base: ramekins at high pressure 9 minutes, natural release 10."}]},
+
+{id:"capirotada", name:"Capirotada", en:"Lenten bread pudding with piloncillo", cat:"postres", region:"Jalisco · Michoacán · Norte", time:"1 h 15", yield:"8 servings",
+ story:"The bread pudding of Cuaresma (Lent): layers of fried bolillo, raisins, nuts and cheese soaked in spiced piloncillo syrup. Old recipes simmer a tomato and an onion in the syrup. It sounds strange and tastes right.",
+ ing:[["La miel",["8 oz piloncillo","3 cups water","2 sticks Mexican cinnamon","4 whole cloves","1 Roma tomato and ¼ onion, optional, the old way"]],
+      ["Las capas",["6 day-old bolillos, sliced ½ inch thick","4 tbsp butter or lard","½ cup raisins","½ cup peanuts or slivered almonds","2 cups shredded queso añejo, cotija or Chihuahua","Colored sprinkles (grageas), optional"]]],
+ steps:["Simmer the piloncillo, water, cinnamon and cloves (and the tomato and onion) 15 minutes, until syrupy. Strain.",
+  "Fry the bread slices in butter until golden on both sides, or brush them with butter and toast in the oven.",
+  "Butter a baking dish. Layer bread, raisins, nuts and cheese, and repeat for 3 layers.",
+  "Pour the syrup slowly over everything so it all soaks in.",
+  "Cover with foil and bake at 350°F for 30 minutes. Uncover and bake 10 minutes more.",
+  "Let rest 15 minutes and top with sprinkles. Serve warm or at room temperature."],
+ pc:null, pcNote:"No pressure-cooker version. Capirotada needs the dry heat of the oven to set.",
+ tips:["Toast the bread well. Pale bread turns to mush."],
+ vars:[]}
+];
+
+const CHILES = [
+  {n:"Guajillo", f:"Dried mirasol chile", h:2, t:"Bright, tangy, a little berry", u:"Pozole, menudo, birria, enchiladas, tamales"},
+  {n:"Ancho", f:"Dried poblano", h:1, t:"Sweet, raisin, deep", u:"Moles, adobos, pozole"},
+  {n:"Pasilla", f:"Dried chilaca", h:2, t:"Herbal, cocoa, prune", u:"Mole poblano, mole de olla, salsa borracha"},
+  {n:"Mulato", f:"Dried dark poblano", h:1, t:"Chocolate, licorice", u:"Mole poblano"},
+  {n:"Chipotle", f:"Smoke-dried jalapeño (mora or meco)", h:3, t:"Smoky, sweet heat", u:"Tinga, caldo tlalpeño, salsas"},
+  {n:"De árbol", f:"Dried, thin and red", h:4, t:"Sharp, clean heat", u:"Taquería salsa, pozole blanco"},
+  {n:"Piquín · Chiltepín", f:"Tiny wild chiles, dried", h:5, t:"Quick, bright fire", u:"Crushed over menudo and pozole, on fruit"},
+  {n:"Poblano", f:"Fresh", h:1, t:"Green, earthy", u:"Chiles rellenos, rajas, arroz verde"},
+  {n:"Serrano", f:"Fresh", h:3, t:"Grassy, crisp", u:"Salsa verde, salsa roja, caldos"},
+  {n:"Habanero", f:"Fresh", h:5, t:"Fruity, floral", u:"Xnipec, cebolla encurtida, Yucatán"}
+];
+const GLOSS = [
+  ["Masa","Dough of nixtamalized corn. Fresh masa from a tortillería is best; for tamales ask for masa sin preparar (unprepared). Masa harina is the dried flour version."],
+  ["Manteca","Rendered pork lard. Buy it fresh and soft from a carnicería. The shelf-stable white blocks are hydrogenated and taste flat."],
+  ["Orégano mexicano","A different plant from Mediterranean oregano, more citrusy and grassy. Rub it between your palms over the pot or bowl."],
+  ["Canela","Mexican (Ceylon) cinnamon: soft, flaky layered bark that breaks in your fingers. Milder and sweeter than cassia."],
+  ["Epazote","A pungent herb for black beans, quesadillas, chilaquiles and pozole verde. There's no real substitute; leave it out if you can't find it."],
+  ["Hoja santa","A big heart-shaped leaf that tastes of anise and sassafras. Used in pozole verde, pipián and Oaxacan moles."],
+  ["Hoja de aguacate","Dried Mexican avocado leaves, toasted before using. They add an anise note to barbacoa and black beans."],
+  ["Piloncillo","Unrefined cane sugar pressed into cones. Grate it or melt it in water. Dark brown sugar is the closest swap."],
+  ["Achiote","Annatto seeds ground with spices into recado rojo paste. Sold in bricks; the base of cochinita pibil."],
+  ["Naranja agria","Seville sour orange, used in the Yucatán. Swap: two parts orange juice to one part lime juice."],
+  ["Cacahuazintle","The large white corn for pozole. Bagged precooked maíz pozolero beats canned hominy."],
+  ["Xoconostle","A sour cactus fruit for mole de olla and salsas. Lime juice can stand in."],
+  ["Quesos","Queso fresco crumbles; cotija and añejo are dry and salty; Oaxaca and asadero melt and stretch; panela holds its shape when warm."],
+  ["Crema","Mexican cultured cream, thinner and saltier than sour cream. Thin sour cream with a little milk if you can't find it."]
+];
+
+const CAT_NAME = Object.fromEntries(CATS);
+const byId = Object.fromEntries(R.map(r => [r.id, r]));
+const app = document.getElementById('app');
+
+/* ---------- storage (per-viewer conveniences) ---------- */
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+};
+const favs = new Set(store.get('ra.favs', []));
+const checks = new Set(store.get('ra.checks', []));
+const saveFavs = () => store.set('ra.favs', [...favs]);
+const saveChecks = () => store.set('ra.checks', [...checks]);
+
+const state = { cat:'all', q:'', pcOnly:false, tab:{}, homeScroll:0 };
+
+/* ---------- helpers ---------- */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const groups = ing => (ing.length && Array.isArray(ing[0])) ? ing : [["", ing]];
+const ICON = {
+  search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+  chev:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>',
+  back:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>',
+  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
+  starFill:'<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
+  pot:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M2 10h20"/><path d="M9 6c0-1 .5-2 1.5-2M14 6c0-1 .5-2 1.5-2"/></svg>'
+};
+const picado = n => '<div class="picado" aria-hidden="true">' + '<i class="flag"></i>'.repeat(n) + '</div>';
+const searchText = r => norm([r.name, r.en, r.region, CAT_NAME[r.cat], ...groups(r.ing).flatMap(g => g[1]), ...r.vars.map(v => v.name + ' ' + v.en)].join(' '));
+R.forEach(r => r._s = searchText(r));
+
+/* ---------- home / guardadas ---------- */
+function home(savedOnly){
+  const pcCount = R.filter(r => r.pc).length;
+  const varCount = R.reduce((a, r) => a + r.vars.length, 0);
+  app.innerHTML = (savedOnly ? `
+    <header class="mast">
+      ${picado(10)}
+      <h1 style="margin-top:12px">Guardadas</h1>
+      <p>The recipes you've starred, saved on this device.</p>
+    </header>` : `
+    <header class="mast">
+      ${picado(10)}
+      <h1 style="margin-top:12px">Recetario<br>de la <em>Abuela</em></h1>
+      <p>${R.length} home-style recipes, region by region. ${pcCount} with a pressure-cooker version, plus ${varCount} variations.</p>
+    </header>`) + `
+    <div class="filters">
+      <label class="search" for="q">${ICON.search}<span class="label" hidden>Search</span>
+        <input id="q" type="search" autocomplete="off" placeholder="Buscar: pozole, guajillo, Yucatán…" value="${esc(state.q)}">
+      </label>
+      <div class="chips" role="group" aria-label="Categorías">
+        <button class="chip pc" data-pc aria-pressed="${state.pcOnly}">Olla exprés</button>
+        <button class="chip" data-cat="all" aria-pressed="${state.cat==='all'}">Todas</button>
+        ${CATS.map(([k,n]) => `<button class="chip" data-cat="${k}" aria-pressed="${state.cat===k}">${n}</button>`).join('')}
+      </div>
+    </div>
+    <div id="list"></div>`;
+  const q = document.getElementById('q');
+  q.addEventListener('input', () => { state.q = q.value; list(savedOnly); });
+  list(savedOnly);
+}
+function card(r){
+  const fav = favs.has(r.id);
+  return `<a class="card" href="#${r.id}">
+    <span class="nm">${esc(r.name)}</span>
+    <span class="chev">${fav ? `<span class="star" title="Saved" style="width:16px;height:16px;display:inline-flex">${ICON.starFill}</span>` : ''}${ICON.chev}</span>
+    <span class="en">${esc(r.en)}</span>
+    <span class="badges">
+      <span class="badge">${esc(r.region)}</span>
+      <span class="badge mono">${esc(r.time)}</span>
+      ${r.pc ? `<span class="badge pc">Olla exprés · ${esc(r.pc.total)}</span>` : ''}
+      ${r.vars.length ? `<span class="badge var">+${r.vars.length} ${r.vars.length === 1 ? 'variante' : 'variantes'}</span>` : ''}
+    </span>
+  </a>`;
+}
+function list(savedOnly){
+  const qn = norm(state.q.trim());
+  const items = R.filter(r =>
+    (!savedOnly || favs.has(r.id)) &&
+    (state.cat === 'all' || r.cat === state.cat) &&
+    (!state.pcOnly || r.pc) &&
+    (!qn || qn.split(/\s+/).every(w => r._s.includes(w))));
+  const el = document.getElementById('list');
+  if (savedOnly && favs.size === 0){
+    el.innerHTML = `<div class="empty"><strong>Nothing saved yet</strong>Open any recipe and tap the star at the top. It will show up here, on this device. <a href="#pozole-rojo">Start with Pozole Rojo</a>.</div>`;
+    return;
+  }
+  if (!items.length){
+    el.innerHTML = `<div class="empty"><strong>No recipes match</strong>Try a different word, or clear the filters. You can search by dish, ingredient or region, like “chipotle” or “Puebla”.</div>`;
+    return;
+  }
+  const order = CATS.map(c => c[0]);
+  let html = `<p class="count">${items.length} ${items.length === 1 ? 'receta' : 'recetas'}</p>`;
+  order.forEach(c => {
+    const inCat = items.filter(r => r.cat === c);
+    if (!inCat.length) return;
+    html += `<section class="cat"><h2>${CAT_NAME[c]} <small>${inCat.length}</small></h2>${inCat.map(card).join('')}</section>`;
+  });
+  el.innerHTML = html;
+}
+
+/* ---------- detail ---------- */
+function ingHTML(ing, scope){
+  return groups(ing).map((g, gi) => `
+    ${g[0] ? `<h4 class="group">${esc(g[0])}</h4>` : ''}
+    <ul class="ings">${g[1].map((it, i) => {
+      const key = `${scope}:${gi}:${i}`, on = checks.has(key), id = 'c-' + key.replace(/[^a-z0-9]/gi, '-');
+      return `<li><label class="ing${on ? ' done' : ''}" for="${id}"><input type="checkbox" id="${id}" data-key="${key}"${on ? ' checked' : ''}><span>${esc(it)}</span></label></li>`;
+    }).join('')}</ul>`).join('');
+}
+function stepsHTML(steps, scope){
+  return `<ol class="steps">${steps.map((s, i) => {
+    const key = `${scope}:${i}`, on = checks.has(key);
+    return `<li><button class="step${on ? ' done' : ''}" data-key="${key}" aria-pressed="${on}"><span class="n">${i + 1}</span><span class="t">${esc(s)}</span></button></li>`;
+  }).join('')}</ol>`;
+}
+function panelTrad(r){
+  return `
+    <section><h3>Ingredientes <button class="reset" data-reset="${r.id}:t">Desmarcar</button></h3>${ingHTML(r.ing, r.id + ':t:i')}</section>
+    <section><h3>Preparación</h3>${stepsHTML(r.steps, r.id + ':t:s')}</section>
+    <p class="hint">Tap a step when it's done.</p>
+    ${r.tips && r.tips.length ? `<aside class="secretos"><h3>Secretos de la abuela</h3><ul>${r.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul></aside>` : ''}`;
+}
+function panelPC(r){
+  if (!r.pc) return `<div class="pcbox"><span class="label">Olla exprés</span><p>${esc(r.pcNote || 'No pressure-cooker version for this one.')}</p></div>
+    ${r.vars.some(v => v.pc) ? `<p class="note">Some of the variations have pressure-cooker notes. Look under Variantes.</p>` : ''}`;
+  return `
+    <div class="pcbox">
+      <span class="label">Olla exprés · Instant Pot</span>
+      <span class="big">${esc(r.pc.time)}</span>
+      <p>Total about <b class="mono">${esc(r.pc.total)}</b>. Use the ingredients from the Tradicional tab.</p>
+    </div>
+    <section><h3>Ingredientes <button class="reset" data-reset="${r.id}:t">Desmarcar</button></h3>${ingHTML(r.ing, r.id + ':t:i')}</section>
+    <section><h3>Preparación</h3>${stepsHTML(r.pc.steps, r.id + ':p:s')}</section>
+    ${r.pc.note ? `<p class="note"><b>Note.</b> ${esc(r.pc.note)}</p>` : ''}
+    <p class="note">Times are for an electric pressure cooker at high pressure (about 10–12 psi). A stovetop olla exprés runs hotter (15 psi), so take off about 20% and start timing when the valve begins to rock.</p>`;
+}
+function panelVars(r){
+  return r.vars.map((v, vi) => `
+    <details class="var"${vi === 0 ? ' open' : ''}>
+      <summary><span class="rg">${esc(v.region || r.region)}</span><span class="nm">${esc(v.name)}</span><span class="en">${esc(v.en)}</span><span class="tw">${ICON.chev}</span></summary>
+      <div class="vb">
+        ${v.note ? `<p>${esc(v.note)}</p>` : ''}
+        <section><h3>Ingredientes</h3>${ingHTML(v.ing, `${r.id}:v${vi}:i`)}</section>
+        <section><h3>Preparación</h3>${stepsHTML(v.steps, `${r.id}:v${vi}:s`)}</section>
+        ${v.pc ? `<div class="pcbox"><span class="label">Olla exprés</span><p>${esc(v.pc)}</p></div>` : ''}
+      </div>
+    </details>`).join('');
+}
+function detail(id){
+  const r = byId[id];
+  const tab = state.tab[id] || 'trad';
+  const fav = favs.has(id);
+  const cooking = document.documentElement.classList.contains('cook');
+  const tabs = [['trad','Tradicional'],['pc','Olla exprés'], ...(r.vars.length ? [['vars','Variantes']] : [])];
+  app.innerHTML = `
+    <div class="topbar" id="topbar">
+      <a class="back" href="#recetas">${ICON.back}Recetas</a>
+      <span class="tt">${esc(r.name)}</span>
+      <div class="tools">
+        <button class="icon-btn cook" id="cook" aria-pressed="${cooking}" title="Cook mode: bigger text, screen stays on">${ICON.pot}<span>Cocinar</span></button>
+        <button class="icon-btn fav" id="fav" aria-pressed="${fav}" aria-label="${fav ? 'Remove from saved' : 'Save recipe'}">${fav ? ICON.starFill : ICON.star}</button>
+      </div>
+    </div>
+    <p class="cookmsg" id="cookmsg" ${cooking ? '' : 'hidden'}></p>
+    <header class="hero">
+      <span class="eyebrow">${esc(r.region)} · ${esc(CAT_NAME[r.cat])}</span>
+      <h1>${esc(r.name)}</h1>
+      <span class="en">${esc(r.en)}</span>
+      <p class="story">${esc(r.story)}</p>
+      <dl class="meta">
+        <div><dt>Tiempo</dt><dd>${esc(r.time)}</dd></div>
+        <div><dt>Rinde</dt><dd>${esc(r.yield)}</dd></div>
+        <div class="pcv"><dt>Olla exprés</dt><dd>${r.pc ? esc(r.pc.total) : '—'}</dd></div>
+      </dl>
+    </header>
+    <div class="tabs" role="tablist" aria-label="Versiones">
+      ${tabs.map(([k, n]) => `<button class="tab" role="tab" id="tab-${k}" aria-controls="panel" data-tab="${k}" aria-selected="${tab === k}">${n}${k === 'vars' ? `<span class="n">${r.vars.length}</span>` : ''}</button>`).join('')}
+    </div>
+    <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-${tab}">
+      ${tab === 'pc' ? panelPC(r) : tab === 'vars' ? panelVars(r) : panelTrad(r)}
+    </div>`;
+  if (cooking) document.getElementById('cookmsg').textContent = cookMsg;
+}
+
+/* ---------- despensa ---------- */
+function pantry(){
+  app.innerHTML = `
+    <div class="pantry">
+      <header>${picado(10)}<h1 style="margin-top:12px">Despensa</h1><p>The chiles and pantry staples these recipes depend on, and how to handle them.</p></header>
+      <section><h2>Los chiles</h2>
+        <div class="chiles">${CHILES.map(c => `
+          <div class="chilec">
+            <div class="top"><span class="nm">${esc(c.n)}</span><span class="heat" role="img" aria-label="Heat ${c.h} of 5">${[1,2,3,4,5].map(i => `<i class="${i <= c.h ? 'on' : ''}"></i>`).join('')}</span></div>
+            <span class="f">${esc(c.f)}</span>
+            <span class="u"><b>${esc(c.t)}.</b> ${esc(c.u)}.</span>
+          </div>`).join('')}
+        </div>
+      </section>
+      <section><h2>Cómo preparar chiles secos</h2>
+        <ol class="howto">
+          <li>Buy chiles that bend without cracking and look a little shiny. Brittle, dusty ones are old.</li>
+          <li>Wipe them with a damp towel. Pull off the stems, slit them open and shake out the seeds and veins.</li>
+          <li>Toast on a medium-hot comal 10–20 seconds per side, pressing flat, until they smell good and blister a little. If they smoke, they'll be bitter.</li>
+          <li>Soak in hot (not boiling) water 15–20 minutes, until soft.</li>
+          <li>Blend with a little fresh water or broth instead of the soaking water if it tastes bitter.</li>
+          <li>Strain through a fine sieve. This is the step most people skip, and the one abuela never does.</li>
+        </ol>
+      </section>
+      <section><h2>Ingredientes de la abuela</h2>
+        <dl class="gloss">${GLOSS.map(([t, d]) => `<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>
+      </section>
+      <section><h2>Para leer más</h2>
+        <ul class="reading">
+          <li>Diana Kennedy, <i>The Essential Cuisines of Mexico</i></li>
+          <li>Diana Kennedy, <i>Oaxaca al Gusto</i></li>
+          <li>Patricia Quintana, <i>The Taste of Mexico</i></li>
+          <li>Alicia Gironella De'Angeli et al., <i>Larousse de la Cocina Mexicana</i></li>
+        </ul>
+      </section>
+    </div>`;
+}
+
+/* ---------- routing ---------- */
+let current = '';
+function route(){
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (current === 'home' || current === 'guardadas') state.homeScroll = window.scrollY;
+  let view, restore = 0;
+  if (byId[h]) { detail(h); view = 'detail'; }
+  else if (h === 'guardadas') { home(true); view = 'guardadas'; }
+  else if (h === 'despensa') { pantry(); view = 'despensa'; }
+  else { home(false); view = 'home'; restore = (current === 'detail') ? state.homeScroll : 0; }
+  current = view;
+  window.scrollTo(0, restore);
+  document.querySelectorAll('.nav a').forEach(a => {
+    const on = (a.dataset.nav === 'recetas' && (view === 'home' || view === 'detail')) || a.dataset.nav === view;
+    if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
+  if (view !== 'detail' && document.documentElement.classList.contains('cook')) setCook(false);
+}
+window.addEventListener('hashchange', route);
+
+/* ---------- interactions ---------- */
+app.addEventListener('change', e => {
+  const t = e.target;
+  if (t.matches('input[type="checkbox"][data-key]')){
+    const k = t.dataset.key;
+    if (t.checked) checks.add(k); else checks.delete(k);
+    t.closest('.ing').classList.toggle('done', t.checked);
+    saveChecks();
+  }
+});
+app.addEventListener('click', e => {
+  const step = e.target.closest('.step');
+  if (step){
+    const k = step.dataset.key, on = !checks.has(k);
+    if (on) checks.add(k); else checks.delete(k);
+    step.classList.toggle('done', on); step.setAttribute('aria-pressed', on);
+    saveChecks(); return;
+  }
+  const chip = e.target.closest('.chip');
+  if (chip){
+    if (chip.hasAttribute('data-pc')) { state.pcOnly = !state.pcOnly; chip.setAttribute('aria-pressed', state.pcOnly); }
+    else { state.cat = chip.dataset.cat; document.querySelectorAll('.chip[data-cat]').forEach(c => c.setAttribute('aria-pressed', c === chip)); }
+    list(current === 'guardadas'); return;
+  }
+  const tab = e.target.closest('.tab');
+  if (tab){
+    const id = decodeURIComponent(location.hash.slice(1));
+    state.tab[id] = tab.dataset.tab;
+    const y = window.scrollY; detail(id); window.scrollTo(0, y); onScroll(); return;
+  }
+  const reset = e.target.closest('[data-reset]');
+  if (reset){
+    const id = decodeURIComponent(location.hash.slice(1));
+    [...checks].filter(k => k.startsWith(id + ':')).forEach(k => checks.delete(k));
+    saveChecks(); const y = window.scrollY; detail(id); window.scrollTo(0, y); onScroll(); return;
+  }
+  if (e.target.closest('#fav')){
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (favs.has(id)) favs.delete(id); else favs.add(id);
+    saveFavs();
+    const b = document.getElementById('fav'), on = favs.has(id);
+    b.setAttribute('aria-pressed', on); b.setAttribute('aria-label', on ? 'Remove from saved' : 'Save recipe');
+    b.innerHTML = on ? ICON.starFill : ICON.star; return;
+  }
+  if (e.target.closest('#cook')){
+    setCook(!document.documentElement.classList.contains('cook'));
+  }
+});
+
+/* Cook mode: larger text and a screen wake lock where the browser allows it */
+let wake = null, cookMsg = '';
+async function setCook(on){
+  document.documentElement.classList.toggle('cook', on);
+  const b = document.getElementById('cook'), m = document.getElementById('cookmsg');
+  if (b) b.setAttribute('aria-pressed', on);
+  if (on){
+    cookMsg = 'Cook mode on: bigger text.';
+    try {
+      if (!navigator.wakeLock) throw new Error('unsupported');
+      wake = await navigator.wakeLock.request('screen');
+      cookMsg = 'Cook mode on: bigger text, and the screen stays awake.';
+    } catch(err){ cookMsg = 'Cook mode on: bigger text. This browser won’t keep the screen awake, so it may still dim.'; }
+  } else {
+    try { if (wake) await wake.release(); } catch(err){}
+    wake = null; cookMsg = '';
+  }
+  if (m){ m.textContent = cookMsg; m.hidden = !on; }
+}
+document.addEventListener('visibilitychange', async () => {
+  if (document.visibilityState === 'visible' && document.documentElement.classList.contains('cook') && navigator.wakeLock){
+    try { wake = await navigator.wakeLock.request('screen'); } catch(e){}
+  }
+});
+
+function onScroll(){
+  const tb = document.getElementById('topbar');
+  if (tb) tb.classList.toggle('scrolled', window.scrollY > 140);
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+
+route();
+})();
+</script>

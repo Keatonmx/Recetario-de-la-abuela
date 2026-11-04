@@ -1,0 +1,39 @@
+name: iOS build
+
+on:
+  push:
+    branches: [claude/recetario-ios, main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check recipes.json is up to date with web/recetario.html
+        run: |
+          node scripts/export-recipes.mjs
+          git diff --exit-code Recetario/Resources/recipes.json
+
+      - name: Validate recipe data with the app's models
+        run: |
+          swiftc Recetario/Models/Models.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
+          "$RUNNER_TEMP/validate" Recetario/Resources/recipes.json
+
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild -version
+          xcodebuild build \
+            -project Recetario.xcodeproj \
+            -scheme Recetario \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO

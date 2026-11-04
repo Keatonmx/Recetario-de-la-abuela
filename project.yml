@@ -1,0 +1,47 @@
+# XcodeGen spec. Generate the Xcode project with:  xcodegen generate
+name: Recetario
+options:
+  bundleIdPrefix: com.keatonmx
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    # Set your Apple Developer Team ID here (or pick it in Xcode > Signing & Capabilities).
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  Recetario:
+    type: application
+    platform: iOS
+    sources:
+      - path: Recetario
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.keatonmx.recetario
+        PRODUCT_NAME: Recetario
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Recetario
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.food-and-drink
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        ENABLE_PREVIEWS: YES
+
+schemes:
+  Recetario:
+    build:
+      targets:
+        Recetario: all
+    run:
+      config: Debug
+    archive:
+      config: Release
