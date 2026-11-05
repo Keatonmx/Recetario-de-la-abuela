@@ -57,7 +57,25 @@ const book = {
   glossary: GLOSS.map(([term, definition]) => ({ term, definition })),
 };
 
+// Test cases for the Swift scaler: every ingredient line and yield, scaled by the web scaler.
+const sStart = html.indexOf("const SCALE = (() => {");
+const sEnd = html.indexOf("/* ---------- storage");
+if (sStart < 0 || sEnd < 0) throw new Error("Could not find the SCALE block in web/recetario.html");
+const SCALE = new Function(html.slice(sStart, sEnd) + "\nreturn SCALE;")();
+const lines = new Set();
+for (const r of book.recipes) {
+  for (const g of r.ingredients) g.items.forEach((i) => lines.add(i));
+  for (const v of r.variations) for (const g of v.ingredients) g.items.forEach((i) => lines.add(i));
+}
+const factors = [0.5, 0.6, 1.5, 2, 3];
+const cases = [];
+for (const line of lines) for (const f of factors) cases.push({ kind: "text", input: line, factor: f, output: SCALE.text(line, f) });
+for (const y of new Set(book.recipes.map((r) => r.servings)))
+  for (const f of factors) cases.push({ kind: "yield", input: y, factor: f, output: SCALE.yieldText(y, f) });
+writeFileSync(join(root, "scripts/validate/scaling-fixtures.json"), JSON.stringify(cases, null, 1) + "\n");
+
 const out = join(root, "Recetario/Resources/recipes.json");
 writeFileSync(out, JSON.stringify(book, null, 2) + "\n");
 const variations = book.recipes.reduce((n, r) => n + r.variations.length, 0);
 console.log(`Wrote ${book.recipes.length} recipes, ${variations} variations to ${out}`);
+console.log(`Wrote ${cases.length} scaling test cases`);

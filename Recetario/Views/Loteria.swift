@@ -82,17 +82,16 @@ struct NumberTab: View {
     }
 }
 
-struct OllaStamp: View {
+/// Small round badge on cards that have a pressure-cooker version.
+struct OllaBadge: View {
     var body: some View {
-        Text("OLLA EXPRÉS")
-            .font(.slab(9, relativeTo: .caption2))
-            .tracking(0.6)
-            .foregroundStyle(Color.stampGreen)
-            .padding(.horizontal, 5)
-            .padding(.vertical, 3)
-            .background(RoundedRectangle(cornerRadius: 4).fill(Color.stampPaper))
-            .overlay(RoundedRectangle(cornerRadius: 4).strokeBorder(Color.stampGreen, lineWidth: 2))
-            .rotationEffect(.degrees(-7))
+        Image("olla")
+            .resizable()
+            .frame(width: 18, height: 18)
+            .foregroundStyle(Color.stampPaper)
+            .frame(width: 28, height: 28)
+            .background(Circle().fill(Color.stampGreen))
+            .overlay(Circle().strokeBorder(Color.ink, lineWidth: 2))
             .accessibilityHidden(true)
     }
 }
@@ -132,9 +131,9 @@ struct LoteriaCard: View {
     let isFavorite: Bool
 
     private var subline: String {
-        var parts = [recipe.region, recipe.time]
-        if !recipe.variations.isEmpty { parts.append("+\(recipe.variations.count)") }
-        return parts.joined(separator: " · ")
+        let n = recipe.variations.count
+        if n == 0 { return recipe.time }
+        return "\(recipe.time) · \(n) \(n == 1 ? "variante" : "variantes")"
     }
 
     var body: some View {
@@ -142,7 +141,7 @@ struct LoteriaCard: View {
             CardArt(recipe: recipe, color: color)
                 .overlay(alignment: .bottomTrailing) {
                     if recipe.pressureCooker != nil {
-                        OllaStamp().padding(6)
+                        OllaBadge().padding(5)
                     }
                 }
                 .overlay(alignment: .topTrailing) {

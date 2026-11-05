@@ -7,10 +7,13 @@ final class RecipeStore: ObservableObject {
     let book: RecipeBook
     @Published private(set) var favorites: Set<String>
     @Published private(set) var checks: Set<String>
+    /// How much each recipe is scaled by (missing means 1×, the original).
+    @Published private(set) var factors: [String: Double]
 
     private let defaults: UserDefaults
     private static let favoritesKey = "favorites"
     private static let checksKey = "checks"
+    private static let factorsKey = "servingFactors"
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
@@ -23,6 +26,17 @@ final class RecipeStore: ObservableObject {
         }
         favorites = Set(defaults.stringArray(forKey: Self.favoritesKey) ?? [])
         checks = Set(defaults.stringArray(forKey: Self.checksKey) ?? [])
+        factors = (defaults.dictionary(forKey: Self.factorsKey) as? [String: Double]) ?? [:]
+
+        // Launch arguments used by CI to set up screenshots, e.g. -screenshotFavorites "pozole-rojo,conchas".
+        // They are never saved.
+        if let ids = defaults.string(forKey: "screenshotFavorites") {
+            favorites.formUnion(ids.split(separator: ",").map(String.init))
+        }
+        if let id = defaults.string(forKey: "screenshotRecipe") {
+            let f = defaults.double(forKey: "screenshotFactor")
+            if f > 0 { factors[id] = f }
+        }
     }
 
     // MARK: Lookups
@@ -50,6 +64,23 @@ final class RecipeStore: ObservableObject {
     func toggleCheck(_ key: String) {
         if checks.contains(key) { checks.remove(key) } else { checks.insert(key) }
         defaults.set(Array(checks), forKey: Self.checksKey)
+    }
+
+    // MARK: Servings
+
+    func factor(for id: String) -> Double { factors[id] ?? 1 }
+
+    func setFactor(_ factor: Double, for id: String) {
+        if abs(factor - 1) < 1e-9 { factors.removeValue(forKey: id) } else { factors[id] = factor }
+        defaults.set(factors, forKey: Self.factorsKey)
+    }
+
+    /// Steps the servings up or down: by 1 for small yields, by a few for big batches (30 tamales).
+    func stepServings(_ recipe: Recipe, by direction: Double) {
+        guard let base = Scaler.base(recipe.servings) else { return }
+        let step = base < 4 ? base / 2 : (base <= 12 ? 1 : (base / 12).rounded(.up))
+        let next = min(base * 4, max(step, base * factor(for: recipe.id) + direction * step))
+        setFactor(next / base, for: recipe.id)
     }
 
     func resetChecks(prefix: String) {

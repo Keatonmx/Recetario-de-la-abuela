@@ -6,13 +6,17 @@ struct RecipeListView: View {
     let savedOnly: Bool
 
     @State private var query = ""
-    @State private var category: String? = nil
+    @State private var category: String? = UserDefaults.standard.string(forKey: "screenshotCategory")
     @State private var pressureOnly = false
 
     private let columns = [
         GridItem(.flexible(), spacing: 14, alignment: .top),
         GridItem(.flexible(), spacing: 14, alignment: .top)
     ]
+
+    private var isFiltering: Bool {
+        !query.trimmingCharacters(in: .whitespaces).isEmpty || category != nil || pressureOnly
+    }
 
     private var results: [Recipe] {
         let trimmed = query.trimmingCharacters(in: .whitespaces)
@@ -46,9 +50,11 @@ struct RecipeListView: View {
                     ContentUnavailableView.search(text: query)
                         .padding(.top, 24)
                 } else {
-                    Text("\(recipes.count) \(recipes.count == 1 ? "receta" : "recetas")")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
+                    if isFiltering {
+                        Text("\(recipes.count) \(recipes.count == 1 ? "receta" : "recetas")")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
                     LazyVStack(alignment: .leading, spacing: 34) {
                         ForEach(store.book.categories) { cat in
                             let inCategory = recipes.filter { $0.category == cat.id }
@@ -123,8 +129,8 @@ struct RecipeListView: View {
                     .font(.slab(13, relativeTo: .caption))
                     .tracking(1.1)
                     .foregroundStyle(Color.chile)
-                Text("\(store.book.recipes.count) home-style recipes, each one a card in the deck. \(store.pressureCookerCount) with a pressure-cooker version, plus \(store.variationCount) variations.")
-                    .font(.subheadline)
+                Text("\(store.book.recipes.count) cartas · \(store.pressureCookerCount) con olla exprés · \(store.variationCount) variantes")
+                    .font(.system(.footnote, design: .monospaced))
                     .foregroundStyle(.secondary)
             }
         }

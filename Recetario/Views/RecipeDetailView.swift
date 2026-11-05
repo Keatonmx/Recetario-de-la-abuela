@@ -6,7 +6,7 @@ struct RecipeDetailView: View {
     @Environment(\.dynamicTypeSize) private var systemTypeSize
     let recipe: Recipe
 
-    @State private var tab: DetailTab = .traditional
+    @State private var tab: DetailTab = DetailTab(rawValue: UserDefaults.standard.string(forKey: "screenshotDetailTab") ?? "") ?? .traditional
     @State private var cookMode = false
     @State private var openVariations: Set<String> = []
 
@@ -23,14 +23,20 @@ struct RecipeDetailView: View {
 
     static let pressureDisclaimer = "Times are for an electric pressure cooker at high pressure (about 10–12 psi). A stovetop olla exprés runs hotter (15 psi), so take off about 20% and start timing when the valve begins to rock."
 
+    private var factor: Double { store.factor(for: recipe.id) }
+
     var body: some View {
+        ScrollViewReader { proxy in
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 header
+                ServingsCard(recipe: recipe)
+                    .id("servings")
                 Picker("Version", selection: $tab) {
                     ForEach(tabs) { Text($0.rawValue).tag($0) }
                 }
                 .pickerStyle(.segmented)
+                .id("tabs")
 
                 switch tab {
                 case .traditional: traditional
@@ -40,6 +46,13 @@ struct RecipeDetailView: View {
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 40)
+        }
+        .onAppear {
+            // CI screenshots: -screenshotScrollTo servings|tabs
+            if let target = UserDefaults.standard.string(forKey: "screenshotScrollTo") {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { proxy.scrollTo(target, anchor: .top) }
+            }
+        }
         }
         .background(Color.paper)
         .navigationTitle(recipe.name)
@@ -101,12 +114,12 @@ struct RecipeDetailView: View {
             CardArt(
                 recipe: recipe,
                 color: store.color(forCategory: recipe.category),
-                aspect: 16 / 10,
+                aspect: 2,
                 cornerRadius: 12,
                 numberSize: 17,
                 artPadding: 16
             )
-            .frame(maxHeight: 300)
+            .frame(maxHeight: 220)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.inkShadow).offset(x: 4, y: 5))
             .padding(.bottom, 10)
             Text("\(recipe.region) · \(store.categoryName(recipe.category))".uppercased())
@@ -134,7 +147,7 @@ struct RecipeDetailView: View {
                 .padding(.top, 4)
             MetaGrid(items: [
                 ("Tiempo", recipe.time),
-                ("Rinde", recipe.servings),
+                ("Rinde", Scaler.yieldText(recipe.servings, factor: factor)),
                 ("Olla exprés", recipe.pressureCooker?.total ?? "—")
             ])
             .padding(.top, 8)
@@ -155,7 +168,7 @@ struct RecipeDetailView: View {
         VStack(alignment: .leading, spacing: 24) {
             VStack(alignment: .leading, spacing: 12) {
                 SectionHeader(title: "Ingredientes") { resetButton }
-                IngredientList(groups: recipe.ingredients, scope: "\(recipe.id):t:i")
+                IngredientList(groups: recipe.ingredients, scope: "\(recipe.id):t:i", factor: factor)
             }
             VStack(alignment: .leading, spacing: 12) {
                 SectionHeader(title: "Preparación")
@@ -182,11 +195,14 @@ struct RecipeDetailView: View {
                 }
                 VStack(alignment: .leading, spacing: 12) {
                     SectionHeader(title: "Ingredientes") { resetButton }
-                    IngredientList(groups: recipe.ingredients, scope: "\(recipe.id):t:i")
+                    IngredientList(groups: recipe.ingredients, scope: "\(recipe.id):t:i", factor: factor)
                 }
                 VStack(alignment: .leading, spacing: 12) {
                     SectionHeader(title: "Preparación")
                     StepList(steps: pc.steps, scope: "\(recipe.id):p:s")
+                }
+                if factor > 1 {
+                    NoteBox(text: "Scaling up? Pressure times stay the same, but never fill the pot past the max-fill line. Cook in two batches if it won't fit.")
                 }
                 if let note = pc.note {
                     NoteBox(text: note)
@@ -212,6 +228,7 @@ struct RecipeDetailView: View {
                     recipe: recipe,
                     variation: variation,
                     index: index,
+                    factor: factor,
                     isOpen: Binding(
                         get: { openVariations.contains(variation.name) },
                         set: { isOpen in
@@ -256,6 +273,7 @@ struct IngredientList: View {
     @EnvironmentObject private var store: RecipeStore
     let groups: [IngredientGroup]
     let scope: String
+    var factor: Double = 1
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -269,7 +287,7 @@ struct IngredientList: View {
                         .padding(.bottom, 4)
                 }
                 ForEach(Array(group.items.enumerated()), id: \.offset) { itemIndex, item in
-                    IngredientRow(text: item, key: "\(scope):\(groupIndex):\(itemIndex)")
+                    IngredientRow(text: Scaler.text(item, factor: factor), key: "\(scope):\(groupIndex):\(itemIndex)")
                     Divider()
                 }
             }
@@ -383,6 +401,7 @@ struct VariationCard: View {
     let recipe: Recipe
     let variation: Variation
     let index: Int
+    var factor: Double = 1
     @Binding var isOpen: Bool
 
     var body: some View {
@@ -423,7 +442,7 @@ struct VariationCard: View {
                     }
                     VStack(alignment: .leading, spacing: 12) {
                         SectionHeader(title: "Ingredientes")
-                        IngredientList(groups: variation.ingredients, scope: "\(recipe.id):v\(index):i")
+                        IngredientList(groups: variation.ingredients, scope: "\(recipe.id):v\(index):i", factor: factor)
                     }
                     VStack(alignment: .leading, spacing: 12) {
                         SectionHeader(title: "Preparación")
@@ -440,5 +459,80 @@ struct VariationCard: View {
         }
         .background(RoundedRectangle(cornerRadius: 16).fill(Color.card))
         .overlay(RoundedRectangle(cornerRadius: 16).strokeBorder(Color.hairline))
+    }
+}
+
+/// ¿Para cuántos? Step the servings up or down, or jump to half, original or double.
+struct ServingsCard: View {
+    @EnvironmentObject private var store: RecipeStore
+    let recipe: Recipe
+
+    private let quick: [(Double, String)] = [(0.5, "Mitad"), (1, "Original"), (2, "Doble")]
+
+    var body: some View {
+        let factor = store.factor(for: recipe.id)
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .center) {
+                Text("¿PARA CUÁNTOS?")
+                    .font(.slab(15, relativeTo: .headline))
+                Spacer(minLength: 8)
+                if Scaler.base(recipe.servings) != nil {
+                    HStack(spacing: 8) {
+                        stepButton("minus", label: "Fewer servings", direction: -1)
+                        Text(Scaler.yieldText(recipe.servings, factor: factor))
+                            .font(.system(.subheadline, design: .monospaced))
+                            .monospacedDigit()
+                            .frame(minWidth: 92)
+                            .contentTransition(.numericText())
+                            .accessibilityLabel("Makes \(Scaler.yieldText(recipe.servings, factor: factor))")
+                        stepButton("plus", label: "More servings", direction: 1)
+                    }
+                }
+            }
+            HStack(spacing: 8) {
+                ForEach(quick.indices, id: \.self) { i in
+                    let value = quick[i].0
+                    let title = quick[i].1
+                    let isOn = abs(factor - value) < 1e-9
+                    Button {
+                        withAnimation(.snappy) { store.setFactor(value, for: recipe.id) }
+                    } label: {
+                        Text(title)
+                            .font(.subheadline.weight(.bold))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 8)
+                            .foregroundStyle(isOn ? Color(.systemBackground) : Color.primary)
+                            .background(Capsule().fill(isOn ? Color.primary : Color.paper))
+                            .overlay(Capsule().strokeBorder(Color.hairline, lineWidth: isOn ? 0 : 1.5))
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(isOn ? .isSelected : [])
+                }
+            }
+            if factor != 1 {
+                Text("Ingredient amounts are adjusted for you. Amounts written inside the steps, and cooking times, are for the original recipe.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(14)
+        .background(RoundedRectangle(cornerRadius: 14).fill(Color.card))
+        .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.ink, lineWidth: 2))
+        .background(RoundedRectangle(cornerRadius: 14).fill(Color.inkShadow).offset(x: 3, y: 3))
+    }
+
+    private func stepButton(_ symbol: String, label: String, direction: Double) -> some View {
+        Button {
+            withAnimation(.snappy) { store.stepServings(recipe, by: direction) }
+        } label: {
+            Image(systemName: symbol)
+                .font(.body.weight(.bold))
+                .foregroundStyle(.white)
+                .frame(width: 38, height: 38)
+                .background(Circle().fill(Color.mxRosa))
+                .overlay(Circle().strokeBorder(Color.ink, lineWidth: 2))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(label)
     }
 }

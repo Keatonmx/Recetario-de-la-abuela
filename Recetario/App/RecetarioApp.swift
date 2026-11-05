@@ -17,14 +17,28 @@ struct RecetarioApp: App {
 }
 
 struct RootView: View {
+    @EnvironmentObject private var store: RecipeStore
+    // CI screenshots can open a tab (-screenshotTab 1) or a recipe (-screenshotRecipe pozole-rojo).
+    @State private var selection = UserDefaults.standard.integer(forKey: "screenshotTab")
+    @State private var path: [Recipe] = []
+
     var body: some View {
-        TabView {
-            NavigationStack { RecipeListView(savedOnly: false) }
+        TabView(selection: $selection) {
+            NavigationStack(path: $path) { RecipeListView(savedOnly: false) }
                 .tabItem { Label { Text("Recetas") } icon: { Image("tab-recetas") } }
+                .tag(0)
             NavigationStack { RecipeListView(savedOnly: true) }
                 .tabItem { Label { Text("Guardadas") } icon: { Image("milagro") } }
+                .tag(1)
             NavigationStack { PantryView() }
                 .tabItem { Label { Text("Despensa") } icon: { Image("tab-despensa") } }
+                .tag(2)
+        }
+        .onAppear {
+            if path.isEmpty, let id = UserDefaults.standard.string(forKey: "screenshotRecipe"),
+               let recipe = store.book.recipes.first(where: { $0.id == id }) {
+                path = [recipe]
+            }
         }
         .tint(Color.mxRosa)
     }

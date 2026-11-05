@@ -16,12 +16,12 @@ jobs:
       - name: Check recipes.json is up to date with web/recetario.html
         run: |
           node scripts/export-recipes.mjs
-          git diff --exit-code Recetario/Resources/recipes.json
+          git diff --exit-code Recetario/Resources/recipes.json scripts/validate/scaling-fixtures.json
 
       - name: Validate recipe data with the app's models
         run: |
-          swiftc Recetario/Models/Models.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
-          "$RUNNER_TEMP/validate" Recetario/Resources/recipes.json
+          swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
+          "$RUNNER_TEMP/validate" Recetario/Resources/recipes.json scripts/validate/scaling-fixtures.json
 
       - name: Generate Xcode project
         run: |
@@ -31,9 +31,51 @@ jobs:
       - name: Build for iOS Simulator
         run: |
           xcodebuild -version
+          UDID=$(xcrun simctl create recetario-shots com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro)
+          echo "UDID=$UDID" >> "$GITHUB_ENV"
           xcodebuild build \
             -project Recetario.xcodeproj \
             -scheme Recetario \
             -configuration Debug \
-            -destination 'generic/platform=iOS Simulator' \
+            -destination "platform=iOS Simulator,id=$UDID" \
+            -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO
+
+      - name: Take simulator screenshots
+        run: |
+          APP=build/Build/Products/Debug-iphonesimulator/Recetario.app
+          BUNDLE=com.keatonmx.recetario
+          mkdir -p screenshots
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time 9:41 --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4 || true
+          xcrun simctl install "$UDID" "$APP"
+          shot() {
+            name="$1"; shift
+            xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
+            xcrun simctl launch "$UDID" "$BUNDLE" "$@" > /dev/null
+            sleep 6
+            xcrun simctl io "$UDID" screenshot "screenshots/$name.png"
+          }
+          FAV=(-screenshotFavorites "pozole-rojo,conchas")
+          for mode in light dark; do
+            xcrun simctl ui "$UDID" appearance "$mode"
+            shot "$mode-01-recetas" "${FAV[@]}"
+            shot "$mode-02-guisos" "${FAV[@]}" -screenshotCategory guisos
+            shot "$mode-03-pozole" -screenshotRecipe pozole-rojo
+            shot "$mode-04-pozole-mitad" -screenshotRecipe pozole-rojo -screenshotFactor 0.5 -screenshotScrollTo servings
+            shot "$mode-05-pozole-olla" -screenshotRecipe pozole-rojo -screenshotDetailTab "Olla exprés" -screenshotScrollTo tabs
+            shot "$mode-06-pozole-variantes" -screenshotRecipe pozole-rojo -screenshotDetailTab Variantes -screenshotScrollTo tabs
+            shot "$mode-07-guardadas" "${FAV[@]}" -screenshotTab 1
+            shot "$mode-08-despensa" -screenshotTab 2
+          done
+          ls -la screenshots
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: simulator-screenshots
+          path: screenshots
+          if-no-files-found: warn
+          retention-days: 14
