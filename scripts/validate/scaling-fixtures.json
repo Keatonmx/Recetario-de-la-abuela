@@ -421,123 +421,123 @@
  },
  {
   "kind": "text",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 0.5,
-  "output": "1 fried tortillas and 1 fried eggs, as in the base"
+  "output": "2 fried tortillas and 2 fried eggs, as in the base"
  },
  {
   "kind": "text",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 0.6,
-  "output": "1¼ fried tortillas and 1¼ fried eggs, as in the base"
+  "output": "2⅓ fried tortillas and 2⅓ fried eggs, as in the base"
  },
  {
   "kind": "text",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 1.5,
-  "output": "3 fried tortillas and 3 fried eggs, as in the base"
- },
- {
-  "kind": "text",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
-  "factor": 2,
-  "output": "4 fried tortillas and 4 fried eggs, as in the base"
- },
- {
-  "kind": "text",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
-  "factor": 3,
   "output": "6 fried tortillas and 6 fried eggs, as in the base"
  },
  {
   "kind": "text",
-  "input": "½ cup salsa ranchera (from the base)",
-  "factor": 0.5,
-  "output": "¼ cup salsa ranchera (from the base)"
- },
- {
-  "kind": "text",
-  "input": "½ cup salsa ranchera (from the base)",
-  "factor": 0.6,
-  "output": "⅓ cup salsa ranchera (from the base)"
- },
- {
-  "kind": "text",
-  "input": "½ cup salsa ranchera (from the base)",
-  "factor": 1.5,
-  "output": "¾ cup salsa ranchera (from the base)"
- },
- {
-  "kind": "text",
-  "input": "½ cup salsa ranchera (from the base)",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 2,
-  "output": "1 cup salsa ranchera (from the base)"
+  "output": "8 fried tortillas and 8 fried eggs, as in the base"
  },
  {
   "kind": "text",
-  "input": "½ cup salsa ranchera (from the base)",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 3,
+  "output": "12 fried tortillas and 12 fried eggs, as in the base"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup salsa ranchera (from the base)",
+  "factor": 0.5,
+  "output": "½ cup salsa ranchera (from the base)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup salsa ranchera (from the base)",
+  "factor": 0.6,
+  "output": "⅔ cup salsa ranchera (from the base)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup salsa ranchera (from the base)",
+  "factor": 1.5,
   "output": "1½ cups salsa ranchera (from the base)"
  },
  {
   "kind": "text",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
-  "factor": 0.5,
-  "output": "¼ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
- },
- {
-  "kind": "text",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
-  "factor": 0.6,
-  "output": "⅓ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
- },
- {
-  "kind": "text",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
-  "factor": 1.5,
-  "output": "¾ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
- },
- {
-  "kind": "text",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "input": "1 cup salsa ranchera (from the base)",
   "factor": 2,
-  "output": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
+  "output": "2 cups salsa ranchera (from the base)"
  },
  {
   "kind": "text",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "input": "1 cup salsa ranchera (from the base)",
   "factor": 3,
+  "output": "3 cups salsa ranchera (from the base)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "factor": 0.5,
+  "output": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "factor": 0.6,
+  "output": "⅔ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "factor": 1.5,
   "output": "1½ cups salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
  },
  {
   "kind": "text",
-  "input": "½ cup frijoles refritos",
-  "factor": 0.5,
-  "output": "¼ cup frijoles refritos"
- },
- {
-  "kind": "text",
-  "input": "½ cup frijoles refritos",
-  "factor": 0.6,
-  "output": "⅓ cup frijoles refritos"
- },
- {
-  "kind": "text",
-  "input": "½ cup frijoles refritos",
-  "factor": 1.5,
-  "output": "¾ cup frijoles refritos"
- },
- {
-  "kind": "text",
-  "input": "½ cup frijoles refritos",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
   "factor": 2,
-  "output": "1 cup frijoles refritos"
+  "output": "2 cups salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
  },
  {
   "kind": "text",
-  "input": "½ cup frijoles refritos",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
   "factor": 3,
+  "output": "3 cups salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup frijoles refritos",
+  "factor": 0.5,
+  "output": "½ cup frijoles refritos"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup frijoles refritos",
+  "factor": 0.6,
+  "output": "⅔ cup frijoles refritos"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup frijoles refritos",
+  "factor": 1.5,
   "output": "1½ cups frijoles refritos"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup frijoles refritos",
+  "factor": 2,
+  "output": "2 cups frijoles refritos"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup frijoles refritos",
+  "factor": 3,
+  "output": "3 cups frijoles refritos"
  },
  {
   "kind": "text",
@@ -2671,33 +2671,183 @@
  },
  {
   "kind": "text",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 0.5,
-  "output": "Red chile: 6 dried New Mexico, California or guajillo chiles, 1 garlic clove, pinch of cumin, ¼ tsp Mexican oregano, ¼ tsp salt, 1 cup water"
+  "output": "For the red chile: 6 dried New Mexico, California or guajillo chiles"
  },
  {
   "kind": "text",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 0.6,
-  "output": "Red chile: 6 dried New Mexico, California or guajillo chiles, 1¼ garlic cloves, pinch of cumin, ⅓ tsp Mexican oregano, ⅓ tsp salt, 1¼ cups water"
+  "output": "For the red chile: 6 dried New Mexico, California or guajillo chiles"
  },
  {
   "kind": "text",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 1.5,
-  "output": "Red chile: 6 dried New Mexico, California or guajillo chiles, 3 garlic cloves, pinch of cumin, ¾ tsp Mexican oregano, ¾ tsp salt, 3 cups water"
+  "output": "For the red chile: 6 dried New Mexico, California or guajillo chiles"
  },
  {
   "kind": "text",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 2,
-  "output": "Red chile: 6 dried New Mexico, California or guajillo chiles, 4 garlic cloves, pinch of cumin, 1 tsp Mexican oregano, 1 tsp salt, 4 cups water"
+  "output": "For the red chile: 6 dried New Mexico, California or guajillo chiles"
  },
  {
   "kind": "text",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 3,
-  "output": "Red chile: 6 dried New Mexico, California or guajillo chiles, 6 garlic cloves, pinch of cumin, 1½ tsp Mexican oregano, 1½ tsp salt, 6 cups water"
+  "output": "For the red chile: 6 dried New Mexico, California or guajillo chiles"
+ },
+ {
+  "kind": "text",
+  "input": "2 garlic cloves",
+  "factor": 0.5,
+  "output": "1 garlic clove"
+ },
+ {
+  "kind": "text",
+  "input": "2 garlic cloves",
+  "factor": 0.6,
+  "output": "1¼ garlic cloves"
+ },
+ {
+  "kind": "text",
+  "input": "2 garlic cloves",
+  "factor": 1.5,
+  "output": "3 garlic cloves"
+ },
+ {
+  "kind": "text",
+  "input": "2 garlic cloves",
+  "factor": 2,
+  "output": "4 garlic cloves"
+ },
+ {
+  "kind": "text",
+  "input": "2 garlic cloves",
+  "factor": 3,
+  "output": "6 garlic cloves"
+ },
+ {
+  "kind": "text",
+  "input": "Pinch of cumin",
+  "factor": 0.5,
+  "output": "Pinch of cumin"
+ },
+ {
+  "kind": "text",
+  "input": "Pinch of cumin",
+  "factor": 0.6,
+  "output": "Pinch of cumin"
+ },
+ {
+  "kind": "text",
+  "input": "Pinch of cumin",
+  "factor": 1.5,
+  "output": "Pinch of cumin"
+ },
+ {
+  "kind": "text",
+  "input": "Pinch of cumin",
+  "factor": 2,
+  "output": "Pinch of cumin"
+ },
+ {
+  "kind": "text",
+  "input": "Pinch of cumin",
+  "factor": 3,
+  "output": "Pinch of cumin"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano",
+  "factor": 0.5,
+  "output": "¼ tsp Mexican oregano"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano",
+  "factor": 0.6,
+  "output": "⅓ tsp Mexican oregano"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano",
+  "factor": 1.5,
+  "output": "¾ tsp Mexican oregano"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano",
+  "factor": 2,
+  "output": "1 tsp Mexican oregano"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano",
+  "factor": 3,
+  "output": "1½ tsp Mexican oregano"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp salt",
+  "factor": 0.5,
+  "output": "¼ tsp salt"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp salt",
+  "factor": 0.6,
+  "output": "⅓ tsp salt"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp salt",
+  "factor": 1.5,
+  "output": "¾ tsp salt"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp salt",
+  "factor": 2,
+  "output": "1 tsp salt"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp salt",
+  "factor": 3,
+  "output": "1½ tsp salt"
+ },
+ {
+  "kind": "text",
+  "input": "2 cups water",
+  "factor": 0.5,
+  "output": "1 cup water"
+ },
+ {
+  "kind": "text",
+  "input": "2 cups water",
+  "factor": 0.6,
+  "output": "1¼ cups water"
+ },
+ {
+  "kind": "text",
+  "input": "2 cups water",
+  "factor": 1.5,
+  "output": "3 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "2 cups water",
+  "factor": 2,
+  "output": "4 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "2 cups water",
+  "factor": 3,
+  "output": "6 cups water"
  },
  {
   "kind": "text",
@@ -3811,33 +3961,93 @@
  },
  {
   "kind": "text",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 0.5,
-  "output": "Salsa: 10 chiles de árbol, 1 chile guajillo, 1 garlic clove, ¼ tsp salt, ⅓ cup water"
+  "output": "For the salsa: 10 chiles de árbol"
  },
  {
   "kind": "text",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 0.6,
-  "output": "Salsa: 10 chiles de árbol, 1¼ chiles guajillo, 1¼ garlic cloves, ⅓ tsp salt, ½ cup water"
+  "output": "For the salsa: 10 chiles de árbol"
  },
  {
   "kind": "text",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 1.5,
-  "output": "Salsa: 10 chiles de árbol, 3 chiles guajillo, 3 garlic cloves, ¾ tsp salt, 1⅛ cups water"
+  "output": "For the salsa: 10 chiles de árbol"
  },
  {
   "kind": "text",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 2,
-  "output": "Salsa: 10 chiles de árbol, 4 chiles guajillo, 4 garlic cloves, 1 tsp salt, 1½ cups water"
+  "output": "For the salsa: 10 chiles de árbol"
  },
  {
   "kind": "text",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 3,
-  "output": "Salsa: 10 chiles de árbol, 6 chiles guajillo, 6 garlic cloves, 1½ tsp salt, 2¼ cups water"
+  "output": "For the salsa: 10 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "2 chiles guajillo",
+  "factor": 0.5,
+  "output": "1 chile guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chiles guajillo",
+  "factor": 0.6,
+  "output": "1¼ chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chiles guajillo",
+  "factor": 1.5,
+  "output": "3 chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chiles guajillo",
+  "factor": 2,
+  "output": "4 chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chiles guajillo",
+  "factor": 3,
+  "output": "6 chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "¾ cup water",
+  "factor": 0.5,
+  "output": "⅓ cup water"
+ },
+ {
+  "kind": "text",
+  "input": "¾ cup water",
+  "factor": 0.6,
+  "output": "½ cup water"
+ },
+ {
+  "kind": "text",
+  "input": "¾ cup water",
+  "factor": 1.5,
+  "output": "1⅛ cups water"
+ },
+ {
+  "kind": "text",
+  "input": "¾ cup water",
+  "factor": 2,
+  "output": "1½ cups water"
+ },
+ {
+  "kind": "text",
+  "input": "¾ cup water",
+  "factor": 3,
+  "output": "2¼ cups water"
  },
  {
   "kind": "text",
@@ -3901,33 +4111,33 @@
  },
  {
   "kind": "text",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 0.5,
-  "output": "1 lime or ⅛ cup white vinegar, for cleaning"
+  "output": "1 lime or ⅛ cup white vinegar, plus a handful of coarse salt, for cleaning"
  },
  {
   "kind": "text",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 0.6,
-  "output": "1¼ limes or ⅛ cup white vinegar, for cleaning"
+  "output": "1¼ limes or ⅛ cup white vinegar, plus a handful of coarse salt, for cleaning"
  },
  {
   "kind": "text",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 1.5,
-  "output": "3 limes or ⅓ cup white vinegar, for cleaning"
+  "output": "3 limes or ⅓ cup white vinegar, plus a handful of coarse salt, for cleaning"
  },
  {
   "kind": "text",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 2,
-  "output": "4 limes or ½ cup white vinegar, for cleaning"
+  "output": "4 limes or ½ cup white vinegar, plus a handful of coarse salt, for cleaning"
  },
  {
   "kind": "text",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 3,
-  "output": "6 limes or ¾ cup white vinegar, for cleaning"
+  "output": "6 limes or ¾ cup white vinegar, plus a handful of coarse salt, for cleaning"
  },
  {
   "kind": "text",
@@ -5041,33 +5251,153 @@
  },
  {
   "kind": "text",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 0.5,
-  "output": "1 ear of corn, ¼ lb green beans, 1 zucchini, ½ chayote, 1 potato"
+  "output": "1 ear of corn"
  },
  {
   "kind": "text",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 0.6,
-  "output": "1¼ ears of corn, ⅓ lb green beans, 1¼ zucchini, ⅔ chayote, 1¼ potatoes"
+  "output": "1¼ ears of corn"
  },
  {
   "kind": "text",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 1.5,
-  "output": "3 ears of corn, ¾ lb green beans, 3 zucchini, 1½ chayotes, 3 potatoes"
+  "output": "3 ears of corn"
  },
  {
   "kind": "text",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 2,
-  "output": "4 ears of corn, 1 lb green beans, 4 zucchini, 2 chayotes, 4 potatoes"
+  "output": "4 ears of corn"
  },
  {
   "kind": "text",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 3,
-  "output": "6 ears of corn, 1½ lb green beans, 6 zucchini, 3 chayotes, 6 potatoes"
+  "output": "6 ears of corn"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb green beans",
+  "factor": 0.5,
+  "output": "¼ lb green beans"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb green beans",
+  "factor": 0.6,
+  "output": "⅓ lb green beans"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb green beans",
+  "factor": 1.5,
+  "output": "¾ lb green beans"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb green beans",
+  "factor": 2,
+  "output": "1 lb green beans"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb green beans",
+  "factor": 3,
+  "output": "1½ lb green beans"
+ },
+ {
+  "kind": "text",
+  "input": "2 zucchini",
+  "factor": 0.5,
+  "output": "1 zucchini"
+ },
+ {
+  "kind": "text",
+  "input": "2 zucchini",
+  "factor": 0.6,
+  "output": "1¼ zucchini"
+ },
+ {
+  "kind": "text",
+  "input": "2 zucchini",
+  "factor": 1.5,
+  "output": "3 zucchini"
+ },
+ {
+  "kind": "text",
+  "input": "2 zucchini",
+  "factor": 2,
+  "output": "4 zucchini"
+ },
+ {
+  "kind": "text",
+  "input": "2 zucchini",
+  "factor": 3,
+  "output": "6 zucchini"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote",
+  "factor": 0.5,
+  "output": "½ chayote"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote",
+  "factor": 0.6,
+  "output": "⅔ chayote"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote",
+  "factor": 1.5,
+  "output": "1½ chayotes"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote",
+  "factor": 2,
+  "output": "2 chayotes"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote",
+  "factor": 3,
+  "output": "3 chayotes"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes",
+  "factor": 0.5,
+  "output": "1 potato"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes",
+  "factor": 0.6,
+  "output": "1¼ potatoes"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes",
+  "factor": 1.5,
+  "output": "3 potatoes"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes",
+  "factor": 2,
+  "output": "4 potatoes"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes",
+  "factor": 3,
+  "output": "6 potatoes"
  },
  {
   "kind": "text",
@@ -5911,33 +6241,33 @@
  },
  {
   "kind": "text",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 0.5,
-  "output": "Same as the base, but only 2 cups broth"
+  "output": "Same as the base, but only 3 cups broth (1 for the purée, 1 to cook)"
  },
  {
   "kind": "text",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 0.6,
-  "output": "Same as the base, but only 2 cups broth"
+  "output": "Same as the base, but only 3 cups broth (1 for the purée, 1¼ to cook)"
  },
  {
   "kind": "text",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 1.5,
-  "output": "Same as the base, but only 2 cups broth"
+  "output": "Same as the base, but only 3 cups broth (1 for the purée, 3 to cook)"
  },
  {
   "kind": "text",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 2,
-  "output": "Same as the base, but only 2 cups broth"
+  "output": "Same as the base, but only 3 cups broth (1 for the purée, 4 to cook)"
  },
  {
   "kind": "text",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 3,
-  "output": "Same as the base, but only 2 cups broth"
+  "output": "Same as the base, but only 3 cups broth (1 for the purée, 6 to cook)"
  },
  {
   "kind": "text",
@@ -6268,36 +6598,6 @@
   "input": "1 tsp salt and ¼ tsp black pepper",
   "factor": 3,
   "output": "3 tsp salt and ¾ tsp black pepper"
- },
- {
-  "kind": "text",
-  "input": "2 garlic cloves",
-  "factor": 0.5,
-  "output": "1 garlic clove"
- },
- {
-  "kind": "text",
-  "input": "2 garlic cloves",
-  "factor": 0.6,
-  "output": "1¼ garlic cloves"
- },
- {
-  "kind": "text",
-  "input": "2 garlic cloves",
-  "factor": 1.5,
-  "output": "3 garlic cloves"
- },
- {
-  "kind": "text",
-  "input": "2 garlic cloves",
-  "factor": 2,
-  "output": "4 garlic cloves"
- },
- {
-  "kind": "text",
-  "input": "2 garlic cloves",
-  "factor": 3,
-  "output": "6 garlic cloves"
  },
  {
   "kind": "text",
@@ -6871,33 +7171,33 @@
  },
  {
   "kind": "text",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 0.5,
-  "output": "1–1½ cups water"
+  "output": "1 cup water, plus more for the consomé (about 6 cups in all)"
  },
  {
   "kind": "text",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 0.6,
-  "output": "1¼–1¾ cups water"
+  "output": "1¼ cups water, plus more for the consomé (about 6 cups in all)"
  },
  {
   "kind": "text",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 1.5,
-  "output": "3–4½ cups water"
+  "output": "3 cups water, plus more for the consomé (about 6 cups in all)"
  },
  {
   "kind": "text",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 2,
-  "output": "4–6 cups water"
+  "output": "4 cups water, plus more for the consomé (about 6 cups in all)"
  },
  {
   "kind": "text",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 3,
-  "output": "6–9 cups water"
+  "output": "6 cups water, plus more for the consomé (about 6 cups in all)"
  },
  {
   "kind": "text",
@@ -7201,36 +7501,6 @@
  },
  {
   "kind": "text",
-  "input": "½ tsp Mexican oregano",
-  "factor": 0.5,
-  "output": "¼ tsp Mexican oregano"
- },
- {
-  "kind": "text",
-  "input": "½ tsp Mexican oregano",
-  "factor": 0.6,
-  "output": "⅓ tsp Mexican oregano"
- },
- {
-  "kind": "text",
-  "input": "½ tsp Mexican oregano",
-  "factor": 1.5,
-  "output": "¾ tsp Mexican oregano"
- },
- {
-  "kind": "text",
-  "input": "½ tsp Mexican oregano",
-  "factor": 2,
-  "output": "1 tsp Mexican oregano"
- },
- {
-  "kind": "text",
-  "input": "½ tsp Mexican oregano",
-  "factor": 3,
-  "output": "1½ tsp Mexican oregano"
- },
- {
-  "kind": "text",
   "input": "¼ tsp ground cumin",
   "factor": 0.5,
   "output": "⅛ tsp ground cumin"
@@ -7501,36 +7771,6 @@
  },
  {
   "kind": "text",
-  "input": "½ tsp salt",
-  "factor": 0.5,
-  "output": "¼ tsp salt"
- },
- {
-  "kind": "text",
-  "input": "½ tsp salt",
-  "factor": 0.6,
-  "output": "⅓ tsp salt"
- },
- {
-  "kind": "text",
-  "input": "½ tsp salt",
-  "factor": 1.5,
-  "output": "¾ tsp salt"
- },
- {
-  "kind": "text",
-  "input": "½ tsp salt",
-  "factor": 2,
-  "output": "1 tsp salt"
- },
- {
-  "kind": "text",
-  "input": "½ tsp salt",
-  "factor": 3,
-  "output": "1½ tsp salt"
- },
- {
-  "kind": "text",
   "input": "¼ tsp Mexican oregano",
   "factor": 0.5,
   "output": "⅛ tsp Mexican oregano"
@@ -7651,33 +7891,33 @@
  },
  {
   "kind": "text",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 0.5,
-  "output": "Juice of 2 sour oranges or limes"
+  "output": "1 sour orange or limes, juiced"
  },
  {
   "kind": "text",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 0.6,
-  "output": "Juice of 2 sour oranges or limes"
+  "output": "1¼ sour oranges or limes, juiced"
  },
  {
   "kind": "text",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 1.5,
-  "output": "Juice of 2 sour oranges or limes"
+  "output": "3 sour oranges or limes, juiced"
  },
  {
   "kind": "text",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 2,
-  "output": "Juice of 2 sour oranges or limes"
+  "output": "4 sour oranges or limes, juiced"
  },
  {
   "kind": "text",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 3,
-  "output": "Juice of 2 sour oranges or limes"
+  "output": "6 sour oranges or limes, juiced"
  },
  {
   "kind": "text",
@@ -7801,33 +8041,93 @@
  },
  {
   "kind": "text",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 0.5,
-  "output": "2 garlic cloves, 1 bay leaf and ¼ tsp Mexican oregano, optional"
+  "output": "2 garlic cloves, optional"
  },
  {
   "kind": "text",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 0.6,
-  "output": "2⅓ garlic cloves, 1¼ bay leaves and ⅓ tsp Mexican oregano, optional"
+  "output": "2⅓ garlic cloves, optional"
  },
  {
   "kind": "text",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 1.5,
-  "output": "6 garlic cloves, 3 bay leaves and ¾ tsp Mexican oregano, optional"
+  "output": "6 garlic cloves, optional"
  },
  {
   "kind": "text",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 2,
-  "output": "8 garlic cloves, 4 bay leaves and 1 tsp Mexican oregano, optional"
+  "output": "8 garlic cloves, optional"
  },
  {
   "kind": "text",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 3,
-  "output": "12 garlic cloves, 6 bay leaves and 1½ tsp Mexican oregano, optional"
+  "output": "12 garlic cloves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "2 bay leaves, optional",
+  "factor": 0.5,
+  "output": "1 bay leaf, optional"
+ },
+ {
+  "kind": "text",
+  "input": "2 bay leaves, optional",
+  "factor": 0.6,
+  "output": "1¼ bay leaves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "2 bay leaves, optional",
+  "factor": 1.5,
+  "output": "3 bay leaves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "2 bay leaves, optional",
+  "factor": 2,
+  "output": "4 bay leaves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "2 bay leaves, optional",
+  "factor": 3,
+  "output": "6 bay leaves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 0.5,
+  "output": "¼ tsp Mexican oregano, optional"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 0.6,
+  "output": "⅓ tsp Mexican oregano, optional"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 1.5,
+  "output": "¾ tsp Mexican oregano, optional"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 2,
+  "output": "1 tsp Mexican oregano, optional"
+ },
+ {
+  "kind": "text",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 3,
+  "output": "1½ tsp Mexican oregano, optional"
  },
  {
   "kind": "text",
@@ -8071,6 +8371,36 @@
  },
  {
   "kind": "text",
+  "input": "4 cups water, for steaming",
+  "factor": 0.5,
+  "output": "2 cups water, for steaming"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water, for steaming",
+  "factor": 0.6,
+  "output": "2⅓ cups water, for steaming"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water, for steaming",
+  "factor": 1.5,
+  "output": "6 cups water, for steaming"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water, for steaming",
+  "factor": 2,
+  "output": "8 cups water, for steaming"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water, for steaming",
+  "factor": 3,
+  "output": "12 cups water, for steaming"
+ },
+ {
+  "kind": "text",
   "input": "Banana leaves, optional, for wrapping",
   "factor": 0.5,
   "output": "Banana leaves, optional, for wrapping"
@@ -8281,33 +8611,33 @@
  },
  {
   "kind": "text",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 0.5,
-  "output": "Crumbled queso añejo, to finish"
+  "output": "Crumbled queso añejo and chopped onion, to finish"
  },
  {
   "kind": "text",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 0.6,
-  "output": "Crumbled queso añejo, to finish"
+  "output": "Crumbled queso añejo and chopped onion, to finish"
  },
  {
   "kind": "text",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 1.5,
-  "output": "Crumbled queso añejo, to finish"
+  "output": "Crumbled queso añejo and chopped onion, to finish"
  },
  {
   "kind": "text",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 2,
-  "output": "Crumbled queso añejo, to finish"
+  "output": "Crumbled queso añejo and chopped onion, to finish"
  },
  {
   "kind": "text",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 3,
-  "output": "Crumbled queso añejo, to finish"
+  "output": "Crumbled queso añejo and chopped onion, to finish"
  },
  {
   "kind": "text",
@@ -8488,6 +8818,36 @@
   "input": "1 lb verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 2 cups cooked nopales",
   "factor": 3,
   "output": "3 lb verdolagas (purslane), thick stems removed, or 9 potatoes, cubed, or 6 cups cooked nopales"
+ },
+ {
+  "kind": "text",
+  "input": "Frijoles de la olla",
+  "factor": 0.5,
+  "output": "Frijoles de la olla"
+ },
+ {
+  "kind": "text",
+  "input": "Frijoles de la olla",
+  "factor": 0.6,
+  "output": "Frijoles de la olla"
+ },
+ {
+  "kind": "text",
+  "input": "Frijoles de la olla",
+  "factor": 1.5,
+  "output": "Frijoles de la olla"
+ },
+ {
+  "kind": "text",
+  "input": "Frijoles de la olla",
+  "factor": 2,
+  "output": "Frijoles de la olla"
+ },
+ {
+  "kind": "text",
+  "input": "Frijoles de la olla",
+  "factor": 3,
+  "output": "Frijoles de la olla"
  },
  {
   "kind": "text",
@@ -10651,36 +11011,6 @@
  },
  {
   "kind": "text",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 0.5,
-  "output": "4 chiles guajillo and 1½ chiles ancho"
- },
- {
-  "kind": "text",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 0.6,
-  "output": "4¾ chiles guajillo and 1¾ chiles ancho"
- },
- {
-  "kind": "text",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 1.5,
-  "output": "12 chiles guajillo and 4½ chiles ancho"
- },
- {
-  "kind": "text",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 2,
-  "output": "16 chiles guajillo and 6 chiles ancho"
- },
- {
-  "kind": "text",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 3,
-  "output": "24 chiles guajillo and 9 chiles ancho"
- },
- {
-  "kind": "text",
   "input": "2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano",
   "factor": 0.5,
   "output": "1 garlic clove, ¼ tsp cumin and ¼ tsp Mexican oregano"
@@ -10861,33 +11191,33 @@
  },
  {
   "kind": "text",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 0.5,
-  "output": "20 dried corn husks, soaked in hot water 1 hour"
+  "output": "30 dried corn husks, soaked in hot water 1 hour"
  },
  {
   "kind": "text",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 0.6,
-  "output": "24 dried corn husks, soaked in hot water 1 hour"
+  "output": "36 dried corn husks, soaked in hot water 1 hour"
  },
  {
   "kind": "text",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 1.5,
-  "output": "60 dried corn husks, soaked in hot water 1 hour"
+  "output": "90 dried corn husks, soaked in hot water 1 hour"
  },
  {
   "kind": "text",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 2,
-  "output": "80 dried corn husks, soaked in hot water 1 hour"
+  "output": "120 dried corn husks, soaked in hot water 1 hour"
  },
  {
   "kind": "text",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 3,
-  "output": "120 dried corn husks, soaked in hot water 1 hour"
+  "output": "180 dried corn husks, soaked in hot water 1 hour"
  },
  {
   "kind": "text",
@@ -11218,36 +11548,6 @@
   "input": "A few drops of red food coloring (the traditional pink) or a little beet juice",
   "factor": 3,
   "output": "A few drops of red food coloring (the traditional pink) or a little beet juice"
- },
- {
-  "kind": "text",
-  "input": "Pinch of cumin",
-  "factor": 0.5,
-  "output": "Pinch of cumin"
- },
- {
-  "kind": "text",
-  "input": "Pinch of cumin",
-  "factor": 0.6,
-  "output": "Pinch of cumin"
- },
- {
-  "kind": "text",
-  "input": "Pinch of cumin",
-  "factor": 1.5,
-  "output": "Pinch of cumin"
- },
- {
-  "kind": "text",
-  "input": "Pinch of cumin",
-  "factor": 2,
-  "output": "Pinch of cumin"
- },
- {
-  "kind": "text",
-  "input": "Pinch of cumin",
-  "factor": 3,
-  "output": "Pinch of cumin"
  },
  {
   "kind": "text",
@@ -11728,6 +12028,36 @@
   "input": "1 sprig epazote (essential for black beans)",
   "factor": 3,
   "output": "3 sprigs epazote (essential for black beans)"
+ },
+ {
+  "kind": "text",
+  "input": "Sliced serrano",
+  "factor": 0.5,
+  "output": "Sliced serrano"
+ },
+ {
+  "kind": "text",
+  "input": "Sliced serrano",
+  "factor": 0.6,
+  "output": "Sliced serrano"
+ },
+ {
+  "kind": "text",
+  "input": "Sliced serrano",
+  "factor": 1.5,
+  "output": "Sliced serrano"
+ },
+ {
+  "kind": "text",
+  "input": "Sliced serrano",
+  "factor": 2,
+  "output": "Sliced serrano"
+ },
+ {
+  "kind": "text",
+  "input": "Sliced serrano",
+  "factor": 3,
+  "output": "Sliced serrano"
  },
  {
   "kind": "text",
@@ -12271,33 +12601,123 @@
  },
  {
   "kind": "text",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 0.5,
-  "output": "Instead of the tomato: 1 roasted, peeled poblano, ¼ bunch cilantro, ½ garlic clove and ⅛ onion, blended with ¼ cup broth"
+  "output": "Instead of the tomato:"
  },
  {
   "kind": "text",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 0.6,
-  "output": "Instead of the tomato: 1 roasted, peeled poblano, ⅓ bunch cilantro, ⅔ garlic clove and ⅛ onion, blended with ⅓ cup broth"
+  "output": "Instead of the tomato:"
  },
  {
   "kind": "text",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 1.5,
-  "output": "Instead of the tomato: 1 roasted, peeled poblano, ¾ bunch cilantro, 1½ garlic cloves and ⅓ onion, blended with ¾ cup broth"
+  "output": "Instead of the tomato:"
  },
  {
   "kind": "text",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 2,
-  "output": "Instead of the tomato: 1 roasted, peeled poblano, 1 bunch cilantro, 2 garlic cloves and ½ onion, blended with 1 cup broth"
+  "output": "Instead of the tomato:"
  },
  {
   "kind": "text",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 3,
-  "output": "Instead of the tomato: 1 roasted, peeled poblano, 1½ bunches cilantro, 3 garlic cloves and ¾ onion, blended with 1½ cups broth"
+  "output": "Instead of the tomato:"
+ },
+ {
+  "kind": "text",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 0.5,
+  "output": "½ poblano, roasted and peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 0.6,
+  "output": "⅔ poblano, roasted and peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 1.5,
+  "output": "1½ poblanos, roasted and peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 2,
+  "output": "2 poblanos, roasted and peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 3,
+  "output": "3 poblanos, roasted and peeled"
+ },
+ {
+  "kind": "text",
+  "input": "¼ onion",
+  "factor": 0.5,
+  "output": "⅛ onion"
+ },
+ {
+  "kind": "text",
+  "input": "¼ onion",
+  "factor": 0.6,
+  "output": "⅛ onion"
+ },
+ {
+  "kind": "text",
+  "input": "¼ onion",
+  "factor": 1.5,
+  "output": "⅓ onion"
+ },
+ {
+  "kind": "text",
+  "input": "¼ onion",
+  "factor": 2,
+  "output": "½ onion"
+ },
+ {
+  "kind": "text",
+  "input": "¼ onion",
+  "factor": 3,
+  "output": "¾ onion"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup broth, to blend",
+  "factor": 0.5,
+  "output": "¼ cup broth, to blend"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup broth, to blend",
+  "factor": 0.6,
+  "output": "⅓ cup broth, to blend"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup broth, to blend",
+  "factor": 1.5,
+  "output": "¾ cup broth, to blend"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup broth, to blend",
+  "factor": 2,
+  "output": "1 cup broth, to blend"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup broth, to blend",
+  "factor": 3,
+  "output": "1½ cups broth, to blend"
  },
  {
   "kind": "text",
@@ -13861,36 +14281,6 @@
  },
  {
   "kind": "text",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 0.5,
-  "output": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
- },
- {
-  "kind": "text",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 0.6,
-  "output": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
- },
- {
-  "kind": "text",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 1.5,
-  "output": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
- },
- {
-  "kind": "text",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 2,
-  "output": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
- },
- {
-  "kind": "text",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 3,
-  "output": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
- },
- {
-  "kind": "text",
   "input": "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and, if you like, ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk",
   "factor": 0.5,
   "output": "Concha dough from the base, with these changes: add the zest of 2 oranges, ½ tbsp orange blossom water (agua de azahar) and, if you like, ¼ tsp anise seed, ground; use ½ cup milk plus ⅛ cup orange juice instead of ¾ cup milk"
@@ -14221,36 +14611,6 @@
  },
  {
   "kind": "text",
-  "input": "2 cups water",
-  "factor": 0.5,
-  "output": "1 cup water"
- },
- {
-  "kind": "text",
-  "input": "2 cups water",
-  "factor": 0.6,
-  "output": "1¼ cups water"
- },
- {
-  "kind": "text",
-  "input": "2 cups water",
-  "factor": 1.5,
-  "output": "3 cups water"
- },
- {
-  "kind": "text",
-  "input": "2 cups water",
-  "factor": 2,
-  "output": "4 cups water"
- },
- {
-  "kind": "text",
-  "input": "2 cups water",
-  "factor": 3,
-  "output": "6 cups water"
- },
- {
-  "kind": "text",
   "input": "1 strip lime peel, no white pith",
   "factor": 0.5,
   "output": "½ strip lime peel, no white pith"
@@ -14401,33 +14761,93 @@
  },
  {
   "kind": "text",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 0.5,
-  "output": "Instead of the sugar and 1 cup of the milk: 1 can (14 oz) sweetened condensed milk and ½ can (12 oz) evaporated milk"
+  "output": "1 cup whole milk (instead of 4)"
  },
  {
   "kind": "text",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 0.6,
-  "output": "Instead of the sugar and 1¼ cups of the milk: 1 can (14 oz) sweetened condensed milk and ⅔ can (12 oz) evaporated milk"
+  "output": "1¼ cups whole milk (instead of 4)"
  },
  {
   "kind": "text",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 1.5,
-  "output": "Instead of the sugar and 3 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1½ cans (12 oz) evaporated milk"
+  "output": "3 cups whole milk (instead of 4)"
  },
  {
   "kind": "text",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 2,
-  "output": "Instead of the sugar and 4 cups of the milk: 1 can (14 oz) sweetened condensed milk and 2 cans (12 oz) evaporated milk"
+  "output": "4 cups whole milk (instead of 4)"
  },
  {
   "kind": "text",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 3,
-  "output": "Instead of the sugar and 6 cups of the milk: 1 can (14 oz) sweetened condensed milk and 3 cans (12 oz) evaporated milk"
+  "output": "6 cups whole milk (instead of 4)"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 0.5,
+  "output": "½ can (14 oz) sweetened condensed milk (instead of the sugar)"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 0.6,
+  "output": "⅔ can (14 oz) sweetened condensed milk (instead of the sugar)"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 1.5,
+  "output": "1½ cans (14 oz) sweetened condensed milk (instead of the sugar)"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 2,
+  "output": "2 cans (14 oz) sweetened condensed milk (instead of the sugar)"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 3,
+  "output": "3 cans (14 oz) sweetened condensed milk (instead of the sugar)"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 0.5,
+  "output": "½ can (12 oz) evaporated milk"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 0.6,
+  "output": "⅔ can (12 oz) evaporated milk"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 1.5,
+  "output": "1½ cans (12 oz) evaporated milk"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 2,
+  "output": "2 cans (12 oz) evaporated milk"
+ },
+ {
+  "kind": "text",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 3,
+  "output": "3 cans (12 oz) evaporated milk"
  },
  {
   "kind": "text",
@@ -14521,36 +14941,6 @@
  },
  {
   "kind": "text",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 0.5,
-  "output": "½ tsp Mexican vanilla"
- },
- {
-  "kind": "text",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 0.6,
-  "output": "⅔ tsp Mexican vanilla"
- },
- {
-  "kind": "text",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 1.5,
-  "output": "1½ tsp Mexican vanilla"
- },
- {
-  "kind": "text",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 2,
-  "output": "2 tsp Mexican vanilla"
- },
- {
-  "kind": "text",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 3,
-  "output": "3 tsp Mexican vanilla"
- },
- {
-  "kind": "text",
   "input": "Caramel from the base",
   "factor": 0.5,
   "output": "Caramel from the base"
@@ -14608,36 +14998,6 @@
   "input": "1 can (14 oz) sweetened condensed milk",
   "factor": 3,
   "output": "3 cans (14 oz) sweetened condensed milk"
- },
- {
-  "kind": "text",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 0.5,
-  "output": "½ can (12 oz) evaporated milk"
- },
- {
-  "kind": "text",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 0.6,
-  "output": "⅔ can (12 oz) evaporated milk"
- },
- {
-  "kind": "text",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 1.5,
-  "output": "1½ cans (12 oz) evaporated milk"
- },
- {
-  "kind": "text",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 2,
-  "output": "2 cans (12 oz) evaporated milk"
- },
- {
-  "kind": "text",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 3,
-  "output": "3 cans (12 oz) evaporated milk"
  },
  {
   "kind": "text",
@@ -15211,33 +15571,33 @@
  },
  {
   "kind": "yield",
-  "input": "About 30",
+  "input": "About 48",
   "factor": 0.5,
-  "output": "About 15"
+  "output": "About 24"
  },
  {
   "kind": "yield",
-  "input": "About 30",
+  "input": "About 48",
   "factor": 0.6,
-  "output": "About 18"
+  "output": "About 29"
  },
  {
   "kind": "yield",
-  "input": "About 30",
+  "input": "About 48",
   "factor": 1.5,
-  "output": "About 45"
+  "output": "About 72"
  },
  {
   "kind": "yield",
-  "input": "About 30",
+  "input": "About 48",
   "factor": 2,
-  "output": "About 60"
+  "output": "About 96"
  },
  {
   "kind": "yield",
-  "input": "About 30",
+  "input": "About 48",
   "factor": 3,
-  "output": "About 90"
+  "output": "About 144"
  },
  {
   "kind": "yield",
@@ -15565,27 +15925,27 @@
  },
  {
   "kind": "metric",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 1,
-  "output": "2 fried tortillas and 2 fried eggs, as in the base"
+  "output": "4 fried tortillas and 4 fried eggs, as in the base"
  },
  {
   "kind": "metric",
-  "input": "½ cup salsa ranchera (from the base)",
+  "input": "1 cup salsa ranchera (from the base)",
   "factor": 1,
-  "output": "120 ml salsa ranchera (from the base)"
+  "output": "240 ml salsa ranchera (from the base)"
  },
  {
   "kind": "metric",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
   "factor": 1,
-  "output": "120 ml salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
+  "output": "240 ml salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
  },
  {
   "kind": "metric",
-  "input": "½ cup frijoles refritos",
+  "input": "1 cup frijoles refritos",
   "factor": 1,
-  "output": "120 ml frijoles refritos"
+  "output": "240 ml frijoles refritos"
  },
  {
   "kind": "metric",
@@ -16015,9 +16375,39 @@
  },
  {
   "kind": "metric",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 1,
-  "output": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 480 ml water"
+  "output": "For the red chile: 6 dried New Mexico, California or guajillo chiles"
+ },
+ {
+  "kind": "metric",
+  "input": "2 garlic cloves",
+  "factor": 1,
+  "output": "2 garlic cloves"
+ },
+ {
+  "kind": "metric",
+  "input": "Pinch of cumin",
+  "factor": 1,
+  "output": "Pinch of cumin"
+ },
+ {
+  "kind": "metric",
+  "input": "½ tsp Mexican oregano",
+  "factor": 1,
+  "output": "½ tsp Mexican oregano"
+ },
+ {
+  "kind": "metric",
+  "input": "½ tsp salt",
+  "factor": 1,
+  "output": "½ tsp salt"
+ },
+ {
+  "kind": "metric",
+  "input": "2 cups water",
+  "factor": 1,
+  "output": "480 ml water"
  },
  {
   "kind": "metric",
@@ -16243,9 +16633,21 @@
  },
  {
   "kind": "metric",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 1,
-  "output": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, 180 ml water"
+  "output": "For the salsa: 10 chiles de árbol"
+ },
+ {
+  "kind": "metric",
+  "input": "2 chiles guajillo",
+  "factor": 1,
+  "output": "2 chiles guajillo"
+ },
+ {
+  "kind": "metric",
+  "input": "¾ cup water",
+  "factor": 1,
+  "output": "180 ml water"
  },
  {
   "kind": "metric",
@@ -16261,9 +16663,9 @@
  },
  {
   "kind": "metric",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 1,
-  "output": "2 limes or 60 ml white vinegar, for cleaning"
+  "output": "2 limes or 60 ml white vinegar, plus a handful of coarse salt, for cleaning"
  },
  {
   "kind": "metric",
@@ -16489,9 +16891,33 @@
  },
  {
   "kind": "metric",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 1,
-  "output": "2 ears of corn, 230 g green beans, 2 zucchini, 1 chayote, 2 potatoes"
+  "output": "2 ears of corn"
+ },
+ {
+  "kind": "metric",
+  "input": "½ lb green beans",
+  "factor": 1,
+  "output": "230 g green beans"
+ },
+ {
+  "kind": "metric",
+  "input": "2 zucchini",
+  "factor": 1,
+  "output": "2 zucchini"
+ },
+ {
+  "kind": "metric",
+  "input": "1 chayote",
+  "factor": 1,
+  "output": "1 chayote"
+ },
+ {
+  "kind": "metric",
+  "input": "2 potatoes",
+  "factor": 1,
+  "output": "2 potatoes"
  },
  {
   "kind": "metric",
@@ -16663,9 +17089,9 @@
  },
  {
   "kind": "metric",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 1,
-  "output": "Same as the base, but only 480 ml broth"
+  "output": "Same as the base, but only 720 ml broth (1 for the purée, 2 to cook)"
  },
  {
   "kind": "metric",
@@ -16732,12 +17158,6 @@
   "input": "1 tsp salt and ¼ tsp black pepper",
   "factor": 1,
   "output": "1 tsp salt and ¼ tsp black pepper"
- },
- {
-  "kind": "metric",
-  "input": "2 garlic cloves",
-  "factor": 1,
-  "output": "2 garlic cloves"
  },
  {
   "kind": "metric",
@@ -16855,9 +17275,9 @@
  },
  {
   "kind": "metric",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 1,
-  "output": "480–720 ml water"
+  "output": "480 ml water, plus more for the consomé (about 1.4 l in all)"
  },
  {
   "kind": "metric",
@@ -16921,12 +17341,6 @@
  },
  {
   "kind": "metric",
-  "input": "½ tsp Mexican oregano",
-  "factor": 1,
-  "output": "½ tsp Mexican oregano"
- },
- {
-  "kind": "metric",
   "input": "¼ tsp ground cumin",
   "factor": 1,
   "output": "¼ tsp ground cumin"
@@ -16981,12 +17395,6 @@
  },
  {
   "kind": "metric",
-  "input": "½ tsp salt",
-  "factor": 1,
-  "output": "½ tsp salt"
- },
- {
-  "kind": "metric",
   "input": "¼ tsp Mexican oregano",
   "factor": 1,
   "output": "¼ tsp Mexican oregano"
@@ -17011,9 +17419,9 @@
  },
  {
   "kind": "metric",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 1,
-  "output": "Juice of 2 sour oranges or limes"
+  "output": "2 sour oranges or limes, juiced"
  },
  {
   "kind": "metric",
@@ -17041,9 +17449,21 @@
  },
  {
   "kind": "metric",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 1,
-  "output": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional"
+  "output": "4 garlic cloves, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "2 bay leaves, optional",
+  "factor": 1,
+  "output": "2 bay leaves, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 1,
+  "output": "½ tsp Mexican oregano, optional"
  },
  {
   "kind": "metric",
@@ -17095,6 +17515,12 @@
  },
  {
   "kind": "metric",
+  "input": "4 cups water, for steaming",
+  "factor": 1,
+  "output": "960 ml water, for steaming"
+ },
+ {
+  "kind": "metric",
   "input": "Banana leaves, optional, for wrapping",
   "factor": 1,
   "output": "Banana leaves, optional, for wrapping"
@@ -17137,9 +17563,9 @@
  },
  {
   "kind": "metric",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 1,
-  "output": "Crumbled queso añejo, to finish"
+  "output": "Crumbled queso añejo and chopped onion, to finish"
  },
  {
   "kind": "metric",
@@ -17176,6 +17602,12 @@
   "input": "1 lb verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 2 cups cooked nopales",
   "factor": 1,
   "output": "450 g verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 480 ml cooked nopales"
+ },
+ {
+  "kind": "metric",
+  "input": "Frijoles de la olla",
+  "factor": 1,
+  "output": "Frijoles de la olla"
  },
  {
   "kind": "metric",
@@ -17611,12 +18043,6 @@
  },
  {
   "kind": "metric",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 1,
-  "output": "8 chiles guajillo and 3 chiles ancho"
- },
- {
-  "kind": "metric",
   "input": "2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano",
   "factor": 1,
   "output": "2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano"
@@ -17653,9 +18079,9 @@
  },
  {
   "kind": "metric",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 1,
-  "output": "40 dried corn husks, soaked in hot water 1 hour"
+  "output": "60 dried corn husks, soaked in hot water 1 hour"
  },
  {
   "kind": "metric",
@@ -17722,12 +18148,6 @@
   "input": "A few drops of red food coloring (the traditional pink) or a little beet juice",
   "factor": 1,
   "output": "A few drops of red food coloring (the traditional pink) or a little beet juice"
- },
- {
-  "kind": "metric",
-  "input": "Pinch of cumin",
-  "factor": 1,
-  "output": "Pinch of cumin"
  },
  {
   "kind": "metric",
@@ -17824,6 +18244,12 @@
   "input": "1 sprig epazote (essential for black beans)",
   "factor": 1,
   "output": "1 sprig epazote (essential for black beans)"
+ },
+ {
+  "kind": "metric",
+  "input": "Sliced serrano",
+  "factor": 1,
+  "output": "Sliced serrano"
  },
  {
   "kind": "metric",
@@ -17935,9 +18361,27 @@
  },
  {
   "kind": "metric",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 1,
-  "output": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with 120 ml broth"
+  "output": "Instead of the tomato:"
+ },
+ {
+  "kind": "metric",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 1,
+  "output": "1 poblano, roasted and peeled"
+ },
+ {
+  "kind": "metric",
+  "input": "¼ onion",
+  "factor": 1,
+  "output": "¼ onion"
+ },
+ {
+  "kind": "metric",
+  "input": "½ cup broth, to blend",
+  "factor": 1,
+  "output": "120 ml broth, to blend"
  },
  {
   "kind": "metric",
@@ -18253,12 +18697,6 @@
  },
  {
   "kind": "metric",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 1,
-  "output": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
- },
- {
-  "kind": "metric",
   "input": "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and, if you like, ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk",
   "factor": 1,
   "output": "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and, if you like, ½ tsp anise seed, ground; use 120 ml milk plus 60 ml orange juice instead of 180 ml milk"
@@ -18325,12 +18763,6 @@
  },
  {
   "kind": "metric",
-  "input": "2 cups water",
-  "factor": 1,
-  "output": "480 ml water"
- },
- {
-  "kind": "metric",
   "input": "1 strip lime peel, no white pith",
   "factor": 1,
   "output": "1 strip lime peel, no white pith"
@@ -18361,9 +18793,21 @@
  },
  {
   "kind": "metric",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 1,
-  "output": "Instead of the sugar and 480 ml of the milk: 1 can (400 g) sweetened condensed milk and 1 can (340 g) evaporated milk"
+  "output": "480 ml whole milk (instead of 4)"
+ },
+ {
+  "kind": "metric",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 1,
+  "output": "1 can (400 g) sweetened condensed milk (instead of the sugar)"
+ },
+ {
+  "kind": "metric",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 1,
+  "output": "1 can (340 g) evaporated milk"
  },
  {
   "kind": "metric",
@@ -18385,12 +18829,6 @@
  },
  {
   "kind": "metric",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 1,
-  "output": "1 tsp Mexican vanilla"
- },
- {
-  "kind": "metric",
   "input": "Caramel from the base",
   "factor": 1,
   "output": "Caramel from the base"
@@ -18400,12 +18838,6 @@
   "input": "1 can (14 oz) sweetened condensed milk",
   "factor": 1,
   "output": "1 can (400 g) sweetened condensed milk"
- },
- {
-  "kind": "metric",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 1,
-  "output": "1 can (340 g) evaporated milk"
  },
  {
   "kind": "metric",
@@ -18547,9 +18979,9 @@
  },
  {
   "kind": "metric",
-  "input": "Set the two tortillas side by side and put an egg on each.",
+  "input": "For each plate, set two tortillas side by side and put an egg on each.",
   "factor": 1,
-  "output": "Set the two tortillas side by side and put an egg on each."
+  "output": "For each plate, set two tortillas side by side and put an egg on each."
  },
  {
   "kind": "metric",
@@ -19081,9 +19513,9 @@
  },
  {
   "kind": "metric",
-  "input": "Blend the chiles with the garlic, onion, oregano and 1½ cups of the pork broth until completely smooth. Pour through a fine strainer, pressing with a spoon. Discard the skins.",
+  "input": "Blend the chiles with the garlic, onion, oregano, cumin (if using) and 1½ cups of the pork broth until completely smooth. Pour through a fine strainer, pressing with a spoon. Discard the skins.",
   "factor": 1,
-  "output": "Blend the chiles with the garlic, onion, oregano and 360 ml of the pork broth until completely smooth. Pour through a fine strainer, pressing with a spoon. Discard the skins."
+  "output": "Blend the chiles with the garlic, onion, oregano, cumin (if using) and 360 ml of the pork broth until completely smooth. Pour through a fine strainer, pressing with a spoon. Discard the skins."
  },
  {
   "kind": "metric",
@@ -19147,9 +19579,9 @@
  },
  {
   "kind": "metric",
-  "input": "Put the meats, onion, garlic and 1 tbsp salt in the pot. Add bagged hominy now if using. Add water to the max-fill line (about 3½ quarts in an 8-qt pot; use about two-thirds of the meat in a 6-qt).",
+  "input": "Put the meats, onion and garlic in the pot. Add bagged hominy now if using. Add water to the max-fill line (about 3½ quarts in an 8-qt pot; use about two-thirds of the meat in a 6-qt).",
   "factor": 1,
-  "output": "Put the meats, onion, garlic and 1 tbsp salt in the pot. Add bagged hominy now if using. Add water to the max-fill line (about 3.3 l in a 7.6-liter pot; use about two-thirds of the meat in a 5.7-liter)."
+  "output": "Put the meats, onion and garlic in the pot. Add bagged hominy now if using. Add water to the max-fill line (about 3.3 l in a 7.6-liter pot; use about two-thirds of the meat in a 5.7-liter)."
  },
  {
   "kind": "metric",
@@ -19165,15 +19597,15 @@
  },
  {
   "kind": "metric",
-  "input": "Switch to Sauté. Add the strained chile and canned hominy if using. Simmer uncovered 20–30 minutes. Taste for salt and serve.",
+  "input": "Switch to Sauté. Add the strained chile, canned hominy if using, and the salt (salt after the corn has bloomed). Simmer uncovered 20–30 minutes. Taste and serve.",
   "factor": 1,
-  "output": "Switch to Sauté. Add the strained chile and canned hominy if using. Simmer uncovered 20–30 minutes. Taste for salt and serve."
+  "output": "Switch to Sauté. Add the strained chile, canned hominy if using, and the salt (salt after the corn has bloomed). Simmer uncovered 20–30 minutes. Taste and serve."
  },
  {
   "kind": "metric",
-  "input": "Cook the meat and hominy as in the base recipe, steps 1, 2 and 5. Leave out the red chile.",
+  "input": "Cook the meat and hominy as in the base recipe, steps 1, 2 and 5 (add canned hominy now if using). Leave out the red chile.",
   "factor": 1,
-  "output": "Cook the meat and hominy as in the base recipe, steps 1, 2 and 5. Leave out the red chile."
+  "output": "Cook the meat and hominy as in the base recipe, steps 1, 2 and 5 (add canned hominy now if using). Leave out the red chile."
  },
  {
   "kind": "metric",
@@ -19189,9 +19621,9 @@
  },
  {
   "kind": "metric",
-  "input": "Blend the pepitas, tomatillos, chiles, onion, garlic, hoja santa, epazote, cilantro and lettuce with 2 cups broth until very smooth.",
+  "input": "Blend the pepitas, tomatillos, chiles, onion, garlic, hoja santa, epazote, cilantro and romaine or radish leaves with 2 cups broth until very smooth.",
   "factor": 1,
-  "output": "Blend the pepitas, tomatillos, chiles, onion, garlic, hoja santa, epazote, cilantro and lettuce with 480 ml broth until very smooth."
+  "output": "Blend the pepitas, tomatillos, chiles, onion, garlic, hoja santa, epazote, cilantro and romaine or radish leaves with 480 ml broth until very smooth."
  },
  {
   "kind": "metric",
@@ -19225,9 +19657,9 @@
  },
  {
   "kind": "metric",
-  "input": "Cook the meat and hominy as in the base, steps 1, 2 and 5. Skip the chile.",
+  "input": "Cook the meat and hominy as in the base, steps 1, 2 and 5 (add canned hominy now if using). Skip the chile.",
   "factor": 1,
-  "output": "Cook the meat and hominy as in the base, steps 1, 2 and 5. Skip the chile."
+  "output": "Cook the meat and hominy as in the base, steps 1, 2 and 5 (add canned hominy now if using). Skip the chile."
  },
  {
   "kind": "metric",
@@ -19330,6 +19762,12 @@
   "input": "Put the tripe, beef foot, onion, garlic and salt in the pot. Add water to the max-fill line.",
   "factor": 1,
   "output": "Put the tripe, beef foot, onion, garlic and salt in the pot. Add water to the max-fill line."
+ },
+ {
+  "kind": "metric",
+  "input": "Meanwhile, toast, soak, blend and strain the chiles as in step 4.",
+  "factor": 1,
+  "output": "Meanwhile, toast, soak, blend and strain the chiles as in step 4."
  },
  {
   "kind": "metric",
@@ -19543,9 +19981,9 @@
  },
  {
   "kind": "metric",
-  "input": "Blend the tomatoes, onion, garlic and chipotle with a cup of broth. Fry in the oil 5 minutes.",
+  "input": "Shred the chicken from the base, discarding the skin and bones. Blend the tomatoes, onion, garlic and chipotle with a cup of broth and fry in the oil 5 minutes.",
   "factor": 1,
-  "output": "Blend the tomatoes, onion, garlic and chipotle with a cup of broth. Fry in the oil 5 minutes."
+  "output": "Shred the chicken from the base, discarding the skin and bones. Blend the tomatoes, onion, garlic and chipotle with a cup of broth and fry in the oil 5 minutes."
  },
  {
   "kind": "metric",
@@ -19729,9 +20167,9 @@
  },
  {
   "kind": "metric",
-  "input": "Blend the chiles with the vinegar, spices, garlic, onion, oregano, ginger, thyme and salt, adding just enough soaking water to make a thick paste.",
+  "input": "Blend the chiles with the vinegar, spices, garlic, onion, oregano, ginger, thyme, marjoram and salt, adding just enough soaking water to make a thick paste.",
   "factor": 1,
-  "output": "Blend the chiles with the vinegar, spices, garlic, onion, oregano, ginger, thyme and salt, adding just enough soaking water to make a thick paste."
+  "output": "Blend the chiles with the vinegar, spices, garlic, onion, oregano, ginger, thyme, marjoram and salt, adding just enough soaking water to make a thick paste."
  },
  {
   "kind": "metric",
@@ -19885,9 +20323,9 @@
  },
  {
   "kind": "metric",
-  "input": "Seville oranges (naranja agria) are the real thing. Latin markets sell it bottled if you can't find fresh.",
+  "input": "Seville oranges (naranja agria) are the real thing. Latin markets sell the juice bottled if you can't find fresh.",
   "factor": 1,
-  "output": "Seville oranges (naranja agria) are the real thing. Latin markets sell it bottled if you can't find fresh."
+  "output": "Seville oranges (naranja agria) are the real thing. Latin markets sell the juice bottled if you can't find fresh."
  },
  {
   "kind": "metric",
@@ -19921,9 +20359,9 @@
  },
  {
   "kind": "metric",
-  "input": "Pour boiling water over the onion, wait 10 seconds and drain. It softens the bite and turns them bright pink.",
+  "input": "Pour boiling water over the onions, wait 10 seconds and drain. It softens the bite and turns them bright pink.",
   "factor": 1,
-  "output": "Pour boiling water over the onion, wait 10 seconds and drain. It softens the bite and turns them bright pink."
+  "output": "Pour boiling water over the onions, wait 10 seconds and drain. It softens the bite and turns them bright pink."
  },
  {
   "kind": "metric",
@@ -20065,9 +20503,9 @@
  },
  {
   "kind": "metric",
-  "input": "Serve the barbacoa in tortillas with salsa, and the consomé in a cup on the side.",
+  "input": "Serve the barbacoa in tortillas with salsa, and the consomé in a cup on the side with chopped onion, cilantro and lime.",
   "factor": 1,
-  "output": "Serve the barbacoa in tortillas with salsa, and the consomé in a cup on the side."
+  "output": "Serve the barbacoa in tortillas with salsa, and the consomé in a cup on the side with chopped onion, cilantro and lime."
  },
  {
   "kind": "metric",
@@ -20155,9 +20593,9 @@
  },
  {
   "kind": "metric",
-  "input": "Blanch the verdolagas 1 minute in boiling water, drain, and stir them into the pot for the last 5 minutes.",
+  "input": "Blanch the verdolagas 1 minute in boiling water, drain, and stir them into the pot for the last 5 minutes (or add the cooked nopales).",
   "factor": 1,
-  "output": "Blanch the verdolagas 1 minute in boiling water, drain, and stir them into the pot for the last 5 minutes."
+  "output": "Blanch the verdolagas 1 minute in boiling water, drain, and stir them into the pot for the last 5 minutes (or add the cooked nopales)."
  },
  {
   "kind": "metric",
@@ -20563,9 +21001,9 @@
  },
  {
   "kind": "metric",
-  "input": "Make a big batch of the fried mole paste. It freezes for months.",
+  "input": "The sauce still takes about 2 hours on the stove. Make a big batch of the fried mole paste; it freezes for months.",
   "factor": 1,
-  "output": "Make a big batch of the fried mole paste. It freezes for months."
+  "output": "The sauce still takes about 2 hours on the stove. Make a big batch of the fried mole paste; it freezes for months."
  },
  {
   "kind": "metric",
@@ -20593,9 +21031,9 @@
  },
  {
   "kind": "metric",
-  "input": "Blend everything except the chicken with 2 cups broth until very smooth.",
+  "input": "Blend everything except the chicken, lard and salt with 2 cups broth until very smooth.",
   "factor": 1,
-  "output": "Blend everything except the chicken with 480 ml broth until very smooth."
+  "output": "Blend everything except the chicken, lard and salt with 480 ml broth until very smooth."
  },
  {
   "kind": "metric",
@@ -20707,9 +21145,9 @@
  },
  {
   "kind": "metric",
-  "input": "About 30",
+  "input": "About 48",
   "factor": 1,
-  "output": "About 30"
+  "output": "About 48"
  },
  {
   "kind": "metric",
@@ -20839,9 +21277,9 @@
  },
  {
   "kind": "metric",
-  "input": "Top with more sauce, the potatoes and carrots, lettuce, crema and the rest of the cheese.",
+  "input": "Top with more sauce, the potatoes and carrots, lettuce, chiles en vinagre, crema and the rest of the cheese.",
   "factor": 1,
-  "output": "Top with more sauce, the potatoes and carrots, lettuce, crema and the rest of the cheese."
+  "output": "Top with more sauce, the potatoes and carrots, lettuce, chiles en vinagre, crema and the rest of the cheese."
  },
  {
   "kind": "metric",
@@ -21139,9 +21577,9 @@
  },
  {
   "kind": "metric",
-  "input": "Peel the garlic and grind it with salt in the molcajete into a paste.",
+  "input": "Peel the garlic and grind it with salt in the molcajete into a paste. (If you used chiles de árbol, toast them only a few seconds; they burn fast.)",
   "factor": 1,
-  "output": "Peel the garlic and grind it with salt in the molcajete into a paste."
+  "output": "Peel the garlic and grind it with salt in the molcajete into a paste. (If you used chiles de árbol, toast them only a few seconds; they burn fast.)"
  },
  {
   "kind": "metric",
@@ -21283,9 +21721,9 @@
  },
  {
   "kind": "metric",
-  "input": "Heat the milk with the cinnamon until steaming. Don't let it boil over.",
+  "input": "Heat the milk (or water) with the cinnamon and salt until steaming. Don't let it boil over.",
   "factor": 1,
-  "output": "Heat the milk with the cinnamon until steaming. Don't let it boil over."
+  "output": "Heat the milk (or water) with the cinnamon and salt until steaming. Don't let it boil over."
  },
  {
   "kind": "metric",
@@ -21451,9 +21889,9 @@
  },
  {
   "kind": "metric",
-  "input": "Blend everything 2 minutes until very fine.",
+  "input": "Blend the rice, cinnamon and soaking water 2 minutes until very fine.",
   "factor": 1,
-  "output": "Blend everything 2 minutes until very fine."
+  "output": "Blend the rice, cinnamon and soaking water 2 minutes until very fine."
  },
  {
   "kind": "metric",
@@ -21499,9 +21937,9 @@
  },
  {
   "kind": "metric",
-  "input": "Divide the dough into 12 pieces (about 70 g each). Roll each into a smooth ball and set on parchment-lined sheet pans, 3 inches apart. Press each down slightly and brush with a little melted butter.",
+  "input": "Divide the dough into 12 pieces (about 85 g each). Roll each into a smooth ball and set on parchment-lined sheet pans, 3 inches apart. Press each down slightly and brush with a little melted butter.",
   "factor": 1,
-  "output": "Divide the dough into 12 pieces (about 70 g each). Roll each into a smooth ball and set on parchment-lined sheet pans, 8 cm apart. Press each down slightly and brush with a little melted butter."
+  "output": "Divide the dough into 12 pieces (about 85 g each). Roll each into a smooth ball and set on parchment-lined sheet pans, 8 cm apart. Press each down slightly and brush with a little melted butter."
  },
  {
   "kind": "metric",
@@ -22057,27 +22495,27 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 0.5,
-  "output": "1 fried tortillas and 1 fried eggs, as in the base"
+  "output": "2 fried tortillas and 2 fried eggs, as in the base"
  },
  {
   "kind": "scaled-metric",
-  "input": "½ cup salsa ranchera (from the base)",
+  "input": "1 cup salsa ranchera (from the base)",
   "factor": 0.5,
-  "output": "60 ml salsa ranchera (from the base)"
+  "output": "120 ml salsa ranchera (from the base)"
  },
  {
   "kind": "scaled-metric",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
   "factor": 0.5,
-  "output": "60 ml salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
+  "output": "120 ml salsa verde cocida (see Salsa Roja de Molcajete, Variantes)"
  },
  {
   "kind": "scaled-metric",
-  "input": "½ cup frijoles refritos",
+  "input": "1 cup frijoles refritos",
   "factor": 0.5,
-  "output": "60 ml frijoles refritos"
+  "output": "120 ml frijoles refritos"
  },
  {
   "kind": "scaled-metric",
@@ -22507,9 +22945,39 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 0.5,
-  "output": "Red chile: 6 dried New Mexico, California or guajillo chiles, 1 garlic clove, pinch of cumin, ¼ tsp Mexican oregano, ¼ tsp salt, 240 ml water"
+  "output": "For the red chile: 6 dried New Mexico, California or guajillo chiles"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 garlic cloves",
+  "factor": 0.5,
+  "output": "1 garlic clove"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Pinch of cumin",
+  "factor": 0.5,
+  "output": "Pinch of cumin"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ tsp Mexican oregano",
+  "factor": 0.5,
+  "output": "¼ tsp Mexican oregano"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ tsp salt",
+  "factor": 0.5,
+  "output": "¼ tsp salt"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 cups water",
+  "factor": 0.5,
+  "output": "240 ml water"
  },
  {
   "kind": "scaled-metric",
@@ -22735,9 +23203,21 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 0.5,
-  "output": "Salsa: 10 chiles de árbol, 1 chile guajillo, 1 garlic clove, ¼ tsp salt, 80 ml water"
+  "output": "For the salsa: 10 chiles de árbol"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 chiles guajillo",
+  "factor": 0.5,
+  "output": "1 chile guajillo"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "¾ cup water",
+  "factor": 0.5,
+  "output": "80 ml water"
  },
  {
   "kind": "scaled-metric",
@@ -22753,9 +23233,9 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 0.5,
-  "output": "1 lime or 30 ml white vinegar, for cleaning"
+  "output": "1 lime or 30 ml white vinegar, plus a handful of coarse salt, for cleaning"
  },
  {
   "kind": "scaled-metric",
@@ -22981,9 +23461,33 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 0.5,
-  "output": "1 ear of corn, 110 g green beans, 1 zucchini, ½ chayote, 1 potato"
+  "output": "1 ear of corn"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ lb green beans",
+  "factor": 0.5,
+  "output": "110 g green beans"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 zucchini",
+  "factor": 0.5,
+  "output": "1 zucchini"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 chayote",
+  "factor": 0.5,
+  "output": "½ chayote"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 potatoes",
+  "factor": 0.5,
+  "output": "1 potato"
  },
  {
   "kind": "scaled-metric",
@@ -23155,9 +23659,9 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 0.5,
-  "output": "Same as the base, but only 480 ml broth"
+  "output": "Same as the base, but only 720 ml broth (1 for the purée, 1 to cook)"
  },
  {
   "kind": "scaled-metric",
@@ -23224,12 +23728,6 @@
   "input": "1 tsp salt and ¼ tsp black pepper",
   "factor": 0.5,
   "output": "½ tsp salt and ⅛ tsp black pepper"
- },
- {
-  "kind": "scaled-metric",
-  "input": "2 garlic cloves",
-  "factor": 0.5,
-  "output": "1 garlic clove"
  },
  {
   "kind": "scaled-metric",
@@ -23347,9 +23845,9 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 0.5,
-  "output": "240–360 ml water"
+  "output": "240 ml water, plus more for the consomé (about 1.4 l in all)"
  },
  {
   "kind": "scaled-metric",
@@ -23413,12 +23911,6 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "½ tsp Mexican oregano",
-  "factor": 0.5,
-  "output": "¼ tsp Mexican oregano"
- },
- {
-  "kind": "scaled-metric",
   "input": "¼ tsp ground cumin",
   "factor": 0.5,
   "output": "⅛ tsp ground cumin"
@@ -23473,12 +23965,6 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "½ tsp salt",
-  "factor": 0.5,
-  "output": "¼ tsp salt"
- },
- {
-  "kind": "scaled-metric",
   "input": "¼ tsp Mexican oregano",
   "factor": 0.5,
   "output": "⅛ tsp Mexican oregano"
@@ -23503,9 +23989,9 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 0.5,
-  "output": "Juice of 2 sour oranges or limes"
+  "output": "1 sour orange or limes, juiced"
  },
  {
   "kind": "scaled-metric",
@@ -23533,9 +24019,21 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 0.5,
-  "output": "2 garlic cloves, 1 bay leaf and ¼ tsp Mexican oregano, optional"
+  "output": "2 garlic cloves, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 bay leaves, optional",
+  "factor": 0.5,
+  "output": "1 bay leaf, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 0.5,
+  "output": "¼ tsp Mexican oregano, optional"
  },
  {
   "kind": "scaled-metric",
@@ -23587,6 +24085,12 @@
  },
  {
   "kind": "scaled-metric",
+  "input": "4 cups water, for steaming",
+  "factor": 0.5,
+  "output": "480 ml water, for steaming"
+ },
+ {
+  "kind": "scaled-metric",
   "input": "Banana leaves, optional, for wrapping",
   "factor": 0.5,
   "output": "Banana leaves, optional, for wrapping"
@@ -23629,9 +24133,9 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 0.5,
-  "output": "Crumbled queso añejo, to finish"
+  "output": "Crumbled queso añejo and chopped onion, to finish"
  },
  {
   "kind": "scaled-metric",
@@ -23668,6 +24172,12 @@
   "input": "1 lb verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 2 cups cooked nopales",
   "factor": 0.5,
   "output": "230 g verdolagas (purslane), thick stems removed, or 1½ potatoes, cubed, or 240 ml cooked nopales"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Frijoles de la olla",
+  "factor": 0.5,
+  "output": "Frijoles de la olla"
  },
  {
   "kind": "scaled-metric",
@@ -24103,12 +24613,6 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 0.5,
-  "output": "4 chiles guajillo and 1½ chiles ancho"
- },
- {
-  "kind": "scaled-metric",
   "input": "2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano",
   "factor": 0.5,
   "output": "1 garlic clove, ¼ tsp cumin and ¼ tsp Mexican oregano"
@@ -24145,9 +24649,9 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 0.5,
-  "output": "20 dried corn husks, soaked in hot water 1 hour"
+  "output": "30 dried corn husks, soaked in hot water 1 hour"
  },
  {
   "kind": "scaled-metric",
@@ -24214,12 +24718,6 @@
   "input": "A few drops of red food coloring (the traditional pink) or a little beet juice",
   "factor": 0.5,
   "output": "A few drops of red food coloring (the traditional pink) or a little beet juice"
- },
- {
-  "kind": "scaled-metric",
-  "input": "Pinch of cumin",
-  "factor": 0.5,
-  "output": "Pinch of cumin"
  },
  {
   "kind": "scaled-metric",
@@ -24316,6 +24814,12 @@
   "input": "1 sprig epazote (essential for black beans)",
   "factor": 0.5,
   "output": "½ sprig epazote (essential for black beans)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Sliced serrano",
+  "factor": 0.5,
+  "output": "Sliced serrano"
  },
  {
   "kind": "scaled-metric",
@@ -24427,9 +24931,27 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 0.5,
-  "output": "Instead of the tomato: 1 roasted, peeled poblano, ¼ bunch cilantro, ½ garlic clove and ⅛ onion, blended with 60 ml broth"
+  "output": "Instead of the tomato:"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 0.5,
+  "output": "½ poblano, roasted and peeled"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "¼ onion",
+  "factor": 0.5,
+  "output": "⅛ onion"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ cup broth, to blend",
+  "factor": 0.5,
+  "output": "60 ml broth, to blend"
  },
  {
   "kind": "scaled-metric",
@@ -24745,12 +25267,6 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 0.5,
-  "output": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
- },
- {
-  "kind": "scaled-metric",
   "input": "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and, if you like, ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk",
   "factor": 0.5,
   "output": "Concha dough from the base, with these changes: add the zest of 2 oranges, ½ tbsp orange blossom water (agua de azahar) and, if you like, ¼ tsp anise seed, ground; use 120 ml milk plus 30 ml orange juice instead of 180 ml milk"
@@ -24817,12 +25333,6 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "2 cups water",
-  "factor": 0.5,
-  "output": "240 ml water"
- },
- {
-  "kind": "scaled-metric",
   "input": "1 strip lime peel, no white pith",
   "factor": 0.5,
   "output": "½ strip lime peel, no white pith"
@@ -24853,9 +25363,21 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 0.5,
-  "output": "Instead of the sugar and 240 ml of the milk: 1 can (400 g) sweetened condensed milk and ½ can (340 g) evaporated milk"
+  "output": "240 ml whole milk (instead of 4)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 0.5,
+  "output": "½ can (400 g) sweetened condensed milk (instead of the sugar)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 0.5,
+  "output": "½ can (340 g) evaporated milk"
  },
  {
   "kind": "scaled-metric",
@@ -24877,12 +25399,6 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 0.5,
-  "output": "½ tsp Mexican vanilla"
- },
- {
-  "kind": "scaled-metric",
   "input": "Caramel from the base",
   "factor": 0.5,
   "output": "Caramel from the base"
@@ -24892,12 +25408,6 @@
   "input": "1 can (14 oz) sweetened condensed milk",
   "factor": 0.5,
   "output": "½ can (400 g) sweetened condensed milk"
- },
- {
-  "kind": "scaled-metric",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 0.5,
-  "output": "½ can (340 g) evaporated milk"
  },
  {
   "kind": "scaled-metric",
@@ -25051,25 +25561,25 @@
  },
  {
   "kind": "ids",
-  "input": "2 fried tortillas and 2 fried eggs, as in the base",
+  "input": "4 fried tortillas and 4 fried eggs, as in the base",
   "factor": 1,
   "output": "tortillas,huevo"
  },
  {
   "kind": "ids",
-  "input": "½ cup salsa ranchera (from the base)",
+  "input": "1 cup salsa ranchera (from the base)",
   "factor": 1,
   "output": ""
  },
  {
   "kind": "ids",
-  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "input": "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
   "factor": 1,
   "output": ""
  },
  {
   "kind": "ids",
-  "input": "½ cup frijoles refritos",
+  "input": "1 cup frijoles refritos",
   "factor": 1,
   "output": "frijol"
  },
@@ -25501,9 +26011,39 @@
  },
  {
   "kind": "ids",
-  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "input": "For the red chile: 6 dried New Mexico, California or guajillo chiles",
   "factor": 1,
-  "output": "chile,guajillo,ajo,comino,oregano,sal,agua"
+  "output": "guajillo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 garlic cloves",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "Pinch of cumin",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp Mexican oregano",
+  "factor": 1,
+  "output": "oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups water",
+  "factor": 1,
+  "output": "agua"
  },
  {
   "kind": "ids",
@@ -25729,9 +26269,21 @@
  },
  {
   "kind": "ids",
-  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "input": "For the salsa: 10 chiles de árbol",
   "factor": 1,
-  "output": "arbol,guajillo,ajo,sal,agua"
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "2 chiles guajillo",
+  "factor": 1,
+  "output": "guajillo"
+ },
+ {
+  "kind": "ids",
+  "input": "¾ cup water",
+  "factor": 1,
+  "output": "agua"
  },
  {
   "kind": "ids",
@@ -25747,9 +26299,9 @@
  },
  {
   "kind": "ids",
-  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "input": "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
   "factor": 1,
-  "output": "limon,vinagre"
+  "output": "limon,vinagre,sal"
  },
  {
   "kind": "ids",
@@ -25975,9 +26527,33 @@
  },
  {
   "kind": "ids",
-  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "input": "2 ears of corn",
   "factor": 1,
-  "output": "elote,ejotes,calabacita,chayote,papa"
+  "output": "elote"
+ },
+ {
+  "kind": "ids",
+  "input": "½ lb green beans",
+  "factor": 1,
+  "output": "ejotes"
+ },
+ {
+  "kind": "ids",
+  "input": "2 zucchini",
+  "factor": 1,
+  "output": "calabacita"
+ },
+ {
+  "kind": "ids",
+  "input": "1 chayote",
+  "factor": 1,
+  "output": "chayote"
+ },
+ {
+  "kind": "ids",
+  "input": "2 potatoes",
+  "factor": 1,
+  "output": "papa"
  },
  {
   "kind": "ids",
@@ -26149,7 +26725,7 @@
  },
  {
   "kind": "ids",
-  "input": "Same as the base, but only 2 cups broth",
+  "input": "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
   "factor": 1,
   "output": "caldo"
  },
@@ -26218,12 +26794,6 @@
   "input": "1 tsp salt and ¼ tsp black pepper",
   "factor": 1,
   "output": "sal,pimienta"
- },
- {
-  "kind": "ids",
-  "input": "2 garlic cloves",
-  "factor": 1,
-  "output": "ajo"
  },
  {
   "kind": "ids",
@@ -26341,7 +26911,7 @@
  },
  {
   "kind": "ids",
-  "input": "2–3 cups water",
+  "input": "2 cups water, plus more for the consomé (about 6 cups in all)",
   "factor": 1,
   "output": "agua"
  },
@@ -26407,12 +26977,6 @@
  },
  {
   "kind": "ids",
-  "input": "½ tsp Mexican oregano",
-  "factor": 1,
-  "output": "oregano"
- },
- {
-  "kind": "ids",
   "input": "¼ tsp ground cumin",
   "factor": 1,
   "output": "comino"
@@ -26467,12 +27031,6 @@
  },
  {
   "kind": "ids",
-  "input": "½ tsp salt",
-  "factor": 1,
-  "output": "sal"
- },
- {
-  "kind": "ids",
   "input": "¼ tsp Mexican oregano",
   "factor": 1,
   "output": "oregano"
@@ -26497,7 +27055,7 @@
  },
  {
   "kind": "ids",
-  "input": "Juice of 2 sour oranges or limes",
+  "input": "2 sour oranges or limes, juiced",
   "factor": 1,
   "output": "naranja,limon"
  },
@@ -26527,9 +27085,21 @@
  },
  {
   "kind": "ids",
-  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "input": "4 garlic cloves, optional",
   "factor": 1,
-  "output": "ajo,laurel,oregano"
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 bay leaves, optional",
+  "factor": 1,
+  "output": "laurel"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp Mexican oregano, optional",
+  "factor": 1,
+  "output": "oregano"
  },
  {
   "kind": "ids",
@@ -26581,6 +27151,12 @@
  },
  {
   "kind": "ids",
+  "input": "4 cups water, for steaming",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
   "input": "Banana leaves, optional, for wrapping",
   "factor": 1,
   "output": "hoja-platano"
@@ -26623,9 +27199,9 @@
  },
  {
   "kind": "ids",
-  "input": "Crumbled queso añejo, to finish",
+  "input": "Crumbled queso añejo and chopped onion, to finish",
   "factor": 1,
-  "output": "queso-anejo"
+  "output": "queso-anejo,cebolla"
  },
  {
   "kind": "ids",
@@ -26662,6 +27238,12 @@
   "input": "1 lb verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 2 cups cooked nopales",
   "factor": 1,
   "output": "verdolagas,papa,nopales"
+ },
+ {
+  "kind": "ids",
+  "input": "Frijoles de la olla",
+  "factor": 1,
+  "output": "frijol"
  },
  {
   "kind": "ids",
@@ -27097,12 +27679,6 @@
  },
  {
   "kind": "ids",
-  "input": "8 chiles guajillo and 3 chiles ancho",
-  "factor": 1,
-  "output": "guajillo,ancho"
- },
- {
-  "kind": "ids",
   "input": "2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano",
   "factor": 1,
   "output": "ajo,comino,oregano"
@@ -27139,7 +27715,7 @@
  },
  {
   "kind": "ids",
-  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "input": "60 dried corn husks, soaked in hot water 1 hour",
   "factor": 1,
   "output": "hojas-maiz,agua"
  },
@@ -27208,12 +27784,6 @@
   "input": "A few drops of red food coloring (the traditional pink) or a little beet juice",
   "factor": 1,
   "output": ""
- },
- {
-  "kind": "ids",
-  "input": "Pinch of cumin",
-  "factor": 1,
-  "output": "comino"
  },
  {
   "kind": "ids",
@@ -27310,6 +27880,12 @@
   "input": "1 sprig epazote (essential for black beans)",
   "factor": 1,
   "output": "epazote,frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "Sliced serrano",
+  "factor": 1,
+  "output": "serrano"
  },
  {
   "kind": "ids",
@@ -27421,9 +27997,27 @@
  },
  {
   "kind": "ids",
-  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "input": "Instead of the tomato:",
   "factor": 1,
-  "output": "jitomate,poblano,cilantro,ajo,cebolla,caldo"
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 poblano, roasted and peeled",
+  "factor": 1,
+  "output": "poblano"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ onion",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup broth, to blend",
+  "factor": 1,
+  "output": "caldo"
  },
  {
   "kind": "ids",
@@ -27739,12 +28333,6 @@
  },
  {
   "kind": "ids",
-  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
-  "factor": 1,
-  "output": "chocolate,harina"
- },
- {
-  "kind": "ids",
   "input": "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and, if you like, ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk",
   "factor": 1,
   "output": "cascara,azahar,anis,leche,naranja"
@@ -27811,12 +28399,6 @@
  },
  {
   "kind": "ids",
-  "input": "2 cups water",
-  "factor": 1,
-  "output": "agua"
- },
- {
-  "kind": "ids",
   "input": "1 strip lime peel, no white pith",
   "factor": 1,
   "output": "cascara"
@@ -27847,9 +28429,21 @@
  },
  {
   "kind": "ids",
-  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "input": "2 cups whole milk (instead of 4)",
   "factor": 1,
-  "output": "azucar,leche,lechera,leche-evaporada"
+  "output": "leche"
+ },
+ {
+  "kind": "ids",
+  "input": "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+  "factor": 1,
+  "output": "lechera,azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 1,
+  "output": "leche-evaporada"
  },
  {
   "kind": "ids",
@@ -27871,12 +28465,6 @@
  },
  {
   "kind": "ids",
-  "input": "1 tsp Mexican vanilla",
-  "factor": 1,
-  "output": "vainilla"
- },
- {
-  "kind": "ids",
   "input": "Caramel from the base",
   "factor": 1,
   "output": ""
@@ -27886,12 +28474,6 @@
   "input": "1 can (14 oz) sweetened condensed milk",
   "factor": 1,
   "output": "lechera"
- },
- {
-  "kind": "ids",
-  "input": "1 can (12 oz) evaporated milk",
-  "factor": 1,
-  "output": "leche-evaporada"
  },
  {
   "kind": "ids",
@@ -28119,7 +28701,7 @@
   "kind": "rank-nobasics",
   "input": "res,papa,zanahoria,elote,calabacita",
   "factor": 1,
-  "output": "caldo-de-res:0.609,picadillo:0.625,albondigas:0.429,barbacoa:0.471,caldo-de-pollo:0.316"
+  "output": "caldo-de-res:0.609,picadillo:0.625,albondigas:0.429,barbacoa:0.457,caldo-de-pollo:0.316"
  },
  {
   "kind": "parse",
@@ -28191,7 +28773,7 @@
   "kind": "rank-nobasics",
   "input": "arroz",
   "factor": 1,
-  "output": "arroz-con-leche:0.364,arroz-rojo:0.211,barbacoa:0.118,albondigas:0.071"
+  "output": "arroz-con-leche:0.364,arroz-rojo:0.211,barbacoa:0.114,albondigas:0.071"
  },
  {
   "kind": "parse",

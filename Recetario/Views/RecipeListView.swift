@@ -8,6 +8,7 @@ struct RecipeListView: View {
     @State private var query = ""
     @State private var category: String? = UserDefaults.standard.string(forKey: "screenshotCategory")
     @State private var pressureOnly = false
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     private let columns = [
         GridItem(.flexible(), spacing: 14, alignment: .top),
@@ -24,7 +25,10 @@ struct RecipeListView: View {
             if savedOnly && !store.isFavorite(recipe.id) { return false }
             if let category, recipe.category != category { return false }
             if pressureOnly && recipe.pressureCooker == nil { return false }
-            if !trimmed.isEmpty && !recipe.matches(trimmed) { return false }
+            if !trimmed.isEmpty {
+                let index = store.searchIndex[recipe.id] ?? recipe.searchIndex
+                if !trimmed.folded.split(separator: " ").allSatisfy({ index.contains($0) }) { return false }
+            }
             return true
         }
     }
@@ -35,7 +39,7 @@ struct RecipeListView: View {
             VStack(alignment: .leading, spacing: 18) {
                 header
                 chips
-                if savedOnly && store.favorites.isEmpty {
+                if savedOnly && store.book.recipes.allSatisfy({ !store.isFavorite($0.id) }) {
                     ContentUnavailableView {
                         Label {
                             Text("No milagros yet")
@@ -47,8 +51,15 @@ struct RecipeListView: View {
                     }
                     .padding(.top, 24)
                 } else if recipes.isEmpty {
-                    ContentUnavailableView.search(text: query)
-                        .padding(.top, 24)
+                    Group {
+                        if query.trimmingCharacters(in: .whitespaces).isEmpty {
+                            ContentUnavailableView("No recipes here", systemImage: "line.3.horizontal.decrease",
+                                                   description: Text("Nothing matches these filters. Try Todas."))
+                        } else {
+                            ContentUnavailableView.search(text: query)
+                        }
+                    }
+                    .padding(.top, 24)
                 } else {
                     if isFiltering {
                         Text("\(recipes.count) \(recipes.count == 1 ? "receta" : "recetas")")
@@ -86,8 +97,8 @@ struct RecipeListView: View {
 
     private func section(_ cat: RecipeCategory, recipes: [Recipe]) -> some View {
         VStack(alignment: .leading, spacing: 16) {
-            RotuloHeader(title: cat.name, count: recipes.count, color: store.headingColor(forCategory: cat.id))
-            LazyVGrid(columns: columns, alignment: .leading, spacing: 18) {
+            RotuloHeader(title: cat.name, color: store.headingColor(forCategory: cat.id))
+            LazyVGrid(columns: typeSize.isAccessibilitySize ? [GridItem(.flexible())] : columns, alignment: .leading, spacing: 18) {
                 ForEach(Array(recipes.enumerated()), id: \.element.id) { index, recipe in
                     NavigationLink(value: recipe) {
                         LoteriaCard(recipe: recipe, isFavorite: store.isFavorite(recipe.id))
@@ -105,6 +116,8 @@ struct RecipeListView: View {
             if savedOnly {
                 Text("Guardadas")
                     .font(.rotulo(44))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
                     .foregroundStyle(Color.mxRosa)
                     .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
                     .padding(.top, 10)
@@ -115,9 +128,13 @@ struct RecipeListView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Recetario")
                         .font(.rotulo(50))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                         .foregroundStyle(Color.mxRosa)
                     Text("de la Abuela")
                         .font(.rotulo(31, relativeTo: .title))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                         .foregroundStyle(Color.mxVerde)
                 }
                 .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)

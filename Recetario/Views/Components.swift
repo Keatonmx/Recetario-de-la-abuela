@@ -78,6 +78,7 @@ struct Chip: View {
                 .font(.subheadline.weight(.medium))
                 .padding(.horizontal, 13)
                 .padding(.vertical, 7)
+                .frame(minHeight: 44)
                 .foregroundStyle(isOn ? Color(.systemBackground) : Color.primary)
                 .background(Capsule().fill(isOn ? onColor : Color.card))
                 .overlay(Capsule().strokeBorder(Color.hairline, lineWidth: isOn ? 0 : 1))
@@ -114,7 +115,7 @@ struct SectionHeader<Trailing: View>: View {
 
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
-            Text(title).font(.display(.title2))
+            Text(title).font(.display(.title2)).accessibilityAddTraits(.isHeader)
             Spacer()
             trailing
         }
@@ -172,7 +173,7 @@ struct FlowLayout: Layout {
         let maxWidth = proposal.width ?? .infinity
         var x: CGFloat = 0, y: CGFloat = 0, rowHeight: CGFloat = 0, widest: CGFloat = 0
         for view in subviews {
-            let size = view.sizeThatFits(.unspecified)
+            let size = fitted(view, maxWidth: maxWidth)
             if x > 0 && x + size.width > maxWidth {
                 x = 0
                 y += rowHeight + spacing
@@ -188,7 +189,7 @@ struct FlowLayout: Layout {
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         var x = bounds.minX, y = bounds.minY, rowHeight: CGFloat = 0
         for view in subviews {
-            let size = view.sizeThatFits(.unspecified)
+            let size = fitted(view, maxWidth: bounds.width)
             if x > bounds.minX && x + size.width > bounds.maxX {
                 x = bounds.minX
                 y += rowHeight + spacing
@@ -198,5 +199,12 @@ struct FlowLayout: Layout {
             x += size.width + spacing
             rowHeight = max(rowHeight, size.height)
         }
+    }
+
+    /// A subview's ideal size, but never wider than the row (long chips wrap instead of overflowing).
+    private func fitted(_ view: LayoutSubview, maxWidth: CGFloat) -> CGSize {
+        let ideal = view.sizeThatFits(.unspecified)
+        guard maxWidth.isFinite, ideal.width > maxWidth else { return ideal }
+        return view.sizeThatFits(ProposedViewSize(width: maxWidth, height: nil))
     }
 }

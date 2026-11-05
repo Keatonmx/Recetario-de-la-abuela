@@ -31,7 +31,9 @@ extension Color {
     static let stockMuted = Color(light: 0x5E5A55, dark: 0x5E5A55)
     static let stampGreen = Color(light: 0x1F6B3F, dark: 0x1F6B3F)
     static let stampPaper = Color(light: 0xF7F5EE, dark: 0xF7F5EE)
-    static let mxRosa = Color(light: 0xD6006F, dark: 0xFF5FAE)
+    static let mxRosa = Color(light: 0xC70067, dark: 0xFF5FAE)
+    /// Text on rosa buttons: white on deep rosa by day, comal black on light rosa by night.
+    static let onRosa = Color(light: 0xFFFFFF, dark: 0x15110E)
     static let mxVerde = Color(light: 0x1F6B3F, dark: 0x7CC690)
 
     /// A category color from "#RRGGBB".
@@ -44,9 +46,10 @@ extension Color {
     static func lifted(_ hexString: String) -> Color {
         Color(uiColor: UIColor { traits in
             let base = UIColor(hexString: hexString)
-            return traits.userInterfaceStyle == .dark
-                ? base.mixed(with: .white, amount: 0.38)
-                : base.mixed(with: UIColor(hex: 0x2A1608), amount: 0.24)
+            if traits.userInterfaceStyle == .dark { return base.mixed(with: .white, amount: 0.38) }
+            // Bright colors (cempasúchil, maíz, concha pink) need more deepening to read on cream.
+            let amount: CGFloat = base.relativeLuminance > 0.3 ? 0.50 : 0.24
+            return base.mixed(with: UIColor(hex: 0x2A1608), amount: amount)
         })
     }
 
@@ -60,6 +63,14 @@ extension UIColor {
     convenience init(hexString: String) {
         let digits = hexString.trimmingCharacters(in: CharacterSet(charactersIn: "#"))
         self.init(hex: UInt32(digits, radix: 16) ?? 0xC8261E)
+    }
+
+    /// WCAG relative luminance, 0 (black) to 1 (white).
+    var relativeLuminance: CGFloat {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        getRed(&r, green: &g, blue: &b, alpha: &a)
+        func channel(_ c: CGFloat) -> CGFloat { c <= 0.03928 ? c / 12.92 : pow((c + 0.055) / 1.055, 2.4) }
+        return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
     }
 
     func mixed(with other: UIColor, amount: CGFloat) -> UIColor {

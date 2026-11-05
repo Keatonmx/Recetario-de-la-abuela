@@ -4,6 +4,7 @@ import UIKit
 struct RecipeDetailView: View {
     @EnvironmentObject private var store: RecipeStore
     @Environment(\.dynamicTypeSize) private var systemTypeSize
+    @Environment(\.scenePhase) private var scenePhase
     let recipe: Recipe
 
     @State private var tab: DetailTab = DetailTab(rawValue: UserDefaults.standard.string(forKey: "screenshotDetailTab") ?? "") ?? .traditional
@@ -87,7 +88,11 @@ struct RecipeDetailView: View {
         .onChange(of: cookMode) { _, isOn in
             UIApplication.shared.isIdleTimerDisabled = isOn
         }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active && cookMode { UIApplication.shared.isIdleTimerDisabled = true }
+        }
         .onAppear {
+            if cookMode { UIApplication.shared.isIdleTimerDisabled = true }
             if openVariations.isEmpty, let first = recipe.variations.first {
                 openVariations = [first.name]
             }
@@ -158,7 +163,7 @@ struct RecipeDetailView: View {
 
     private var resetButton: some View {
         Button("Uncheck all") {
-            store.resetChecks(prefix: "\(recipe.id):")
+            store.resetChecks(prefix: "\(recipe.id):t:i")
         }
         .font(.subheadline.weight(.semibold))
     }
@@ -286,7 +291,7 @@ struct IngredientList: View {
                         .padding(.bottom, 4)
                 }
                 ForEach(Array(group.items.enumerated()), id: \.offset) { itemIndex, item in
-                    IngredientRow(text: store.shown(Scaler.text(item, factor: factor)), key: "\(scope):\(groupIndex):\(itemIndex)")
+                    IngredientRow(text: store.shown(Scaler.text(item, factor: factor)), key: "\(scope):\(StableKey.of(item))")
                     Divider()
                 }
             }
@@ -328,7 +333,7 @@ struct StepList: View {
     var body: some View {
         VStack(spacing: 10) {
             ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                StepRow(number: index + 1, text: step, key: "\(scope):\(index)", siblingKeys: steps.indices.map { "\(scope):\($0)" })
+                StepRow(number: index + 1, text: step, key: "\(scope):\(StableKey.of(step))", siblingKeys: steps.map { "\(scope):\(StableKey.of($0))" })
             }
         }
     }
@@ -374,7 +379,7 @@ struct StepRow: View {
             .contentShape(RoundedRectangle(cornerRadius: 14))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Step \(number): \(text)")
+        .accessibilityLabel("Step \(number): \(store.shown(text))")
         .accessibilityAddTraits(isOn ? .isSelected : [])
     }
 }
@@ -437,7 +442,8 @@ struct VariationCard: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityAddTraits(isOpen ? .isSelected : [])
+            .accessibilityValue(isOpen ? "Expanded" : "Collapsed")
+            .accessibilityHint("Shows the ingredients and steps")
 
             if isOpen {
                 VStack(alignment: .leading, spacing: 20) {
@@ -540,8 +546,7 @@ struct ServingsCard: View {
         } label: {
             Text(title)
                 .font(.subheadline.weight(.bold))
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 8)
+                .frame(maxWidth: .infinity, minHeight: 44)
                 .foregroundStyle(isOn ? Color(.systemBackground) : Color.primary)
                 .background(Capsule().fill(isOn ? Color.primary : Color.paper))
                 .overlay(Capsule().strokeBorder(Color.hairline, lineWidth: isOn ? 0 : 1.5))
@@ -557,8 +562,8 @@ struct ServingsCard: View {
         } label: {
             Image(systemName: symbol)
                 .font(.body.weight(.bold))
-                .foregroundStyle(.white)
-                .frame(width: 38, height: 38)
+                .foregroundStyle(Color.onRosa)
+                .frame(width: 44, height: 44)
                 .background(Circle().fill(Color.mxRosa))
                 .overlay(Circle().strokeBorder(Color.ink, lineWidth: 2))
         }

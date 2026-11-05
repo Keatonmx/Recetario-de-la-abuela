@@ -134,8 +134,12 @@ struct LoteriaCard: View {
         .padding(.bottom, 6)
         .background(RoundedRectangle(cornerRadius: 8).fill(Color.stock))
         .overlay(RoundedRectangle(cornerRadius: 5).strokeBorder(Color.ink, lineWidth: 1.5).padding(4))
-        .shadow(color: Color.black.opacity(0.22), radius: 1, y: 1)
-        .shadow(color: Color(red: 0.12, green: 0.07, blue: 0.03).opacity(0.35), radius: 9, y: 7)
+        .background(
+            // Shadow on the card's shape only, so scrolling the deck stays smooth.
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color.stock)
+                .shadow(color: Color(red: 0.12, green: 0.07, blue: 0.03).opacity(0.35), radius: 9, y: 7)
+        )
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityText)
     }
@@ -180,7 +184,6 @@ struct TileStrip: View {
 
 struct RotuloHeader: View {
     let title: String
-    let count: Int
     let color: Color
 
     var body: some View {
@@ -201,7 +204,7 @@ struct RotuloHeader: View {
 enum Season {
     /// Papel picado colors for the time of year, or nil for the everyday mix.
     static var picadoColors: [Color]? {
-        let c = Calendar.current.dateComponents([.month, .day], from: Date())
+        let c = Calendar(identifier: .gregorian).dateComponents([.month, .day], from: Date())
         let md = (c.month ?? 1) * 100 + (c.day ?? 1)
         if (1020...1105).contains(md) { return [Color(hexString: "#7B3FA0"), Color(hexString: "#F29F05"), Color(hexString: "#E4007C")] }  // Día de Muertos
         if (901...930).contains(md) { return [Color(hexString: "#1F6B3F"), Color(hexString: "#F7F3EA"), Color(hexString: "#C8261E")] }   // Fiestas patrias
@@ -217,7 +220,7 @@ enum Season {
 enum Today {
     static func pick(from recipes: [Recipe], on date: Date = Date()) -> (id: String, title: String, why: String)? {
         guard !recipes.isEmpty else { return nil }
-        let cal = Calendar.current
+        let cal = Calendar(identifier: .gregorian)
         let c = cal.dateComponents([.year, .month, .day, .weekday], from: date)
         let md = (c.month ?? 1) * 100 + (c.day ?? 1)
         let day = cal.startOfDay(for: date)
@@ -246,7 +249,7 @@ enum Today {
         let f = (b + 8) / 25, g = (b - f + 1) / 3, h = (19 * a + b - d - g + 15) % 30
         let i = c / 4, k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = (a + 11 * h + 22 * l) / 451
         let month = (h + l - 7 * m + 114) / 31, day = (h + l - 7 * m + 114) % 31 + 1
-        return Calendar.current.date(from: DateComponents(year: y, month: month, day: day)) ?? Date()
+        return Calendar(identifier: .gregorian).date(from: DateComponents(year: y, month: month, day: day)) ?? Date()
     }
 }
 
@@ -305,17 +308,29 @@ enum Appearance: String {
     }
 }
 
+/// Light, dark, or follow the phone.
 struct AppearanceButton: View {
     @AppStorage("appearance") private var appearance = Appearance.system.rawValue
-    @Environment(\.colorScheme) private var scheme
 
     var body: some View {
-        Button {
-            appearance = (scheme == .dark ? Appearance.light : Appearance.dark).rawValue
+        Menu {
+            Picker("Appearance", selection: $appearance) {
+                Label("Like the phone", systemImage: "circle.lefthalf.filled").tag(Appearance.system.rawValue)
+                Label("Light", systemImage: "sun.max").tag(Appearance.light.rawValue)
+                Label("Dark", systemImage: "moon").tag(Appearance.dark.rawValue)
+            }
         } label: {
-            Image(systemName: scheme == .dark ? "sun.max" : "moon")
+            Image(systemName: icon)
         }
-        .accessibilityLabel(scheme == .dark ? "Switch to light mode" : "Switch to dark mode")
+        .accessibilityLabel("Appearance")
+    }
+
+    private var icon: String {
+        switch Appearance(rawValue: appearance) ?? .system {
+        case .system: return "circle.lefthalf.filled"
+        case .light: return "sun.max"
+        case .dark: return "moon"
+        }
     }
 }
 
@@ -333,5 +348,20 @@ struct ToastView: View {
             .background(Capsule().fill(Color.primary))
             .background(Capsule().fill(Color.mxRosa).offset(x: 3, y: 3))
             .accessibilityAddTraits(.isStaticText)
+    }
+}
+
+// MARK: - Stable keys
+
+/// A short, stable key for a line of text (FNV-1a), so saved checkmarks stay on the
+/// right line even if an update adds or reorders ingredients and steps.
+enum StableKey {
+    static func of(_ text: String) -> String {
+        var hash: UInt64 = 0xcbf29ce484222325
+        for byte in text.utf8 {
+            hash ^= UInt64(byte)
+            hash = hash &* 0x100000001b3
+        }
+        return String(hash, radix: 36)
     }
 }

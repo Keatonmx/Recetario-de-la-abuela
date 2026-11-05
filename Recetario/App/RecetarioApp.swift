@@ -45,7 +45,7 @@ struct RootView: View {
             }
         }
         .tint(Color.mxRosa)
-        .preferredColorScheme((Appearance(rawValue: UserDefaults.standard.string(forKey: "screenshotAppearance") ?? appearance) ?? .system).colorScheme)
+        .preferredColorScheme((Appearance(rawValue: appearance) ?? .system).colorScheme)
         .overlay(alignment: .bottom) {
             if let toast = store.toast {
                 ToastView(text: toast)

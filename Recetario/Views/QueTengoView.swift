@@ -26,9 +26,10 @@ struct QueTengoView: View {
             VStack(alignment: .leading, spacing: 16) {
                 header
                 inputRow
-                if !suggestions.isEmpty {
+                let suggested = suggestions
+                if !suggested.isEmpty {
                     FlowLayout(spacing: 6) {
-                        ForEach(suggestions) { entry in
+                        ForEach(suggested) { entry in
                             Button { pickSuggestion(entry.id) } label: { IngredientChip(entry: entry, style: .suggestion) }
                                 .buttonStyle(.plain)
                         }
@@ -67,6 +68,8 @@ struct QueTengoView: View {
             PapelPicado().padding(.top, 4)
             Text("¿Qué tengo?")
                 .font(.rotulo(44))
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
                 .foregroundStyle(Color.mxRosa)
                 .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
                 .padding(.top, 10)
@@ -96,7 +99,7 @@ struct QueTengoView: View {
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(focused ? Color.mxRosa : Color.hairline, lineWidth: focused ? 2 : 1))
                 Button("Agregar") { addText(text) }
                     .font(.subheadline.weight(.bold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Color.onRosa)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 11)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.mxRosa))
@@ -124,7 +127,7 @@ struct QueTengoView: View {
             }
             .font(.subheadline.weight(.bold))
             .foregroundStyle(Color.talavera)
-            .padding(.vertical, 6)
+            .frame(minHeight: 44)
         }
     }
 
@@ -245,7 +248,7 @@ struct QueTengoView: View {
     }
 
     private func pickSuggestion(_ id: String) {
-        var parts = text.components(separatedBy: ",")
+        var parts = text.components(separatedBy: CharacterSet(charactersIn: ",;"))
         parts.removeLast()
         let earlier = parts.joined(separator: ",")
         store.addHave([id])
@@ -281,6 +284,7 @@ struct IngredientChip: View {
         .foregroundStyle(style == .on ? Color(.systemBackground) : (style == .selected ? Color.ink : Color.primary))
         .padding(.horizontal, 12)
         .padding(.vertical, 7)
+        .frame(minHeight: 44)
         .background(Capsule().fill(background))
         .overlay(Capsule().strokeBorder(border, style: StrokeStyle(lineWidth: style == .selected ? 2 : 1.5, dash: style == .suggestion ? [4, 3] : [])))
     }

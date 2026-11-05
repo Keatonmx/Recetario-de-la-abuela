@@ -16,7 +16,9 @@ final class RecipeStore: ObservableObject {
     /// ¿Qué tengo?: ingredient ids the cook has, and whether basics count as on hand.
     @Published private(set) var have: [String]
     @Published private(set) var haveBasics: Bool
-    lazy var pantry = PantrySearch(lexicon: book.lexicon)
+    let pantry: PantrySearch
+    /// Folded search text per recipe, built once.
+    private(set) var searchIndex: [String: String] = [:]
 
     private let defaults: UserDefaults
     private static let favoritesKey = "favorites"
@@ -32,6 +34,8 @@ final class RecipeStore: ObservableObject {
             assertionFailure("recipes.json is missing from the app bundle or failed to decode")
             self.book = .empty
         }
+        pantry = PantrySearch(lexicon: book.lexicon)
+        searchIndex = Dictionary(book.recipes.map { ($0.id, $0.searchIndex) }, uniquingKeysWith: { first, _ in first })
         favorites = Set(defaults.stringArray(forKey: Self.favoritesKey) ?? [])
         checks = Set(defaults.stringArray(forKey: Self.checksKey) ?? [])
         factors = (defaults.dictionary(forKey: Self.factorsKey) as? [String: Double]) ?? [:]
@@ -43,7 +47,7 @@ final class RecipeStore: ObservableObject {
         }
 
         // Launch arguments used by CI to set up screenshots, e.g. -screenshotFavorites "pozole-rojo,conchas".
-        // They are never saved.
+        // They only exist when CI passes them; a later tap in that session would save them, which is fine for CI.
         if let ids = defaults.string(forKey: "screenshotFavorites") {
             favorites.formUnion(ids.split(separator: ",").map(String.init))
         }
@@ -127,6 +131,7 @@ final class RecipeStore: ObservableObject {
 
     func showToast(_ text: String) {
         toast = text
+        AccessibilityNotification.Announcement(text).post()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) { [weak self] in
             if self?.toast == text { self?.toast = nil }
         }
