@@ -1,0 +1,116 @@
+name: TestFlight
+
+# Builds a signed release and uploads it to App Store Connect, where it shows up in TestFlight.
+# Run it from the Actions tab (Run workflow). No Mac needed: signing is done by Xcode's
+# cloud-managed signing, using an App Store Connect API key.
+#
+# One-time setup (repository Settings > Secrets and variables > Actions):
+#   Variable  APPLE_TEAM_ID      your 10-character Team ID (developer.apple.com > Membership)
+#   Secret    ASC_KEY_ID         the API key's Key ID
+#   Secret    ASC_ISSUER_ID      the Issuer ID shown above the keys list
+#   Secret    ASC_KEY_P8         the full contents of the downloaded AuthKey_XXXX.p8 file
+# The key is created in App Store Connect > Users and Access > Integrations > App Store Connect API,
+# with the Admin role (needed so Xcode can create the signing certificate and profile).
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["testflight-*"]   # or push a tag like testflight-1 to upload from any branch
+
+jobs:
+  upload:
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check setup
+        env:
+          TEAM: ${{ vars.APPLE_TEAM_ID }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+          P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          missing=""
+          [ -n "$TEAM" ] || missing="$missing APPLE_TEAM_ID(variable)"
+          [ -n "$KEY_ID" ] || missing="$missing ASC_KEY_ID"
+          [ -n "$ISSUER" ] || missing="$missing ASC_ISSUER_ID"
+          [ -n "$P8" ] || missing="$missing ASC_KEY_P8"
+          if [ -n "$missing" ]; then echo "::error::Missing:$missing. See the comment at the top of testflight.yml."; exit 1; fi
+
+      - name: Validate recipe data
+        run: |
+          node scripts/export-recipes.mjs
+          git diff --exit-code Recetario/Resources/recipes.json scripts/validate/scaling-fixtures.json
+          swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift Recetario/Models/Units.swift Recetario/Models/PantrySearch.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
+          "$RUNNER_TEMP/validate" Recetario/Resources/recipes.json scripts/validate/scaling-fixtures.json
+
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+
+      - name: Write the API key
+        env:
+          P8: ${{ secrets.ASC_KEY_P8 }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/keys"
+          printf '%s\n' "$P8" > "$RUNNER_TEMP/keys/AuthKey_${KEY_ID}.p8"
+          echo "KEY_PATH=$RUNNER_TEMP/keys/AuthKey_${KEY_ID}.p8" >> "$GITHUB_ENV"
+
+      - name: Archive
+        env:
+          TEAM: ${{ vars.APPLE_TEAM_ID }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          # Each upload needs a new build number; the workflow run number always goes up.
+          BUILD_NUMBER=$((100 + GITHUB_RUN_NUMBER))
+          xcodebuild archive \
+            -project Recetario.xcodeproj \
+            -scheme Recetario \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/Recetario.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$KEY_PATH" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER" \
+            DEVELOPMENT_TEAM="$TEAM" \
+            CODE_SIGN_STYLE=Automatic \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER"
+          echo "Archived build $BUILD_NUMBER"
+
+      - name: Upload to App Store Connect
+        env:
+          TEAM: ${{ vars.APPLE_TEAM_ID }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>${TEAM}</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+          </dict>
+          </plist>
+          EOF
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/Recetario.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$KEY_PATH" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER"
+          echo "::notice::Uploaded. It appears in App Store Connect > TestFlight after Apple finishes processing (usually 10–30 minutes)."
+
+      - name: Remove the API key
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/keys"

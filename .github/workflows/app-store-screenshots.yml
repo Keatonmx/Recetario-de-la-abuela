@@ -1,0 +1,72 @@
+name: App Store screenshots
+
+# Takes the screenshots App Store Connect asks for (6.9-inch iPhone, 1320 × 2868) and
+# publishes them to the app-store-screenshots branch. Run it from the Actions tab.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/recetario-ios, main]
+    paths: [.github/workflows/app-store-screenshots.yml, docs/app-store.md]
+
+jobs:
+  shots:
+    runs-on: macos-15
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build for the simulator
+        run: |
+          brew install xcodegen
+          xcodegen generate
+          UDID=$(xcrun simctl create store-shots com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max)
+          echo "UDID=$UDID" >> "$GITHUB_ENV"
+          xcodebuild build -project Recetario.xcodeproj -scheme Recetario -configuration Release \
+            -destination "platform=iOS Simulator,id=$UDID" -derivedDataPath build CODE_SIGNING_ALLOWED=NO
+
+      - name: Take screenshots
+        run: |
+          APP=build/Build/Products/Release-iphonesimulator/Recetario.app
+          BUNDLE=com.keatonmx.recetario
+          mkdir -p store
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time 9:41 --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4 || true
+          xcrun simctl ui "$UDID" appearance light
+          xcrun simctl install "$UDID" "$APP"
+          shot() {
+            name="$1"; shift
+            xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
+            xcrun simctl launch "$UDID" "$BUNDLE" "$@" > /dev/null
+            sleep 7
+            xcrun simctl io "$UDID" screenshot "store/$name.png"
+          }
+          FAV=(-screenshotFavorites "pozole-rojo,conchas,tamales-rojos")
+          shot 01-recetario "${FAV[@]}"
+          shot 02-pozole -screenshotRecipe pozole-rojo
+          shot 03-que-tengo -screenshotTab 1 -screenshotHave "puerco,chile-seco,maiz-pozolero,cebolla,ajo"
+          shot 04-para-cuantos -screenshotRecipe tamales-rojos -screenshotFactor 0.5 -screenshotScrollTo servings
+          shot 05-guisos "${FAV[@]}" -screenshotCategory guisos
+          xcrun simctl ui "$UDID" appearance dark
+          shot 06-oscuro "${FAV[@]}"
+          sips -g pixelWidth -g pixelHeight store/01-recetario.png
+
+      - name: Publish to the app-store-screenshots branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd store
+          git init -q -b app-store-screenshots
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "App Store screenshots for ${GITHUB_SHA::7}"
+          git push -f -q "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" app-store-screenshots
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-store-screenshots
+          path: store

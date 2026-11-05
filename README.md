@@ -62,6 +62,21 @@ push, so compile errors show up there.
 
 ## Publishing to the App Store
 
+Listing text, keywords, privacy answers and review notes are in `docs/app-store.md`.
+The privacy policy and support pages are `docs/privacy.html` and `docs/support.html`.
+
+### TestFlight without a Mac
+
+`.github/workflows/testflight.yml` archives, signs (Xcode cloud-managed signing) and uploads
+to App Store Connect. One-time setup is described at the top of that file: a repository
+variable `APPLE_TEAM_ID` and three secrets from an App Store Connect API key. Then run the
+workflow from the Actions tab, or push a tag like `testflight-1`.
+
+`.github/workflows/app-store-screenshots.yml` makes the 6.9-inch screenshots App Store Connect
+asks for and puts them on the `app-store-screenshots` branch.
+
+### By hand, with a Mac
+
 1. **Join the Apple Developer Program** ($99/year) at developer.apple.com.
 2. **Register the bundle ID** `com.keatonmx.recetario` (or change it in
    `project.yml`) under Certificates, Identifiers & Profiles.
