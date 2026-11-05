@@ -162,7 +162,7 @@ struct RecipeDetailView: View {
     // MARK: Tabs
 
     private var resetButton: some View {
-        Button("Uncheck all") {
+        Button("Desmarcar") {
             store.resetChecks(prefix: "\(recipe.id):t:i")
         }
         .font(.subheadline.weight(.semibold))
