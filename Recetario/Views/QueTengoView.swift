@@ -271,7 +271,7 @@ struct IngredientChip: View {
         HStack(spacing: 6) {
             Text(entry.es).fontWeight(style == .selected ? .bold : .regular)
             if showEnglish {
-                Text(entry.en.lowercased()).foregroundStyle(style == .on ? Color(.systemBackground).opacity(0.75) : Color.secondary)
+                Text(entry.en.lowercased()).foregroundStyle(englishColor)
             }
             if style == .selected {
                 Image(systemName: "xmark").font(.caption2.weight(.bold)).foregroundStyle(Color.stockMuted)
@@ -283,6 +283,15 @@ struct IngredientChip: View {
         .padding(.vertical, 7)
         .background(Capsule().fill(background))
         .overlay(Capsule().strokeBorder(border, style: StrokeStyle(lineWidth: style == .selected ? 2 : 1.5, dash: style == .suggestion ? [4, 3] : [])))
+    }
+
+    /// Selected chips are cream card stock in both themes, so their English stays dark.
+    private var englishColor: Color {
+        switch style {
+        case .on: return Color(.systemBackground).opacity(0.75)
+        case .selected: return .stockMuted
+        default: return .secondary
+        }
     }
 
     private var background: Color {
