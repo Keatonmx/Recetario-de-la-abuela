@@ -20,6 +20,8 @@ struct RecipeBook: Codable {
 struct RecipeCategory: Codable, Identifiable, Hashable {
     let id: String
     let name: String
+    /// Card color for the category, as "#RRGGBB".
+    let color: String
 }
 
 struct IngredientGroup: Codable, Hashable {
@@ -47,6 +49,10 @@ struct Variation: Codable, Hashable, Identifiable {
 
 struct Recipe: Codable, Hashable, Identifiable {
     let id: String
+    /// Lotería card number, in recetario order.
+    let number: Int
+    /// The article the card is called with: "El", "La", "Los", "Las".
+    let article: String?
     let name: String
     let en: String
     let category: String
@@ -85,6 +91,12 @@ extension String {
 }
 
 extension Recipe {
+    /// "El Pozole Rojo", the way the card is called out in la lotería.
+    var cardName: String {
+        if let article { return "\(article) \(name)" }
+        return name
+    }
+
     var searchIndex: String {
         var parts = [name, en, region]
         parts += ingredients.flatMap { $0.items }

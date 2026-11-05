@@ -49,14 +49,19 @@ struct RecipeDetailView: View {
                 Button {
                     cookMode.toggle()
                 } label: {
-                    Image(systemName: cookMode ? "frying.pan.fill" : "frying.pan")
+                    Image("olla")
+                        .foregroundStyle(cookMode ? Color.talavera : Color.primary)
                 }
                 .accessibilityLabel(cookMode ? "Turn off cook mode" : "Cook mode: bigger text, screen stays on")
 
                 Button {
                     store.toggleFavorite(recipe.id)
                 } label: {
-                    Image(systemName: store.isFavorite(recipe.id) ? "star.fill" : "star")
+                    if store.isFavorite(recipe.id) {
+                        Image("milagro-fill").renderingMode(.original)
+                    } else {
+                        Image("milagro")
+                    }
                 }
                 .accessibilityLabel(store.isFavorite(recipe.id) ? "Remove from saved" : "Save recipe")
 
@@ -85,16 +90,43 @@ struct RecipeDetailView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
             if cookMode {
-                Label("Cook mode on: bigger text, and the screen stays awake.", systemImage: "frying.pan.fill")
-                    .font(.footnote)
-                    .foregroundStyle(Color.talavera)
+                Label {
+                    Text("Cook mode on: bigger text, and the screen stays awake.")
+                } icon: {
+                    Image("olla")
+                }
+                .font(.footnote)
+                .foregroundStyle(Color.talavera)
             }
+            CardArt(
+                recipe: recipe,
+                color: store.color(forCategory: recipe.category),
+                aspect: 16 / 10,
+                cornerRadius: 12,
+                numberSize: 17,
+                artPadding: 16
+            )
+            .frame(maxHeight: 300)
+            .background(RoundedRectangle(cornerRadius: 12).fill(Color.inkShadow).offset(x: 4, y: 5))
+            .padding(.bottom, 10)
             Text("\(recipe.region) · \(store.categoryName(recipe.category))".uppercased())
                 .font(.caption.weight(.bold))
                 .tracking(1)
                 .foregroundStyle(Color.chile)
-            Text(recipe.name)
-                .font(.system(.largeTitle, design: .serif))
+            VStack(alignment: .leading, spacing: 2) {
+                if let article = recipe.article {
+                    Text(article.uppercased())
+                        .font(.slab(13, relativeTo: .caption))
+                        .tracking(1.6)
+                        .foregroundStyle(.secondary)
+                }
+                Text(recipe.name)
+                    .font(.rotulo(38, relativeTo: .largeTitle))
+                    .foregroundStyle(store.headingColor(forCategory: recipe.category))
+                    .shadow(color: Color.inkShadow, radius: 0, x: 2, y: 2)
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isHeader)
             Text(recipe.en)
                 .font(.body.italic())
                 .foregroundStyle(.secondary)

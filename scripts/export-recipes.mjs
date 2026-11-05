@@ -12,17 +12,23 @@ const start = html.indexOf("const CATS = [");
 const end = html.indexOf("const CAT_NAME");
 if (start < 0 || end < 0) throw new Error("Could not find the recipe data block in web/recetario.html");
 
-const { CATS, R, CHILES, GLOSS } = new Function(
-  html.slice(start, end) + "\nreturn { CATS, R, CHILES, GLOSS };"
+const { CATS, R, CHILES, GLOSS, ARTICLE, CATCOLOR } = new Function(
+  html.slice(start, end) + "\nreturn { CATS, R, CHILES, GLOSS, ARTICLE, CATCOLOR };"
 )();
+
+// Lotería card numbers follow the order recipes appear in the recetario (category order).
+const ordered = CATS.flatMap(([c]) => R.filter((r) => r.cat === c));
+const NUM = Object.fromEntries(ordered.map((r, i) => [r.id, i + 1]));
 
 const groups = (ing) =>
   (ing.length && Array.isArray(ing[0]) ? ing : [["", ing]]).map(([title, items]) => ({ title, items }));
 
 const book = {
-  categories: CATS.map(([id, name]) => ({ id, name })),
-  recipes: R.map((r) => ({
+  categories: CATS.map(([id, name]) => ({ id, name, color: CATCOLOR[id] })),
+  recipes: ordered.map((r) => ({
     id: r.id,
+    number: NUM[r.id],
+    article: ARTICLE[r.id] ?? null,
     name: r.name,
     en: r.en,
     category: r.cat,

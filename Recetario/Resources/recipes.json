@@ -2,48 +2,583 @@
   "categories": [
     {
       "id": "desayunos",
-      "name": "Desayunos"
+      "name": "Desayunos",
+      "color": "#F29F05"
     },
     {
       "id": "caldos",
-      "name": "Caldos y Pozoles"
+      "name": "Caldos y Pozoles",
+      "color": "#D7262E"
     },
     {
       "id": "guisos",
-      "name": "Guisos y Carnes"
+      "name": "Guisos y Carnes",
+      "color": "#E4007C"
     },
     {
       "id": "moles",
-      "name": "Moles"
+      "name": "Moles",
+      "color": "#7A3E1D"
     },
     {
       "id": "masa",
-      "name": "Masa y Tortilla"
+      "name": "Masa y Tortilla",
+      "color": "#E9B21C"
     },
     {
       "id": "frijoles",
-      "name": "Frijoles y Arroz"
+      "name": "Frijoles y Arroz",
+      "color": "#2E8B57"
     },
     {
       "id": "salsas",
-      "name": "Salsas"
+      "name": "Salsas",
+      "color": "#0E9C9C"
     },
     {
       "id": "bebidas",
-      "name": "Bebidas"
+      "name": "Bebidas",
+      "color": "#1F4FB5"
     },
     {
       "id": "pan",
-      "name": "Panadería"
+      "name": "Panadería",
+      "color": "#EE7FAE"
     },
     {
       "id": "postres",
-      "name": "Postres"
+      "name": "Postres",
+      "color": "#7B4FB5"
     }
   ],
   "recipes": [
     {
+      "id": "huevos-rancheros",
+      "number": 1,
+      "article": "Los",
+      "name": "Huevos Rancheros",
+      "en": "Ranch-style fried eggs in salsa ranchera",
+      "category": "desayunos",
+      "region": "Centro · Norte",
+      "time": "25 min",
+      "servings": "2 plates",
+      "story": "The almuerzo of the rancho: fried eggs on soft fried tortillas, covered with a cooked salsa of charred tomato and chile. The salsa is served warm, not raw like pico de gallo, and the beans go on the side.",
+      "ingredients": [
+        {
+          "title": "Salsa ranchera",
+          "items": [
+            "4 Roma tomatoes (about 1 lb)",
+            "2 serranos or 1 jalapeño",
+            "¼ white onion, plus 2 thin slices of onion",
+            "1 garlic clove, unpeeled",
+            "1 tbsp lard or oil",
+            "Salt"
+          ]
+        },
+        {
+          "title": "Los huevos",
+          "items": [
+            "4 corn tortillas",
+            "4 eggs",
+            "3–4 tbsp lard or oil, for the tortillas and eggs",
+            "Salt"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "Frijoles refritos",
+            "Crumbled queso fresco",
+            "Sliced avocado",
+            "Chopped cilantro",
+            "More warm tortillas"
+          ]
+        }
+      ],
+      "steps": [
+        "Char the tomatoes, chiles, onion chunk and garlic on a dry comal, turning, until blistered and soft: about 8 minutes for the garlic and chiles, 12 for the tomatoes. Peel the garlic.",
+        "Blend or grind them in the molcajete with a pinch of salt. Keep it a little chunky.",
+        "Heat the lard in a small pan and fry the onion slices until soft. Pour in the salsa (it will sizzle) and simmer 5–8 minutes, until it darkens and thickens slightly. Season and keep warm.",
+        "In a skillet, heat a thin layer of lard. Fry each tortilla about 10 seconds per side, so it softens and puffs a little but doesn't turn into a tostada. Drain and set two on each plate.",
+        "In the same skillet, fry the eggs over medium-high, spooning hot fat over the whites until they set with lacy, crisp edges and the yolks stay runny. Salt them.",
+        "Set an egg on each tortilla and spoon the hot salsa over the whites, leaving the yolks showing.",
+        "Serve right away with refritos, queso fresco, avocado and cilantro."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. Huevos rancheros are done in 25 minutes at the comal and skillet. If you want refritos on the side, the beans can come from the pressure cooker (see Frijoles de la Olla).",
+      "tips": [
+        "Fry the tortillas soft, not crisp. You should be able to cut them with the side of your fork.",
+        "Make a double batch of salsa ranchera. It keeps 4 days in the fridge and saves the next breakfast.",
+        "Lard for the eggs gives the crisp edges abuela's had."
+      ],
+      "variations": [
+        {
+          "name": "Huevos Divorciados",
+          "en": "Two eggs, two salsas",
+          "region": "Ciudad de México · Centro",
+          "note": "The divorced eggs: one in red salsa, one in green, kept apart by a line of refried beans. Diner breakfast all over Mexico.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "2 fried tortillas and 2 fried eggs, as in the base",
+                "½ cup salsa ranchera (from the base)",
+                "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+                "½ cup frijoles refritos",
+                "Queso fresco and chilaquiles or totopos on the side, optional"
+              ]
+            }
+          ],
+          "steps": [
+            "Set the two tortillas side by side and put an egg on each.",
+            "Cover one with red salsa and the other with green.",
+            "Spoon a line of refried beans between them to keep them apart.",
+            "Top with queso fresco."
+          ],
+          "pressureNote": null
+        },
+        {
+          "name": "Huevos Motuleños",
+          "en": "Yucatecan stacked eggs with ham and plantain",
+          "region": "Motul, Yucatán",
+          "note": "From the town of Motul: a crisp tortilla spread with black beans, a fried egg, tomato sauce, ham and peas, with fried plantain on the side.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "4 corn tortillas, fried crisp",
+                "1 cup refried black beans",
+                "4 eggs, fried",
+                "1 cup salsa ranchera made with habanero instead of serrano (or plain tomato sauce)",
+                "½ cup diced ham",
+                "½ cup cooked peas",
+                "½ cup crumbled queso fresco",
+                "1 ripe plantain, sliced and fried"
+              ]
+            }
+          ],
+          "steps": [
+            "Warm the salsa with the ham and peas for 3 minutes.",
+            "Spread each crisp tortilla with black beans and top with a fried egg.",
+            "Spoon the salsa with ham and peas over the eggs and sprinkle with queso.",
+            "Serve with the fried plantain."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "molletes",
+      "number": 2,
+      "article": "Los",
+      "name": "Molletes",
+      "en": "Open-face bean and cheese bolillos",
+      "category": "desayunos",
+      "region": "Ciudad de México · Centro",
+      "time": "20 min",
+      "servings": "4 plates",
+      "story": "Bolillos split open, toasted with butter, spread with refried beans and broiled under melted cheese, then topped with cold pico de gallo. The breakfast of cafés and school mornings in the capital, and the best use for yesterday's bread.",
+      "ingredients": [
+        {
+          "title": "Molletes",
+          "items": [
+            "4 bolillos (day-old is fine), or crusty French rolls",
+            "3 tbsp soft butter",
+            "2 cups frijoles refritos, warm and thick",
+            "2 cups shredded melting cheese: queso Chihuahua, manchego mexicano or Oaxaca"
+          ]
+        },
+        {
+          "title": "Pico de gallo",
+          "items": [
+            "2 Roma tomatoes, finely diced",
+            "¼ white onion, finely diced",
+            "1 serrano, minced",
+            "¼ cup chopped cilantro",
+            "Juice of 1 lime",
+            "Salt"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "Salsa verde or salsa roja",
+            "Sliced avocado, optional"
+          ]
+        }
+      ],
+      "steps": [
+        "Heat the broiler (or the oven to 425°F). Mix all the pico de gallo ingredients and let stand while you make the molletes.",
+        "Split the bolillos lengthwise. Pull out a little of the soft crumb so the beans have room.",
+        "Butter the cut sides and toast them, cut side up, 2–3 minutes until the edges are golden.",
+        "Spread each half generously with refritos, edge to edge so the bread doesn't burn.",
+        "Cover with cheese and broil 2–4 minutes, until melted and bubbling in spots.",
+        "Top with pico de gallo and serve with salsa on the side."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version for the molletes themselves, but the beans can come from the pressure cooker (see Frijoles de la Olla, then Frijoles Refritos).",
+      "tips": [
+        "The refritos should be thick enough to hold a line. Runny beans make soggy bread.",
+        "Butter first, then toast, then beans. That way the bread stays crisp underneath."
+      ],
+      "variations": [
+        {
+          "name": "Molletes con Chorizo",
+          "en": "Molletes with chorizo",
+          "region": "Centro",
+          "note": "The most common add-on at fondas.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "Everything from the base",
+                "6 oz Mexican chorizo, casing removed"
+              ]
+            }
+          ],
+          "steps": [
+            "Fry the chorizo, breaking it up, until crisp. Drain off most of the fat (or fry the beans in it).",
+            "Spread the beans on the toasted bread, scatter chorizo over them, add the cheese and broil.",
+            "Top with pico de gallo."
+          ],
+          "pressureNote": null
+        },
+        {
+          "name": "Molletes Dulces",
+          "en": "Butter, sugar and cinnamon molletes",
+          "region": "Centro",
+          "note": "The sweet version kids ask for, with a cup of café con leche or champurrado.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "4 bolillos, split",
+                "4 tbsp soft butter",
+                "¼ cup sugar mixed with 1 tsp ground canela"
+              ]
+            }
+          ],
+          "steps": [
+            "Butter the cut sides generously.",
+            "Sprinkle with the cinnamon sugar.",
+            "Broil 2–3 minutes, until the sugar melts and bubbles. Watch closely; it burns fast."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "huevos-a-la-mexicana",
+      "number": 3,
+      "article": "Los",
+      "name": "Huevos a la Mexicana",
+      "en": "Eggs scrambled with tomato, onion and chile",
+      "category": "desayunos",
+      "region": "Toda la República",
+      "time": "10 min",
+      "servings": "2 plates",
+      "story": "Red tomato, white onion and green chile, the colors of the flag, scrambled with eggs. It's the breakfast every Mexican home makes without a recipe, and it's what goes into a taco on the way out the door.",
+      "ingredients": [
+        {
+          "title": "Huevos",
+          "items": [
+            "4 eggs",
+            "1 tbsp lard or oil",
+            "¼ white onion, finely chopped",
+            "1–2 serranos, finely chopped (seeds in for more heat)",
+            "1 Roma tomato, chopped",
+            "Salt",
+            "1 tbsp chopped cilantro, optional"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "Frijoles de la olla or refritos",
+            "Warm corn or flour tortillas",
+            "Salsa"
+          ]
+        }
+      ],
+      "steps": [
+        "Heat the lard in a skillet over medium. Add the onion and serrano and cook 2 minutes, until soft but not browned.",
+        "Add the tomato and a pinch of salt. Cook 2–3 minutes, until it softens and most of its juice cooks off.",
+        "Beat the eggs lightly with a pinch of salt and pour them into the pan.",
+        "Stir gently with a spatula over medium-low until just set, still soft and moist.",
+        "Add the cilantro if using and serve right away with beans, tortillas and salsa."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. It's a 10-minute skillet breakfast.",
+      "tips": [
+        "Let the tomato cook down first, or the eggs turn watery.",
+        "Some abuelas don't beat the eggs first: they crack them right into the pan and stir, so you get streaks of white and yolk.",
+        "Leftovers make the best tacos de huevo for lunch."
+      ],
+      "variations": [
+        {
+          "name": "Huevos con Chorizo",
+          "en": "Eggs scrambled with chorizo",
+          "region": "Toda la República",
+          "note": "The other everyday breakfast taco. Some families add a diced potato fried with the chorizo.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "4 eggs, lightly beaten",
+                "4 oz Mexican chorizo, casing removed",
+                "¼ onion, chopped, optional",
+                "1 small potato, diced small, optional",
+                "Salt, only if needed"
+              ]
+            }
+          ],
+          "steps": [
+            "Fry the chorizo in a dry skillet, breaking it up, until it releases its red fat, about 4 minutes. Add the onion and potato and cook until the potato is tender, about 8 minutes.",
+            "Pour off extra fat if there's a lot. Add the eggs and stir until just set.",
+            "Taste before salting; chorizo is salty."
+          ],
+          "pressureNote": null
+        },
+        {
+          "name": "Huevos con Nopales",
+          "en": "Eggs with cactus paddles",
+          "region": "Centro",
+          "note": "A Lent favorite, and a way to stretch the eggs.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "4 eggs, lightly beaten",
+                "1 cup cooked nopales, in strips (from a jar, rinsed, or fresh and boiled)",
+                "Everything else from the base"
+              ]
+            }
+          ],
+          "steps": [
+            "Make the base through step 2, adding the nopales with the tomato and cooking until any slime has cooked off.",
+            "Add the eggs and stir until just set."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "machaca-con-huevo",
+      "number": 4,
+      "article": "La",
+      "name": "Machaca con Huevo",
+      "en": "Dried shredded beef scrambled with eggs",
+      "category": "desayunos",
+      "region": "Sonora · Chihuahua · Nuevo León",
+      "time": "20 min",
+      "servings": "3 plates",
+      "story": "Machaca is beef that was salted, sun-dried and pounded so it would keep for months on the ranches of the north. A small handful fried with onion, tomato and chile and scrambled with eggs makes a breakfast wrapped in flour tortillas, the tortilla of the north.",
+      "ingredients": [
+        {
+          "title": "Machaca",
+          "items": [
+            "1 cup (about 2 oz) machaca (dried shredded beef, sold in bags at Mexican markets, or see Machaca Casera)",
+            "6 eggs",
+            "1 tbsp lard or oil",
+            "½ white onion, chopped",
+            "1 Roma tomato, chopped",
+            "1–2 jalapeños or serranos, chopped, or 1 roasted chile verde (Anaheim), in strips, the Sonora way",
+            "Salt, only if needed"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "Warm flour tortillas",
+            "Frijoles de la olla or refritos",
+            "Salsa roja or chiltepín salsa"
+          ]
+        }
+      ],
+      "steps": [
+        "If your machaca is in big strands, pull it apart with your fingers. Taste a piece. If it's very salty or hard, soak it in warm water 5 minutes and squeeze it dry.",
+        "Heat the lard in a skillet over medium. Fry the machaca 1–2 minutes, stirring, until it smells toasty and crisps a little.",
+        "Add the onion and chile and cook 3 minutes until soft. Add the tomato and cook 2 minutes more.",
+        "Beat the eggs lightly without salt; the machaca is already salty.",
+        "Pour the eggs into the pan and stir gently over medium-low until just set, still soft and moist.",
+        "Taste, add salt only if needed, and serve right away with flour tortillas, beans and salsa."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "The eggs are a quick skillet job, but you can make the machaca itself in the pressure cooker. See Machaca Casera under Variantes.",
+      "tips": [
+        "Go easy on the salt. Taste the machaca first; most of it is salted.",
+        "In Monterrey they call this machacado con huevo and make it with more tomato and chile, almost saucy.",
+        "Leftover machaca keeps for weeks in a jar in the fridge."
+      ],
+      "variations": [
+        {
+          "name": "Machaca Casera",
+          "en": "Homemade dried beef",
+          "region": "Sonora · Norte",
+          "note": "Real sun-dried machaca is hard to find outside the north. This oven-dried version gets close.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "2 lb beef flank or skirt steak, in 3 pieces",
+                "½ onion and 3 garlic cloves",
+                "1 tbsp salt, plus more to taste",
+                "Juice of 1 lime",
+                "½ tsp black pepper"
+              ]
+            }
+          ],
+          "steps": [
+            "Simmer the beef with the onion, garlic, salt and water to cover 2 hours, until it shreds easily.",
+            "Drain and shred it very finely with two forks or your fingers.",
+            "Toss with the lime juice, pepper and a little more salt.",
+            "Spread thinly on sheet pans and dry in a 200°F oven 2–3 hours, stirring every 30 minutes, until dry and leathery but not burnt.",
+            "Pound it in a molcajete or pulse briefly in a food processor until it's fluffy and fine. Store in a jar in the fridge."
+          ],
+          "pressureNote": "Cook the beef with the onion, garlic, salt and 2 cups water at high pressure 35 minutes, natural release 15. Then shred, season and oven-dry as above."
+        },
+        {
+          "name": "Burritos de Machaca",
+          "en": "Machaca breakfast burritos",
+          "region": "Sonora · Chihuahua",
+          "note": "In Sonora and Ciudad Juárez burritos are slim and simple, just a filling and a thin flour tortilla. No rice inside.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "Machaca con huevo from the base",
+                "Large thin flour tortillas (sobaqueras if you can find them)",
+                "Frijoles refritos, optional"
+              ]
+            }
+          ],
+          "steps": [
+            "Warm the tortillas on the comal until soft and spotted.",
+            "Spread a thin line of beans if using, add a line of machaca con huevo, and roll tightly.",
+            "Set seam side down on the comal 30 seconds to seal. Eat with salsa."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "chilaquiles",
+      "number": 5,
+      "article": "Los",
+      "name": "Chilaquiles Verdes",
+      "en": "Tortilla chips simmered in green salsa",
+      "category": "desayunos",
+      "region": "Toda la República",
+      "time": "30 min",
+      "servings": "4 plates",
+      "story": "Breakfast made from whatever tortillas are in the kitchen: fried, tossed in salsa or chile, and covered with crema and cheese, or cooked together with eggs. Some like them crunchy, some soft. Both are right.",
+      "ingredients": [
+        {
+          "title": "Totopos",
+          "items": [
+            "12 corn tortillas, store-bought or homemade (even from the same morning), each cut in 6 wedges",
+            "Oil for frying",
+            "Salt"
+          ]
+        },
+        {
+          "title": "Salsa verde",
+          "items": [
+            "1 lb tomatillos, husked",
+            "2–3 serranos",
+            "¼ white onion",
+            "1 garlic clove",
+            "Handful of cilantro",
+            "1 cup chicken broth",
+            "1 tbsp oil",
+            "1 sprig epazote, optional"
+          ]
+        },
+        {
+          "title": "Encima",
+          "items": [
+            "Crema",
+            "Crumbled queso fresco",
+            "Thin onion rings",
+            "Avocado",
+            "Fried eggs or shredded chicken",
+            "Frijoles refritos on the side"
+          ]
+        }
+      ],
+      "steps": [
+        "Cut the tortillas. Store-bought tortillas fry fine as they are. Very fresh, moist homemade ones splatter less if they sit out on the counter a few minutes first.",
+        "Fry in hot oil in batches until golden. For crunchy chilaquiles fry them crisp; for soft ones, take them out while they're still a little chewy. Drain and salt.",
+        "Simmer the tomatillos and serranos 8 minutes. Blend with the onion, garlic, cilantro and broth.",
+        "Heat the oil in a wide pan and fry the salsa 5 minutes with the epazote.",
+        "Add the totopos and toss: 1 minute for crunchy, 3 for soft.",
+        "Serve right away with crema, queso, onion, avocado and an egg or chicken, with beans on the side."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. Chilaquiles take 30 minutes and have to be eaten the moment they're ready.",
+      "tips": [
+        "Drain the fried tortillas well. Fresher tortillas hold a little more oil.",
+        "Leftover red chile from enchiladas or tamales makes great chilaquiles."
+      ],
+      "variations": [
+        {
+          "name": "Chilaquiles con Huevo, Estilo de Casa",
+          "en": "Soft chilaquiles with red chile and eggs",
+          "region": "Mexican-American · Texas · California",
+          "note": "How a lot of Mexican-American families make them: store-bought or same-morning tortillas fried soft, not crunchy like chips, then cooked in the pan with red chile and eggs.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "10–12 corn tortillas, store-bought or homemade, cut or torn into strips or pieces",
+                "¼ cup oil",
+                "4–6 eggs",
+                "1½ cups red chile (below), or leftover enchilada chile or salsa",
+                "Salt",
+                "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+                "To serve: shredded cheese or queso fresco, frijoles, warm tortillas"
+              ]
+            }
+          ],
+          "steps": [
+            "Make the chile: stem and seed the chiles, simmer them in the water 10 minutes, then blend with the garlic, cumin, oregano and salt. Strain.",
+            "Heat the oil in a large skillet over medium-high. Fry the tortilla pieces, stirring, 3–4 minutes, until golden in spots but still soft and a little chewy. Pour off extra oil.",
+            "For eggs fried first: push the tortillas to the side, crack the eggs into the pan and let them fry a minute until the whites start to set. Then break them up and mix them through the tortillas.",
+            "For scrambled: beat the eggs with a pinch of salt, pour them over the tortillas and stir until just set.",
+            "Pour in the chile and toss everything together. Simmer 1–2 minutes, until the tortillas soak it up.",
+            "Top with cheese and serve with beans and tortillas."
+          ],
+          "pressureNote": null
+        },
+        {
+          "name": "Chilaquiles Rojos",
+          "en": "Red chilaquiles",
+          "region": "Toda la República",
+          "note": "The same method with a red salsa of tomato and dried chiles.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "Totopos from the base",
+                "4 Roma tomatoes",
+                "3 chiles guajillo and 2 chiles de árbol, toasted and soaked",
+                "1 garlic clove, ¼ onion and 1 cup broth"
+              ]
+            }
+          ],
+          "steps": [
+            "Blend the tomatoes, chiles, garlic, onion and broth, and strain.",
+            "Fry the salsa 5 minutes and season.",
+            "Toss with the totopos and top as in the base."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
       "id": "pozole-rojo",
+      "number": 6,
+      "article": "El",
       "name": "Pozole Rojo",
       "en": "Red pork & hominy stew",
       "category": "caldos",
@@ -184,6 +719,8 @@
     },
     {
       "id": "menudo-rojo",
+      "number": 7,
+      "article": "El",
       "name": "Menudo Rojo",
       "en": "Red tripe & hominy soup",
       "category": "caldos",
@@ -283,6 +820,8 @@
     },
     {
       "id": "caldo-de-res",
+      "number": 8,
+      "article": "El",
       "name": "Caldo de Res",
       "en": "Beef & vegetable soup",
       "category": "caldos",
@@ -383,6 +922,8 @@
     },
     {
       "id": "caldo-de-pollo",
+      "number": 9,
+      "article": "El",
       "name": "Caldo de Pollo",
       "en": "Chicken soup",
       "category": "caldos",
@@ -477,6 +1018,8 @@
     },
     {
       "id": "sopa-de-fideo",
+      "number": 10,
+      "article": "La",
       "name": "Sopa de Fideo",
       "en": "Toasted noodle soup in tomato broth",
       "category": "caldos",
@@ -546,6 +1089,8 @@
     },
     {
       "id": "albondigas",
+      "number": 11,
+      "article": "Las",
       "name": "Albóndigas en Caldillo",
       "en": "Meatball soup with mint",
       "category": "caldos",
@@ -613,6 +1158,8 @@
     },
     {
       "id": "birria-de-chivo",
+      "number": 12,
+      "article": "La",
       "name": "Birria de Chivo",
       "en": "Goat in chile adobo with consomé",
       "category": "guisos",
@@ -721,6 +1268,8 @@
     },
     {
       "id": "cochinita-pibil",
+      "number": 13,
+      "article": "La",
       "name": "Cochinita Pibil",
       "en": "Achiote pork in banana leaf",
       "category": "guisos",
@@ -835,6 +1384,8 @@
     },
     {
       "id": "carnitas",
+      "number": 14,
+      "article": "Las",
       "name": "Carnitas",
       "en": "Pork simmered in lard",
       "category": "guisos",
@@ -893,6 +1444,8 @@
     },
     {
       "id": "barbacoa",
+      "number": 15,
+      "article": "La",
       "name": "Barbacoa de Res",
       "en": "Slow-steamed beef cheeks",
       "category": "guisos",
@@ -986,6 +1539,8 @@
     },
     {
       "id": "puerco-salsa-verde",
+      "number": 16,
+      "article": "El",
       "name": "Puerco en Salsa Verde",
       "en": "Pork in tomatillo salsa with purslane",
       "category": "guisos",
@@ -1050,6 +1605,8 @@
     },
     {
       "id": "tinga-de-pollo",
+      "number": 17,
+      "article": "La",
       "name": "Tinga de Pollo",
       "en": "Chipotle shredded chicken",
       "category": "guisos",
@@ -1141,6 +1698,8 @@
     },
     {
       "id": "picadillo",
+      "number": 18,
+      "article": "El",
       "name": "Picadillo",
       "en": "Ground beef with potato and carrot",
       "category": "guisos",
@@ -1211,6 +1770,8 @@
     },
     {
       "id": "chiles-rellenos",
+      "number": 19,
+      "article": "Los",
       "name": "Chiles Rellenos",
       "en": "Cheese-stuffed poblanos in egg batter",
       "category": "guisos",
@@ -1292,6 +1853,8 @@
     },
     {
       "id": "mole-poblano",
+      "number": 20,
+      "article": "El",
       "name": "Mole Poblano",
       "en": "Chile, chocolate and spice sauce with turkey",
       "category": "moles",
@@ -1418,6 +1981,8 @@
     },
     {
       "id": "tamales-rojos",
+      "number": 21,
+      "article": "Los",
       "name": "Tamales Rojos de Puerco",
       "en": "Red chile pork tamales",
       "category": "masa",
@@ -1537,6 +2102,8 @@
     },
     {
       "id": "enchiladas-rojas",
+      "number": 22,
+      "article": "Las",
       "name": "Enchiladas Rojas",
       "en": "Red chile enchiladas with queso fresco",
       "category": "masa",
@@ -1621,520 +2188,9 @@
       ]
     },
     {
-      "id": "huevos-rancheros",
-      "name": "Huevos Rancheros",
-      "en": "Ranch-style fried eggs in salsa ranchera",
-      "category": "desayunos",
-      "region": "Centro · Norte",
-      "time": "25 min",
-      "servings": "2 plates",
-      "story": "The almuerzo of the rancho: fried eggs on soft fried tortillas, covered with a cooked salsa of charred tomato and chile. The salsa is served warm, not raw like pico de gallo, and the beans go on the side.",
-      "ingredients": [
-        {
-          "title": "Salsa ranchera",
-          "items": [
-            "4 Roma tomatoes (about 1 lb)",
-            "2 serranos or 1 jalapeño",
-            "¼ white onion, plus 2 thin slices of onion",
-            "1 garlic clove, unpeeled",
-            "1 tbsp lard or oil",
-            "Salt"
-          ]
-        },
-        {
-          "title": "Los huevos",
-          "items": [
-            "4 corn tortillas",
-            "4 eggs",
-            "3–4 tbsp lard or oil, for the tortillas and eggs",
-            "Salt"
-          ]
-        },
-        {
-          "title": "Para servir",
-          "items": [
-            "Frijoles refritos",
-            "Crumbled queso fresco",
-            "Sliced avocado",
-            "Chopped cilantro",
-            "More warm tortillas"
-          ]
-        }
-      ],
-      "steps": [
-        "Char the tomatoes, chiles, onion chunk and garlic on a dry comal, turning, until blistered and soft: about 8 minutes for the garlic and chiles, 12 for the tomatoes. Peel the garlic.",
-        "Blend or grind them in the molcajete with a pinch of salt. Keep it a little chunky.",
-        "Heat the lard in a small pan and fry the onion slices until soft. Pour in the salsa (it will sizzle) and simmer 5–8 minutes, until it darkens and thickens slightly. Season and keep warm.",
-        "In a skillet, heat a thin layer of lard. Fry each tortilla about 10 seconds per side, so it softens and puffs a little but doesn't turn into a tostada. Drain and set two on each plate.",
-        "In the same skillet, fry the eggs over medium-high, spooning hot fat over the whites until they set with lacy, crisp edges and the yolks stay runny. Salt them.",
-        "Set an egg on each tortilla and spoon the hot salsa over the whites, leaving the yolks showing.",
-        "Serve right away with refritos, queso fresco, avocado and cilantro."
-      ],
-      "pressureCooker": null,
-      "pressureNote": "No pressure-cooker version. Huevos rancheros are done in 25 minutes at the comal and skillet. If you want refritos on the side, the beans can come from the pressure cooker (see Frijoles de la Olla).",
-      "tips": [
-        "Fry the tortillas soft, not crisp. You should be able to cut them with the side of your fork.",
-        "Make a double batch of salsa ranchera. It keeps 4 days in the fridge and saves the next breakfast.",
-        "Lard for the eggs gives the crisp edges abuela's had."
-      ],
-      "variations": [
-        {
-          "name": "Huevos Divorciados",
-          "en": "Two eggs, two salsas",
-          "region": "Ciudad de México · Centro",
-          "note": "The divorced eggs: one in red salsa, one in green, kept apart by a line of refried beans. Diner breakfast all over Mexico.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "2 fried tortillas and 2 fried eggs, as in the base",
-                "½ cup salsa ranchera (from the base)",
-                "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
-                "½ cup frijoles refritos",
-                "Queso fresco and chilaquiles or totopos on the side, optional"
-              ]
-            }
-          ],
-          "steps": [
-            "Set the two tortillas side by side and put an egg on each.",
-            "Cover one with red salsa and the other with green.",
-            "Spoon a line of refried beans between them to keep them apart.",
-            "Top with queso fresco."
-          ],
-          "pressureNote": null
-        },
-        {
-          "name": "Huevos Motuleños",
-          "en": "Yucatecan stacked eggs with ham and plantain",
-          "region": "Motul, Yucatán",
-          "note": "From the town of Motul: a crisp tortilla spread with black beans, a fried egg, tomato sauce, ham and peas, with fried plantain on the side.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "4 corn tortillas, fried crisp",
-                "1 cup refried black beans",
-                "4 eggs, fried",
-                "1 cup salsa ranchera made with habanero instead of serrano (or plain tomato sauce)",
-                "½ cup diced ham",
-                "½ cup cooked peas",
-                "½ cup crumbled queso fresco",
-                "1 ripe plantain, sliced and fried"
-              ]
-            }
-          ],
-          "steps": [
-            "Warm the salsa with the ham and peas for 3 minutes.",
-            "Spread each crisp tortilla with black beans and top with a fried egg.",
-            "Spoon the salsa with ham and peas over the eggs and sprinkle with queso.",
-            "Serve with the fried plantain."
-          ],
-          "pressureNote": null
-        }
-      ]
-    },
-    {
-      "id": "molletes",
-      "name": "Molletes",
-      "en": "Open-face bean and cheese bolillos",
-      "category": "desayunos",
-      "region": "Ciudad de México · Centro",
-      "time": "20 min",
-      "servings": "4 plates",
-      "story": "Bolillos split open, toasted with butter, spread with refried beans and broiled under melted cheese, then topped with cold pico de gallo. The breakfast of cafés and school mornings in the capital, and the best use for yesterday's bread.",
-      "ingredients": [
-        {
-          "title": "Molletes",
-          "items": [
-            "4 bolillos (day-old is fine), or crusty French rolls",
-            "3 tbsp soft butter",
-            "2 cups frijoles refritos, warm and thick",
-            "2 cups shredded melting cheese: queso Chihuahua, manchego mexicano or Oaxaca"
-          ]
-        },
-        {
-          "title": "Pico de gallo",
-          "items": [
-            "2 Roma tomatoes, finely diced",
-            "¼ white onion, finely diced",
-            "1 serrano, minced",
-            "¼ cup chopped cilantro",
-            "Juice of 1 lime",
-            "Salt"
-          ]
-        },
-        {
-          "title": "Para servir",
-          "items": [
-            "Salsa verde or salsa roja",
-            "Sliced avocado, optional"
-          ]
-        }
-      ],
-      "steps": [
-        "Heat the broiler (or the oven to 425°F). Mix all the pico de gallo ingredients and let stand while you make the molletes.",
-        "Split the bolillos lengthwise. Pull out a little of the soft crumb so the beans have room.",
-        "Butter the cut sides and toast them, cut side up, 2–3 minutes until the edges are golden.",
-        "Spread each half generously with refritos, edge to edge so the bread doesn't burn.",
-        "Cover with cheese and broil 2–4 minutes, until melted and bubbling in spots.",
-        "Top with pico de gallo and serve with salsa on the side."
-      ],
-      "pressureCooker": null,
-      "pressureNote": "No pressure-cooker version for the molletes themselves, but the beans can come from the pressure cooker (see Frijoles de la Olla, then Frijoles Refritos).",
-      "tips": [
-        "The refritos should be thick enough to hold a line. Runny beans make soggy bread.",
-        "Butter first, then toast, then beans. That way the bread stays crisp underneath."
-      ],
-      "variations": [
-        {
-          "name": "Molletes con Chorizo",
-          "en": "Molletes with chorizo",
-          "region": "Centro",
-          "note": "The most common add-on at fondas.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "Everything from the base",
-                "6 oz Mexican chorizo, casing removed"
-              ]
-            }
-          ],
-          "steps": [
-            "Fry the chorizo, breaking it up, until crisp. Drain off most of the fat (or fry the beans in it).",
-            "Spread the beans on the toasted bread, scatter chorizo over them, add the cheese and broil.",
-            "Top with pico de gallo."
-          ],
-          "pressureNote": null
-        },
-        {
-          "name": "Molletes Dulces",
-          "en": "Butter, sugar and cinnamon molletes",
-          "region": "Centro",
-          "note": "The sweet version kids ask for, with a cup of café con leche or champurrado.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "4 bolillos, split",
-                "4 tbsp soft butter",
-                "¼ cup sugar mixed with 1 tsp ground canela"
-              ]
-            }
-          ],
-          "steps": [
-            "Butter the cut sides generously.",
-            "Sprinkle with the cinnamon sugar.",
-            "Broil 2–3 minutes, until the sugar melts and bubbles. Watch closely; it burns fast."
-          ],
-          "pressureNote": null
-        }
-      ]
-    },
-    {
-      "id": "huevos-a-la-mexicana",
-      "name": "Huevos a la Mexicana",
-      "en": "Eggs scrambled with tomato, onion and chile",
-      "category": "desayunos",
-      "region": "Toda la República",
-      "time": "10 min",
-      "servings": "2 plates",
-      "story": "Red tomato, white onion and green chile, the colors of the flag, scrambled with eggs. It's the breakfast every Mexican home makes without a recipe, and it's what goes into a taco on the way out the door.",
-      "ingredients": [
-        {
-          "title": "Huevos",
-          "items": [
-            "4 eggs",
-            "1 tbsp lard or oil",
-            "¼ white onion, finely chopped",
-            "1–2 serranos, finely chopped (seeds in for more heat)",
-            "1 Roma tomato, chopped",
-            "Salt",
-            "1 tbsp chopped cilantro, optional"
-          ]
-        },
-        {
-          "title": "Para servir",
-          "items": [
-            "Frijoles de la olla or refritos",
-            "Warm corn or flour tortillas",
-            "Salsa"
-          ]
-        }
-      ],
-      "steps": [
-        "Heat the lard in a skillet over medium. Add the onion and serrano and cook 2 minutes, until soft but not browned.",
-        "Add the tomato and a pinch of salt. Cook 2–3 minutes, until it softens and most of its juice cooks off.",
-        "Beat the eggs lightly with a pinch of salt and pour them into the pan.",
-        "Stir gently with a spatula over medium-low until just set, still soft and moist.",
-        "Add the cilantro if using and serve right away with beans, tortillas and salsa."
-      ],
-      "pressureCooker": null,
-      "pressureNote": "No pressure-cooker version. It's a 10-minute skillet breakfast.",
-      "tips": [
-        "Let the tomato cook down first, or the eggs turn watery.",
-        "Some abuelas don't beat the eggs first: they crack them right into the pan and stir, so you get streaks of white and yolk.",
-        "Leftovers make the best tacos de huevo for lunch."
-      ],
-      "variations": [
-        {
-          "name": "Huevos con Chorizo",
-          "en": "Eggs scrambled with chorizo",
-          "region": "Toda la República",
-          "note": "The other everyday breakfast taco. Some families add a diced potato fried with the chorizo.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "4 eggs, lightly beaten",
-                "4 oz Mexican chorizo, casing removed",
-                "¼ onion, chopped, optional",
-                "1 small potato, diced small, optional",
-                "Salt, only if needed"
-              ]
-            }
-          ],
-          "steps": [
-            "Fry the chorizo in a dry skillet, breaking it up, until it releases its red fat, about 4 minutes. Add the onion and potato and cook until the potato is tender, about 8 minutes.",
-            "Pour off extra fat if there's a lot. Add the eggs and stir until just set.",
-            "Taste before salting; chorizo is salty."
-          ],
-          "pressureNote": null
-        },
-        {
-          "name": "Huevos con Nopales",
-          "en": "Eggs with cactus paddles",
-          "region": "Centro",
-          "note": "A Lent favorite, and a way to stretch the eggs.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "4 eggs, lightly beaten",
-                "1 cup cooked nopales, in strips (from a jar, rinsed, or fresh and boiled)",
-                "Everything else from the base"
-              ]
-            }
-          ],
-          "steps": [
-            "Make the base through step 2, adding the nopales with the tomato and cooking until any slime has cooked off.",
-            "Add the eggs and stir until just set."
-          ],
-          "pressureNote": null
-        }
-      ]
-    },
-    {
-      "id": "machaca-con-huevo",
-      "name": "Machaca con Huevo",
-      "en": "Dried shredded beef scrambled with eggs",
-      "category": "desayunos",
-      "region": "Sonora · Chihuahua · Nuevo León",
-      "time": "20 min",
-      "servings": "3 plates",
-      "story": "Machaca is beef that was salted, sun-dried and pounded so it would keep for months on the ranches of the north. A small handful fried with onion, tomato and chile and scrambled with eggs makes a breakfast wrapped in flour tortillas, the tortilla of the north.",
-      "ingredients": [
-        {
-          "title": "Machaca",
-          "items": [
-            "1 cup (about 2 oz) machaca (dried shredded beef, sold in bags at Mexican markets, or see Machaca Casera)",
-            "6 eggs",
-            "1 tbsp lard or oil",
-            "½ white onion, chopped",
-            "1 Roma tomato, chopped",
-            "1–2 jalapeños or serranos, chopped, or 1 roasted chile verde (Anaheim), in strips, the Sonora way",
-            "Salt, only if needed"
-          ]
-        },
-        {
-          "title": "Para servir",
-          "items": [
-            "Warm flour tortillas",
-            "Frijoles de la olla or refritos",
-            "Salsa roja or chiltepín salsa"
-          ]
-        }
-      ],
-      "steps": [
-        "If your machaca is in big strands, pull it apart with your fingers. Taste a piece. If it's very salty or hard, soak it in warm water 5 minutes and squeeze it dry.",
-        "Heat the lard in a skillet over medium. Fry the machaca 1–2 minutes, stirring, until it smells toasty and crisps a little.",
-        "Add the onion and chile and cook 3 minutes until soft. Add the tomato and cook 2 minutes more.",
-        "Beat the eggs lightly without salt; the machaca is already salty.",
-        "Pour the eggs into the pan and stir gently over medium-low until just set, still soft and moist.",
-        "Taste, add salt only if needed, and serve right away with flour tortillas, beans and salsa."
-      ],
-      "pressureCooker": null,
-      "pressureNote": "The eggs are a quick skillet job, but you can make the machaca itself in the pressure cooker. See Machaca Casera under Variantes.",
-      "tips": [
-        "Go easy on the salt. Taste the machaca first; most of it is salted.",
-        "In Monterrey they call this machacado con huevo and make it with more tomato and chile, almost saucy.",
-        "Leftover machaca keeps for weeks in a jar in the fridge."
-      ],
-      "variations": [
-        {
-          "name": "Machaca Casera",
-          "en": "Homemade dried beef",
-          "region": "Sonora · Norte",
-          "note": "Real sun-dried machaca is hard to find outside the north. This oven-dried version gets close.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "2 lb beef flank or skirt steak, in 3 pieces",
-                "½ onion and 3 garlic cloves",
-                "1 tbsp salt, plus more to taste",
-                "Juice of 1 lime",
-                "½ tsp black pepper"
-              ]
-            }
-          ],
-          "steps": [
-            "Simmer the beef with the onion, garlic, salt and water to cover 2 hours, until it shreds easily.",
-            "Drain and shred it very finely with two forks or your fingers.",
-            "Toss with the lime juice, pepper and a little more salt.",
-            "Spread thinly on sheet pans and dry in a 200°F oven 2–3 hours, stirring every 30 minutes, until dry and leathery but not burnt.",
-            "Pound it in a molcajete or pulse briefly in a food processor until it's fluffy and fine. Store in a jar in the fridge."
-          ],
-          "pressureNote": "Cook the beef with the onion, garlic, salt and 2 cups water at high pressure 35 minutes, natural release 15. Then shred, season and oven-dry as above."
-        },
-        {
-          "name": "Burritos de Machaca",
-          "en": "Machaca breakfast burritos",
-          "region": "Sonora · Chihuahua",
-          "note": "In Sonora and Ciudad Juárez burritos are slim and simple, just a filling and a thin flour tortilla. No rice inside.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "Machaca con huevo from the base",
-                "Large thin flour tortillas (sobaqueras if you can find them)",
-                "Frijoles refritos, optional"
-              ]
-            }
-          ],
-          "steps": [
-            "Warm the tortillas on the comal until soft and spotted.",
-            "Spread a thin line of beans if using, add a line of machaca con huevo, and roll tightly.",
-            "Set seam side down on the comal 30 seconds to seal. Eat with salsa."
-          ],
-          "pressureNote": null
-        }
-      ]
-    },
-    {
-      "id": "chilaquiles",
-      "name": "Chilaquiles Verdes",
-      "en": "Tortilla chips simmered in green salsa",
-      "category": "desayunos",
-      "region": "Toda la República",
-      "time": "30 min",
-      "servings": "4 plates",
-      "story": "Breakfast made from whatever tortillas are in the kitchen: fried, tossed in salsa or chile, and covered with crema and cheese, or cooked together with eggs. Some like them crunchy, some soft. Both are right.",
-      "ingredients": [
-        {
-          "title": "Totopos",
-          "items": [
-            "12 corn tortillas, store-bought or homemade (even from the same morning), each cut in 6 wedges",
-            "Oil for frying",
-            "Salt"
-          ]
-        },
-        {
-          "title": "Salsa verde",
-          "items": [
-            "1 lb tomatillos, husked",
-            "2–3 serranos",
-            "¼ white onion",
-            "1 garlic clove",
-            "Handful of cilantro",
-            "1 cup chicken broth",
-            "1 tbsp oil",
-            "1 sprig epazote, optional"
-          ]
-        },
-        {
-          "title": "Encima",
-          "items": [
-            "Crema",
-            "Crumbled queso fresco",
-            "Thin onion rings",
-            "Avocado",
-            "Fried eggs or shredded chicken",
-            "Frijoles refritos on the side"
-          ]
-        }
-      ],
-      "steps": [
-        "Cut the tortillas. Store-bought tortillas fry fine as they are. Very fresh, moist homemade ones splatter less if they sit out on the counter a few minutes first.",
-        "Fry in hot oil in batches until golden. For crunchy chilaquiles fry them crisp; for soft ones, take them out while they're still a little chewy. Drain and salt.",
-        "Simmer the tomatillos and serranos 8 minutes. Blend with the onion, garlic, cilantro and broth.",
-        "Heat the oil in a wide pan and fry the salsa 5 minutes with the epazote.",
-        "Add the totopos and toss: 1 minute for crunchy, 3 for soft.",
-        "Serve right away with crema, queso, onion, avocado and an egg or chicken, with beans on the side."
-      ],
-      "pressureCooker": null,
-      "pressureNote": "No pressure-cooker version. Chilaquiles take 30 minutes and have to be eaten the moment they're ready.",
-      "tips": [
-        "Drain the fried tortillas well. Fresher tortillas hold a little more oil.",
-        "Leftover red chile from enchiladas or tamales makes great chilaquiles."
-      ],
-      "variations": [
-        {
-          "name": "Chilaquiles con Huevo, Estilo de Casa",
-          "en": "Soft chilaquiles with red chile and eggs",
-          "region": "Mexican-American · Texas · California",
-          "note": "How a lot of Mexican-American families make them: store-bought or same-morning tortillas fried soft, not crunchy like chips, then cooked in the pan with red chile and eggs.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "10–12 corn tortillas, store-bought or homemade, cut or torn into strips or pieces",
-                "¼ cup oil",
-                "4–6 eggs",
-                "1½ cups red chile (below), or leftover enchilada chile or salsa",
-                "Salt",
-                "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
-                "To serve: shredded cheese or queso fresco, frijoles, warm tortillas"
-              ]
-            }
-          ],
-          "steps": [
-            "Make the chile: stem and seed the chiles, simmer them in the water 10 minutes, then blend with the garlic, cumin, oregano and salt. Strain.",
-            "Heat the oil in a large skillet over medium-high. Fry the tortilla pieces, stirring, 3–4 minutes, until golden in spots but still soft and a little chewy. Pour off extra oil.",
-            "For eggs fried first: push the tortillas to the side, crack the eggs into the pan and let them fry a minute until the whites start to set. Then break them up and mix them through the tortillas.",
-            "For scrambled: beat the eggs with a pinch of salt, pour them over the tortillas and stir until just set.",
-            "Pour in the chile and toss everything together. Simmer 1–2 minutes, until the tortillas soak it up.",
-            "Top with cheese and serve with beans and tortillas."
-          ],
-          "pressureNote": null
-        },
-        {
-          "name": "Chilaquiles Rojos",
-          "en": "Red chilaquiles",
-          "region": "Toda la República",
-          "note": "The same method with a red salsa of tomato and dried chiles.",
-          "ingredients": [
-            {
-              "title": "",
-              "items": [
-                "Totopos from the base",
-                "4 Roma tomatoes",
-                "3 chiles guajillo and 2 chiles de árbol, toasted and soaked",
-                "1 garlic clove, ¼ onion and 1 cup broth"
-              ]
-            }
-          ],
-          "steps": [
-            "Blend the tomatoes, chiles, garlic, onion and broth, and strain.",
-            "Fry the salsa 5 minutes and season.",
-            "Toss with the totopos and top as in the base."
-          ],
-          "pressureNote": null
-        }
-      ]
-    },
-    {
       "id": "frijoles-de-olla",
+      "number": 23,
+      "article": "Los",
       "name": "Frijoles de la Olla",
       "en": "Pot beans with epazote",
       "category": "frijoles",
@@ -2235,6 +2291,8 @@
     },
     {
       "id": "arroz-rojo",
+      "number": 24,
+      "article": "El",
       "name": "Arroz Rojo",
       "en": "Mexican red rice",
       "category": "frijoles",
@@ -2309,6 +2367,8 @@
     },
     {
       "id": "salsa-roja",
+      "number": 25,
+      "article": "La",
       "name": "Salsa Roja de Molcajete",
       "en": "Charred tomato salsa",
       "category": "salsas",
@@ -2395,6 +2455,8 @@
     },
     {
       "id": "cafe-de-olla",
+      "number": 26,
+      "article": "El",
       "name": "Café de Olla",
       "en": "Clay-pot coffee with piloncillo and cinnamon",
       "category": "bebidas",
@@ -2478,6 +2540,8 @@
     },
     {
       "id": "champurrado",
+      "number": 27,
+      "article": "El",
       "name": "Champurrado",
       "en": "Chocolate masa atole",
       "category": "bebidas",
@@ -2542,6 +2606,8 @@
     },
     {
       "id": "agua-de-jamaica",
+      "number": 28,
+      "article": "El",
       "name": "Agua de Jamaica",
       "en": "Hibiscus agua fresca",
       "category": "bebidas",
@@ -2603,6 +2669,8 @@
     },
     {
       "id": "conchas",
+      "number": 29,
+      "article": "Las",
       "name": "Conchas",
       "en": "Sweet shell-topped buns",
       "category": "pan",
@@ -2704,6 +2772,8 @@
     },
     {
       "id": "bolillos",
+      "number": 30,
+      "article": "Los",
       "name": "Bolillos",
       "en": "Crusty Mexican rolls",
       "category": "pan",
@@ -2765,6 +2835,8 @@
     },
     {
       "id": "arroz-con-leche",
+      "number": 31,
+      "article": "El",
       "name": "Arroz con Leche",
       "en": "Cinnamon rice pudding",
       "category": "postres",
@@ -2836,6 +2908,8 @@
     },
     {
       "id": "flan",
+      "number": 32,
+      "article": "El",
       "name": "Flan de la Abuela",
       "en": "Milk and egg caramel custard",
       "category": "postres",
@@ -2918,6 +2992,8 @@
     },
     {
       "id": "capirotada",
+      "number": 33,
+      "article": "La",
       "name": "Capirotada",
       "en": "Lenten bread pudding with piloncillo",
       "category": "postres",

@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// The recetario as a deck of lotería cards, grouped under hand-painted category signs.
 struct RecipeListView: View {
     @EnvironmentObject private var store: RecipeStore
     let savedOnly: Bool
@@ -7,6 +8,11 @@ struct RecipeListView: View {
     @State private var query = ""
     @State private var category: String? = nil
     @State private var pressureOnly = false
+
+    private let columns = [
+        GridItem(.flexible(), spacing: 14, alignment: .top),
+        GridItem(.flexible(), spacing: 14, alignment: .top)
+    ]
 
     private var results: [Recipe] {
         let trimmed = query.trimmingCharacters(in: .whitespaces)
@@ -21,50 +27,41 @@ struct RecipeListView: View {
 
     var body: some View {
         let recipes = results
-        List {
-            if !savedOnly {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 18) {
                 header
-                    .listRowBackground(Color.clear)
-                    .listRowInsets(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))
-                    .listRowSeparator(.hidden)
-            }
-            chips
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets())
-                .listRowSeparator(.hidden)
-
-            if savedOnly && store.favorites.isEmpty {
-                ContentUnavailableView(
-                    "Nothing saved yet",
-                    systemImage: "star",
-                    description: Text("Open any recipe and tap the star to save it here.")
-                )
-                .listRowBackground(Color.clear)
-            } else if recipes.isEmpty {
-                ContentUnavailableView.search(text: query)
-                    .listRowBackground(Color.clear)
-            } else {
-                ForEach(store.book.categories) { cat in
-                    let inCategory = recipes.filter { $0.category == cat.id }
-                    if !inCategory.isEmpty {
-                        Section {
-                            ForEach(inCategory) { recipe in
-                                NavigationLink(value: recipe) {
-                                    RecipeRow(recipe: recipe)
-                                }
+                chips
+                if savedOnly && store.favorites.isEmpty {
+                    ContentUnavailableView {
+                        Label {
+                            Text("No milagros yet")
+                        } icon: {
+                            Image("milagro").foregroundStyle(Color.chile)
+                        }
+                    } description: {
+                        Text("Open any recipe and tap the heart to save it here.")
+                    }
+                    .padding(.top, 24)
+                } else if recipes.isEmpty {
+                    ContentUnavailableView.search(text: query)
+                        .padding(.top, 24)
+                } else {
+                    Text("\(recipes.count) \(recipes.count == 1 ? "receta" : "recetas")")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                    LazyVStack(alignment: .leading, spacing: 34) {
+                        ForEach(store.book.categories) { cat in
+                            let inCategory = recipes.filter { $0.category == cat.id }
+                            if !inCategory.isEmpty {
+                                section(cat, recipes: inCategory)
                             }
-                        } header: {
-                            Text(cat.name)
-                                .font(.display(.title3))
-                                .foregroundStyle(Color.primary)
-                                .textCase(nil)
                         }
                     }
                 }
             }
+            .padding(.horizontal, 16)
+            .padding(.bottom, 32)
         }
-        .listStyle(.insetGrouped)
-        .scrollContentBackground(.hidden)
         .background(Color.paper)
         .searchable(
             text: $query,
@@ -72,27 +69,64 @@ struct RecipeListView: View {
             prompt: "Buscar: pozole, guajillo, Yucatán…"
         )
         .navigationTitle(savedOnly ? "Guardadas" : "Recetas")
-        .navigationBarTitleDisplayMode(savedOnly ? .large : .inline)
+        .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(for: Recipe.self) { recipe in
             RecipeDetailView(recipe: recipe)
         }
     }
 
-    private var header: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            PapelPicado()
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Recetario")
-                HStack(alignment: .firstTextBaseline, spacing: 0) {
-                    Text("de la ")
-                    Text("Abuela").foregroundStyle(Color.chile)
+    private func section(_ cat: RecipeCategory, recipes: [Recipe]) -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            RotuloHeader(title: cat.name, count: recipes.count, color: store.headingColor(forCategory: cat.id))
+            LazyVGrid(columns: columns, alignment: .leading, spacing: 18) {
+                ForEach(Array(recipes.enumerated()), id: \.element.id) { index, recipe in
+                    NavigationLink(value: recipe) {
+                        LoteriaCard(
+                            recipe: recipe,
+                            color: store.color(forCategory: cat.id),
+                            isFavorite: store.isFavorite(recipe.id)
+                        )
+                    }
+                    .buttonStyle(DealtCardStyle(index: index))
                 }
             }
-            .font(.system(.largeTitle, design: .serif))
-            .padding(.top, 6)
-            Text("\(store.book.recipes.count) home-style recipes, region by region. \(store.pressureCookerCount) with a pressure-cooker version, plus \(store.variationCount) variations.")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
+        }
+    }
+
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            PapelPicado()
+                .padding(.top, 4)
+            if savedOnly {
+                Text("Guardadas")
+                    .font(.rotulo(44))
+                    .foregroundStyle(Color.mxRosa)
+                    .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
+                    .padding(.top, 10)
+                Text("Your milagros: the recipes you've saved with the heart, kept on this phone.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            } else {
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Recetario")
+                        .font(.rotulo(50))
+                        .foregroundStyle(Color.mxRosa)
+                    Text("de la Abuela")
+                        .font(.rotulo(31, relativeTo: .title))
+                        .foregroundStyle(Color.mxCobalt)
+                }
+                .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
+                .padding(.top, 10)
+                .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(.isHeader)
+                Text("COCINA DE CASA · REGIÓN POR REGIÓN")
+                    .font(.slab(13, relativeTo: .caption))
+                    .tracking(1.1)
+                    .foregroundStyle(Color.chile)
+                Text("\(store.book.recipes.count) home-style recipes, each one a card in the deck. \(store.pressureCookerCount) with a pressure-cooker version, plus \(store.variationCount) variations.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
         }
     }
 
@@ -105,44 +139,8 @@ struct RecipeListView: View {
                     Chip(title: cat.name, isOn: category == cat.id) { category = cat.id }
                 }
             }
-            .padding(.horizontal, 20)
             .padding(.vertical, 4)
         }
-    }
-}
-
-struct RecipeRow: View {
-    @EnvironmentObject private var store: RecipeStore
-    let recipe: Recipe
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            HStack(alignment: .firstTextBaseline) {
-                Text(recipe.name).font(.display(.title3))
-                Spacer(minLength: 8)
-                if store.isFavorite(recipe.id) {
-                    Image(systemName: "star.fill")
-                        .font(.caption)
-                        .foregroundStyle(Color.maiz)
-                        .accessibilityLabel("Saved")
-                }
-            }
-            Text(recipe.en)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-            FlowLayout(spacing: 6) {
-                Badge(text: recipe.region)
-                Badge(text: recipe.time)
-                if let pc = recipe.pressureCooker {
-                    Badge(text: "Olla exprés · \(pc.total)", tint: .nopal, background: .nopalSoft, bold: true)
-                }
-                if !recipe.variations.isEmpty {
-                    let n = recipe.variations.count
-                    Badge(text: "+\(n) \(n == 1 ? "variante" : "variantes")", tint: .talavera, background: .talaveraSoft, bold: true)
-                }
-            }
-            .padding(.top, 4)
-        }
-        .padding(.vertical, 4)
+        .scrollClipDisabled()
     }
 }

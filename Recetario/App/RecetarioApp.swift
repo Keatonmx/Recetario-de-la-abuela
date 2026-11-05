@@ -4,6 +4,10 @@ import SwiftUI
 struct RecetarioApp: App {
     @StateObject private var store = RecipeStore()
 
+    init() {
+        BundledFonts.register()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
@@ -16,12 +20,12 @@ struct RootView: View {
     var body: some View {
         TabView {
             NavigationStack { RecipeListView(savedOnly: false) }
-                .tabItem { Label("Recetas", systemImage: "book.closed") }
+                .tabItem { Label { Text("Recetas") } icon: { Image("tab-recetas") } }
             NavigationStack { RecipeListView(savedOnly: true) }
-                .tabItem { Label("Guardadas", systemImage: "star") }
+                .tabItem { Label { Text("Guardadas") } icon: { Image("milagro") } }
             NavigationStack { PantryView() }
-                .tabItem { Label("Despensa", systemImage: "leaf") }
+                .tabItem { Label { Text("Despensa") } icon: { Image("tab-despensa") } }
         }
-        .tint(Color.chile)
+        .tint(Color.mxRosa)
     }
 }

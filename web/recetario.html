@@ -2,7 +2,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&family=Shrikhand&family=Young+Serif&display=swap">
 <style>
 /* Layout: single-column phone app (max 560px). Papel picado masthead, sticky search + category chips, recipe cards grouped by category, tabbed recipe detail (Tradicional / Olla exprés / Variantes), fixed bottom nav. Palette: talavera cobalt, chile red, maíz gold, nopal green on a blue-biased paper. */
 :root{
@@ -16,6 +16,12 @@
   --f-body:"Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
   --nav-h:64px;
+  /* Lotería cards are physical objects: light card stock and black ink in both themes */
+  --stock:#FFFEFA; --stock-ink:#1D1A17; --stock-muted:#5E5A55; --line-ink:#1D1A17; --shadow:#1D1A17;
+  --mx-rosa:#D6006F; --mx-cobalt:#1F4FB5;
+  --lift:#000000; --lift-amt:0%;
+  --f-rotulo:"Shrikhand", "Young Serif", Georgia, serif;
+  --f-slab:"Alfa Slab One", "Rockwell", "Roboto Slab", Georgia, serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -25,6 +31,7 @@
     --maiz:#F0C35A; --maiz-soft:#30281A;
     --nopal:#72C597; --nopal-soft:#163024;
     --rosa:#EE80A9; --on-accent:#0D1322; color-scheme:dark;
+    --stock:#F3F0E8; --shadow:#04060D; --line-ink:#141210; --mx-rosa:#FF5FAE; --mx-cobalt:#8BAAF2; --lift:#FFFFFF; --lift-amt:38%;
   }
 }
 :root[data-theme="dark"]{
@@ -34,6 +41,7 @@
   --maiz:#F0C35A; --maiz-soft:#30281A;
   --nopal:#72C597; --nopal-soft:#163024;
   --rosa:#EE80A9; --on-accent:#0D1322; color-scheme:dark;
+  --stock:#F3F0E8; --shadow:#04060D; --line-ink:#141210; --mx-rosa:#FF5FAE; --mx-cobalt:#8BAAF2; --lift:#FFFFFF; --lift-amt:38%;
 }
 *{box-sizing:border-box}
 body{
@@ -190,15 +198,62 @@ details.var .vb > p{margin:0;max-width:65ch}
 html.cook body{font-size:19px}
 html.cook .step{padding:16px}
 html.cook .ing{padding:12px 0}
+
+/* ---------- Lotería redesign ---------- */
+.rotulo{font-family:var(--f-rotulo);font-weight:400;line-height:1.08;letter-spacing:.005em;text-shadow:2px 2px 0 var(--shadow)}
+.mast{padding-block:4px 2px;gap:10px}
+.mast .picado{margin-top:0}
+.mast h1.rotulo{font-family:var(--f-rotulo);font-size:clamp(2.4rem, 11vw, 3.2rem);line-height:1;color:var(--mx-rosa);margin-top:16px;text-shadow:3px 3px 0 var(--shadow)}
+.mast h1 .de{display:block;font-size:.62em;color:var(--mx-cobalt);margin-top:4px}
+.mast .tag{font-family:var(--f-slab);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--chile);max-width:none}
+.tiles{height:18px;background:var(--tile) repeat-x left center / 18px 18px;border-block:2px solid var(--line-ink);border-radius:2px}
+.cat{margin-top:34px;gap:10px}
+.cat > header{display:grid;gap:8px}
+.cat h2.rotulo{font-size:2rem;color:color-mix(in srgb, var(--g), var(--lift) var(--lift-amt));display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.cat h2 small{font-family:var(--f-slab);font-size:.8rem;color:var(--muted);text-shadow:none;letter-spacing:.06em;text-transform:uppercase}
+.deck{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:16px 14px;margin-top:6px}
+.loteria{position:relative;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:var(--stock-ink);background:var(--stock);border:2px solid var(--line-ink);border-radius:10px;padding:7px 7px 10px;box-shadow:3px 4px 0 var(--shadow);transition:transform .16s ease, box-shadow .16s ease;min-width:0}
+.deck .loteria:nth-child(4n+1){transform:rotate(-.8deg)}
+.deck .loteria:nth-child(4n+2){transform:rotate(.6deg)}
+.deck .loteria:nth-child(4n+3){transform:rotate(.4deg)}
+.deck .loteria:nth-child(4n){transform:rotate(-.5deg)}
+.deck .loteria:hover,.deck .loteria:focus-visible{transform:rotate(0) translate(-1px,-3px);box-shadow:5px 7px 0 var(--shadow)}
+.deck .loteria:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow)}
+@media (prefers-reduced-motion: reduce){.loteria{transition:none}}
+.art{--g2:color-mix(in srgb, var(--g) 68%, #fff);position:relative;aspect-ratio:1/1;border:2.5px solid var(--line-ink);border-radius:4px;overflow:hidden;background:repeating-conic-gradient(from -3.75deg at 50% 58%, var(--g) 0deg 7.5deg, var(--g2) 7.5deg 15deg)}
+.art svg{position:absolute;inset:7%;width:86%;height:86%;overflow:visible}
+.art .no{position:absolute;top:0;left:0;background:var(--stock);color:var(--stock-ink);font-family:var(--f-slab);font-size:.8rem;line-height:1;padding:4px 7px 5px 5px;border-right:2.5px solid var(--line-ink);border-bottom:2.5px solid var(--line-ink);border-bottom-right-radius:5px;font-variant-numeric:tabular-nums;z-index:1}
+.art .stamp{position:absolute;right:5px;bottom:6px;transform:rotate(-7deg);font-family:var(--f-slab);font-size:.56rem;letter-spacing:.07em;line-height:1.1;color:#1F6B3F;background:#F7F5EE;border:2px solid #1F6B3F;border-radius:4px;padding:3px 5px;z-index:1;text-transform:uppercase}
+.art .heart{position:absolute;top:4px;right:4px;width:24px;height:24px;z-index:1;filter:drop-shadow(1px 1px 0 #1D1A17)}
+.loteria .nm{font-family:var(--f-slab);font-size:.9rem;line-height:1.12;text-transform:uppercase;text-align:center;letter-spacing:.02em;text-wrap:balance;padding:2px 2px 0;overflow-wrap:anywhere}
+.loteria .sub{font-size:.72rem;text-align:center;color:var(--stock-muted);line-height:1.3;margin-top:-3px}
+.loteria .sub b{color:#1F4FB5;font-weight:700}
+/* Detail hero card */
+.hero .art.big{aspect-ratio:16/10;max-height:280px;border-radius:12px;border-width:2.5px;box-shadow:4px 5px 0 var(--shadow);margin-bottom:10px}
+.hero .art.big svg{inset:8% 20%;width:60%;height:84%}
+.hero .art.big .no{font-size:1rem;padding:6px 10px 7px 8px}
+.hero h1.rotulo{font-family:var(--f-rotulo);font-size:clamp(2.1rem, 9vw, 2.7rem);line-height:1.05;color:color-mix(in srgb, var(--g), var(--lift) var(--lift-amt));text-shadow:2px 2px 0 var(--shadow)}
+.hero .article{display:block;font-family:var(--f-slab);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-shadow:none;margin-bottom:2px}
+.tab[aria-selected="true"]{border-bottom-color:var(--mx-rosa)}
+/* Milagro (sacred heart) save button */
+.icon-btn.fav svg{width:24px;height:24px}
+.icon-btn[aria-pressed="true"].fav{border-color:var(--chile);background:var(--chile-soft)}
+/* Bottom nav with custom folk icons */
+.nav a svg{width:26px;height:26px}
+.nav a[aria-current="page"]{color:var(--mx-rosa)}
+.nav a[aria-current="page"] svg{transform:translateY(-1px)}
+.chilec .top .ico{width:26px;height:26px;flex:none}
+.chilec .top{align-items:center}
+.chilec .top .nm{flex:1}
 </style>
 
 <div class="app" id="app"></div>
 
 <nav class="nav" aria-label="Secciones">
   <div class="in">
-    <a href="#recetas" data-nav="recetas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/><path d="M9 8h7M9 12h7"/></svg>Recetas</a>
-    <a href="#guardadas" data-nav="guardadas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>Guardadas</a>
-    <a href="#despensa" data-nav="despensa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3c0 2 1 3 3 3"/><path d="M11 6c4 0 7 3 7 7 0 4-3 8-6 8-5 0-7-6-6-11 .5-2.5 2.5-4 5-4z"/></svg>Despensa</a>
+    <a href="#recetas" data-nav="recetas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="7.5" y="5.2" width="9" height="9.3" rx="1"/><path d="M5 2.5h3.6v3.2H5z" fill="currentColor"/><circle cx="12" cy="10" r="1.9"/><path d="M12 6.6v.9M12 12.5v.9M8.6 10h.9M14.5 10h.9"/><path d="M8 18h8"/></svg>Recetas</a>
+    <a href="#guardadas" data-nav="guardadas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-7.5-10A4 4 0 0 1 12 8.6 4 4 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M12 7.6c-1.8-1.5-1.2-3.4 0-5 1.2 1.6 1.8 3.5 0 5z"/><path d="M3.5 6l1.8 1.2M20.5 6l-1.8 1.2"/></svg>Guardadas</a>
+    <a href="#despensa" data-nav="despensa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 7c3.6-.9 6.6 1.5 8.4 5.1 1.6 3.4 2.6 6.9 1.3 8.4-1.7.8-4.6-1.3-6.7-4.5C8.1 12.8 5.7 9.4 7.2 7z"/><path d="M7.2 7c-.4-1.8.4-3.4 2.2-3.9"/><path d="M5.6 7.6c.6-1.4 2.4-1.9 3.6-1.1"/></svg>Despensa</a>
   </div>
 </nav>
 
@@ -940,7 +995,122 @@ const GLOSS = [
   ["Crema","Mexican cultured cream, thinner and saltier than sour cream. Thin sour cream with a little milk if you can't find it."]
 ];
 
+/* Lotería card names: the article each card is called with ("¡El Pozole!") */
+const ARTICLE = {
+  "pozole-rojo":"El","menudo-rojo":"El","caldo-de-res":"El","caldo-de-pollo":"El","sopa-de-fideo":"La","albondigas":"Las",
+  "birria-de-chivo":"La","cochinita-pibil":"La","carnitas":"Las","barbacoa":"La","puerco-salsa-verde":"El","tinga-de-pollo":"La",
+  "picadillo":"El","chiles-rellenos":"Los","mole-poblano":"El","tamales-rojos":"Los","enchiladas-rojas":"Las","chilaquiles":"Los",
+  "frijoles-de-olla":"Los","arroz-rojo":"El","salsa-roja":"La","cafe-de-olla":"El","champurrado":"El","agua-de-jamaica":"El",
+  "arroz-con-leche":"El","flan":"El","capirotada":"La","huevos-rancheros":"Los","huevos-a-la-mexicana":"Los","molletes":"Los",
+  "machaca-con-huevo":"La","conchas":"Las","bolillos":"Los"
+};
+/* Each category's card color, from the market: cempasúchil, chile, rosa mexicano, mole, maíz, nopal, turquesa, cobalto, concha pink, jacaranda */
+const CATCOLOR = {desayunos:"#F29F05", caldos:"#D7262E", guisos:"#E4007C", moles:"#7A3E1D", masa:"#E9B21C", frijoles:"#2E8B57", salsas:"#0E9C9C", bebidas:"#1F4FB5", pan:"#EE7FAE", postres:"#7B4FB5"};
+
 const CAT_NAME = Object.fromEntries(CATS);
+
+/* ---------- Lotería art: flat folk drawings, 100×100, black ink outlines ---------- */
+const ART = (() => {
+  const K = '#1d1a17', CLAY = '#C8643C', CLAY2 = '#A94E2B', COBALT = '#1F4FB5', CREAM = '#FFFDF7';
+  const S = `stroke="${K}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"`;
+  const S2 = `stroke="${K}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"`;
+  const steam = y => `<path d="M38 ${y}c-4 4 4 7 0 11M50 ${y - 4}c-4 4 4 7 0 11M62 ${y}c-4 4 4 7 0 11" fill="none" ${S}/>`;
+  const dots = (pts, r, fill, st = S2) => pts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" ${st}/>`).join('');
+  const bits = (pts, s, fill) => pts.map(([x, y]) => `<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="1" fill="${fill}" ${S2}/>`).join('');
+  const herbs = pts => pts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="2.3" fill="#3FA34D"/>`).join('');
+
+  const bowl = (broth, extra = '') => steam(18) +
+    `<path d="M14 48h72c0 19-16 33-36 33S14 67 14 48z" fill="${COBALT}" ${S}/>` +
+    `<path d="M40 80h20l-2 8H42z" fill="${COBALT}" ${S}/>` +
+    `<path d="M21 60c19 6 39 6 58 0" fill="none" stroke="${CREAM}" stroke-width="2.5" stroke-linecap="round"/>` +
+    `<g fill="${CREAM}"><circle cx="31" cy="68" r="2.6"/><circle cx="41" cy="72" r="2.6"/><circle cx="50" cy="73" r="2.6"/><circle cx="59" cy="72" r="2.6"/><circle cx="69" cy="68" r="2.6"/></g>` +
+    `<ellipse cx="50" cy="48" rx="36" ry="11" fill="${COBALT}" ${S}/>` +
+    `<ellipse cx="50" cy="48" rx="31" ry="8" fill="${broth}" ${S2}/>` + extra;
+  const plate = food => `<ellipse cx="50" cy="66" rx="43" ry="19" fill="${CREAM}" ${S}/><ellipse cx="50" cy="65" rx="34" ry="13" fill="none" stroke="${COBALT}" stroke-width="2.5" stroke-dasharray="5 4"/>` + food;
+  const taco = (shell, filling, extra = '') =>
+    `<path d="M18 56c4-14 18-20 32-20s28 6 32 20z" fill="${filling}" ${S}/>` + extra +
+    `<path d="M12 52c2 22 18 34 38 34s36-12 38-34c-12 8-26 12-38 12S24 60 12 52z" fill="${shell}" ${S}/>` +
+    `<path d="M24 70c8 6 17 8 26 8" fill="none" stroke="${K}" stroke-width="2" stroke-linecap="round" opacity=".3"/>`;
+  const tacoTop = herbs([[32, 46], [50, 40], [68, 46], [42, 44]]) + bits([[38, 40], [56, 42], [62, 48], [26, 50]], 3.4, CREAM);
+  const olla = (contents, extra = '') => steam(14) +
+    `<path d="M27 38c-13 10-15 31-3 41 11 9 41 9 52 0 12-10 10-31-3-41z" fill="${CLAY}" ${S}/>` +
+    `<path d="M27 46c-10-3-12 13-2 13M73 46c10-3 12 13 2 13" fill="none" ${S}/>` +
+    `<rect x="24" y="27" width="52" height="13" rx="5" fill="${CLAY2}" ${S}/>` +
+    `<ellipse cx="50" cy="31" rx="21" ry="3.6" fill="${contents}" ${S2}/>` + extra +
+    `<path d="M26 62c5-5 9 5 14 0s9 5 14 0 9 5 14 0 6 3 8 1" fill="none" stroke="${CREAM}" stroke-width="2.5" stroke-linecap="round"/>` +
+    `<g fill="${CREAM}"><circle cx="34" cy="71" r="2.4"/><circle cx="50" cy="74" r="2.4"/><circle cx="66" cy="71" r="2.4"/></g>`;
+  const cazuela = (sauce, extra = '') => steam(20) +
+    `<path d="M10 51c-7 0-7 9 1 9M90 51c7 0 7 9-1 9" fill="none" ${S}/>` +
+    `<path d="M10 50h80c-2 18-18 30-40 30S12 68 10 50z" fill="${CLAY}" ${S}/>` +
+    `<ellipse cx="50" cy="50" rx="40" ry="10" fill="${CLAY2}" ${S}/>` +
+    `<ellipse cx="50" cy="50" rx="34" ry="7" fill="${sauce}" ${S2}/>` + extra +
+    `<g fill="${CREAM}"><circle cx="26" cy="66" r="2.4"/><circle cx="38" cy="71" r="2.4"/><circle cx="50" cy="72" r="2.4"/><circle cx="62" cy="71" r="2.4"/><circle cx="74" cy="66" r="2.4"/></g>`;
+  const jarrito = (drink, extra = '') => steam(10) +
+    `<path d="M70 42c13-1 13 24-2 23" fill="none" stroke="${K}" stroke-width="7" stroke-linecap="round"/><path d="M70 42c13-1 13 24-2 23" fill="none" stroke="${CLAY}" stroke-width="3" stroke-linecap="round"/>` +
+    `<path d="M26 30h48l-5 50c-1 6-7 8-19 8s-18-2-19-8z" fill="${CLAY}" ${S}/>` +
+    `<ellipse cx="50" cy="30" rx="24" ry="5" fill="${drink}" ${S}/>` + extra +
+    `<path d="M29 41h42" stroke="${CREAM}" stroke-width="2.5" stroke-linecap="round"/>` +
+    `<g fill="${CREAM}"><circle cx="50" cy="62" r="4"/><circle cx="50" cy="53.5" r="3"/><circle cx="50" cy="70.5" r="3"/><circle cx="41.5" cy="62" r="3"/><circle cx="58.5" cy="62" r="3"/></g><circle cx="50" cy="62" r="1.8" fill="#F29F05"/>`;
+  const concha = (top, groove) => `<path d="M14 64h72c0 9-7 14-16 14H30c-9 0-16-5-16-14z" fill="#D9934A" ${S}/>` +
+    `<path d="M14 64c0-22 16-38 36-38s36 16 36 38z" fill="${top}" ${S}/>` +
+    `<path d="M50 62L21 52M50 62L28 40M50 62L39 30M50 62L61 30M50 62L72 40M50 62L79 52" stroke="${groove}" stroke-width="3.5" stroke-linecap="round"/>`;
+  const bolillo = `<path d="M8 60c8-17 30-24 46-22 18 2 32 9 38 20-8 14-30 21-48 19-18-2-32-9-36-17z" fill="#D69447" ${S}/><path d="M24 57c14-6 34-8 52-2" fill="none" stroke="#F3D7A1" stroke-width="5" stroke-linecap="round"/>`;
+  const scramble = (extra = '') => `<path d="M24 60c-2-8 8-12 14-10 4-6 14-6 18-2 6-4 16 0 16 6 6 2 6 10 0 12-4 6-14 6-18 2-6 4-16 4-20-1-6 0-12-2-10-7z" fill="#F7D046" ${S}/>` + extra;
+  const chips = pts => pts.map(([x, y, r]) => `<path d="M${x} ${y}l14 -4 -4 13z" fill="#F2C14E" ${S2} transform="rotate(${r} ${x + 5} ${y + 2})"/>`).join('');
+  const half = (x, y, rot) => `<g transform="rotate(${rot} ${x} ${y})"><ellipse cx="${x}" cy="${y}" rx="23" ry="14" fill="#D69447" ${S}/><ellipse cx="${x}" cy="${y - 1}" rx="18" ry="9.5" fill="#5A3220"/><path d="M${x - 14} ${y - 2}c4-6 10-2 14-5s10 0 13 3c-2 5-8 6-13 6s-12 0-14-4z" fill="#F7C948" ${S2}/></g>`;
+  const hominy = dots([[32, 47], [42, 44], [54, 46], [64, 44], [48, 49]], 3.4, CREAM);
+  const cinnamon = (x, y, r, len = 28) => `<rect x="${x}" y="${y}" width="${len}" height="6" rx="3" fill="#8A4B22" ${S2} transform="rotate(${r} ${x + len / 2} ${y + 3})"/>`;
+
+  const byId = {
+    "pozole-rojo": bowl('#C8261E', hominy + `<circle cx="70" cy="47" r="3.8" fill="#E4007C" ${S2}/>` + herbs([[38, 45], [58, 43]])),
+    "menudo-rojo": bowl('#B3221B', bits([[34, 41], [56, 40]], 7, '#F1E3C7') + dots([[46, 46], [66, 45], [28, 47]], 3.4, CREAM)),
+    "caldo-de-res": bowl('#C9893A', `<g transform="rotate(-18 40 42)"><rect x="27" y="36" width="26" height="12" rx="6" fill="#F7C948" ${S2}/><path d="M33 37v10M39 37v10M45 37v10" stroke="#D9A21E" stroke-width="1.6"/></g>` + dots([[60, 45], [68, 47]], 3.6, '#F29F05') + bits([[54, 41]], 6, '#7BB661') + herbs([[44, 48]])),
+    "caldo-de-pollo": bowl('#F2C14E', dots([[34, 46], [60, 44]], 3.8, '#F29F05') + bits([[44, 41], [66, 44]], 6, '#7BB661') + `<path d="M28 44c4-6 12-6 14 0" fill="#F3DFA0" ${S2}/>` + herbs([[52, 48], [72, 48]])),
+    "sopa-de-fideo": bowl('#D9532B', `<path d="M26 46c4-4 8 4 12 0s8 4 12 0 8 4 12 0 6 2 10 1M30 50c4-3 8 3 12 0s8 3 12 0 8 3 12 0" fill="none" stroke="#F7D488" stroke-width="2.6" stroke-linecap="round"/>` + `<path d="M62 42c3-2 6-2 8 0" fill="${CREAM}" ${S2}/>`),
+    "albondigas": bowl('#D9532B', dots([[34, 46], [51, 43], [67, 46]], 6, '#7A4A2A') + `<path d="M42 49c2-5 8-6 10-2-2 4-7 5-10 2z" fill="#3FA34D" ${S2}/>`),
+    "birria-de-chivo": taco('#D9532B', '#7E2414', tacoTop) + `<ellipse cx="80" cy="30" rx="11" ry="4" fill="#B3221B" ${S2}/><path d="M69 30c0 8 4 12 11 12s11-4 11-12" fill="${CLAY}" ${S2}/>`,
+    "cochinita-pibil": steam(14) + `<rect x="12" y="34" width="76" height="46" rx="6" fill="#2E8B57" ${S}/><path d="M18 42h64M18 72h64" stroke="#5DB37E" stroke-width="2"/><ellipse cx="50" cy="56" rx="27" ry="13" fill="#D9531E" ${S}/><path d="M34 54c6-3 10 3 16 0s10 3 16 0M36 61c6-3 10 3 16 0s8 3 12 0" fill="none" stroke="#9E3412" stroke-width="2" stroke-linecap="round"/><path d="M40 48c4 3 8 3 12 0M50 64c4 3 8 3 12 0M30 58c3 3 6 3 9 0" fill="none" stroke="#E4007C" stroke-width="2.6" stroke-linecap="round"/><path d="M12 40l20 16-20 18z" fill="#23704A" ${S}/><path d="M88 40l-20 16 20 18z" fill="#23704A" ${S}/>`,
+    "carnitas": taco('#EBCB7A', '#B86B2E', tacoTop + dots([[60, 40]], 2.4, '#5AA33C')),
+    "barbacoa": olla('#5A2E16', `<path d="M56 30c6-10 18-13 21-9-2 9-13 13-21 9z" fill="#2E8B57" ${S2}/><path d="M58 29c5-3 11-5 16-7" stroke="#1F6B3F" stroke-width="1.5" fill="none"/>`),
+    "puerco-salsa-verde": cazuela('#5AA33C', bits([[32, 45], [46, 47], [58, 44], [66, 48]], 6, '#E3C79B') + herbs([[40, 50], [62, 52]])),
+    "tinga-de-pollo": `<ellipse cx="50" cy="62" rx="42" ry="20" fill="#E9B44C" ${S}/><path d="M18 60c4-10 18-15 32-15s28 5 32 15c-6 8-20 11-32 11s-26-3-32-11z" fill="#E2622B" ${S}/><path d="M28 56c6-3 10 2 16-1s10 2 16-1 8 2 12 0" fill="none" stroke="#A8401C" stroke-width="2" stroke-linecap="round"/><path d="M30 50c3-4 8-4 10 0s7 4 10 0 8-4 10 0" fill="none" stroke="#7BC043" stroke-width="4" stroke-linecap="round"/><path d="M32 62c6 3 12-3 18 0s12-3 18 0" fill="none" stroke="${CREAM}" stroke-width="3.2" stroke-linecap="round"/>` + bits([[42, 54], [60, 58]], 4, CREAM),
+    "picadillo": plate(`<path d="M20 62c2-12 16-20 30-20s28 8 30 20c-10 7-50 7-60 0z" fill="#7A4A2A" ${S}/>` + bits([[34, 52], [50, 48], [62, 56], [42, 60], [56, 62]], 4.5, '#F29F05') + bits([[40, 50], [58, 50], [30, 58], [48, 56]], 4.5, '#F3DFA0') + dots([[66, 50], [38, 56]], 2.2, '#58B947')),
+    "chiles-rellenos": plate(`<ellipse cx="50" cy="63" rx="33" ry="12" fill="#D2402B"/><path d="M20 58c4-12 28-16 48-11 10 3 12 11 2 15-16 6-44 6-50-4z" fill="#F2C14E" ${S}/><path d="M68 49c6-2 10-6 14-12" fill="none" stroke="${K}" stroke-width="7.5" stroke-linecap="round"/><path d="M68 49c6-2 10-6 14-12" fill="none" stroke="#2E8B57" stroke-width="4" stroke-linecap="round"/><path d="M30 54c6-3 12-3 18 0" fill="none" stroke="#D99A2B" stroke-width="2.6" stroke-linecap="round"/>` + herbs([[30, 68], [66, 68]])),
+    "mole-poblano": cazuela('#3E1A10', `<g fill="${CREAM}"><ellipse cx="34" cy="48" rx="1.6" ry="1"/><ellipse cx="42" cy="51" rx="1.6" ry="1"/><ellipse cx="50" cy="47" rx="1.6" ry="1"/><ellipse cx="58" cy="52" rx="1.6" ry="1"/><ellipse cx="66" cy="48" rx="1.6" ry="1"/><ellipse cx="46" cy="53" rx="1.6" ry="1"/><ellipse cx="62" cy="45" rx="1.6" ry="1"/></g>`),
+    "tamales-rojos": `<path d="M50 8L77 44L68 90H32L23 44Z" fill="#E6C77E" ${S}/><path d="M50 8L41 90M50 8L59 90M50 8L32 90M50 8L68 90" stroke="#B9944A" stroke-width="1.8"/><path d="M50 8L77 44L68 90H32L23 44Z" fill="none" ${S}/><path d="M35 46h30l-3 36H38z" fill="#F7E2A6" ${S}/><rect x="44.5" y="51" width="11" height="25" rx="5" fill="#C2361F" ${S2}/>`,
+    "enchiladas-rojas": plate(`<ellipse cx="50" cy="63" rx="33" ry="12" fill="#A61E17"/>` + [[22, 40], [20, 49], [22, 58]].map(([x, y]) => `<rect x="${x}" y="${y}" width="58" height="13" rx="6.5" fill="#C8261E" ${S2}/><ellipse cx="${x + 5}" cy="${y + 6.5}" rx="3" ry="5.2" fill="#EBCB7A" ${S2}/>`).join('') + `<path d="M30 48c8 4 14-2 22 2s14-2 22 2" fill="none" stroke="${CREAM}" stroke-width="3" stroke-linecap="round"/>` + bits([[36, 56], [50, 62], [64, 55], [42, 44], [60, 46]], 3.4, CREAM) + herbs([[30, 66], [70, 64]])),
+    "chilaquiles": plate(`<ellipse cx="50" cy="61" rx="31" ry="12" fill="#5AA33C" ${S2}/>` + chips([[24, 54, 10], [36, 48, -20], [52, 50, 30], [62, 56, -10], [40, 60, 50], [28, 62, -40], [58, 64, 20]]) + `<path d="M26 58c6-4 10 4 16 0s10 4 16 0 10 4 14 0" fill="none" stroke="${CREAM}" stroke-width="3" stroke-linecap="round"/><path d="M50 48c0-6 12-8 16-4 6-1 9 5 5 9-3 4-12 4-16 1-4 0-6-3-5-6z" fill="${CREAM}" ${S2}/><circle cx="58" cy="49" r="4.2" fill="#F59E0B" ${S2}/>` + bits([[44, 56], [66, 60]], 3, CREAM)),
+    "frijoles-de-olla": olla('#3E2416', `<g fill="#8A5A3A"><ellipse cx="42" cy="31" rx="3" ry="1.6"/><ellipse cx="52" cy="30" rx="3" ry="1.6"/><ellipse cx="60" cy="32" rx="3" ry="1.6"/></g><path d="M62 28c4-8 10-10 12-6-2 5-7 8-12 6z" fill="#3FA34D" ${S2}/>`),
+    "arroz-rojo": plate(`<path d="M22 64c2-14 16-22 28-22s26 8 28 22c-10 6-46 6-56 0z" fill="#E0703A" ${S}/>` + dots([[36, 56], [50, 50], [62, 58], [44, 62], [56, 63]], 2.4, '#58B947') + bits([[40, 52], [58, 52], [52, 57], [32, 62]], 3.4, '#F29F05') + `<path d="M64 46c4-6 10-6 12-2M66 44l2-8" stroke="#2E8B57" stroke-width="2.6" stroke-linecap="round" fill="none"/>`),
+    "salsa-roja": `<path d="M26 72l-5 14h11l3-11zM74 72l5 14H68l-3-11z" fill="#57514C" ${S}/><path d="M14 48h72c0 18-16 29-36 29S14 66 14 48z" fill="#57514C" ${S}/><ellipse cx="50" cy="48" rx="36" ry="9" fill="#6E6760" ${S}/><ellipse cx="50" cy="48" rx="29" ry="6" fill="#C8261E" ${S2}/><circle cx="40" cy="47" r="4" fill="#E5402B" ${S2}/><path d="M50 46c4-2 9-1 12 2" stroke="#3FA34D" stroke-width="4" stroke-linecap="round"/><g fill="#3E3935"><circle cx="26" cy="60" r="1.6"/><circle cx="36" cy="66" r="1.6"/><circle cx="50" cy="63" r="1.6"/><circle cx="62" cy="68" r="1.6"/><circle cx="72" cy="60" r="1.6"/><circle cx="44" cy="71" r="1.6"/></g><path d="M62 42L78 14c2-3 7-2 8 1l-1 4L70 46z" fill="#6E6760" ${S}/>`,
+    "cafe-de-olla": jarrito('#3B1F14', cinnamon(52, 16, 70, 24)),
+    "champurrado": jarrito('#6B3A1E', dots([[40, 29], [48, 31], [56, 28], [62, 31]], 2.6, '#C79C78', S2)),
+    "agua-de-jamaica": `<path d="M28 18h44l-6 70H34z" fill="#E3F4F8" ${S}/><path d="M29.6 32h40.8l-4.7 54H34.3z" fill="#B3123E"/><rect x="36" y="27" width="12" height="12" rx="2" fill="#F4FBFD" ${S2} transform="rotate(-12 42 33)"/><rect x="51" y="29" width="12" height="12" rx="2" fill="#F4FBFD" ${S2} transform="rotate(10 57 35)"/><path d="M58 8l-6 50" stroke="${K}" stroke-width="6.5" stroke-linecap="round"/><path d="M58 8l-6 50" stroke="#E4007C" stroke-width="3.5" stroke-linecap="round"/><path d="M28 18h44l-6 70H34z" fill="none" ${S}/><path d="M64 18a9 9 0 0 1 18 0z" fill="#7BC043" ${S2}/><path d="M73 18v-8" stroke="${CREAM}" stroke-width="1.5"/>`,
+    "arroz-con-leche": bowl('#FFF4DF', cinnamon(30, 38, -16) + cinnamon(46, 40, 14) + `<g fill="#A5602F"><circle cx="34" cy="48" r="1.2"/><circle cx="62" cy="49" r="1.2"/><circle cx="72" cy="47" r="1.2"/></g>`),
+    "flan": plate(`<ellipse cx="50" cy="66" rx="30" ry="8" fill="#8A3B12" ${S2}/><path d="M30 40h40l7 25c-8 5-46 5-54 0z" fill="#F5C451" ${S}/><path d="M30 40h40l1.6 6c-4 3-7-1-10 1s-6 4-9 1-6 2-9 0-7 2-11-1z" fill="#8A3B12" ${S2}/><ellipse cx="50" cy="40" rx="20" ry="4" fill="#A9481A" ${S2}/>`),
+    "capirotada": `<path d="M12 46h76l-7 32H19z" fill="${CLAY}" ${S}/><rect x="10" y="40" width="80" height="9" rx="3" fill="${CLAY2}" ${S}/>` + [[18, 30, -8], [32, 28, 6], [46, 30, -4], [60, 27, 8], [72, 31, -6], [26, 36, 4], [52, 37, -6], [66, 38, 5]].map(([x, y, r]) => `<rect x="${x}" y="${y}" width="15" height="11" rx="3" fill="#D69447" ${S2} transform="rotate(${r} ${x + 7} ${y + 5})"/>`).join('') + dots([[30, 34], [48, 32], [64, 34], [40, 40], [74, 38]], 2, '#3B1F14', '') + bits([[24, 30], [56, 30], [70, 34]], 3, CREAM) + `<g fill="${CREAM}"><circle cx="30" cy="62" r="2.4"/><circle cx="50" cy="64" r="2.4"/><circle cx="70" cy="62" r="2.4"/></g>`,
+    "huevos-rancheros": `<ellipse cx="50" cy="60" rx="43" ry="22" fill="#EBCB7A" ${S}/><path d="M14 58c4-10 20-15 36-14 16-1 32 4 36 14-2 10-20 16-36 15-16 1-34-5-36-15z" fill="#C8261E"/>` +
+      [[36, 58], [64, 60]].map(([x, y]) => `<path d="M${x - 14} ${y}c1-7 10-10 15-8 8-2 15 3 14 9-1 6-10 8-15 7-8 1-15-3-14-8z" fill="${CREAM}" ${S}/><circle cx="${x + 1}" cy="${y - 1}" r="5.5" fill="#F59E0B" ${S2}/><circle cx="${x - 0.5}" cy="${y - 2.5}" r="1.6" fill="#FFD27A"/>`).join('') +
+      herbs([[20, 56], [80, 62], [50, 70], [50, 48]]) + bits([[22, 64], [76, 53], [47, 52]], 3, CREAM),
+    "huevos-a-la-mexicana": plate(scramble(bits([[34, 56], [52, 52], [60, 62], [42, 64]], 4.5, '#E5402B') + dots([[46, 57], [64, 55], [38, 61]], 2.4, '#3FA34D') + bits([[56, 57], [30, 60]], 3.5, CREAM))),
+    "molletes": half(32, 52, -8) + half(66, 64, 6) + bits([[28, 47], [36, 50], [62, 60], [70, 62]], 3.4, '#E5402B') + dots([[32, 52], [66, 58]], 1.8, '#3FA34D', '') + bits([[40, 46], [58, 64]], 2.8, CREAM),
+    "machaca-con-huevo": `<ellipse cx="50" cy="62" rx="43" ry="21" fill="#F4E6C8" ${S}/><g fill="#C9A46A"><ellipse cx="22" cy="60" rx="3" ry="2"/><ellipse cx="80" cy="66" rx="3.5" ry="2"/><ellipse cx="66" cy="76" rx="2.5" ry="1.6"/><ellipse cx="30" cy="74" rx="3" ry="1.8"/></g>` + scramble(`<path d="M34 56l6 3M48 52l5 4M58 60l6 2M42 63l5-2M62 54l4 3" stroke="#7A3E1D" stroke-width="3" stroke-linecap="round"/>` + dots([[52, 59], [38, 58]], 2.3, '#3FA34D')),
+    "conchas": `<g transform="translate(32 6) scale(.68)">${concha('#6B3A1E', '#3E1F0E')}</g><g transform="translate(-4 18) scale(.86)">${concha('#F7B6CF', '#D9779C')}</g>`,
+    "bolillos": `<g transform="translate(-2 -16) rotate(-8 50 58)">${bolillo}</g><g transform="translate(2 12)">${bolillo}</g>`
+  };
+  const byCat = {
+    desayunos: byId["huevos-rancheros"], caldos: bowl('#D9532B'), guisos: taco('#EBCB7A', '#B86B2E', tacoTop), moles: cazuela('#3E1A10'),
+    masa: byId["tamales-rojos"], frijoles: byId["frijoles-de-olla"], salsas: byId["salsa-roja"], bebidas: jarrito('#3B1F14'),
+    pan: byId["conchas"], postres: byId["flan"]
+  };
+  return r => `<svg viewBox="0 0 100 100" aria-hidden="true">${byId[r.id] || byCat[r.cat] || ''}</svg>`;
+})();
+const TILE = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect width="20" height="20" fill="#F7F5EE"/><g fill="#1F4FB5"><circle cx="10" cy="10" r="3"/><ellipse cx="10" cy="4.2" rx="1.8" ry="2.6"/><ellipse cx="10" cy="15.8" rx="1.8" ry="2.6"/><ellipse cx="4.2" cy="10" rx="2.6" ry="1.8"/><ellipse cx="15.8" cy="10" rx="2.6" ry="1.8"/><path d="M0 0h3.5A3.5 3.5 0 0 1 0 3.5z M20 0v3.5A3.5 3.5 0 0 1 16.5 0z M0 20v-3.5A3.5 3.5 0 0 1 3.5 20z M20 20h-3.5A3.5 3.5 0 0 1 20 16.5z"/></g><circle cx="10" cy="10" r="1.3" fill="#F29F05"/></svg>';
+document.documentElement.style.setProperty('--tile', 'url("data:image/svg+xml,' + encodeURIComponent(TILE) + '")');
+const CHILE_COLOR = {"Guajillo":"#9E1B1B","Ancho":"#5A2016","Pasilla":"#3A231B","Mulato":"#4A2A1F","Chipotle":"#7A3A22","De árbol":"#D7262E","Piquín · Chiltepín":"#C21E2E","Poblano":"#2E6B3A","Serrano":"#3FA34D","Habanero":"#F29F05"};
+/* Card numbers follow the order the recipes appear in the recetario */
+const NUM = Object.fromEntries(CATS.flatMap(([c]) => R.filter(r => r.cat === c)).map((r, i) => [r.id, i + 1]));
+const cardName = r => (ARTICLE[r.id] ? ARTICLE[r.id] + ' ' : '') + r.name;
 const byId = Object.fromEntries(R.map(r => [r.id, r]));
 const app = document.getElementById('app');
 
@@ -964,9 +1134,11 @@ const ICON = {
   search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
   chev:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>',
   back:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>',
-  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
-  starFill:'<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
-  pot:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M2 10h20"/><path d="M9 6c0-1 .5-2 1.5-2M14 6c0-1 .5-2 1.5-2"/></svg>'
+  /* Milagro: the sacred-heart charm, used for saving recipes */
+  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-7.5-10A4 4 0 0 1 12 8.6 4 4 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M12 7.6c-1.8-1.5-1.2-3.4 0-5 1.2 1.6 1.8 3.5 0 5z"/><path d="M3.5 6l1.8 1.2M20.5 6l-1.8 1.2"/></svg>',
+  starFill:'<svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-7.5-10A4 4 0 0 1 12 8.6 4 4 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z" fill="#D7262E" stroke="#1D1A17"/><path d="M12 7.6c-1.8-1.5-1.2-3.4 0-5 1.2 1.6 1.8 3.5 0 5z" fill="#F29F05" stroke="#1D1A17"/><path d="M8.6 12.6c.5-1.5 1.8-2.3 3-2.3" fill="none" stroke="#FFFDF7"/><path d="M3.5 6l1.8 1.2M20.5 6l-1.8 1.2" stroke="#F29F05"/></svg>',
+  /* Olla de barro for cook mode */
+  pot:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.5c-3 2.4-3.4 7.4-.6 9.8 2.6 2.2 8.6 2.2 11.2 0 2.8-2.4 2.4-7.4-.6-9.8z"/><path d="M6.5 7h11v2.5h-11z"/><path d="M6.6 11.5C4.4 11 4 14.2 6 14.5M17.4 11.5c2.2-.5 2.6 2.7.6 3"/><path d="M10 4.6c-.8-.8.2-1.6-.4-2.4M14 4.6c-.8-.8.2-1.6-.4-2.4"/><path d="M8 15c1.3-1 2.7 1 4 0s2.7 1 4 0"/></svg>'
 };
 const picado = n => '<div class="picado" aria-hidden="true">' + '<i class="flag"></i>'.repeat(n) + '</div>';
 const searchText = r => norm([r.name, r.en, r.region, CAT_NAME[r.cat], ...groups(r.ing).flatMap(g => g[1]), ...r.vars.map(v => v.name + ' ' + v.en)].join(' '));
@@ -979,13 +1151,14 @@ function home(savedOnly){
   app.innerHTML = (savedOnly ? `
     <header class="mast">
       ${picado(10)}
-      <h1 style="margin-top:12px">Guardadas</h1>
-      <p>The recipes you've starred, saved on this device.</p>
+      <h1 class="rotulo">Guardadas</h1>
+      <p>Your milagros: the recipes you've saved with the heart, kept on this device.</p>
     </header>` : `
     <header class="mast">
       ${picado(10)}
-      <h1 style="margin-top:12px">Recetario<br>de la <em>Abuela</em></h1>
-      <p>${R.length} home-style recipes, region by region. ${pcCount} with a pressure-cooker version, plus ${varCount} variations.</p>
+      <h1 class="rotulo">Recetario <span class="de">de la Abuela</span></h1>
+      <p class="tag">Cocina de casa · región por región</p>
+      <p>${R.length} home-style recipes, each one a card in the deck. ${pcCount} with a pressure-cooker version, plus ${varCount} variations.</p>
     </header>`) + `
     <div class="filters">
       <label class="search" for="q">${ICON.search}<span class="label" hidden>Search</span>
@@ -1004,16 +1177,16 @@ function home(savedOnly){
 }
 function card(r){
   const fav = favs.has(r.id);
-  return `<a class="card" href="#${r.id}">
-    <span class="nm">${esc(r.name)}</span>
-    <span class="chev">${fav ? `<span class="star" title="Saved" style="width:16px;height:16px;display:inline-flex">${ICON.starFill}</span>` : ''}${ICON.chev}</span>
-    <span class="en">${esc(r.en)}</span>
-    <span class="badges">
-      <span class="badge">${esc(r.region)}</span>
-      <span class="badge mono">${esc(r.time)}</span>
-      ${r.pc ? `<span class="badge pc">Olla exprés · ${esc(r.pc.total)}</span>` : ''}
-      ${r.vars.length ? `<span class="badge var">+${r.vars.length} ${r.vars.length === 1 ? 'variante' : 'variantes'}</span>` : ''}
+  const n = r.vars.length;
+  return `<a class="loteria" href="#${r.id}" style="--g:${CATCOLOR[r.cat]}" aria-label="${esc(cardName(r))}, ${esc(r.en)}, ${esc(r.region)}${r.pc ? ', pressure-cooker version' : ''}${fav ? ', saved' : ''}">
+    <span class="art">
+      <span class="no">${NUM[r.id]}</span>
+      ${ART(r)}
+      ${r.pc ? `<span class="stamp">Olla exprés</span>` : ''}
+      ${fav ? `<span class="heart">${ICON.starFill}</span>` : ''}
     </span>
+    <span class="nm">${esc(cardName(r))}</span>
+    <span class="sub">${esc(r.region)} · ${esc(r.time)}${n ? ` · <b>+${n}</b>` : ''}</span>
   </a>`;
 }
 function list(savedOnly){
@@ -1025,7 +1198,7 @@ function list(savedOnly){
     (!qn || qn.split(/\s+/).every(w => r._s.includes(w))));
   const el = document.getElementById('list');
   if (savedOnly && favs.size === 0){
-    el.innerHTML = `<div class="empty"><strong>Nothing saved yet</strong>Open any recipe and tap the star at the top. It will show up here, on this device. <a href="#pozole-rojo">Start with Pozole Rojo</a>.</div>`;
+    el.innerHTML = `<div class="empty"><strong>Nothing saved yet</strong>Open any recipe and tap the heart at the top. It will show up here, on this device. <a href="#pozole-rojo">Start with Pozole Rojo</a>.</div>`;
     return;
   }
   if (!items.length){
@@ -1037,7 +1210,7 @@ function list(savedOnly){
   order.forEach(c => {
     const inCat = items.filter(r => r.cat === c);
     if (!inCat.length) return;
-    html += `<section class="cat"><h2>${CAT_NAME[c]} <small>${inCat.length}</small></h2>${inCat.map(card).join('')}</section>`;
+    html += `<section class="cat" style="--g:${CATCOLOR[c]}"><header><h2 class="rotulo">${CAT_NAME[c]} <small>${inCat.length} ${inCat.length === 1 ? 'carta' : 'cartas'}</small></h2><div class="tiles" aria-hidden="true"></div></header><div class="deck">${inCat.map(card).join('')}</div></section>`;
   });
   el.innerHTML = html;
 }
@@ -1106,9 +1279,10 @@ function detail(id){
       </div>
     </div>
     <p class="cookmsg" id="cookmsg" ${cooking ? '' : 'hidden'}></p>
-    <header class="hero">
+    <header class="hero" style="--g:${CATCOLOR[r.cat]}">
+      <div class="art big"><span class="no">${NUM[r.id]}</span>${ART(r)}</div>
       <span class="eyebrow">${esc(r.region)} · ${esc(CAT_NAME[r.cat])}</span>
-      <h1>${esc(r.name)}</h1>
+      <h1 class="rotulo">${ARTICLE[r.id] ? `<span class="article">${ARTICLE[r.id]}</span>` : ''}${esc(r.name)}</h1>
       <span class="en">${esc(r.en)}</span>
       <p class="story">${esc(r.story)}</p>
       <dl class="meta">
@@ -1134,7 +1308,7 @@ function pantry(){
       <section><h2>Los chiles</h2>
         <div class="chiles">${CHILES.map(c => `
           <div class="chilec">
-            <div class="top"><span class="nm">${esc(c.n)}</span><span class="heat" role="img" aria-label="Heat ${c.h} of 5">${[1,2,3,4,5].map(i => `<i class="${i <= c.h ? 'on' : ''}"></i>`).join('')}</span></div>
+            <div class="top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 7c3.6-.9 6.6 1.5 8.4 5.1 1.6 3.4 2.6 6.9 1.3 8.4-1.7.8-4.6-1.3-6.7-4.5C8.1 12.8 5.7 9.4 7.2 7z" fill="${CHILE_COLOR[c.n] || '#C8261E'}" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.4 9.4c1.5.2 2.6 1.3 3.3 2.7" fill="none" stroke="#FFFDF7" stroke-width="1.2" stroke-linecap="round" opacity=".7"/><path d="M7.2 7c-.4-1.8.4-3.4 2.2-3.9" fill="none" stroke="#2E8B57" stroke-width="2.2" stroke-linecap="round"/></svg><span class="nm">${esc(c.n)}</span><span class="heat" role="img" aria-label="Heat ${c.h} of 5">${[1,2,3,4,5].map(i => `<i class="${i <= c.h ? 'on' : ''}"></i>`).join('')}</span></div>
             <span class="f">${esc(c.f)}</span>
             <span class="u"><b>${esc(c.t)}.</b> ${esc(c.u)}.</span>
           </div>`).join('')}

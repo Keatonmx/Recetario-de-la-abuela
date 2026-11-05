@@ -12,6 +12,14 @@ struct PantryView: View {
         "Strain through a fine sieve. This is the step most people skip, and the one abuela never does."
     ]
 
+    static let chileColors: [String: Color] = [
+        "Guajillo": Color(hexString: "#9E1B1B"), "Ancho": Color(hexString: "#5A2016"),
+        "Pasilla": Color(hexString: "#3A231B"), "Mulato": Color(hexString: "#4A2A1F"),
+        "Chipotle": Color(hexString: "#7A3A22"), "De árbol": Color(hexString: "#D7262E"),
+        "Piquín · Chiltepín": Color(hexString: "#C21E2E"), "Poblano": Color(hexString: "#2E6B3A"),
+        "Serrano": Color(hexString: "#3FA34D"), "Habanero": Color(hexString: "#F29F05")
+    ]
+
     private let reading = [
         "Diana Kennedy, The Essential Cuisines of Mexico",
         "Diana Kennedy, Oaxaca al Gusto",
@@ -30,8 +38,11 @@ struct PantryView: View {
             Section("Los chiles") {
                 ForEach(store.book.chiles) { chile in
                     VStack(alignment: .leading, spacing: 4) {
-                        HStack {
-                            Text(chile.name).font(.display(.headline))
+                        HStack(spacing: 10) {
+                            Image("chile")
+                                .foregroundStyle(Self.chileColors[chile.name] ?? Color.chile)
+                                .accessibilityHidden(true)
+                            Text(chile.name).font(.slab(17, relativeTo: .headline))
                             Spacer()
                             HeatMeter(level: chile.heat)
                         }
@@ -80,5 +91,10 @@ struct PantryView: View {
         .scrollContentBackground(.hidden)
         .background(Color.paper)
         .navigationTitle("Despensa")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Despensa").font(.rotulo(22, relativeTo: .headline)).foregroundStyle(Color.mxRosa)
+            }
+        }
     }
 }
