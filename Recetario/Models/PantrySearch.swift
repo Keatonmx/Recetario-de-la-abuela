@@ -144,13 +144,16 @@ final class PantrySearch {
             if names.contains(where: { $0.contains(q) }) { return 2 }
             return 9
         }
-        return order
-            .filter { $0.kind != "basic" && $0.kind != "ignore" && !excluding.contains($0.id) }
-            .map { (score($0), $0) }
-            .filter { $0.0 < 9 }
-            .sorted { $0.0 != $1.0 ? $0.0 < $1.0 : $0.1.es.localizedCompare($1.1.es) == .orderedAscending }
-            .prefix(6)
-            .map(\.1)
+        var scored: [(Int, LexEntry)] = []
+        for entry in order where entry.kind != "basic" && entry.kind != "ignore" && !excluding.contains(entry.id) {
+            let s = score(entry)
+            if s < 9 { scored.append((s, entry)) }
+        }
+        scored.sort { a, b in
+            if a.0 != b.0 { return a.0 < b.0 }
+            return a.1.es.localizedCompare(b.1.es) == .orderedAscending
+        }
+        return Array(scored.prefix(6)).map { $0.1 }
     }
 
     // MARK: Ranking
@@ -173,11 +176,17 @@ final class PantrySearch {
         let have = Set(haveIds)
         let seasoningsEntered = haveIds.contains { entries[$0]?.kind == "season" }
         func covered(_ need: [String]) -> Bool {
-            need.contains { id in
-                have.contains(id) || ancestors(id).contains(where: have.contains) || haveIds.contains { isUnder($0, id) }
+            for id in need {
+                if have.contains(id) { return true }
+                if ancestors(id).contains(where: { have.contains($0) }) { return true }
+                if haveIds.contains(where: { isUnder($0, id) }) { return true }
             }
+            return false
         }
-        let yours = haveIds.filter { id in entries[id].map { !["season", "basic"].contains($0.kind) } ?? false }
+        let yours: [String] = haveIds.filter { id in
+            guard let kind = entries[id]?.kind else { return false }
+            return kind != "season" && kind != "basic"
+        }
 
         var results: [(match: PantryMatch, rankScore: Double)] = []
         for r in recipes {
@@ -198,16 +207,21 @@ final class PantrySearch {
                 }
             }
             guard total > 0, matchedReal > 0 else { continue }
-            let usedCount = yours.filter { h in matched.contains { n in n.contains { $0 == h || isUnder($0, h) || isUnder(h, $0) } } }.count
+            var usedCount = 0
+            for h in yours {
+                let usesIt = matched.contains { need in need.contains { id in id == h || isUnder(id, h) || isUnder(h, id) } }
+                if usesIt { usedCount += 1 }
+            }
             let used = yours.isEmpty ? 0 : Double(usedCount) / Double(yours.count)
             let score = got / total
             results.append((PantryMatch(recipe: r, score: score, matched: matched, missing: missing), score * 0.7 + used * 0.3))
         }
-        return results.sorted { a, b in
+        results.sort { a, b in
             if a.rankScore != b.rankScore { return a.rankScore > b.rankScore }
             if a.match.missing.count != b.match.missing.count { return a.match.missing.count < b.match.missing.count }
             return a.match.recipe.name.localizedCompare(b.match.recipe.name) == .orderedAscending
-        }.map(\.match)
+        }
+        return results.map { $0.match }
     }
 
     func label(_ id: String) -> String { entries[id]?.es ?? id }
