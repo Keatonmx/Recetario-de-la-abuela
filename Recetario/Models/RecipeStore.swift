@@ -9,6 +9,10 @@ final class RecipeStore: ObservableObject {
     @Published private(set) var checks: Set<String>
     /// How much each recipe is scaled by (missing means 1×, the original).
     @Published private(set) var factors: [String: Double]
+    /// A short celebratory message, e.g. "¡Buen provecho!" when every step is done.
+    @Published var toast: String?
+    /// Show grams and liters instead of cups and pounds.
+    @Published private(set) var metric: Bool
 
     private let defaults: UserDefaults
     private static let favoritesKey = "favorites"
@@ -27,6 +31,7 @@ final class RecipeStore: ObservableObject {
         favorites = Set(defaults.stringArray(forKey: Self.favoritesKey) ?? [])
         checks = Set(defaults.stringArray(forKey: Self.checksKey) ?? [])
         factors = (defaults.dictionary(forKey: Self.factorsKey) as? [String: Double]) ?? [:]
+        metric = defaults.bool(forKey: "metric")
 
         // Launch arguments used by CI to set up screenshots, e.g. -screenshotFavorites "pozole-rojo,conchas".
         // They are never saved.
@@ -81,6 +86,21 @@ final class RecipeStore: ObservableObject {
         let step = base < 4 ? base / 2 : (base <= 12 ? 1 : (base / 12).rounded(.up))
         let next = min(base * 4, max(step, base * factor(for: recipe.id) + direction * step))
         setFactor(next / base, for: recipe.id)
+    }
+
+    func setMetric(_ on: Bool) {
+        metric = on
+        defaults.set(on, forKey: "metric")
+    }
+
+    /// Text as the cook should see it: metric when that's switched on.
+    func shown(_ text: String) -> String { metric ? Units.metric(text) : text }
+
+    func showToast(_ text: String) {
+        toast = text
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) { [weak self] in
+            if self?.toast == text { self?.toast = nil }
+        }
     }
 
     func resetChecks(prefix: String) {

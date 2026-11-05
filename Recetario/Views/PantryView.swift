@@ -92,6 +92,7 @@ struct PantryView: View {
         .background(Color.paper)
         .navigationTitle("Despensa")
         .toolbar {
+            ToolbarItem(placement: .topBarTrailing) { AppearanceButton() }
             ToolbarItem(placement: .principal) {
                 Text("Despensa").font(.rotulo(22, relativeTo: .headline)).foregroundStyle(Color.mxRosa)
             }

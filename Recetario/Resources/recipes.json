@@ -56,12 +56,13 @@
       "id": "huevos-rancheros",
       "number": 1,
       "article": "Los",
+      "verso": "Al que madruga, Dios lo ayuda… con sus huevos rancheros.",
       "name": "Huevos Rancheros",
       "en": "Ranch-style fried eggs in salsa ranchera",
       "category": "desayunos",
       "region": "Centro · Norte",
       "time": "25 min",
-      "servings": "2 plates",
+      "servings": "2 personas",
       "story": "The almuerzo of the rancho: fried eggs on soft fried tortillas, covered with a cooked salsa of charred tomato and chile. The salsa is served warm, not raw like pico de gallo, and the beans go on the side.",
       "ingredients": [
         {
@@ -72,7 +73,7 @@
             "¼ white onion, plus 2 thin slices of onion",
             "1 garlic clove, unpeeled",
             "1 tbsp lard or oil",
-            "Salt"
+            "Salt, al gusto"
           ]
         },
         {
@@ -81,7 +82,7 @@
             "4 corn tortillas",
             "4 eggs",
             "3–4 tbsp lard or oil, for the tortillas and eggs",
-            "Salt"
+            "Salt, al gusto"
           ]
         },
         {
@@ -141,7 +142,7 @@
           "name": "Huevos Motuleños",
           "en": "Yucatecan stacked eggs with ham and plantain",
           "region": "Motul, Yucatán",
-          "note": "From the town of Motul: a crisp tortilla spread with black beans, a fried egg, tomato sauce, ham and peas, with fried plantain on the side.",
+          "note": "From the town of Motul: a crisp tortilla spread with black beans, a fried egg, tomato sauce, ham and peas, with fried plantain on the side. Usually credited to Jorge Siqueff at La Sin Rival in Motul, around 1921.",
           "ingredients": [
             {
               "title": "",
@@ -171,12 +172,13 @@
       "id": "molletes",
       "number": 2,
       "article": "Los",
+      "verso": "Bolillo, frijol y queso: el desayuno del recreo.",
       "name": "Molletes",
       "en": "Open-face bean and cheese bolillos",
       "category": "desayunos",
       "region": "Ciudad de México · Centro",
       "time": "20 min",
-      "servings": "4 plates",
+      "servings": "4 personas",
       "story": "Bolillos split open, toasted with butter, spread with refried beans and broiled under melted cheese, then topped with cold pico de gallo. The breakfast of cafés and school mornings in the capital, and the best use for yesterday's bread.",
       "ingredients": [
         {
@@ -196,7 +198,7 @@
             "1 serrano, minced",
             "¼ cup chopped cilantro",
             "Juice of 1 lime",
-            "Salt"
+            "Salt, al gusto"
           ]
         },
         {
@@ -271,12 +273,13 @@
       "id": "huevos-a-la-mexicana",
       "number": 3,
       "article": "Los",
+      "verso": "Verde, blanco y colorado: la bandera en el plato.",
       "name": "Huevos a la Mexicana",
       "en": "Eggs scrambled with tomato, onion and chile",
       "category": "desayunos",
       "region": "Toda la República",
       "time": "10 min",
-      "servings": "2 plates",
+      "servings": "2 personas",
       "story": "Red tomato, white onion and green chile, the colors of the flag, scrambled with eggs. It's the breakfast every Mexican home makes without a recipe, and it's what goes into a taco on the way out the door.",
       "ingredients": [
         {
@@ -287,7 +290,7 @@
             "¼ white onion, finely chopped",
             "1–2 serranos, finely chopped (seeds in for more heat)",
             "1 Roma tomato, chopped",
-            "Salt",
+            "Salt, al gusto",
             "1 tbsp chopped cilantro, optional"
           ]
         },
@@ -366,12 +369,13 @@
       "id": "machaca-con-huevo",
       "number": 4,
       "article": "La",
+      "verso": "Carne seca y huevo revuelto, en tortilla de harina envuelto.",
       "name": "Machaca con Huevo",
       "en": "Dried shredded beef scrambled with eggs",
       "category": "desayunos",
       "region": "Sonora · Chihuahua · Nuevo León",
       "time": "20 min",
-      "servings": "3 plates",
+      "servings": "3 personas",
       "story": "Machaca is beef that was salted, sun-dried and pounded so it would keep for months on the ranches of the north. A small handful fried with onion, tomato and chile and scrambled with eggs makes a breakfast wrapped in flour tortillas, the tortilla of the north.",
       "ingredients": [
         {
@@ -407,7 +411,7 @@
       "pressureNote": "The eggs are a quick skillet job, but you can make the machaca itself in the pressure cooker. See Machaca Casera under Variantes.",
       "tips": [
         "Go easy on the salt. Taste the machaca first; most of it is salted.",
-        "In Monterrey they call this machacado con huevo and make it with more tomato and chile, almost saucy.",
+        "In Monterrey they call this machacado con huevo and make it with more tomato and chile, almost saucy. Nuevo León traces it to Ciénega de Flores, where la Tía Lencha fed it to road crews in the 1920s.",
         "Leftover machaca keeps for weeks in a jar in the fridge."
       ],
       "variations": [
@@ -465,20 +469,21 @@
       "id": "chilaquiles",
       "number": 5,
       "article": "Los",
+      "verso": "Crujientes o aguaditos, pero siempre bien bañaditos.",
       "name": "Chilaquiles Verdes",
       "en": "Tortilla chips simmered in green salsa",
       "category": "desayunos",
       "region": "Toda la República",
       "time": "30 min",
-      "servings": "4 plates",
-      "story": "Breakfast made from whatever tortillas are in the kitchen: fried, tossed in salsa or chile, and covered with crema and cheese, or cooked together with eggs. Some like them crunchy, some soft. Both are right.",
+      "servings": "4 personas",
+      "story": "Breakfast made from whatever tortillas are in the kitchen: fried, tossed in salsa or chile, and covered with crema and cheese, or cooked together with eggs. The name comes from the Nahuatl chīlāquilitl, roughly 'soaked in chile'. ¿Crujientes o aguados? ¿Frijoles encima o al lado? Every house decides.",
       "ingredients": [
         {
           "title": "Totopos",
           "items": [
-            "12 corn tortillas, store-bought or homemade (even from the same morning), each cut in 6 wedges",
+            "12 corn tortillas, cut in 6 wedges: day-old is the classic, but store-bought or same-morning work fine",
             "Oil for frying",
-            "Salt"
+            "Salt, al gusto"
           ]
         },
         {
@@ -534,7 +539,7 @@
                 "¼ cup oil",
                 "4–6 eggs",
                 "1½ cups red chile (below), or leftover enchilada chile or salsa",
-                "Salt",
+                "Salt, al gusto",
                 "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
                 "To serve: shredded cheese or queso fresco, frijoles, warm tortillas"
               ]
@@ -579,12 +584,13 @@
       "id": "pozole-rojo",
       "number": 6,
       "article": "El",
+      "verso": "Maíz que revienta en flor: el pozole del quince, ¡qué sabor!",
       "name": "Pozole Rojo",
       "en": "Red pork & hominy stew",
       "category": "caldos",
       "region": "Jalisco",
       "time": "4 h",
-      "servings": "10 bowls",
+      "servings": "10 personas",
       "story": "Pozole goes back to pre-Hispanic Mexico, when cacahuazintle corn was cooked for ceremonies. In Jalisco it's red with guajillo and ancho, made with pork head or a mix of shoulder and bony cuts. It's what you make for 15 de septiembre, Nochebuena and New Year's. The broth should be brick red and thin, never a thick chili, and the garnish happens at the table.",
       "ingredients": [
         {
@@ -620,7 +626,7 @@
         {
           "title": "Para servir",
           "items": [
-            "Finely shredded green cabbage",
+            "Finely shredded green cabbage, or lettuce as many tapatíos prefer",
             "Sliced radishes",
             "Finely chopped white onion",
             "Dried Mexican oregano",
@@ -663,7 +669,7 @@
           "name": "Pozole Verde",
           "en": "Green pozole with pumpkin seeds",
           "region": "Guerrero",
-          "note": "Thursdays in Guerrero are jueves pozolero. The green comes from pepitas, tomatillo and fresh herbs, and the table gets chicharrón, avocado and sometimes sardines.",
+          "note": "Thursdays in Guerrero are jueves pozolero. The green comes from pepitas, tomatillo and fresh herbs. The table gets chicharrón and avocado and, depending on the region, a raw egg cracked into the hot broth or sardines, with mezcal on the side.",
           "ingredients": [
             {
               "title": "",
@@ -721,13 +727,14 @@
       "id": "menudo-rojo",
       "number": 7,
       "article": "El",
+      "verso": "Al dolor de cabeza, el comer le endereza.",
       "name": "Menudo Rojo",
       "en": "Red tripe & hominy soup",
       "category": "caldos",
       "region": "Chihuahua · Norte",
       "time": "5 h",
-      "servings": "8 bowls",
-      "story": "Sunday morning menudo is the norteño cure for a long Saturday night. The tripe is cleaned with lime and cooked slowly with pata de res, the beef foot that makes the broth sticky. Families start it on Saturday so it's ready for breakfast.",
+      "servings": "8 personas",
+      "story": "Sunday morning menudo, el levantamuertos, is the norteño cure for a long Saturday night. In central Mexico the same soup is pancita, and in Yucatán mondongo. The tripe is cleaned with lime and cooked slowly with pata de res, the beef foot that makes the broth sticky. Families start it on Saturday so it's ready for breakfast.",
       "ingredients": [
         {
           "title": "La carne",
@@ -798,7 +805,7 @@
           "name": "Menudo Blanco",
           "en": "White menudo",
           "region": "Sonora",
-          "note": "In Sonora menudo is often white: no chile in the pot, and the heat comes from crushed chiltepín at the table.",
+          "note": "In Sonora and Sinaloa menudo is white by default: no chile in the pot, and the heat comes from crushed chiltepín at the table, with buttered birote or bolillo.",
           "ingredients": [
             {
               "title": "",
@@ -822,12 +829,13 @@
       "id": "caldo-de-res",
       "number": 8,
       "article": "El",
+      "verso": "Caldo de res con su tuétano, remedio de invierno y de verano.",
       "name": "Caldo de Res",
       "en": "Beef & vegetable soup",
       "category": "caldos",
       "region": "Centro · Norte",
       "time": "3 h",
-      "servings": "8 bowls",
+      "servings": "8 personas",
       "story": "The everyday soup of every Mexican home: beef shank with the bone and marrow, corn on the cob and whatever vegetables the market has. The rice goes in the bowl, not the pot.",
       "ingredients": [
         {
@@ -894,13 +902,13 @@
           "name": "Mole de Olla",
           "en": "Chile-red beef soup with xoconostle",
           "region": "Ciudad de México · Centro",
-          "note": "Caldo de res's spicier cousin. The broth is tinted with dried chiles and soured with xoconostle, a tart cactus fruit.",
+          "note": "Caldo de res's spicier cousin. The broth is tinted with dried chiles and soured with xoconostle, a tart cactus fruit. Many central families drop in chochoyotes, little masa-and-epazote dumplings pressed with a thumb, for the last 10 minutes. The saying «¡A darle, que es mole de olla!» means let's get to it.",
           "ingredients": [
             {
               "title": "",
               "items": [
                 "Meat and broth from the base, steps 1–2",
-                "3 chiles guajillo, 2 chiles ancho, 1 chile pasilla",
+                "4 chiles guajillo, 2 chiles pasilla (1 ancho, optional)",
                 "2 Roma tomatoes, 2 garlic cloves, ¼ onion",
                 "1 tbsp lard",
                 "2 xoconostles, peeled, seeded and quartered (or the juice of 1 lime at the end)",
@@ -924,12 +932,13 @@
       "id": "caldo-de-pollo",
       "number": 9,
       "article": "El",
+      "verso": "Pa' la gripa y pa'l desamor, un caldito es lo mejor.",
       "name": "Caldo de Pollo",
       "en": "Chicken soup",
       "category": "caldos",
       "region": "Toda la República",
       "time": "1 h 15",
-      "servings": "6 bowls",
+      "servings": "6 personas",
       "story": "The soup for colds, for heartbreak and for Sundays. Abuela used a gallina, an old laying hen with more flavor than a young chicken. The broth should be clear and golden.",
       "ingredients": [
         {
@@ -990,7 +999,7 @@
           "name": "Caldo Tlalpeño",
           "en": "Smoky chipotle chicken soup",
           "region": "Tlalpan, Ciudad de México",
-          "note": "A chipotle chicken soup named for Tlalpan, once a stop on the old road south of the capital.",
+          "note": "A chipotle chicken soup named for Tlalpan, in the south of the capital. Local legend says it was made for Santa Anna as a hangover cure, and Tlalpan still holds a Festival del Caldo Tlalpeño.",
           "ingredients": [
             {
               "title": "",
@@ -1020,12 +1029,13 @@
       "id": "sopa-de-fideo",
       "number": 10,
       "article": "La",
+      "verso": "Fideo dorado, nunca quemado.",
       "name": "Sopa de Fideo",
       "en": "Toasted noodle soup in tomato broth",
       "category": "caldos",
       "region": "Toda la República",
       "time": "30 min",
-      "servings": "6 bowls",
+      "servings": "6 personas",
       "story": "The first soup most Mexican kids learn to love. Everything depends on toasting the noodles to the color of a peanut shell before the tomato goes in.",
       "ingredients": [
         {
@@ -1067,7 +1077,7 @@
           "name": "Sopa Seca de Fideo",
           "en": "Dry fideo with chipotle",
           "region": "Centro",
-          "note": "A dry soup, cooked until the noodles absorb all the broth, and served as a course before the main dish.",
+          "note": "A dry soup, cooked until the noodles absorb all the broth. It's the second tiempo of a comida corrida: sopa aguada, then sopa seca, then the guisado.",
           "ingredients": [
             {
               "title": "",
@@ -1091,12 +1101,13 @@
       "id": "albondigas",
       "number": 11,
       "article": "Las",
+      "verso": "Con su arroz y su hierbabuena, la albóndiga sale buena.",
       "name": "Albóndigas en Caldillo",
       "en": "Meatball soup with mint",
       "category": "caldos",
       "region": "Norte · Centro",
       "time": "1 h",
-      "servings": "6 bowls",
+      "servings": "6 personas",
       "story": "Mexican meatballs carry raw rice inside, which swells as they cook and keeps them tender, and fresh mint, which is the flavor everyone remembers.",
       "ingredients": [
         {
@@ -1126,7 +1137,7 @@
             "1 potato, diced",
             "1 zucchini, diced",
             "1 sprig hierbabuena",
-            "Salt"
+            "Salt, al gusto"
           ]
         }
       ],
@@ -1160,13 +1171,14 @@
       "id": "birria-de-chivo",
       "number": 12,
       "article": "La",
+      "verso": "Dicen que birria es cosa sin valor… ¡pero en Jalisco es puro sabor!",
       "name": "Birria de Chivo",
       "en": "Goat in chile adobo with consomé",
       "category": "guisos",
       "region": "Jalisco",
       "time": "5 h + overnight",
-      "servings": "10 plates",
-      "story": "Birria comes from Jalisco, where goat was cooked in a pit or in a pot sealed shut with masa. The adobo is dried chiles, vinegar and warm spices, and the meat is served in a bowl of its own consomé.",
+      "servings": "10 personas",
+      "story": "Birria comes from Jalisco, where goat was cooked in a pit or in a pot sealed shut with masa. The adobo is dried chiles, vinegar and warm spices, and the meat is served in a bowl of its own consomé. 'Birria' means something worthless: popular history says the Spaniards scorned goat, and Jalisco (Cocula claims the honor) turned it into a feast.",
       "ingredients": [
         {
           "title": "La carne",
@@ -1190,7 +1202,8 @@
             "½ tsp black peppercorns",
             "1-inch stick Mexican cinnamon (canela)",
             "½-inch piece fresh ginger",
-            "½ tsp dried thyme"
+            "½ tsp dried thyme",
+            "½ tsp dried marjoram (mejorana)"
           ]
         },
         {
@@ -1236,7 +1249,8 @@
       "pressureNote": null,
       "tips": [
         "Save the red fat from the top of the consomé to fry tortillas for tacos.",
-        "The vinegar matters. It cuts the richness and helps tenderize the meat."
+        "The vinegar matters. It cuts the richness and helps tenderize the meat.",
+        "Birria tatemada: brown the drained meat in a hot oven or on the comal for roasted edges before serving."
       ],
       "variations": [
         {
@@ -1270,12 +1284,13 @@
       "id": "cochinita-pibil",
       "number": 13,
       "article": "La",
+      "verso": "En hoja de plátano envuelta, la cochinita no se suelta.",
       "name": "Cochinita Pibil",
       "en": "Achiote pork in banana leaf",
       "category": "guisos",
       "region": "Yucatán",
       "time": "4 h + overnight",
-      "servings": "8 plates",
+      "servings": "8 personas",
       "story": "Pibil means cooked in the pib, the Maya earth oven. Pork marinates in achiote and sour orange, then cooks wrapped in banana leaves until it falls apart. In Mérida it's breakfast, eaten in tacos and tortas.",
       "ingredients": [
         {
@@ -1371,7 +1386,7 @@
                 "1–2 habaneros, minced",
                 "¼ cup chopped cilantro",
                 "Juice of 2 sour oranges or limes",
-                "Salt"
+                "Salt, al gusto"
               ]
             }
           ],
@@ -1386,13 +1401,14 @@
       "id": "carnitas",
       "number": 14,
       "article": "Las",
+      "verso": "En el cazo de cobre, la carnita nunca es pobre.",
       "name": "Carnitas",
       "en": "Pork simmered in lard",
       "category": "guisos",
       "region": "Michoacán",
       "time": "3 h",
-      "servings": "10 plates",
-      "story": "In Michoacán, carnitas are made in big copper cazos, the pork simmering in lard until it's tender inside and crisp outside. Orange and a splash of milk or Coke help it brown. It's party food for weekends, baptisms and birthdays.",
+      "servings": "10 personas",
+      "story": "In Quiroga, Michoacán, the carnitas capital, they're made in big copper cazos from Santa Clara del Cobre, the pork simmering in lard until it's tender inside and crisp outside. Orange and a splash of milk or Coke help it brown. It's party food for weekends, baptisms and birthdays.",
       "ingredients": [
         {
           "title": "Carnitas",
@@ -1438,7 +1454,8 @@
       "pressureNote": null,
       "tips": [
         "Ask the carnicero for carnitas surtidas: maciza (lean), cuerito (skin), costilla (rib) and buche (stomach).",
-        "Don't stir much at first. Let the pork confit quietly."
+        "Don't stir much at first. Let the pork confit quietly.",
+        "Purists use only lard, salt and time. Orange, milk and Coca-Cola are carnitero tricks for color, and every one has his own fórmula. If you use Coke, make it the cane-sugar Mexican one."
       ],
       "variations": []
     },
@@ -1446,13 +1463,14 @@
       "id": "barbacoa",
       "number": 15,
       "article": "La",
+      "verso": "Domingo sin barbacoa, ni es domingo ni es nada.",
       "name": "Barbacoa de Res",
       "en": "Slow-steamed beef cheeks",
       "category": "guisos",
-      "region": "Hidalgo · Norte",
+      "region": "Norte · Hidalgo",
       "time": "5 h",
-      "servings": "8 plates",
-      "story": "In Hidalgo, barbacoa is lamb wrapped in maguey leaves and cooked overnight in a pit, with a pot underneath catching the juices for consomé. In the north it's beef cheeks, sold by the pound on Sunday mornings. This home version steams beef with avocado leaves.",
+      "servings": "8 personas",
+      "story": "In Hidalgo, barbacoa is lamb wrapped in maguey leaves and cooked overnight in a pit, with a pot underneath catching the juices for consomé. In the north it's beef cheeks, sold by the pound on Sunday mornings. This home version steams beef with avocado leaves. Barbacoa is el almuerzo dominguero: in the north, families buy cachete, lengua and cabeza by the kilo on Sunday mornings.",
       "ingredients": [
         {
           "title": "La carne",
@@ -1523,7 +1541,7 @@
                 "2 garlic cloves",
                 "¼ white onion",
                 "½ cup pulque or light Mexican beer",
-                "Salt",
+                "Salt, al gusto",
                 "Crumbled queso añejo, to finish"
               ]
             }
@@ -1541,12 +1559,13 @@
       "id": "puerco-salsa-verde",
       "number": 16,
       "article": "El",
+      "verso": "Puerco, tomate y verdolaga: la comida que no empalaga.",
       "name": "Puerco en Salsa Verde",
       "en": "Pork in tomatillo salsa with purslane",
       "category": "guisos",
       "region": "Centro",
       "time": "1 h 30",
-      "servings": "6 plates",
+      "servings": "6 personas",
       "story": "A weekday guisado. The pork cooks in a little water until the water is gone and it fries in its own fat, and then the salsa goes in. Verdolagas (purslane) add a lemony, juicy bite. Potatoes or nopales are just as common.",
       "ingredients": [
         {
@@ -1567,7 +1586,7 @@
             "2 garlic cloves",
             "½ bunch cilantro",
             "Pinch of cumin, optional",
-            "Salt"
+            "Salt, al gusto"
           ]
         },
         {
@@ -1607,13 +1626,14 @@
       "id": "tinga-de-pollo",
       "number": 17,
       "article": "La",
+      "verso": "Tinga en tostada, la fiesta está armada.",
       "name": "Tinga de Pollo",
       "en": "Chipotle shredded chicken",
       "category": "guisos",
       "region": "Puebla",
       "time": "45 min",
-      "servings": "6 plates",
-      "story": "Tinga is from Puebla: lots of soft onion, tomato and smoky chipotle. It goes on tostadas with beans, crema and queso, and it's what you bring to a fiesta.",
+      "servings": "6 personas",
+      "story": "Tinga is from Puebla: lots of soft onion, tomato and smoky chipotle. It goes on tostadas with beans, crema and queso, and it's what you bring to a fiesta. Tostadas de tinga are on nearly every table at the Noche Mexicana on 15 de septiembre, next to the pozole.",
       "ingredients": [
         {
           "title": "El pollo",
@@ -1632,7 +1652,7 @@
             "2–4 chipotles en adobo, plus 1 tbsp of the adobo sauce",
             "½ tsp Mexican oregano",
             "2 bay leaves",
-            "Salt"
+            "Salt, al gusto"
           ]
         },
         {
@@ -1674,7 +1694,7 @@
           "name": "Tinga Poblana de Puerco",
           "en": "Pork and chorizo tinga",
           "region": "Puebla",
-          "note": "The original Puebla tinga is pork with chorizo, sometimes with potatoes.",
+          "note": "The oldest printed tingas (La cocinera poblana, 1881) are pork with chorizo and longaniza, sometimes with potato.",
           "ingredients": [
             {
               "title": "",
@@ -1700,12 +1720,13 @@
       "id": "picadillo",
       "number": 18,
       "article": "El",
+      "verso": "Picadillo de la abuela: rinde, llena y consuela.",
       "name": "Picadillo",
       "en": "Ground beef with potato and carrot",
       "category": "guisos",
       "region": "Toda la República",
       "time": "40 min",
-      "servings": "6 plates",
+      "servings": "6 personas",
       "story": "Ground meat cooked with tomato, potato and carrot. Every family has its own, and it fills tacos dorados, gorditas, empanadas and chiles rellenos.",
       "ingredients": [
         {
@@ -1743,16 +1764,16 @@
           "name": "Picadillo de Fiesta",
           "en": "Sweet-savory festive picadillo",
           "region": "Puebla",
-          "note": "The fruit-and-nut filling for chiles en nogada in September. More work, and very good.",
+          "note": "The fruit-and-nut filling for chiles en nogada, made July to September when the orchards around Puebla bear fruit. More work, and very good.",
           "ingredients": [
             {
               "title": "",
               "items": [
                 "1 lb ground pork plus ½ lb ground beef",
                 "½ onion and 2 garlic cloves, chopped; 3 tomatoes, blended",
-                "1 ripe plantain, 1 pear, 1 peach and 1 apple, all diced small",
+                "1 ripe plantain, 1 pear (pera de leche), 1 peach (durazno criollo) and 1 apple (manzana panochera), all diced small",
                 "¼ cup raisins and ¼ cup slivered almonds",
-                "¼ cup diced acitrón or candied pineapple",
+                "¼ cup candied pineapple (real acitrón comes from a protected cactus)",
                 "½ tsp cinnamon and a pinch of cloves",
                 "Salt and 1 tsp sugar"
               ]
@@ -1761,7 +1782,7 @@
           "steps": [
             "Brown the meat with the onion and garlic.",
             "Add the tomato and cook 5 minutes.",
-            "Add the fruit, nuts, raisins, acitrón and spices. Cook 15 minutes, until the fruit is tender but holds its shape.",
+            "Add the apple first, then the pear and peach, then the plantain, nuts, raisins, candied fruit and spices. Cook 15 minutes, until the fruit is tender but holds its shape.",
             "Season with salt and a little sugar. Use to stuff roasted poblanos."
           ],
           "pressureNote": null
@@ -1772,6 +1793,7 @@
       "id": "chiles-rellenos",
       "number": 19,
       "article": "Los",
+      "verso": "Capeado como Dios manda: ni grasoso ni aguado.",
       "name": "Chiles Rellenos",
       "en": "Cheese-stuffed poblanos in egg batter",
       "category": "guisos",
@@ -1806,7 +1828,7 @@
             "1 cup chicken broth",
             "1 tbsp oil",
             "1 bay leaf",
-            "Salt"
+            "Salt, al gusto"
           ]
         }
       ],
@@ -1855,13 +1877,14 @@
       "id": "mole-poblano",
       "number": 20,
       "article": "El",
+      "verso": "¡Aquí sí estamos en nuestro mero mole!",
       "name": "Mole Poblano",
       "en": "Chile, chocolate and spice sauce with turkey",
       "category": "moles",
       "region": "Puebla",
       "time": "4 h",
-      "servings": "12 plates",
-      "story": "Mole poblano is the dish for weddings, baptisms and Día de Muertos. Dozens of ingredients, each one fried or toasted on its own, then ground together and cooked slowly until the fat rises to the top. Abuelas make it in big batches with the whole family helping.",
+      "servings": "12 personas",
+      "story": "Mole poblano is the dish for weddings, baptisms and Día de Muertos. Dozens of ingredients, each one fried or toasted on its own, then ground together and cooked slowly until the fat rises to the top. Abuelas make it in big batches with the whole family helping. Puebla's legend credits Sor Andrea de la Asunción at the Convento de Santa Rosa around 1680, though no document proves it.",
       "ingredients": [
         {
           "title": "La carne",
@@ -1915,7 +1938,7 @@
             "¾ cup lard",
             "2 oz Mexican chocolate (½ tablet)",
             "1–2 tbsp sugar, to taste",
-            "Salt"
+            "Salt, al gusto"
           ]
         }
       ],
@@ -1943,6 +1966,7 @@
       "pressureNote": null,
       "tips": [
         "Mole is better on the second day.",
+        "Many poblano families take the fried chiles and seeds to the neighborhood molino to be ground.",
         "If you use store-bought mole paste, fry it in lard first, then thin it with broth and add a piece of Mexican chocolate. Not abuela's, but honest.",
         "The fat rising to the top is how you know it's done."
       ],
@@ -1951,7 +1975,7 @@
           "name": "Pipián Verde",
           "en": "Green pumpkin-seed mole",
           "region": "Puebla · Tlaxcala · Centro",
-          "note": "A pre-Hispanic green mole thickened with pepitas instead of nuts and dried chiles. Lighter and quicker than mole poblano.",
+          "note": "A pre-Hispanic green mole thickened with pepitas instead of nuts and dried chiles. Lighter and quicker than mole poblano. Many cooks call nearly the same dish mole verde.",
           "ingredients": [
             {
               "title": "",
@@ -1964,7 +1988,7 @@
                 "4 romaine or radish leaves",
                 "1 sprig epazote, 2 hoja santa leaves and a handful of cilantro",
                 "2 tbsp lard",
-                "Salt"
+                "Salt, al gusto"
               ]
             }
           ],
@@ -1983,6 +2007,7 @@
       "id": "tamales-rojos",
       "number": 21,
       "article": "Los",
+      "verso": "El que nace pa' tamal, del cielo le caen las hojas.",
       "name": "Tamales Rojos de Puerco",
       "en": "Red chile pork tamales",
       "category": "masa",
@@ -2005,7 +2030,7 @@
           "title": "La masa",
           "items": [
             "4 lb fresh unprepared masa for tamales (from a tortillería), or 6 cups masa harina for tamales mixed with about 5 cups warm broth",
-            "1¼ cups (10 oz) fresh pork lard, not hydrogenated",
+            "2 cups (450 g) fresh pork lard, not hydrogenated",
             "2 tsp baking powder",
             "1 tbsp salt",
             "1–2 cups warm pork broth",
@@ -2045,7 +2070,8 @@
       "pressureNote": null,
       "tips": [
         "Drop a coin in the water under the rack. While it rattles there's water; when it goes quiet, add more hot water.",
-        "Abuelas say never argue in the kitchen while tamales steam, or they'll come out raw. Some dance for them.",
+        "Abuelas say tamales se sienten: make them while angry and they won't cook through, and lift the lid too often and they come out pintos (half raw). A pregnant helper ties a red ribbon around her belly, and some cooks sing to the pot.",
+        "The old way to leaven: instead of baking powder, boil tomatillo husks with a pinch of tequesquite, strain, and beat that water into the masa.",
         "Fresh lard from the carnicería makes the masa taste right. The white blocks from the supermarket shelf don't."
       ],
       "variations": [
@@ -2076,7 +2102,7 @@
           "name": "Tamales de Dulce",
           "en": "Sweet pink tamales",
           "region": "Centro",
-          "note": "Sweet tamales for Christmas and Día de la Candelaria, served with champurrado.",
+          "note": "Sweet tamales for Christmas and Día de la Candelaria, served with champurrado. On February 2, whoever found the muñeco in the Rosca de Reyes on January 6 pays for the tamales.",
           "ingredients": [
             {
               "title": "",
@@ -2104,13 +2130,14 @@
       "id": "enchiladas-rojas",
       "number": 22,
       "article": "Las",
+      "verso": "Pásala por el chile y dórala al momento: así se hace el sustento.",
       "name": "Enchiladas Rojas",
       "en": "Red chile enchiladas with queso fresco",
       "category": "masa",
       "region": "Guanajuato · Centro",
       "time": "45 min",
-      "servings": "4–6 plates",
-      "story": "Tortillas dipped in red chile, fried and rolled around cheese and onion. In Guanajuato they come topped with fried potatoes and carrots, and they're called enchiladas mineras.",
+      "servings": "4–6 personas",
+      "story": "Tortillas dipped in red chile, fried and rolled around cheese and onion. In Guanajuato they come topped with fried potatoes and carrots: enchiladas mineras, said to be what miners' wives carried up to the mines. In Real del Monte, Hidalgo, the mineras are made with salsa verde.",
       "ingredients": [
         {
           "title": "La salsa",
@@ -2123,7 +2150,7 @@
             "Pinch of cumin",
             "2 cups broth or soaking water",
             "1 tbsp lard",
-            "Salt"
+            "Salt, al gusto"
           ]
         },
         {
@@ -2140,8 +2167,9 @@
           "items": [
             "2 potatoes and 2 carrots, diced and boiled",
             "Shredded lettuce",
-            "Crema",
-            "Pickled jalapeños"
+            "Chiles en vinagre (jalapeños with carrot)",
+            "Crema, optional",
+            "A piece of fried chicken, optional"
           ]
         }
       ],
@@ -2191,13 +2219,14 @@
       "id": "frijoles-de-olla",
       "number": 23,
       "article": "Los",
+      "verso": "Donde come uno, comen dos.",
       "name": "Frijoles de la Olla",
       "en": "Pot beans with epazote",
       "category": "frijoles",
       "region": "Toda la República",
       "time": "2 h 30",
-      "servings": "8 bowls",
-      "story": "The pot that's always on abuela's stove. Pintos in the north, black beans in the center and south, cooked slowly with onion, lard and epazote. The broth matters as much as the beans.",
+      "servings": "8 personas",
+      "story": "The pot that's always on abuela's stove. Pintos and bayos in the north; bayos, flor de mayo and peruanos as much as black in the center; black beans in the south and along the Gulf. All of them cooked slowly with onion, lard and epazote. The broth matters as much as the beans.",
       "ingredients": [
         {
           "title": "Frijoles",
@@ -2214,7 +2243,7 @@
       ],
       "steps": [
         "Spread the beans on a tray and pick out stones and broken beans. Rinse well.",
-        "Put the beans, water, onion, garlic and lard in a heavy pot (a clay olla if you have one). Bring to a boil.",
+        "Put the beans, water, onion, garlic and lard in a heavy pot (a lead-free clay olla if you have one). Bring to a boil.",
         "Lower to a gentle simmer, partly covered, for 1½–2 hours. If you need more water, add hot water only. Cold water toughens the skins.",
         "When the beans are soft, add the salt and epazote. Simmer 30 minutes more so the salt gets in.",
         "Serve in bowls with their broth, chopped onion, cilantro, serrano and queso fresco, or use them for refritos."
@@ -2233,6 +2262,7 @@
       "pressureNote": null,
       "tips": [
         "Salt goes in after the beans are soft.",
+        "Clay ollas give the best beans, but buy ones marked Sin Plomo (lead-free). Old or unmarked glazes can leach lead.",
         "Old beans take forever. Buy them where a lot of people buy beans."
       ],
       "variations": [
@@ -2264,7 +2294,7 @@
           "name": "Frijoles Charros",
           "en": "Cowboy beans",
           "region": "Nuevo León · Norte",
-          "note": "For carne asada Sundays. Add a beer and they become frijoles borrachos.",
+          "note": "For carne asada Sundays. In Monterrey, chicharrón goes in at the end. Add a beer and some call them frijoles borrachos; families argue about where one ends and the other begins.",
           "ingredients": [
             {
               "title": "",
@@ -2275,7 +2305,8 @@
                 "2 hot dogs (salchichas) and 2 slices ham, chopped",
                 "½ onion, 2 tomatoes and 2 jalapeños, chopped",
                 "Handful of cilantro",
-                "1 Mexican beer, optional"
+                "1 Mexican beer, optional",
+                "2 oz chicharrón, broken up"
               ]
             }
           ],
@@ -2283,7 +2314,7 @@
             "Fry the bacon until crisp. Add the chorizo, then the salchicha and ham, and brown.",
             "Add the onion, tomato and jalapeño and cook 5 minutes.",
             "Add the beans with their broth (and the beer). Simmer 20 minutes.",
-            "Stir in the cilantro."
+            "Stir in the cilantro and the chicharrón right before serving."
           ],
           "pressureNote": "Cook the beans under pressure as in the base, then finish on Sauté."
         }
@@ -2293,12 +2324,13 @@
       "id": "arroz-rojo",
       "number": 24,
       "article": "El",
+      "verso": "Al arroz, ni lo mires: tápalo y déjalo.",
       "name": "Arroz Rojo",
       "en": "Mexican red rice",
       "category": "frijoles",
       "region": "Toda la República",
       "time": "40 min",
-      "servings": "6 plates",
+      "servings": "6 personas",
       "story": "Fried until golden before any liquid goes in, then cooked in tomato broth and left alone. It goes next to everything, and into caldo.",
       "ingredients": [
         {
@@ -2369,6 +2401,7 @@
       "id": "salsa-roja",
       "number": 25,
       "article": "La",
+      "verso": "Sin salsa no hay taco, y sin molcajete no hay salsa.",
       "name": "Salsa Roja de Molcajete",
       "en": "Charred tomato salsa",
       "category": "salsas",
@@ -2416,7 +2449,7 @@
                 "1 garlic clove",
                 "¼ white onion",
                 "Handful of cilantro",
-                "Salt"
+                "Salt, al gusto"
               ]
             }
           ],
@@ -2457,13 +2490,14 @@
       "id": "cafe-de-olla",
       "number": 26,
       "article": "El",
+      "verso": "Café de olla y pan dulce: la tarde no pide más.",
       "name": "Café de Olla",
       "en": "Clay-pot coffee with piloncillo and cinnamon",
       "category": "bebidas",
       "region": "Centro · Sur",
       "time": "15 min",
       "servings": "4 cups",
-      "story": "Coffee brewed in a clay olla with piloncillo and canela. It's how coffee was made on ranchos and in markets before coffee makers, and it's still what abuela pours with pan dulce.",
+      "story": "Coffee brewed in a clay olla with piloncillo and canela. Popular history credits the Adelitas of the Revolution with brewing it for the troops. Coffee only reached Mexico in the 1700s, so it isn't prehispanic, but it is what abuela still pours with pan dulce.",
       "ingredients": [
         {
           "title": "Café",
@@ -2487,7 +2521,8 @@
       "pressureCooker": null,
       "pressureNote": "No pressure-cooker version. It's a 15-minute steep.",
       "tips": [
-        "Never boil the coffee. Add it off the heat or it turns bitter.",
+        "Don't let the coffee keep boiling. Add it off the heat, or let it rise to a boil once and turn it off; boiled coffee turns bitter.",
+        "Buy ollas and jarritos marked Sin Plomo (lead-free). Profeco's test: soak part of the piece in white vinegar for 24 hours; if the glaze turns dull or rough, don't cook in it.",
         "A clay olla gives the coffee its earthy taste. Season a new one by boiling water in it a few times before the first coffee.",
         "Use a coarse grind, like for a French press, so it strains clean."
       ],
@@ -2542,6 +2577,7 @@
       "id": "champurrado",
       "number": 27,
       "article": "El",
+      "verso": "Champurrado y tamal, ¡ni el frío nos hace mal!",
       "name": "Champurrado",
       "en": "Chocolate masa atole",
       "category": "bebidas",
@@ -2555,8 +2591,8 @@
           "items": [
             "½ cup masa harina (or 4 oz fresh masa)",
             "2 cups warm water",
-            "4 cups whole milk (or water, the older way)",
-            "1 tablet (3 oz) Mexican chocolate, chopped",
+            "4 cups water (the traditional way), milk, or half and half",
+            "1 tablet (3 oz) Mexican chocolate, chopped (chocolate de metate if you can find it)",
             "3–4 oz piloncillo, grated (or ⅓ cup brown sugar)",
             "1 stick Mexican cinnamon (canela)",
             "Pinch of salt",
@@ -2566,7 +2602,7 @@
       ],
       "steps": [
         "Whisk the masa into the warm water until there are no lumps. Strain.",
-        "In a pot, simmer the milk with the cinnamon, piloncillo, salt and anise for 10 minutes.",
+        "In a pot, simmer the water or milk with the cinnamon, piloncillo, salt and anise for 10 minutes.",
         "Add the chocolate and whisk until melted.",
         "Pour in the masa mixture slowly, whisking constantly.",
         "Simmer on low, stirring constantly, 10 minutes until thick enough to coat a spoon. Take out the cinnamon.",
@@ -2608,6 +2644,7 @@
       "id": "agua-de-jamaica",
       "number": 28,
       "article": "El",
+      "verso": "Roja como la flor, fresca como la tarde: el agua del día.",
       "name": "Agua de Jamaica",
       "en": "Hibiscus agua fresca",
       "category": "bebidas",
@@ -2671,6 +2708,7 @@
       "id": "conchas",
       "number": 29,
       "article": "Las",
+      "verso": "A la hora del cafecito, una concha y un ratito.",
       "name": "Conchas",
       "en": "Sweet shell-topped buns",
       "category": "pan",
@@ -2696,8 +2734,8 @@
           "title": "Cubierta (topping)",
           "items": [
             "½ cup (65 g) all-purpose flour",
-            "½ cup (60 g) powdered sugar",
-            "¼ cup (50 g) vegetable shortening or soft butter",
+            "½ cup (65 g) powdered sugar",
+            "⅓ cup (65 g) vegetable shortening (manteca vegetal); butter works but spreads and blurs the shell",
             "½ tsp vanilla",
             "For chocolate topping: replace 2 tbsp of the flour with cocoa powder"
           ]
@@ -2719,6 +2757,7 @@
       "pressureNote": "No pressure-cooker version. Bread needs the oven.",
       "tips": [
         "Brushing the buns with butter before the topping goes on keeps it from sliding off.",
+        "Panaderos make the topping 1:1:1 by weight: flour, powdered sugar and shortening. In humid weather, add a spoonful more flour so it doesn't slide.",
         "If your kitchen is cold, let the dough rise in the oven with only the light on.",
         "Conchas go stale fast. Freeze extras the same day and warm them 5 minutes in the oven."
       ],
@@ -2727,12 +2766,12 @@
           "name": "Pan de Muerto",
           "en": "Day of the Dead bread",
           "region": "Centro",
-          "note": "Made for the ofrenda in late October and early November. An orange-scented sweet bread decorated with dough bones and a round skull, brushed with butter and rolled in sugar.",
+          "note": "Made for the ofrenda in late October and early November. An orange-blossom sweet bread decorated with dough bones and a round skull, brushed with butter and rolled in sugar. The four bones in a cross point to the four directions; some say they are tears. In Oaxaca it's pan de yema with a little face on top.",
           "ingredients": [
             {
               "title": "",
               "items": [
-                "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk",
+                "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and, if you like, ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk",
                 "1 egg, beaten, for brushing",
                 "4 tbsp melted butter",
                 "½ cup sugar, for coating"
@@ -2774,13 +2813,14 @@
       "id": "bolillos",
       "number": 30,
       "article": "Los",
+      "verso": "Pa'l susto, un bolillo.",
       "name": "Bolillos",
       "en": "Crusty Mexican rolls",
       "category": "pan",
       "region": "Centro · Toda la República",
       "time": "3 h",
       "servings": "10 rolls",
-      "story": "Mexico's everyday bread: crackly crust, soft inside, pointed at both ends. It's for molletes, tortas, capirotada and dunking in caldo. Abuelas also say a bite of bolillo calms a scare (para el susto).",
+      "story": "Mexico's everyday bread: crackly crust, soft inside, pointed at both ends. It's for molletes, tortas, capirotada and dunking in caldo. Abuelas also say a bite of bolillo calms a scare (para el susto). It came out of French baking during the Intervention of the 1860s. In Guadalajara its cousin is the birote salado, slightly sour and firm-crusted: the bread of the torta ahogada.",
       "ingredients": [
         {
           "title": "Bolillos",
@@ -2837,13 +2877,14 @@
       "id": "arroz-con-leche",
       "number": 31,
       "article": "El",
+      "verso": "Arroz con leche, me quiero casar…",
       "name": "Arroz con Leche",
       "en": "Cinnamon rice pudding",
       "category": "postres",
       "region": "Toda la República",
       "time": "50 min",
       "servings": "6 cups",
-      "story": "Rice cooked first in water with cinnamon and lime peel, then slowly in milk. Every abuela has a strong opinion about raisins.",
+      "story": "Rice cooked first in water with cinnamon and lime peel, then slowly in milk. Every abuela has a strong opinion about raisins. Kids know it from the playground song: «Arroz con leche, me quiero casar con una señorita de San Nicolás…»",
       "ingredients": [
         {
           "title": "Arroz con leche",
@@ -2910,6 +2951,7 @@
       "id": "flan",
       "number": 32,
       "article": "El",
+      "verso": "Tiembla, tiembla, pero no se cae: así es el flan de la abuela.",
       "name": "Flan de la Abuela",
       "en": "Milk and egg caramel custard",
       "category": "postres",
@@ -2955,7 +2997,7 @@
           "High pressure 9 minutes, natural release 10.",
           "Cool, then chill at least 4 hours before unmolding."
         ],
-        "note": "For one mold that fits your pot, the time depends on its size and depth. Start at 20 minutes and check: the center should jiggle, not slosh."
+        "note": "For one mold that fits your pot, time depends on its size and depth. In a stovetop olla exprés, Mexican cooks count about 10–15 minutes from the whistle for the classic and about 25 for napolitano. In an electric pot, start at 15–20 minutes for the classic and 25 for napolitano, then check: the center should jiggle, not slosh."
       },
       "pressureNote": null,
       "tips": [
@@ -2967,7 +3009,7 @@
           "name": "Flan Napolitano",
           "en": "Cream cheese flan",
           "region": "Toda la República",
-          "note": "The popular modern flan: richer, denser and blended in a minute. Most families make this one now.",
+          "note": "The popular modern flan: richer, denser and blended in a minute. Most families make this one now, and they argue about whether it needs queso crema.",
           "ingredients": [
             {
               "title": "",
@@ -2994,13 +3036,14 @@
       "id": "capirotada",
       "number": 33,
       "article": "La",
+      "verso": "Capirotada en Cuaresma: cada capa, una promesa.",
       "name": "Capirotada",
       "en": "Lenten bread pudding with piloncillo",
       "category": "postres",
       "region": "Jalisco · Michoacán · Norte",
       "time": "1 h 15",
-      "servings": "8 servings",
-      "story": "The bread pudding of Cuaresma (Lent): layers of fried bolillo, raisins, nuts and cheese soaked in spiced piloncillo syrup. Old recipes simmer a tomato and an onion in the syrup. It sounds strange and tastes right.",
+      "servings": "8 personas",
+      "story": "The bread pudding of Cuaresma (Lent): layers of fried bolillo, raisins, nuts and cheese soaked in spiced piloncillo syrup. Old recipes from Jalisco and Colima simmer a tomato and an onion in the syrup. It sounds strange and tastes right. Every layer means something: the bread is the body of Christ, the syrup his blood, the canela the wood of the cross, the cloves the nails, and the white cheese the holy shroud. It's eaten on the Fridays of Lent and on Viernes Santo.",
       "ingredients": [
         {
           "title": "La miel",
@@ -3115,7 +3158,7 @@
   "glossary": [
     {
       "term": "Masa",
-      "definition": "Dough of nixtamalized corn. Fresh masa from a tortillería is best; for tamales ask for masa sin preparar (unprepared). Masa harina is the dried flour version."
+      "definition": "Dough of nixtamalized corn. Fresh masa from a tortillería is best. For tamales ask for masa para tamal, sin preparar (unprepared), ground coarser than tortilla masa. Masa harina is the dried flour version."
     },
     {
       "term": "Manteca",
@@ -3168,6 +3211,14 @@
     {
       "term": "Crema",
       "definition": "Mexican cultured cream, thinner and saltier than sour cream. Thin sour cream with a little milk if you can't find it."
+    },
+    {
+      "term": "Barro",
+      "definition": "Glazed clay ollas, cazuelas and jarritos for beans, coffee and atole. Buy pieces marked Sin Plomo (lead-free); old or unmarked glazes can leach lead."
+    },
+    {
+      "term": "Tequesquite",
+      "definition": "A natural mineral salt from the old lakebeds of central Mexico, the traditional leavening for tamales, dissolved in water (often with tomatillo husks)."
     }
   ]
 }

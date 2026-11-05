@@ -111,15 +111,31 @@ struct RecipeDetailView: View {
                 .font(.footnote)
                 .foregroundStyle(Color.talavera)
             }
-            CardArt(
-                recipe: recipe,
-                color: store.color(forCategory: recipe.category),
-                aspect: 2,
-                cornerRadius: 12,
-                numberSize: 17,
-                artPadding: 16
-            )
-            .frame(maxHeight: 220)
+            VStack(spacing: 0) {
+                CardArt(
+                    recipe: recipe,
+                    color: store.color(forCategory: recipe.category),
+                    aspect: 2,
+                    cornerRadius: 0,
+                    numberSize: 17,
+                    artPadding: 14
+                )
+                if let verso = recipe.verso {
+                    Text("«\(verso)»")
+                        .font(.subheadline.italic())
+                        .foregroundStyle(Color.ink)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 7)
+                        .background(Color.stock)
+                        .overlay(alignment: .top) { Rectangle().fill(Color.ink).frame(height: 2.5) }
+                        .accessibilityLabel("La cantada: \(verso)")
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.ink, lineWidth: 2.5))
+            .frame(maxHeight: 280)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.inkShadow).offset(x: 4, y: 5))
             .padding(.bottom, 10)
             Text("\(recipe.region) · \(store.categoryName(recipe.category))".uppercased())
@@ -127,12 +143,6 @@ struct RecipeDetailView: View {
                 .tracking(1)
                 .foregroundStyle(Color.chile)
             VStack(alignment: .leading, spacing: 2) {
-                if let article = recipe.article {
-                    Text(article.uppercased())
-                        .font(.slab(13, relativeTo: .caption))
-                        .tracking(1.6)
-                        .foregroundStyle(.secondary)
-                }
                 Text(recipe.name)
                     .font(.rotulo(38, relativeTo: .largeTitle))
                     .foregroundStyle(store.headingColor(forCategory: recipe.category))
@@ -147,7 +157,7 @@ struct RecipeDetailView: View {
                 .padding(.top, 4)
             MetaGrid(items: [
                 ("Tiempo", recipe.time),
-                ("Rinde", Scaler.yieldText(recipe.servings, factor: factor)),
+                ("Rinde", store.shown(Scaler.yieldText(recipe.servings, factor: factor))),
                 ("Olla exprés", recipe.pressureCooker?.total ?? "—")
             ])
             .padding(.top, 8)
@@ -178,7 +188,7 @@ struct RecipeDetailView: View {
                     .foregroundStyle(.secondary)
             }
             if !recipe.tips.isEmpty {
-                TipsBox(tips: recipe.tips)
+                TipsBox(tips: recipe.tips.map(store.shown))
             }
         }
     }
@@ -205,7 +215,7 @@ struct RecipeDetailView: View {
                     NoteBox(text: "Scaling up? Pressure times stay the same, but never fill the pot past the max-fill line. Cook in two batches if it won't fit.")
                 }
                 if let note = pc.note {
-                    NoteBox(text: note)
+                    NoteBox(text: store.shown(note))
                 }
                 NoteBox(text: Self.pressureDisclaimer)
             }
@@ -287,7 +297,7 @@ struct IngredientList: View {
                         .padding(.bottom, 4)
                 }
                 ForEach(Array(group.items.enumerated()), id: \.offset) { itemIndex, item in
-                    IngredientRow(text: Scaler.text(item, factor: factor), key: "\(scope):\(groupIndex):\(itemIndex)")
+                    IngredientRow(text: store.shown(Scaler.text(item, factor: factor)), key: "\(scope):\(groupIndex):\(itemIndex)")
                     Divider()
                 }
             }
@@ -329,7 +339,7 @@ struct StepList: View {
     var body: some View {
         VStack(spacing: 10) {
             ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                StepRow(number: index + 1, text: step, key: "\(scope):\(index)")
+                StepRow(number: index + 1, text: step, key: "\(scope):\(index)", siblingKeys: steps.indices.map { "\(scope):\($0)" })
             }
         }
     }
@@ -340,11 +350,15 @@ struct StepRow: View {
     let number: Int
     let text: String
     let key: String
+    var siblingKeys: [String] = []
 
     var body: some View {
         let isOn = store.isChecked(key)
         Button {
             store.toggleCheck(key)
+            if store.isChecked(key), !siblingKeys.isEmpty, siblingKeys.allSatisfy({ store.isChecked($0) }) {
+                store.showToast("¡Buen provecho!")
+            }
         } label: {
             HStack(alignment: .top, spacing: 12) {
                 ZStack {
@@ -360,7 +374,7 @@ struct StepRow: View {
                     }
                 }
                 .frame(width: 30, height: 30)
-                Text(text)
+                Text(store.shown(text))
                     .foregroundStyle(isOn ? Color.secondary : Color.primary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .fixedSize(horizontal: false, vertical: true)
@@ -398,6 +412,7 @@ struct TipsBox: View {
 }
 
 struct VariationCard: View {
+    @EnvironmentObject private var store: RecipeStore
     let recipe: Recipe
     let variation: Variation
     let index: Int
@@ -438,7 +453,7 @@ struct VariationCard: View {
             if isOpen {
                 VStack(alignment: .leading, spacing: 20) {
                     if let note = variation.note {
-                        Text(note)
+                        Text(store.shown(note))
                     }
                     VStack(alignment: .leading, spacing: 12) {
                         SectionHeader(title: "Ingredientes")
@@ -450,7 +465,7 @@ struct VariationCard: View {
                     }
                     if let pressureNote = variation.pressureNote {
                         InfoBox(label: "Olla exprés", background: .nopalSoft) {
-                            Text(pressureNote)
+                            Text(store.shown(pressureNote))
                         }
                     }
                 }
@@ -479,12 +494,12 @@ struct ServingsCard: View {
                 if Scaler.base(recipe.servings) != nil {
                     HStack(spacing: 8) {
                         stepButton("minus", label: "Fewer servings", direction: -1)
-                        Text(Scaler.yieldText(recipe.servings, factor: factor))
+                        Text(store.shown(Scaler.yieldText(recipe.servings, factor: factor)))
                             .font(.system(.subheadline, design: .monospaced))
                             .monospacedDigit()
                             .frame(minWidth: 92)
                             .contentTransition(.numericText())
-                            .accessibilityLabel("Makes \(Scaler.yieldText(recipe.servings, factor: factor))")
+                            .accessibilityLabel("Makes \(store.shown(Scaler.yieldText(recipe.servings, factor: factor)))")
                         stepButton("plus", label: "More servings", direction: 1)
                     }
                 }
@@ -509,8 +524,16 @@ struct ServingsCard: View {
                     .accessibilityAddTraits(isOn ? .isSelected : [])
                 }
             }
+            Divider()
+            HStack(spacing: 8) {
+                Text("MEDIDAS")
+                    .font(.slab(12, relativeTo: .caption))
+                    .foregroundStyle(.secondary)
+                unitsButton("Tazas · lb", metric: false, label: "Cups and pounds")
+                unitsButton("Gramos · l", metric: true, label: "Grams and liters")
+            }
             if factor != 1 {
-                Text("Ingredient amounts are adjusted for you. Amounts written inside the steps, and cooking times, are for the original recipe.")
+                Text("Steps and cooking times stay as written.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
@@ -519,6 +542,24 @@ struct ServingsCard: View {
         .background(RoundedRectangle(cornerRadius: 14).fill(Color.card))
         .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.ink, lineWidth: 2))
         .background(RoundedRectangle(cornerRadius: 14).fill(Color.inkShadow).offset(x: 3, y: 3))
+    }
+
+    private func unitsButton(_ title: String, metric: Bool, label: String) -> some View {
+        let isOn = store.metric == metric
+        return Button {
+            withAnimation(.snappy) { store.setMetric(metric) }
+        } label: {
+            Text(title)
+                .font(.subheadline.weight(.bold))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 8)
+                .foregroundStyle(isOn ? Color(.systemBackground) : Color.primary)
+                .background(Capsule().fill(isOn ? Color.primary : Color.paper))
+                .overlay(Capsule().strokeBorder(Color.hairline, lineWidth: isOn ? 0 : 1.5))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(label)
+        .accessibilityAddTraits(isOn ? .isSelected : [])
     }
 
     private func stepButton(_ symbol: String, label: String, direction: Double) -> some View {

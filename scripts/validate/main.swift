@@ -2,7 +2,7 @@ import Foundation
 
 // Decodes recipes.json with the app's own models and checks basic integrity.
 // It also checks the Swift scaler against the web scaler's output in scaling-fixtures.json.
-// CI: swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift scripts/validate/main.swift -o validate && ./validate
+// CI: swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift Recetario/Models/Units.swift scripts/validate/main.swift -o validate && ./validate
 
 let path = CommandLine.arguments.count > 1
     ? CommandLine.arguments[1]
@@ -35,7 +35,13 @@ do {
     let cases = try JSONDecoder().decode([ScalingCase].self, from: Data(contentsOf: URL(fileURLWithPath: fixturesPath)))
     var mismatches = 0
     for c in cases {
-        let got = c.kind == "yield" ? Scaler.yieldText(c.input, factor: c.factor) : Scaler.text(c.input, factor: c.factor)
+        let got: String
+        switch c.kind {
+        case "yield": got = Scaler.yieldText(c.input, factor: c.factor)
+        case "metric": got = Units.metric(c.input)
+        case "scaled-metric": got = Units.metric(Scaler.text(c.input, factor: c.factor))
+        default: got = Scaler.text(c.input, factor: c.factor)
+        }
         if got != c.output {
             mismatches += 1
             if mismatches <= 15 {

@@ -20,7 +20,7 @@ jobs:
 
       - name: Validate recipe data with the app's models
         run: |
-          swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
+          swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift Recetario/Models/Units.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
           "$RUNNER_TEMP/validate" Recetario/Resources/recipes.json scripts/validate/scaling-fixtures.json
 
       - name: Generate Xcode project

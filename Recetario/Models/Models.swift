@@ -53,6 +53,8 @@ struct Recipe: Codable, Hashable, Identifiable {
     let number: Int
     /// The article the card is called with: "El", "La", "Los", "Las".
     let article: String?
+    /// La cantada: the line the lotería caller sings for this card.
+    let verso: String?
     let name: String
     let en: String
     let category: String

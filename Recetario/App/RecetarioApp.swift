@@ -21,6 +21,7 @@ struct RootView: View {
     // CI screenshots can open a tab (-screenshotTab 1) or a recipe (-screenshotRecipe pozole-rojo).
     @State private var selection = UserDefaults.standard.integer(forKey: "screenshotTab")
     @State private var path: [Recipe] = []
+    @AppStorage("appearance") private var appearance = Appearance.system.rawValue
 
     var body: some View {
         TabView(selection: $selection) {
@@ -41,5 +42,14 @@ struct RootView: View {
             }
         }
         .tint(Color.mxRosa)
+        .preferredColorScheme((Appearance(rawValue: UserDefaults.standard.string(forKey: "screenshotAppearance") ?? appearance) ?? .system).colorScheme)
+        .overlay(alignment: .bottom) {
+            if let toast = store.toast {
+                ToastView(text: toast)
+                    .padding(.bottom, 70)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .animation(.snappy, value: store.toast)
     }
 }

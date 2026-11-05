@@ -43,7 +43,9 @@ struct FlagShape: Shape {
 
 struct PapelPicado: View {
     var count = 10
-    private let colors: [Color] = [.chile, .maiz, .talavera, .rosa, .nopal]
+    private var colors: [Color] {
+        Season.picadoColors ?? [Color(hexString: "#C8261E"), Color(hexString: "#F29F05"), Color(hexString: "#1F4FB5"), Color(hexString: "#E4007C"), Color(hexString: "#1F6B3F")]
+    }
 
     var body: some View {
         VStack(spacing: 0) {

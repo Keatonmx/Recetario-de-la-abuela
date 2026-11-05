@@ -34,7 +34,7 @@ enum Scaler {
         "jalapeño": "jalapeños", "serrano": "serranos", "habanero": "habaneros", "poblano": "poblanos",
         "plantain": "plantains", "pear": "pears", "peach": "peaches", "apple": "apples", "chile": "chiles",
         "leaf": "leaves", "yolk": "yolks", "onion": "onions", "chicken": "chickens", "bowl": "bowls", "plate": "plates",
-        "roll": "rolls", "serving": "servings", "concha": "conchas", "tomatillo": "tomatillos",
+        "roll": "rolls", "serving": "servings", "persona": "personas", "concha": "conchas", "tomatillo": "tomatillos",
         "xoconostle": "xoconostles", "piece": "pieces", "disc": "discs", "ball": "balls", "loaf": "loaves",
         "taco": "tacos", "tostada": "tostadas", "stalk": "stalks"
     ]

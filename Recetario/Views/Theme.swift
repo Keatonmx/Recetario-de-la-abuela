@@ -1,8 +1,9 @@
 import SwiftUI
 import UIKit
 
-// Palette: talavera cobalt, chile red, maíz gold, nopal green and rosa,
-// each with a light and a dark value.
+// Palette: masa cream by day, comal black by night, with rosa mexicano, chile,
+// cempasúchil and nopal as accents. Each color has a light and a dark value.
+// ("talavera" is the UI accent token; it is now rosa, not blue.)
 extension Color {
     init(light: UInt32, dark: UInt32) {
         self.init(uiColor: UIColor { traits in
@@ -10,41 +11,48 @@ extension Color {
         })
     }
 
-    static let talavera = Color(light: 0x1D4AA0, dark: 0x8BAAF2)
-    static let talaveraSoft = Color(light: 0xE4EBFA, dark: 0x1B2747)
-    static let chile = Color(light: 0xAE281D, dark: 0xF2846F)
-    static let chileSoft = Color(light: 0xFAE9E6, dark: 0x35201E)
-    static let maiz = Color(light: 0xD4951A, dark: 0xF0C35A)
-    static let maizSoft = Color(light: 0xFBF1DC, dark: 0x30281A)
-    static let nopal = Color(light: 0x2A7448, dark: 0x72C597)
-    static let nopalSoft = Color(light: 0xE1F1E7, dark: 0x163024)
+    static let talavera = Color(light: 0xB4005C, dark: 0xFF7DBE)
+    static let talaveraSoft = Color(light: 0xF9E1EC, dark: 0x3B1A2B)
+    static let chile = Color(light: 0xA8261B, dark: 0xF28A6E)
+    static let chileSoft = Color(light: 0xF6E0D9, dark: 0x3A211B)
+    static let maiz = Color(light: 0xB87A0E, dark: 0xF2C35C)
+    static let maizSoft = Color(light: 0xF7E9C8, dark: 0x342816)
+    static let nopal = Color(light: 0x276B42, dark: 0x7CC690)
+    static let nopalSoft = Color(light: 0xE0EDDC, dark: 0x1B2E20)
     static let rosa = Color(light: 0xC4336B, dark: 0xEE80A9)
-    static let paper = Color(light: 0xF4F6FB, dark: 0x0D1322)
-    static let card = Color(light: 0xFFFFFF, dark: 0x151D31)
-    static let hairline = Color(light: 0xDAE0ED, dark: 0x27324C)
+    static let paper = Color(light: 0xF5EDDF, dark: 0x15110E)
+    static let card = Color(light: 0xFFFAF1, dark: 0x211B16)
+    static let hairline = Color(light: 0xE2D5C1, dark: 0x3A3027)
 
     // Lotería cards are physical objects: light card stock and black ink in both themes.
-    static let stock = Color(light: 0xFFFEFA, dark: 0xF3F0E8)
-    static let ink = Color(light: 0x1D1A17, dark: 0x141210)
-    static let inkShadow = Color(light: 0x1D1A17, dark: 0x04060D)
+    static let stock = Color(light: 0xFFFDF7, dark: 0xF5EDDF)
+    static let ink = Color(light: 0x1D1A17, dark: 0x120F0C)
+    static let inkShadow = Color(light: 0x1E1813, dark: 0x000000)
     static let stockMuted = Color(light: 0x5E5A55, dark: 0x5E5A55)
     static let stampGreen = Color(light: 0x1F6B3F, dark: 0x1F6B3F)
     static let stampPaper = Color(light: 0xF7F5EE, dark: 0xF7F5EE)
     static let mxRosa = Color(light: 0xD6006F, dark: 0xFF5FAE)
-    static let mxCobalt = Color(light: 0x1F4FB5, dark: 0x8BAAF2)
+    static let mxVerde = Color(light: 0x1F6B3F, dark: 0x7CC690)
 
     /// A category color from "#RRGGBB".
     init(hexString: String) {
         self.init(uiColor: UIColor(hexString: hexString))
     }
 
-    /// A category color for text on the page: as-is in light mode, lifted toward
-    /// white in dark mode so it stays readable.
+    /// A category color for text on the page: deepened a little on cream, lifted
+    /// toward white on black, so it stays readable in both.
     static func lifted(_ hexString: String) -> Color {
         Color(uiColor: UIColor { traits in
             let base = UIColor(hexString: hexString)
-            return traits.userInterfaceStyle == .dark ? base.mixed(with: .white, amount: 0.38) : base
+            return traits.userInterfaceStyle == .dark
+                ? base.mixed(with: .white, amount: 0.38)
+                : base.mixed(with: UIColor(hex: 0x2A1608), amount: 0.24)
         })
+    }
+
+    /// The flat field behind a card's drawing: the category color, softened.
+    static func cardField(_ hexString: String) -> Color {
+        Color(uiColor: UIColor(hexString: hexString).mixed(with: .white, amount: 0.22))
     }
 }
 
@@ -70,7 +78,7 @@ extension UIColor {
 
 extension RecipeStore {
     func color(forCategory id: String) -> Color {
-        Color(hexString: book.categories.first { $0.id == id }?.color ?? "#C8261E")
+        Color.cardField(book.categories.first { $0.id == id }?.color ?? "#C8261E")
     }
 
     func headingColor(forCategory id: String) -> Color {

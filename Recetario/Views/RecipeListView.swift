@@ -79,6 +79,9 @@ struct RecipeListView: View {
         .navigationDestination(for: Recipe.self) { recipe in
             RecipeDetailView(recipe: recipe)
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) { AppearanceButton() }
+        }
     }
 
     private func section(_ cat: RecipeCategory, recipes: [Recipe]) -> some View {
@@ -119,7 +122,7 @@ struct RecipeListView: View {
                         .foregroundStyle(Color.mxRosa)
                     Text("de la Abuela")
                         .font(.rotulo(31, relativeTo: .title))
-                        .foregroundStyle(Color.mxCobalt)
+                        .foregroundStyle(Color.mxVerde)
                 }
                 .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
                 .padding(.top, 10)
@@ -129,9 +132,8 @@ struct RecipeListView: View {
                     .font(.slab(13, relativeTo: .caption))
                     .tracking(1.1)
                     .foregroundStyle(Color.chile)
-                Text("\(store.book.recipes.count) cartas · \(store.pressureCookerCount) con olla exprés · \(store.variationCount) variantes")
-                    .font(.system(.footnote, design: .monospaced))
-                    .foregroundStyle(.secondary)
+                HoyHayCard()
+                    .padding(.top, 6)
             }
         }
     }

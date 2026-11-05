@@ -45,7 +45,7 @@ const COLOR_ICONS = {
   // Talavera tile, repeated as a strip under each category heading
   { const dir = path.join(xcassets, 'Icons', 'talavera-tile.imageset');
     write(dir, { images: [2, 3].map(s => ({ filename: `talavera-tile@${s}x.png`, idiom: 'universal', scale: `${s}x` })), info: INFO });
-    for (const s of [2, 3]) await shot(tile, 18 * s, path.join(dir, `talavera-tile@${s}x.png`)); }
+    for (const s of [2, 3]) await shot(tile, 12 * s, path.join(dir, `talavera-tile@${s}x.png`)); }
   console.log(`rendered ${arts.length} cards, ${Object.keys(ICONS).length + Object.keys(COLOR_ICONS).length} icons, 1 tile`);
   await b.close();
 })();
