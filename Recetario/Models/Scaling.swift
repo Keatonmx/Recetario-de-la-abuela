@@ -90,6 +90,23 @@ enum Scaler {
         return scaleParentheses(out, factor: factor)
     }
 
+    private static let marked = regex("\\[\\[(.+?)\\]\\]")
+
+    /// A step, scaled: only amounts marked [[like this]] change (batch amounts). Times,
+    /// temperatures, pot sizes, trivet water and per-piece amounts are left unmarked on purpose.
+    static func stepText(_ s: String, factor: Double) -> String {
+        let ns = s as NSString
+        var out = ""
+        var last = 0
+        for m in marked.matches(in: s, range: NSRange(location: 0, length: ns.length)) {
+            out += ns.substring(with: NSRange(location: last, length: m.range.location - last))
+            out += text(ns.substring(with: m.range(at: 1)), factor: factor)
+            last = m.range.location + m.range.length
+        }
+        out += ns.substring(from: last)
+        return out
+    }
+
     /// The yield, scaled: "10 bowls" ×½ → "5 bowls", "About 30" ×½ → "About 15".
     static func yieldText(_ y: String, factor: Double) -> String {
         let ns = y as NSString

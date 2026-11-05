@@ -60,6 +60,8 @@ do {
                 .prefix(5).map { "\($0.recipe.id):\(String(format: "%.3f", $0.score))" }.joined(separator: ",")
         case "yield": got = Scaler.yieldText(c.input, factor: c.factor)
         case "metric": got = Units.metric(c.input)
+        case "step": got = Scaler.stepText(c.input, factor: c.factor)
+        case "step-metric": got = Units.metric(Scaler.stepText(c.input, factor: c.factor))
         case "scaled-metric": got = Units.metric(Scaler.text(c.input, factor: c.factor))
         default: got = Scaler.text(c.input, factor: c.factor)
         }

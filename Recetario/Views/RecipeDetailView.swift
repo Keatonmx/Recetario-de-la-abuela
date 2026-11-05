@@ -176,7 +176,7 @@ struct RecipeDetailView: View {
             }
             VStack(alignment: .leading, spacing: 12) {
                 SectionHeader(title: "Preparación")
-                StepList(steps: recipe.steps, scope: "\(recipe.id):t:s")
+                StepList(steps: recipe.steps, scope: "\(recipe.id):t:s", factor: factor)
                 Text("Tap a step when it's done.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
@@ -203,7 +203,7 @@ struct RecipeDetailView: View {
                 }
                 VStack(alignment: .leading, spacing: 12) {
                     SectionHeader(title: "Preparación")
-                    StepList(steps: pc.steps, scope: "\(recipe.id):p:s")
+                    StepList(steps: pc.steps, scope: "\(recipe.id):p:s", factor: factor)
                 }
                 if factor > 1 {
                     NoteBox(text: "Scaling up? Pressure times stay the same, but never fill the pot past the max-fill line. Cook in two batches if it won't fit.")
@@ -329,11 +329,12 @@ struct IngredientRow: View {
 struct StepList: View {
     let steps: [String]
     let scope: String
+    var factor: Double = 1
 
     var body: some View {
         VStack(spacing: 10) {
             ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                StepRow(number: index + 1, text: step, key: "\(scope):\(StableKey.of(step))", siblingKeys: steps.map { "\(scope):\(StableKey.of($0))" })
+                StepRow(number: index + 1, text: step, key: "\(scope):\(StableKey.of(step))", siblingKeys: steps.map { "\(scope):\(StableKey.of($0))" }, factor: factor)
             }
         }
     }
@@ -345,6 +346,7 @@ struct StepRow: View {
     let text: String
     let key: String
     var siblingKeys: [String] = []
+    var factor: Double = 1
 
     var body: some View {
         let isOn = store.isChecked(key)
@@ -368,7 +370,7 @@ struct StepRow: View {
                     }
                 }
                 .frame(width: 30, height: 30)
-                Text(store.shown(text))
+                Text(store.shown(Scaler.stepText(text, factor: factor)))
                     .foregroundStyle(isOn ? Color.secondary : Color.primary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .fixedSize(horizontal: false, vertical: true)
@@ -379,7 +381,7 @@ struct StepRow: View {
             .contentShape(RoundedRectangle(cornerRadius: 14))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Step \(number): \(store.shown(text))")
+        .accessibilityLabel("Step \(number): \(store.shown(Scaler.stepText(text, factor: factor)))")
         .accessibilityAddTraits(isOn ? .isSelected : [])
     }
 }
@@ -456,7 +458,7 @@ struct VariationCard: View {
                     }
                     VStack(alignment: .leading, spacing: 12) {
                         SectionHeader(title: "Preparación")
-                        StepList(steps: variation.steps, scope: "\(recipe.id):v\(index):s")
+                        StepList(steps: variation.steps, scope: "\(recipe.id):v\(index):s", factor: factor)
                     }
                     if let pressureNote = variation.pressureNote {
                         InfoBox(label: "Olla exprés", background: .nopalSoft) {
@@ -528,7 +530,7 @@ struct ServingsCard: View {
                 unitsButton("Gramos · l", metric: true, label: "Grams and liters")
             }
             if factor != 1 {
-                Text("Steps and cooking times stay as written.")
+                Text("Amounts in the steps change too. Cooking times stay as written.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }

@@ -89,6 +89,16 @@ for (const r of book.recipes) {
 }
 for (const t of texts) cases.push({ kind: "metric", input: t, factor: 1, output: UNITS.metric(t) });
 for (const line of lines) cases.push({ kind: "scaled-metric", input: line, factor: 0.5, output: UNITS.metric(SCALE.text(line, 0.5)) });
+// Steps: marked amounts scale.
+const allSteps = new Set();
+for (const r of book.recipes) {
+  [...r.steps, ...(r.pressureCooker?.steps ?? [])].forEach((t) => allSteps.add(t));
+  for (const v of r.variations) v.steps.forEach((t) => allSteps.add(t));
+}
+for (const st of allSteps) {
+  for (const f of [0.5, 2, 1.5]) cases.push({ kind: "step", input: st, factor: f, output: SCALE.stepText(st, f) });
+  cases.push({ kind: "step-metric", input: st, factor: 0.5, output: UNITS.metric(SCALE.stepText(st, 0.5)) });
+}
 // ¿Qué tengo?: alias matching on every ingredient line, typed input, and rankings.
 for (const line of lines) cases.push({ kind: "ids", input: line, factor: 1, output: PANTRY.idsIn(line).join(",") });
 const queries = ["pork, onion, tomatoes, tortillas", "tengo pollo y chipotle", "chiken, tomatos, onoin", "eggs, tortillas, tomatillo, queso",

@@ -125,7 +125,7 @@ extension Recipe {
         }
         lines.append("PREPARACIÓN")
         for (i, step) in steps.enumerated() {
-            lines.append("\(i + 1). \(step)")
+            lines.append("\(i + 1). \(Scaler.stepText(step, factor: 1))")
         }
         lines.append("")
         lines.append("From Recetario de la Abuela")
