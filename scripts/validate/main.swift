@@ -30,6 +30,18 @@ do {
     let duplicates = Dictionary(grouping: book.recipes, by: \.id).filter { $0.value.count > 1 }.keys
     problems += duplicates.map { "duplicate recipe id \($0)" }
 
+    /// Rankings match when the recipes are the same, in the same order, with scores within 0.002.
+    /// (JavaScript's toFixed and Swift's %.3f can round an exact tie like 0.5625 differently.)
+    func sameRanking(_ a: String, _ b: String) -> Bool {
+        let x = a.split(separator: ","), y = b.split(separator: ",")
+        guard x.count == y.count else { return false }
+        for (p, q) in zip(x, y) {
+            let pa = p.split(separator: ":"), qa = q.split(separator: ":")
+            guard pa.count == 2, qa.count == 2, pa[0] == qa[0],
+                  let sp = Double(pa[1]), let sq = Double(qa[1]), abs(sp - sq) < 0.002 else { return false }
+        }
+        return true
+    }
     struct ScalingCase: Decodable { let kind: String; let input: String; let factor: Double; let output: String }
     let fixturesPath = CommandLine.arguments.count > 2 ? CommandLine.arguments[2] : "scripts/validate/scaling-fixtures.json"
     let cases = try JSONDecoder().decode([ScalingCase].self, from: Data(contentsOf: URL(fileURLWithPath: fixturesPath)))
@@ -51,7 +63,7 @@ do {
         case "scaled-metric": got = Units.metric(Scaler.text(c.input, factor: c.factor))
         default: got = Scaler.text(c.input, factor: c.factor)
         }
-        if got != c.output {
+        if got != c.output && !(c.kind.hasPrefix("rank") && sameRanking(got, c.output)) {
             mismatches += 1
             if mismatches <= 15 {
                 problems.append("scaling ×\(c.factor) of \"\(c.input)\": web gives \"\(c.output)\", Swift gives \"\(got)\"")
