@@ -189,7 +189,7 @@ details.var .vb > p{margin:0;max-width:65ch}
 
 /* Bottom nav */
 .nav{position:fixed;left:0;right:0;bottom:0;z-index:8;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom, 0px);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
-.nav .in{max-width:560px;margin:0 auto;height:var(--nav-h);display:grid;grid-template-columns:repeat(3,1fr)}
+.nav .in{max-width:560px;margin:0 auto;height:var(--nav-h);display:grid;grid-template-columns:repeat(4,1fr)}
 .nav a{display:grid;place-items:center;align-content:center;gap:2px;text-decoration:none;color:var(--muted);font-size:.75rem;font-weight:700;letter-spacing:.03em}
 .nav a svg{width:22px;height:22px}
 .nav a[aria-current="page"]{color:var(--chile)}
@@ -275,6 +275,69 @@ html.cook .ing{padding:12px 0}
 .toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + env(safe-area-inset-bottom, 0px) + 18px);transform:translate(-50%, 20px);opacity:0;pointer-events:none;background:var(--ink);color:var(--paper);font-family:var(--f-rotulo);font-size:1.3rem;padding:10px 20px;border-radius:999px;box-shadow:3px 3px 0 var(--mx-rosa);transition:opacity .2s, transform .2s;z-index:20}
 .toast.on{opacity:1;transform:translate(-50%, 0)}
 @media (prefers-reduced-motion: reduce){.toast{transition:none}}
+/* Lotería cards, the way they look on the table: portrait, cream stock, a thin inset frame line,
+   the drawing in its own box, the number in the corner and the name across the bottom. */
+.deck{gap:16px 14px}
+.loteria{padding:9px 9px 7px;border:0;border-radius:8px;gap:5px;box-shadow:0 1px 1px rgba(30,18,8,.22), 0 10px 18px -12px rgba(30,18,8,.6)}
+.loteria::before{content:"";position:absolute;inset:4px;border:1.5px solid var(--line-ink);border-radius:5px;pointer-events:none}
+.deck .loteria:nth-child(4n+1){transform:rotate(-.6deg)} .deck .loteria:nth-child(4n+2){transform:rotate(.5deg)}
+.deck .loteria:nth-child(4n+3){transform:rotate(.3deg)} .deck .loteria:nth-child(4n){transform:rotate(-.4deg)}
+.deck .loteria:hover,.deck .loteria:focus-visible{transform:translateY(-3px);box-shadow:0 2px 2px rgba(30,18,8,.22), 0 16px 24px -12px rgba(30,18,8,.6)}
+.deck .loteria:active{transform:translateY(1px);box-shadow:0 1px 1px rgba(30,18,8,.25)}
+.loteria .art{aspect-ratio:4/5;border-width:2px;border-radius:2px;background:linear-gradient(to bottom, color-mix(in srgb, var(--g) 78%, #fff) 0 72%, color-mix(in srgb, var(--g), #2A1608 22%) 72% 100%)}
+.loteria .art::after{content:"";position:absolute;left:0;right:0;top:72%;border-top:2px solid var(--line-ink)}
+.loteria .art svg{left:2%;width:96%;height:auto;top:auto;bottom:12%;aspect-ratio:1/1;z-index:1}
+.loteria .art .no{background:none;border:0;border-radius:0;padding:5px 0 0 7px;font-family:var(--f-display);font-size:1.1rem;line-height:1}
+.loteria .nm{font-size:.84rem;letter-spacing:.04em;min-height:2.5em;display:flex;align-items:center;justify-content:center;padding:3px 3px 1px}
+.loteria .sub{display:none}
+.art .olla{width:24px;height:24px;right:4px;bottom:4px;border-width:1.5px}
+.art .olla svg{width:15px;height:15px}
+.hero-card{display:grid;place-items:center;padding:4px 0 2px}
+.loteria.big{width:min(240px, 64%);transform:rotate(-1.5deg)}
+.loteria.big .nm{font-size:1rem;min-height:2.6em}
+.loteria.big .art .no{font-size:1.4rem;padding:6px 0 0 9px}
+.cantada-line{margin:6px auto 4px;max-width:30ch;text-align:center;font-style:italic;color:var(--muted)}
+/* ¿Qué tengo? */
+.qt-lede{color:var(--muted);margin:0}
+.qt-box{display:grid;gap:10px;margin-top:16px}
+.qt-search{display:flex;align-items:center;gap:8px}
+.qt-search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:19px;height:19px;color:var(--muted)}
+.qt-search input{flex:1;min-width:0}
+.qt-add{flex:none;border:2px solid var(--line-ink);background:var(--mx-rosa);color:#fff;font-weight:700;border-radius:12px;padding:10px 14px;cursor:pointer}
+.qt-hint{margin:-4px 0 0;font-size:.82rem;color:var(--muted)}
+.qt-sugg{display:flex;flex-wrap:wrap;gap:6px}
+.qt-s{border:1.5px dashed var(--line-ink);background:var(--card);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:.9rem}
+.qt-chips{display:flex;flex-wrap:wrap;gap:6px}
+.qt-chip{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--line-ink);background:var(--stock);color:var(--stock-ink);border-radius:999px;padding:6px 10px 6px 12px;font-weight:700;font-size:.9rem;cursor:pointer}
+.qt-chip span[aria-hidden]{font-size:1.1rem;line-height:1;color:var(--stock-muted)}
+.qt-chip .en,.qt-pick .en,.qt-s .en,.qt-miss .en{font-weight:400;color:var(--muted);font-size:.85em}
+.qt-chip .en{color:var(--stock-muted)}
+.qt-clear{border:0;background:none;color:var(--talavera);font-weight:700;cursor:pointer;padding:6px}
+.qt-unknown{margin:0;font-size:.85rem;color:var(--chile)}
+.qt-basics{display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--muted);cursor:pointer}
+.qt-basics input{width:20px;height:20px;accent-color:var(--nopal)}
+.qt-sec{display:grid;gap:10px;margin-top:26px}
+.qt-sec h2.rotulo{font-size:1.6rem;color:var(--ink)}
+.qt-row{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:center;text-decoration:none;color:inherit;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:8px 12px 8px 8px}
+.qt-row:hover{border-color:var(--line-ink)}
+.qt-art{width:64px;height:76px;border-radius:6px;border:2px solid var(--line-ink);background:color-mix(in srgb, var(--g) 78%, #fff);position:relative;overflow:hidden}
+.qt-art svg{position:absolute;inset:8%;width:84%;height:84%}
+.qt-main{display:grid;gap:3px;min-width:0}
+.qt-nm{font-family:var(--f-slab);text-transform:uppercase;letter-spacing:.03em;font-size:.88rem}
+.qt-meter{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.qt-meter i{display:block;height:100%;background:var(--nopal);border-radius:3px}
+.qt-have{font-size:.78rem;color:var(--muted);font-family:var(--f-mono)}
+.qt-miss{font-size:.85rem}
+.qt-miss.ok{color:var(--nopal);font-weight:700}
+.qt-picks{margin-top:28px;padding-top:6px;border-top:1px dashed var(--line)}
+.qt-pickrow{display:flex;flex-wrap:wrap;gap:6px}
+.qt-pick{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:.9rem;color:var(--ink)}
+.qt-pick[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.qt-pick[aria-pressed="true"] .en{color:var(--paper);opacity:.75}
+.qt-season{margin-top:16px}
+.qt-season summary{cursor:pointer;font-weight:700;padding:6px 0}
+.qt-season summary span{font-weight:400;color:var(--muted)}
+.qt-ex{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 /* Milagro (sacred heart) save button */
 .icon-btn.fav svg{width:24px;height:24px}
 .icon-btn[aria-pressed="true"].fav{border-color:var(--chile);background:var(--chile-soft)}
@@ -292,6 +355,7 @@ html.cook .ing{padding:12px 0}
 <nav class="nav" aria-label="Secciones">
   <div class="in">
     <a href="#recetas" data-nav="recetas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="7.5" y="5.2" width="9" height="9.3" rx="1"/><path d="M5 2.5h3.6v3.2H5z" fill="currentColor"/><circle cx="12" cy="10" r="1.9"/><path d="M12 6.6v.9M12 12.5v.9M8.6 10h.9M14.5 10h.9"/><path d="M8 18h8"/></svg>Recetas</a>
+    <a href="#que-tengo" data-nav="que-tengo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10h17l-1.8 9.2a1.6 1.6 0 0 1-1.6 1.3H6.9a1.6 1.6 0 0 1-1.6-1.3z"/><path d="M8 10c0-3.3 1.8-6 4-6s4 2.7 4 6"/><path d="M8.5 13.5v4M12 13.5v4M15.5 13.5v4"/></svg>¿Qué tengo?</a>
     <a href="#guardadas" data-nav="guardadas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-7.5-10A4 4 0 0 1 12 8.6 4 4 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M12 7.6c-1.8-1.5-1.2-3.4 0-5 1.2 1.6 1.8 3.5 0 5z"/><path d="M3.5 6l1.8 1.2M20.5 6l-1.8 1.2"/></svg>Guardadas</a>
     <a href="#despensa" data-nav="despensa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 7c3.6-.9 6.6 1.5 8.4 5.1 1.6 3.4 2.6 6.9 1.3 8.4-1.7.8-4.6-1.3-6.7-4.5C8.1 12.8 5.7 9.4 7.2 7z"/><path d="M7.2 7c-.4-1.8.4-3.4 2.2-3.9"/><path d="M5.6 7.6c.6-1.4 2.4-1.9 3.6-1.1"/></svg>Despensa</a>
   </div>
@@ -1085,6 +1149,123 @@ const VERSO = {
 /* Each category's card color, from the market: cempasúchil, chile, rosa mexicano, mole, maíz, nopal, turquesa, cobalto, concha pink, jacaranda */
 const CATCOLOR = {desayunos:"#F29F05", caldos:"#D7262E", guisos:"#E4007C", moles:"#7A3E1D", masa:"#E9B21C", frijoles:"#2E8B57", salsas:"#0E9C9C", bebidas:"#1F4FB5", pan:"#EE7FAE", postres:"#7B4FB5"};
 
+const LEXICON = [
+  ["puerco","Puerco","Pork","protein",null,["pork","pork shoulder","espaldilla","pork neck bones","espinazo","pig's feet","manitas","country ribs","cerdo","puerco","carne de cerdo","carne de puerco","ground pork","pork leg","pierna"]],
+  ["pollo","Pollo","Chicken","protein",null,["chicken","chickens","pollo","stewing hen","gallina","hen","chicken thighs","chicken breasts","chicken pieces","pechuga","muslos"]],
+  ["guajolote","Guajolote","Turkey","protein",null,["turkey","guajolote","pavo"]],
+  ["res","Res","Beef","protein",null,["beef","res","beef shank","chambarete","short ribs","costilla de res","beef cheeks","cachete","chuck","chuck roast","flank","skirt steak","ground beef","carne molida","oxtail","carne de res","steak","bistec"]],
+  ["chivo","Chivo","Goat or lamb","protein",null,["goat","chivo","lamb","borrego","cordero","lamb shoulder"]],
+  ["panza","Pancita","Tripe","protein",null,["tripe","honeycomb tripe","beef honeycomb tripe","beef tripe","panza","pancita","tripa","beef foot","pata de res"]],
+  ["machaca","Machaca","Dried beef","protein",null,["machaca","dried shredded beef","carne seca"]],
+  ["chorizo","Chorizo","Chorizo","protein",null,["chorizo","longaniza","mexican chorizo"]],
+  ["jamon","Jamón","Ham","main",null,["ham","jamon","salchicha","salchichas","hot dog","hot dogs"]],
+  ["tocino","Tocino","Bacon","main",null,["bacon","tocino"]],
+  ["huevo","Huevo","Eggs","main",null,["egg","eggs","huevo","huevos","yolk","yolks","yema","yemas"]],
+  ["chicharron","Chicharrón","Chicharrón","main",null,["chicharron","pork rinds"]],
+  ["queso","Queso","Cheese","main",null,["cheese","queso","quesos"]],
+  ["queso-fresco","Queso fresco","Fresh cheese","main","queso",["queso fresco","queso ranchero","panela","queso panela"]],
+  ["queso-oaxaca","Queso Oaxaca","Melting cheese","main","queso",["queso oaxaca","oaxaca cheese","quesillo","asadero","queso chihuahua","chihuahua cheese","manchego","mozzarella","monterey jack"]],
+  ["queso-anejo","Queso añejo","Aged cheese","main","queso",["cotija","queso anejo","queso cotija"]],
+  ["queso-crema","Queso crema","Cream cheese","main","queso",["cream cheese","queso crema","philadelphia"]],
+  ["crema","Crema","Crema","main",null,["crema","sour cream","crema mexicana"]],
+  ["leche","Leche","Milk","main",null,["milk","leche","whole milk"]],
+  ["leche-evaporada","Leche evaporada","Evaporated milk","main","leche",["evaporated milk","leche evaporada"]],
+  ["lechera","Leche condensada","Condensed milk","main","leche",["condensed milk","sweetened condensed milk","lechera","leche condensada"]],
+  ["tortillas","Tortillas","Corn tortillas","main",null,["tortilla","tortillas","corn tortilla","corn tortillas","tortillas de maiz","totopos","tortilla chips"]],
+  ["tortilla-harina","Tortillas de harina","Flour tortillas","main",null,["flour tortillas","flour tortilla","tortillas de harina","sobaqueras"]],
+  ["tostadas","Tostadas","Tostadas","main","tortillas",["tostada","tostadas"]],
+  ["masa","Masa","Masa","main",null,["masa","masa harina","fresh masa","maseca"]],
+  ["arroz","Arroz","Rice","main",null,["rice","arroz","long-grain rice","white rice"]],
+  ["fideo","Fideo","Fideo noodles","main",null,["fideo","vermicelli","fideos"]],
+  ["pan","Pan","Bread","main",null,["bolillo","bolillos","bread","birote","rolls","telera","white bread"]],
+  ["harina","Harina","Flour","main",null,["flour","harina","all-purpose flour","bread flour","harina de trigo"]],
+  ["maiz-pozolero","Maíz pozolero","Hominy","main",null,["hominy","maiz pozolero","cacahuazintle","nixtamal","pozolero"]],
+  ["elote","Elote","Corn on the cob","main",null,["ears of corn","ear of corn","elote","elotes","corn on the cob","corn"]],
+  ["hojas-maiz","Hojas de maíz","Corn husks","main",null,["corn husks","corn husk","hojas de maiz","hojas para tamal","husks"]],
+  ["hoja-platano","Hoja de plátano","Banana leaves","main",null,["banana leaves","banana leaf","hoja de platano","hojas de platano"]],
+  ["frijol","Frijol","Beans","main",null,["beans","frijol","frijoles","pinto beans","pinto","black beans","frijoles negros","bayos","refried beans","refritos","frijoles de la olla"]],
+  ["garbanzo","Garbanzo","Chickpeas","main",null,["chickpeas","chickpea","garbanzo","garbanzos"]],
+  ["jitomate","Jitomate","Tomatoes","main",null,["tomato","tomatoes","jitomate","jitomates","roma tomatoes","roma tomato","tomate rojo"]],
+  ["tomatillo","Tomate verde","Tomatillos","main",null,["tomatillo","tomatillos","tomate verde","tomates verdes"]],
+  ["cebolla","Cebolla","Onion","aromatic",null,["onion","onions","cebolla","cebollas","white onion","red onion","cebolla morada"]],
+  ["ajo","Ajo","Garlic","aromatic",null,["garlic","ajo","ajos","garlic cloves","garlic clove","head garlic","diente de ajo","dientes de ajo"]],
+  ["papa","Papa","Potatoes","main",null,["potato","potatoes","papa","papas"]],
+  ["zanahoria","Zanahoria","Carrots","main",null,["carrot","carrots","zanahoria","zanahorias"]],
+  ["calabacita","Calabacita","Zucchini","main",null,["zucchini","calabacita","calabacitas","squash"]],
+  ["chayote","Chayote","Chayote","main",null,["chayote","chayotes"]],
+  ["repollo","Repollo","Cabbage","main",null,["cabbage","repollo","col"]],
+  ["lechuga","Lechuga","Lettuce","main",null,["lettuce","romaine","lechuga"]],
+  ["rabano","Rábano","Radishes","main",null,["radish","radishes","rabano","rabanos"]],
+  ["aguacate","Aguacate","Avocado","main",null,["avocado","avocados","aguacate","aguacates"]],
+  ["limon","Limón","Limes","main",null,["lime","limes","limon","limones","lime juice"]],
+  ["naranja","Naranja","Oranges","main",null,["orange","oranges","naranja","naranjas","naranja agria","sour orange","seville orange","orange juice"]],
+  ["platano","Plátano macho","Plantain","main",null,["plantain","plantains","platano macho","platano"]],
+  ["nopales","Nopales","Cactus paddles","main",null,["nopales","nopal","cactus paddles","cactus"]],
+  ["verdolagas","Verdolagas","Purslane","main",null,["verdolagas","purslane"]],
+  ["ejotes","Ejotes","Green beans","main",null,["green beans","ejotes"]],
+  ["chicharos","Chícharos","Peas","main",null,["peas","chicharos"]],
+  ["apio","Apio","Celery","main",null,["celery","apio"]],
+  ["xoconostle","Xoconostle","Xoconostle","main",null,["xoconostle","xoconostles"]],
+  ["pasas","Pasas","Raisins","main",null,["raisins","pasas"]],
+  ["almendras","Almendras","Almonds","main",null,["almonds","almendras"]],
+  ["cacahuate","Cacahuate","Peanuts","main",null,["peanuts","cacahuate","cacahuates"]],
+  ["pepitas","Pepitas","Pumpkin seeds","main",null,["pepitas","pumpkin seeds"]],
+  ["ajonjoli","Ajonjolí","Sesame seeds","main",null,["sesame","sesame seeds","ajonjoli"]],
+  ["fruta","Fruta","Pear, peach, apple","main",null,["pear","peach","apple","pera","durazno","manzana"]],
+  ["chile","Chiles","Chiles","main",null,["chile","chiles","chili","chilies","chilis"]],
+  ["chile-fresco","Chiles frescos","Fresh chiles","main","chile",["fresh chiles","chiles frescos","chile verde"]],
+  ["serrano","Serrano","Serrano chiles","main","chile-fresco",["serrano chiles","serrano chile","serrano","serranos","chile serrano"]],
+  ["jalapeno","Jalapeño","Jalapeños","main","chile-fresco",["jalapeno","jalapenos","chile jalapeno","anaheim"]],
+  ["poblano","Poblano","Poblano chiles","main","chile-fresco",["poblano chiles","poblano chile","poblano","poblanos","chile poblano"]],
+  ["habanero","Habanero","Habaneros","main","chile-fresco",["habanero chiles","habanero chile","habanero","habaneros"]],
+  ["chile-seco","Chiles secos","Dried chiles","main","chile",["dried chiles","dried chile","chiles secos","chile seco"]],
+  ["guajillo","Guajillo","Guajillo chiles","main","chile-seco",["guajillo chiles","guajillo chile","guajillo","guajillos","chile guajillo","chiles guajillo"]],
+  ["ancho","Ancho","Ancho chiles","main","chile-seco",["ancho chiles","ancho chile","ancho","anchos","chile ancho","chiles ancho"]],
+  ["pasilla","Pasilla","Pasilla chiles","main","chile-seco",["pasilla chiles","pasilla chile","pasilla","pasillas","chile pasilla","chiles pasilla"]],
+  ["mulato","Mulato","Mulato chiles","main","chile-seco",["mulato chiles","mulato chile","mulato","mulatos","chiles mulato"]],
+  ["chipotle","Chipotle","Chipotles","main","chile-seco",["chipotle chiles","dried chipotles","chipotle","chipotles","chipotles en adobo","chipotle en adobo","chipotle mora","chiles chipotle"]],
+  ["arbol","Chile de árbol","Chiles de árbol","main","chile-seco",["arbol chiles","chile de arbol","chiles de arbol","arbol"]],
+  ["piquin","Piquín","Piquín / chiltepín","season","chile-seco",["piquin","chiltepin","chile piquin"]],
+  ["oregano","Orégano","Oregano","season",null,["oregano","mexican oregano"]],
+  ["comino","Comino","Cumin","season",null,["cumin","comino","cumin seed"]],
+  ["canela","Canela","Cinnamon","season",null,["cinnamon","canela","mexican cinnamon"]],
+  ["clavo","Clavo","Cloves","season",null,["cloves","whole cloves","clavo","clavos"]],
+  ["laurel","Laurel","Bay leaves","season",null,["bay leaf","bay leaves","laurel","hoja de laurel"]],
+  ["pimienta-gorda","Pimienta gorda","Allspice","season",null,["allspice","allspice berries","pimienta gorda"]],
+  ["anis","Anís","Anise","season",null,["anise","anise seed","star anise","anis"]],
+  ["tomillo","Tomillo","Thyme","season",null,["thyme","tomillo"]],
+  ["mejorana","Mejorana","Marjoram","season",null,["marjoram","mejorana"]],
+  ["coriandro","Cilantro en semilla","Coriander seed","season",null,["coriander seed","coriander"]],
+  ["epazote","Epazote","Epazote","season",null,["epazote"]],
+  ["cilantro","Cilantro","Cilantro","season",null,["cilantro"]],
+  ["hierbabuena","Hierbabuena","Mint","season",null,["hierbabuena","mint"]],
+  ["hoja-santa","Hoja santa","Hoja santa","season",null,["hoja santa"]],
+  ["hoja-aguacate","Hoja de aguacate","Avocado leaves","season",null,["avocado leaves","avocado leaf","hojas de aguacate","hoja de aguacate"]],
+  ["achiote","Achiote","Achiote","season",null,["achiote","annatto","recado rojo"]],
+  ["jengibre","Jengibre","Ginger","season",null,["ginger","jengibre"]],
+  ["vinagre","Vinagre","Vinegar","season",null,["vinegar","vinagre","apple cider vinegar"]],
+  ["vainilla","Vainilla","Vanilla","season",null,["vanilla","vainilla"]],
+  ["cascara","Cáscara de cítrico","Citrus peel","season",null,["lime peel","orange peel","lime zest","orange zest","zest of 2 oranges","zest of an orange","strip lime peel","cascara de limon"]],
+  ["_","","","ignore",null,["chile seeds","red chile sauce","chile sauce","the red chile","soaking water","soaking liquid","cooking water","salsa verde","salsa ranchera","the base","the base recipe","picadillo","beef or chicken broth"]],
+  ["azahar","Agua de azahar","Orange blossom water","season",null,["orange blossom water","agua de azahar"]],
+  ["levadura","Levadura","Yeast","main",null,["yeast","instant yeast","levadura"]],
+  ["chocolate","Chocolate","Mexican chocolate","main",null,["chocolate","mexican chocolate","cocoa","cocoa powder","chocolate de metate","abuelita"]],
+  ["piloncillo","Piloncillo","Piloncillo","main",null,["piloncillo","brown sugar","panela de cana"]],
+  ["cafe","Café","Coffee","main",null,["coffee","cafe","ground coffee"]],
+  ["jamaica","Jamaica","Hibiscus","main",null,["jamaica","hibiscus","flor de jamaica"]],
+  ["cerveza","Cerveza","Beer","main",null,["beer","cerveza","pulque"]],
+  ["sal","Sal","Salt","basic",null,["salt","sal","coarse salt"]],
+  ["agua","Agua","Water","basic",null,["water","agua"]],
+  ["aceite","Aceite","Oil","basic",null,["oil","aceite","vegetable oil"]],
+  ["manteca","Manteca","Lard or shortening","basic",null,["lard","manteca","pork lard","shortening","vegetable shortening","manteca vegetal"]],
+  ["mantequilla","Mantequilla","Butter","basic",null,["butter","mantequilla","soft butter"]],
+  ["azucar","Azúcar","Sugar","basic",null,["sugar","azucar","powdered sugar"]],
+  ["pimienta","Pimienta","Black pepper","basic",null,["black pepper","pepper","peppercorns","black peppercorns","pimienta"]],
+  ["caldo","Caldo","Broth","basic",null,["broth","chicken broth","beef broth","caldo","stock","pork broth","cooking broth"]],
+  ["polvo-hornear","Polvo para hornear","Baking powder","basic",null,["baking powder","polvo para hornear","royal"]]
+];
+
+
 const CAT_NAME = Object.fromEntries(CATS);
 
 /* ---------- Lotería art: flat folk drawings, 100×100, black ink outlines ---------- */
@@ -1346,6 +1527,144 @@ const UNITS = (() => {
   return { metric };
 })();
 
+const PANTRY = (() => {
+  const fold = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’`]/g, "'");
+  const byId = Object.fromEntries(LEXICON.map(([id, es, en, kind, parent, aliases]) => [id, { id, es, en, kind, parent, aliases }]));
+  // Every alias, longest first, so "chicken broth" wins over "chicken" and "garlic cloves" over "cloves".
+  const ALIASES = LEXICON.flatMap(([id, , , , , aliases]) => aliases.map(a => [fold(a), id]))
+    .sort((a, b) => b[0].length - a[0].length || (a[0] < b[0] ? -1 : 1));
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const RE = ALIASES.map(([a, id]) => [new RegExp(`(^|[^a-z0-9'])${esc(a)}(?:es|s)?(?=[^a-z0-9']|$)`, 'g'), id]);
+
+  /* Ids named in a piece of text, in order of first appearance. */
+  const idsIn = text => {
+    let t = ' ' + fold(text) + ' ';
+    const found = [];
+    for (const [re, id] of RE) {
+      re.lastIndex = 0;
+      let m, hit = false;
+      while ((m = re.exec(t))) {
+        hit = true;
+        const start = m.index + m[1].length;
+        found.push([start, id]);
+        t = t.slice(0, start) + ' '.repeat(m[0].length - m[1].length) + t.slice(start + m[0].length - m[1].length);
+        re.lastIndex = start + 1;
+      }
+    }
+    found.sort((a, b) => a[0] - b[0]);
+    return [...new Set(found.map(f => f[1]))].filter(id => byId[id].kind !== 'ignore');
+  };
+
+  const ancestors = id => { const out = []; let p = byId[id] && byId[id].parent; while (p) { out.push(p); p = byId[p].parent; } return out; };
+  const isUnder = (id, root) => id === root || ancestors(id).includes(root);
+
+  const OPTIONAL_GROUP = /servir|encima|to serve|garnish|pico de gallo/i;
+  /* What a recipe needs: a list of alternatives ("pork or chicken" is one need). */
+  const needsOf = recipe => {
+    const groups = recipe.ing.length && Array.isArray(recipe.ing[0]) ? recipe.ing : [['', recipe.ing]];
+    const needs = [];
+    const seen = new Set();
+    for (const [title, items] of groups) {
+      const garnish = OPTIONAL_GROUP.test(title || '');
+      for (const line of items) {
+        if (garnish || /\boptional\b|opcional/i.test(line) || /^for\b/i.test(line)) continue;
+        const ids = idsIn(line).filter(i => byId[i].kind !== 'ignore');
+        if (!ids.length) continue;
+        const alternatives = /\bor\b|\bo\b/i.test(fold(line));
+        if (alternatives) {
+          const real = ids.filter(i => byId[i].kind !== 'basic');
+          if (real.length && real.length < ids.length) ids.splice(0, ids.length, ...real);
+          const key = ids.slice().sort().join('|');
+          if (!seen.has(key) && !ids.some(i => seen.has(i))) { needs.push(ids); seen.add(key); }
+        } else {
+          for (const id of ids) if (!seen.has(id)) { needs.push([id]); seen.add(id); }
+        }
+      }
+    }
+    return needs;
+  };
+
+  /* Turns what someone typed into ingredient ids. Misspellings within one or two letters still match. */
+  const lev = (a, b) => {
+    if (Math.abs(a.length - b.length) > 2) return 3;
+    const d = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+    for (let j = 1; j <= b.length; j++) d[0][j] = j;
+    for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++)
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1),
+        i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1] ? d[i - 2][j - 2] + 1 : Infinity);
+    return d[a.length][b.length];
+  };
+  const SINGLE = ALIASES.filter(([a]) => !a.includes(' '));
+  const STOP = new Set(['i','have','some','a','an','the','and','y','de','del','la','el','los','las','con','tengo','hay','un','una','unos','unas','of','with','my','me','fresh','frescos','fresco','few','little','poco','poquito','bit','lots','lb','kg','g','cup','cups','piece','pieces','can','cans','bag','leftover','sobras','que','what','or','o','also','tambien','plus','mas']);
+  const parse = text => {
+    const ids = idsIn(text);
+    // leftover words that didn't match anything: try a typo-tolerant match
+    let rest = ' ' + fold(text) + ' ';
+    for (const [re] of RE) { re.lastIndex = 0; rest = rest.replace(re, (m, pre) => pre + ' '.repeat(m.length - pre.length)); }
+    const unknown = [];
+    for (const w of rest.split(/[^a-z0-9ñ'-]+/).filter(Boolean)) {
+      if (STOP.has(w) || /^\d/.test(w)) continue;
+      if (w.length >= 4) {
+        const limit = w.length >= 8 ? 2 : 1;
+        let best = null, bestD = limit + 1;
+        for (const [a, id] of SINGLE) { const d = lev(w, a); if (d < bestD) { best = id; bestD = d; } }
+        if (best) { if (!ids.includes(best)) ids.push(best); continue; }
+      }
+      unknown.push(w);
+    }
+    return { ids, unknown };
+  };
+
+  /* Suggestions while typing: entries whose Spanish, English or alias starts with (then contains) the text. */
+  const suggest = (text, exclude = []) => {
+    const q = fold(text).trim();
+    if (q.length < 2) return [];
+    const score = e => {
+      const names = [e.es, e.en, ...e.aliases].map(fold);
+      if (names.some(n => n.startsWith(q))) return 0;
+      if (names.some(n => n.split(/\s+/).some(w => w.startsWith(q)))) return 1;
+      if (names.some(n => n.includes(q))) return 2;
+      return 9;
+    };
+    return Object.values(byId).filter(e => e.kind !== 'basic' && e.kind !== 'ignore' && !exclude.includes(e.id))
+      .map(e => [score(e), e]).filter(([s]) => s < 9).sort((a, b) => a[0] - b[0] || a[1].es.localeCompare(b[1].es)).slice(0, 6).map(([, e]) => e);
+  };
+
+  const WEIGHT = { protein: 3, main: 1, aromatic: 0.5, season: 0.5, basic: 0.25 };
+  /* Ranks recipes by how much of what they need you have. Herbs and spices only count once you enter one;
+     basics (salt, oil, lard, sugar, broth…) are assumed unless haveBasics is false. */
+  const rank = (recipes, haveIds, { haveBasics = true } = {}) => {
+    const have = new Set(haveIds);
+    const seasoningsEntered = haveIds.some(id => byId[id] && byId[id].kind === 'season');
+    const covered = need => need.some(id => have.has(id) || ancestors(id).some(a => have.has(a)) || haveIds.some(h => isUnder(h, id)));
+    const results = [];
+    for (const r of recipes) {
+      let total = 0, got = 0, matchedReal = 0;
+      const missing = [], matched = [];
+      for (const need of needsOf(r)) {
+        const kind = byId[need[0]].kind;
+        if (kind === 'season' && !seasoningsEntered) continue;
+        if (kind === 'basic' && haveBasics) continue;
+        const w = WEIGHT[kind];
+        total += w;
+        if (covered(need)) { got += w; matched.push(need); if (kind === 'protein' || kind === 'main') matchedReal++; }
+        else missing.push(need);
+      }
+      if (!total || !matchedReal) continue;
+      // How much of what you entered this recipe uses (herbs and basics don't count here).
+      const yours = haveIds.filter(h => byId[h] && !['season', 'basic'].includes(byId[h].kind));
+      const used = yours.length ? yours.filter(h => matched.some(n => n.some(id => id === h || isUnder(id, h) || isUnder(h, id)))).length / yours.length : 0;
+      const score = got / total;
+      results.push({ recipe: r, score, used, rankScore: score * 0.7 + used * 0.3, matched, missing });
+    }
+    return results.sort((a, b) => b.rankScore - a.rankScore || a.missing.length - b.missing.length || a.recipe.name.localeCompare(b.recipe.name));
+  };
+
+  const label = id => byId[id] ? byId[id].es : id;
+  const needLabel = need => need.map(label).join(' o ');
+  return { idsIn, parse, suggest, rank, needsOf, label, needLabel, byId, fold };
+})();
+
 /* ---------- storage (per-viewer conveniences) ---------- */
 const store = {
   get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } },
@@ -1592,7 +1911,8 @@ function detail(id){
     </div>
     <p class="cookmsg" id="cookmsg" ${cooking ? '' : 'hidden'}></p>
     <header class="hero" style="--g:${CATCOLOR[r.cat]}">
-      <div class="art big"><span class="no">${NUM[r.id]}</span>${ART(r)}${VERSO[r.id] ? `<span class="cantada">«${esc(VERSO[r.id])}»</span>` : ''}</div>
+      <div class="hero-card"><div class="loteria big" style="--g:${CATCOLOR[r.cat]}"><span class="art"><span class="no">${NUM[r.id]}</span>${ART(r)}</span><span class="nm">${esc(cardName(r))}</span></div></div>
+      ${VERSO[r.id] ? `<p class="cantada-line">«${esc(VERSO[r.id])}»</p>` : ''}
       <span class="eyebrow">${esc(r.region)} · ${esc(CAT_NAME[r.cat])}</span>
       <h1 class="rotulo">${esc(r.name)}</h1>
       <span class="en">${esc(r.en)}</span>
@@ -1611,6 +1931,106 @@ function detail(id){
       ${tab === 'pc' ? panelPC(r) : tab === 'vars' ? panelVars(r) : panelTrad(r)}
     </div>`;
   if (cooking) document.getElementById('cookmsg').textContent = cookMsg;
+}
+
+/* ---------- ¿qué tengo? ---------- */
+const qt = { have: store.get('ra.have', []).filter(id => PANTRY.byId[id]), basics: store.get('ra.basics', true), unknown: [] };
+const saveQt = () => { store.set('ra.have', qt.have); store.set('ra.basics', qt.basics); };
+const PICKS = [
+  ['Carnes y huevo', ['puerco', 'pollo', 'res', 'chivo', 'chorizo', 'panza', 'machaca', 'huevo']],
+  ['Verduras y fruta', ['jitomate', 'tomatillo', 'cebolla', 'ajo', 'papa', 'zanahoria', 'calabacita', 'chayote', 'elote', 'aguacate', 'limon', 'naranja', 'nopales', 'platano']],
+  ['De la despensa', ['tortillas', 'tortilla-harina', 'masa', 'arroz', 'frijol', 'fideo', 'pan', 'harina', 'maiz-pozolero', 'queso', 'crema', 'leche', 'chocolate', 'piloncillo', 'cafe', 'jamaica', 'levadura', 'hojas-maiz']],
+  ['Chiles', ['guajillo', 'ancho', 'pasilla', 'chipotle', 'arbol', 'serrano', 'jalapeno', 'poblano', 'habanero']]
+];
+const SEASONINGS = ['oregano', 'comino', 'canela', 'clavo', 'laurel', 'epazote', 'cilantro', 'hierbabuena', 'achiote', 'hoja-aguacate', 'anis', 'tomillo', 'vinagre', 'vainilla'];
+const EXAMPLES = ['puerco, chiles secos, maíz pozolero', 'huevos, tortillas, tomate verde', 'chicken, tomatoes, onion, chipotle', 'harina, levadura, leche, huevo'];
+const ingName = id => { const e = PANTRY.byId[id]; return e.es === e.en || PANTRY.fold(e.es) === PANTRY.fold(e.en) ? e.es : `${e.es} <span class="en">${esc(e.en.toLowerCase())}</span>`; };
+function queTengo(){
+  app.innerHTML = `
+    <header class="mast">
+      <div class="mast-top">${picado(10)}${themeBtn()}</div>
+      <h1 class="rotulo">¿Qué tengo?</h1>
+      <p class="qt-lede">Write what's in your kitchen, in English or Spanish, and see what you can cook.</p>
+    </header>
+    <div class="qt-box">
+      <div class="search qt-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10h17l-1.8 9.2a1.6 1.6 0 0 1-1.6 1.3H6.9a1.6 1.6 0 0 1-1.6-1.3z"/><path d="M8 10c0-3.3 1.8-6 4-6s4 2.7 4 6"/></svg>
+        <input id="qtIn" type="text" autocomplete="off" enterkeyhint="done" placeholder="puerco, jitomate, tortillas…" aria-label="Ingredients you have" aria-describedby="qtHint">
+        <button class="qt-add" id="qtAdd" aria-label="Add">Agregar</button>
+      </div>
+      <p class="qt-hint" id="qtHint">Separate with commas. Typos are fine.</p>
+      <div class="qt-sugg" id="qtSugg" hidden></div>
+      <div class="qt-chips" id="qtChips"></div>
+      <p class="qt-unknown" id="qtUnknown" hidden></p>
+      <label class="qt-basics" for="qtBasics"><input type="checkbox" id="qtBasics" ${qt.basics ? 'checked' : ''}><span>I have the basics: salt, oil, lard, sugar and broth</span></label>
+    </div>
+    <div id="qtResults"></div>
+    <section class="qt-picks" aria-label="Quick add">
+      ${PICKS.map(([t, ids]) => `<h3 class="group">${t}</h3><div class="qt-pickrow">${ids.map(pickBtn).join('')}</div>`).join('')}
+      <details class="qt-season"><summary>Especias y hierbas <span>(optional)</span></summary>
+        <p class="qt-hint">Only add these if you want them to count. Otherwise recipes aren't marked down for them.</p>
+        <div class="qt-pickrow">${SEASONINGS.map(pickBtn).join('')}</div>
+      </details>
+    </section>`;
+  const input = document.getElementById('qtIn');
+  input.addEventListener('input', () => renderSugg(input.value));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || (e.key === ',' && input.value.trim())) { e.preventDefault(); addText(input.value); }
+    if (e.key === 'Backspace' && !input.value && qt.have.length) { qt.have.pop(); saveQt(); renderQt(); }
+  });
+  renderQt();
+}
+const pickBtn = id => `<button class="qt-pick" data-pick="${id}" aria-pressed="${qt.have.includes(id)}">${ingName(id)}</button>`;
+function addText(text){
+  const { ids, unknown } = PANTRY.parse(text);
+  ids.forEach(id => { if (!qt.have.includes(id)) qt.have.push(id); });
+  qt.unknown = unknown;
+  saveQt();
+  const input = document.getElementById('qtIn'); if (input) input.value = '';
+  renderSugg('');
+  renderQt();
+}
+function renderSugg(text){
+  const box = document.getElementById('qtSugg'); if (!box) return;
+  const last = text.split(/[,;]| y | and /).pop();
+  const list = PANTRY.suggest(last, qt.have);
+  box.hidden = !list.length;
+  box.innerHTML = list.map(e => `<button class="qt-s" data-sugg="${e.id}">${ingName(e.id)}</button>`).join('');
+}
+function renderQt(){
+  document.getElementById('qtChips').innerHTML = qt.have.map(id => `<button class="qt-chip" data-unpick="${id}" aria-label="Remove ${esc(PANTRY.byId[id].en)}">${ingName(id)}<span aria-hidden="true">×</span></button>`).join('')
+    + (qt.have.length ? `<button class="qt-clear" data-clear>Borrar todo</button>` : '');
+  const u = document.getElementById('qtUnknown');
+  u.hidden = !qt.unknown.length;
+  u.textContent = qt.unknown.length ? `I didn't recognize: ${qt.unknown.join(', ')}.` : '';
+  document.querySelectorAll('[data-pick]').forEach(b => b.setAttribute('aria-pressed', qt.have.includes(b.dataset.pick)));
+  const out = document.getElementById('qtResults');
+  if (!qt.have.length){
+    out.innerHTML = `<div class="empty qt-empty"><strong>¿Qué hay en la cocina?</strong>Add a few main ingredients, like a meat, a vegetable or two and what's in the pantry. Try one of these:<div class="qt-ex">${EXAMPLES.map(x => `<button class="qt-pick" data-example="${esc(x)}">${esc(x)}</button>`).join('')}</div></div>`;
+    return;
+  }
+  const res = PANTRY.rank(R, qt.have, { haveBasics: qt.basics });
+  const realMissing = x => x.missing.filter(n => !['season', 'basic'].includes(PANTRY.byId[n[0]].kind));
+  const can = res.filter(x => x.score >= 0.85);
+  const close = res.filter(x => x.score < 0.85 && realMissing(x).length <= 2);
+  const more = res.filter(x => x.score < 0.85 && realMissing(x).length > 2).slice(0, 8);
+  const row = x => {
+    const r = x.recipe, pct = Math.round(x.score * 100);
+    const have = x.matched.length, need = x.matched.length + x.missing.length;
+    return `<a class="qt-row" href="#${r.id}" style="--g:${CATCOLOR[r.cat]}">
+      <span class="qt-art">${ART(r)}</span>
+      <span class="qt-main">
+        <span class="qt-nm">${esc(cardName(r))}</span>
+        <span class="qt-meter" role="img" aria-label="You have ${have} of ${need}"><i style="width:${pct}%"></i></span>
+        <span class="qt-have">Tienes ${have} de ${need}</span>
+        ${x.missing.length ? `<span class="qt-miss">Te falta: ${x.missing.map(n => n.map(ingName).join(' o ')).join(', ')}</span>` : `<span class="qt-miss ok">¡Tienes todo!</span>`}
+      </span>
+    </a>`;
+  };
+  const section = (title, list, note) => list.length ? `<section class="qt-sec"><h2 class="rotulo">${title}</h2>${note ? `<p class="qt-hint">${note}</p>` : ''}${list.map(row).join('')}</section>` : '';
+  out.innerHTML = res.length
+    ? section('Puedes hacer', can) + section('Te falta poquito', close, 'One or two things from the tienda.') + section('Con más mandado', more)
+    : `<div class="empty"><strong>Nothing yet</strong>None of the recipes use those. Try adding a meat, a chile or something from the pantry.</div>`;
 }
 
 /* ---------- despensa ---------- */
@@ -1660,6 +2080,7 @@ function route(){
   if (byId[h]) { detail(h); view = 'detail'; }
   else if (h === 'guardadas') { home(true); view = 'guardadas'; }
   else if (h === 'despensa') { pantry(); view = 'despensa'; }
+  else if (h === 'que-tengo') { queTengo(); view = 'que-tengo'; }
   else { home(false); view = 'home'; restore = (current === 'detail') ? state.homeScroll : 0; }
   current = view;
   window.scrollTo(0, restore);
@@ -1674,6 +2095,7 @@ window.addEventListener('hashchange', route);
 /* ---------- interactions ---------- */
 app.addEventListener('change', e => {
   const t = e.target;
+  if (t.id === 'qtBasics'){ qt.basics = t.checked; saveQt(); renderQt(); return; }
   if (t.matches('input[type="checkbox"][data-key]')){
     const k = t.dataset.key;
     if (t.checked) checks.add(k); else checks.delete(k);
@@ -1692,6 +2114,16 @@ app.addEventListener('click', e => {
     if (on && list && [...list.querySelectorAll('.step')].every(b => b.classList.contains('done'))) toast('¡Buen provecho!');
     return;
   }
+  const pick = e.target.closest('[data-pick]');
+  if (pick){ const id = pick.dataset.pick; qt.have = qt.have.includes(id) ? qt.have.filter(x => x !== id) : [...qt.have, id]; qt.unknown = []; saveQt(); renderQt(); return; }
+  const unpick = e.target.closest('[data-unpick]');
+  if (unpick){ qt.have = qt.have.filter(x => x !== unpick.dataset.unpick); saveQt(); renderQt(); return; }
+  const sugg = e.target.closest('[data-sugg]');
+  if (sugg){ if (!qt.have.includes(sugg.dataset.sugg)) qt.have.push(sugg.dataset.sugg); const inp = document.getElementById('qtIn'); const parts = inp.value.split(','); parts.pop(); inp.value = ''; if (parts.join(',').trim()) addText(parts.join(',')); else { saveQt(); renderSugg(''); renderQt(); } inp.focus(); return; }
+  if (e.target.closest('#qtAdd')){ addText(document.getElementById('qtIn').value); return; }
+  if (e.target.closest('[data-clear]')){ qt.have = []; qt.unknown = []; saveQt(); renderQt(); return; }
+  const ex = e.target.closest('[data-example]');
+  if (ex){ addText(ex.dataset.example); return; }
   const chip = e.target.closest('.chip');
   if (chip){
     if (chip.hasAttribute('data-pc')) { state.pcOnly = !state.pcOnly; chip.setAttribute('aria-pressed', state.pcOnly); }

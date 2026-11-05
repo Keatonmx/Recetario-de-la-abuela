@@ -8,8 +8,10 @@ struct RecipeBook: Codable {
     let recipes: [Recipe]
     let chiles: [Chile]
     let glossary: [GlossaryEntry]
+    /// Ingredient names and aliases for ¿Qué tengo?
+    let lexicon: [LexEntry]
 
-    static let empty = RecipeBook(categories: [], recipes: [], chiles: [], glossary: [])
+    static let empty = RecipeBook(categories: [], recipes: [], chiles: [], glossary: [], lexicon: [])
 
     static func load(from url: URL) throws -> RecipeBook {
         let data = try Data(contentsOf: url)
@@ -67,6 +69,8 @@ struct Recipe: Codable, Hashable, Identifiable {
     let pressureCooker: PressureCooker?
     let pressureNote: String?
     let tips: [String]
+    /// What the recipe needs, for ¿Qué tengo?: each entry is a set of alternatives ("pork or chicken").
+    let needs: [[String]]
     let variations: [Variation]
 }
 

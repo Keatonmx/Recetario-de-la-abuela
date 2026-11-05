@@ -111,33 +111,22 @@ struct RecipeDetailView: View {
                 .font(.footnote)
                 .foregroundStyle(Color.talavera)
             }
-            VStack(spacing: 0) {
-                CardArt(
-                    recipe: recipe,
-                    color: store.color(forCategory: recipe.category),
-                    aspect: 2,
-                    cornerRadius: 0,
-                    numberSize: 17,
-                    artPadding: 14
-                )
-                if let verso = recipe.verso {
-                    Text("«\(verso)»")
-                        .font(.subheadline.italic())
-                        .foregroundStyle(Color.ink)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: .infinity)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 7)
-                        .background(Color.stock)
-                        .overlay(alignment: .top) { Rectangle().fill(Color.ink).frame(height: 2.5) }
-                        .accessibilityLabel("La cantada: \(verso)")
-                }
+            // The recipe as its lotería card, with the caller's line underneath.
+            LoteriaCard(recipe: recipe, big: true)
+                .frame(width: 240)
+                .rotationEffect(.degrees(-1.5))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 6)
+            if let verso = recipe.verso {
+                Text("«\(verso)»")
+                    .font(.subheadline.italic())
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 8)
+                    .accessibilityLabel("La cantada: \(verso)")
             }
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.ink, lineWidth: 2.5))
-            .frame(maxHeight: 280)
-            .background(RoundedRectangle(cornerRadius: 12).fill(Color.inkShadow).offset(x: 4, y: 5))
-            .padding(.bottom, 10)
             Text("\(recipe.region) · \(store.categoryName(recipe.category))".uppercased())
                 .font(.caption.weight(.bold))
                 .tracking(1)
@@ -487,12 +476,11 @@ struct ServingsCard: View {
     var body: some View {
         let factor = store.factor(for: recipe.id)
         VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .center) {
-                Text("¿PARA CUÁNTOS?")
-                    .font(.slab(15, relativeTo: .headline))
-                Spacer(minLength: 8)
-                if Scaler.base(recipe.servings) != nil {
-                    HStack(spacing: 8) {
+            Text("¿PARA CUÁNTOS?")
+                .font(.slab(15, relativeTo: .headline))
+            if Scaler.base(recipe.servings) != nil {
+                HStack {
+                    HStack(spacing: 10) {
                         stepButton("minus", label: "Fewer servings", direction: -1)
                         Text(store.shown(Scaler.yieldText(recipe.servings, factor: factor)))
                             .font(.system(.subheadline, design: .monospaced))
@@ -502,6 +490,7 @@ struct ServingsCard: View {
                             .accessibilityLabel("Makes \(store.shown(Scaler.yieldText(recipe.servings, factor: factor)))")
                         stepButton("plus", label: "More servings", direction: 1)
                     }
+                    Spacer(minLength: 0)
                 }
             }
             HStack(spacing: 8) {

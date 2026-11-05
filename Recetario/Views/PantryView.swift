@@ -91,6 +91,7 @@ struct PantryView: View {
         .scrollContentBackground(.hidden)
         .background(Color.paper)
         .navigationTitle("Despensa")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) { AppearanceButton() }
             ToolbarItem(placement: .principal) {

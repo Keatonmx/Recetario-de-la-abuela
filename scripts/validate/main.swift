@@ -2,7 +2,7 @@ import Foundation
 
 // Decodes recipes.json with the app's own models and checks basic integrity.
 // It also checks the Swift scaler against the web scaler's output in scaling-fixtures.json.
-// CI: swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift Recetario/Models/Units.swift scripts/validate/main.swift -o validate && ./validate
+// CI: swiftc Recetario/Models/*.swift scripts/validate/main.swift (except RecipeStore.swift, which needs SwiftUI) -o validate && ./validate
 
 let path = CommandLine.arguments.count > 1
     ? CommandLine.arguments[1]
@@ -34,9 +34,18 @@ do {
     let fixturesPath = CommandLine.arguments.count > 2 ? CommandLine.arguments[2] : "scripts/validate/scaling-fixtures.json"
     let cases = try JSONDecoder().decode([ScalingCase].self, from: Data(contentsOf: URL(fileURLWithPath: fixturesPath)))
     var mismatches = 0
+    let pantry = PantrySearch(lexicon: book.lexicon)
     for c in cases {
         let got: String
         switch c.kind {
+        case "ids": got = pantry.ids(in: c.input).joined(separator: ",")
+        case "parse":
+            let p = pantry.parse(c.input)
+            got = p.ids.joined(separator: ",") + "|" + p.unknown.joined(separator: ",")
+        case "rank", "rank-nobasics":
+            let have = c.input.split(separator: ",").map(String.init)
+            got = pantry.rank(book.recipes, have: have, haveBasics: c.kind == "rank")
+                .prefix(5).map { "\($0.recipe.id):\(String(format: "%.3f", $0.score))" }.joined(separator: ",")
         case "yield": got = Scaler.yieldText(c.input, factor: c.factor)
         case "metric": got = Units.metric(c.input)
         case "scaled-metric": got = Units.metric(Scaler.text(c.input, factor: c.factor))

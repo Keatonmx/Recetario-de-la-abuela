@@ -13,6 +13,10 @@ final class RecipeStore: ObservableObject {
     @Published var toast: String?
     /// Show grams and liters instead of cups and pounds.
     @Published private(set) var metric: Bool
+    /// ¿Qué tengo?: ingredient ids the cook has, and whether basics count as on hand.
+    @Published private(set) var have: [String]
+    @Published private(set) var haveBasics: Bool
+    lazy var pantry = PantrySearch(lexicon: book.lexicon)
 
     private let defaults: UserDefaults
     private static let favoritesKey = "favorites"
@@ -32,6 +36,11 @@ final class RecipeStore: ObservableObject {
         checks = Set(defaults.stringArray(forKey: Self.checksKey) ?? [])
         factors = (defaults.dictionary(forKey: Self.factorsKey) as? [String: Double]) ?? [:]
         metric = defaults.bool(forKey: "metric")
+        have = defaults.stringArray(forKey: "have") ?? []
+        haveBasics = defaults.object(forKey: "haveBasics") as? Bool ?? true
+        if let ids = defaults.string(forKey: "screenshotHave") {
+            have = ids.split(separator: ",").map(String.init)
+        }
 
         // Launch arguments used by CI to set up screenshots, e.g. -screenshotFavorites "pozole-rojo,conchas".
         // They are never saved.
@@ -86,6 +95,26 @@ final class RecipeStore: ObservableObject {
         let step = base < 4 ? base / 2 : (base <= 12 ? 1 : (base / 12).rounded(.up))
         let next = min(base * 4, max(step, base * factor(for: recipe.id) + direction * step))
         setFactor(next / base, for: recipe.id)
+    }
+
+    func addHave(_ ids: [String]) {
+        for id in ids where !have.contains(id) { have.append(id) }
+        defaults.set(have, forKey: "have")
+    }
+
+    func toggleHave(_ id: String) {
+        if have.contains(id) { have.removeAll { $0 == id } } else { have.append(id) }
+        defaults.set(have, forKey: "have")
+    }
+
+    func clearHave() {
+        have = []
+        defaults.set(have, forKey: "have")
+    }
+
+    func setHaveBasics(_ on: Bool) {
+        haveBasics = on
+        defaults.set(on, forKey: "haveBasics")
     }
 
     func setMetric(_ on: Bool) {

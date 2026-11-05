@@ -24964,5 +24964,3269 @@
   "input": "Colored sprinkles (grageas), optional",
   "factor": 0.5,
   "output": "Colored sprinkles (grageas), optional"
+ },
+ {
+  "kind": "ids",
+  "input": "4 Roma tomatoes (about 1 lb)",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "2 serranos or 1 jalapeño",
+  "factor": 1,
+  "output": "serrano,jalapeno"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ white onion, plus 2 thin slices of onion",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 garlic clove, unpeeled",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp lard or oil",
+  "factor": 1,
+  "output": "manteca,aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "Salt, al gusto",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "4 corn tortillas",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "4 eggs",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "3–4 tbsp lard or oil, for the tortillas and eggs",
+  "factor": 1,
+  "output": "manteca,aceite,tortillas,huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "Frijoles refritos",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "Crumbled queso fresco",
+  "factor": 1,
+  "output": "queso-fresco"
+ },
+ {
+  "kind": "ids",
+  "input": "Sliced avocado",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Chopped cilantro",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "More warm tortillas",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "2 fried tortillas and 2 fried eggs, as in the base",
+  "factor": 1,
+  "output": "tortillas,huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup salsa ranchera (from the base)",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup salsa verde cocida (see Salsa Roja de Molcajete, Variantes)",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup frijoles refritos",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "Queso fresco and chilaquiles or totopos on the side, optional",
+  "factor": 1,
+  "output": "queso-fresco,tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "4 corn tortillas, fried crisp",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup refried black beans",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "4 eggs, fried",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup salsa ranchera made with habanero instead of serrano (or plain tomato sauce)",
+  "factor": 1,
+  "output": "habanero,serrano,jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup diced ham",
+  "factor": 1,
+  "output": "jamon"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup cooked peas",
+  "factor": 1,
+  "output": "chicharos"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup crumbled queso fresco",
+  "factor": 1,
+  "output": "queso-fresco"
+ },
+ {
+  "kind": "ids",
+  "input": "1 ripe plantain, sliced and fried",
+  "factor": 1,
+  "output": "platano"
+ },
+ {
+  "kind": "ids",
+  "input": "4 bolillos (day-old is fine), or crusty French rolls",
+  "factor": 1,
+  "output": "pan"
+ },
+ {
+  "kind": "ids",
+  "input": "3 tbsp soft butter",
+  "factor": 1,
+  "output": "mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups frijoles refritos, warm and thick",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups shredded melting cheese: queso Chihuahua, manchego mexicano or Oaxaca",
+  "factor": 1,
+  "output": "queso,queso-oaxaca"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Roma tomatoes, finely diced",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ white onion, finely diced",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 serrano, minced",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup chopped cilantro",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "Juice of 1 lime",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa verde or salsa roja",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "Sliced avocado, optional",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Everything from the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "6 oz Mexican chorizo, casing removed",
+  "factor": 1,
+  "output": "chorizo"
+ },
+ {
+  "kind": "ids",
+  "input": "4 bolillos, split",
+  "factor": 1,
+  "output": "pan"
+ },
+ {
+  "kind": "ids",
+  "input": "4 tbsp soft butter",
+  "factor": 1,
+  "output": "mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup sugar mixed with 1 tsp ground canela",
+  "factor": 1,
+  "output": "azucar,canela"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ white onion, finely chopped",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 serranos, finely chopped (seeds in for more heat)",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "1 Roma tomato, chopped",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp chopped cilantro, optional",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "Frijoles de la olla or refritos",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "Warm corn or flour tortillas",
+  "factor": 1,
+  "output": "elote,tortilla-harina"
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "4 eggs, lightly beaten",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "4 oz Mexican chorizo, casing removed",
+  "factor": 1,
+  "output": "chorizo"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ onion, chopped, optional",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 small potato, diced small, optional",
+  "factor": 1,
+  "output": "papa"
+ },
+ {
+  "kind": "ids",
+  "input": "Salt, only if needed",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup cooked nopales, in strips (from a jar, rinsed, or fresh and boiled)",
+  "factor": 1,
+  "output": "nopales"
+ },
+ {
+  "kind": "ids",
+  "input": "Everything else from the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup (about 2 oz) machaca (dried shredded beef, sold in bags at Mexican markets, or see Machaca Casera)",
+  "factor": 1,
+  "output": "machaca"
+ },
+ {
+  "kind": "ids",
+  "input": "6 eggs",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ white onion, chopped",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 jalapeños or serranos, chopped, or 1 roasted chile verde (Anaheim), in strips, the Sonora way",
+  "factor": 1,
+  "output": "jalapeno,serrano,chile-fresco"
+ },
+ {
+  "kind": "ids",
+  "input": "Warm flour tortillas",
+  "factor": 1,
+  "output": "tortilla-harina"
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa roja or chiltepín salsa",
+  "factor": 1,
+  "output": "piquin"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb beef flank or skirt steak, in 3 pieces",
+  "factor": 1,
+  "output": "res"
+ },
+ {
+  "kind": "ids",
+  "input": "½ onion and 3 garlic cloves",
+  "factor": 1,
+  "output": "cebolla,ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp salt, plus more to taste",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp black pepper",
+  "factor": 1,
+  "output": "pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "Machaca con huevo from the base",
+  "factor": 1,
+  "output": "machaca,huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "Large thin flour tortillas (sobaqueras if you can find them)",
+  "factor": 1,
+  "output": "tortilla-harina"
+ },
+ {
+  "kind": "ids",
+  "input": "Frijoles refritos, optional",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "12 corn tortillas, cut in 6 wedges: day-old is the classic, but store-bought or same-morning work fine",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "Oil for frying",
+  "factor": 1,
+  "output": "aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb tomatillos, husked",
+  "factor": 1,
+  "output": "tomatillo"
+ },
+ {
+  "kind": "ids",
+  "input": "2–3 serranos",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ white onion",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 garlic clove",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "Handful of cilantro",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup chicken broth",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp oil",
+  "factor": 1,
+  "output": "aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "1 sprig epazote, optional",
+  "factor": 1,
+  "output": "epazote"
+ },
+ {
+  "kind": "ids",
+  "input": "Crema",
+  "factor": 1,
+  "output": "crema"
+ },
+ {
+  "kind": "ids",
+  "input": "Thin onion rings",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "Avocado",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Fried eggs or shredded chicken",
+  "factor": 1,
+  "output": "huevo,pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "Frijoles refritos on the side",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "10–12 corn tortillas, store-bought or homemade, cut or torn into strips or pieces",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup oil",
+  "factor": 1,
+  "output": "aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "4–6 eggs",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ cups red chile (below), or leftover enchilada chile or salsa",
+  "factor": 1,
+  "output": "chile"
+ },
+ {
+  "kind": "ids",
+  "input": "Red chile: 6 dried New Mexico, California or guajillo chiles, 2 garlic cloves, pinch of cumin, ½ tsp Mexican oregano, ½ tsp salt, 2 cups water",
+  "factor": 1,
+  "output": "chile,guajillo,ajo,comino,oregano,sal,agua"
+ },
+ {
+  "kind": "ids",
+  "input": "To serve: shredded cheese or queso fresco, frijoles, warm tortillas",
+  "factor": 1,
+  "output": "queso,queso-fresco,frijol,tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "Totopos from the base",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "4 Roma tomatoes",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "3 chiles guajillo and 2 chiles de árbol, toasted and soaked",
+  "factor": 1,
+  "output": "guajillo,arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "1 garlic clove, ¼ onion and 1 cup broth",
+  "factor": 1,
+  "output": "ajo,cebolla,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb pork shoulder (espaldilla), in 3-inch chunks",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb pork neck bones or spine (espinazo)",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "2 pig's feet (manitas), split, optional but they give body",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "1 white onion, halved",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 head garlic, halved crosswise",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "5 quarts water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb precooked cacahuazintle hominy (maíz pozolero, sold in bags at Mexican markets), rinsed, or 2 cans (29 oz each) hominy, drained and rinsed",
+  "factor": 1,
+  "output": "maiz-pozolero"
+ },
+ {
+  "kind": "ids",
+  "input": "6 chiles guajillo",
+  "factor": 1,
+  "output": "guajillo"
+ },
+ {
+  "kind": "ids",
+  "input": "3 chiles ancho",
+  "factor": 1,
+  "output": "ancho"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 chiles de árbol, optional, for heat",
+  "factor": 1,
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "4 garlic cloves",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp Mexican oregano",
+  "factor": 1,
+  "output": "oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "Pinch of cumin, only if your family uses it",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "Finely shredded green cabbage, or lettuce as many tapatíos prefer",
+  "factor": 1,
+  "output": "repollo,lechuga"
+ },
+ {
+  "kind": "ids",
+  "input": "Sliced radishes",
+  "factor": 1,
+  "output": "rabano"
+ },
+ {
+  "kind": "ids",
+  "input": "Finely chopped white onion",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "Dried Mexican oregano",
+  "factor": 1,
+  "output": "oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "Ground chile piquín",
+  "factor": 1,
+  "output": "piquin"
+ },
+ {
+  "kind": "ids",
+  "input": "Limes, in wedges",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "Tostadas",
+  "factor": 1,
+  "output": "tostadas"
+ },
+ {
+  "kind": "ids",
+  "input": "Pork and hominy from the base recipe (or 1 whole chicken)",
+  "factor": 1,
+  "output": "puerco,maiz-pozolero,pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup raw hulled pepitas",
+  "factor": 1,
+  "output": "pepitas"
+ },
+ {
+  "kind": "ids",
+  "input": "2–3 serranos or jalapeños",
+  "factor": 1,
+  "output": "serrano,jalapeno"
+ },
+ {
+  "kind": "ids",
+  "input": "½ white onion",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "3 garlic cloves",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 hoja santa leaves (or 1 tsp anise seed)",
+  "factor": 1,
+  "output": "hoja-santa,anis"
+ },
+ {
+  "kind": "ids",
+  "input": "1 large sprig epazote",
+  "factor": 1,
+  "output": "epazote"
+ },
+ {
+  "kind": "ids",
+  "input": "½ bunch cilantro",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "4 romaine or radish leaves",
+  "factor": 1,
+  "output": "lechuga,rabano"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp lard",
+  "factor": 1,
+  "output": "manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "To serve: chicharrón, avocado, onion, oregano, lime, tostadas",
+  "factor": 1,
+  "output": "chicharron,aguacate,cebolla,oregano,limon,tostadas"
+ },
+ {
+  "kind": "ids",
+  "input": "Everything from the base recipe except the red chile",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa: 10 chiles de árbol, 2 chiles guajillo, 2 garlic cloves, ½ tsp salt, ¾ cup water",
+  "factor": 1,
+  "output": "arbol,guajillo,ajo,sal,agua"
+ },
+ {
+  "kind": "ids",
+  "input": "4 lb beef honeycomb tripe (panal)",
+  "factor": 1,
+  "output": "panza"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb beef foot (pata de res), cut in pieces by the butcher",
+  "factor": 1,
+  "output": "panza"
+ },
+ {
+  "kind": "ids",
+  "input": "2 limes or ¼ cup white vinegar, for cleaning",
+  "factor": 1,
+  "output": "limon,vinagre"
+ },
+ {
+  "kind": "ids",
+  "input": "1 head garlic, halved",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "6 quarts water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "8 chiles guajillo",
+  "factor": 1,
+  "output": "guajillo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 chiles ancho",
+  "factor": 1,
+  "output": "ancho"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp cumin seed",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "1 can (29 oz) hominy, drained and rinsed",
+  "factor": 1,
+  "output": "maiz-pozolero"
+ },
+ {
+  "kind": "ids",
+  "input": "Chopped white onion",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "Mexican oregano",
+  "factor": 1,
+  "output": "oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "Crushed chile piquín or chiltepín",
+  "factor": 1,
+  "output": "piquin"
+ },
+ {
+  "kind": "ids",
+  "input": "Limes",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "Warm corn tortillas or bolillos",
+  "factor": 1,
+  "output": "tortillas,pan"
+ },
+ {
+  "kind": "ids",
+  "input": "Everything from the base recipe except the chile",
+  "factor": 1,
+  "output": "chile"
+ },
+ {
+  "kind": "ids",
+  "input": "Chiltepín, crushed between your fingers",
+  "factor": 1,
+  "output": "piquin"
+ },
+ {
+  "kind": "ids",
+  "input": "Chopped cilantro and onion",
+  "factor": 1,
+  "output": "cilantro,cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "3 lb beef shank (chambarete), bone-in with marrow",
+  "factor": 1,
+  "output": "res"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb beef short ribs (costilla de res), optional",
+  "factor": 1,
+  "output": "res"
+ },
+ {
+  "kind": "ids",
+  "input": "4 quarts water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Roma tomatoes",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "3 ears of corn, each cut in 3 rounds",
+  "factor": 1,
+  "output": "elote"
+ },
+ {
+  "kind": "ids",
+  "input": "3 carrots, in thick pieces",
+  "factor": 1,
+  "output": "zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "2 medium potatoes, quartered",
+  "factor": 1,
+  "output": "papa"
+ },
+ {
+  "kind": "ids",
+  "input": "1 chayote, peeled and cut in wedges",
+  "factor": 1,
+  "output": "chayote"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Mexican zucchini (calabacitas), in thick pieces",
+  "factor": 1,
+  "output": "calabacita"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ green cabbage, in wedges",
+  "factor": 1,
+  "output": "repollo"
+ },
+ {
+  "kind": "ids",
+  "input": "Handful of cilantro sprigs",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "1 sprig hierbabuena (mint)",
+  "factor": 1,
+  "output": "hierbabuena"
+ },
+ {
+  "kind": "ids",
+  "input": "Arroz rojo",
+  "factor": 1,
+  "output": "arroz"
+ },
+ {
+  "kind": "ids",
+  "input": "Chopped onion and cilantro",
+  "factor": 1,
+  "output": "cebolla,cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "Sliced serranos or salsa",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "Corn tortillas",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "Meat and broth from the base, steps 1–2",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "4 chiles guajillo, 2 chiles pasilla (1 ancho, optional)",
+  "factor": 1,
+  "output": "guajillo,pasilla,ancho"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Roma tomatoes, 2 garlic cloves, ¼ onion",
+  "factor": 1,
+  "output": "jitomate,ajo,cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp lard",
+  "factor": 1,
+  "output": "manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "2 xoconostles, peeled, seeded and quartered (or the juice of 1 lime at the end)",
+  "factor": 1,
+  "output": "xoconostle,limon"
+ },
+ {
+  "kind": "ids",
+  "input": "2 ears of corn, ½ lb green beans, 2 zucchini, 1 chayote, 2 potatoes",
+  "factor": 1,
+  "output": "elote,ejotes,calabacita,chayote,papa"
+ },
+ {
+  "kind": "ids",
+  "input": "2 sprigs epazote",
+  "factor": 1,
+  "output": "epazote"
+ },
+ {
+  "kind": "ids",
+  "input": "1 whole chicken (or stewing hen), cut in pieces, skin on",
+  "factor": 1,
+  "output": "pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 Roma tomato",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 celery stalk, optional",
+  "factor": 1,
+  "output": "apio"
+ },
+ {
+  "kind": "ids",
+  "input": "3 quarts water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tsp salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "2 carrots, in rounds",
+  "factor": 1,
+  "output": "zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "2 potatoes, in chunks",
+  "factor": 1,
+  "output": "papa"
+ },
+ {
+  "kind": "ids",
+  "input": "1 chayote, in wedges",
+  "factor": 1,
+  "output": "chayote"
+ },
+ {
+  "kind": "ids",
+  "input": "2 zucchini, in chunks",
+  "factor": 1,
+  "output": "calabacita"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup cooked chickpeas, optional",
+  "factor": 1,
+  "output": "garbanzo"
+ },
+ {
+  "kind": "ids",
+  "input": "Limes, chopped onion and cilantro, serrano",
+  "factor": 1,
+  "output": "limon,cebolla,cilantro,serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "Diced avocado",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Arroz rojo or white rice",
+  "factor": 1,
+  "output": "arroz"
+ },
+ {
+  "kind": "ids",
+  "input": "Broth and shredded chicken from the base",
+  "factor": 1,
+  "output": "caldo,pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 chipotles en adobo (or 2 dried chipotles, toasted and soaked)",
+  "factor": 1,
+  "output": "chipotle"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Roma tomatoes, ¼ onion, 1 garlic clove",
+  "factor": 1,
+  "output": "jitomate,cebolla,ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup cooked chickpeas",
+  "factor": 1,
+  "output": "garbanzo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 carrots, diced, and ½ lb green beans, cut",
+  "factor": 1,
+  "output": "zanahoria,ejotes"
+ },
+ {
+  "kind": "ids",
+  "input": "To serve: avocado, cubes of queso panela or Oaxaca, lime",
+  "factor": 1,
+  "output": "aguacate,queso-fresco,limon"
+ },
+ {
+  "kind": "ids",
+  "input": "7 oz fideo (thin coiled vermicelli)",
+  "factor": 1,
+  "output": "fideo"
+ },
+ {
+  "kind": "ids",
+  "input": "3 tbsp oil or lard",
+  "factor": 1,
+  "output": "aceite,manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "3 Roma tomatoes",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "6 cups hot chicken broth",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp salt, or to taste",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "1 sprig cilantro (or a few leaves of epazote)",
+  "factor": 1,
+  "output": "cilantro,epazote"
+ },
+ {
+  "kind": "ids",
+  "input": "Crema and crumbled queso fresco",
+  "factor": 1,
+  "output": "crema,queso-fresco"
+ },
+ {
+  "kind": "ids",
+  "input": "Chopped chipotles en adobo, optional",
+  "factor": 1,
+  "output": "chipotle"
+ },
+ {
+  "kind": "ids",
+  "input": "Same as the base, but only 2 cups broth",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 chipotles en adobo, blended with the tomato",
+  "factor": 1,
+  "output": "chipotle,jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "Crema, queso fresco and avocado",
+  "factor": 1,
+  "output": "crema,queso-fresco,aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb ground beef",
+  "factor": 1,
+  "output": "res"
+ },
+ {
+  "kind": "ids",
+  "input": "½ lb ground pork",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup long-grain rice, soaked 15 minutes in hot water and drained",
+  "factor": 1,
+  "output": "arroz,agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 egg",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp finely chopped hierbabuena (mint)",
+  "factor": 1,
+  "output": "hierbabuena"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp finely chopped onion",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 garlic clove, minced",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp ground cumin",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp salt and ¼ tsp black pepper",
+  "factor": 1,
+  "output": "sal,pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "2 garlic cloves",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 chipotles en adobo, optional",
+  "factor": 1,
+  "output": "chipotle"
+ },
+ {
+  "kind": "ids",
+  "input": "8 cups beef or chicken broth (or water)",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "2 carrots, diced",
+  "factor": 1,
+  "output": "zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "1 potato, diced",
+  "factor": 1,
+  "output": "papa"
+ },
+ {
+  "kind": "ids",
+  "input": "1 zucchini, diced",
+  "factor": 1,
+  "output": "calabacita"
+ },
+ {
+  "kind": "ids",
+  "input": "1 sprig hierbabuena",
+  "factor": 1,
+  "output": "hierbabuena"
+ },
+ {
+  "kind": "ids",
+  "input": "5 lb bone-in goat (or lamb shoulder, or a mix of beef chuck and short rib)",
+  "factor": 1,
+  "output": "chivo,res"
+ },
+ {
+  "kind": "ids",
+  "input": "4 chiles ancho",
+  "factor": 1,
+  "output": "ancho"
+ },
+ {
+  "kind": "ids",
+  "input": "2–4 chiles de árbol, optional",
+  "factor": 1,
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup apple cider vinegar",
+  "factor": 1,
+  "output": "vinagre"
+ },
+ {
+  "kind": "ids",
+  "input": "6 garlic cloves",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "4 whole cloves",
+  "factor": 1,
+  "output": "clavo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp black peppercorns",
+  "factor": 1,
+  "output": "pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "1-inch stick Mexican cinnamon (canela)",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "½-inch piece fresh ginger",
+  "factor": 1,
+  "output": "jengibre"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp dried thyme",
+  "factor": 1,
+  "output": "tomillo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp dried marjoram (mejorana)",
+  "factor": 1,
+  "output": "mejorana"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Roma tomatoes, charred",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "3 bay leaves",
+  "factor": 1,
+  "output": "laurel"
+ },
+ {
+  "kind": "ids",
+  "input": "2–3 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa de chile de árbol",
+  "factor": 1,
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "Adobo and consomé from the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb beef chuck, 2 lb short ribs, 1 lb oxtail",
+  "factor": 1,
+  "output": "res"
+ },
+ {
+  "kind": "ids",
+  "input": "Queso Oaxaca or mozzarella, shredded",
+  "factor": 1,
+  "output": "queso-oaxaca"
+ },
+ {
+  "kind": "ids",
+  "input": "4 lb pork shoulder, in 3-inch chunks",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb banana leaves (frozen are fine)",
+  "factor": 1,
+  "output": "hoja-platano"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp lard, optional",
+  "factor": 1,
+  "output": "manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "3½ oz achiote paste (recado rojo)",
+  "factor": 1,
+  "output": "achiote"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup naranja agria (sour orange) juice, or ⅔ cup orange juice plus ⅓ cup lime juice",
+  "factor": 1,
+  "output": "naranja,limon"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp Mexican oregano",
+  "factor": 1,
+  "output": "oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp ground cumin",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp ground allspice",
+  "factor": 1,
+  "output": "pimienta-gorda"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp black pepper",
+  "factor": 1,
+  "output": "pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "Cebolla morada encurtida (see Variantes)",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "Xnipec or another habanero salsa",
+  "factor": 1,
+  "output": "habanero"
+ },
+ {
+  "kind": "ids",
+  "input": "Corn tortillas or bolillos",
+  "factor": 1,
+  "output": "tortillas,pan"
+ },
+ {
+  "kind": "ids",
+  "input": "2 red onions, thinly sliced",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 habanero, thinly sliced (seeds out for less heat)",
+  "factor": 1,
+  "output": "habanero"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup naranja agria or lime juice",
+  "factor": 1,
+  "output": "naranja,limon"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp Mexican oregano",
+  "factor": 1,
+  "output": "oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tomatoes, finely diced",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "½ red onion, finely diced",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 habaneros, minced",
+  "factor": 1,
+  "output": "habanero"
+ },
+ {
+  "kind": "ids",
+  "input": "Juice of 2 sour oranges or limes",
+  "factor": 1,
+  "output": "naranja,limon"
+ },
+ {
+  "kind": "ids",
+  "input": "5 lb pork shoulder, in 3-inch chunks (add some ribs or skin if you can)",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb lard (manteca), enough to almost cover",
+  "factor": 1,
+  "output": "manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "1 orange, halved",
+  "factor": 1,
+  "output": "naranja"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup whole milk or Mexican Coca-Cola, optional",
+  "factor": 1,
+  "output": "leche"
+ },
+ {
+  "kind": "ids",
+  "input": "4 garlic cloves, 2 bay leaves and ½ tsp Mexican oregano, optional",
+  "factor": 1,
+  "output": "ajo,laurel,oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa verde",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "Pickled jalapeños",
+  "factor": 1,
+  "output": "jalapeno"
+ },
+ {
+  "kind": "ids",
+  "input": "3 lb beef cheeks (cachete), or chuck roast in large pieces",
+  "factor": 1,
+  "output": "res"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp black pepper",
+  "factor": 1,
+  "output": "pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp ground cumin",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "6 garlic cloves, mashed",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 white onion, quartered",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "6 dried avocado leaves, toasted (or 1 tsp anise seed)",
+  "factor": 1,
+  "output": "hoja-aguacate,anis"
+ },
+ {
+  "kind": "ids",
+  "input": "Banana leaves, optional, for wrapping",
+  "factor": 1,
+  "output": "hoja-platano"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup rice",
+  "factor": 1,
+  "output": "arroz"
+ },
+ {
+  "kind": "ids",
+  "input": "1 carrot, diced",
+  "factor": 1,
+  "output": "zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "Chopped onion, cilantro, lime and salsa",
+  "factor": 1,
+  "output": "cebolla,cilantro,limon"
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa borracha (see Variantes)",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "6 chiles pasilla",
+  "factor": 1,
+  "output": "pasilla"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup pulque or light Mexican beer",
+  "factor": 1,
+  "output": "cerveza"
+ },
+ {
+  "kind": "ids",
+  "input": "Crumbled queso añejo, to finish",
+  "factor": 1,
+  "output": "queso-anejo"
+ },
+ {
+  "kind": "ids",
+  "input": "2½ lb pork shoulder or country ribs, in 1½-inch pieces",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ lb tomatillos, husked",
+  "factor": 1,
+  "output": "tomatillo"
+ },
+ {
+  "kind": "ids",
+  "input": "3–4 serranos",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "Pinch of cumin, optional",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 2 cups cooked nopales",
+  "factor": 1,
+  "output": "verdolagas,papa,nopales"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb chicken thighs or breasts",
+  "factor": 1,
+  "output": "pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ onion, 2 garlic cloves, 1 bay leaf and salt, for poaching",
+  "factor": 1,
+  "output": "cebolla,ajo,laurel,sal"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp lard or oil",
+  "factor": 1,
+  "output": "manteca,aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "2 white onions, thinly sliced",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "2 garlic cloves, minced",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ lb ripe tomatoes (or 5 Roma)",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "2–4 chipotles en adobo, plus 1 tbsp of the adobo sauce",
+  "factor": 1,
+  "output": "chipotle"
+ },
+ {
+  "kind": "ids",
+  "input": "2 bay leaves",
+  "factor": 1,
+  "output": "laurel"
+ },
+ {
+  "kind": "ids",
+  "input": "Shredded lettuce",
+  "factor": 1,
+  "output": "lechuga"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb pork shoulder, cooked and shredded",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "6 oz Mexican chorizo",
+  "factor": 1,
+  "output": "chorizo"
+ },
+ {
+  "kind": "ids",
+  "input": "The same tinga sauce as the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "1 potato, diced and boiled, optional",
+  "factor": 1,
+  "output": "papa"
+ },
+ {
+  "kind": "ids",
+  "input": "Avocado, to serve",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ lb ground beef (or half beef, half pork)",
+  "factor": 1,
+  "output": "res,puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp oil",
+  "factor": 1,
+  "output": "aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "3 Roma tomatoes, blended",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "2 potatoes, in small cubes",
+  "factor": 1,
+  "output": "papa"
+ },
+ {
+  "kind": "ids",
+  "input": "2 carrots, in small cubes",
+  "factor": 1,
+  "output": "zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup peas, optional",
+  "factor": 1,
+  "output": "chicharos"
+ },
+ {
+  "kind": "ids",
+  "input": "1 serrano, minced, optional",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp salt and ¼ tsp pepper",
+  "factor": 1,
+  "output": "sal,pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup water or broth",
+  "factor": 1,
+  "output": "agua,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb ground pork plus ½ lb ground beef",
+  "factor": 1,
+  "output": "puerco,res"
+ },
+ {
+  "kind": "ids",
+  "input": "½ onion and 2 garlic cloves, chopped; 3 tomatoes, blended",
+  "factor": 1,
+  "output": "cebolla,ajo,jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 ripe plantain, 1 pear (pera de leche), 1 peach (durazno criollo) and 1 apple (manzana panochera), all diced small",
+  "factor": 1,
+  "output": "platano,fruta,leche"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup raisins and ¼ cup slivered almonds",
+  "factor": 1,
+  "output": "pasas,almendras"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup candied pineapple (real acitrón comes from a protected cactus)",
+  "factor": 1,
+  "output": "nopales"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp cinnamon and a pinch of cloves",
+  "factor": 1,
+  "output": "canela,clavo"
+ },
+ {
+  "kind": "ids",
+  "input": "Salt and 1 tsp sugar",
+  "factor": 1,
+  "output": "sal,azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "6 large poblano chiles, flat and straight",
+  "factor": 1,
+  "output": "poblano"
+ },
+ {
+  "kind": "ids",
+  "input": "12 oz queso Oaxaca, Chihuahua or asadero, cut in sticks",
+  "factor": 1,
+  "output": "queso-oaxaca"
+ },
+ {
+  "kind": "ids",
+  "input": "Toothpicks",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "5 eggs, separated, at room temperature",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "Pinch of salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup flour, for dusting",
+  "factor": 1,
+  "output": "harina"
+ },
+ {
+  "kind": "ids",
+  "input": "Oil for frying, about 1 inch deep",
+  "factor": 1,
+  "output": "aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "5 Roma tomatoes",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 bay leaf",
+  "factor": 1,
+  "output": "laurel"
+ },
+ {
+  "kind": "ids",
+  "input": "6 roasted, peeled poblanos",
+  "factor": 1,
+  "output": "poblano"
+ },
+ {
+  "kind": "ids",
+  "input": "3 cups picadillo (see Picadillo)",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "Batter and caldillo from the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "1 turkey (guajolote), in pieces, or 2 chickens",
+  "factor": 1,
+  "output": "guajolote,pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 white onion, 1 head garlic and salt",
+  "factor": 1,
+  "output": "cebolla,ajo,sal"
+ },
+ {
+  "kind": "ids",
+  "input": "About 10 cups of the cooking broth",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "8 chiles mulato",
+  "factor": 1,
+  "output": "mulato"
+ },
+ {
+  "kind": "ids",
+  "input": "6 chiles ancho",
+  "factor": 1,
+  "output": "ancho"
+ },
+ {
+  "kind": "ids",
+  "input": "2 chiles chipotle mora, optional",
+  "factor": 1,
+  "output": "chipotle"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp of the chile seeds, saved",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "⅓ cup sesame seeds, plus more for garnish",
+  "factor": 1,
+  "output": "ajonjoli"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup almonds, skin on",
+  "factor": 1,
+  "output": "almendras"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup peanuts",
+  "factor": 1,
+  "output": "cacahuate"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp pepitas",
+  "factor": 1,
+  "output": "pepitas"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup raisins",
+  "factor": 1,
+  "output": "pasas"
+ },
+ {
+  "kind": "ids",
+  "input": "1 very ripe plantain (black skin), sliced",
+  "factor": 1,
+  "output": "platano"
+ },
+ {
+  "kind": "ids",
+  "input": "1 stale corn tortilla",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "1 slice day-old bolillo or white bread",
+  "factor": 1,
+  "output": "pan"
+ },
+ {
+  "kind": "ids",
+  "input": "6 black peppercorns",
+  "factor": 1,
+  "output": "pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "3 allspice berries",
+  "factor": 1,
+  "output": "pimienta-gorda"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp anise seed",
+  "factor": 1,
+  "output": "anis"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp coriander seed",
+  "factor": 1,
+  "output": "coriandro"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Roma tomatoes and 2 tomatillos, charred",
+  "factor": 1,
+  "output": "jitomate,tomatillo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ white onion and 4 garlic cloves, charred",
+  "factor": 1,
+  "output": "cebolla,ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "¾ cup lard",
+  "factor": 1,
+  "output": "manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "2 oz Mexican chocolate (½ tablet)",
+  "factor": 1,
+  "output": "chocolate"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 tbsp sugar, to taste",
+  "factor": 1,
+  "output": "azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb chicken pieces, poached, plus the broth",
+  "factor": 1,
+  "output": "pollo,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb tomatillos",
+  "factor": 1,
+  "output": "tomatillo"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ onion and 2 garlic cloves",
+  "factor": 1,
+  "output": "cebolla,ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 sprig epazote, 2 hoja santa leaves and a handful of cilantro",
+  "factor": 1,
+  "output": "epazote,hoja-santa,cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "2½ lb pork shoulder, in large chunks",
+  "factor": 1,
+  "output": "puerco"
+ },
+ {
+  "kind": "ids",
+  "input": "½ onion, 3 garlic cloves and 1 tbsp salt",
+  "factor": 1,
+  "output": "cebolla,ajo,sal"
+ },
+ {
+  "kind": "ids",
+  "input": "8 chiles guajillo and 3 chiles ancho",
+  "factor": 1,
+  "output": "guajillo,ancho"
+ },
+ {
+  "kind": "ids",
+  "input": "2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano",
+  "factor": 1,
+  "output": "ajo,comino,oregano"
+ },
+ {
+  "kind": "ids",
+  "input": "4 lb fresh unprepared masa for tamales (from a tortillería), or 6 cups masa harina for tamales mixed with about 5 cups warm broth",
+  "factor": 1,
+  "output": "masa,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups (450 g) fresh pork lard, not hydrogenated",
+  "factor": 1,
+  "output": "manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tsp baking powder",
+  "factor": 1,
+  "output": "polvo-hornear"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 cups warm pork broth",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup of the red chile sauce, for color",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "40 dried corn husks, soaked in hot water 1 hour",
+  "factor": 1,
+  "output": "hojas-maiz,agua"
+ },
+ {
+  "kind": "ids",
+  "input": "Masa from the base, made without the chile and with chicken or vegetable broth",
+  "factor": 1,
+  "output": "masa,chile,pollo,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "4 poblanos, roasted, peeled and cut in strips",
+  "factor": 1,
+  "output": "poblano"
+ },
+ {
+  "kind": "ids",
+  "input": "12 oz queso Oaxaca or panela, in sticks",
+  "factor": 1,
+  "output": "queso-oaxaca,queso-fresco"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup salsa verde",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb fresh masa (half the base)",
+  "factor": 1,
+  "output": "masa"
+ },
+ {
+  "kind": "ids",
+  "input": "⅔ cup lard",
+  "factor": 1,
+  "output": "manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "¾ cup sugar",
+  "factor": 1,
+  "output": "azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp baking powder and ½ tsp salt",
+  "factor": 1,
+  "output": "polvo-hornear,sal"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup raisins",
+  "factor": 1,
+  "output": "pasas"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp ground cinnamon",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "A few drops of red food coloring (the traditional pink) or a little beet juice",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "Pinch of cumin",
+  "factor": 1,
+  "output": "comino"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups broth or soaking water",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "12 corn tortillas",
+  "factor": 1,
+  "output": "tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "Oil or lard for frying",
+  "factor": 1,
+  "output": "aceite,manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups crumbled queso fresco (or queso ranchero)",
+  "factor": 1,
+  "output": "queso-fresco"
+ },
+ {
+  "kind": "ids",
+  "input": "1 white onion, finely chopped",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "2 potatoes and 2 carrots, diced and boiled",
+  "factor": 1,
+  "output": "papa,zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "Chiles en vinagre (jalapeños with carrot)",
+  "factor": 1,
+  "output": "chile,vinagre,jalapeno,zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "Crema, optional",
+  "factor": 1,
+  "output": "crema"
+ },
+ {
+  "kind": "ids",
+  "input": "A piece of fried chicken, optional",
+  "factor": 1,
+  "output": "pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "3 cups frijoles negros de la olla with their broth",
+  "factor": 1,
+  "output": "frijol,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 chile pasilla or chipotle, toasted",
+  "factor": 1,
+  "output": "pasilla,chipotle"
+ },
+ {
+  "kind": "ids",
+  "input": "2 dried avocado leaves, toasted",
+  "factor": 1,
+  "output": "hoja-aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Queso fresco, crema and onion; shredded chicken optional",
+  "factor": 1,
+  "output": "queso-fresco,crema,cebolla,pollo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb dried pinto or black beans",
+  "factor": 1,
+  "output": "frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "10 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 sprig epazote (essential for black beans)",
+  "factor": 1,
+  "output": "epazote,frijol"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups cooked beans plus 1 cup of their broth",
+  "factor": 1,
+  "output": "frijol,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "3–4 tbsp lard (or bacon or chorizo fat)",
+  "factor": 1,
+  "output": "manteca,tocino,chorizo"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ white onion, chopped",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "Queso fresco or Chihuahua, optional",
+  "factor": 1,
+  "output": "queso-fresco"
+ },
+ {
+  "kind": "ids",
+  "input": "6 cups pinto beans de la olla with their broth",
+  "factor": 1,
+  "output": "frijol,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "4 slices bacon, chopped",
+  "factor": 1,
+  "output": "tocino"
+ },
+ {
+  "kind": "ids",
+  "input": "4 oz Mexican chorizo",
+  "factor": 1,
+  "output": "chorizo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 hot dogs (salchichas) and 2 slices ham, chopped",
+  "factor": 1,
+  "output": "jamon"
+ },
+ {
+  "kind": "ids",
+  "input": "½ onion, 2 tomatoes and 2 jalapeños, chopped",
+  "factor": 1,
+  "output": "cebolla,jitomate,jalapeno"
+ },
+ {
+  "kind": "ids",
+  "input": "1 Mexican beer, optional",
+  "factor": 1,
+  "output": "cerveza"
+ },
+ {
+  "kind": "ids",
+  "input": "2 oz chicharrón, broken up",
+  "factor": 1,
+  "output": "chicharron"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ cups long-grain white rice",
+  "factor": 1,
+  "output": "arroz"
+ },
+ {
+  "kind": "ids",
+  "input": "3 tbsp oil",
+  "factor": 1,
+  "output": "aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "2¾ cups hot chicken broth",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 carrot, diced, and ½ cup peas, optional",
+  "factor": 1,
+  "output": "zanahoria,chicharos"
+ },
+ {
+  "kind": "ids",
+  "input": "1 sprig cilantro",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "1 serrano, whole",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "The same rice, broth and method as the base",
+  "factor": 1,
+  "output": "arroz,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "Instead of the tomato: 1 roasted, peeled poblano, ½ bunch cilantro, 1 garlic clove and ¼ onion, blended with ½ cup broth",
+  "factor": 1,
+  "output": "jitomate,poblano,cilantro,ajo,cebolla,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "2–3 serranos (or 4 chiles de árbol, toasted)",
+  "factor": 1,
+  "output": "serrano,arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "2 garlic cloves, unpeeled",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ white onion, in one piece",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "Coarse salt",
+  "factor": 1,
+  "output": "sal"
+ },
+ {
+  "kind": "ids",
+  "input": "2–4 tbsp water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "2–4 serranos",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "20 chiles de árbol, stems removed",
+  "factor": 1,
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "4 tomatillos",
+  "factor": 1,
+  "output": "tomatillo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp vinegar, optional",
+  "factor": 1,
+  "output": "vinagre"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "3 oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)",
+  "factor": 1,
+  "output": "piloncillo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 stick Mexican cinnamon (canela)",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup coarsely ground dark-roast coffee (Mexican, from Veracruz, Chiapas or Oaxaca, if you can)",
+  "factor": 1,
+  "output": "cafe"
+ },
+ {
+  "kind": "ids",
+  "input": "2 whole cloves, optional",
+  "factor": 1,
+  "output": "clavo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 strip orange peel, optional",
+  "factor": 1,
+  "output": "cascara"
+ },
+ {
+  "kind": "ids",
+  "input": "1 star anise, optional",
+  "factor": 1,
+  "output": "anis"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups whole milk or water",
+  "factor": 1,
+  "output": "leche,agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tablet (3 oz) Mexican chocolate, chopped",
+  "factor": 1,
+  "output": "chocolate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 stick Mexican cinnamon",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups café de olla",
+  "factor": 1,
+  "output": "cafe"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups whole milk",
+  "factor": 1,
+  "output": "leche"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup masa harina (or 4 oz fresh masa)",
+  "factor": 1,
+  "output": "masa"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups warm water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups water (the traditional way), milk, or half and half",
+  "factor": 1,
+  "output": "agua,leche"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tablet (3 oz) Mexican chocolate, chopped (chocolate de metate if you can find it)",
+  "factor": 1,
+  "output": "chocolate"
+ },
+ {
+  "kind": "ids",
+  "input": "3–4 oz piloncillo, grated (or ⅓ cup brown sugar)",
+  "factor": 1,
+  "output": "piloncillo"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp anise seed, optional",
+  "factor": 1,
+  "output": "anis"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup masa harina",
+  "factor": 1,
+  "output": "masa"
+ },
+ {
+  "kind": "ids",
+  "input": "6 cups water or milk",
+  "factor": 1,
+  "output": "agua,leche"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup sugar or piloncillo",
+  "factor": 1,
+  "output": "azucar,piloncillo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp vanilla",
+  "factor": 1,
+  "output": "vainilla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup dried jamaica (hibiscus) flowers",
+  "factor": 1,
+  "output": "jamaica"
+ },
+ {
+  "kind": "ids",
+  "input": "8 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "½–¾ cup sugar or grated piloncillo",
+  "factor": 1,
+  "output": "azucar,piloncillo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 stick Mexican cinnamon, optional",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "Ice",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup long-grain white rice",
+  "factor": 1,
+  "output": "arroz"
+ },
+ {
+  "kind": "ids",
+  "input": "1 stick Mexican cinnamon, broken",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "8 cups water, divided",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "½–¾ cup sugar",
+  "factor": 1,
+  "output": "azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup milk or evaporated milk, optional",
+  "factor": 1,
+  "output": "leche,leche-evaporada"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups (500 g) all-purpose or bread flour",
+  "factor": 1,
+  "output": "harina"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup (100 g) sugar",
+  "factor": 1,
+  "output": "azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "2¼ tsp (1 packet) instant yeast",
+  "factor": 1,
+  "output": "levadura"
+ },
+ {
+  "kind": "ids",
+  "input": "¾ cup (180 ml) warm whole milk",
+  "factor": 1,
+  "output": "leche"
+ },
+ {
+  "kind": "ids",
+  "input": "3 eggs, at room temperature",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "6 tbsp (85 g) soft butter, plus a little melted butter for brushing",
+  "factor": 1,
+  "output": "mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup (65 g) all-purpose flour",
+  "factor": 1,
+  "output": "harina"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup (65 g) powdered sugar",
+  "factor": 1,
+  "output": "azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "⅓ cup (65 g) vegetable shortening (manteca vegetal); butter works but spreads and blurs the shell",
+  "factor": 1,
+  "output": "manteca,mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "½ tsp vanilla",
+  "factor": 1,
+  "output": "vainilla"
+ },
+ {
+  "kind": "ids",
+  "input": "For chocolate topping: replace 2 tbsp of the flour with cocoa powder",
+  "factor": 1,
+  "output": "chocolate,harina"
+ },
+ {
+  "kind": "ids",
+  "input": "Concha dough from the base, with these changes: add the zest of 2 oranges, 1 tbsp orange blossom water (agua de azahar) and, if you like, ½ tsp anise seed, ground; use ½ cup milk plus ¼ cup orange juice instead of ¾ cup milk",
+  "factor": 1,
+  "output": "cascara,azahar,anis,leche,naranja"
+ },
+ {
+  "kind": "ids",
+  "input": "1 egg, beaten, for brushing",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "4 tbsp melted butter",
+  "factor": 1,
+  "output": "mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup sugar, for coating",
+  "factor": 1,
+  "output": "azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "Dough from the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "Topping from the base, with 2 tbsp of the flour replaced by cocoa powder",
+  "factor": 1,
+  "output": "harina,chocolate"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups (500 g) bread flour",
+  "factor": 1,
+  "output": "harina"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ cups (350 ml) warm water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp sugar",
+  "factor": 1,
+  "output": "azucar"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp lard or soft butter",
+  "factor": 1,
+  "output": "manteca,mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "Bolillo dough from the base",
+  "factor": 1,
+  "output": "pan"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 strip lime peel, no white pith",
+  "factor": 1,
+  "output": "cascara"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups whole milk",
+  "factor": 1,
+  "output": "leche"
+ },
+ {
+  "kind": "ids",
+  "input": "⅓ cup raisins, optional",
+  "factor": 1,
+  "output": "pasas"
+ },
+ {
+  "kind": "ids",
+  "input": "Ground cinnamon, to finish",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "The same rice, water and spices as the base",
+  "factor": 1,
+  "output": "arroz,agua"
+ },
+ {
+  "kind": "ids",
+  "input": "Instead of the sugar and 2 cups of the milk: 1 can (14 oz) sweetened condensed milk and 1 can (12 oz) evaporated milk",
+  "factor": 1,
+  "output": "azucar,leche,lechera,leche-evaporada"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 strip lime peel",
+  "factor": 1,
+  "output": "cascara"
+ },
+ {
+  "kind": "ids",
+  "input": "6 eggs plus 3 yolks",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tsp Mexican vanilla",
+  "factor": 1,
+  "output": "vainilla"
+ },
+ {
+  "kind": "ids",
+  "input": "Caramel from the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "1 can (14 oz) sweetened condensed milk",
+  "factor": 1,
+  "output": "lechera"
+ },
+ {
+  "kind": "ids",
+  "input": "1 can (12 oz) evaporated milk",
+  "factor": 1,
+  "output": "leche-evaporada"
+ },
+ {
+  "kind": "ids",
+  "input": "4 oz cream cheese, softened",
+  "factor": 1,
+  "output": "queso-crema"
+ },
+ {
+  "kind": "ids",
+  "input": "5 eggs",
+  "factor": 1,
+  "output": "huevo"
+ },
+ {
+  "kind": "ids",
+  "input": "8 oz piloncillo",
+  "factor": 1,
+  "output": "piloncillo"
+ },
+ {
+  "kind": "ids",
+  "input": "3 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "2 sticks Mexican cinnamon",
+  "factor": 1,
+  "output": "canela"
+ },
+ {
+  "kind": "ids",
+  "input": "1 Roma tomato and ¼ onion, optional, the old way",
+  "factor": 1,
+  "output": "jitomate,cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "6 day-old bolillos, sliced ½ inch thick",
+  "factor": 1,
+  "output": "pan"
+ },
+ {
+  "kind": "ids",
+  "input": "4 tbsp butter or lard",
+  "factor": 1,
+  "output": "mantequilla,manteca"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup peanuts or slivered almonds",
+  "factor": 1,
+  "output": "cacahuate,almendras"
+ },
+ {
+  "kind": "ids",
+  "input": "2 cups shredded queso añejo, cotija or Chihuahua",
+  "factor": 1,
+  "output": "queso-anejo"
+ },
+ {
+  "kind": "ids",
+  "input": "Colored sprinkles (grageas), optional",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "parse",
+  "input": "pork, onion, tomatoes, tortillas",
+  "factor": 1,
+  "output": "puerco,cebolla,jitomate,tortillas|"
+ },
+ {
+  "kind": "rank",
+  "input": "puerco,cebolla,jitomate,tortillas",
+  "factor": 1,
+  "output": "picadillo:0.643,carnitas:0.750,huevos-rancheros:0.500,salsa-roja:0.500,sopa-de-fideo:0.500"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "puerco,cebolla,jitomate,tortillas",
+  "factor": 1,
+  "output": "picadillo:0.563,huevos-rancheros:0.455,carnitas:0.667,pozole-rojo:0.467,puerco-salsa-verde:0.452"
+ },
+ {
+  "kind": "parse",
+  "input": "tengo pollo y chipotle",
+  "factor": 1,
+  "output": "pollo,chipotle|"
+ },
+ {
+  "kind": "rank",
+  "input": "pollo,chipotle",
+  "factor": 1,
+  "output": "tinga-de-pollo:0.667,caldo-de-pollo:0.333,mole-poblano:0.167"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "pollo,chipotle",
+  "factor": 1,
+  "output": "tinga-de-pollo:0.615,caldo-de-pollo:0.316,mole-poblano:0.156"
+ },
+ {
+  "kind": "parse",
+  "input": "chiken, tomatos, onoin",
+  "factor": 1,
+  "output": "jitomate,pollo,cebolla|"
+ },
+ {
+  "kind": "rank",
+  "input": "jitomate,pollo,cebolla",
+  "factor": 1,
+  "output": "tinga-de-pollo:0.750,caldo-de-pollo:0.500,salsa-roja:0.500,sopa-de-fideo:0.500,huevos-a-la-mexicana:0.429"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "jitomate,pollo,cebolla",
+  "factor": 1,
+  "output": "tinga-de-pollo:0.692,caldo-de-pollo:0.474,salsa-roja:0.429,sopa-de-fideo:0.400,mole-poblano:0.234"
+ },
+ {
+  "kind": "parse",
+  "input": "eggs, tortillas, tomatillo, queso",
+  "factor": 1,
+  "output": "huevo,tortillas,tomatillo,queso|"
+ },
+ {
+  "kind": "rank",
+  "input": "huevo,tortillas,tomatillo,queso",
+  "factor": 1,
+  "output": "chilaquiles:0.500,enchiladas-rojas:0.400,huevos-rancheros:0.400,flan:0.500,chiles-rellenos:0.333"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "huevo,tortillas,tomatillo,queso",
+  "factor": 1,
+  "output": "chilaquiles:0.421,huevos-rancheros:0.364,enchiladas-rojas:0.348,chiles-rellenos:0.296,flan:0.400"
+ },
+ {
+  "kind": "parse",
+  "input": "dried chiles, pork, hominy",
+  "factor": 1,
+  "output": "chile-seco,puerco,maiz-pozolero|"
+ },
+ {
+  "kind": "rank",
+  "input": "chile-seco,puerco,maiz-pozolero",
+  "factor": 1,
+  "output": "pozole-rojo:0.857,tamales-rojos:0.625,carnitas:0.750,cochinita-pibil:0.545,menudo-rojo:0.375"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "chile-seco,puerco,maiz-pozolero",
+  "factor": 1,
+  "output": "pozole-rojo:0.800,tamales-rojos:0.541,carnitas:0.667,cochinita-pibil:0.500,menudo-rojo:0.353"
+ },
+ {
+  "kind": "parse",
+  "input": "masa, lard, pork, chiles secos",
+  "factor": 1,
+  "output": "masa,manteca,puerco,chile-seco|"
+ },
+ {
+  "kind": "rank",
+  "input": "masa,manteca,puerco,chile-seco",
+  "factor": 1,
+  "output": "tamales-rojos:0.750,pozole-rojo:0.714,carnitas:0.750,cochinita-pibil:0.545,picadillo:0.429"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "masa,manteca,puerco,chile-seco",
+  "factor": 1,
+  "output": "tamales-rojos:0.676,pozole-rojo:0.667,carnitas:0.722,cochinita-pibil:0.500,puerco-salsa-verde:0.419"
+ },
+ {
+  "kind": "parse",
+  "input": "some leftover rice and milk",
+  "factor": 1,
+  "output": "arroz,leche|"
+ },
+ {
+  "kind": "rank",
+  "input": "arroz,leche",
+  "factor": 1,
+  "output": "arroz-con-leche:1.000,flan:0.500,champurrado:0.250,conchas:0.250,arroz-rojo:0.250"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "arroz,leche",
+  "factor": 1,
+  "output": "arroz-con-leche:0.727,flan:0.400,champurrado:0.222,arroz-rojo:0.211,conchas:0.200"
+ },
+ {
+  "kind": "parse",
+  "input": "harina, levadura, huevos, leche",
+  "factor": 1,
+  "output": "harina,levadura,huevo,leche|"
+ },
+ {
+  "kind": "rank",
+  "input": "harina,levadura,huevo,leche",
+  "factor": 1,
+  "output": "conchas:1.000,bolillos:1.000,flan:1.000,arroz-con-leche:0.500,chiles-rellenos:0.333"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "harina,levadura,huevo,leche",
+  "factor": 1,
+  "output": "conchas:0.800,flan:0.800,bolillos:0.667,chiles-rellenos:0.296,arroz-con-leche:0.364"
+ },
+ {
+  "kind": "parse",
+  "input": "beef, potatoes, carrots, corn, zucchini",
+  "factor": 1,
+  "output": "res,papa,zanahoria,elote,calabacita|"
+ },
+ {
+  "kind": "rank",
+  "input": "res,papa,zanahoria,elote,calabacita",
+  "factor": 1,
+  "output": "caldo-de-res:0.636,picadillo:0.714,albondigas:0.462,barbacoa:0.500,caldo-de-pollo:0.333"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "res,papa,zanahoria,elote,calabacita",
+  "factor": 1,
+  "output": "caldo-de-res:0.609,picadillo:0.625,albondigas:0.429,barbacoa:0.471,caldo-de-pollo:0.316"
+ },
+ {
+  "kind": "parse",
+  "input": "frijoles, queso, bolillo",
+  "factor": 1,
+  "output": "frijol,queso,pan|"
+ },
+ {
+  "kind": "rank",
+  "input": "frijol,queso,pan",
+  "factor": 1,
+  "output": "molletes:1.000,capirotada:0.400,frijoles-de-olla:0.500,enchiladas-rojas:0.200,chiles-rellenos:0.167"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "frijol,queso,pan",
+  "factor": 1,
+  "output": "molletes:0.923,capirotada:0.364,frijoles-de-olla:0.364,enchiladas-rojas:0.174,chiles-rellenos:0.148"
+ },
+ {
+  "kind": "parse",
+  "input": "quesadilla stuff xyz",
+  "factor": 1,
+  "output": "|quesadilla,stuff,xyz"
+ },
+ {
+  "kind": "rank",
+  "input": "",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "parse",
+  "input": "guajilo, ancho, puerco, oregano, comino",
+  "factor": 1,
+  "output": "ancho,puerco,oregano,comino,guajillo|"
+ },
+ {
+  "kind": "rank",
+  "input": "ancho,puerco,oregano,comino,guajillo",
+  "factor": 1,
+  "output": "pozole-rojo:0.750,tamales-rojos:0.667,carnitas:0.750,enchiladas-rojas:0.500,cochinita-pibil:0.533"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "ancho,puerco,oregano,comino,guajillo",
+  "factor": 1,
+  "output": "pozole-rojo:0.706,tamales-rojos:0.585,carnitas:0.667,enchiladas-rojas:0.444,cochinita-pibil:0.500"
+ },
+ {
+  "kind": "parse",
+  "input": "camarones y arroz",
+  "factor": 1,
+  "output": "arroz|camarones"
+ },
+ {
+  "kind": "rank",
+  "input": "arroz",
+  "factor": 1,
+  "output": "arroz-con-leche:0.500,arroz-rojo:0.250,barbacoa:0.125,albondigas:0.077"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "arroz",
+  "factor": 1,
+  "output": "arroz-con-leche:0.364,arroz-rojo:0.211,barbacoa:0.118,albondigas:0.071"
+ },
+ {
+  "kind": "parse",
+  "input": "chocolate abuelita, masa, piloncillo, canela",
+  "factor": 1,
+  "output": "chocolate,masa,piloncillo,canela|"
+ },
+ {
+  "kind": "rank",
+  "input": "chocolate,masa,piloncillo,canela",
+  "factor": 1,
+  "output": "champurrado:0.778,cafe-de-olla:0.600,agua-de-jamaica:0.500,capirotada:0.250,tamales-rojos:0.111"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "chocolate,masa,piloncillo,canela",
+  "factor": 1,
+  "output": "champurrado:0.700,cafe-de-olla:0.545,agua-de-jamaica:0.444,capirotada:0.231,tamales-rojos:0.098"
+ },
+ {
+  "kind": "parse",
+  "input": "Jitomate, cebolla, ajo, serrano, huevo",
+  "factor": 1,
+  "output": "jitomate,cebolla,ajo,serrano,huevo|"
+ },
+ {
+  "kind": "rank",
+  "input": "jitomate,cebolla,ajo,serrano,huevo",
+  "factor": 1,
+  "output": "huevos-a-la-mexicana:1.000,salsa-roja:1.000,huevos-rancheros:0.800,arroz-rojo:0.750,sopa-de-fideo:0.667"
+ },
+ {
+  "kind": "rank-nobasics",
+  "input": "jitomate,cebolla,ajo,serrano,huevo",
+  "factor": 1,
+  "output": "huevos-a-la-mexicana:0.875,salsa-roja:0.857,huevos-rancheros:0.727,arroz-rojo:0.632,machaca-con-huevo:0.500"
  }
 ]

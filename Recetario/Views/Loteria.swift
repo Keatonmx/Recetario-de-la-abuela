@@ -31,54 +31,50 @@ extension Font {
     }
 }
 
-// MARK: - Sunburst
+// MARK: - Lotería cards
 
-/// The radiating rays behind each card's drawing, like a retablo or a lotería scene.
-struct Sunburst: View {
-    let color: Color
-    var rays = 24
+/// The drawing panel, the way it looks on a lotería card: the dish on a flat colored
+/// field, sitting on a darker ground band, with the card number in the corner.
+struct CardArt: View {
+    let recipe: Recipe
+    let field: Color
+    let ground: Color
+    var numberSize: CGFloat = 17
 
     var body: some View {
-        GeometryReader { geo in
-            let center = CGPoint(x: geo.size.width / 2, y: geo.size.height * 0.58)
-            let radius = hypot(geo.size.width, geo.size.height)
-            let step = 2 * Double.pi / Double(rays)
-            ZStack {
-                color
-                Path { path in
-                    for i in 0..<rays {
-                        let a0 = Double(i) * step - step / 4
-                        let a1 = a0 + step / 2
-                        path.move(to: center)
-                        path.addLine(to: CGPoint(x: center.x + radius * cos(a0), y: center.y + radius * sin(a0)))
-                        path.addLine(to: CGPoint(x: center.x + radius * cos(a1), y: center.y + radius * sin(a1)))
-                        path.closeSubpath()
+        Color.clear
+            .aspectRatio(4.0 / 5.0, contentMode: .fit)
+            .background {
+                GeometryReader { geo in
+                    VStack(spacing: 0) {
+                        field
+                        Rectangle().fill(Color.ink).frame(height: 2)
+                        ground.frame(height: geo.size.height * 0.28)
                     }
                 }
-                .fill(Color.white.opacity(0.32))
             }
-        }
-    }
-}
-
-// MARK: - Card pieces
-
-struct NumberTab: View {
-    let number: Int
-    var size: CGFloat = 13
-
-    var body: some View {
-        let shape = UnevenRoundedRectangle(bottomTrailingRadius: 5)
-        Text("\(number)")
-            .font(.slab(size, relativeTo: .caption))
-            .monospacedDigit()
-            .foregroundStyle(Color.ink)
-            .padding(.leading, 6)
-            .padding(.trailing, 8)
-            .padding(.vertical, 4)
-            .background(shape.fill(Color.stock))
-            .overlay(shape.strokeBorder(Color.ink, lineWidth: 2.5))
-            .accessibilityHidden(true)
+            .overlay {
+                GeometryReader { geo in
+                    let side = geo.size.width * 0.96
+                    Image("art-\(recipe.id)")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: side, height: side)
+                        .position(x: geo.size.width / 2, y: geo.size.height * 0.88 - side / 2)
+                        .accessibilityHidden(true)
+                }
+            }
+            .overlay(alignment: .topLeading) {
+                Text("\(recipe.number)")
+                    .font(.system(size: numberSize, weight: .regular, design: .serif))
+                    .monospacedDigit()
+                    .foregroundStyle(Color.ink)
+                    .padding(.top, 4)
+                    .padding(.leading, 7)
+                    .accessibilityHidden(true)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 2))
+            .overlay(RoundedRectangle(cornerRadius: 2).strokeBorder(Color.ink, lineWidth: 2))
     }
 }
 
@@ -87,91 +83,59 @@ struct OllaBadge: View {
     var body: some View {
         Image("olla")
             .resizable()
-            .frame(width: 18, height: 18)
+            .frame(width: 15, height: 15)
             .foregroundStyle(Color.stampPaper)
-            .frame(width: 28, height: 28)
+            .frame(width: 24, height: 24)
             .background(Circle().fill(Color.stampGreen))
-            .overlay(Circle().strokeBorder(Color.ink, lineWidth: 2))
+            .overlay(Circle().strokeBorder(Color.ink, lineWidth: 1.5))
             .accessibilityHidden(true)
     }
 }
 
-/// The square drawing panel: sunburst, the dish, and the card number.
-struct CardArt: View {
-    let recipe: Recipe
-    let color: Color
-    var aspect: CGFloat = 1
-    var cornerRadius: CGFloat = 4
-    var numberSize: CGFloat = 13
-    var artPadding: CGFloat = 10
-
-    var body: some View {
-        Color.clear
-            .aspectRatio(aspect, contentMode: .fit)
-            .background(color)
-            .overlay {
-                Image("art-\(recipe.id)")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(artPadding)
-                    .accessibilityHidden(true)
-            }
-            .overlay(alignment: .topLeading) {
-                NumberTab(number: recipe.number, size: numberSize)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-            .overlay(RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(Color.ink, lineWidth: 2.5))
-    }
-}
-
-/// One recipe as a lotería card.
+/// One recipe as a lotería card: cream stock, a thin frame line inset from the edge,
+/// the drawing in its own box and the name across the bottom.
 struct LoteriaCard: View {
+    @EnvironmentObject private var store: RecipeStore
     let recipe: Recipe
-    let color: Color
-    let isFavorite: Bool
-
-    private var subline: String {
-        recipe.time
-    }
+    var isFavorite = false
+    var big = false
 
     var body: some View {
-        VStack(spacing: 7) {
-            CardArt(recipe: recipe, color: color)
-                .overlay(alignment: .bottomTrailing) {
-                    if recipe.pressureCooker != nil {
-                        OllaBadge().padding(5)
-                    }
+        VStack(spacing: 5) {
+            CardArt(
+                recipe: recipe,
+                field: store.color(forCategory: recipe.category),
+                ground: store.groundColor(forCategory: recipe.category),
+                numberSize: big ? 24 : 17
+            )
+            .overlay(alignment: .bottomTrailing) {
+                if recipe.pressureCooker != nil && !big { OllaBadge().padding(4) }
+            }
+            .overlay(alignment: .topTrailing) {
+                if isFavorite {
+                    Image("milagro-fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 22, height: 22)
+                        .padding(4)
                 }
-                .overlay(alignment: .topTrailing) {
-                    if isFavorite {
-                        Image("milagro-fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .padding(4)
-                    }
-                }
+            }
             Text(recipe.cardName.uppercased())
-                .font(.slab(15))
+                .font(.slab(big ? 17 : 13.5))
+                .tracking(0.5)
                 .foregroundStyle(Color.ink)
                 .multilineTextAlignment(.center)
-                .lineLimit(3)
-                .minimumScaleFactor(0.8)
-                .fixedSize(horizontal: false, vertical: true)
-            Text(subline)
-                .font(.caption2)
-                .foregroundStyle(Color.stockMuted)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-            Spacer(minLength: 0)
+                .lineLimit(2)
+                .minimumScaleFactor(0.75)
+                .frame(maxWidth: .infinity, minHeight: big ? 46 : 36)
         }
-        .padding(.horizontal, 7)
-        .padding(.top, 7)
-        .padding(.bottom, 10)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.stock))
-        .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.ink, lineWidth: 2))
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.inkShadow).offset(x: 3, y: 4))
+        .padding(.horizontal, 9)
+        .padding(.top, 9)
+        .padding(.bottom, 6)
+        .background(RoundedRectangle(cornerRadius: 8).fill(Color.stock))
+        .overlay(RoundedRectangle(cornerRadius: 5).strokeBorder(Color.ink, lineWidth: 1.5).padding(4))
+        .shadow(color: Color.black.opacity(0.22), radius: 1, y: 1)
+        .shadow(color: Color(red: 0.12, green: 0.07, blue: 0.03).opacity(0.35), radius: 9, y: 7)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityText)
     }
@@ -189,7 +153,7 @@ struct DealtCardStyle: ButtonStyle {
     let index: Int
 
     private var tilt: Double {
-        [-0.8, 0.6, 0.4, -0.5][index % 4]
+        [-0.6, 0.5, 0.3, -0.4][index % 4]
     }
 
     func makeBody(configuration: Configuration) -> some View {

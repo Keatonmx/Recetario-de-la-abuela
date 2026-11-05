@@ -81,6 +81,12 @@ extension RecipeStore {
         Color.cardField(book.categories.first { $0.id == id }?.color ?? "#C8261E")
     }
 
+    /// The ground band at the bottom of a card's drawing: the category color, deepened.
+    func groundColor(forCategory id: String) -> Color {
+        let hex = book.categories.first { $0.id == id }?.color ?? "#C8261E"
+        return Color(uiColor: UIColor(hexString: hex).mixed(with: UIColor(hex: 0x2A1608), amount: 0.22))
+    }
+
     func headingColor(forCategory id: String) -> Color {
         Color.lifted(book.categories.first { $0.id == id }?.color ?? "#C8261E")
     }

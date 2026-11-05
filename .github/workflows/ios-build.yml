@@ -22,7 +22,7 @@ jobs:
 
       - name: Validate recipe data with the app's models
         run: |
-          swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift Recetario/Models/Units.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
+          swiftc Recetario/Models/Models.swift Recetario/Models/Scaling.swift Recetario/Models/Units.swift Recetario/Models/PantrySearch.swift scripts/validate/main.swift -o "$RUNNER_TEMP/validate"
           "$RUNNER_TEMP/validate" Recetario/Resources/recipes.json scripts/validate/scaling-fixtures.json
 
       - name: Generate Xcode project
@@ -68,8 +68,9 @@ jobs:
             shot "$mode-04-pozole-mitad" -screenshotRecipe pozole-rojo -screenshotFactor 0.5 -screenshotScrollTo servings
             shot "$mode-05-pozole-olla" -screenshotRecipe pozole-rojo -screenshotDetailTab "Olla exprés" -screenshotScrollTo tabs
             shot "$mode-06-pozole-variantes" -screenshotRecipe pozole-rojo -screenshotDetailTab Variantes -screenshotScrollTo tabs
-            shot "$mode-07-guardadas" "${FAV[@]}" -screenshotTab 1
-            shot "$mode-08-despensa" -screenshotTab 2
+            shot "$mode-07-que-tengo" -screenshotTab 1 -screenshotHave "puerco,chile-seco,maiz-pozolero,cebolla,ajo"
+            shot "$mode-08-guardadas" "${FAV[@]}" -screenshotTab 2
+            shot "$mode-09-despensa" -screenshotTab 3
           done
           ls -la screenshots
 

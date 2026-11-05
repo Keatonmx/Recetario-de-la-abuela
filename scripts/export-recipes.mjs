@@ -12,9 +12,14 @@ const start = html.indexOf("const CATS = [");
 const end = html.indexOf("const CAT_NAME");
 if (start < 0 || end < 0) throw new Error("Could not find the recipe data block in web/recetario.html");
 
-const { CATS, R, CHILES, GLOSS, ARTICLE, CATCOLOR, VERSO } = new Function(
-  html.slice(start, end) + "\nreturn { CATS, R, CHILES, GLOSS, ARTICLE, CATCOLOR, VERSO };"
+const dataBlock = html.slice(start, end);
+const { CATS, R, CHILES, GLOSS, ARTICLE, CATCOLOR, VERSO, LEXICON } = new Function(
+  dataBlock + "\nreturn { CATS, R, CHILES, GLOSS, ARTICLE, CATCOLOR, VERSO, LEXICON };"
 )();
+// The ¿Qué tengo? engine, run here so the app gets each recipe's needs precomputed.
+const pStart = html.indexOf("const PANTRY = (() => {");
+const pEnd = html.indexOf("/* ---------- storage");
+const PANTRY = new Function(dataBlock + html.slice(pStart, pEnd) + "\nreturn PANTRY;")();
 
 // Lotería card numbers follow the order recipes appear in the recetario (category order).
 const ordered = CATS.flatMap(([c]) => R.filter((r) => r.cat === c));
@@ -44,6 +49,7 @@ const book = {
       : null,
     pressureNote: r.pcNote ?? null,
     tips: r.tips ?? [],
+    needs: PANTRY.needsOf(r),
     variations: (r.vars ?? []).map((v) => ({
       name: v.name,
       en: v.en,
@@ -56,13 +62,14 @@ const book = {
   })),
   chiles: CHILES.map((c) => ({ name: c.n, form: c.f, heat: c.h, taste: c.t, uses: c.u })),
   glossary: GLOSS.map(([term, definition]) => ({ term, definition })),
+  lexicon: LEXICON.map(([id, es, en, kind, parent, aliases]) => ({ id, es, en, kind, parent, aliases })),
 };
 
 // Test cases for the Swift scaler: every ingredient line and yield, scaled by the web scaler.
 const sStart = html.indexOf("const SCALE = (() => {");
 const sEnd = html.indexOf("/* ---------- storage");
 if (sStart < 0 || sEnd < 0) throw new Error("Could not find the SCALE block in web/recetario.html");
-const { SCALE, UNITS } = new Function(html.slice(sStart, sEnd) + "\nreturn { SCALE, UNITS };")();
+const { SCALE, UNITS } = new Function(html.slice(sStart, html.indexOf("const PANTRY = (() => {")) + "\nreturn { SCALE, UNITS };")();
 const lines = new Set();
 for (const r of book.recipes) {
   for (const g of r.ingredients) g.items.forEach((i) => lines.add(i));
@@ -82,6 +89,19 @@ for (const r of book.recipes) {
 }
 for (const t of texts) cases.push({ kind: "metric", input: t, factor: 1, output: UNITS.metric(t) });
 for (const line of lines) cases.push({ kind: "scaled-metric", input: line, factor: 0.5, output: UNITS.metric(SCALE.text(line, 0.5)) });
+// ¿Qué tengo?: alias matching on every ingredient line, typed input, and rankings.
+for (const line of lines) cases.push({ kind: "ids", input: line, factor: 1, output: PANTRY.idsIn(line).join(",") });
+const queries = ["pork, onion, tomatoes, tortillas", "tengo pollo y chipotle", "chiken, tomatos, onoin", "eggs, tortillas, tomatillo, queso",
+  "dried chiles, pork, hominy", "masa, lard, pork, chiles secos", "some leftover rice and milk", "harina, levadura, huevos, leche",
+  "beef, potatoes, carrots, corn, zucchini", "frijoles, queso, bolillo", "quesadilla stuff xyz", "guajilo, ancho, puerco, oregano, comino",
+  "camarones y arroz", "chocolate abuelita, masa, piloncillo, canela", "Jitomate, cebolla, ajo, serrano, huevo"];
+for (const q of queries) {
+  const p = PANTRY.parse(q);
+  cases.push({ kind: "parse", input: q, factor: 1, output: p.ids.join(",") + "|" + p.unknown.join(",") });
+  for (const basics of [true, false])
+    cases.push({ kind: basics ? "rank" : "rank-nobasics", input: p.ids.join(","), factor: 1,
+      output: PANTRY.rank(R, p.ids, { haveBasics: basics }).slice(0, 5).map((x) => `${x.recipe.id}:${x.score.toFixed(3)}`).join(",") });
+}
 writeFileSync(join(root, "scripts/validate/scaling-fixtures.json"), JSON.stringify(cases, null, 1) + "\n");
 
 const out = join(root, "Recetario/Resources/recipes.json");

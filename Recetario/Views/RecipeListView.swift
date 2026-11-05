@@ -90,11 +90,7 @@ struct RecipeListView: View {
             LazyVGrid(columns: columns, alignment: .leading, spacing: 18) {
                 ForEach(Array(recipes.enumerated()), id: \.element.id) { index, recipe in
                     NavigationLink(value: recipe) {
-                        LoteriaCard(
-                            recipe: recipe,
-                            color: store.color(forCategory: cat.id),
-                            isFavorite: store.isFavorite(recipe.id)
-                        )
+                        LoteriaCard(recipe: recipe, isFavorite: store.isFavorite(recipe.id))
                     }
                     .buttonStyle(DealtCardStyle(index: index))
                 }

@@ -28,12 +28,15 @@ struct RootView: View {
             NavigationStack(path: $path) { RecipeListView(savedOnly: false) }
                 .tabItem { Label { Text("Recetas") } icon: { Image("tab-recetas") } }
                 .tag(0)
+            NavigationStack { QueTengoView() }
+                .tabItem { Label { Text("¿Qué tengo?") } icon: { Image("tab-quetengo") } }
+                .tag(1)
             NavigationStack { RecipeListView(savedOnly: true) }
                 .tabItem { Label { Text("Guardadas") } icon: { Image("milagro") } }
-                .tag(1)
+                .tag(2)
             NavigationStack { PantryView() }
                 .tabItem { Label { Text("Despensa") } icon: { Image("tab-despensa") } }
-                .tag(2)
+                .tag(3)
         }
         .onAppear {
             if path.isEmpty, let id = UserDefaults.standard.string(forKey: "screenshotRecipe"),

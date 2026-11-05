@@ -112,6 +112,34 @@
         "Make a double batch of salsa ranchera. It keeps 4 days in the fridge and saves the next breakfast.",
         "Lard for the eggs gives the crisp edges abuela's had."
       ],
+      "needs": [
+        [
+          "jitomate"
+        ],
+        [
+          "serrano",
+          "jalapeno"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "manteca",
+          "aceite"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "tortillas"
+        ],
+        [
+          "huevo"
+        ]
+      ],
       "variations": [
         {
           "name": "Huevos Divorciados",
@@ -223,6 +251,21 @@
         "The refritos should be thick enough to hold a line. Runny beans make soggy bread.",
         "Butter first, then toast, then beans. That way the bread stays crisp underneath."
       ],
+      "needs": [
+        [
+          "pan"
+        ],
+        [
+          "mantequilla"
+        ],
+        [
+          "frijol"
+        ],
+        [
+          "queso",
+          "queso-oaxaca"
+        ]
+      ],
       "variations": [
         {
           "name": "Molletes con Chorizo",
@@ -316,6 +359,27 @@
         "Let the tomato cook down first, or the eggs turn watery.",
         "Some abuelas don't beat the eggs first: they crack them right into the pan and stir, so you get streaks of white and yolk.",
         "Leftovers make the best tacos de huevo for lunch."
+      ],
+      "needs": [
+        [
+          "huevo"
+        ],
+        [
+          "manteca",
+          "aceite"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "serrano"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "sal"
+        ]
       ],
       "variations": [
         {
@@ -413,6 +477,32 @@
         "Go easy on the salt. Taste the machaca first; most of it is salted.",
         "In Monterrey they call this machacado con huevo and make it with more tomato and chile, almost saucy. Nuevo León traces it to Ciénega de Flores, where la Tía Lencha fed it to road crews in the 1920s.",
         "Leftover machaca keeps for weeks in a jar in the fridge."
+      ],
+      "needs": [
+        [
+          "machaca"
+        ],
+        [
+          "huevo"
+        ],
+        [
+          "manteca",
+          "aceite"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "jalapeno",
+          "serrano",
+          "chile-fresco"
+        ],
+        [
+          "sal"
+        ]
       ],
       "variations": [
         {
@@ -524,6 +614,35 @@
       "tips": [
         "Drain the fried tortillas well. Fresher tortillas hold a little more oil.",
         "Leftover red chile from enchiladas or tamales makes great chilaquiles."
+      ],
+      "needs": [
+        [
+          "tortillas"
+        ],
+        [
+          "aceite"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "tomatillo"
+        ],
+        [
+          "serrano"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "cilantro"
+        ],
+        [
+          "caldo"
+        ]
       ],
       "variations": [
         {
@@ -664,6 +783,38 @@
         "Pozole is better the next day. Chill it and lift off the fat if you like.",
         "A weeknight version most families accept: bone-in chicken thighs instead of pork, about 1 hour on the stove."
       ],
+      "needs": [
+        [
+          "puerco"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "maiz-pozolero"
+        ],
+        [
+          "guajillo"
+        ],
+        [
+          "ancho"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "comino"
+        ]
+      ],
       "variations": [
         {
           "name": "Pozole Verde",
@@ -800,6 +951,42 @@
         "Lime and salt take away the barnyard smell. Rinse until the water runs clear.",
         "Make it a day ahead. The fat sets on top and lifts right off."
       ],
+      "needs": [
+        [
+          "panza"
+        ],
+        [
+          "limon",
+          "vinagre"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "guajillo"
+        ],
+        [
+          "ancho"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "maiz-pozolero"
+        ]
+      ],
       "variations": [
         {
           "name": "Menudo Blanco",
@@ -896,6 +1083,50 @@
       "tips": [
         "Scoop the marrow out of the bone onto a hot tortilla with salt and salsa. That's the cook's reward.",
         "Mint is the quiet secret in a lot of family caldos. One sprig is enough."
+      ],
+      "needs": [
+        [
+          "res"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "elote"
+        ],
+        [
+          "zanahoria"
+        ],
+        [
+          "papa"
+        ],
+        [
+          "chayote"
+        ],
+        [
+          "calabacita"
+        ],
+        [
+          "repollo"
+        ],
+        [
+          "cilantro"
+        ],
+        [
+          "hierbabuena"
+        ]
       ],
       "variations": [
         {
@@ -994,6 +1225,41 @@
         "Once the foam is skimmed, never let it boil hard or the broth turns cloudy.",
         "Add a handful of rice or fideo to the pot for a heartier soup."
       ],
+      "needs": [
+        [
+          "pollo"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "zanahoria"
+        ],
+        [
+          "papa"
+        ],
+        [
+          "chayote"
+        ],
+        [
+          "calabacita"
+        ],
+        [
+          "cilantro"
+        ]
+      ],
       "variations": [
         {
           "name": "Caldo Tlalpeño",
@@ -1071,6 +1337,34 @@
       "pressureNote": "No pressure-cooker version. This soup is done in 30 minutes on the stove, and the noodles would turn to mush.",
       "tips": [
         "If the fideo browns too fast, pull the pot off the heat. It keeps cooking in the hot oil."
+      ],
+      "needs": [
+        [
+          "fideo"
+        ],
+        [
+          "aceite",
+          "manteca"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "caldo"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "cilantro",
+          "epazote"
+        ]
       ],
       "variations": [
         {
@@ -1165,6 +1459,56 @@
         "Some families tuck a piece of hard-boiled egg inside each meatball. Kids love finding it.",
         "Keep your hands wet while rolling and the meat won't stick."
       ],
+      "needs": [
+        [
+          "res"
+        ],
+        [
+          "puerco"
+        ],
+        [
+          "arroz"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "huevo"
+        ],
+        [
+          "hierbabuena"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "pimienta"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "aceite"
+        ],
+        [
+          "zanahoria"
+        ],
+        [
+          "papa"
+        ],
+        [
+          "calabacita"
+        ]
+      ],
       "variations": []
     },
     {
@@ -1251,6 +1595,63 @@
         "Save the red fat from the top of the consomé to fry tortillas for tacos.",
         "The vinegar matters. It cuts the richness and helps tenderize the meat.",
         "Birria tatemada: brown the drained meat in a hot oven or on the comal for roasted edges before serving."
+      ],
+      "needs": [
+        [
+          "chivo",
+          "res"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "guajillo"
+        ],
+        [
+          "ancho"
+        ],
+        [
+          "vinagre"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "clavo"
+        ],
+        [
+          "pimienta"
+        ],
+        [
+          "canela"
+        ],
+        [
+          "jengibre"
+        ],
+        [
+          "tomillo"
+        ],
+        [
+          "mejorana"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "laurel"
+        ],
+        [
+          "agua"
+        ]
       ],
       "variations": [
         {
@@ -1346,6 +1747,39 @@
       "tips": [
         "Seville oranges (naranja agria) are the real thing. Latin markets sell it bottled if you can't find fresh.",
         "For tortas de cochinita, split a bolillo and fill it with pork, onions and a spoon of the juices. That's breakfast in Mérida."
+      ],
+      "needs": [
+        [
+          "puerco"
+        ],
+        [
+          "hoja-platano"
+        ],
+        [
+          "achiote"
+        ],
+        [
+          "naranja",
+          "limon"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "pimienta-gorda"
+        ],
+        [
+          "pimienta"
+        ]
       ],
       "variations": [
         {
@@ -1457,6 +1891,20 @@
         "Don't stir much at first. Let the pork confit quietly.",
         "Purists use only lard, salt and time. Orange, milk and Coca-Cola are carnitero tricks for color, and every one has his own fórmula. If you use Coke, make it the cane-sugar Mexican one."
       ],
+      "needs": [
+        [
+          "puerco"
+        ],
+        [
+          "manteca"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "naranja"
+        ]
+      ],
       "variations": []
     },
     {
@@ -1526,6 +1974,48 @@
       "tips": [
         "Mexican avocado leaves taste of anise. Toast them a few seconds on the comal before using.",
         "Cheeks are full of collagen. Don't trim them too lean or you'll lose the silky texture."
+      ],
+      "needs": [
+        [
+          "res"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "pimienta"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "laurel"
+        ],
+        [
+          "hoja-aguacate",
+          "anis"
+        ],
+        [
+          "garbanzo"
+        ],
+        [
+          "arroz"
+        ],
+        [
+          "zanahoria"
+        ],
+        [
+          "cilantro"
+        ],
+        [
+          "limon"
+        ]
       ],
       "variations": [
         {
@@ -1620,6 +2110,40 @@
         "Don't over-boil tomatillos. As soon as they turn from bright to olive green, take them out, or they burst and turn sour.",
         "Purslane grows wild in a lot of gardens. It's free food."
       ],
+      "needs": [
+        [
+          "puerco"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "manteca"
+        ],
+        [
+          "tomatillo"
+        ],
+        [
+          "serrano"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "cilantro"
+        ],
+        [
+          "verdolagas",
+          "papa",
+          "nopales"
+        ]
+      ],
       "variations": []
     },
     {
@@ -1688,6 +2212,36 @@
       "tips": [
         "Be generous with the onion. Tinga should be half onion.",
         "Start with 2 chipotles and add more after tasting. The heat varies from can to can."
+      ],
+      "needs": [
+        [
+          "pollo"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "laurel"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "manteca",
+          "aceite"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "chipotle"
+        ],
+        [
+          "oregano"
+        ]
       ],
       "variations": [
         {
@@ -1758,6 +2312,43 @@
       "pressureNote": "No pressure-cooker version. Picadillo is done in 40 minutes in a skillet, and the browning is where the flavor comes from.",
       "tips": [
         "Cut the potatoes and carrots small, about the size of a pea, so every bite gets some."
+      ],
+      "needs": [
+        [
+          "res",
+          "puerco"
+        ],
+        [
+          "aceite"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "papa"
+        ],
+        [
+          "zanahoria"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "pimienta"
+        ],
+        [
+          "agua",
+          "caldo"
+        ]
       ],
       "variations": [
         {
@@ -1848,6 +2439,41 @@
       "tips": [
         "The flour is what makes the batter stick. Don't skip it.",
         "Pick poblanos that are smooth and flat. They roast and peel evenly."
+      ],
+      "needs": [
+        [
+          "poblano"
+        ],
+        [
+          "queso-oaxaca"
+        ],
+        [
+          "huevo"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "harina"
+        ],
+        [
+          "aceite"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "caldo"
+        ],
+        [
+          "laurel"
+        ]
       ],
       "variations": [
         {
@@ -1970,6 +2596,96 @@
         "If you use store-bought mole paste, fry it in lard first, then thin it with broth and add a piece of Mexican chocolate. Not abuela's, but honest.",
         "The fat rising to the top is how you know it's done."
       ],
+      "needs": [
+        [
+          "guajolote",
+          "pollo"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "caldo"
+        ],
+        [
+          "mulato"
+        ],
+        [
+          "ancho"
+        ],
+        [
+          "pasilla"
+        ],
+        [
+          "ajonjoli"
+        ],
+        [
+          "almendras"
+        ],
+        [
+          "cacahuate"
+        ],
+        [
+          "pepitas"
+        ],
+        [
+          "pasas"
+        ],
+        [
+          "platano"
+        ],
+        [
+          "tortillas"
+        ],
+        [
+          "pan"
+        ],
+        [
+          "canela"
+        ],
+        [
+          "clavo"
+        ],
+        [
+          "pimienta"
+        ],
+        [
+          "pimienta-gorda"
+        ],
+        [
+          "anis"
+        ],
+        [
+          "coriandro"
+        ],
+        [
+          "tomillo"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "tomatillo"
+        ],
+        [
+          "manteca"
+        ],
+        [
+          "chocolate"
+        ],
+        [
+          "azucar"
+        ]
+      ],
       "variations": [
         {
           "name": "Pipián Verde",
@@ -2073,6 +2789,50 @@
         "Abuelas say tamales se sienten: make them while angry and they won't cook through, and lift the lid too often and they come out pintos (half raw). A pregnant helper ties a red ribbon around her belly, and some cooks sing to the pot.",
         "The old way to leaven: instead of baking powder, boil tomatillo husks with a pinch of tequesquite, strain, and beat that water into the masa.",
         "Fresh lard from the carnicería makes the masa taste right. The white blocks from the supermarket shelf don't."
+      ],
+      "needs": [
+        [
+          "puerco"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "guajillo"
+        ],
+        [
+          "ancho"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "manteca"
+        ],
+        [
+          "masa"
+        ],
+        [
+          "polvo-hornear"
+        ],
+        [
+          "caldo"
+        ],
+        [
+          "hojas-maiz"
+        ],
+        [
+          "agua"
+        ]
       ],
       "variations": [
         {
@@ -2187,6 +2947,41 @@
       "tips": [
         "Work fast and serve right away. Enchiladas don't like to wait."
       ],
+      "needs": [
+        [
+          "guajillo"
+        ],
+        [
+          "ancho"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "comino"
+        ],
+        [
+          "caldo"
+        ],
+        [
+          "manteca"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "tortillas"
+        ],
+        [
+          "queso-fresco"
+        ]
+      ],
       "variations": [
         {
           "name": "Enfrijoladas",
@@ -2264,6 +3059,29 @@
         "Salt goes in after the beans are soft.",
         "Clay ollas give the best beans, but buy ones marked Sin Plomo (lead-free). Old or unmarked glazes can leach lead.",
         "Old beans take forever. Buy them where a lot of people buy beans."
+      ],
+      "needs": [
+        [
+          "frijol"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "manteca"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "epazote"
+        ]
       ],
       "variations": [
         {
@@ -2373,6 +3191,35 @@
         "Plenty of abuelas swap some of the salt for a spoon of Knorr caldo de tomate. Nobody has to know.",
         "Lifting the lid lets out the steam, and you get rice that's raw on top and mushy underneath."
       ],
+      "needs": [
+        [
+          "arroz"
+        ],
+        [
+          "aceite"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "caldo"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "cilantro"
+        ],
+        [
+          "serrano"
+        ]
+      ],
       "variations": [
         {
           "name": "Arroz Verde",
@@ -2433,6 +3280,27 @@
       "pressureNote": "No pressure-cooker version. Salsas come off the comal in minutes.",
       "tips": [
         "Season a new molcajete by grinding a handful of raw rice in it, again and again, until the rice comes out white instead of gray."
+      ],
+      "needs": [
+        [
+          "jitomate"
+        ],
+        [
+          "serrano",
+          "arbol"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "agua"
+        ]
       ],
       "variations": [
         {
@@ -2526,6 +3394,20 @@
         "A clay olla gives the coffee its earthy taste. Season a new one by boiling water in it a few times before the first coffee.",
         "Use a coarse grind, like for a French press, so it strains clean."
       ],
+      "needs": [
+        [
+          "agua"
+        ],
+        [
+          "piloncillo"
+        ],
+        [
+          "canela"
+        ],
+        [
+          "cafe"
+        ]
+      ],
       "variations": [
         {
           "name": "Chocolate Caliente",
@@ -2613,6 +3495,29 @@
       "tips": [
         "Keep stirring. Masa sticks to the bottom and burns fast."
       ],
+      "needs": [
+        [
+          "masa"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "leche"
+        ],
+        [
+          "chocolate"
+        ],
+        [
+          "piloncillo"
+        ],
+        [
+          "canela"
+        ],
+        [
+          "sal"
+        ]
+      ],
       "variations": [
         {
           "name": "Atole Blanco con Canela",
@@ -2674,6 +3579,17 @@
       "pressureNote": "No pressure-cooker version needed. It's a quick steep.",
       "tips": [
         "The flowers make a second, lighter batch. Or sauté them with onion and garlic for tacos de jamaica."
+      ],
+      "needs": [
+        [
+          "jamaica"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "piloncillo"
+        ]
       ],
       "variations": [
         {
@@ -2760,6 +3676,35 @@
         "Panaderos make the topping 1:1:1 by weight: flour, powdered sugar and shortening. In humid weather, add a spoonful more flour so it doesn't slide.",
         "If your kitchen is cold, let the dough rise in the oven with only the light on.",
         "Conchas go stale fast. Freeze extras the same day and warm them 5 minutes in the oven."
+      ],
+      "needs": [
+        [
+          "harina"
+        ],
+        [
+          "azucar"
+        ],
+        [
+          "levadura"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "leche"
+        ],
+        [
+          "huevo"
+        ],
+        [
+          "vainilla"
+        ],
+        [
+          "mantequilla"
+        ],
+        [
+          "manteca"
+        ]
       ],
       "variations": [
         {
@@ -2850,6 +3795,27 @@
         "The steam is the secret to the thin, crackly crust. Don't skip the pan of water.",
         "Day-old bolillos are perfect for molletes and capirotada."
       ],
+      "needs": [
+        [
+          "harina"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "levadura"
+        ],
+        [
+          "azucar"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "manteca",
+          "mantequilla"
+        ]
+      ],
       "variations": [
         {
           "name": "Teleras",
@@ -2923,6 +3889,32 @@
       "pressureNote": null,
       "tips": [
         "Use Mexican canela (Ceylon cinnamon), the soft, flaky kind. Cassia sticks are harder and spicier."
+      ],
+      "needs": [
+        [
+          "arroz"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "canela"
+        ],
+        [
+          "cascara"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "leche"
+        ],
+        [
+          "azucar"
+        ],
+        [
+          "vainilla"
+        ]
       ],
       "variations": [
         {
@@ -3004,6 +3996,29 @@
         "Strain the custard. That's what makes a flan smooth, with no holes.",
         "Low and slow. An oven that's too hot gives a spongy flan full of bubbles."
       ],
+      "needs": [
+        [
+          "azucar"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "leche"
+        ],
+        [
+          "canela"
+        ],
+        [
+          "cascara"
+        ],
+        [
+          "huevo"
+        ],
+        [
+          "vainilla"
+        ]
+      ],
       "variations": [
         {
           "name": "Flan Napolitano",
@@ -3079,6 +4094,37 @@
       "pressureNote": "No pressure-cooker version. Capirotada needs the dry heat of the oven to set.",
       "tips": [
         "Toast the bread well. Pale bread turns to mush."
+      ],
+      "needs": [
+        [
+          "piloncillo"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "canela"
+        ],
+        [
+          "clavo"
+        ],
+        [
+          "pan"
+        ],
+        [
+          "mantequilla",
+          "manteca"
+        ],
+        [
+          "pasas"
+        ],
+        [
+          "cacahuate",
+          "almendras"
+        ],
+        [
+          "queso-anejo"
+        ]
       ],
       "variations": []
     }
@@ -3219,6 +4265,1514 @@
     {
       "term": "Tequesquite",
       "definition": "A natural mineral salt from the old lakebeds of central Mexico, the traditional leavening for tamales, dissolved in water (often with tomatillo husks)."
+    }
+  ],
+  "lexicon": [
+    {
+      "id": "puerco",
+      "es": "Puerco",
+      "en": "Pork",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "pork",
+        "pork shoulder",
+        "espaldilla",
+        "pork neck bones",
+        "espinazo",
+        "pig's feet",
+        "manitas",
+        "country ribs",
+        "cerdo",
+        "puerco",
+        "carne de cerdo",
+        "carne de puerco",
+        "ground pork",
+        "pork leg",
+        "pierna"
+      ]
+    },
+    {
+      "id": "pollo",
+      "es": "Pollo",
+      "en": "Chicken",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "chicken",
+        "chickens",
+        "pollo",
+        "stewing hen",
+        "gallina",
+        "hen",
+        "chicken thighs",
+        "chicken breasts",
+        "chicken pieces",
+        "pechuga",
+        "muslos"
+      ]
+    },
+    {
+      "id": "guajolote",
+      "es": "Guajolote",
+      "en": "Turkey",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "turkey",
+        "guajolote",
+        "pavo"
+      ]
+    },
+    {
+      "id": "res",
+      "es": "Res",
+      "en": "Beef",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "beef",
+        "res",
+        "beef shank",
+        "chambarete",
+        "short ribs",
+        "costilla de res",
+        "beef cheeks",
+        "cachete",
+        "chuck",
+        "chuck roast",
+        "flank",
+        "skirt steak",
+        "ground beef",
+        "carne molida",
+        "oxtail",
+        "carne de res",
+        "steak",
+        "bistec"
+      ]
+    },
+    {
+      "id": "chivo",
+      "es": "Chivo",
+      "en": "Goat or lamb",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "goat",
+        "chivo",
+        "lamb",
+        "borrego",
+        "cordero",
+        "lamb shoulder"
+      ]
+    },
+    {
+      "id": "panza",
+      "es": "Pancita",
+      "en": "Tripe",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "tripe",
+        "honeycomb tripe",
+        "beef honeycomb tripe",
+        "beef tripe",
+        "panza",
+        "pancita",
+        "tripa",
+        "beef foot",
+        "pata de res"
+      ]
+    },
+    {
+      "id": "machaca",
+      "es": "Machaca",
+      "en": "Dried beef",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "machaca",
+        "dried shredded beef",
+        "carne seca"
+      ]
+    },
+    {
+      "id": "chorizo",
+      "es": "Chorizo",
+      "en": "Chorizo",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "chorizo",
+        "longaniza",
+        "mexican chorizo"
+      ]
+    },
+    {
+      "id": "jamon",
+      "es": "Jamón",
+      "en": "Ham",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "ham",
+        "jamon",
+        "salchicha",
+        "salchichas",
+        "hot dog",
+        "hot dogs"
+      ]
+    },
+    {
+      "id": "tocino",
+      "es": "Tocino",
+      "en": "Bacon",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "bacon",
+        "tocino"
+      ]
+    },
+    {
+      "id": "huevo",
+      "es": "Huevo",
+      "en": "Eggs",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "egg",
+        "eggs",
+        "huevo",
+        "huevos",
+        "yolk",
+        "yolks",
+        "yema",
+        "yemas"
+      ]
+    },
+    {
+      "id": "chicharron",
+      "es": "Chicharrón",
+      "en": "Chicharrón",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "chicharron",
+        "pork rinds"
+      ]
+    },
+    {
+      "id": "queso",
+      "es": "Queso",
+      "en": "Cheese",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "cheese",
+        "queso",
+        "quesos"
+      ]
+    },
+    {
+      "id": "queso-fresco",
+      "es": "Queso fresco",
+      "en": "Fresh cheese",
+      "kind": "main",
+      "parent": "queso",
+      "aliases": [
+        "queso fresco",
+        "queso ranchero",
+        "panela",
+        "queso panela"
+      ]
+    },
+    {
+      "id": "queso-oaxaca",
+      "es": "Queso Oaxaca",
+      "en": "Melting cheese",
+      "kind": "main",
+      "parent": "queso",
+      "aliases": [
+        "queso oaxaca",
+        "oaxaca cheese",
+        "quesillo",
+        "asadero",
+        "queso chihuahua",
+        "chihuahua cheese",
+        "manchego",
+        "mozzarella",
+        "monterey jack"
+      ]
+    },
+    {
+      "id": "queso-anejo",
+      "es": "Queso añejo",
+      "en": "Aged cheese",
+      "kind": "main",
+      "parent": "queso",
+      "aliases": [
+        "cotija",
+        "queso anejo",
+        "queso cotija"
+      ]
+    },
+    {
+      "id": "queso-crema",
+      "es": "Queso crema",
+      "en": "Cream cheese",
+      "kind": "main",
+      "parent": "queso",
+      "aliases": [
+        "cream cheese",
+        "queso crema",
+        "philadelphia"
+      ]
+    },
+    {
+      "id": "crema",
+      "es": "Crema",
+      "en": "Crema",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "crema",
+        "sour cream",
+        "crema mexicana"
+      ]
+    },
+    {
+      "id": "leche",
+      "es": "Leche",
+      "en": "Milk",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "milk",
+        "leche",
+        "whole milk"
+      ]
+    },
+    {
+      "id": "leche-evaporada",
+      "es": "Leche evaporada",
+      "en": "Evaporated milk",
+      "kind": "main",
+      "parent": "leche",
+      "aliases": [
+        "evaporated milk",
+        "leche evaporada"
+      ]
+    },
+    {
+      "id": "lechera",
+      "es": "Leche condensada",
+      "en": "Condensed milk",
+      "kind": "main",
+      "parent": "leche",
+      "aliases": [
+        "condensed milk",
+        "sweetened condensed milk",
+        "lechera",
+        "leche condensada"
+      ]
+    },
+    {
+      "id": "tortillas",
+      "es": "Tortillas",
+      "en": "Corn tortillas",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "tortilla",
+        "tortillas",
+        "corn tortilla",
+        "corn tortillas",
+        "tortillas de maiz",
+        "totopos",
+        "tortilla chips"
+      ]
+    },
+    {
+      "id": "tortilla-harina",
+      "es": "Tortillas de harina",
+      "en": "Flour tortillas",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "flour tortillas",
+        "flour tortilla",
+        "tortillas de harina",
+        "sobaqueras"
+      ]
+    },
+    {
+      "id": "tostadas",
+      "es": "Tostadas",
+      "en": "Tostadas",
+      "kind": "main",
+      "parent": "tortillas",
+      "aliases": [
+        "tostada",
+        "tostadas"
+      ]
+    },
+    {
+      "id": "masa",
+      "es": "Masa",
+      "en": "Masa",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "masa",
+        "masa harina",
+        "fresh masa",
+        "maseca"
+      ]
+    },
+    {
+      "id": "arroz",
+      "es": "Arroz",
+      "en": "Rice",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "rice",
+        "arroz",
+        "long-grain rice",
+        "white rice"
+      ]
+    },
+    {
+      "id": "fideo",
+      "es": "Fideo",
+      "en": "Fideo noodles",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "fideo",
+        "vermicelli",
+        "fideos"
+      ]
+    },
+    {
+      "id": "pan",
+      "es": "Pan",
+      "en": "Bread",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "bolillo",
+        "bolillos",
+        "bread",
+        "birote",
+        "rolls",
+        "telera",
+        "white bread"
+      ]
+    },
+    {
+      "id": "harina",
+      "es": "Harina",
+      "en": "Flour",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "flour",
+        "harina",
+        "all-purpose flour",
+        "bread flour",
+        "harina de trigo"
+      ]
+    },
+    {
+      "id": "maiz-pozolero",
+      "es": "Maíz pozolero",
+      "en": "Hominy",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "hominy",
+        "maiz pozolero",
+        "cacahuazintle",
+        "nixtamal",
+        "pozolero"
+      ]
+    },
+    {
+      "id": "elote",
+      "es": "Elote",
+      "en": "Corn on the cob",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "ears of corn",
+        "ear of corn",
+        "elote",
+        "elotes",
+        "corn on the cob",
+        "corn"
+      ]
+    },
+    {
+      "id": "hojas-maiz",
+      "es": "Hojas de maíz",
+      "en": "Corn husks",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "corn husks",
+        "corn husk",
+        "hojas de maiz",
+        "hojas para tamal",
+        "husks"
+      ]
+    },
+    {
+      "id": "hoja-platano",
+      "es": "Hoja de plátano",
+      "en": "Banana leaves",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "banana leaves",
+        "banana leaf",
+        "hoja de platano",
+        "hojas de platano"
+      ]
+    },
+    {
+      "id": "frijol",
+      "es": "Frijol",
+      "en": "Beans",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "beans",
+        "frijol",
+        "frijoles",
+        "pinto beans",
+        "pinto",
+        "black beans",
+        "frijoles negros",
+        "bayos",
+        "refried beans",
+        "refritos",
+        "frijoles de la olla"
+      ]
+    },
+    {
+      "id": "garbanzo",
+      "es": "Garbanzo",
+      "en": "Chickpeas",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "chickpeas",
+        "chickpea",
+        "garbanzo",
+        "garbanzos"
+      ]
+    },
+    {
+      "id": "jitomate",
+      "es": "Jitomate",
+      "en": "Tomatoes",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "tomato",
+        "tomatoes",
+        "jitomate",
+        "jitomates",
+        "roma tomatoes",
+        "roma tomato",
+        "tomate rojo"
+      ]
+    },
+    {
+      "id": "tomatillo",
+      "es": "Tomate verde",
+      "en": "Tomatillos",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "tomatillo",
+        "tomatillos",
+        "tomate verde",
+        "tomates verdes"
+      ]
+    },
+    {
+      "id": "cebolla",
+      "es": "Cebolla",
+      "en": "Onion",
+      "kind": "aromatic",
+      "parent": null,
+      "aliases": [
+        "onion",
+        "onions",
+        "cebolla",
+        "cebollas",
+        "white onion",
+        "red onion",
+        "cebolla morada"
+      ]
+    },
+    {
+      "id": "ajo",
+      "es": "Ajo",
+      "en": "Garlic",
+      "kind": "aromatic",
+      "parent": null,
+      "aliases": [
+        "garlic",
+        "ajo",
+        "ajos",
+        "garlic cloves",
+        "garlic clove",
+        "head garlic",
+        "diente de ajo",
+        "dientes de ajo"
+      ]
+    },
+    {
+      "id": "papa",
+      "es": "Papa",
+      "en": "Potatoes",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "potato",
+        "potatoes",
+        "papa",
+        "papas"
+      ]
+    },
+    {
+      "id": "zanahoria",
+      "es": "Zanahoria",
+      "en": "Carrots",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "carrot",
+        "carrots",
+        "zanahoria",
+        "zanahorias"
+      ]
+    },
+    {
+      "id": "calabacita",
+      "es": "Calabacita",
+      "en": "Zucchini",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "zucchini",
+        "calabacita",
+        "calabacitas",
+        "squash"
+      ]
+    },
+    {
+      "id": "chayote",
+      "es": "Chayote",
+      "en": "Chayote",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "chayote",
+        "chayotes"
+      ]
+    },
+    {
+      "id": "repollo",
+      "es": "Repollo",
+      "en": "Cabbage",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "cabbage",
+        "repollo",
+        "col"
+      ]
+    },
+    {
+      "id": "lechuga",
+      "es": "Lechuga",
+      "en": "Lettuce",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "lettuce",
+        "romaine",
+        "lechuga"
+      ]
+    },
+    {
+      "id": "rabano",
+      "es": "Rábano",
+      "en": "Radishes",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "radish",
+        "radishes",
+        "rabano",
+        "rabanos"
+      ]
+    },
+    {
+      "id": "aguacate",
+      "es": "Aguacate",
+      "en": "Avocado",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "avocado",
+        "avocados",
+        "aguacate",
+        "aguacates"
+      ]
+    },
+    {
+      "id": "limon",
+      "es": "Limón",
+      "en": "Limes",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "lime",
+        "limes",
+        "limon",
+        "limones",
+        "lime juice"
+      ]
+    },
+    {
+      "id": "naranja",
+      "es": "Naranja",
+      "en": "Oranges",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "orange",
+        "oranges",
+        "naranja",
+        "naranjas",
+        "naranja agria",
+        "sour orange",
+        "seville orange",
+        "orange juice"
+      ]
+    },
+    {
+      "id": "platano",
+      "es": "Plátano macho",
+      "en": "Plantain",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "plantain",
+        "plantains",
+        "platano macho",
+        "platano"
+      ]
+    },
+    {
+      "id": "nopales",
+      "es": "Nopales",
+      "en": "Cactus paddles",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "nopales",
+        "nopal",
+        "cactus paddles",
+        "cactus"
+      ]
+    },
+    {
+      "id": "verdolagas",
+      "es": "Verdolagas",
+      "en": "Purslane",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "verdolagas",
+        "purslane"
+      ]
+    },
+    {
+      "id": "ejotes",
+      "es": "Ejotes",
+      "en": "Green beans",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "green beans",
+        "ejotes"
+      ]
+    },
+    {
+      "id": "chicharos",
+      "es": "Chícharos",
+      "en": "Peas",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "peas",
+        "chicharos"
+      ]
+    },
+    {
+      "id": "apio",
+      "es": "Apio",
+      "en": "Celery",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "celery",
+        "apio"
+      ]
+    },
+    {
+      "id": "xoconostle",
+      "es": "Xoconostle",
+      "en": "Xoconostle",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "xoconostle",
+        "xoconostles"
+      ]
+    },
+    {
+      "id": "pasas",
+      "es": "Pasas",
+      "en": "Raisins",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "raisins",
+        "pasas"
+      ]
+    },
+    {
+      "id": "almendras",
+      "es": "Almendras",
+      "en": "Almonds",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "almonds",
+        "almendras"
+      ]
+    },
+    {
+      "id": "cacahuate",
+      "es": "Cacahuate",
+      "en": "Peanuts",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "peanuts",
+        "cacahuate",
+        "cacahuates"
+      ]
+    },
+    {
+      "id": "pepitas",
+      "es": "Pepitas",
+      "en": "Pumpkin seeds",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "pepitas",
+        "pumpkin seeds"
+      ]
+    },
+    {
+      "id": "ajonjoli",
+      "es": "Ajonjolí",
+      "en": "Sesame seeds",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "sesame",
+        "sesame seeds",
+        "ajonjoli"
+      ]
+    },
+    {
+      "id": "fruta",
+      "es": "Fruta",
+      "en": "Pear, peach, apple",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "pear",
+        "peach",
+        "apple",
+        "pera",
+        "durazno",
+        "manzana"
+      ]
+    },
+    {
+      "id": "chile",
+      "es": "Chiles",
+      "en": "Chiles",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "chile",
+        "chiles",
+        "chili",
+        "chilies",
+        "chilis"
+      ]
+    },
+    {
+      "id": "chile-fresco",
+      "es": "Chiles frescos",
+      "en": "Fresh chiles",
+      "kind": "main",
+      "parent": "chile",
+      "aliases": [
+        "fresh chiles",
+        "chiles frescos",
+        "chile verde"
+      ]
+    },
+    {
+      "id": "serrano",
+      "es": "Serrano",
+      "en": "Serrano chiles",
+      "kind": "main",
+      "parent": "chile-fresco",
+      "aliases": [
+        "serrano chiles",
+        "serrano chile",
+        "serrano",
+        "serranos",
+        "chile serrano"
+      ]
+    },
+    {
+      "id": "jalapeno",
+      "es": "Jalapeño",
+      "en": "Jalapeños",
+      "kind": "main",
+      "parent": "chile-fresco",
+      "aliases": [
+        "jalapeno",
+        "jalapenos",
+        "chile jalapeno",
+        "anaheim"
+      ]
+    },
+    {
+      "id": "poblano",
+      "es": "Poblano",
+      "en": "Poblano chiles",
+      "kind": "main",
+      "parent": "chile-fresco",
+      "aliases": [
+        "poblano chiles",
+        "poblano chile",
+        "poblano",
+        "poblanos",
+        "chile poblano"
+      ]
+    },
+    {
+      "id": "habanero",
+      "es": "Habanero",
+      "en": "Habaneros",
+      "kind": "main",
+      "parent": "chile-fresco",
+      "aliases": [
+        "habanero chiles",
+        "habanero chile",
+        "habanero",
+        "habaneros"
+      ]
+    },
+    {
+      "id": "chile-seco",
+      "es": "Chiles secos",
+      "en": "Dried chiles",
+      "kind": "main",
+      "parent": "chile",
+      "aliases": [
+        "dried chiles",
+        "dried chile",
+        "chiles secos",
+        "chile seco"
+      ]
+    },
+    {
+      "id": "guajillo",
+      "es": "Guajillo",
+      "en": "Guajillo chiles",
+      "kind": "main",
+      "parent": "chile-seco",
+      "aliases": [
+        "guajillo chiles",
+        "guajillo chile",
+        "guajillo",
+        "guajillos",
+        "chile guajillo",
+        "chiles guajillo"
+      ]
+    },
+    {
+      "id": "ancho",
+      "es": "Ancho",
+      "en": "Ancho chiles",
+      "kind": "main",
+      "parent": "chile-seco",
+      "aliases": [
+        "ancho chiles",
+        "ancho chile",
+        "ancho",
+        "anchos",
+        "chile ancho",
+        "chiles ancho"
+      ]
+    },
+    {
+      "id": "pasilla",
+      "es": "Pasilla",
+      "en": "Pasilla chiles",
+      "kind": "main",
+      "parent": "chile-seco",
+      "aliases": [
+        "pasilla chiles",
+        "pasilla chile",
+        "pasilla",
+        "pasillas",
+        "chile pasilla",
+        "chiles pasilla"
+      ]
+    },
+    {
+      "id": "mulato",
+      "es": "Mulato",
+      "en": "Mulato chiles",
+      "kind": "main",
+      "parent": "chile-seco",
+      "aliases": [
+        "mulato chiles",
+        "mulato chile",
+        "mulato",
+        "mulatos",
+        "chiles mulato"
+      ]
+    },
+    {
+      "id": "chipotle",
+      "es": "Chipotle",
+      "en": "Chipotles",
+      "kind": "main",
+      "parent": "chile-seco",
+      "aliases": [
+        "chipotle chiles",
+        "dried chipotles",
+        "chipotle",
+        "chipotles",
+        "chipotles en adobo",
+        "chipotle en adobo",
+        "chipotle mora",
+        "chiles chipotle"
+      ]
+    },
+    {
+      "id": "arbol",
+      "es": "Chile de árbol",
+      "en": "Chiles de árbol",
+      "kind": "main",
+      "parent": "chile-seco",
+      "aliases": [
+        "arbol chiles",
+        "chile de arbol",
+        "chiles de arbol",
+        "arbol"
+      ]
+    },
+    {
+      "id": "piquin",
+      "es": "Piquín",
+      "en": "Piquín / chiltepín",
+      "kind": "season",
+      "parent": "chile-seco",
+      "aliases": [
+        "piquin",
+        "chiltepin",
+        "chile piquin"
+      ]
+    },
+    {
+      "id": "oregano",
+      "es": "Orégano",
+      "en": "Oregano",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "oregano",
+        "mexican oregano"
+      ]
+    },
+    {
+      "id": "comino",
+      "es": "Comino",
+      "en": "Cumin",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "cumin",
+        "comino",
+        "cumin seed"
+      ]
+    },
+    {
+      "id": "canela",
+      "es": "Canela",
+      "en": "Cinnamon",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "cinnamon",
+        "canela",
+        "mexican cinnamon"
+      ]
+    },
+    {
+      "id": "clavo",
+      "es": "Clavo",
+      "en": "Cloves",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "cloves",
+        "whole cloves",
+        "clavo",
+        "clavos"
+      ]
+    },
+    {
+      "id": "laurel",
+      "es": "Laurel",
+      "en": "Bay leaves",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "bay leaf",
+        "bay leaves",
+        "laurel",
+        "hoja de laurel"
+      ]
+    },
+    {
+      "id": "pimienta-gorda",
+      "es": "Pimienta gorda",
+      "en": "Allspice",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "allspice",
+        "allspice berries",
+        "pimienta gorda"
+      ]
+    },
+    {
+      "id": "anis",
+      "es": "Anís",
+      "en": "Anise",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "anise",
+        "anise seed",
+        "star anise",
+        "anis"
+      ]
+    },
+    {
+      "id": "tomillo",
+      "es": "Tomillo",
+      "en": "Thyme",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "thyme",
+        "tomillo"
+      ]
+    },
+    {
+      "id": "mejorana",
+      "es": "Mejorana",
+      "en": "Marjoram",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "marjoram",
+        "mejorana"
+      ]
+    },
+    {
+      "id": "coriandro",
+      "es": "Cilantro en semilla",
+      "en": "Coriander seed",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "coriander seed",
+        "coriander"
+      ]
+    },
+    {
+      "id": "epazote",
+      "es": "Epazote",
+      "en": "Epazote",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "epazote"
+      ]
+    },
+    {
+      "id": "cilantro",
+      "es": "Cilantro",
+      "en": "Cilantro",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "cilantro"
+      ]
+    },
+    {
+      "id": "hierbabuena",
+      "es": "Hierbabuena",
+      "en": "Mint",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "hierbabuena",
+        "mint"
+      ]
+    },
+    {
+      "id": "hoja-santa",
+      "es": "Hoja santa",
+      "en": "Hoja santa",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "hoja santa"
+      ]
+    },
+    {
+      "id": "hoja-aguacate",
+      "es": "Hoja de aguacate",
+      "en": "Avocado leaves",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "avocado leaves",
+        "avocado leaf",
+        "hojas de aguacate",
+        "hoja de aguacate"
+      ]
+    },
+    {
+      "id": "achiote",
+      "es": "Achiote",
+      "en": "Achiote",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "achiote",
+        "annatto",
+        "recado rojo"
+      ]
+    },
+    {
+      "id": "jengibre",
+      "es": "Jengibre",
+      "en": "Ginger",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "ginger",
+        "jengibre"
+      ]
+    },
+    {
+      "id": "vinagre",
+      "es": "Vinagre",
+      "en": "Vinegar",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "vinegar",
+        "vinagre",
+        "apple cider vinegar"
+      ]
+    },
+    {
+      "id": "vainilla",
+      "es": "Vainilla",
+      "en": "Vanilla",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "vanilla",
+        "vainilla"
+      ]
+    },
+    {
+      "id": "cascara",
+      "es": "Cáscara de cítrico",
+      "en": "Citrus peel",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "lime peel",
+        "orange peel",
+        "lime zest",
+        "orange zest",
+        "zest of 2 oranges",
+        "zest of an orange",
+        "strip lime peel",
+        "cascara de limon"
+      ]
+    },
+    {
+      "id": "_",
+      "es": "",
+      "en": "",
+      "kind": "ignore",
+      "parent": null,
+      "aliases": [
+        "chile seeds",
+        "red chile sauce",
+        "chile sauce",
+        "the red chile",
+        "soaking water",
+        "soaking liquid",
+        "cooking water",
+        "salsa verde",
+        "salsa ranchera",
+        "the base",
+        "the base recipe",
+        "picadillo",
+        "beef or chicken broth"
+      ]
+    },
+    {
+      "id": "azahar",
+      "es": "Agua de azahar",
+      "en": "Orange blossom water",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "orange blossom water",
+        "agua de azahar"
+      ]
+    },
+    {
+      "id": "levadura",
+      "es": "Levadura",
+      "en": "Yeast",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "yeast",
+        "instant yeast",
+        "levadura"
+      ]
+    },
+    {
+      "id": "chocolate",
+      "es": "Chocolate",
+      "en": "Mexican chocolate",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "chocolate",
+        "mexican chocolate",
+        "cocoa",
+        "cocoa powder",
+        "chocolate de metate",
+        "abuelita"
+      ]
+    },
+    {
+      "id": "piloncillo",
+      "es": "Piloncillo",
+      "en": "Piloncillo",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "piloncillo",
+        "brown sugar",
+        "panela de cana"
+      ]
+    },
+    {
+      "id": "cafe",
+      "es": "Café",
+      "en": "Coffee",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "coffee",
+        "cafe",
+        "ground coffee"
+      ]
+    },
+    {
+      "id": "jamaica",
+      "es": "Jamaica",
+      "en": "Hibiscus",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "jamaica",
+        "hibiscus",
+        "flor de jamaica"
+      ]
+    },
+    {
+      "id": "cerveza",
+      "es": "Cerveza",
+      "en": "Beer",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "beer",
+        "cerveza",
+        "pulque"
+      ]
+    },
+    {
+      "id": "sal",
+      "es": "Sal",
+      "en": "Salt",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "salt",
+        "sal",
+        "coarse salt"
+      ]
+    },
+    {
+      "id": "agua",
+      "es": "Agua",
+      "en": "Water",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "water",
+        "agua"
+      ]
+    },
+    {
+      "id": "aceite",
+      "es": "Aceite",
+      "en": "Oil",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "oil",
+        "aceite",
+        "vegetable oil"
+      ]
+    },
+    {
+      "id": "manteca",
+      "es": "Manteca",
+      "en": "Lard or shortening",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "lard",
+        "manteca",
+        "pork lard",
+        "shortening",
+        "vegetable shortening",
+        "manteca vegetal"
+      ]
+    },
+    {
+      "id": "mantequilla",
+      "es": "Mantequilla",
+      "en": "Butter",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "butter",
+        "mantequilla",
+        "soft butter"
+      ]
+    },
+    {
+      "id": "azucar",
+      "es": "Azúcar",
+      "en": "Sugar",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "sugar",
+        "azucar",
+        "powdered sugar"
+      ]
+    },
+    {
+      "id": "pimienta",
+      "es": "Pimienta",
+      "en": "Black pepper",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "black pepper",
+        "pepper",
+        "peppercorns",
+        "black peppercorns",
+        "pimienta"
+      ]
+    },
+    {
+      "id": "caldo",
+      "es": "Caldo",
+      "en": "Broth",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "broth",
+        "chicken broth",
+        "beef broth",
+        "caldo",
+        "stock",
+        "pork broth",
+        "cooking broth"
+      ]
+    },
+    {
+      "id": "polvo-hornear",
+      "es": "Polvo para hornear",
+      "en": "Baking powder",
+      "kind": "basic",
+      "parent": null,
+      "aliases": [
+        "baking powder",
+        "polvo para hornear",
+        "royal"
+      ]
     }
   ]
 }
