@@ -33,7 +33,7 @@ TRADICIONAL, OLLA EXPRÉS Y VARIANTES
 • Secretos de la abuela: the tips that make the difference
 
 ¿PARA CUÁNTOS?
-• Cook for more or fewer people, or cut a recipe in half, and every ingredient amount adjusts
+• Cook for more or fewer people, or cut a recipe in half: every ingredient amount adjusts, and so do the amounts in the steps
 • Cups and pounds or grams and liters, your choice
 
 ¿QUÉ TENGO?
