@@ -7,7 +7,7 @@ Copy these into App Store Connect. Character limits are Apple's.
 | Field | Value |
 |---|---|
 | Name (30) | Recetario de la Abuela |
-| Subtitle (30) | Cocina mexicana de casa |
+| Subtitle (30) | Authentic Mexican Home Cooking |
 | Bundle ID | com.keatonmx.recetario |
 | SKU | recetario-abuela-001 |
 | Primary language | English (U.S.) |
