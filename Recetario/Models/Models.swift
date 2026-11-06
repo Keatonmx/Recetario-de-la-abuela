@@ -85,6 +85,8 @@ struct Recipe: Codable, Hashable, Identifiable {
     let time: [String: String]
     /// What the recipe needs, for ¿Qué tengo?: each entry is a set of alternatives ("pork or chicken").
     let needs: [[String]]
+    /// No wheat in the dish itself (bread on the side can be swapped for corn tortillas).
+    let glutenFree: Bool
     let es: RecipeText
     let en: RecipeText
 

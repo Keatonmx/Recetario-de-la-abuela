@@ -106,6 +106,7 @@
           "huevo"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Huevos estrellados sobre tortilla, bañados en salsa ranchera",
         "verso": "Al que madruga, Dios lo ayuda… con sus huevos rancheros.",
@@ -352,6 +353,7 @@
           "queso-oaxaca"
         ]
       ],
+      "glutenFree": false,
       "es": {
         "subtitle": "Bolillos abiertos con frijoles y queso gratinado",
         "verso": "Bolillo, frijol y queso: el desayuno del recreo.",
@@ -574,6 +576,7 @@
           "sal"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Huevos revueltos con jitomate, cebolla y chile",
         "verso": "Verde, blanco y colorado: la bandera en el plato.",
@@ -791,6 +794,7 @@
           "sal"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Carne seca deshebrada revuelta con huevo",
         "verso": "Carne seca y huevo revuelto, en tortilla de harina envuelto.",
@@ -1019,6 +1023,7 @@
           "caldo"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Totopos hervidos en salsa verde",
         "verso": "Crujientes o aguaditos, pero siempre bien bañaditos.",
@@ -1290,6 +1295,7 @@
           "comino"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Pozole rojo de puerco con maíz cacahuazintle",
         "verso": "Maíz que revienta en flor: el pozole del quince, ¡qué sabor!",
@@ -1619,6 +1625,7 @@
           "maiz-pozolero"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Caldo rojo de pancita con maíz pozolero",
         "verso": "Al dolor de cabeza, el comer le endereza.",
@@ -1868,6 +1875,7 @@
           "hierbabuena"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Caldo de res con verduras",
         "verso": "Caldo de res con su hueso: el que lo prueba regresa por eso.",
@@ -2116,6 +2124,7 @@
           "cilantro"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Caldo de pollo con verduras",
         "verso": "Pa' la gripa y pa'l desamor, un caldito es lo mejor.",
@@ -2337,6 +2346,7 @@
           "epazote"
         ]
       ],
+      "glutenFree": false,
       "es": {
         "subtitle": "Sopa de fideo dorado en caldillo de jitomate",
         "verso": "Fideo dorado, nunca quemado.",
@@ -2530,6 +2540,7 @@
           "calabacita"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Albóndigas en caldillo de jitomate con hierbabuena",
         "verso": "Con su arroz y su hierbabuena, la albóndiga sale buena.",
@@ -2740,6 +2751,7 @@
           "agua"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Chivo en adobo de chiles con su consomé",
         "verso": "Dicen que birria es cosa sin valor… ¡pero en Jalisco es puro sabor!",
@@ -2998,6 +3010,7 @@
           "pimienta"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Puerco en achiote envuelto en hoja de plátano",
         "verso": "En hoja de plátano envuelta, sale la cochinita bien suelta.",
@@ -3245,6 +3258,7 @@
           "naranja"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Puerco cocido despacio en manteca",
         "verso": "En el cazo de cobre, la carnita nunca es pobre.",
@@ -3417,6 +3431,7 @@
           "limon"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Cachete de res cocido despacio al vapor",
         "verso": "Domingo sin barbacoa, domingo que no se goza.",
@@ -3644,6 +3659,7 @@
           "nopales"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Puerco en salsa de tomate verde con verdolagas",
         "verso": "Puerco, tomate y verdolaga: la comida que no empalaga.",
@@ -3821,6 +3837,7 @@
           "oregano"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Pollo deshebrado en salsa de chipotle",
         "verso": "Tinga en tostada, la fiesta está armada.",
@@ -4045,6 +4062,7 @@
           "caldo"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Carne molida con papa y zanahoria",
         "verso": "Picadillo de la abuela: rinde, llena y consuela.",
@@ -4225,6 +4243,7 @@
           "laurel"
         ]
       ],
+      "glutenFree": false,
       "es": {
         "subtitle": "Chiles poblanos rellenos de queso y capeados con huevo",
         "verso": "Capeado como Dios manda: esponjadito y sin grasa.",
@@ -4413,6 +4432,7 @@
           "agua"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Camarón crudo curado en limón y chile",
         "verso": "Camarón que se duerme, se lo lleva la corriente.",
@@ -4625,6 +4645,7 @@
           "cilantro"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Coctel de camarón a la mexicana",
         "verso": "Para todo mal, un coctel; y para todo bien, también.",
@@ -4855,6 +4876,7 @@
           "jalapeno"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Pescado en salsa de jitomate con aceitunas y alcaparras",
         "verso": "Aceituna, chile güero y jitomate: Veracruz en un plato de remate.",
@@ -5128,6 +5150,7 @@
           "zanahoria"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Caldo picoso de camarón",
         "verso": "Caldo de camarón: para la cruda, la mejor razón.",
@@ -5374,6 +5397,7 @@
           "aceite"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Camarones en salsa roja de chile, bien picosa",
         "verso": "Camarón a la diabla: el que lo prueba, ni habla.",
@@ -5570,6 +5594,7 @@
           "cilantro"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Pescado curado en limón sobre tostadas crujientes",
         "verso": "Limón, pescado y tostada: la playa sin pagar nada.",
@@ -5821,6 +5846,7 @@
           "azucar"
         ]
       ],
+      "glutenFree": false,
       "es": {
         "subtitle": "Salsa de chiles, chocolate y especias con guajolote",
         "verso": "¡Aquí sí estamos en nuestro mero mole!",
@@ -6124,6 +6150,7 @@
           "agua"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Tamales de puerco en chile rojo",
         "verso": "El que nace pa' tamal, del cielo le caen las hojas.",
@@ -6406,6 +6433,7 @@
           "queso-fresco"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Enchiladas de chile rojo con queso fresco",
         "verso": "Pásala por el chile y dórala al momento: así se hace el sustento.",
@@ -6606,6 +6634,7 @@
           "epazote"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Frijoles de olla con epazote",
         "verso": "Donde come uno, comen dos.",
@@ -6860,6 +6889,7 @@
           "serrano"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Arroz rojo a la mexicana",
         "verso": "Al arroz, ni lo mires: tápalo y déjalo.",
@@ -7044,6 +7074,7 @@
           "agua"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Salsa de jitomate asado",
         "verso": "Sin salsa no hay taco, y sin molcajete no hay salsa.",
@@ -7235,6 +7266,7 @@
           "cafe"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Café de olla de barro con piloncillo y canela",
         "verso": "Café de olla y pan dulce: la tarde no pide más.",
@@ -7431,6 +7463,7 @@
           "sal"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Atole de chocolate con masa",
         "verso": "Champurrado y tamal, ¡ni el frío nos hace mal!",
@@ -7575,6 +7608,7 @@
           "piloncillo"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Agua fresca de flor de jamaica",
         "verso": "Agua de jamaica, roja y bien fría: la que se toma todo el día.",
@@ -7731,6 +7765,7 @@
           "manteca"
         ]
       ],
+      "glutenFree": false,
       "es": {
         "subtitle": "Pan dulce con cubierta de azúcar en forma de concha",
         "verso": "A la hora del cafecito, una concha y un ratito.",
@@ -7959,6 +7994,7 @@
           "mantequilla"
         ]
       ],
+      "glutenFree": false,
       "es": {
         "subtitle": "Bolillos mexicanos de corteza crujiente",
         "verso": "Pa'l susto, un bolillo.",
@@ -8112,6 +8148,7 @@
           "vainilla"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Arroz con leche y canela",
         "verso": "Arroz con leche, me quiero casar…",
@@ -8286,6 +8323,7 @@
           "vainilla"
         ]
       ],
+      "glutenFree": true,
       "es": {
         "subtitle": "Flan de leche y huevo con caramelo",
         "verso": "Tiembla, tiembla, pero no se cae: así es el flan de la abuela.",
@@ -8486,6 +8524,7 @@
           "queso-anejo"
         ]
       ],
+      "glutenFree": false,
       "es": {
         "subtitle": "Budín de pan de Cuaresma con piloncillo",
         "verso": "Capirotada en Cuaresma: cada capa, una promesa.",

@@ -27,7 +27,7 @@ struct WallBackground: View {
                 Color.paper
                 if scheme == .light {
                     Limewash()
-                    Guardapolvo().frame(height: bandHeight)
+                    Guardapolvo(underBar: geo.safeAreaInsets.bottom).frame(height: bandHeight)
                 } else {
                     NocheDeVelas()
                     OfrendaEdge().frame(height: bandHeight)
@@ -64,14 +64,23 @@ struct Limewash: View {
     }
 }
 
-/// The painted band along the bottom of the wall: añil blue under a cempasúchil stripe.
+/// The painted band along the bottom of the wall: a deep añil cenefa under a cempasúchil
+/// stripe, showing just above the tab bar, then a pale añil wash. The glass tab bar takes
+/// on the color behind it, so under the bar the wall stays light and the tab names stay
+/// readable.
 struct Guardapolvo: View {
+    /// How much of the band the tab bar covers.
+    var underBar: CGFloat = 0
+
     var body: some View {
         VStack(spacing: 0) {
             Rectangle().fill(Color.ink).frame(height: 1.5)
             Rectangle().fill(Color(hex6: 0xF2A900)).frame(height: 4)
             Rectangle().fill(Color.ink).frame(height: 1.5)
             LinearGradient(colors: [Color(hex6: 0x2348A6), Color(hex6: 0x1A3580)], startPoint: .top, endPoint: .bottom)
+            Rectangle().fill(Color(hex6: 0x1A3580).opacity(0.55)).frame(height: 1)
+            LinearGradient(colors: [Color(hex6: 0xDCE4F4), Color(hex6: 0xE9EEF8)], startPoint: .top, endPoint: .bottom)
+                .frame(height: underBar)
         }
     }
 }

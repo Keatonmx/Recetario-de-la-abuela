@@ -8,6 +8,8 @@ struct RecipeListView: View {
     @State private var query = ""
     @State private var category: String? = UserDefaults.standard.string(forKey: "screenshotCategory")
     @State private var pressureOnly = false
+    @State private var glutenFreeOnly = false
+    @FocusState private var searching: Bool
     /// Pull to refresh sets the papel picado swaying.
     @State private var swing = 0
     /// El Tablero: four small cards across instead of two.
@@ -21,7 +23,7 @@ struct RecipeListView: View {
     }
 
     private var isFiltering: Bool {
-        !query.trimmingCharacters(in: .whitespaces).isEmpty || category != nil || pressureOnly
+        !query.trimmingCharacters(in: .whitespaces).isEmpty || category != nil || pressureOnly || glutenFreeOnly
     }
 
     private var results: [Recipe] {
@@ -30,6 +32,7 @@ struct RecipeListView: View {
             if savedOnly && !store.isFavorite(recipe.id) { return false }
             if let category, recipe.category != category { return false }
             if pressureOnly && !recipe.hasPressureCooker { return false }
+            if glutenFreeOnly && !recipe.glutenFree { return false }
             if !trimmed.isEmpty {
                 let index = store.searchIndex[recipe.id] ?? recipe.searchIndex
                 if !trimmed.folded.split(separator: " ").allSatisfy({ index.contains($0) }) { return false }
@@ -43,6 +46,7 @@ struct RecipeListView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
                 header
+                searchField
                 chips
                 if savedOnly && store.book.recipes.allSatisfy({ !store.isFavorite($0.id) }) {
                     ContentUnavailableView {
@@ -74,6 +78,14 @@ struct RecipeListView: View {
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                     }
+                    if glutenFreeOnly {
+                        // The dishes have no wheat, but some store-bought things can.
+                        Text(store.t("Sin trigo en el platillo. Revisa las etiquetas del chocolate, los chipotles en lata y el consomé en polvo, y acompaña con tortillas de maíz.",
+                                     "No wheat in the dish. Check the labels on Mexican chocolate, canned chipotles and bouillon powder, and serve with corn tortillas."))
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                     LazyVStack(alignment: .leading, spacing: 34) {
                         ForEach(store.book.categories) { cat in
                             let inCategory = recipes.filter { $0.category == cat.id }
@@ -90,16 +102,12 @@ struct RecipeListView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 32)
         }
+        .scrollDismissesKeyboard(.immediately)
         .background(WallBackground())
         .refreshable {
             if !reduceMotion { swing += 1 }
             try? await Task.sleep(for: .milliseconds(600))
         }
-        .searchable(
-            text: $query,
-            placement: .navigationBarDrawer(displayMode: .always),
-            prompt: Text(store.t("Buscar: pozole, guajillo, Yucatán…", "Search: pozole, guajillo, Yucatán…"))
-        )
         .navigationTitle(savedOnly ? store.t("Guardadas", "Saved") : store.t("Recetas", "Recipes"))
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(for: Recipe.self) { recipe in
@@ -154,8 +162,9 @@ struct RecipeListView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
-            PapelPicado(swing: swing)
-                .padding(.top, 4)
+            // The papel picado is strung across the top of the screen, wall to wall.
+            PapelPicado(count: 11, swing: swing)
+                .padding(.horizontal, -16)
             // The wordmark lives in the top bar now, so the deck shows on first open.
             if savedOnly {
                 Text(store.t("Tus milagros: las recetas que guardaste con el corazón, en este teléfono.",
@@ -180,10 +189,39 @@ struct RecipeListView: View {
         }
     }
 
+    /// Search sits with the filters, right above the deck it searches.
+    private var searchField: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(Color.stockMuted)
+                .accessibilityHidden(true)
+            TextField(store.t("Buscar: pozole, guajillo, Yucatán…", "Search: pozole, guajillo, Yucatán…"), text: $query)
+                .focused($searching)
+                .submitLabel(.search)
+                .autocorrectionDisabled()
+                .foregroundStyle(Color.ink)
+            if !query.isEmpty {
+                Button {
+                    query = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill").foregroundStyle(Color.stockMuted)
+                }
+                .accessibilityLabel(store.t("Borrar la búsqueda", "Clear search"))
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .background(RoundedRectangle(cornerRadius: 12).fill(Color.stock))
+        .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.ink, lineWidth: searching ? 2 : 1.5))
+        // Card stock is cream in both themes.
+        .environment(\.colorScheme, .light)
+    }
+
     private var chips: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 Chip(title: store.t("Olla exprés", "Pressure cooker"), isOn: pressureOnly, paint: "#1F6B3F") { pressureOnly.toggle() }
+                Chip(title: store.t("Sin gluten", "Gluten free"), isOn: glutenFreeOnly, paint: "#D9A21B") { glutenFreeOnly.toggle() }
                 Chip(title: store.t("Todas", "All"), isOn: category == nil, paint: "#C70067") { category = nil }
                 ForEach(store.book.categories) { cat in
                     Chip(title: cat.name(store.lang), isOn: category == cat.id, paint: cat.color) { category = cat.id }

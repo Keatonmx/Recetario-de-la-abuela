@@ -113,6 +113,16 @@ if (problems.length) {
   process.exit(1);
 }
 
+// Sin gluten: no wheat in the dish itself. A wheat line with a corn choice beside it
+// ("corn or flour tortillas", "tostadas or saladitas") doesn't count, and neither do the
+// two plain bread sides below, which you just swap for corn tortillas.
+const WHEAT = /\b(flour|bread|bolillos?|rolls?|fideo|pasta|noodles?|vermicelli|beer|wheat|crackers?|saltines?|saladitas|cookies?|pastry|crumbs?|panko|seitan)\b/i;
+const CORN_CHOICE = /\bcorn\b|\btostadas?\b|(?<!flour )\btortillas?\b/i;
+const BREAD_SIDES = { "machaca-con-huevo": ["Warm flour tortillas"], "pescado-veracruzana": ["Bolillos"] };
+const glutenFree = (id) =>
+  !texts[id].en.ingredients.some((g) => g.items.some((item) =>
+    WHEAT.test(item.replace(/\b(corn|rice|masa) flour\b/gi, "")) && !CORN_CHOICE.test(item) && !(BREAD_SIDES[id] ?? []).includes(item)));
+
 // Total times are written in English in the web file; these are the only words in them.
 const TIME_WORDS = { es: [["overnight", "toda la noche"], ["chilling", "enfriar"], ["About", "Unas"], ["after assembly", "después de armar"]], en: [] };
 const timeIn = (lang, t) => TIME_WORDS[lang].reduce((s, [a, b]) => s.replace(a, b), t);
@@ -127,6 +137,7 @@ const book = {
     category: r.cat,
     time: Object.fromEntries(LANGS.map((lang) => [lang, timeIn(lang, r.time)])),
     needs: PANTRY.needsOf(r),
+    glutenFree: glutenFree(r.id),
     es: texts[r.id].es,
     en: texts[r.id].en,
   })),

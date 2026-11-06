@@ -227,9 +227,63 @@ enum Season {
 
 // MARK: - Hoy hay…
 
-/// What's cooking today, by the calendar: jueves pozolero, Sunday barbacoa,
-/// tamales on la Candelaria, pan de muerto for the ofrenda.
+/// What's cooking today, by the calendar: the feast days first (pan de muerto for the
+/// ofrenda, tamales on la Candelaria, fish on Lent Fridays), then the weekly traditions,
+/// and otherwise a card dealt from what fits the weather: caldos and pozole when it's
+/// cold, ceviche and aguachile in the heat.
 enum Today {
+    enum Weather {
+        case frio, primavera, calor, lluvias
+
+        /// Northern Mexico's year: cold November to February, spring in March and April,
+        /// the heat May to August, and the rains of September and October.
+        init(month: Int) {
+            switch month {
+            case 11, 12, 1, 2: self = .frio
+            case 3, 4: self = .primavera
+            case 5...8: self = .calor
+            default: self = .lluvias
+            }
+        }
+
+        var dishes: [String] {
+            switch self {
+            case .frio:
+                return ["pozole-rojo", "menudo-rojo", "caldo-de-res", "caldo-de-pollo", "albondigas", "sopa-de-fideo",
+                        "birria-de-chivo", "barbacoa", "mole-poblano", "tamales-rojos", "champurrado", "cafe-de-olla",
+                        "arroz-con-leche", "conchas", "chilaquiles", "frijoles-de-olla", "puerco-salsa-verde"]
+            case .primavera:
+                return ["tostadas-de-ceviche", "aguachile", "coctel-de-camaron", "pescado-veracruzana", "huevos-a-la-mexicana",
+                        "molletes", "enchiladas-rojas", "chiles-rellenos", "agua-de-jamaica", "tinga-de-pollo", "flan"]
+            case .calor:
+                return ["tostadas-de-ceviche", "aguachile", "coctel-de-camaron", "agua-de-jamaica", "camarones-a-la-diabla",
+                        "tinga-de-pollo", "carnitas", "cochinita-pibil", "huevos-rancheros", "machaca-con-huevo",
+                        "salsa-roja", "arroz-rojo", "flan"]
+            case .lluvias:
+                return ["caldo-de-camaron", "caldo-de-pollo", "sopa-de-fideo", "albondigas", "pozole-rojo", "chiles-rellenos",
+                        "picadillo", "puerco-salsa-verde", "enchiladas-rojas", "frijoles-de-olla", "cafe-de-olla",
+                        "conchas", "bolillos", "huevos-rancheros"]
+            }
+        }
+
+        /// Pozole and menudo are for cool days; in the heat Thursday and Saturday get a seasonal card.
+        var cool: Bool { self == .frio || self == .lluvias }
+
+        func why(_ es: Bool) -> String {
+            switch self {
+            case .frio: return es ? "Para el frío" : "For the cold"
+            case .primavera: return es ? "Para la primavera" : "For spring"
+            case .calor: return es ? "Para el calor" : "For the heat"
+            case .lluvias: return es ? "Para las tardes de lluvia" : "For rainy afternoons"
+            }
+        }
+    }
+
+    /// Lent: no meat on Fridays, and the dishes of the season the rest of the week.
+    static let cuaresma = ["capirotada", "pescado-veracruzana", "caldo-de-camaron", "tostadas-de-ceviche", "aguachile",
+                           "coctel-de-camaron", "chiles-rellenos", "huevos-a-la-mexicana", "molletes", "enchiladas-rojas",
+                           "agua-de-jamaica", "frijoles-de-olla"]
+
     static func pick(from recipes: [Recipe], on date: Date = Date(), lang: Lang = .es) -> (id: String, title: String, why: String)? {
         guard !recipes.isEmpty else { return nil }
         let cal = Calendar(identifier: .gregorian)
@@ -238,7 +292,16 @@ enum Today {
         let day = cal.startOfDay(for: date)
         let easter = easterSunday(c.year ?? 2026)
         let ashWednesday = cal.date(byAdding: .day, value: -46, to: easter) ?? easter
+        let weather = Weather(month: c.month ?? 1)
         let es = lang == .es
+        let dayNumber = Int(date.timeIntervalSince1970 / 86_400)
+
+        /// A card from a list, a different one each day.
+        func deal(_ ids: [String], why: String) -> (id: String, title: String, why: String) {
+            let pool = ids.compactMap { id in recipes.first { $0.id == id } }
+            let r = pool.isEmpty ? recipes[dayNumber % recipes.count] : pool[dayNumber % pool.count]
+            return (r.id, es ? "La carta del día" : "Card of the day", "\(r.cardName) · \(why)")
+        }
 
         if (1020...1102).contains(md) {
             return ("conchas", es ? "Hoy hay pan de muerto" : "Today: pan de muerto", es ? "Para la ofrenda del Día de Muertos" : "For the Day of the Dead altar")
@@ -252,20 +315,21 @@ enum Today {
         if (901...916).contains(md) {
             return ("pozole-rojo", es ? "Hoy hay pozole" : "Today: pozole", es ? "Para el 15 de septiembre" : "For Independence Day, September 15")
         }
-        if day >= ashWednesday && day <= easter && c.weekday == 6 {
-            return ("pescado-veracruzana", es ? "Hoy hay pescado" : "Today: fish", es ? "Viernes de Cuaresma" : "A Friday in Lent")
-        }
         if day >= ashWednesday && day <= easter {
-            return ("capirotada", es ? "Hoy hay capirotada" : "Today: capirotada", es ? "Es Cuaresma" : "It's Lent")
+            if c.weekday == 6 {
+                return ("pescado-veracruzana", es ? "Hoy hay pescado" : "Today: fish", es ? "Viernes de Cuaresma" : "A Friday in Lent")
+            }
+            return deal(cuaresma, why: es ? "De Cuaresma" : "For Lent")
         }
         switch c.weekday {
-        case 5: return ("pozole-rojo", es ? "Hoy hay pozole" : "Today: pozole", es ? "Jueves pozolero, como en Guerrero" : "Pozole Thursday, as in Guerrero")
-        case 1: return ("barbacoa", es ? "Hoy hay barbacoa" : "Today: barbacoa", es ? "El almuerzo del domingo" : "The Sunday late breakfast")
-        case 7: return ("menudo-rojo", es ? "Hoy hay menudo" : "Today: menudo", es ? "Para levantar a los muertos" : "To raise the dead (and cure the hangover)")
+        case 5 where weather.cool:
+            return ("pozole-rojo", es ? "Hoy hay pozole" : "Today: pozole", es ? "Jueves pozolero, como en Guerrero" : "Pozole Thursday, as in Guerrero")
+        case 1:
+            return ("barbacoa", es ? "Hoy hay barbacoa" : "Today: barbacoa", es ? "El almuerzo del domingo" : "The Sunday late breakfast")
+        case 7 where weather.cool:
+            return ("menudo-rojo", es ? "Hoy hay menudo" : "Today: menudo", es ? "Para levantar a los muertos" : "To raise the dead (and cure the hangover)")
         default:
-            let index = Int(date.timeIntervalSince1970 / 86_400) % recipes.count
-            let r = recipes[index]
-            return (r.id, es ? "La carta del día" : "Card of the day", r.cardName)
+            return deal(weather.dishes, why: weather.why(es))
         }
     }
 
