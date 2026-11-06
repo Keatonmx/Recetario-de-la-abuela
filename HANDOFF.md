@@ -17,6 +17,8 @@ An iPhone app of traditional Mexican home cooking. Each recipe is a lotería car
 - **¿Qué tengo?**: type what's in your kitchen (English or Spanish, typos OK) and see what
   you can cook.
 - **Guardadas** (saved recipes), **Despensa** (chile and pantry guide), and a light/dark switch.
+- **Two languages**: everything in Spanish (Mexico) by default, or all in English, with the
+  ES/EN button in the top bar. Recipe text is in `i18n/es` and `i18n/en`.
 - A **"Hoy hay…"** card that follows the calendar: pozole for September 15, tamales for
   Candelaria, fish on Lenten Fridays, and so on.
 
