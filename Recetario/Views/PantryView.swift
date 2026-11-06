@@ -79,13 +79,6 @@ struct PantryView: View {
 
     private var guide: some View {
         List {
-            Section {
-                Text(store.t("Los chiles y los básicos de la despensa de los que dependen estas recetas, y cómo manejarlos.",
-                             "The chiles and pantry staples these recipes depend on, and how to handle them."))
-                    .foregroundStyle(.secondary)
-                    .listRowBackground(Color.clear)
-            }
-
             Section(store.t("Los chiles", "The chiles")) {
                 ForEach(store.book.chiles) { chile in
                     let t = chile.text(store.lang)

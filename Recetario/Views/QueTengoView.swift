@@ -64,7 +64,15 @@ struct QueTengoView: View {
         .background(WallBackground())
         .navigationTitle(store.t("¿Qué tengo?", "What do I have?"))
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar { ToolbarItem(placement: .topBarTrailing) { SettingsButtons() } }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(store.t("¿Qué tengo?", "What do I have?"))
+                    .font(.rotulo(22, relativeTo: .headline))
+                    .foregroundStyle(Color.mxRosa)
+                    .accessibilityAddTraits(.isHeader)
+            }
+            ToolbarItem(placement: .topBarTrailing) { SettingsButtons() }
+        }
         .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
     }
 
@@ -73,14 +81,6 @@ struct QueTengoView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
             PapelPicado().padding(.top, 4)
-            Text(store.t("¿Qué tengo?", "What do I have?"))
-                .font(.rotulo(44))
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                .foregroundStyle(Color.mxRosa)
-                .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
-                .padding(.top, 10)
-                .accessibilityAddTraits(.isHeader)
             Text(store.t("Escribe lo que hay en tu cocina, en español o en inglés, y mira qué puedes cocinar.",
                          "Write what's in your kitchen, in English or Spanish, and see what you can cook."))
                 .font(.subheadline)
@@ -100,6 +100,7 @@ struct QueTengoView: View {
                         .submitLabel(.done)
                         .onSubmit { addText(text) }
                         .accessibilityLabel(store.t("Ingredientes que tienes", "Ingredients you have"))
+                        .accessibilityHint(store.t("Sepáralos con comas. No importan las faltas de ortografía.", "Separate with commas. Typos are fine."))
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 11)
@@ -114,9 +115,6 @@ struct QueTengoView: View {
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.ink, lineWidth: 2))
                     .buttonStyle(.plain)
             }
-            Text(store.t("Sepáralos con comas. No importan las faltas de ortografía.", "Separate with commas. Typos are fine."))
-                .font(.footnote)
-                .foregroundStyle(.secondary)
         }
     }
 

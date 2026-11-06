@@ -116,13 +116,21 @@ struct RecipeListView: View {
                     ? store.t("Ver cartas grandes", "Show big cards")
                     : store.t("El Tablero: ver todas las cartas chiquitas", "El Tablero: show small cards"))
             }
+            ToolbarItem(placement: .principal) {
+                Text(savedOnly ? store.t("Guardadas", "Saved") : "Recetario de la Abuela")
+                    .font(.rotulo(20, relativeTo: .headline))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .foregroundStyle(Color.mxRosa)
+                    .accessibilityAddTraits(.isHeader)
+            }
             ToolbarItem(placement: .topBarTrailing) { SettingsButtons() }
         }
     }
 
     private func section(_ cat: RecipeCategory, recipes: [Recipe]) -> some View {
         VStack(alignment: .leading, spacing: tablero ? 10 : 16) {
-            RotuloHeader(title: cat.name(store.lang), color: store.headingColor(forCategory: cat.id))
+            RotuloHeader(title: cat.name(store.lang), color: store.rotuloColor(forCategory: cat.id))
             LazyVGrid(columns: columns, alignment: .leading, spacing: tablero ? 10 : 18) {
                 ForEach(Array(recipes.enumerated()), id: \.element.id) { index, recipe in
                     // Tapping a card picks it up and turns it over.
@@ -148,47 +156,26 @@ struct RecipeListView: View {
         VStack(alignment: .leading, spacing: 8) {
             PapelPicado(swing: swing)
                 .padding(.top, 4)
+            // The wordmark lives in the top bar now, so the deck shows on first open.
             if savedOnly {
-                Text(store.t("Guardadas", "Saved"))
-                    .font(.rotulo(44))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.5)
-                    .foregroundStyle(Color.mxRosa)
-                    .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
-                    .padding(.top, 10)
                 Text(store.t("Tus milagros: las recetas que guardaste con el corazón, en este teléfono.",
                              "Your milagros: the recipes you've saved with the heart, kept on this phone."))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+                    .padding(.top, 6)
                 if store.favorites.count >= 2 {
                     BuenasButton(action: shuffle)
                         .padding(.top, 6)
                 }
             } else {
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Recetario")
-                        .font(.rotulo(50))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                        .foregroundStyle(Color.mxRosa)
-                    Text("de la Abuela")
-                        .font(.rotulo(31, relativeTo: .title))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                        .foregroundStyle(Color.mxVerde)
+                // La carta del día and ¡Buenas! share one row (stacked at accessibility sizes).
+                let row = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 10)) : AnyLayout(HStackLayout(alignment: .top, spacing: 10))
+                row {
+                    HoyHayCard()
+                    BuenasButton(action: shuffle)
                 }
-                .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
-                .padding(.top, 10)
-                .accessibilityElement(children: .combine)
-                .accessibilityAddTraits(.isHeader)
-                Text(store.t("COCINA DE CASA · REGIÓN POR REGIÓN", "HOME COOKING · REGION BY REGION"))
-                    .font(.slab(13, relativeTo: .caption))
-                    .tracking(1.1)
-                    .foregroundStyle(Color.chile)
-                HoyHayCard()
-                    .padding(.top, 6)
-                BuenasButton(action: shuffle)
-                    .padding(.top, 4)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 8)
             }
         }
     }

@@ -3,7 +3,7 @@ import UIKit
 
 // The kitchen around the cards, by day: a whitewashed wall (pared de cal) with an añil
 // guardapolvo painted along the bottom, and a flowered hule on the table under the deck.
-// Dark mode keeps the plain comal black for now.
+// By night it is the kitchen on the night of the ofrenda: see Muertos.swift.
 
 /// A small fixed-seed random generator, so the wall's texture comes out the same every draw.
 private struct SeededRandom {
@@ -28,6 +28,9 @@ struct WallBackground: View {
                 if scheme == .light {
                     Limewash()
                     Guardapolvo().frame(height: bandHeight)
+                } else {
+                    NocheDeVelas()
+                    OfrendaEdge().frame(height: bandHeight)
                 }
             }
             .ignoresSafeArea()
@@ -105,6 +108,8 @@ struct Hule: View {
                 )
                 .overlay(RoundedRectangle(cornerRadius: 18).strokeBorder(Color.hairline, lineWidth: 1.5))
                 .accessibilityHidden(true)
+        } else {
+            MantelDeOfrenda()
         }
     }
 
@@ -126,6 +131,21 @@ struct Hule: View {
     }
 }
 
+extension RecipeStore {
+    /// Big category headings (rótulos). By day, bright colors (Desayunos' cempasúchil gold,
+    /// Masa's maíz, Panadería's pink) are deepened only enough for large text (3:1 on the
+    /// wall) so they stay golden instead of going brown. At night they follow `headingColor`.
+    func rotuloColor(forCategory id: String) -> Color {
+        let hex = book.categories.first { $0.id == id }?.color ?? "#C8261E"
+        let night = headingColor(forCategory: id)
+        return Color(uiColor: UIColor { traits in
+            if traits.userInterfaceStyle == .dark { return UIColor(night).resolvedColor(with: traits) }
+            let base = UIColor(hexString: hex)
+            return base.mixed(with: UIColor(hex: 0x2A1608), amount: base.relativeLuminance > 0.3 ? 0.34 : 0.24)
+        })
+    }
+}
+
 extension Color {
     /// A fixed color from 0xRRGGBB, the same in light and dark.
     init(hex6: UInt32) {
@@ -139,7 +159,7 @@ extension Color {
             let base = UIColor(hexString: hexString)
             let dark = traits.userInterfaceStyle == .dark
             if isOn { return dark ? base.mixed(with: .white, amount: 0.12) : base }
-            return dark ? base.mixed(with: UIColor(hex: 0x15110E), amount: 0.68) : base.mixed(with: .white, amount: 0.74)
+            return dark ? base.mixed(with: UIColor(hex: 0x140F21), amount: 0.68) : base.mixed(with: .white, amount: 0.74)
         })
     }
 
@@ -150,7 +170,7 @@ extension Color {
             let dark = traits.userInterfaceStyle == .dark
             let fill: UIColor = isOn
                 ? (dark ? base.mixed(with: .white, amount: 0.12) : base)
-                : (dark ? base.mixed(with: UIColor(hex: 0x15110E), amount: 0.68) : base.mixed(with: .white, amount: 0.74))
+                : (dark ? base.mixed(with: UIColor(hex: 0x140F21), amount: 0.68) : base.mixed(with: .white, amount: 0.74))
             return fill.relativeLuminance > 0.33 ? UIColor(hex: 0x1D1A17) : UIColor(hex: 0xFFFAF1)
         })
     }

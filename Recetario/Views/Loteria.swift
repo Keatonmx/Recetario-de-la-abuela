@@ -206,14 +206,22 @@ struct RotuloHeader: View {
 // MARK: - Seasonal papel picado
 
 enum Season {
-    /// Papel picado colors for the time of year, or nil for the everyday mix.
+    /// Papel picado colors. By day: the colors for the time of year, or the everyday mix.
+    /// At night (dark mode) it is always the night of the ofrenda: morado, cempasúchil and rosa.
     static var picadoColors: [Color]? {
+        let day = dayColors
+        let night: [UInt32] = [0x8E4BC6, 0xF29F05, 0xE4007C]   // morado, cempasúchil, rosa
+        return day.indices.map { i in Color(light: day[i], dark: night[i % night.count]) }
+    }
+
+    /// The daytime colors for today's date.
+    private static var dayColors: [UInt32] {
         let c = Calendar(identifier: .gregorian).dateComponents([.month, .day], from: Date())
         let md = (c.month ?? 1) * 100 + (c.day ?? 1)
-        if (1020...1105).contains(md) { return [Color(hexString: "#7B3FA0"), Color(hexString: "#F29F05"), Color(hexString: "#E4007C")] }  // Día de Muertos
-        if (901...930).contains(md) { return [Color(hexString: "#1F6B3F"), Color(hexString: "#F7F3EA"), Color(hexString: "#C8261E")] }   // Fiestas patrias
-        if md >= 1201 || md <= 106 { return [Color(hexString: "#C8261E"), Color(hexString: "#1F6B3F"), Color(hexString: "#F2C230")] }   // Posadas y Navidad
-        return nil
+        if (1020...1105).contains(md) { return [0x7B3FA0, 0xF29F05, 0xE4007C] }  // Día de Muertos
+        if (901...930).contains(md) { return [0x1F6B3F, 0xF7F3EA, 0xC8261E] }   // Fiestas patrias
+        if md >= 1201 || md <= 106 { return [0xC8261E, 0x1F6B3F, 0xF2C230] }   // Posadas y Navidad
+        return [0xC8261E, 0xF29F05, 0x1F4FB5, 0xE4007C, 0x1F6B3F]   // the everyday mix (PapelPicado's own fallback)
     }
 }
 
@@ -277,34 +285,43 @@ struct HoyHayCard: View {
     var body: some View {
         if let today = Today.pick(from: store.book.recipes, lang: store.lang),
            let recipe = store.book.recipes.first(where: { $0.id == today.id }) {
+            // A half-width tile beside ¡Buenas!: the dish, why today, and the reason in small type.
             NavigationLink(value: recipe) {
-                HStack(spacing: 12) {
-                    Image("art-\(recipe.id)")
-                        .resizable()
-                        .scaledToFit()
-                        .padding(5)
-                        .frame(width: 64, height: 64)
-                        .background(store.color(forCategory: recipe.category))
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                        .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(Color.ink, lineWidth: 2))
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(today.title)
-                            .font(.rotulo(22, relativeTo: .title3))
-                            .foregroundStyle(Color.lifted(store.book.categories.first { $0.id == recipe.category }?.color ?? "#C8261E", deepen: 0.32))
-                            .environment(\.colorScheme, .light)
-                        Text(today.why)
-                            .font(.footnote)
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(alignment: .top) {
+                        Image("art-\(recipe.id)")
+                            .resizable()
+                            .scaledToFit()
+                            .padding(4)
+                            .frame(width: 48, height: 48)
+                            .background(store.color(forCategory: recipe.category))
+                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                            .overlay(RoundedRectangle(cornerRadius: 7).strokeBorder(Color.ink, lineWidth: 2))
+                        Spacer(minLength: 0)
+                        Image(systemName: "chevron.right")
+                            .font(.footnote.weight(.semibold))
                             .foregroundStyle(Color.stockMuted)
                     }
-                    Spacer(minLength: 0)
-                    Image(systemName: "chevron.right")
+                    Text(today.title)
+                        .font(.rotulo(18, relativeTo: .headline))
+                        .foregroundStyle(Color.lifted(store.book.categories.first { $0.id == recipe.category }?.color ?? "#C8261E", deepen: 0.32))
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.8)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(today.why)
+                        .font(.caption)
                         .foregroundStyle(Color.stockMuted)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer(minLength: 0)
                 }
-                .padding(8)
-                .padding(.trailing, 6)
+                .padding(10)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .background(RoundedRectangle(cornerRadius: 12).fill(Color.stock))
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.ink, lineWidth: 2))
                 .background(RoundedRectangle(cornerRadius: 12).fill(Color.inkShadow).offset(x: 3, y: 3))
+                // Card stock is cream in both themes.
+                .environment(\.colorScheme, .light)
             }
             .buttonStyle(.plain)
             .accessibilityLabel("\(today.title). \(today.why)")

@@ -6,41 +6,45 @@ struct BuenasButton: View {
     let action: () -> Void
 
     var body: some View {
+        // A tile the same size as La carta del día beside it: the deck, and the call.
         Button(action: action) {
-            HStack(spacing: 14) {
-                // A little deck of three cards.
-                ZStack {
-                    ForEach(0..<3, id: \.self) { i in
-                        RoundedRectangle(cornerRadius: 4)
-                            .fill(Color.stock)
-                            .overlay(RoundedRectangle(cornerRadius: 4).strokeBorder(Color.ink, lineWidth: 1.5))
-                            .overlay(RoundedRectangle(cornerRadius: 2).fill([Color.mxRosa, Color.maiz, Color.talavera][i]).padding(5))
-                            .frame(width: 30, height: 40)
-                            .rotationEffect(.degrees(Double(i - 1) * 9))
-                            .offset(x: Double(i - 1) * 5)
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(alignment: .top) {
+                    // A little deck of three cards.
+                    ZStack {
+                        ForEach(0..<3, id: \.self) { i in
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(Color.stock)
+                                .overlay(RoundedRectangle(cornerRadius: 4).strokeBorder(Color.ink, lineWidth: 1.5))
+                                .overlay(RoundedRectangle(cornerRadius: 2).fill([Color.mxRosa, Color.maiz, Color.talavera][i]).padding(5))
+                                .frame(width: 28, height: 38)
+                                .rotationEffect(.degrees(Double(i - 1) * 9))
+                                .offset(x: Double(i - 1) * 5)
+                        }
                     }
+                    .frame(width: 48, height: 48)
+                    Spacer(minLength: 0)
+                    Image(systemName: "shuffle")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(Color.stockMuted)
                 }
-                .frame(width: 50, height: 48)
-                VStack(alignment: .leading, spacing: 1) {
-                    Text("¡Buenas!")
-                        .font(.rotulo(24, relativeTo: .title3))
-                        .foregroundStyle(Color.mxRosa)
-                    Text(store.t("Baraja y saca: ¿qué cocino hoy?", "Shuffle and draw: what should I cook today?"))
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                }
+                Text("¡Buenas!")
+                    .font(.rotulo(22, relativeTo: .headline))
+                    .foregroundStyle(Color.mxRosa)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
                 Spacer(minLength: 0)
-                Image(systemName: "shuffle")
-                    .foregroundStyle(.secondary)
             }
-            .padding(.vertical, 8)
-            .padding(.horizontal, 12)
-            .background(RoundedRectangle(cornerRadius: 12).fill(Color.card))
+            .padding(10)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .background(RoundedRectangle(cornerRadius: 12).fill(Color.stock))
             .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.ink, lineWidth: 2))
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.inkShadow).offset(x: 3, y: 3))
+            // Card stock is cream in both themes.
+            .environment(\.colorScheme, .light)
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(store.t("¡Buenas! Saca una receta al azar", "¡Buenas! Draw a random recipe"))
+        .accessibilityLabel(store.t("¡Buenas! Saca una receta al azar: ¿qué cocino hoy?", "¡Buenas! Draw a random recipe: what should I cook today?"))
     }
 }
 

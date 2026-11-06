@@ -1,8 +1,9 @@
 import SwiftUI
 import UIKit
 
-// Palette: masa cream by day, comal black by night, with rosa mexicano, chile,
-// cempasúchil and nopal as accents. Each color has a light and a dark value.
+// Palette: masa cream by day, with rosa mexicano, chile, cempasúchil and nopal as accents;
+// by night, the night of the ofrenda: a deep violet with rosa, morado and cempasúchil.
+// Each color has a light and a dark value.
 // ("talavera" is the UI accent token; it is now rosa, not blue.)
 extension Color {
     init(light: UInt32, dark: UInt32) {
@@ -11,18 +12,18 @@ extension Color {
         })
     }
 
-    static let talavera = Color(light: 0xB4005C, dark: 0xFF7DBE)
-    static let talaveraSoft = Color(light: 0xF9E1EC, dark: 0x3B1A2B)
+    static let talavera = Color(light: 0xB4005C, dark: 0xC9A2F5)  // morado claro at night
+    static let talaveraSoft = Color(light: 0xF9E1EC, dark: 0x2E2048)
     static let chile = Color(light: 0xA8261B, dark: 0xF28A6E)
-    static let chileSoft = Color(light: 0xF6E0D9, dark: 0x3A211B)
+    static let chileSoft = Color(light: 0xF6E0D9, dark: 0x37202E)
     static let maiz = Color(light: 0xB87A0E, dark: 0xF2C35C)
-    static let maizSoft = Color(light: 0xF7E9C8, dark: 0x342816)
+    static let maizSoft = Color(light: 0xF7E9C8, dark: 0x342620)
     static let nopal = Color(light: 0x276B42, dark: 0x7CC690)
-    static let nopalSoft = Color(light: 0xE0EDDC, dark: 0x1B2E20)
+    static let nopalSoft = Color(light: 0xE0EDDC, dark: 0x1A2B24)
     static let rosa = Color(light: 0xC4336B, dark: 0xEE80A9)
-    static let paper = Color(light: 0xF5EDDF, dark: 0x15110E)
-    static let card = Color(light: 0xFFFAF1, dark: 0x211B16)
-    static let hairline = Color(light: 0xE2D5C1, dark: 0x3A3027)
+    static let paper = Color(light: 0xF5EDDF, dark: 0x140F21)
+    static let card = Color(light: 0xFFFAF1, dark: 0x221A33)
+    static let hairline = Color(light: 0xE2D5C1, dark: 0x3D3156)
 
     // Lotería cards are physical objects: light card stock and black ink in both themes.
     static let stock = Color(light: 0xFFFDF7, dark: 0xF5EDDF)
@@ -32,9 +33,10 @@ extension Color {
     static let stampGreen = Color(light: 0x1F6B3F, dark: 0x1F6B3F)
     static let stampPaper = Color(light: 0xF7F5EE, dark: 0xF7F5EE)
     static let mxRosa = Color(light: 0xC70067, dark: 0xFF5FAE)
-    /// Text on rosa buttons: white on deep rosa by day, comal black on light rosa by night.
-    static let onRosa = Color(light: 0xFFFFFF, dark: 0x15110E)
-    static let mxVerde = Color(light: 0x1F6B3F, dark: 0x7CC690)
+    /// Text on rosa buttons: white on deep rosa by day, the night's violet black on light rosa by night.
+    static let onRosa = Color(light: 0xFFFFFF, dark: 0x140F21)
+    /// "de la Abuela" under the title: verde by day, cempasúchil by night.
+    static let mxVerde = Color(light: 0x1F6B3F, dark: 0xFFA62B)
 
     /// A category color from "#RRGGBB".
     init(hexString: String) {

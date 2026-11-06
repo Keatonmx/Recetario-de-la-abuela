@@ -10,6 +10,7 @@ struct RecipeDetailView: View {
     @State private var tab: DetailTab = DetailTab(rawValue: UserDefaults.standard.string(forKey: "screenshotDetailTab") ?? "") ?? .traditional
     @State private var cookMode = false
     @State private var openVariations: Set<String> = []
+    @AppStorage("stepHintSeen") private var stepHintSeen = false
 
     // Raw values stay Spanish: CI screenshots pick a tab with -screenshotDetailTab.
     enum DetailTab: String, CaseIterable, Identifiable {
@@ -159,7 +160,7 @@ struct RecipeDetailView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(recipe.name)
                     .font(.rotulo(38, relativeTo: .largeTitle))
-                    .foregroundStyle(store.headingColor(forCategory: recipe.category))
+                    .foregroundStyle(store.rotuloColor(forCategory: recipe.category))
                     .shadow(color: Color.inkShadow, radius: 0, x: 2, y: 2)
             }
             .accessibilityElement(children: .combine)
@@ -197,9 +198,12 @@ struct RecipeDetailView: View {
             VStack(alignment: .leading, spacing: 12) {
                 SectionHeader(title: store.t("Preparación", "Preparation"))
                 StepList(steps: text.steps, keySteps: recipe.en.steps, scope: "\(recipe.id):t:s", factor: factor)
-                Text(store.t("Toca un paso cuando lo termines.", "Tap a step when it's done."))
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
+                // The hint shows until the cook has tapped a step once.
+                if !stepHintSeen {
+                    Text(store.t("Toca un paso cuando lo termines.", "Tap a step when it's done."))
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
             }
             if !text.tips.isEmpty {
                 TipsBox(tips: text.tips.map(store.shown))
@@ -413,11 +417,13 @@ struct StepRow: View {
     let key: String
     var siblingKeys: [String] = []
     var factor: Double = 1
+    @AppStorage("stepHintSeen") private var stepHintSeen = false
 
     var body: some View {
         let isOn = store.isChecked(key)
         Button {
             store.toggleCheck(key)
+            stepHintSeen = true
             if store.isChecked(key), !siblingKeys.isEmpty, siblingKeys.allSatisfy({ store.isChecked($0) }) {
                 store.showToast("¡Buen provecho!")
             }
