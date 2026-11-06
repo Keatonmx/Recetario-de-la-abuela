@@ -18867,37 +18867,37 @@
  {
   "kind": "text",
   "lang": "es",
-  "input": "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+  "input": "4 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche",
   "factor": 0.5,
-  "output": "2 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche"
+  "output": "2 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche"
  },
  {
   "kind": "text",
   "lang": "es",
-  "input": "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+  "input": "4 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche",
   "factor": 0.6,
-  "output": "2⅓ tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche"
+  "output": "2⅓ tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche"
  },
  {
   "kind": "text",
   "lang": "es",
-  "input": "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+  "input": "4 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche",
   "factor": 1.5,
-  "output": "6 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche"
+  "output": "6 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche"
  },
  {
   "kind": "text",
   "lang": "es",
-  "input": "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+  "input": "4 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche",
   "factor": 2,
-  "output": "8 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche"
+  "output": "8 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche"
  },
  {
   "kind": "text",
   "lang": "es",
-  "input": "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+  "input": "4 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche",
   "factor": 3,
-  "output": "12 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche"
+  "output": "12 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche"
  },
  {
   "kind": "text",
@@ -25405,9 +25405,9 @@
  {
   "kind": "metric",
   "lang": "es",
-  "input": "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+  "input": "4 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche",
   "factor": 1,
-  "output": "960 ml de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche"
+  "output": "960 ml de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche"
  },
  {
   "kind": "metric",
@@ -34309,9 +34309,9 @@
  {
   "kind": "scaled-metric",
   "lang": "es",
-  "input": "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+  "input": "4 tazas de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche",
   "factor": 0.5,
-  "output": "480 ml de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche"
+  "output": "480 ml de agua (como se hace tradicionalmente), leche, mitad leche y mitad crema (half and half), o mitad agua y mitad leche"
  },
  {
   "kind": "scaled-metric",
@@ -66950,37 +66950,37 @@
  {
   "kind": "text",
   "lang": "en",
-  "input": "4 cups water (the traditional way), milk, or half and half",
+  "input": "4 cups water (the traditional way), milk, half and half, or half water and half milk",
   "factor": 0.5,
-  "output": "2 cups water (the traditional way), milk, or half and half"
+  "output": "2 cups water (the traditional way), milk, half and half, or half water and half milk"
  },
  {
   "kind": "text",
   "lang": "en",
-  "input": "4 cups water (the traditional way), milk, or half and half",
+  "input": "4 cups water (the traditional way), milk, half and half, or half water and half milk",
   "factor": 0.6,
-  "output": "2⅓ cups water (the traditional way), milk, or half and half"
+  "output": "2⅓ cups water (the traditional way), milk, half and half, or half water and half milk"
  },
  {
   "kind": "text",
   "lang": "en",
-  "input": "4 cups water (the traditional way), milk, or half and half",
+  "input": "4 cups water (the traditional way), milk, half and half, or half water and half milk",
   "factor": 1.5,
-  "output": "6 cups water (the traditional way), milk, or half and half"
+  "output": "6 cups water (the traditional way), milk, half and half, or half water and half milk"
  },
  {
   "kind": "text",
   "lang": "en",
-  "input": "4 cups water (the traditional way), milk, or half and half",
+  "input": "4 cups water (the traditional way), milk, half and half, or half water and half milk",
   "factor": 2,
-  "output": "8 cups water (the traditional way), milk, or half and half"
+  "output": "8 cups water (the traditional way), milk, half and half, or half water and half milk"
  },
  {
   "kind": "text",
   "lang": "en",
-  "input": "4 cups water (the traditional way), milk, or half and half",
+  "input": "4 cups water (the traditional way), milk, half and half, or half water and half milk",
   "factor": 3,
-  "output": "12 cups water (the traditional way), milk, or half and half"
+  "output": "12 cups water (the traditional way), milk, half and half, or half water and half milk"
  },
  {
   "kind": "text",
@@ -73502,9 +73502,9 @@
  {
   "kind": "metric",
   "lang": "en",
-  "input": "4 cups water (the traditional way), milk, or half and half",
+  "input": "4 cups water (the traditional way), milk, half and half, or half water and half milk",
   "factor": 1,
-  "output": "960 ml water (the traditional way), milk, or half and half"
+  "output": "960 ml water (the traditional way), milk, half and half, or half water and half milk"
  },
  {
   "kind": "metric",
@@ -82413,9 +82413,9 @@
  {
   "kind": "scaled-metric",
   "lang": "en",
-  "input": "4 cups water (the traditional way), milk, or half and half",
+  "input": "4 cups water (the traditional way), milk, half and half, or half water and half milk",
   "factor": 0.5,
-  "output": "480 ml water (the traditional way), milk, or half and half"
+  "output": "480 ml water (the traditional way), milk, half and half, or half water and half milk"
  },
  {
   "kind": "scaled-metric",
