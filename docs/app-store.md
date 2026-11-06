@@ -25,11 +25,11 @@ Hoy hay pozole. Abuela-style Mexican recipes as lotería cards, with pressure-co
 
 Recetario de la Abuela is a cookbook of traditional Mexican home cooking, region by region, the way it's made in Mexican kitchens and not the Americanized version.
 
-Every recipe is a lotería card. Pozole rojo from Jalisco, cochinita pibil from Yucatán, carnitas from Quiroga, mole poblano, birria, tamales, chilaquiles, conchas, café de olla and more, each with its story, its region and the cantada the lotería caller would sing.
+Every recipe is a lotería card. Pozole rojo from Jalisco, cochinita pibil from Yucatán, carnitas from Quiroga, aguachile from Sinaloa, pescado a la veracruzana, mole poblano, birria, tamales, chilaquiles, conchas, café de olla and more, each with its story, its region and the cantada the lotería caller would sing.
 
 TRADICIONAL, OLLA EXPRÉS Y VARIANTES
 • The traditional method, plus a pressure-cooker version where it makes sense
-• Variations under each dish: pozole verde and blanco, birria estilo Tijuana, flan napolitano, tamales de rajas and de dulce
+• Variations under each dish: pozole verde and blanco, birria estilo Tijuana, caldo siete mares, pescado zarandeado, flan napolitano, tamales de rajas and de dulce
 • Secretos de la abuela: the tips that make the difference
 
 ¿PARA CUÁNTOS?
@@ -52,15 +52,15 @@ Everything works offline. No account, no ads, no tracking.
 
 ## Keywords (100, comma-separated, no spaces needed)
 
-mexican,recipes,cocina,mexicana,pozole,tamales,mole,birria,abuela,pressure cooker,instant pot,loteria
+mexican,recipes,cocina,pozole,tamales,mole,birria,mariscos,aguachile,abuela,pressure cooker,loteria
 
 ## URLs
 
 | Field | Value |
 |---|---|
-| Privacy Policy URL | Host docs/privacy.html (GitHub Pages works once the repo is public) |
-| Support URL | Host docs/support.html, or use the repository URL |
-| Marketing URL | Optional |
+| Privacy Policy URL | https://keatonmx.github.io/Recetario-de-la-abuela/privacy.html |
+| Support URL | https://keatonmx.github.io/Recetario-de-la-abuela/support.html |
+| Marketing URL | https://keatonmx.github.io/Recetario-de-la-abuela/ (optional) |
 
 ## App Privacy
 

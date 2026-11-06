@@ -16,6 +16,11 @@
       "color": "#E4007C"
     },
     {
+      "id": "mariscos",
+      "name": "Mariscos",
+      "color": "#E8613C"
+    },
+    {
       "id": "moles",
       "name": "Moles",
       "color": "#7A3E1D"
@@ -2534,8 +2539,781 @@
       ]
     },
     {
-      "id": "mole-poblano",
+      "id": "aguachile",
       "number": 20,
+      "article": "El",
+      "verso": "Camarón que se duerme, se lo lleva la corriente.",
+      "name": "Aguachile Verde",
+      "en": "Raw shrimp cured in lime and chile",
+      "category": "mariscos",
+      "region": "Sinaloa",
+      "time": "30 min",
+      "servings": "4 personas",
+      "story": "From the coast of Sinaloa: raw shrimp, butterflied and bathed in a blend of lime juice, serrano or chiltepín and cilantro, with cucumber and red onion. It's eaten right away and cold, with tostadas and a cold beer, while the shrimp are still translucent in the middle. The name means chile water.",
+      "ingredients": [
+        {
+          "title": "El camarón",
+          "items": [
+            "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+            "Salt, al gusto"
+          ]
+        },
+        {
+          "title": "El agua",
+          "items": [
+            "1 cup fresh lime juice (about 10 limes)",
+            "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+            "½ bunch cilantro",
+            "1 garlic clove, optional",
+            "½ tsp salt",
+            "¼ cup cold water"
+          ]
+        },
+        {
+          "title": "Encima",
+          "items": [
+            "1 cucumber, peeled and thinly sliced",
+            "½ red onion, very thinly sliced"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "1 avocado, sliced",
+            "Tostadas or saladitas (saltine crackers)",
+            "Salsa negra or Huichol, optional"
+          ]
+        }
+      ],
+      "steps": [
+        "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua.",
+        "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+        "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+        "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+        "Serve right away with avocado, tostadas and a little salsa negra."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. Aguachile isn't cooked at all: the lime does the work.",
+      "tips": [
+        "Use the freshest shrimp you can find, or shrimp frozen at sea and thawed in the fridge. Raw seafood isn't for pregnant women, small children or anyone with a weak immune system.",
+        "Make it right before you eat. Aguachile waits for no one."
+      ],
+      "needs": [
+        [
+          "camaron"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "limon"
+        ],
+        [
+          "serrano",
+          "piquin"
+        ],
+        [
+          "cilantro"
+        ],
+        [
+          "agua"
+        ]
+      ],
+      "variations": [
+        {
+          "name": "Aguachile Rojo",
+          "en": "Red aguachile with chiltepín and chile de árbol",
+          "region": "Sinaloa · Sonora",
+          "note": "The hotter red version, with dried chiles in the agua.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "The shrimp, cucumber and red onion from the base",
+                "1 cup fresh lime juice",
+                "1 tbsp chiltepín",
+                "4 chiles de árbol",
+                "1 garlic clove",
+                "½ tsp salt",
+                "¼ cup cold water"
+              ]
+            }
+          ],
+          "steps": [
+            "Toast the chiles de árbol a few seconds in a dry pan.",
+            "Blend them with the chiltepín, lime juice, garlic, salt and water.",
+            "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "coctel-de-camaron",
+      "number": 21,
+      "article": "El",
+      "verso": "Para todo mal, un coctel; y para todo bien, también.",
+      "name": "Coctel de Camarón",
+      "en": "Mexican shrimp cocktail",
+      "category": "mariscos",
+      "region": "Sinaloa · Veracruz · la costa",
+      "time": "30 min",
+      "servings": "4 personas",
+      "story": "The coctel of every marisquería and beach stand: cooked shrimp in a cold, tangy sauce of catsup, lime and the shrimp's own cooking water, with onion, cilantro, chile and avocado. It comes in a tall glass with saltines and hot sauce, and it's the cure for a hot afternoon.",
+      "ingredients": [
+        {
+          "title": "El camarón",
+          "items": [
+            "1 lb medium shrimp, shell on",
+            "4 cups water",
+            "1 tsp salt",
+            "¼ white onion",
+            "1 bay leaf"
+          ]
+        },
+        {
+          "title": "La salsa",
+          "items": [
+            "½ cup catsup",
+            "1 cup of the shrimp cooking water, chilled",
+            "¼ cup fresh lime juice",
+            "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+            "Salt, al gusto"
+          ]
+        },
+        {
+          "title": "Con el camarón",
+          "items": [
+            "¼ white onion, finely chopped",
+            "2 Roma tomatoes, diced",
+            "1–2 serranos, minced",
+            "¼ cup chopped cilantro",
+            "1 cucumber, diced, optional"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "1 avocado, diced",
+            "Limes",
+            "Saladitas (saltine crackers) or tostadas"
+          ]
+        }
+      ],
+      "steps": [
+        "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+        "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+        "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+        "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+        "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+        "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. Shrimp cook in two minutes and turn rubbery under pressure.",
+      "tips": [
+        "The shrimp cooking water is the secret: it makes the sauce taste of the sea instead of catsup.",
+        "Some marisquerías add a splash of Clamato or orange juice. Every puesto has its own."
+      ],
+      "needs": [
+        [
+          "camaron"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "laurel"
+        ],
+        [
+          "catsup"
+        ],
+        [
+          "limon"
+        ],
+        [
+          "salsa-picante"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "serrano"
+        ],
+        [
+          "cilantro"
+        ]
+      ],
+      "variations": [
+        {
+          "name": "Vuelve a la Vida",
+          "en": "Back-to-life seafood cocktail",
+          "region": "Veracruz",
+          "note": "Veracruz's campechana of shrimp, octopus, oysters and crab, famous as the cure for la cruda.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "½ lb cooked shrimp",
+                "½ lb cooked octopus, sliced",
+                "12 fresh oysters, shucked, with their liquor",
+                "½ cup crab meat",
+                "The sauce and chopped vegetables from the base"
+              ]
+            }
+          ],
+          "steps": [
+            "Make the sauce and chopped vegetables as in the base, steps 4–5.",
+            "Fold in the shrimp, octopus, crab and the oysters with their liquor.",
+            "Chill 15 minutes and serve in tall glasses with avocado and saladitas."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "pescado-veracruzana",
+      "number": 22,
+      "article": "El",
+      "verso": "Aceituna, chile güero y jitomate: Veracruz en un plato de remate.",
+      "name": "Pescado a la Veracruzana",
+      "en": "Fish in tomato, olive and caper sauce",
+      "category": "mariscos",
+      "region": "Veracruz",
+      "time": "45 min",
+      "servings": "4 personas",
+      "story": "Veracruz's best-known dish: huachinango (red snapper), whole or in fillets, simmered in tomato with olives, capers, bay and pickled chiles güeros. The olives and capers came with the Spanish through the port of Veracruz; the chiles are Mexican. It's the classic Friday fish of Cuaresma.",
+      "ingredients": [
+        {
+          "title": "El pescado",
+          "items": [
+            "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+            "1 lime, juiced",
+            "Salt and pepper"
+          ]
+        },
+        {
+          "title": "La salsa",
+          "items": [
+            "¼ cup olive oil",
+            "1 white onion, thinly sliced",
+            "4 garlic cloves, sliced",
+            "2 lb ripe tomatoes, chopped (or 8 Roma)",
+            "3 bay leaves",
+            "½ tsp Mexican oregano",
+            "¼ tsp dried thyme",
+            "½ cup green olives (manzanilla), pitted",
+            "2 tbsp capers, rinsed",
+            "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "Arroz blanco",
+            "Bolillos"
+          ]
+        }
+      ],
+      "steps": [
+        "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+        "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+        "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+        "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+        "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+        "Serve with arroz blanco, and bolillo for the sauce."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. Fish cooks in minutes, and the sauce is quick on the stove.",
+      "tips": [
+        "Use ripe, soft tomatoes. In winter, good canned whole tomatoes beat pale fresh ones.",
+        "Once the fish is in, don't stir or it falls apart. Shake the pan instead."
+      ],
+      "needs": [
+        [
+          "pescado"
+        ],
+        [
+          "limon"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "pimienta"
+        ],
+        [
+          "aceite"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "laurel"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "tomillo"
+        ],
+        [
+          "aceitunas"
+        ],
+        [
+          "alcaparras"
+        ],
+        [
+          "chile-guero",
+          "jalapeno"
+        ]
+      ],
+      "variations": [
+        {
+          "name": "Tikin Xic",
+          "en": "Achiote fish in banana leaf",
+          "region": "Yucatán",
+          "note": "The Maya fish dish: fish rubbed with recado rojo and naranja agria, wrapped in banana leaf with tomato, onion and chile, then grilled or baked.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+                "2 oz achiote paste",
+                "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+                "2 garlic cloves",
+                "1 tsp salt",
+                "Banana leaves",
+                "1 tomato, sliced",
+                "1 red onion, sliced",
+                "1 chile x'catic or güero, sliced"
+              ]
+            }
+          ],
+          "steps": [
+            "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.",
+            "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.",
+            "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.",
+            "Serve with tortillas, cebolla morada encurtida and habanero salsa."
+          ],
+          "pressureNote": null
+        },
+        {
+          "name": "Pescado Zarandeado",
+          "en": "Nayarit grilled butterflied fish",
+          "region": "Nayarit · Sinaloa",
+          "note": "From Mexcaltitán and San Blas: a whole fish split open, brushed with a chile adobo sharpened with soy sauce and lime, and grilled in a hinged basket over mangrove wood.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+                "4 chiles guajillo",
+                "2 chiles ancho",
+                "3 garlic cloves",
+                "2 tbsp mayonnaise",
+                "2 tbsp soy sauce",
+                "2 tbsp lime juice",
+                "1 tsp salt"
+              ]
+            }
+          ],
+          "steps": [
+            "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.",
+            "Brush it over the flesh side of the fish.",
+            "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.",
+            "Serve on the grill with tortillas, salsa, cucumber and red onion."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "caldo-de-camaron",
+      "number": 23,
+      "article": "El",
+      "verso": "Caldo de camarón: para la cruda, la mejor razón.",
+      "name": "Caldo de Camarón",
+      "en": "Spicy shrimp soup",
+      "category": "mariscos",
+      "region": "Sinaloa · Sonora · Jalisco",
+      "time": "50 min",
+      "servings": "6 personas",
+      "story": "A brick-red shrimp soup from the Pacific coast, built on dried shrimp and the heads and shells of fresh ones, with guajillo, potatoes and carrots. Marisquerías bring it in a small cup before the meal, and it's what you want after a long night.",
+      "ingredients": [
+        {
+          "title": "El camarón",
+          "items": [
+            "1 lb medium shrimp, shell on (heads on if you can get them)",
+            "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+            "8 cups water"
+          ]
+        },
+        {
+          "title": "El caldillo",
+          "items": [
+            "4 chiles guajillo",
+            "1–2 chiles de árbol, optional",
+            "3 Roma tomatoes",
+            "¼ white onion",
+            "3 garlic cloves",
+            "2 tbsp oil",
+            "1 tsp Mexican oregano",
+            "Salt, al gusto"
+          ]
+        },
+        {
+          "title": "Las verduras",
+          "items": [
+            "2 potatoes, diced",
+            "2 carrots, sliced",
+            "1 chayote or zucchini, diced, optional"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "Chopped onion and cilantro",
+            "Limes",
+            "Tostadas or bolillo"
+          ]
+        }
+      ],
+      "steps": [
+        "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+        "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+        "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+        "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+        "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+        "Serve with onion, cilantro, lime and tostadas."
+      ],
+      "pressureCooker": {
+        "time": "5 min high pressure + 10 min natural release (broth)",
+        "total": "35 min",
+        "steps": [
+          "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.",
+          "Make and fry the chile purée on Sauté as in steps 2–3.",
+          "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.",
+          "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."
+        ],
+        "note": "Never pressure-cook the shrimp themselves; they turn rubbery."
+      },
+      "pressureNote": null,
+      "tips": [
+        "Dried shrimp are salty. Taste before adding any salt.",
+        "The heads hold most of the flavor. Ask the fish counter for head-on shrimp."
+      ],
+      "needs": [
+        [
+          "camaron"
+        ],
+        [
+          "camaron-seco"
+        ],
+        [
+          "agua"
+        ],
+        [
+          "guajillo"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "aceite"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "papa"
+        ],
+        [
+          "zanahoria"
+        ]
+      ],
+      "variations": [
+        {
+          "name": "Caldo Siete Mares",
+          "en": "Seven-seas seafood soup",
+          "region": "Toda la costa",
+          "note": "The big soup of the marisquería: the same red caldillo loaded with fish, shrimp, octopus, crab and clams.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "The broth, caldillo and vegetables from the base",
+                "½ lb firm white fish, in chunks",
+                "½ lb shrimp",
+                "½ lb cooked octopus, sliced",
+                "2 crab legs (or ½ lb crab)",
+                "1 lb clams or mussels, scrubbed"
+              ]
+            }
+          ],
+          "steps": [
+            "Make the broth, caldillo and vegetables as in the base, steps 1–4.",
+            "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.",
+            "Add the fish and octopus for 3 minutes, then the shrimp for 2.",
+            "Serve in big bowls with onion, cilantro, lime and tostadas."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "camarones-a-la-diabla",
+      "number": 24,
+      "article": "Los",
+      "verso": "Camarón a la diabla: el que lo prueba, ni habla.",
+      "name": "Camarones a la Diabla",
+      "en": "Shrimp in fiery red chile sauce",
+      "category": "mariscos",
+      "region": "Toda la costa",
+      "time": "30 min",
+      "servings": "4 personas",
+      "story": "Shrimp in a hot, glossy sauce of guajillo, chile de árbol and chipotle, fried in butter. A la diabla means devil-style: as hot as you dare. Arroz blanco on the side puts out the fire.",
+      "ingredients": [
+        {
+          "title": "El camarón",
+          "items": [
+            "1½ lb large shrimp, peeled and deveined, tails on",
+            "Salt, al gusto"
+          ]
+        },
+        {
+          "title": "La salsa diabla",
+          "items": [
+            "4 chiles guajillo",
+            "4–8 chiles de árbol",
+            "2 chipotles en adobo",
+            "3 Roma tomatoes",
+            "¼ white onion",
+            "3 garlic cloves",
+            "½ cup water or shrimp broth",
+            "½ tsp Mexican oregano",
+            "2 tbsp butter",
+            "1 tbsp oil"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "Arroz blanco or arroz rojo",
+            "Limes",
+            "Bolillo or tortillas"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+        "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+        "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+        "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+        "Serve right away with rice, lime and bolillo."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. Shrimp need only a few minutes in the pan.",
+      "tips": [
+        "Set the heat with the chiles de árbol: 4 is spicy, 8 is a la diabla.",
+        "Don't crowd the pan, and pull the shrimp as soon as they curl into a C. An O means overcooked."
+      ],
+      "needs": [
+        [
+          "camaron"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "guajillo"
+        ],
+        [
+          "arbol"
+        ],
+        [
+          "chipotle"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "ajo"
+        ],
+        [
+          "agua",
+          "caldo"
+        ],
+        [
+          "oregano"
+        ],
+        [
+          "mantequilla"
+        ],
+        [
+          "aceite"
+        ]
+      ],
+      "variations": [
+        {
+          "name": "Camarones al Mojo de Ajo",
+          "en": "Garlic butter shrimp",
+          "region": "Toda la costa",
+          "note": "The mild one at the marisquería: shrimp in golden garlic, butter and lime.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "1½ lb large shrimp, peeled",
+                "8 garlic cloves, minced",
+                "3 tbsp butter",
+                "2 tbsp oil",
+                "1 chile guajillo, cut in thin rings, optional",
+                "1 lime, juiced",
+                "Chopped parsley or cilantro",
+                "Salt, al gusto"
+              ]
+            }
+          ],
+          "steps": [
+            "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.",
+            "Raise the heat, add the shrimp and cook 2–3 minutes per side.",
+            "Add the lime juice, salt and parsley, toss and serve with rice."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "tostadas-de-ceviche",
+      "number": 25,
+      "article": "Las",
+      "verso": "Limón, pescado y tostada: la playa sin pagar nada.",
+      "name": "Tostadas de Ceviche",
+      "en": "Lime-cured fish on crisp tostadas",
+      "category": "mariscos",
+      "region": "Guerrero · Sinaloa · la costa",
+      "time": "1 h",
+      "servings": "6 personas",
+      "story": "On the Mexican coast, ceviche is fish cured in lime until white, then mixed with tomato, onion, cilantro and chile and piled on a crisp tostada with avocado and hot sauce. In Acapulco it gets a splash of catsup; in Sinaloa, cucumber, carrot and a swipe of mayonnaise.",
+      "ingredients": [
+        {
+          "title": "El pescado",
+          "items": [
+            "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+            "1½ cups fresh lime juice",
+            "1 tsp salt"
+          ]
+        },
+        {
+          "title": "Con el pescado",
+          "items": [
+            "3 Roma tomatoes, finely diced",
+            "½ white onion, finely chopped",
+            "2–3 serranos, minced",
+            "½ cup chopped cilantro",
+            "1 cucumber, finely diced, optional"
+          ]
+        },
+        {
+          "title": "Para servir",
+          "items": [
+            "12 tostadas",
+            "2 avocados, sliced",
+            "Mayonnaise, optional, the Sinaloa way",
+            "Valentina or Huichol hot sauce",
+            "Limes"
+          ]
+        }
+      ],
+      "steps": [
+        "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+        "Drain off most of the lime juice.",
+        "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+        "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."
+      ],
+      "pressureCooker": null,
+      "pressureNote": "No pressure-cooker version. The lime cooks the fish.",
+      "tips": [
+        "Cut the fish small and even so it all cures at the same time.",
+        "Use a glass or ceramic bowl, not metal, for the lime.",
+        "Very fresh fish only. Raw seafood isn't for pregnant women or small children."
+      ],
+      "needs": [
+        [
+          "pescado"
+        ],
+        [
+          "limon"
+        ],
+        [
+          "sal"
+        ],
+        [
+          "jitomate"
+        ],
+        [
+          "cebolla"
+        ],
+        [
+          "serrano"
+        ],
+        [
+          "cilantro"
+        ]
+      ],
+      "variations": [
+        {
+          "name": "Ceviche de Camarón",
+          "en": "Shrimp ceviche",
+          "region": "Sinaloa",
+          "note": "With shrimp instead of fish, cured raw like aguachile or poached a minute first.",
+          "ingredients": [
+            {
+              "title": "",
+              "items": [
+                "1 lb shrimp, peeled, deveined and chopped",
+                "1 cup fresh lime juice",
+                "The tomato, onion, serrano, cilantro and cucumber from the base",
+                "1 carrot, finely grated"
+              ]
+            }
+          ],
+          "steps": [
+            "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.",
+            "Drain and fold in the vegetables and carrot.",
+            "Serve on tostadas with avocado."
+          ],
+          "pressureNote": null
+        }
+      ]
+    },
+    {
+      "id": "mole-poblano",
+      "number": 26,
       "article": "El",
       "verso": "¡Aquí sí estamos en nuestro mero mole!",
       "name": "Mole Poblano",
@@ -2755,7 +3533,7 @@
     },
     {
       "id": "tamales-rojos",
-      "number": 21,
+      "number": 27,
       "article": "Los",
       "verso": "El que nace pa' tamal, del cielo le caen las hojas.",
       "name": "Tamales Rojos de Puerco",
@@ -2923,7 +3701,7 @@
     },
     {
       "id": "enchiladas-rojas",
-      "number": 22,
+      "number": 28,
       "article": "Las",
       "verso": "Pásala por el chile y dórala al momento: así se hace el sustento.",
       "name": "Enchiladas Rojas",
@@ -3047,7 +3825,7 @@
     },
     {
       "id": "frijoles-de-olla",
-      "number": 23,
+      "number": 29,
       "article": "Los",
       "verso": "Donde come uno, comen dos.",
       "name": "Frijoles de la Olla",
@@ -3183,7 +3961,7 @@
     },
     {
       "id": "arroz-rojo",
-      "number": 24,
+      "number": 30,
       "article": "El",
       "verso": "Al arroz, ni lo mires: tápalo y déjalo.",
       "name": "Arroz Rojo",
@@ -3294,7 +4072,7 @@
     },
     {
       "id": "salsa-roja",
-      "number": 25,
+      "number": 31,
       "article": "La",
       "verso": "Sin salsa no hay taco, y sin molcajete no hay salsa.",
       "name": "Salsa Roja de Molcajete",
@@ -3404,7 +4182,7 @@
     },
     {
       "id": "cafe-de-olla",
-      "number": 26,
+      "number": 32,
       "article": "El",
       "verso": "Café de olla y pan dulce: la tarde no pide más.",
       "name": "Café de Olla",
@@ -3505,7 +4283,7 @@
     },
     {
       "id": "champurrado",
-      "number": 27,
+      "number": 33,
       "article": "El",
       "verso": "Champurrado y tamal, ¡ni el frío nos hace mal!",
       "name": "Champurrado",
@@ -3595,7 +4373,7 @@
     },
     {
       "id": "agua-de-jamaica",
-      "number": 28,
+      "number": 34,
       "article": "El",
       "verso": "Agua de jamaica, roja y bien fría: la que se toma todo el día.",
       "name": "Agua de Jamaica",
@@ -3670,7 +4448,7 @@
     },
     {
       "id": "conchas",
-      "number": 29,
+      "number": 35,
       "article": "Las",
       "verso": "A la hora del cafecito, una concha y un ratito.",
       "name": "Conchas",
@@ -3803,7 +4581,7 @@
     },
     {
       "id": "bolillos",
-      "number": 30,
+      "number": 36,
       "article": "Los",
       "verso": "Pa'l susto, un bolillo.",
       "name": "Bolillos",
@@ -3888,7 +4666,7 @@
     },
     {
       "id": "arroz-con-leche",
-      "number": 31,
+      "number": 37,
       "article": "El",
       "verso": "Arroz con leche, me quiero casar…",
       "name": "Arroz con Leche",
@@ -3990,7 +4768,7 @@
     },
     {
       "id": "flan",
-      "number": 32,
+      "number": 38,
       "article": "El",
       "verso": "Tiembla, tiembla, pero no se cae: así es el flan de la abuela.",
       "name": "Flan de la Abuela",
@@ -4098,7 +4876,7 @@
     },
     {
       "id": "capirotada",
-      "number": 33,
+      "number": 39,
       "article": "La",
       "verso": "Capirotada en Cuaresma: cada capa, una promesa.",
       "name": "Capirotada",
@@ -4509,6 +5287,201 @@
       "aliases": [
         "chicharron",
         "pork rinds"
+      ]
+    },
+    {
+      "id": "camaron",
+      "es": "Camarón",
+      "en": "Shrimp",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "shrimp",
+        "camaron",
+        "camarones",
+        "prawns",
+        "raw shrimp",
+        "large shrimp",
+        "medium shrimp"
+      ]
+    },
+    {
+      "id": "camaron-seco",
+      "es": "Camarón seco",
+      "en": "Dried shrimp",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "dried shrimp",
+        "camaron seco"
+      ]
+    },
+    {
+      "id": "pescado",
+      "es": "Pescado",
+      "en": "Fish",
+      "kind": "protein",
+      "parent": null,
+      "aliases": [
+        "fish",
+        "pescado",
+        "red snapper",
+        "snapper",
+        "huachinango",
+        "white fish",
+        "firm white fish",
+        "fish fillets",
+        "tilapia",
+        "mahi-mahi",
+        "sierra",
+        "robalo",
+        "whole fish",
+        "whole snapper",
+        "filete de pescado"
+      ]
+    },
+    {
+      "id": "pulpo",
+      "es": "Pulpo",
+      "en": "Octopus",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "octopus",
+        "pulpo",
+        "cooked octopus"
+      ]
+    },
+    {
+      "id": "jaiba",
+      "es": "Jaiba",
+      "en": "Crab",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "crab",
+        "crab meat",
+        "crab legs",
+        "jaiba",
+        "cangrejo"
+      ]
+    },
+    {
+      "id": "almejas",
+      "es": "Almejas",
+      "en": "Clams or mussels",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "clams",
+        "mussels",
+        "almejas",
+        "mejillones"
+      ]
+    },
+    {
+      "id": "ostiones",
+      "es": "Ostiones",
+      "en": "Oysters",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "oysters",
+        "fresh oysters",
+        "ostiones"
+      ]
+    },
+    {
+      "id": "pepino",
+      "es": "Pepino",
+      "en": "Cucumber",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "cucumber",
+        "cucumbers",
+        "pepino"
+      ]
+    },
+    {
+      "id": "aceitunas",
+      "es": "Aceitunas",
+      "en": "Olives",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "olives",
+        "green olives",
+        "aceitunas",
+        "manzanilla"
+      ]
+    },
+    {
+      "id": "alcaparras",
+      "es": "Alcaparras",
+      "en": "Capers",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "capers",
+        "alcaparras"
+      ]
+    },
+    {
+      "id": "catsup",
+      "es": "Catsup",
+      "en": "Catsup",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "catsup",
+        "ketchup"
+      ]
+    },
+    {
+      "id": "mayonesa",
+      "es": "Mayonesa",
+      "en": "Mayonnaise",
+      "kind": "main",
+      "parent": null,
+      "aliases": [
+        "mayonnaise",
+        "mayonesa"
+      ]
+    },
+    {
+      "id": "salsa-picante",
+      "es": "Salsa picante",
+      "en": "Bottled hot sauce",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "valentina",
+        "huichol",
+        "hot sauce",
+        "salsa negra"
+      ]
+    },
+    {
+      "id": "soya",
+      "es": "Salsa de soya",
+      "en": "Soy sauce",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "soy sauce",
+        "salsa de soya"
+      ]
+    },
+    {
+      "id": "perejil",
+      "es": "Perejil",
+      "en": "Parsley",
+      "kind": "season",
+      "parent": null,
+      "aliases": [
+        "parsley",
+        "perejil"
       ]
     },
     {
@@ -5210,6 +6183,22 @@
       ]
     },
     {
+      "id": "chile-guero",
+      "es": "Chile güero",
+      "en": "Güero chiles",
+      "kind": "main",
+      "parent": "chile-fresco",
+      "aliases": [
+        "chiles gueros",
+        "chile guero",
+        "gueros",
+        "guero",
+        "x'catic",
+        "xcatic",
+        "chile x'catic"
+      ]
+    },
+    {
       "id": "jalapeno",
       "es": "Jalapeño",
       "en": "Jalapeños",
@@ -5606,6 +6595,9 @@
       "kind": "ignore",
       "parent": null,
       "aliases": [
+        "shrimp cooking water",
+        "their brine",
+        "their liquor",
         "chile seeds",
         "red chile sauce",
         "chile sauce",
@@ -5739,7 +6731,9 @@
       "aliases": [
         "oil",
         "aceite",
-        "vegetable oil"
+        "vegetable oil",
+        "olive oil",
+        "aceite de oliva"
       ]
     },
     {
@@ -5808,6 +6802,8 @@
         "caldo",
         "stock",
         "pork broth",
+        "shrimp broth",
+        "fish broth",
         "cooking broth"
       ]
     },

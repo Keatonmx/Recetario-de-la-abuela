@@ -10111,6 +10111,2826 @@
  },
  {
   "kind": "text",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 0.5,
+  "output": "½ lb very fresh raw shrimp (about 20 medium), peeled and deveined"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 0.6,
+  "output": "⅔ lb very fresh raw shrimp (about 20 medium), peeled and deveined"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 1.5,
+  "output": "1½ lb very fresh raw shrimp (about 20 medium), peeled and deveined"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 2,
+  "output": "2 lb very fresh raw shrimp (about 20 medium), peeled and deveined"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 3,
+  "output": "3 lb very fresh raw shrimp (about 20 medium), peeled and deveined"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 0.5,
+  "output": "½ cup fresh lime juice (about 10 limes)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 0.6,
+  "output": "⅔ cup fresh lime juice (about 10 limes)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 1.5,
+  "output": "1½ cups fresh lime juice (about 10 limes)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 2,
+  "output": "2 cups fresh lime juice (about 10 limes)"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 3,
+  "output": "3 cups fresh lime juice (about 10 limes)"
+ },
+ {
+  "kind": "text",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 0.5,
+  "output": "1½–2½ serranos (or 1 tbsp chiltepín, the Sinaloa way)"
+ },
+ {
+  "kind": "text",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 0.6,
+  "output": "1¾–3 serranos (or 1 tbsp chiltepín, the Sinaloa way)"
+ },
+ {
+  "kind": "text",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 1.5,
+  "output": "4½–7½ serranos (or 1 tbsp chiltepín, the Sinaloa way)"
+ },
+ {
+  "kind": "text",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 2,
+  "output": "6–10 serranos (or 1 tbsp chiltepín, the Sinaloa way)"
+ },
+ {
+  "kind": "text",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 3,
+  "output": "9–15 serranos (or 1 tbsp chiltepín, the Sinaloa way)"
+ },
+ {
+  "kind": "text",
+  "input": "1 garlic clove, optional",
+  "factor": 0.5,
+  "output": "½ garlic clove, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 garlic clove, optional",
+  "factor": 0.6,
+  "output": "⅔ garlic clove, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 garlic clove, optional",
+  "factor": 1.5,
+  "output": "1½ garlic cloves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 garlic clove, optional",
+  "factor": 2,
+  "output": "2 garlic cloves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 garlic clove, optional",
+  "factor": 3,
+  "output": "3 garlic cloves, optional"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup cold water",
+  "factor": 0.5,
+  "output": "⅛ cup cold water"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup cold water",
+  "factor": 0.6,
+  "output": "⅛ cup cold water"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup cold water",
+  "factor": 1.5,
+  "output": "⅓ cup cold water"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup cold water",
+  "factor": 2,
+  "output": "½ cup cold water"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup cold water",
+  "factor": 3,
+  "output": "¾ cup cold water"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 0.5,
+  "output": "½ cucumber, peeled and thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 0.6,
+  "output": "⅔ cucumber, peeled and thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 1.5,
+  "output": "1½ cucumber, peeled and thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 2,
+  "output": "2 cucumber, peeled and thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 3,
+  "output": "3 cucumber, peeled and thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 0.5,
+  "output": "¼ red onion, very thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 0.6,
+  "output": "⅓ red onion, very thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 1.5,
+  "output": "¾ red onion, very thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 2,
+  "output": "1 red onion, very thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 3,
+  "output": "1½ red onions, very thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, sliced",
+  "factor": 0.5,
+  "output": "½ avocado, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, sliced",
+  "factor": 0.6,
+  "output": "⅔ avocado, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, sliced",
+  "factor": 1.5,
+  "output": "1½ avocado, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, sliced",
+  "factor": 2,
+  "output": "2 avocado, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, sliced",
+  "factor": 3,
+  "output": "3 avocado, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 0.5,
+  "output": "Tostadas or saladitas (saltine crackers)"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 0.6,
+  "output": "Tostadas or saladitas (saltine crackers)"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 1.5,
+  "output": "Tostadas or saladitas (saltine crackers)"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 2,
+  "output": "Tostadas or saladitas (saltine crackers)"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 3,
+  "output": "Tostadas or saladitas (saltine crackers)"
+ },
+ {
+  "kind": "text",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 0.5,
+  "output": "Salsa negra or Huichol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 0.6,
+  "output": "Salsa negra or Huichol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 1.5,
+  "output": "Salsa negra or Huichol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 2,
+  "output": "Salsa negra or Huichol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 3,
+  "output": "Salsa negra or Huichol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 0.5,
+  "output": "The shrimp, cucumber and red onion from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 0.6,
+  "output": "The shrimp, cucumber and red onion from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 1.5,
+  "output": "The shrimp, cucumber and red onion from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 2,
+  "output": "The shrimp, cucumber and red onion from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 3,
+  "output": "The shrimp, cucumber and red onion from the base"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice",
+  "factor": 0.5,
+  "output": "½ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice",
+  "factor": 0.6,
+  "output": "⅔ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice",
+  "factor": 1.5,
+  "output": "1½ cups fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice",
+  "factor": 2,
+  "output": "2 cups fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup fresh lime juice",
+  "factor": 3,
+  "output": "3 cups fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp chiltepín",
+  "factor": 0.5,
+  "output": "½ tbsp chiltepín"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp chiltepín",
+  "factor": 0.6,
+  "output": "⅔ tbsp chiltepín"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp chiltepín",
+  "factor": 1.5,
+  "output": "1½ tbsp chiltepín"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp chiltepín",
+  "factor": 2,
+  "output": "2 tbsp chiltepín"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp chiltepín",
+  "factor": 3,
+  "output": "3 tbsp chiltepín"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles de árbol",
+  "factor": 0.5,
+  "output": "2 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles de árbol",
+  "factor": 0.6,
+  "output": "2⅓ chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles de árbol",
+  "factor": 1.5,
+  "output": "6 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles de árbol",
+  "factor": 2,
+  "output": "8 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles de árbol",
+  "factor": 3,
+  "output": "12 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 0.5,
+  "output": "½ lb medium shrimp, shell on"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 0.6,
+  "output": "⅔ lb medium shrimp, shell on"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 1.5,
+  "output": "1½ lb medium shrimp, shell on"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 2,
+  "output": "2 lb medium shrimp, shell on"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 3,
+  "output": "3 lb medium shrimp, shell on"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water",
+  "factor": 0.5,
+  "output": "2 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water",
+  "factor": 0.6,
+  "output": "2⅓ cups water"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water",
+  "factor": 1.5,
+  "output": "6 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water",
+  "factor": 2,
+  "output": "8 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "4 cups water",
+  "factor": 3,
+  "output": "12 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup catsup",
+  "factor": 0.5,
+  "output": "¼ cup catsup"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup catsup",
+  "factor": 0.6,
+  "output": "⅓ cup catsup"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup catsup",
+  "factor": 1.5,
+  "output": "¾ cup catsup"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup catsup",
+  "factor": 2,
+  "output": "1 cup catsup"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup catsup",
+  "factor": 3,
+  "output": "1½ cups catsup"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 0.5,
+  "output": "½ cup of the shrimp cooking water, chilled"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 0.6,
+  "output": "⅔ cup of the shrimp cooking water, chilled"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 1.5,
+  "output": "1½ cups of the shrimp cooking water, chilled"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 2,
+  "output": "2 cups of the shrimp cooking water, chilled"
+ },
+ {
+  "kind": "text",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 3,
+  "output": "3 cups of the shrimp cooking water, chilled"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup fresh lime juice",
+  "factor": 0.5,
+  "output": "⅛ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup fresh lime juice",
+  "factor": 0.6,
+  "output": "⅛ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup fresh lime juice",
+  "factor": 1.5,
+  "output": "⅓ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup fresh lime juice",
+  "factor": 2,
+  "output": "½ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup fresh lime juice",
+  "factor": 3,
+  "output": "¾ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 0.5,
+  "output": "½ tbsp Valentina or Huichol hot sauce, plus more al gusto"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 0.6,
+  "output": "⅔ tbsp Valentina or Huichol hot sauce, plus more al gusto"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 1.5,
+  "output": "1½ tbsp Valentina or Huichol hot sauce, plus more al gusto"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 2,
+  "output": "2 tbsp Valentina or Huichol hot sauce, plus more al gusto"
+ },
+ {
+  "kind": "text",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 3,
+  "output": "3 tbsp Valentina or Huichol hot sauce, plus more al gusto"
+ },
+ {
+  "kind": "text",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 0.5,
+  "output": "1 Roma tomato, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 0.6,
+  "output": "1¼ Roma tomatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 1.5,
+  "output": "3 Roma tomatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 2,
+  "output": "4 Roma tomatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 3,
+  "output": "6 Roma tomatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 serranos, minced",
+  "factor": 0.5,
+  "output": "½–1 serrano, minced"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 serranos, minced",
+  "factor": 0.6,
+  "output": "⅔–1¼ serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 serranos, minced",
+  "factor": 1.5,
+  "output": "1½–3 serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 serranos, minced",
+  "factor": 2,
+  "output": "2–4 serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 serranos, minced",
+  "factor": 3,
+  "output": "3–6 serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, diced, optional",
+  "factor": 0.5,
+  "output": "½ cucumber, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, diced, optional",
+  "factor": 0.6,
+  "output": "⅔ cucumber, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, diced, optional",
+  "factor": 1.5,
+  "output": "1½ cucumber, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, diced, optional",
+  "factor": 2,
+  "output": "2 cucumber, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, diced, optional",
+  "factor": 3,
+  "output": "3 cucumber, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, diced",
+  "factor": 0.5,
+  "output": "½ avocado, diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, diced",
+  "factor": 0.6,
+  "output": "⅔ avocado, diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, diced",
+  "factor": 1.5,
+  "output": "1½ avocado, diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, diced",
+  "factor": 2,
+  "output": "2 avocado, diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 avocado, diced",
+  "factor": 3,
+  "output": "3 avocado, diced"
+ },
+ {
+  "kind": "text",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 0.5,
+  "output": "Saladitas (saltine crackers) or tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 0.6,
+  "output": "Saladitas (saltine crackers) or tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 1.5,
+  "output": "Saladitas (saltine crackers) or tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 2,
+  "output": "Saladitas (saltine crackers) or tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 3,
+  "output": "Saladitas (saltine crackers) or tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked shrimp",
+  "factor": 0.5,
+  "output": "¼ lb cooked shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked shrimp",
+  "factor": 0.6,
+  "output": "⅓ lb cooked shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked shrimp",
+  "factor": 1.5,
+  "output": "¾ lb cooked shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked shrimp",
+  "factor": 2,
+  "output": "1 lb cooked shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked shrimp",
+  "factor": 3,
+  "output": "1½ lb cooked shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 0.5,
+  "output": "¼ lb cooked octopus, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 0.6,
+  "output": "⅓ lb cooked octopus, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 1.5,
+  "output": "¾ lb cooked octopus, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 2,
+  "output": "1 lb cooked octopus, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 3,
+  "output": "1½ lb cooked octopus, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 0.5,
+  "output": "6 fresh oysters, shucked, with their liquor"
+ },
+ {
+  "kind": "text",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 0.6,
+  "output": "7¼ fresh oysters, shucked, with their liquor"
+ },
+ {
+  "kind": "text",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 1.5,
+  "output": "18 fresh oysters, shucked, with their liquor"
+ },
+ {
+  "kind": "text",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 2,
+  "output": "24 fresh oysters, shucked, with their liquor"
+ },
+ {
+  "kind": "text",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 3,
+  "output": "36 fresh oysters, shucked, with their liquor"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup crab meat",
+  "factor": 0.5,
+  "output": "¼ cup crab meat"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup crab meat",
+  "factor": 0.6,
+  "output": "⅓ cup crab meat"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup crab meat",
+  "factor": 1.5,
+  "output": "¾ cup crab meat"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup crab meat",
+  "factor": 2,
+  "output": "1 cup crab meat"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup crab meat",
+  "factor": 3,
+  "output": "1½ cups crab meat"
+ },
+ {
+  "kind": "text",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 0.5,
+  "output": "The sauce and chopped vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 0.6,
+  "output": "The sauce and chopped vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 1.5,
+  "output": "The sauce and chopped vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 2,
+  "output": "The sauce and chopped vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 3,
+  "output": "The sauce and chopped vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 0.5,
+  "output": "1 lb red snapper fillets (huachinango), or ½ whole snapper, cleaned"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 0.6,
+  "output": "1¼ lb red snapper fillets (huachinango), or ⅔ whole snapper, cleaned"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 1.5,
+  "output": "3 lb red snapper fillets (huachinango), or 1½ whole snapper, cleaned"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 2,
+  "output": "4 lb red snapper fillets (huachinango), or 2 whole snapper, cleaned"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 3,
+  "output": "6 lb red snapper fillets (huachinango), or 3 whole snapper, cleaned"
+ },
+ {
+  "kind": "text",
+  "input": "1 lime, juiced",
+  "factor": 0.5,
+  "output": "½ lime, juiced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lime, juiced",
+  "factor": 0.6,
+  "output": "⅔ lime, juiced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lime, juiced",
+  "factor": 1.5,
+  "output": "1½ limes, juiced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lime, juiced",
+  "factor": 2,
+  "output": "2 limes, juiced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lime, juiced",
+  "factor": 3,
+  "output": "3 limes, juiced"
+ },
+ {
+  "kind": "text",
+  "input": "Salt and pepper",
+  "factor": 0.5,
+  "output": "Salt and pepper"
+ },
+ {
+  "kind": "text",
+  "input": "Salt and pepper",
+  "factor": 0.6,
+  "output": "Salt and pepper"
+ },
+ {
+  "kind": "text",
+  "input": "Salt and pepper",
+  "factor": 1.5,
+  "output": "Salt and pepper"
+ },
+ {
+  "kind": "text",
+  "input": "Salt and pepper",
+  "factor": 2,
+  "output": "Salt and pepper"
+ },
+ {
+  "kind": "text",
+  "input": "Salt and pepper",
+  "factor": 3,
+  "output": "Salt and pepper"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup olive oil",
+  "factor": 0.5,
+  "output": "⅛ cup olive oil"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup olive oil",
+  "factor": 0.6,
+  "output": "⅛ cup olive oil"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup olive oil",
+  "factor": 1.5,
+  "output": "⅓ cup olive oil"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup olive oil",
+  "factor": 2,
+  "output": "½ cup olive oil"
+ },
+ {
+  "kind": "text",
+  "input": "¼ cup olive oil",
+  "factor": 3,
+  "output": "¾ cup olive oil"
+ },
+ {
+  "kind": "text",
+  "input": "1 white onion, thinly sliced",
+  "factor": 0.5,
+  "output": "½ white onion, thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 white onion, thinly sliced",
+  "factor": 0.6,
+  "output": "⅔ white onion, thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 white onion, thinly sliced",
+  "factor": 1.5,
+  "output": "1½ white onions, thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 white onion, thinly sliced",
+  "factor": 2,
+  "output": "2 white onions, thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 white onion, thinly sliced",
+  "factor": 3,
+  "output": "3 white onions, thinly sliced"
+ },
+ {
+  "kind": "text",
+  "input": "4 garlic cloves, sliced",
+  "factor": 0.5,
+  "output": "2 garlic cloves, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "4 garlic cloves, sliced",
+  "factor": 0.6,
+  "output": "2⅓ garlic cloves, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "4 garlic cloves, sliced",
+  "factor": 1.5,
+  "output": "6 garlic cloves, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "4 garlic cloves, sliced",
+  "factor": 2,
+  "output": "8 garlic cloves, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "4 garlic cloves, sliced",
+  "factor": 3,
+  "output": "12 garlic cloves, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 0.5,
+  "output": "1 lb ripe tomatoes, chopped (or 8 Roma)"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 0.6,
+  "output": "1¼ lb ripe tomatoes, chopped (or 8 Roma)"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 1.5,
+  "output": "3 lb ripe tomatoes, chopped (or 8 Roma)"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 2,
+  "output": "4 lb ripe tomatoes, chopped (or 8 Roma)"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 3,
+  "output": "6 lb ripe tomatoes, chopped (or 8 Roma)"
+ },
+ {
+  "kind": "text",
+  "input": "¼ tsp dried thyme",
+  "factor": 0.5,
+  "output": "⅛ tsp dried thyme"
+ },
+ {
+  "kind": "text",
+  "input": "¼ tsp dried thyme",
+  "factor": 0.6,
+  "output": "⅛ tsp dried thyme"
+ },
+ {
+  "kind": "text",
+  "input": "¼ tsp dried thyme",
+  "factor": 1.5,
+  "output": "⅓ tsp dried thyme"
+ },
+ {
+  "kind": "text",
+  "input": "¼ tsp dried thyme",
+  "factor": 2,
+  "output": "½ tsp dried thyme"
+ },
+ {
+  "kind": "text",
+  "input": "¼ tsp dried thyme",
+  "factor": 3,
+  "output": "¾ tsp dried thyme"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 0.5,
+  "output": "¼ cup green olives (manzanilla), pitted"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 0.6,
+  "output": "⅓ cup green olives (manzanilla), pitted"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 1.5,
+  "output": "¾ cup green olives (manzanilla), pitted"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 2,
+  "output": "1 cup green olives (manzanilla), pitted"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 3,
+  "output": "1½ cups green olives (manzanilla), pitted"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 0.5,
+  "output": "1 tbsp capers, rinsed"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 0.6,
+  "output": "1¼ tbsp capers, rinsed"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 1.5,
+  "output": "3 tbsp capers, rinsed"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 2,
+  "output": "4 tbsp capers, rinsed"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 3,
+  "output": "6 tbsp capers, rinsed"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 0.5,
+  "output": "2 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 0.6,
+  "output": "2⅓ chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 1.5,
+  "output": "6 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 2,
+  "output": "8 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 3,
+  "output": "12 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco",
+  "factor": 0.5,
+  "output": "Arroz blanco"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco",
+  "factor": 0.6,
+  "output": "Arroz blanco"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco",
+  "factor": 1.5,
+  "output": "Arroz blanco"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco",
+  "factor": 2,
+  "output": "Arroz blanco"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco",
+  "factor": 3,
+  "output": "Arroz blanco"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillos",
+  "factor": 0.5,
+  "output": "Bolillos"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillos",
+  "factor": 0.6,
+  "output": "Bolillos"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillos",
+  "factor": 1.5,
+  "output": "Bolillos"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillos",
+  "factor": 2,
+  "output": "Bolillos"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillos",
+  "factor": 3,
+  "output": "Bolillos"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 0.5,
+  "output": "1 lb firm white fish fillets, or ½ whole fish, butterflied"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 0.6,
+  "output": "1¼ lb firm white fish fillets, or ⅔ whole fish, butterflied"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 1.5,
+  "output": "3 lb firm white fish fillets, or 1½ whole fish, butterflied"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 2,
+  "output": "4 lb firm white fish fillets, or 2 whole fish, butterflied"
+ },
+ {
+  "kind": "text",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 3,
+  "output": "6 lb firm white fish fillets, or 3 whole fish, butterflied"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz achiote paste",
+  "factor": 0.5,
+  "output": "1 oz achiote paste"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz achiote paste",
+  "factor": 0.6,
+  "output": "1¼ oz achiote paste"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz achiote paste",
+  "factor": 1.5,
+  "output": "3 oz achiote paste"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz achiote paste",
+  "factor": 2,
+  "output": "4 oz achiote paste"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz achiote paste",
+  "factor": 3,
+  "output": "6 oz achiote paste"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 0.5,
+  "output": "¼ cup naranja agria (or ⅓ cup orange juice plus 1½ tbsp lime juice)"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 0.6,
+  "output": "⅓ cup naranja agria (or ⅓ cup orange juice plus 1¾ tbsp lime juice)"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 1.5,
+  "output": "¾ cup naranja agria (or ⅓ cup orange juice plus 4½ tbsp lime juice)"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 2,
+  "output": "1 cup naranja agria (or ⅓ cup orange juice plus 6 tbsp lime juice)"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 3,
+  "output": "1½ cups naranja agria (or ⅓ cup orange juice plus 9 tbsp lime juice)"
+ },
+ {
+  "kind": "text",
+  "input": "Banana leaves",
+  "factor": 0.5,
+  "output": "Banana leaves"
+ },
+ {
+  "kind": "text",
+  "input": "Banana leaves",
+  "factor": 0.6,
+  "output": "Banana leaves"
+ },
+ {
+  "kind": "text",
+  "input": "Banana leaves",
+  "factor": 1.5,
+  "output": "Banana leaves"
+ },
+ {
+  "kind": "text",
+  "input": "Banana leaves",
+  "factor": 2,
+  "output": "Banana leaves"
+ },
+ {
+  "kind": "text",
+  "input": "Banana leaves",
+  "factor": 3,
+  "output": "Banana leaves"
+ },
+ {
+  "kind": "text",
+  "input": "1 tomato, sliced",
+  "factor": 0.5,
+  "output": "½ tomato, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 tomato, sliced",
+  "factor": 0.6,
+  "output": "⅔ tomato, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 tomato, sliced",
+  "factor": 1.5,
+  "output": "1½ tomatoes, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 tomato, sliced",
+  "factor": 2,
+  "output": "2 tomatoes, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 tomato, sliced",
+  "factor": 3,
+  "output": "3 tomatoes, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 red onion, sliced",
+  "factor": 0.5,
+  "output": "½ red onion, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 red onion, sliced",
+  "factor": 0.6,
+  "output": "⅔ red onion, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 red onion, sliced",
+  "factor": 1.5,
+  "output": "1½ red onions, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 red onion, sliced",
+  "factor": 2,
+  "output": "2 red onions, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 red onion, sliced",
+  "factor": 3,
+  "output": "3 red onions, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 0.5,
+  "output": "½ chile x'catic or güero, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 0.6,
+  "output": "⅔ chile x'catic or güero, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 1.5,
+  "output": "1½ chiles x'catic or güero, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 2,
+  "output": "2 chiles x'catic or güero, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 3,
+  "output": "3 chiles x'catic or güero, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 0.5,
+  "output": "½ whole snapper or robalo (about 3 lb), butterflied, bones in"
+ },
+ {
+  "kind": "text",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 0.6,
+  "output": "⅔ whole snapper or robalo (about 3 lb), butterflied, bones in"
+ },
+ {
+  "kind": "text",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 1.5,
+  "output": "1½ whole snapper or robalo (about 3 lb), butterflied, bones in"
+ },
+ {
+  "kind": "text",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 2,
+  "output": "2 whole snapper or robalo (about 3 lb), butterflied, bones in"
+ },
+ {
+  "kind": "text",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 3,
+  "output": "3 whole snapper or robalo (about 3 lb), butterflied, bones in"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles guajillo",
+  "factor": 0.5,
+  "output": "2 chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles guajillo",
+  "factor": 0.6,
+  "output": "2⅓ chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles guajillo",
+  "factor": 1.5,
+  "output": "6 chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles guajillo",
+  "factor": 2,
+  "output": "8 chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "4 chiles guajillo",
+  "factor": 3,
+  "output": "12 chiles guajillo"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp mayonnaise",
+  "factor": 0.5,
+  "output": "1 tbsp mayonnaise"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp mayonnaise",
+  "factor": 0.6,
+  "output": "1¼ tbsp mayonnaise"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp mayonnaise",
+  "factor": 1.5,
+  "output": "3 tbsp mayonnaise"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp mayonnaise",
+  "factor": 2,
+  "output": "4 tbsp mayonnaise"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp mayonnaise",
+  "factor": 3,
+  "output": "6 tbsp mayonnaise"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp soy sauce",
+  "factor": 0.5,
+  "output": "1 tbsp soy sauce"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp soy sauce",
+  "factor": 0.6,
+  "output": "1¼ tbsp soy sauce"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp soy sauce",
+  "factor": 1.5,
+  "output": "3 tbsp soy sauce"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp soy sauce",
+  "factor": 2,
+  "output": "4 tbsp soy sauce"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp soy sauce",
+  "factor": 3,
+  "output": "6 tbsp soy sauce"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp lime juice",
+  "factor": 0.5,
+  "output": "1 tbsp lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp lime juice",
+  "factor": 0.6,
+  "output": "1¼ tbsp lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp lime juice",
+  "factor": 1.5,
+  "output": "3 tbsp lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp lime juice",
+  "factor": 2,
+  "output": "4 tbsp lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp lime juice",
+  "factor": 3,
+  "output": "6 tbsp lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 0.5,
+  "output": "½ lb medium shrimp, shell on (heads on if you can get them)"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 0.6,
+  "output": "⅔ lb medium shrimp, shell on (heads on if you can get them)"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 1.5,
+  "output": "1½ lb medium shrimp, shell on (heads on if you can get them)"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 2,
+  "output": "2 lb medium shrimp, shell on (heads on if you can get them)"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 3,
+  "output": "3 lb medium shrimp, shell on (heads on if you can get them)"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 0.5,
+  "output": "1 oz dried shrimp (camarón seco), heads and legs pulled off"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 0.6,
+  "output": "1¼ oz dried shrimp (camarón seco), heads and legs pulled off"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 1.5,
+  "output": "3 oz dried shrimp (camarón seco), heads and legs pulled off"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 2,
+  "output": "4 oz dried shrimp (camarón seco), heads and legs pulled off"
+ },
+ {
+  "kind": "text",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 3,
+  "output": "6 oz dried shrimp (camarón seco), heads and legs pulled off"
+ },
+ {
+  "kind": "text",
+  "input": "8 cups water",
+  "factor": 0.5,
+  "output": "4 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "8 cups water",
+  "factor": 0.6,
+  "output": "4¾ cups water"
+ },
+ {
+  "kind": "text",
+  "input": "8 cups water",
+  "factor": 1.5,
+  "output": "12 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "8 cups water",
+  "factor": 2,
+  "output": "16 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "8 cups water",
+  "factor": 3,
+  "output": "24 cups water"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 0.5,
+  "output": "½–1 chile de árbol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 0.6,
+  "output": "⅔–1¼ chiles de árbol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 1.5,
+  "output": "1½–3 chiles de árbol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 2,
+  "output": "2–4 chiles de árbol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 3,
+  "output": "3–6 chiles de árbol, optional"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes, diced",
+  "factor": 0.5,
+  "output": "1 potato, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes, diced",
+  "factor": 0.6,
+  "output": "1¼ potatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes, diced",
+  "factor": 1.5,
+  "output": "3 potatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes, diced",
+  "factor": 2,
+  "output": "4 potatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 potatoes, diced",
+  "factor": 3,
+  "output": "6 potatoes, diced"
+ },
+ {
+  "kind": "text",
+  "input": "2 carrots, sliced",
+  "factor": 0.5,
+  "output": "1 carrot, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 carrots, sliced",
+  "factor": 0.6,
+  "output": "1¼ carrots, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 carrots, sliced",
+  "factor": 1.5,
+  "output": "3 carrots, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 carrots, sliced",
+  "factor": 2,
+  "output": "4 carrots, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 carrots, sliced",
+  "factor": 3,
+  "output": "6 carrots, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 0.5,
+  "output": "½ chayote or zucchini, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 0.6,
+  "output": "⅔ chayote or zucchini, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 1.5,
+  "output": "1½ chayotes or zucchini, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 2,
+  "output": "2 chayotes or zucchini, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 3,
+  "output": "3 chayotes or zucchini, diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or bolillo",
+  "factor": 0.5,
+  "output": "Tostadas or bolillo"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or bolillo",
+  "factor": 0.6,
+  "output": "Tostadas or bolillo"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or bolillo",
+  "factor": 1.5,
+  "output": "Tostadas or bolillo"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or bolillo",
+  "factor": 2,
+  "output": "Tostadas or bolillo"
+ },
+ {
+  "kind": "text",
+  "input": "Tostadas or bolillo",
+  "factor": 3,
+  "output": "Tostadas or bolillo"
+ },
+ {
+  "kind": "text",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 0.5,
+  "output": "The broth, caldillo and vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 0.6,
+  "output": "The broth, caldillo and vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 1.5,
+  "output": "The broth, caldillo and vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 2,
+  "output": "The broth, caldillo and vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 3,
+  "output": "The broth, caldillo and vegetables from the base"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 0.5,
+  "output": "¼ lb firm white fish, in chunks"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 0.6,
+  "output": "⅓ lb firm white fish, in chunks"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 1.5,
+  "output": "¾ lb firm white fish, in chunks"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 2,
+  "output": "1 lb firm white fish, in chunks"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 3,
+  "output": "1½ lb firm white fish, in chunks"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb shrimp",
+  "factor": 0.5,
+  "output": "¼ lb shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb shrimp",
+  "factor": 0.6,
+  "output": "⅓ lb shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb shrimp",
+  "factor": 1.5,
+  "output": "¾ lb shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb shrimp",
+  "factor": 2,
+  "output": "1 lb shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "½ lb shrimp",
+  "factor": 3,
+  "output": "1½ lb shrimp"
+ },
+ {
+  "kind": "text",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 0.5,
+  "output": "1 crab legs (or ½ lb crab)"
+ },
+ {
+  "kind": "text",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 0.6,
+  "output": "1¼ crab legs (or ½ lb crab)"
+ },
+ {
+  "kind": "text",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 1.5,
+  "output": "3 crab legs (or ½ lb crab)"
+ },
+ {
+  "kind": "text",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 2,
+  "output": "4 crab legs (or ½ lb crab)"
+ },
+ {
+  "kind": "text",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 3,
+  "output": "6 crab legs (or ½ lb crab)"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 0.5,
+  "output": "½ lb clams or mussels, scrubbed"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 0.6,
+  "output": "⅔ lb clams or mussels, scrubbed"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 1.5,
+  "output": "1½ lb clams or mussels, scrubbed"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 2,
+  "output": "2 lb clams or mussels, scrubbed"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 3,
+  "output": "3 lb clams or mussels, scrubbed"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 0.5,
+  "output": "¾ lb large shrimp, peeled and deveined, tails on"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 0.6,
+  "output": "1 lb large shrimp, peeled and deveined, tails on"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 1.5,
+  "output": "2¼ lb large shrimp, peeled and deveined, tails on"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 2,
+  "output": "3 lb large shrimp, peeled and deveined, tails on"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 3,
+  "output": "4½ lb large shrimp, peeled and deveined, tails on"
+ },
+ {
+  "kind": "text",
+  "input": "4–8 chiles de árbol",
+  "factor": 0.5,
+  "output": "2–4 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4–8 chiles de árbol",
+  "factor": 0.6,
+  "output": "2⅓–4¾ chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4–8 chiles de árbol",
+  "factor": 1.5,
+  "output": "6–12 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4–8 chiles de árbol",
+  "factor": 2,
+  "output": "8–16 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "4–8 chiles de árbol",
+  "factor": 3,
+  "output": "12–24 chiles de árbol"
+ },
+ {
+  "kind": "text",
+  "input": "2 chipotles en adobo",
+  "factor": 0.5,
+  "output": "1 chipotles en adobo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chipotles en adobo",
+  "factor": 0.6,
+  "output": "1¼ chipotles en adobo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chipotles en adobo",
+  "factor": 1.5,
+  "output": "3 chipotles en adobo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chipotles en adobo",
+  "factor": 2,
+  "output": "4 chipotles en adobo"
+ },
+ {
+  "kind": "text",
+  "input": "2 chipotles en adobo",
+  "factor": 3,
+  "output": "6 chipotles en adobo"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup water or shrimp broth",
+  "factor": 0.5,
+  "output": "¼ cup water or shrimp broth"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup water or shrimp broth",
+  "factor": 0.6,
+  "output": "⅓ cup water or shrimp broth"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup water or shrimp broth",
+  "factor": 1.5,
+  "output": "¾ cup water or shrimp broth"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup water or shrimp broth",
+  "factor": 2,
+  "output": "1 cup water or shrimp broth"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup water or shrimp broth",
+  "factor": 3,
+  "output": "1½ cups water or shrimp broth"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp butter",
+  "factor": 0.5,
+  "output": "1 tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp butter",
+  "factor": 0.6,
+  "output": "1¼ tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp butter",
+  "factor": 1.5,
+  "output": "3 tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp butter",
+  "factor": 2,
+  "output": "4 tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "2 tbsp butter",
+  "factor": 3,
+  "output": "6 tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 0.5,
+  "output": "Arroz blanco or arroz rojo"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 0.6,
+  "output": "Arroz blanco or arroz rojo"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 1.5,
+  "output": "Arroz blanco or arroz rojo"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 2,
+  "output": "Arroz blanco or arroz rojo"
+ },
+ {
+  "kind": "text",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 3,
+  "output": "Arroz blanco or arroz rojo"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillo or tortillas",
+  "factor": 0.5,
+  "output": "Bolillo or tortillas"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillo or tortillas",
+  "factor": 0.6,
+  "output": "Bolillo or tortillas"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillo or tortillas",
+  "factor": 1.5,
+  "output": "Bolillo or tortillas"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillo or tortillas",
+  "factor": 2,
+  "output": "Bolillo or tortillas"
+ },
+ {
+  "kind": "text",
+  "input": "Bolillo or tortillas",
+  "factor": 3,
+  "output": "Bolillo or tortillas"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 0.5,
+  "output": "¾ lb large shrimp, peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 0.6,
+  "output": "1 lb large shrimp, peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 1.5,
+  "output": "2¼ lb large shrimp, peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 2,
+  "output": "3 lb large shrimp, peeled"
+ },
+ {
+  "kind": "text",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 3,
+  "output": "4½ lb large shrimp, peeled"
+ },
+ {
+  "kind": "text",
+  "input": "8 garlic cloves, minced",
+  "factor": 0.5,
+  "output": "4 garlic cloves, minced"
+ },
+ {
+  "kind": "text",
+  "input": "8 garlic cloves, minced",
+  "factor": 0.6,
+  "output": "4¾ garlic cloves, minced"
+ },
+ {
+  "kind": "text",
+  "input": "8 garlic cloves, minced",
+  "factor": 1.5,
+  "output": "12 garlic cloves, minced"
+ },
+ {
+  "kind": "text",
+  "input": "8 garlic cloves, minced",
+  "factor": 2,
+  "output": "16 garlic cloves, minced"
+ },
+ {
+  "kind": "text",
+  "input": "8 garlic cloves, minced",
+  "factor": 3,
+  "output": "24 garlic cloves, minced"
+ },
+ {
+  "kind": "text",
+  "input": "3 tbsp butter",
+  "factor": 0.5,
+  "output": "1½ tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "3 tbsp butter",
+  "factor": 0.6,
+  "output": "1¾ tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "3 tbsp butter",
+  "factor": 1.5,
+  "output": "4½ tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "3 tbsp butter",
+  "factor": 2,
+  "output": "6 tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "3 tbsp butter",
+  "factor": 3,
+  "output": "9 tbsp butter"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 0.5,
+  "output": "½ chile guajillo, cut in thin rings, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 0.6,
+  "output": "⅔ chile guajillo, cut in thin rings, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 1.5,
+  "output": "1½ chiles guajillo, cut in thin rings, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 2,
+  "output": "2 chiles guajillo, cut in thin rings, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 3,
+  "output": "3 chiles guajillo, cut in thin rings, optional"
+ },
+ {
+  "kind": "text",
+  "input": "Chopped parsley or cilantro",
+  "factor": 0.5,
+  "output": "Chopped parsley or cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "Chopped parsley or cilantro",
+  "factor": 0.6,
+  "output": "Chopped parsley or cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "Chopped parsley or cilantro",
+  "factor": 1.5,
+  "output": "Chopped parsley or cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "Chopped parsley or cilantro",
+  "factor": 2,
+  "output": "Chopped parsley or cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "Chopped parsley or cilantro",
+  "factor": 3,
+  "output": "Chopped parsley or cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 0.5,
+  "output": "½ lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 0.6,
+  "output": "⅔ lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 1.5,
+  "output": "1½ lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 2,
+  "output": "2 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 3,
+  "output": "3 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "1½ cups fresh lime juice",
+  "factor": 0.5,
+  "output": "¾ cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1½ cups fresh lime juice",
+  "factor": 0.6,
+  "output": "1 cup fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1½ cups fresh lime juice",
+  "factor": 1.5,
+  "output": "2¼ cups fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1½ cups fresh lime juice",
+  "factor": 2,
+  "output": "3 cups fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "1½ cups fresh lime juice",
+  "factor": 3,
+  "output": "4½ cups fresh lime juice"
+ },
+ {
+  "kind": "text",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 0.5,
+  "output": "1½ Roma tomatoes, finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 0.6,
+  "output": "1¾ Roma tomatoes, finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 1.5,
+  "output": "4½ Roma tomatoes, finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 2,
+  "output": "6 Roma tomatoes, finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 3,
+  "output": "9 Roma tomatoes, finely diced"
+ },
+ {
+  "kind": "text",
+  "input": "½ white onion, finely chopped",
+  "factor": 0.5,
+  "output": "¼ white onion, finely chopped"
+ },
+ {
+  "kind": "text",
+  "input": "½ white onion, finely chopped",
+  "factor": 0.6,
+  "output": "⅓ white onion, finely chopped"
+ },
+ {
+  "kind": "text",
+  "input": "½ white onion, finely chopped",
+  "factor": 1.5,
+  "output": "¾ white onion, finely chopped"
+ },
+ {
+  "kind": "text",
+  "input": "½ white onion, finely chopped",
+  "factor": 2,
+  "output": "1 white onion, finely chopped"
+ },
+ {
+  "kind": "text",
+  "input": "½ white onion, finely chopped",
+  "factor": 3,
+  "output": "1½ white onions, finely chopped"
+ },
+ {
+  "kind": "text",
+  "input": "2–3 serranos, minced",
+  "factor": 0.5,
+  "output": "1–1½ serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "2–3 serranos, minced",
+  "factor": 0.6,
+  "output": "1¼–1¾ serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "2–3 serranos, minced",
+  "factor": 1.5,
+  "output": "3–4½ serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "2–3 serranos, minced",
+  "factor": 2,
+  "output": "4–6 serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "2–3 serranos, minced",
+  "factor": 3,
+  "output": "6–9 serranos, minced"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup chopped cilantro",
+  "factor": 0.5,
+  "output": "¼ cup chopped cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup chopped cilantro",
+  "factor": 0.6,
+  "output": "⅓ cup chopped cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup chopped cilantro",
+  "factor": 1.5,
+  "output": "¾ cup chopped cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup chopped cilantro",
+  "factor": 2,
+  "output": "1 cup chopped cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "½ cup chopped cilantro",
+  "factor": 3,
+  "output": "1½ cups chopped cilantro"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 0.5,
+  "output": "½ cucumber, finely diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 0.6,
+  "output": "⅔ cucumber, finely diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 1.5,
+  "output": "1½ cucumber, finely diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 2,
+  "output": "2 cucumber, finely diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 3,
+  "output": "3 cucumber, finely diced, optional"
+ },
+ {
+  "kind": "text",
+  "input": "12 tostadas",
+  "factor": 0.5,
+  "output": "6 tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "12 tostadas",
+  "factor": 0.6,
+  "output": "7¼ tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "12 tostadas",
+  "factor": 1.5,
+  "output": "18 tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "12 tostadas",
+  "factor": 2,
+  "output": "24 tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "12 tostadas",
+  "factor": 3,
+  "output": "36 tostadas"
+ },
+ {
+  "kind": "text",
+  "input": "2 avocados, sliced",
+  "factor": 0.5,
+  "output": "1 avocados, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 avocados, sliced",
+  "factor": 0.6,
+  "output": "1¼ avocados, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 avocados, sliced",
+  "factor": 1.5,
+  "output": "3 avocados, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 avocados, sliced",
+  "factor": 2,
+  "output": "4 avocados, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "2 avocados, sliced",
+  "factor": 3,
+  "output": "6 avocados, sliced"
+ },
+ {
+  "kind": "text",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 0.5,
+  "output": "Mayonnaise, optional, the Sinaloa way"
+ },
+ {
+  "kind": "text",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 0.6,
+  "output": "Mayonnaise, optional, the Sinaloa way"
+ },
+ {
+  "kind": "text",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 1.5,
+  "output": "Mayonnaise, optional, the Sinaloa way"
+ },
+ {
+  "kind": "text",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 2,
+  "output": "Mayonnaise, optional, the Sinaloa way"
+ },
+ {
+  "kind": "text",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 3,
+  "output": "Mayonnaise, optional, the Sinaloa way"
+ },
+ {
+  "kind": "text",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 0.5,
+  "output": "Valentina or Huichol hot sauce"
+ },
+ {
+  "kind": "text",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 0.6,
+  "output": "Valentina or Huichol hot sauce"
+ },
+ {
+  "kind": "text",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 1.5,
+  "output": "Valentina or Huichol hot sauce"
+ },
+ {
+  "kind": "text",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 2,
+  "output": "Valentina or Huichol hot sauce"
+ },
+ {
+  "kind": "text",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 3,
+  "output": "Valentina or Huichol hot sauce"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 0.5,
+  "output": "½ lb shrimp, peeled, deveined and chopped"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 0.6,
+  "output": "⅔ lb shrimp, peeled, deveined and chopped"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 1.5,
+  "output": "1½ lb shrimp, peeled, deveined and chopped"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 2,
+  "output": "2 lb shrimp, peeled, deveined and chopped"
+ },
+ {
+  "kind": "text",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 3,
+  "output": "3 lb shrimp, peeled, deveined and chopped"
+ },
+ {
+  "kind": "text",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 0.5,
+  "output": "The tomato, onion, serrano, cilantro and cucumber from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 0.6,
+  "output": "The tomato, onion, serrano, cilantro and cucumber from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 1.5,
+  "output": "The tomato, onion, serrano, cilantro and cucumber from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 2,
+  "output": "The tomato, onion, serrano, cilantro and cucumber from the base"
+ },
+ {
+  "kind": "text",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 3,
+  "output": "The tomato, onion, serrano, cilantro and cucumber from the base"
+ },
+ {
+  "kind": "text",
+  "input": "1 carrot, finely grated",
+  "factor": 0.5,
+  "output": "½ carrot, finely grated"
+ },
+ {
+  "kind": "text",
+  "input": "1 carrot, finely grated",
+  "factor": 0.6,
+  "output": "⅔ carrot, finely grated"
+ },
+ {
+  "kind": "text",
+  "input": "1 carrot, finely grated",
+  "factor": 1.5,
+  "output": "1½ carrots, finely grated"
+ },
+ {
+  "kind": "text",
+  "input": "1 carrot, finely grated",
+  "factor": 2,
+  "output": "2 carrots, finely grated"
+ },
+ {
+  "kind": "text",
+  "input": "1 carrot, finely grated",
+  "factor": 3,
+  "output": "3 carrots, finely grated"
+ },
+ {
+  "kind": "text",
   "input": "1 turkey (guajolote), in pieces, or 2 chickens",
   "factor": 0.5,
   "output": "½ turkey (guajolote), in pieces, or 1 chicken"
@@ -13021,36 +15841,6 @@
  },
  {
   "kind": "text",
-  "input": "4 cups water",
-  "factor": 0.5,
-  "output": "2 cups water"
- },
- {
-  "kind": "text",
-  "input": "4 cups water",
-  "factor": 0.6,
-  "output": "2⅓ cups water"
- },
- {
-  "kind": "text",
-  "input": "4 cups water",
-  "factor": 1.5,
-  "output": "6 cups water"
- },
- {
-  "kind": "text",
-  "input": "4 cups water",
-  "factor": 2,
-  "output": "8 cups water"
- },
- {
-  "kind": "text",
-  "input": "4 cups water",
-  "factor": 3,
-  "output": "12 cups water"
- },
- {
-  "kind": "text",
   "input": "3 oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)",
   "factor": 0.5,
   "output": "1½ oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)"
@@ -13708,36 +16498,6 @@
   "input": "1 cup dried jamaica (hibiscus) flowers",
   "factor": 3,
   "output": "3 cups dried jamaica (hibiscus) flowers"
- },
- {
-  "kind": "text",
-  "input": "8 cups water",
-  "factor": 0.5,
-  "output": "4 cups water"
- },
- {
-  "kind": "text",
-  "input": "8 cups water",
-  "factor": 0.6,
-  "output": "4¾ cups water"
- },
- {
-  "kind": "text",
-  "input": "8 cups water",
-  "factor": 1.5,
-  "output": "12 cups water"
- },
- {
-  "kind": "text",
-  "input": "8 cups water",
-  "factor": 2,
-  "output": "16 cups water"
- },
- {
-  "kind": "text",
-  "input": "8 cups water",
-  "factor": 3,
-  "output": "24 cups water"
  },
  {
   "kind": "text",
@@ -17863,6 +20623,570 @@
  },
  {
   "kind": "metric",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 1,
+  "output": "450 g very fresh raw shrimp (about 20 medium), peeled and deveined"
+ },
+ {
+  "kind": "metric",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 1,
+  "output": "240 ml fresh lime juice (about 10 limes)"
+ },
+ {
+  "kind": "metric",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 1,
+  "output": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)"
+ },
+ {
+  "kind": "metric",
+  "input": "1 garlic clove, optional",
+  "factor": 1,
+  "output": "1 garlic clove, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "¼ cup cold water",
+  "factor": 1,
+  "output": "60 ml cold water"
+ },
+ {
+  "kind": "metric",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 1,
+  "output": "1 cucumber, peeled and thinly sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 1,
+  "output": "½ red onion, very thinly sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "1 avocado, sliced",
+  "factor": 1,
+  "output": "1 avocado, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 1,
+  "output": "Tostadas or saladitas (saltine crackers)"
+ },
+ {
+  "kind": "metric",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 1,
+  "output": "Salsa negra or Huichol, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 1,
+  "output": "The shrimp, cucumber and red onion from the base"
+ },
+ {
+  "kind": "metric",
+  "input": "1 cup fresh lime juice",
+  "factor": 1,
+  "output": "240 ml fresh lime juice"
+ },
+ {
+  "kind": "metric",
+  "input": "1 tbsp chiltepín",
+  "factor": 1,
+  "output": "1 tbsp chiltepín"
+ },
+ {
+  "kind": "metric",
+  "input": "4 chiles de árbol",
+  "factor": 1,
+  "output": "4 chiles de árbol"
+ },
+ {
+  "kind": "metric",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 1,
+  "output": "450 g medium shrimp, shell on"
+ },
+ {
+  "kind": "metric",
+  "input": "4 cups water",
+  "factor": 1,
+  "output": "960 ml water"
+ },
+ {
+  "kind": "metric",
+  "input": "½ cup catsup",
+  "factor": 1,
+  "output": "120 ml catsup"
+ },
+ {
+  "kind": "metric",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 1,
+  "output": "240 ml of the shrimp cooking water, chilled"
+ },
+ {
+  "kind": "metric",
+  "input": "¼ cup fresh lime juice",
+  "factor": 1,
+  "output": "60 ml fresh lime juice"
+ },
+ {
+  "kind": "metric",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 1,
+  "output": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto"
+ },
+ {
+  "kind": "metric",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 1,
+  "output": "2 Roma tomatoes, diced"
+ },
+ {
+  "kind": "metric",
+  "input": "1–2 serranos, minced",
+  "factor": 1,
+  "output": "1–2 serranos, minced"
+ },
+ {
+  "kind": "metric",
+  "input": "1 cucumber, diced, optional",
+  "factor": 1,
+  "output": "1 cucumber, diced, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "1 avocado, diced",
+  "factor": 1,
+  "output": "1 avocado, diced"
+ },
+ {
+  "kind": "metric",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 1,
+  "output": "Saladitas (saltine crackers) or tostadas"
+ },
+ {
+  "kind": "metric",
+  "input": "½ lb cooked shrimp",
+  "factor": 1,
+  "output": "230 g cooked shrimp"
+ },
+ {
+  "kind": "metric",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 1,
+  "output": "230 g cooked octopus, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 1,
+  "output": "12 fresh oysters, shucked, with their liquor"
+ },
+ {
+  "kind": "metric",
+  "input": "½ cup crab meat",
+  "factor": 1,
+  "output": "120 ml crab meat"
+ },
+ {
+  "kind": "metric",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 1,
+  "output": "The sauce and chopped vegetables from the base"
+ },
+ {
+  "kind": "metric",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 1,
+  "output": "910 g red snapper fillets (huachinango), or 1 whole snapper, cleaned"
+ },
+ {
+  "kind": "metric",
+  "input": "1 lime, juiced",
+  "factor": 1,
+  "output": "1 lime, juiced"
+ },
+ {
+  "kind": "metric",
+  "input": "Salt and pepper",
+  "factor": 1,
+  "output": "Salt and pepper"
+ },
+ {
+  "kind": "metric",
+  "input": "¼ cup olive oil",
+  "factor": 1,
+  "output": "60 ml olive oil"
+ },
+ {
+  "kind": "metric",
+  "input": "1 white onion, thinly sliced",
+  "factor": 1,
+  "output": "1 white onion, thinly sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "4 garlic cloves, sliced",
+  "factor": 1,
+  "output": "4 garlic cloves, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 1,
+  "output": "910 g ripe tomatoes, chopped (or 8 Roma)"
+ },
+ {
+  "kind": "metric",
+  "input": "¼ tsp dried thyme",
+  "factor": 1,
+  "output": "¼ tsp dried thyme"
+ },
+ {
+  "kind": "metric",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 1,
+  "output": "120 ml green olives (manzanilla), pitted"
+ },
+ {
+  "kind": "metric",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 1,
+  "output": "2 tbsp capers, rinsed"
+ },
+ {
+  "kind": "metric",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 1,
+  "output": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+ },
+ {
+  "kind": "metric",
+  "input": "Arroz blanco",
+  "factor": 1,
+  "output": "Arroz blanco"
+ },
+ {
+  "kind": "metric",
+  "input": "Bolillos",
+  "factor": 1,
+  "output": "Bolillos"
+ },
+ {
+  "kind": "metric",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 1,
+  "output": "910 g firm white fish fillets, or 1 whole fish, butterflied"
+ },
+ {
+  "kind": "metric",
+  "input": "2 oz achiote paste",
+  "factor": 1,
+  "output": "55 g achiote paste"
+ },
+ {
+  "kind": "metric",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 1,
+  "output": "120 ml naranja agria (or 80 ml orange juice plus 3 tbsp lime juice)"
+ },
+ {
+  "kind": "metric",
+  "input": "Banana leaves",
+  "factor": 1,
+  "output": "Banana leaves"
+ },
+ {
+  "kind": "metric",
+  "input": "1 tomato, sliced",
+  "factor": 1,
+  "output": "1 tomato, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "1 red onion, sliced",
+  "factor": 1,
+  "output": "1 red onion, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 1,
+  "output": "1 chile x'catic or güero, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 1,
+  "output": "1 whole snapper or robalo (about 1.4 kg), butterflied, bones in"
+ },
+ {
+  "kind": "metric",
+  "input": "4 chiles guajillo",
+  "factor": 1,
+  "output": "4 chiles guajillo"
+ },
+ {
+  "kind": "metric",
+  "input": "2 tbsp mayonnaise",
+  "factor": 1,
+  "output": "2 tbsp mayonnaise"
+ },
+ {
+  "kind": "metric",
+  "input": "2 tbsp soy sauce",
+  "factor": 1,
+  "output": "2 tbsp soy sauce"
+ },
+ {
+  "kind": "metric",
+  "input": "2 tbsp lime juice",
+  "factor": 1,
+  "output": "2 tbsp lime juice"
+ },
+ {
+  "kind": "metric",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 1,
+  "output": "450 g medium shrimp, shell on (heads on if you can get them)"
+ },
+ {
+  "kind": "metric",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 1,
+  "output": "55 g dried shrimp (camarón seco), heads and legs pulled off"
+ },
+ {
+  "kind": "metric",
+  "input": "8 cups water",
+  "factor": 1,
+  "output": "1.9 l water"
+ },
+ {
+  "kind": "metric",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 1,
+  "output": "1–2 chiles de árbol, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "2 potatoes, diced",
+  "factor": 1,
+  "output": "2 potatoes, diced"
+ },
+ {
+  "kind": "metric",
+  "input": "2 carrots, sliced",
+  "factor": 1,
+  "output": "2 carrots, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 1,
+  "output": "1 chayote or zucchini, diced, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "Tostadas or bolillo",
+  "factor": 1,
+  "output": "Tostadas or bolillo"
+ },
+ {
+  "kind": "metric",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 1,
+  "output": "The broth, caldillo and vegetables from the base"
+ },
+ {
+  "kind": "metric",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 1,
+  "output": "230 g firm white fish, in chunks"
+ },
+ {
+  "kind": "metric",
+  "input": "½ lb shrimp",
+  "factor": 1,
+  "output": "230 g shrimp"
+ },
+ {
+  "kind": "metric",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 1,
+  "output": "2 crab legs (or 230 g crab)"
+ },
+ {
+  "kind": "metric",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 1,
+  "output": "450 g clams or mussels, scrubbed"
+ },
+ {
+  "kind": "metric",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 1,
+  "output": "680 g large shrimp, peeled and deveined, tails on"
+ },
+ {
+  "kind": "metric",
+  "input": "4–8 chiles de árbol",
+  "factor": 1,
+  "output": "4–8 chiles de árbol"
+ },
+ {
+  "kind": "metric",
+  "input": "2 chipotles en adobo",
+  "factor": 1,
+  "output": "2 chipotles en adobo"
+ },
+ {
+  "kind": "metric",
+  "input": "½ cup water or shrimp broth",
+  "factor": 1,
+  "output": "120 ml water or shrimp broth"
+ },
+ {
+  "kind": "metric",
+  "input": "2 tbsp butter",
+  "factor": 1,
+  "output": "2 tbsp butter"
+ },
+ {
+  "kind": "metric",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 1,
+  "output": "Arroz blanco or arroz rojo"
+ },
+ {
+  "kind": "metric",
+  "input": "Bolillo or tortillas",
+  "factor": 1,
+  "output": "Bolillo or tortillas"
+ },
+ {
+  "kind": "metric",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 1,
+  "output": "680 g large shrimp, peeled"
+ },
+ {
+  "kind": "metric",
+  "input": "8 garlic cloves, minced",
+  "factor": 1,
+  "output": "8 garlic cloves, minced"
+ },
+ {
+  "kind": "metric",
+  "input": "3 tbsp butter",
+  "factor": 1,
+  "output": "3 tbsp butter"
+ },
+ {
+  "kind": "metric",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 1,
+  "output": "1 chile guajillo, cut in thin rings, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "Chopped parsley or cilantro",
+  "factor": 1,
+  "output": "Chopped parsley or cilantro"
+ },
+ {
+  "kind": "metric",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 1,
+  "output": "450 g very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced"
+ },
+ {
+  "kind": "metric",
+  "input": "1½ cups fresh lime juice",
+  "factor": 1,
+  "output": "360 ml fresh lime juice"
+ },
+ {
+  "kind": "metric",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 1,
+  "output": "3 Roma tomatoes, finely diced"
+ },
+ {
+  "kind": "metric",
+  "input": "½ white onion, finely chopped",
+  "factor": 1,
+  "output": "½ white onion, finely chopped"
+ },
+ {
+  "kind": "metric",
+  "input": "2–3 serranos, minced",
+  "factor": 1,
+  "output": "2–3 serranos, minced"
+ },
+ {
+  "kind": "metric",
+  "input": "½ cup chopped cilantro",
+  "factor": 1,
+  "output": "120 ml chopped cilantro"
+ },
+ {
+  "kind": "metric",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 1,
+  "output": "1 cucumber, finely diced, optional"
+ },
+ {
+  "kind": "metric",
+  "input": "12 tostadas",
+  "factor": 1,
+  "output": "12 tostadas"
+ },
+ {
+  "kind": "metric",
+  "input": "2 avocados, sliced",
+  "factor": 1,
+  "output": "2 avocados, sliced"
+ },
+ {
+  "kind": "metric",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 1,
+  "output": "Mayonnaise, optional, the Sinaloa way"
+ },
+ {
+  "kind": "metric",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 1,
+  "output": "Valentina or Huichol hot sauce"
+ },
+ {
+  "kind": "metric",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 1,
+  "output": "450 g shrimp, peeled, deveined and chopped"
+ },
+ {
+  "kind": "metric",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 1,
+  "output": "The tomato, onion, serrano, cilantro and cucumber from the base"
+ },
+ {
+  "kind": "metric",
+  "input": "1 carrot, finely grated",
+  "factor": 1,
+  "output": "1 carrot, finely grated"
+ },
+ {
+  "kind": "metric",
   "input": "1 turkey (guajolote), in pieces, or 2 chickens",
   "factor": 1,
   "output": "1 turkey (guajolote), in pieces, or 2 chickens"
@@ -18445,12 +21769,6 @@
  },
  {
   "kind": "metric",
-  "input": "4 cups water",
-  "factor": 1,
-  "output": "960 ml water"
- },
- {
-  "kind": "metric",
   "input": "3 oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)",
   "factor": 1,
   "output": "85 g piloncillo, chopped or grated (or 80 ml dark brown sugar)"
@@ -18580,12 +21898,6 @@
   "input": "1 cup dried jamaica (hibiscus) flowers",
   "factor": 1,
   "output": "240 ml dried jamaica (hibiscus) flowers"
- },
- {
-  "kind": "metric",
-  "input": "8 cups water",
-  "factor": 1,
-  "output": "1.9 l water"
  },
  {
   "kind": "metric",
@@ -20908,6 +24220,522 @@
   "input": "Stuffed with picadillo instead of cheese.",
   "factor": 1,
   "output": "Stuffed with picadillo instead of cheese."
+ },
+ {
+  "kind": "metric",
+  "input": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua.",
+  "factor": 1,
+  "output": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua."
+ },
+ {
+  "kind": "metric",
+  "input": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+  "factor": 1,
+  "output": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth."
+ },
+ {
+  "kind": "metric",
+  "input": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+  "factor": 1,
+  "output": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top."
+ },
+ {
+  "kind": "metric",
+  "input": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+  "factor": 1,
+  "output": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve right away with avocado, tostadas and a little salsa negra.",
+  "factor": 1,
+  "output": "Serve right away with avocado, tostadas and a little salsa negra."
+ },
+ {
+  "kind": "metric",
+  "input": "Use the freshest shrimp you can find, or shrimp frozen at sea and thawed in the fridge. Raw seafood isn't for pregnant women, small children or anyone with a weak immune system.",
+  "factor": 1,
+  "output": "Use the freshest shrimp you can find, or shrimp frozen at sea and thawed in the fridge. Raw seafood isn't for pregnant women, small children or anyone with a weak immune system."
+ },
+ {
+  "kind": "metric",
+  "input": "Make it right before you eat. Aguachile waits for no one.",
+  "factor": 1,
+  "output": "Make it right before you eat. Aguachile waits for no one."
+ },
+ {
+  "kind": "metric",
+  "input": "No pressure-cooker version. Aguachile isn't cooked at all: the lime does the work.",
+  "factor": 1,
+  "output": "No pressure-cooker version. Aguachile isn't cooked at all: the lime does the work."
+ },
+ {
+  "kind": "metric",
+  "input": "Toast the chiles de árbol a few seconds in a dry pan.",
+  "factor": 1,
+  "output": "Toast the chiles de árbol a few seconds in a dry pan."
+ },
+ {
+  "kind": "metric",
+  "input": "Blend them with the chiltepín, lime juice, garlic, salt and water.",
+  "factor": 1,
+  "output": "Blend them with the chiltepín, lime juice, garlic, salt and water."
+ },
+ {
+  "kind": "metric",
+  "input": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve.",
+  "factor": 1,
+  "output": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."
+ },
+ {
+  "kind": "metric",
+  "input": "The hotter red version, with dried chiles in the agua.",
+  "factor": 1,
+  "output": "The hotter red version, with dried chiles in the agua."
+ },
+ {
+  "kind": "metric",
+  "input": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+  "factor": 1,
+  "output": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes."
+ },
+ {
+  "kind": "metric",
+  "input": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+  "factor": 1,
+  "output": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it."
+ },
+ {
+  "kind": "metric",
+  "input": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+  "factor": 1,
+  "output": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large."
+ },
+ {
+  "kind": "metric",
+  "input": "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+  "factor": 1,
+  "output": "Stir together the catsup, [[240 ml]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+  "factor": 1,
+  "output": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce.",
+  "factor": 1,
+  "output": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."
+ },
+ {
+  "kind": "metric",
+  "input": "The shrimp cooking water is the secret: it makes the sauce taste of the sea instead of catsup.",
+  "factor": 1,
+  "output": "The shrimp cooking water is the secret: it makes the sauce taste of the sea instead of catsup."
+ },
+ {
+  "kind": "metric",
+  "input": "Some marisquerías add a splash of Clamato or orange juice. Every puesto has its own.",
+  "factor": 1,
+  "output": "Some marisquerías add a splash of Clamato or orange juice. Every puesto has its own."
+ },
+ {
+  "kind": "metric",
+  "input": "No pressure-cooker version. Shrimp cook in two minutes and turn rubbery under pressure.",
+  "factor": 1,
+  "output": "No pressure-cooker version. Shrimp cook in two minutes and turn rubbery under pressure."
+ },
+ {
+  "kind": "metric",
+  "input": "Make the sauce and chopped vegetables as in the base, steps 4–5.",
+  "factor": 1,
+  "output": "Make the sauce and chopped vegetables as in the base, steps 4–5."
+ },
+ {
+  "kind": "metric",
+  "input": "Fold in the shrimp, octopus, crab and the oysters with their liquor.",
+  "factor": 1,
+  "output": "Fold in the shrimp, octopus, crab and the oysters with their liquor."
+ },
+ {
+  "kind": "metric",
+  "input": "Chill 15 minutes and serve in tall glasses with avocado and saladitas.",
+  "factor": 1,
+  "output": "Chill 15 minutes and serve in tall glasses with avocado and saladitas."
+ },
+ {
+  "kind": "metric",
+  "input": "Veracruz's campechana of shrimp, octopus, oysters and crab, famous as the cure for la cruda.",
+  "factor": 1,
+  "output": "Veracruz's campechana of shrimp, octopus, oysters and crab, famous as the cure for la cruda."
+ },
+ {
+  "kind": "metric",
+  "input": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+  "factor": 1,
+  "output": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes."
+ },
+ {
+  "kind": "metric",
+  "input": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+  "factor": 1,
+  "output": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+  "factor": 1,
+  "output": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce."
+ },
+ {
+  "kind": "metric",
+  "input": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+  "factor": 1,
+  "output": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season."
+ },
+ {
+  "kind": "metric",
+  "input": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+  "factor": 1,
+  "output": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve with arroz blanco, and bolillo for the sauce.",
+  "factor": 1,
+  "output": "Serve with arroz blanco, and bolillo for the sauce."
+ },
+ {
+  "kind": "metric",
+  "input": "Use ripe, soft tomatoes. In winter, good canned whole tomatoes beat pale fresh ones.",
+  "factor": 1,
+  "output": "Use ripe, soft tomatoes. In winter, good canned whole tomatoes beat pale fresh ones."
+ },
+ {
+  "kind": "metric",
+  "input": "Once the fish is in, don't stir or it falls apart. Shake the pan instead.",
+  "factor": 1,
+  "output": "Once the fish is in, don't stir or it falls apart. Shake the pan instead."
+ },
+ {
+  "kind": "metric",
+  "input": "No pressure-cooker version. Fish cooks in minutes, and the sauce is quick on the stove.",
+  "factor": 1,
+  "output": "No pressure-cooker version. Fish cooks in minutes, and the sauce is quick on the stove."
+ },
+ {
+  "kind": "metric",
+  "input": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.",
+  "factor": 1,
+  "output": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes."
+ },
+ {
+  "kind": "metric",
+  "input": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.",
+  "factor": 1,
+  "output": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package."
+ },
+ {
+  "kind": "metric",
+  "input": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.",
+  "factor": 1,
+  "output": "Grill over medium coals or bake at 200°C for 20–25 minutes, until the fish flakes."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve with tortillas, cebolla morada encurtida and habanero salsa.",
+  "factor": 1,
+  "output": "Serve with tortillas, cebolla morada encurtida and habanero salsa."
+ },
+ {
+  "kind": "metric",
+  "input": "The Maya fish dish: fish rubbed with recado rojo and naranja agria, wrapped in banana leaf with tomato, onion and chile, then grilled or baked.",
+  "factor": 1,
+  "output": "The Maya fish dish: fish rubbed with recado rojo and naranja agria, wrapped in banana leaf with tomato, onion and chile, then grilled or baked."
+ },
+ {
+  "kind": "metric",
+  "input": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.",
+  "factor": 1,
+  "output": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste."
+ },
+ {
+  "kind": "metric",
+  "input": "Brush it over the flesh side of the fish.",
+  "factor": 1,
+  "output": "Brush it over the flesh side of the fish."
+ },
+ {
+  "kind": "metric",
+  "input": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.",
+  "factor": 1,
+  "output": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 15 cm from the heat about 20 minutes."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve on the grill with tortillas, salsa, cucumber and red onion.",
+  "factor": 1,
+  "output": "Serve on the grill with tortillas, salsa, cucumber and red onion."
+ },
+ {
+  "kind": "metric",
+  "input": "From Mexcaltitán and San Blas: a whole fish split open, brushed with a chile adobo sharpened with soy sauce and lime, and grilled in a hinged basket over mangrove wood.",
+  "factor": 1,
+  "output": "From Mexcaltitán and San Blas: a whole fish split open, brushed with a chile adobo sharpened with soy sauce and lime, and grilled in a hinged basket over mangrove wood."
+ },
+ {
+  "kind": "metric",
+  "input": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+  "factor": 1,
+  "output": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[1.9 l]] water. Simmer 20 minutes and strain. This is the broth."
+ },
+ {
+  "kind": "metric",
+  "input": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+  "factor": 1,
+  "output": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[240 ml]] of the broth, and strain."
+ },
+ {
+  "kind": "metric",
+  "input": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+  "factor": 1,
+  "output": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+  "factor": 1,
+  "output": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+  "factor": 1,
+  "output": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve with onion, cilantro, lime and tostadas.",
+  "factor": 1,
+  "output": "Serve with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "metric",
+  "input": "Dried shrimp are salty. Taste before adding any salt.",
+  "factor": 1,
+  "output": "Dried shrimp are salty. Taste before adding any salt."
+ },
+ {
+  "kind": "metric",
+  "input": "The heads hold most of the flavor. Ask the fish counter for head-on shrimp.",
+  "factor": 1,
+  "output": "The heads hold most of the flavor. Ask the fish counter for head-on shrimp."
+ },
+ {
+  "kind": "metric",
+  "input": "Never pressure-cook the shrimp themselves; they turn rubbery.",
+  "factor": 1,
+  "output": "Never pressure-cook the shrimp themselves; they turn rubbery."
+ },
+ {
+  "kind": "metric",
+  "input": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.",
+  "factor": 1,
+  "output": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[1.9 l]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth."
+ },
+ {
+  "kind": "metric",
+  "input": "Make and fry the chile purée on Sauté as in steps 2–3.",
+  "factor": 1,
+  "output": "Make and fry the chile purée on Sauté as in steps 2–3."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.",
+  "factor": 1,
+  "output": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release."
+ },
+ {
+  "kind": "metric",
+  "input": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season.",
+  "factor": 1,
+  "output": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."
+ },
+ {
+  "kind": "metric",
+  "input": "Make the broth, caldillo and vegetables as in the base, steps 1–4.",
+  "factor": 1,
+  "output": "Make the broth, caldillo and vegetables as in the base, steps 1–4."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.",
+  "factor": 1,
+  "output": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the fish and octopus for 3 minutes, then the shrimp for 2.",
+  "factor": 1,
+  "output": "Add the fish and octopus for 3 minutes, then the shrimp for 2."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve in big bowls with onion, cilantro, lime and tostadas.",
+  "factor": 1,
+  "output": "Serve in big bowls with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "metric",
+  "input": "The big soup of the marisquería: the same red caldillo loaded with fish, shrimp, octopus, crab and clams.",
+  "factor": 1,
+  "output": "The big soup of the marisquería: the same red caldillo loaded with fish, shrimp, octopus, crab and clams."
+ },
+ {
+  "kind": "metric",
+  "input": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+  "factor": 1,
+  "output": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes."
+ },
+ {
+  "kind": "metric",
+  "input": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+  "factor": 1,
+  "output": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[120 ml]] water until smooth. Strain."
+ },
+ {
+  "kind": "metric",
+  "input": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+  "factor": 1,
+  "output": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+  "factor": 1,
+  "output": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve right away with rice, lime and bolillo.",
+  "factor": 1,
+  "output": "Serve right away with rice, lime and bolillo."
+ },
+ {
+  "kind": "metric",
+  "input": "Set the heat with the chiles de árbol: 4 is spicy, 8 is a la diabla.",
+  "factor": 1,
+  "output": "Set the heat with the chiles de árbol: 4 is spicy, 8 is a la diabla."
+ },
+ {
+  "kind": "metric",
+  "input": "Don't crowd the pan, and pull the shrimp as soon as they curl into a C. An O means overcooked.",
+  "factor": 1,
+  "output": "Don't crowd the pan, and pull the shrimp as soon as they curl into a C. An O means overcooked."
+ },
+ {
+  "kind": "metric",
+  "input": "No pressure-cooker version. Shrimp need only a few minutes in the pan.",
+  "factor": 1,
+  "output": "No pressure-cooker version. Shrimp need only a few minutes in the pan."
+ },
+ {
+  "kind": "metric",
+  "input": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.",
+  "factor": 1,
+  "output": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn."
+ },
+ {
+  "kind": "metric",
+  "input": "Raise the heat, add the shrimp and cook 2–3 minutes per side.",
+  "factor": 1,
+  "output": "Raise the heat, add the shrimp and cook 2–3 minutes per side."
+ },
+ {
+  "kind": "metric",
+  "input": "Add the lime juice, salt and parsley, toss and serve with rice.",
+  "factor": 1,
+  "output": "Add the lime juice, salt and parsley, toss and serve with rice."
+ },
+ {
+  "kind": "metric",
+  "input": "The mild one at the marisquería: shrimp in golden garlic, butter and lime.",
+  "factor": 1,
+  "output": "The mild one at the marisquería: shrimp in golden garlic, butter and lime."
+ },
+ {
+  "kind": "metric",
+  "input": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+  "factor": 1,
+  "output": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through."
+ },
+ {
+  "kind": "metric",
+  "input": "Drain off most of the lime juice.",
+  "factor": 1,
+  "output": "Drain off most of the lime juice."
+ },
+ {
+  "kind": "metric",
+  "input": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+  "factor": 1,
+  "output": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt."
+ },
+ {
+  "kind": "metric",
+  "input": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce.",
+  "factor": 1,
+  "output": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."
+ },
+ {
+  "kind": "metric",
+  "input": "Cut the fish small and even so it all cures at the same time.",
+  "factor": 1,
+  "output": "Cut the fish small and even so it all cures at the same time."
+ },
+ {
+  "kind": "metric",
+  "input": "Use a glass or ceramic bowl, not metal, for the lime.",
+  "factor": 1,
+  "output": "Use a glass or ceramic bowl, not metal, for the lime."
+ },
+ {
+  "kind": "metric",
+  "input": "Very fresh fish only. Raw seafood isn't for pregnant women or small children.",
+  "factor": 1,
+  "output": "Very fresh fish only. Raw seafood isn't for pregnant women or small children."
+ },
+ {
+  "kind": "metric",
+  "input": "No pressure-cooker version. The lime cooks the fish.",
+  "factor": 1,
+  "output": "No pressure-cooker version. The lime cooks the fish."
+ },
+ {
+  "kind": "metric",
+  "input": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.",
+  "factor": 1,
+  "output": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first."
+ },
+ {
+  "kind": "metric",
+  "input": "Drain and fold in the vegetables and carrot.",
+  "factor": 1,
+  "output": "Drain and fold in the vegetables and carrot."
+ },
+ {
+  "kind": "metric",
+  "input": "Serve on tostadas with avocado.",
+  "factor": 1,
+  "output": "Serve on tostadas with avocado."
+ },
+ {
+  "kind": "metric",
+  "input": "With shrimp instead of fish, cured raw like aguachile or poached a minute first.",
+  "factor": 1,
+  "output": "With shrimp instead of fish, cured raw like aguachile or poached a minute first."
  },
  {
   "kind": "metric",
@@ -24433,6 +28261,570 @@
  },
  {
   "kind": "scaled-metric",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 0.5,
+  "output": "230 g very fresh raw shrimp (about 20 medium), peeled and deveined"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 0.5,
+  "output": "120 ml fresh lime juice (about 10 limes)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 0.5,
+  "output": "1½–2½ serranos (or 1 tbsp chiltepín, the Sinaloa way)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 garlic clove, optional",
+  "factor": 0.5,
+  "output": "½ garlic clove, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "¼ cup cold water",
+  "factor": 0.5,
+  "output": "30 ml cold water"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 0.5,
+  "output": "½ cucumber, peeled and thinly sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 0.5,
+  "output": "¼ red onion, very thinly sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 avocado, sliced",
+  "factor": 0.5,
+  "output": "½ avocado, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 0.5,
+  "output": "Tostadas or saladitas (saltine crackers)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 0.5,
+  "output": "Salsa negra or Huichol, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 0.5,
+  "output": "The shrimp, cucumber and red onion from the base"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 cup fresh lime juice",
+  "factor": 0.5,
+  "output": "120 ml fresh lime juice"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 tbsp chiltepín",
+  "factor": 0.5,
+  "output": "½ tbsp chiltepín"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "4 chiles de árbol",
+  "factor": 0.5,
+  "output": "2 chiles de árbol"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 0.5,
+  "output": "230 g medium shrimp, shell on"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "4 cups water",
+  "factor": 0.5,
+  "output": "480 ml water"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ cup catsup",
+  "factor": 0.5,
+  "output": "60 ml catsup"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 0.5,
+  "output": "120 ml of the shrimp cooking water, chilled"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "¼ cup fresh lime juice",
+  "factor": 0.5,
+  "output": "30 ml fresh lime juice"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 0.5,
+  "output": "½ tbsp Valentina or Huichol hot sauce, plus more al gusto"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 0.5,
+  "output": "1 Roma tomato, diced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1–2 serranos, minced",
+  "factor": 0.5,
+  "output": "½–1 serrano, minced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 cucumber, diced, optional",
+  "factor": 0.5,
+  "output": "½ cucumber, diced, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 avocado, diced",
+  "factor": 0.5,
+  "output": "½ avocado, diced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 0.5,
+  "output": "Saladitas (saltine crackers) or tostadas"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ lb cooked shrimp",
+  "factor": 0.5,
+  "output": "110 g cooked shrimp"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 0.5,
+  "output": "110 g cooked octopus, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 0.5,
+  "output": "6 fresh oysters, shucked, with their liquor"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ cup crab meat",
+  "factor": 0.5,
+  "output": "60 ml crab meat"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 0.5,
+  "output": "The sauce and chopped vegetables from the base"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 0.5,
+  "output": "450 g red snapper fillets (huachinango), or ½ whole snapper, cleaned"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 lime, juiced",
+  "factor": 0.5,
+  "output": "½ lime, juiced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Salt and pepper",
+  "factor": 0.5,
+  "output": "Salt and pepper"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "¼ cup olive oil",
+  "factor": 0.5,
+  "output": "30 ml olive oil"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 white onion, thinly sliced",
+  "factor": 0.5,
+  "output": "½ white onion, thinly sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "4 garlic cloves, sliced",
+  "factor": 0.5,
+  "output": "2 garlic cloves, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 0.5,
+  "output": "450 g ripe tomatoes, chopped (or 8 Roma)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "¼ tsp dried thyme",
+  "factor": 0.5,
+  "output": "⅛ tsp dried thyme"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 0.5,
+  "output": "60 ml green olives (manzanilla), pitted"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 0.5,
+  "output": "1 tbsp capers, rinsed"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 0.5,
+  "output": "2 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Arroz blanco",
+  "factor": 0.5,
+  "output": "Arroz blanco"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Bolillos",
+  "factor": 0.5,
+  "output": "Bolillos"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 0.5,
+  "output": "450 g firm white fish fillets, or ½ whole fish, butterflied"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 oz achiote paste",
+  "factor": 0.5,
+  "output": "30 g achiote paste"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 0.5,
+  "output": "60 ml naranja agria (or 80 ml orange juice plus 1½ tbsp lime juice)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Banana leaves",
+  "factor": 0.5,
+  "output": "Banana leaves"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 tomato, sliced",
+  "factor": 0.5,
+  "output": "½ tomato, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 red onion, sliced",
+  "factor": 0.5,
+  "output": "½ red onion, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 0.5,
+  "output": "½ chile x'catic or güero, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 0.5,
+  "output": "½ whole snapper or robalo (about 1.4 kg), butterflied, bones in"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "4 chiles guajillo",
+  "factor": 0.5,
+  "output": "2 chiles guajillo"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 tbsp mayonnaise",
+  "factor": 0.5,
+  "output": "1 tbsp mayonnaise"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 tbsp soy sauce",
+  "factor": 0.5,
+  "output": "1 tbsp soy sauce"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 tbsp lime juice",
+  "factor": 0.5,
+  "output": "1 tbsp lime juice"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 0.5,
+  "output": "230 g medium shrimp, shell on (heads on if you can get them)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 0.5,
+  "output": "30 g dried shrimp (camarón seco), heads and legs pulled off"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "8 cups water",
+  "factor": 0.5,
+  "output": "960 ml water"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 0.5,
+  "output": "½–1 chile de árbol, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 potatoes, diced",
+  "factor": 0.5,
+  "output": "1 potato, diced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 carrots, sliced",
+  "factor": 0.5,
+  "output": "1 carrot, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 0.5,
+  "output": "½ chayote or zucchini, diced, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Tostadas or bolillo",
+  "factor": 0.5,
+  "output": "Tostadas or bolillo"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 0.5,
+  "output": "The broth, caldillo and vegetables from the base"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 0.5,
+  "output": "110 g firm white fish, in chunks"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ lb shrimp",
+  "factor": 0.5,
+  "output": "110 g shrimp"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 0.5,
+  "output": "1 crab legs (or 230 g crab)"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 0.5,
+  "output": "230 g clams or mussels, scrubbed"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 0.5,
+  "output": "340 g large shrimp, peeled and deveined, tails on"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "4–8 chiles de árbol",
+  "factor": 0.5,
+  "output": "2–4 chiles de árbol"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 chipotles en adobo",
+  "factor": 0.5,
+  "output": "1 chipotles en adobo"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ cup water or shrimp broth",
+  "factor": 0.5,
+  "output": "60 ml water or shrimp broth"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 tbsp butter",
+  "factor": 0.5,
+  "output": "1 tbsp butter"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 0.5,
+  "output": "Arroz blanco or arroz rojo"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Bolillo or tortillas",
+  "factor": 0.5,
+  "output": "Bolillo or tortillas"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 0.5,
+  "output": "340 g large shrimp, peeled"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "8 garlic cloves, minced",
+  "factor": 0.5,
+  "output": "4 garlic cloves, minced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "3 tbsp butter",
+  "factor": 0.5,
+  "output": "1½ tbsp butter"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 0.5,
+  "output": "½ chile guajillo, cut in thin rings, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Chopped parsley or cilantro",
+  "factor": 0.5,
+  "output": "Chopped parsley or cilantro"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 0.5,
+  "output": "230 g very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1½ cups fresh lime juice",
+  "factor": 0.5,
+  "output": "180 ml fresh lime juice"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 0.5,
+  "output": "1½ Roma tomatoes, finely diced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ white onion, finely chopped",
+  "factor": 0.5,
+  "output": "¼ white onion, finely chopped"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2–3 serranos, minced",
+  "factor": 0.5,
+  "output": "1–1½ serranos, minced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "½ cup chopped cilantro",
+  "factor": 0.5,
+  "output": "60 ml chopped cilantro"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 0.5,
+  "output": "½ cucumber, finely diced, optional"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "12 tostadas",
+  "factor": 0.5,
+  "output": "6 tostadas"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "2 avocados, sliced",
+  "factor": 0.5,
+  "output": "1 avocados, sliced"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 0.5,
+  "output": "Mayonnaise, optional, the Sinaloa way"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 0.5,
+  "output": "Valentina or Huichol hot sauce"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 0.5,
+  "output": "230 g shrimp, peeled, deveined and chopped"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 0.5,
+  "output": "The tomato, onion, serrano, cilantro and cucumber from the base"
+ },
+ {
+  "kind": "scaled-metric",
+  "input": "1 carrot, finely grated",
+  "factor": 0.5,
+  "output": "½ carrot, finely grated"
+ },
+ {
+  "kind": "scaled-metric",
   "input": "1 turkey (guajolote), in pieces, or 2 chickens",
   "factor": 0.5,
   "output": "½ turkey (guajolote), in pieces, or 1 chicken"
@@ -25015,12 +29407,6 @@
  },
  {
   "kind": "scaled-metric",
-  "input": "4 cups water",
-  "factor": 0.5,
-  "output": "480 ml water"
- },
- {
-  "kind": "scaled-metric",
   "input": "3 oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)",
   "factor": 0.5,
   "output": "45 g piloncillo, chopped or grated (or 80 ml dark brown sugar)"
@@ -25150,12 +29536,6 @@
   "input": "1 cup dried jamaica (hibiscus) flowers",
   "factor": 0.5,
   "output": "120 ml dried jamaica (hibiscus) flowers"
- },
- {
-  "kind": "scaled-metric",
-  "input": "8 cups water",
-  "factor": 0.5,
-  "output": "960 ml water"
  },
  {
   "kind": "scaled-metric",
@@ -31258,6 +35638,1446 @@
   "input": "Batter, fry and serve in caldillo as in the base.",
   "factor": 0.5,
   "output": "Batter, fry and serve in caldillo as in the base."
+ },
+ {
+  "kind": "step",
+  "input": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua.",
+  "factor": 0.5,
+  "output": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua."
+ },
+ {
+  "kind": "step",
+  "input": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua.",
+  "factor": 2,
+  "output": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua."
+ },
+ {
+  "kind": "step",
+  "input": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua.",
+  "factor": 1.5,
+  "output": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua.",
+  "factor": 0.5,
+  "output": "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+  "factor": 0.5,
+  "output": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+  "factor": 2,
+  "output": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+  "factor": 1.5,
+  "output": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+  "factor": 0.5,
+  "output": "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth."
+ },
+ {
+  "kind": "step",
+  "input": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+  "factor": 0.5,
+  "output": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top."
+ },
+ {
+  "kind": "step",
+  "input": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+  "factor": 2,
+  "output": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top."
+ },
+ {
+  "kind": "step",
+  "input": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+  "factor": 1.5,
+  "output": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+  "factor": 0.5,
+  "output": "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top."
+ },
+ {
+  "kind": "step",
+  "input": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+  "factor": 0.5,
+  "output": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen."
+ },
+ {
+  "kind": "step",
+  "input": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+  "factor": 2,
+  "output": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen."
+ },
+ {
+  "kind": "step",
+  "input": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+  "factor": 1.5,
+  "output": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+  "factor": 0.5,
+  "output": "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen."
+ },
+ {
+  "kind": "step",
+  "input": "Serve right away with avocado, tostadas and a little salsa negra.",
+  "factor": 0.5,
+  "output": "Serve right away with avocado, tostadas and a little salsa negra."
+ },
+ {
+  "kind": "step",
+  "input": "Serve right away with avocado, tostadas and a little salsa negra.",
+  "factor": 2,
+  "output": "Serve right away with avocado, tostadas and a little salsa negra."
+ },
+ {
+  "kind": "step",
+  "input": "Serve right away with avocado, tostadas and a little salsa negra.",
+  "factor": 1.5,
+  "output": "Serve right away with avocado, tostadas and a little salsa negra."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve right away with avocado, tostadas and a little salsa negra.",
+  "factor": 0.5,
+  "output": "Serve right away with avocado, tostadas and a little salsa negra."
+ },
+ {
+  "kind": "step",
+  "input": "Toast the chiles de árbol a few seconds in a dry pan.",
+  "factor": 0.5,
+  "output": "Toast the chiles de árbol a few seconds in a dry pan."
+ },
+ {
+  "kind": "step",
+  "input": "Toast the chiles de árbol a few seconds in a dry pan.",
+  "factor": 2,
+  "output": "Toast the chiles de árbol a few seconds in a dry pan."
+ },
+ {
+  "kind": "step",
+  "input": "Toast the chiles de árbol a few seconds in a dry pan.",
+  "factor": 1.5,
+  "output": "Toast the chiles de árbol a few seconds in a dry pan."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Toast the chiles de árbol a few seconds in a dry pan.",
+  "factor": 0.5,
+  "output": "Toast the chiles de árbol a few seconds in a dry pan."
+ },
+ {
+  "kind": "step",
+  "input": "Blend them with the chiltepín, lime juice, garlic, salt and water.",
+  "factor": 0.5,
+  "output": "Blend them with the chiltepín, lime juice, garlic, salt and water."
+ },
+ {
+  "kind": "step",
+  "input": "Blend them with the chiltepín, lime juice, garlic, salt and water.",
+  "factor": 2,
+  "output": "Blend them with the chiltepín, lime juice, garlic, salt and water."
+ },
+ {
+  "kind": "step",
+  "input": "Blend them with the chiltepín, lime juice, garlic, salt and water.",
+  "factor": 1.5,
+  "output": "Blend them with the chiltepín, lime juice, garlic, salt and water."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Blend them with the chiltepín, lime juice, garlic, salt and water.",
+  "factor": 0.5,
+  "output": "Blend them with the chiltepín, lime juice, garlic, salt and water."
+ },
+ {
+  "kind": "step",
+  "input": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve.",
+  "factor": 0.5,
+  "output": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."
+ },
+ {
+  "kind": "step",
+  "input": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve.",
+  "factor": 2,
+  "output": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."
+ },
+ {
+  "kind": "step",
+  "input": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve.",
+  "factor": 1.5,
+  "output": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve.",
+  "factor": 0.5,
+  "output": "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."
+ },
+ {
+  "kind": "step",
+  "input": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+  "factor": 0.5,
+  "output": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+  "factor": 2,
+  "output": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+  "factor": 1.5,
+  "output": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+  "factor": 0.5,
+  "output": "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+  "factor": 0.5,
+  "output": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it."
+ },
+ {
+  "kind": "step",
+  "input": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+  "factor": 2,
+  "output": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it."
+ },
+ {
+  "kind": "step",
+  "input": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+  "factor": 1.5,
+  "output": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+  "factor": 0.5,
+  "output": "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+  "factor": 0.5,
+  "output": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+  "factor": 2,
+  "output": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+  "factor": 1.5,
+  "output": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+  "factor": 0.5,
+  "output": "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large."
+ },
+ {
+  "kind": "step",
+  "input": "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+  "factor": 0.5,
+  "output": "Stir together the catsup, ½ cup of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink."
+ },
+ {
+  "kind": "step",
+  "input": "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+  "factor": 2,
+  "output": "Stir together the catsup, 2 cups of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink."
+ },
+ {
+  "kind": "step",
+  "input": "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+  "factor": 1.5,
+  "output": "Stir together the catsup, 1½ cups of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+  "factor": 0.5,
+  "output": "Stir together the catsup, 120 ml of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink."
+ },
+ {
+  "kind": "step",
+  "input": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+  "factor": 0.5,
+  "output": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+  "factor": 2,
+  "output": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+  "factor": 1.5,
+  "output": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+  "factor": 0.5,
+  "output": "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce.",
+  "factor": 0.5,
+  "output": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce.",
+  "factor": 2,
+  "output": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce.",
+  "factor": 1.5,
+  "output": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce.",
+  "factor": 0.5,
+  "output": "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Make the sauce and chopped vegetables as in the base, steps 4–5.",
+  "factor": 0.5,
+  "output": "Make the sauce and chopped vegetables as in the base, steps 4–5."
+ },
+ {
+  "kind": "step",
+  "input": "Make the sauce and chopped vegetables as in the base, steps 4–5.",
+  "factor": 2,
+  "output": "Make the sauce and chopped vegetables as in the base, steps 4–5."
+ },
+ {
+  "kind": "step",
+  "input": "Make the sauce and chopped vegetables as in the base, steps 4–5.",
+  "factor": 1.5,
+  "output": "Make the sauce and chopped vegetables as in the base, steps 4–5."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Make the sauce and chopped vegetables as in the base, steps 4–5.",
+  "factor": 0.5,
+  "output": "Make the sauce and chopped vegetables as in the base, steps 4–5."
+ },
+ {
+  "kind": "step",
+  "input": "Fold in the shrimp, octopus, crab and the oysters with their liquor.",
+  "factor": 0.5,
+  "output": "Fold in the shrimp, octopus, crab and the oysters with their liquor."
+ },
+ {
+  "kind": "step",
+  "input": "Fold in the shrimp, octopus, crab and the oysters with their liquor.",
+  "factor": 2,
+  "output": "Fold in the shrimp, octopus, crab and the oysters with their liquor."
+ },
+ {
+  "kind": "step",
+  "input": "Fold in the shrimp, octopus, crab and the oysters with their liquor.",
+  "factor": 1.5,
+  "output": "Fold in the shrimp, octopus, crab and the oysters with their liquor."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Fold in the shrimp, octopus, crab and the oysters with their liquor.",
+  "factor": 0.5,
+  "output": "Fold in the shrimp, octopus, crab and the oysters with their liquor."
+ },
+ {
+  "kind": "step",
+  "input": "Chill 15 minutes and serve in tall glasses with avocado and saladitas.",
+  "factor": 0.5,
+  "output": "Chill 15 minutes and serve in tall glasses with avocado and saladitas."
+ },
+ {
+  "kind": "step",
+  "input": "Chill 15 minutes and serve in tall glasses with avocado and saladitas.",
+  "factor": 2,
+  "output": "Chill 15 minutes and serve in tall glasses with avocado and saladitas."
+ },
+ {
+  "kind": "step",
+  "input": "Chill 15 minutes and serve in tall glasses with avocado and saladitas.",
+  "factor": 1.5,
+  "output": "Chill 15 minutes and serve in tall glasses with avocado and saladitas."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Chill 15 minutes and serve in tall glasses with avocado and saladitas.",
+  "factor": 0.5,
+  "output": "Chill 15 minutes and serve in tall glasses with avocado and saladitas."
+ },
+ {
+  "kind": "step",
+  "input": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+  "factor": 0.5,
+  "output": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+  "factor": 2,
+  "output": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+  "factor": 1.5,
+  "output": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+  "factor": 0.5,
+  "output": "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+  "factor": 0.5,
+  "output": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+  "factor": 2,
+  "output": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+  "factor": 1.5,
+  "output": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+  "factor": 0.5,
+  "output": "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute."
+ },
+ {
+  "kind": "step",
+  "input": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+  "factor": 0.5,
+  "output": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+  "factor": 2,
+  "output": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+  "factor": 1.5,
+  "output": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+  "factor": 0.5,
+  "output": "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+  "factor": 0.5,
+  "output": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season."
+ },
+ {
+  "kind": "step",
+  "input": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+  "factor": 2,
+  "output": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season."
+ },
+ {
+  "kind": "step",
+  "input": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+  "factor": 1.5,
+  "output": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+  "factor": 0.5,
+  "output": "Stir in the olives, capers, chiles güeros and a splash of their brine. Season."
+ },
+ {
+  "kind": "step",
+  "input": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+  "factor": 0.5,
+  "output": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step",
+  "input": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+  "factor": 2,
+  "output": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step",
+  "input": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+  "factor": 1.5,
+  "output": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+  "factor": 0.5,
+  "output": "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with arroz blanco, and bolillo for the sauce.",
+  "factor": 0.5,
+  "output": "Serve with arroz blanco, and bolillo for the sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with arroz blanco, and bolillo for the sauce.",
+  "factor": 2,
+  "output": "Serve with arroz blanco, and bolillo for the sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with arroz blanco, and bolillo for the sauce.",
+  "factor": 1.5,
+  "output": "Serve with arroz blanco, and bolillo for the sauce."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve with arroz blanco, and bolillo for the sauce.",
+  "factor": 0.5,
+  "output": "Serve with arroz blanco, and bolillo for the sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.",
+  "factor": 0.5,
+  "output": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.",
+  "factor": 2,
+  "output": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.",
+  "factor": 1.5,
+  "output": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.",
+  "factor": 0.5,
+  "output": "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.",
+  "factor": 0.5,
+  "output": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package."
+ },
+ {
+  "kind": "step",
+  "input": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.",
+  "factor": 2,
+  "output": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package."
+ },
+ {
+  "kind": "step",
+  "input": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.",
+  "factor": 1.5,
+  "output": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.",
+  "factor": 0.5,
+  "output": "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package."
+ },
+ {
+  "kind": "step",
+  "input": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.",
+  "factor": 0.5,
+  "output": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step",
+  "input": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.",
+  "factor": 2,
+  "output": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step",
+  "input": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.",
+  "factor": 1.5,
+  "output": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.",
+  "factor": 0.5,
+  "output": "Grill over medium coals or bake at 200°C for 20–25 minutes, until the fish flakes."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with tortillas, cebolla morada encurtida and habanero salsa.",
+  "factor": 0.5,
+  "output": "Serve with tortillas, cebolla morada encurtida and habanero salsa."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with tortillas, cebolla morada encurtida and habanero salsa.",
+  "factor": 2,
+  "output": "Serve with tortillas, cebolla morada encurtida and habanero salsa."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with tortillas, cebolla morada encurtida and habanero salsa.",
+  "factor": 1.5,
+  "output": "Serve with tortillas, cebolla morada encurtida and habanero salsa."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve with tortillas, cebolla morada encurtida and habanero salsa.",
+  "factor": 0.5,
+  "output": "Serve with tortillas, cebolla morada encurtida and habanero salsa."
+ },
+ {
+  "kind": "step",
+  "input": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.",
+  "factor": 0.5,
+  "output": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste."
+ },
+ {
+  "kind": "step",
+  "input": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.",
+  "factor": 2,
+  "output": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste."
+ },
+ {
+  "kind": "step",
+  "input": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.",
+  "factor": 1.5,
+  "output": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.",
+  "factor": 0.5,
+  "output": "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste."
+ },
+ {
+  "kind": "step",
+  "input": "Brush it over the flesh side of the fish.",
+  "factor": 0.5,
+  "output": "Brush it over the flesh side of the fish."
+ },
+ {
+  "kind": "step",
+  "input": "Brush it over the flesh side of the fish.",
+  "factor": 2,
+  "output": "Brush it over the flesh side of the fish."
+ },
+ {
+  "kind": "step",
+  "input": "Brush it over the flesh side of the fish.",
+  "factor": 1.5,
+  "output": "Brush it over the flesh side of the fish."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Brush it over the flesh side of the fish.",
+  "factor": 0.5,
+  "output": "Brush it over the flesh side of the fish."
+ },
+ {
+  "kind": "step",
+  "input": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.",
+  "factor": 0.5,
+  "output": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.",
+  "factor": 2,
+  "output": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.",
+  "factor": 1.5,
+  "output": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.",
+  "factor": 0.5,
+  "output": "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 15 cm from the heat about 20 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Serve on the grill with tortillas, salsa, cucumber and red onion.",
+  "factor": 0.5,
+  "output": "Serve on the grill with tortillas, salsa, cucumber and red onion."
+ },
+ {
+  "kind": "step",
+  "input": "Serve on the grill with tortillas, salsa, cucumber and red onion.",
+  "factor": 2,
+  "output": "Serve on the grill with tortillas, salsa, cucumber and red onion."
+ },
+ {
+  "kind": "step",
+  "input": "Serve on the grill with tortillas, salsa, cucumber and red onion.",
+  "factor": 1.5,
+  "output": "Serve on the grill with tortillas, salsa, cucumber and red onion."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve on the grill with tortillas, salsa, cucumber and red onion.",
+  "factor": 0.5,
+  "output": "Serve on the grill with tortillas, salsa, cucumber and red onion."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+  "factor": 0.5,
+  "output": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and 4 cups water. Simmer 20 minutes and strain. This is the broth."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+  "factor": 2,
+  "output": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and 16 cups water. Simmer 20 minutes and strain. This is the broth."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+  "factor": 1.5,
+  "output": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and 12 cups water. Simmer 20 minutes and strain. This is the broth."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+  "factor": 0.5,
+  "output": "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and 960 ml water. Simmer 20 minutes and strain. This is the broth."
+ },
+ {
+  "kind": "step",
+  "input": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+  "factor": 0.5,
+  "output": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and ½ cup of the broth, and strain."
+ },
+ {
+  "kind": "step",
+  "input": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+  "factor": 2,
+  "output": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and 2 cups of the broth, and strain."
+ },
+ {
+  "kind": "step",
+  "input": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+  "factor": 1.5,
+  "output": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and 1½ cups of the broth, and strain."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+  "factor": 0.5,
+  "output": "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and 120 ml of the broth, and strain."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+  "factor": 0.5,
+  "output": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+  "factor": 2,
+  "output": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+  "factor": 1.5,
+  "output": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+  "factor": 0.5,
+  "output": "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens."
+ },
+ {
+  "kind": "step",
+  "input": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+  "factor": 0.5,
+  "output": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8."
+ },
+ {
+  "kind": "step",
+  "input": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+  "factor": 2,
+  "output": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8."
+ },
+ {
+  "kind": "step",
+  "input": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+  "factor": 1.5,
+  "output": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+  "factor": 0.5,
+  "output": "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8."
+ },
+ {
+  "kind": "step",
+  "input": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+  "factor": 0.5,
+  "output": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt."
+ },
+ {
+  "kind": "step",
+  "input": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+  "factor": 2,
+  "output": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt."
+ },
+ {
+  "kind": "step",
+  "input": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+  "factor": 1.5,
+  "output": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+  "factor": 0.5,
+  "output": "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with onion, cilantro, lime and tostadas.",
+  "factor": 0.5,
+  "output": "Serve with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with onion, cilantro, lime and tostadas.",
+  "factor": 2,
+  "output": "Serve with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step",
+  "input": "Serve with onion, cilantro, lime and tostadas.",
+  "factor": 1.5,
+  "output": "Serve with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve with onion, cilantro, lime and tostadas.",
+  "factor": 0.5,
+  "output": "Serve with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.",
+  "factor": 0.5,
+  "output": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and 4 cups water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.",
+  "factor": 2,
+  "output": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and 16 cups water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth."
+ },
+ {
+  "kind": "step",
+  "input": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.",
+  "factor": 1.5,
+  "output": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and 12 cups water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.",
+  "factor": 0.5,
+  "output": "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and 960 ml water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth."
+ },
+ {
+  "kind": "step",
+  "input": "Make and fry the chile purée on Sauté as in steps 2–3.",
+  "factor": 0.5,
+  "output": "Make and fry the chile purée on Sauté as in steps 2–3."
+ },
+ {
+  "kind": "step",
+  "input": "Make and fry the chile purée on Sauté as in steps 2–3.",
+  "factor": 2,
+  "output": "Make and fry the chile purée on Sauté as in steps 2–3."
+ },
+ {
+  "kind": "step",
+  "input": "Make and fry the chile purée on Sauté as in steps 2–3.",
+  "factor": 1.5,
+  "output": "Make and fry the chile purée on Sauté as in steps 2–3."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Make and fry the chile purée on Sauté as in steps 2–3.",
+  "factor": 0.5,
+  "output": "Make and fry the chile purée on Sauté as in steps 2–3."
+ },
+ {
+  "kind": "step",
+  "input": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.",
+  "factor": 0.5,
+  "output": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release."
+ },
+ {
+  "kind": "step",
+  "input": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.",
+  "factor": 2,
+  "output": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release."
+ },
+ {
+  "kind": "step",
+  "input": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.",
+  "factor": 1.5,
+  "output": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.",
+  "factor": 0.5,
+  "output": "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release."
+ },
+ {
+  "kind": "step",
+  "input": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season.",
+  "factor": 0.5,
+  "output": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."
+ },
+ {
+  "kind": "step",
+  "input": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season.",
+  "factor": 2,
+  "output": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."
+ },
+ {
+  "kind": "step",
+  "input": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season.",
+  "factor": 1.5,
+  "output": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."
+ },
+ {
+  "kind": "step-metric",
+  "input": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season.",
+  "factor": 0.5,
+  "output": "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."
+ },
+ {
+  "kind": "step",
+  "input": "Make the broth, caldillo and vegetables as in the base, steps 1–4.",
+  "factor": 0.5,
+  "output": "Make the broth, caldillo and vegetables as in the base, steps 1–4."
+ },
+ {
+  "kind": "step",
+  "input": "Make the broth, caldillo and vegetables as in the base, steps 1–4.",
+  "factor": 2,
+  "output": "Make the broth, caldillo and vegetables as in the base, steps 1–4."
+ },
+ {
+  "kind": "step",
+  "input": "Make the broth, caldillo and vegetables as in the base, steps 1–4.",
+  "factor": 1.5,
+  "output": "Make the broth, caldillo and vegetables as in the base, steps 1–4."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Make the broth, caldillo and vegetables as in the base, steps 1–4.",
+  "factor": 0.5,
+  "output": "Make the broth, caldillo and vegetables as in the base, steps 1–4."
+ },
+ {
+  "kind": "step",
+  "input": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.",
+  "factor": 0.5,
+  "output": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't."
+ },
+ {
+  "kind": "step",
+  "input": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.",
+  "factor": 2,
+  "output": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't."
+ },
+ {
+  "kind": "step",
+  "input": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.",
+  "factor": 1.5,
+  "output": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.",
+  "factor": 0.5,
+  "output": "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't."
+ },
+ {
+  "kind": "step",
+  "input": "Add the fish and octopus for 3 minutes, then the shrimp for 2.",
+  "factor": 0.5,
+  "output": "Add the fish and octopus for 3 minutes, then the shrimp for 2."
+ },
+ {
+  "kind": "step",
+  "input": "Add the fish and octopus for 3 minutes, then the shrimp for 2.",
+  "factor": 2,
+  "output": "Add the fish and octopus for 3 minutes, then the shrimp for 2."
+ },
+ {
+  "kind": "step",
+  "input": "Add the fish and octopus for 3 minutes, then the shrimp for 2.",
+  "factor": 1.5,
+  "output": "Add the fish and octopus for 3 minutes, then the shrimp for 2."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the fish and octopus for 3 minutes, then the shrimp for 2.",
+  "factor": 0.5,
+  "output": "Add the fish and octopus for 3 minutes, then the shrimp for 2."
+ },
+ {
+  "kind": "step",
+  "input": "Serve in big bowls with onion, cilantro, lime and tostadas.",
+  "factor": 0.5,
+  "output": "Serve in big bowls with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step",
+  "input": "Serve in big bowls with onion, cilantro, lime and tostadas.",
+  "factor": 2,
+  "output": "Serve in big bowls with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step",
+  "input": "Serve in big bowls with onion, cilantro, lime and tostadas.",
+  "factor": 1.5,
+  "output": "Serve in big bowls with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve in big bowls with onion, cilantro, lime and tostadas.",
+  "factor": 0.5,
+  "output": "Serve in big bowls with onion, cilantro, lime and tostadas."
+ },
+ {
+  "kind": "step",
+  "input": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+  "factor": 0.5,
+  "output": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+  "factor": 2,
+  "output": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+  "factor": 1.5,
+  "output": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+  "factor": 0.5,
+  "output": "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+  "factor": 0.5,
+  "output": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and ¼ cup water until smooth. Strain."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+  "factor": 2,
+  "output": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and 1 cup water until smooth. Strain."
+ },
+ {
+  "kind": "step",
+  "input": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+  "factor": 1.5,
+  "output": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and ¾ cup water until smooth. Strain."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+  "factor": 0.5,
+  "output": "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and 60 ml water until smooth. Strain."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+  "factor": 0.5,
+  "output": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+  "factor": 2,
+  "output": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt."
+ },
+ {
+  "kind": "step",
+  "input": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+  "factor": 1.5,
+  "output": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+  "factor": 0.5,
+  "output": "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt."
+ },
+ {
+  "kind": "step",
+  "input": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+  "factor": 0.5,
+  "output": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled."
+ },
+ {
+  "kind": "step",
+  "input": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+  "factor": 2,
+  "output": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled."
+ },
+ {
+  "kind": "step",
+  "input": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+  "factor": 1.5,
+  "output": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+  "factor": 0.5,
+  "output": "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled."
+ },
+ {
+  "kind": "step",
+  "input": "Serve right away with rice, lime and bolillo.",
+  "factor": 0.5,
+  "output": "Serve right away with rice, lime and bolillo."
+ },
+ {
+  "kind": "step",
+  "input": "Serve right away with rice, lime and bolillo.",
+  "factor": 2,
+  "output": "Serve right away with rice, lime and bolillo."
+ },
+ {
+  "kind": "step",
+  "input": "Serve right away with rice, lime and bolillo.",
+  "factor": 1.5,
+  "output": "Serve right away with rice, lime and bolillo."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve right away with rice, lime and bolillo.",
+  "factor": 0.5,
+  "output": "Serve right away with rice, lime and bolillo."
+ },
+ {
+  "kind": "step",
+  "input": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.",
+  "factor": 0.5,
+  "output": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn."
+ },
+ {
+  "kind": "step",
+  "input": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.",
+  "factor": 2,
+  "output": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn."
+ },
+ {
+  "kind": "step",
+  "input": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.",
+  "factor": 1.5,
+  "output": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.",
+  "factor": 0.5,
+  "output": "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn."
+ },
+ {
+  "kind": "step",
+  "input": "Raise the heat, add the shrimp and cook 2–3 minutes per side.",
+  "factor": 0.5,
+  "output": "Raise the heat, add the shrimp and cook 2–3 minutes per side."
+ },
+ {
+  "kind": "step",
+  "input": "Raise the heat, add the shrimp and cook 2–3 minutes per side.",
+  "factor": 2,
+  "output": "Raise the heat, add the shrimp and cook 2–3 minutes per side."
+ },
+ {
+  "kind": "step",
+  "input": "Raise the heat, add the shrimp and cook 2–3 minutes per side.",
+  "factor": 1.5,
+  "output": "Raise the heat, add the shrimp and cook 2–3 minutes per side."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Raise the heat, add the shrimp and cook 2–3 minutes per side.",
+  "factor": 0.5,
+  "output": "Raise the heat, add the shrimp and cook 2–3 minutes per side."
+ },
+ {
+  "kind": "step",
+  "input": "Add the lime juice, salt and parsley, toss and serve with rice.",
+  "factor": 0.5,
+  "output": "Add the lime juice, salt and parsley, toss and serve with rice."
+ },
+ {
+  "kind": "step",
+  "input": "Add the lime juice, salt and parsley, toss and serve with rice.",
+  "factor": 2,
+  "output": "Add the lime juice, salt and parsley, toss and serve with rice."
+ },
+ {
+  "kind": "step",
+  "input": "Add the lime juice, salt and parsley, toss and serve with rice.",
+  "factor": 1.5,
+  "output": "Add the lime juice, salt and parsley, toss and serve with rice."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Add the lime juice, salt and parsley, toss and serve with rice.",
+  "factor": 0.5,
+  "output": "Add the lime juice, salt and parsley, toss and serve with rice."
+ },
+ {
+  "kind": "step",
+  "input": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+  "factor": 0.5,
+  "output": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through."
+ },
+ {
+  "kind": "step",
+  "input": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+  "factor": 2,
+  "output": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through."
+ },
+ {
+  "kind": "step",
+  "input": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+  "factor": 1.5,
+  "output": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+  "factor": 0.5,
+  "output": "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through."
+ },
+ {
+  "kind": "step",
+  "input": "Drain off most of the lime juice.",
+  "factor": 0.5,
+  "output": "Drain off most of the lime juice."
+ },
+ {
+  "kind": "step",
+  "input": "Drain off most of the lime juice.",
+  "factor": 2,
+  "output": "Drain off most of the lime juice."
+ },
+ {
+  "kind": "step",
+  "input": "Drain off most of the lime juice.",
+  "factor": 1.5,
+  "output": "Drain off most of the lime juice."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Drain off most of the lime juice.",
+  "factor": 0.5,
+  "output": "Drain off most of the lime juice."
+ },
+ {
+  "kind": "step",
+  "input": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+  "factor": 0.5,
+  "output": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt."
+ },
+ {
+  "kind": "step",
+  "input": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+  "factor": 2,
+  "output": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt."
+ },
+ {
+  "kind": "step",
+  "input": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+  "factor": 1.5,
+  "output": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+  "factor": 0.5,
+  "output": "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt."
+ },
+ {
+  "kind": "step",
+  "input": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce.",
+  "factor": 0.5,
+  "output": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce.",
+  "factor": 2,
+  "output": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce.",
+  "factor": 1.5,
+  "output": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce.",
+  "factor": 0.5,
+  "output": "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."
+ },
+ {
+  "kind": "step",
+  "input": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.",
+  "factor": 0.5,
+  "output": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first."
+ },
+ {
+  "kind": "step",
+  "input": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.",
+  "factor": 2,
+  "output": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first."
+ },
+ {
+  "kind": "step",
+  "input": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.",
+  "factor": 1.5,
+  "output": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.",
+  "factor": 0.5,
+  "output": "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first."
+ },
+ {
+  "kind": "step",
+  "input": "Drain and fold in the vegetables and carrot.",
+  "factor": 0.5,
+  "output": "Drain and fold in the vegetables and carrot."
+ },
+ {
+  "kind": "step",
+  "input": "Drain and fold in the vegetables and carrot.",
+  "factor": 2,
+  "output": "Drain and fold in the vegetables and carrot."
+ },
+ {
+  "kind": "step",
+  "input": "Drain and fold in the vegetables and carrot.",
+  "factor": 1.5,
+  "output": "Drain and fold in the vegetables and carrot."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Drain and fold in the vegetables and carrot.",
+  "factor": 0.5,
+  "output": "Drain and fold in the vegetables and carrot."
+ },
+ {
+  "kind": "step",
+  "input": "Serve on tostadas with avocado.",
+  "factor": 0.5,
+  "output": "Serve on tostadas with avocado."
+ },
+ {
+  "kind": "step",
+  "input": "Serve on tostadas with avocado.",
+  "factor": 2,
+  "output": "Serve on tostadas with avocado."
+ },
+ {
+  "kind": "step",
+  "input": "Serve on tostadas with avocado.",
+  "factor": 1.5,
+  "output": "Serve on tostadas with avocado."
+ },
+ {
+  "kind": "step-metric",
+  "input": "Serve on tostadas with avocado.",
+  "factor": 0.5,
+  "output": "Serve on tostadas with avocado."
  },
  {
   "kind": "step",
@@ -37435,6 +43255,570 @@
  },
  {
   "kind": "ids",
+  "input": "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup fresh lime juice (about 10 limes)",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+  "factor": 1,
+  "output": "serrano,piquin"
+ },
+ {
+  "kind": "ids",
+  "input": "1 garlic clove, optional",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup cold water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cucumber, peeled and thinly sliced",
+  "factor": 1,
+  "output": "pepino"
+ },
+ {
+  "kind": "ids",
+  "input": "½ red onion, very thinly sliced",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 avocado, sliced",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Tostadas or saladitas (saltine crackers)",
+  "factor": 1,
+  "output": "tostadas"
+ },
+ {
+  "kind": "ids",
+  "input": "Salsa negra or Huichol, optional",
+  "factor": 1,
+  "output": "salsa-picante"
+ },
+ {
+  "kind": "ids",
+  "input": "The shrimp, cucumber and red onion from the base",
+  "factor": 1,
+  "output": "camaron,pepino,cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup fresh lime juice",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp chiltepín",
+  "factor": 1,
+  "output": "piquin"
+ },
+ {
+  "kind": "ids",
+  "input": "4 chiles de árbol",
+  "factor": 1,
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb medium shrimp, shell on",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "4 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup catsup",
+  "factor": 1,
+  "output": "catsup"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cup of the shrimp cooking water, chilled",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup fresh lime juice",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tbsp Valentina or Huichol hot sauce, plus more al gusto",
+  "factor": 1,
+  "output": "salsa-picante"
+ },
+ {
+  "kind": "ids",
+  "input": "2 Roma tomatoes, diced",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 serranos, minced",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cucumber, diced, optional",
+  "factor": 1,
+  "output": "pepino"
+ },
+ {
+  "kind": "ids",
+  "input": "1 avocado, diced",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Saladitas (saltine crackers) or tostadas",
+  "factor": 1,
+  "output": "tostadas"
+ },
+ {
+  "kind": "ids",
+  "input": "½ lb cooked shrimp",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "½ lb cooked octopus, sliced",
+  "factor": 1,
+  "output": "pulpo"
+ },
+ {
+  "kind": "ids",
+  "input": "12 fresh oysters, shucked, with their liquor",
+  "factor": 1,
+  "output": "ostiones"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup crab meat",
+  "factor": 1,
+  "output": "jaiba"
+ },
+ {
+  "kind": "ids",
+  "input": "The sauce and chopped vegetables from the base",
+  "factor": 1,
+  "output": ""
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+  "factor": 1,
+  "output": "pescado"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lime, juiced",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "Salt and pepper",
+  "factor": 1,
+  "output": "sal,pimienta"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ cup olive oil",
+  "factor": 1,
+  "output": "aceite"
+ },
+ {
+  "kind": "ids",
+  "input": "1 white onion, thinly sliced",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "4 garlic cloves, sliced",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb ripe tomatoes, chopped (or 8 Roma)",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "¼ tsp dried thyme",
+  "factor": 1,
+  "output": "tomillo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup green olives (manzanilla), pitted",
+  "factor": 1,
+  "output": "aceitunas"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp capers, rinsed",
+  "factor": 1,
+  "output": "alcaparras"
+ },
+ {
+  "kind": "ids",
+  "input": "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine",
+  "factor": 1,
+  "output": "chile-guero,jalapeno"
+ },
+ {
+  "kind": "ids",
+  "input": "Arroz blanco",
+  "factor": 1,
+  "output": "arroz"
+ },
+ {
+  "kind": "ids",
+  "input": "Bolillos",
+  "factor": 1,
+  "output": "pan"
+ },
+ {
+  "kind": "ids",
+  "input": "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+  "factor": 1,
+  "output": "pescado"
+ },
+ {
+  "kind": "ids",
+  "input": "2 oz achiote paste",
+  "factor": 1,
+  "output": "achiote"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+  "factor": 1,
+  "output": "naranja,limon"
+ },
+ {
+  "kind": "ids",
+  "input": "Banana leaves",
+  "factor": 1,
+  "output": "hoja-platano"
+ },
+ {
+  "kind": "ids",
+  "input": "1 tomato, sliced",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "1 red onion, sliced",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 chile x'catic or güero, sliced",
+  "factor": 1,
+  "output": "chile-guero"
+ },
+ {
+  "kind": "ids",
+  "input": "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+  "factor": 1,
+  "output": "pescado"
+ },
+ {
+  "kind": "ids",
+  "input": "4 chiles guajillo",
+  "factor": 1,
+  "output": "guajillo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp mayonnaise",
+  "factor": 1,
+  "output": "mayonesa"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp soy sauce",
+  "factor": 1,
+  "output": "soya"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp lime juice",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb medium shrimp, shell on (heads on if you can get them)",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+  "factor": 1,
+  "output": "camaron-seco"
+ },
+ {
+  "kind": "ids",
+  "input": "8 cups water",
+  "factor": 1,
+  "output": "agua"
+ },
+ {
+  "kind": "ids",
+  "input": "1–2 chiles de árbol, optional",
+  "factor": 1,
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "2 potatoes, diced",
+  "factor": 1,
+  "output": "papa"
+ },
+ {
+  "kind": "ids",
+  "input": "2 carrots, sliced",
+  "factor": 1,
+  "output": "zanahoria"
+ },
+ {
+  "kind": "ids",
+  "input": "1 chayote or zucchini, diced, optional",
+  "factor": 1,
+  "output": "chayote,calabacita"
+ },
+ {
+  "kind": "ids",
+  "input": "Tostadas or bolillo",
+  "factor": 1,
+  "output": "tostadas,pan"
+ },
+ {
+  "kind": "ids",
+  "input": "The broth, caldillo and vegetables from the base",
+  "factor": 1,
+  "output": "caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "½ lb firm white fish, in chunks",
+  "factor": 1,
+  "output": "pescado"
+ },
+ {
+  "kind": "ids",
+  "input": "½ lb shrimp",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "2 crab legs (or ½ lb crab)",
+  "factor": 1,
+  "output": "jaiba"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb clams or mussels, scrubbed",
+  "factor": 1,
+  "output": "almejas"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ lb large shrimp, peeled and deveined, tails on",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "4–8 chiles de árbol",
+  "factor": 1,
+  "output": "arbol"
+ },
+ {
+  "kind": "ids",
+  "input": "2 chipotles en adobo",
+  "factor": 1,
+  "output": "chipotle"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup water or shrimp broth",
+  "factor": 1,
+  "output": "agua,caldo"
+ },
+ {
+  "kind": "ids",
+  "input": "2 tbsp butter",
+  "factor": 1,
+  "output": "mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "Arroz blanco or arroz rojo",
+  "factor": 1,
+  "output": "arroz"
+ },
+ {
+  "kind": "ids",
+  "input": "Bolillo or tortillas",
+  "factor": 1,
+  "output": "pan,tortillas"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ lb large shrimp, peeled",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "8 garlic cloves, minced",
+  "factor": 1,
+  "output": "ajo"
+ },
+ {
+  "kind": "ids",
+  "input": "3 tbsp butter",
+  "factor": 1,
+  "output": "mantequilla"
+ },
+ {
+  "kind": "ids",
+  "input": "1 chile guajillo, cut in thin rings, optional",
+  "factor": 1,
+  "output": "guajillo"
+ },
+ {
+  "kind": "ids",
+  "input": "Chopped parsley or cilantro",
+  "factor": 1,
+  "output": "perejil,cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+  "factor": 1,
+  "output": "pescado"
+ },
+ {
+  "kind": "ids",
+  "input": "1½ cups fresh lime juice",
+  "factor": 1,
+  "output": "limon"
+ },
+ {
+  "kind": "ids",
+  "input": "3 Roma tomatoes, finely diced",
+  "factor": 1,
+  "output": "jitomate"
+ },
+ {
+  "kind": "ids",
+  "input": "½ white onion, finely chopped",
+  "factor": 1,
+  "output": "cebolla"
+ },
+ {
+  "kind": "ids",
+  "input": "2–3 serranos, minced",
+  "factor": 1,
+  "output": "serrano"
+ },
+ {
+  "kind": "ids",
+  "input": "½ cup chopped cilantro",
+  "factor": 1,
+  "output": "cilantro"
+ },
+ {
+  "kind": "ids",
+  "input": "1 cucumber, finely diced, optional",
+  "factor": 1,
+  "output": "pepino"
+ },
+ {
+  "kind": "ids",
+  "input": "12 tostadas",
+  "factor": 1,
+  "output": "tostadas"
+ },
+ {
+  "kind": "ids",
+  "input": "2 avocados, sliced",
+  "factor": 1,
+  "output": "aguacate"
+ },
+ {
+  "kind": "ids",
+  "input": "Mayonnaise, optional, the Sinaloa way",
+  "factor": 1,
+  "output": "mayonesa"
+ },
+ {
+  "kind": "ids",
+  "input": "Valentina or Huichol hot sauce",
+  "factor": 1,
+  "output": "salsa-picante"
+ },
+ {
+  "kind": "ids",
+  "input": "1 lb shrimp, peeled, deveined and chopped",
+  "factor": 1,
+  "output": "camaron"
+ },
+ {
+  "kind": "ids",
+  "input": "The tomato, onion, serrano, cilantro and cucumber from the base",
+  "factor": 1,
+  "output": "jitomate,cebolla,serrano,cilantro,pepino"
+ },
+ {
+  "kind": "ids",
+  "input": "1 carrot, finely grated",
+  "factor": 1,
+  "output": "zanahoria"
+ },
+ {
+  "kind": "ids",
   "input": "1 turkey (guajolote), in pieces, or 2 chickens",
   "factor": 1,
   "output": "guajolote,pollo"
@@ -38017,12 +44401,6 @@
  },
  {
   "kind": "ids",
-  "input": "4 cups water",
-  "factor": 1,
-  "output": "agua"
- },
- {
-  "kind": "ids",
   "input": "3 oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)",
   "factor": 1,
   "output": "piloncillo"
@@ -38152,12 +44530,6 @@
   "input": "1 cup dried jamaica (hibiscus) flowers",
   "factor": 1,
   "output": "jamaica"
- },
- {
-  "kind": "ids",
-  "input": "8 cups water",
-  "factor": 1,
-  "output": "agua"
  },
  {
   "kind": "ids",
@@ -38505,13 +44877,13 @@
   "kind": "rank",
   "input": "pollo,chipotle",
   "factor": 1,
-  "output": "tinga-de-pollo:0.667,caldo-de-pollo:0.333,mole-poblano:0.167"
+  "output": "tinga-de-pollo:0.667,caldo-de-pollo:0.333,mole-poblano:0.167,camarones-a-la-diabla:0.125"
  },
  {
   "kind": "rank-nobasics",
   "input": "pollo,chipotle",
   "factor": 1,
-  "output": "tinga-de-pollo:0.615,caldo-de-pollo:0.316,mole-poblano:0.156"
+  "output": "tinga-de-pollo:0.615,caldo-de-pollo:0.316,mole-poblano:0.156,camarones-a-la-diabla:0.111"
  },
  {
   "kind": "parse",
@@ -38697,19 +45069,19 @@
   "kind": "parse",
   "input": "camarones y arroz",
   "factor": 1,
-  "output": "arroz|camarones"
+  "output": "camaron,arroz|"
  },
  {
   "kind": "rank",
-  "input": "arroz",
+  "input": "camaron,arroz",
   "factor": 1,
-  "output": "arroz-con-leche:0.500,arroz-rojo:0.250,barbacoa:0.125,albondigas:0.077"
+  "output": "aguachile:0.600,arroz-con-leche:0.500,coctel-de-camaron:0.400,camarones-a-la-diabla:0.375,caldo-de-camaron:0.333"
  },
  {
   "kind": "rank-nobasics",
-  "input": "arroz",
+  "input": "camaron,arroz",
   "factor": 1,
-  "output": "arroz-con-leche:0.364,arroz-rojo:0.211,barbacoa:0.114,albondigas:0.071"
+  "output": "aguachile:0.545,coctel-de-camaron:0.375,arroz-con-leche:0.364,camarones-a-la-diabla:0.333,caldo-de-camaron:0.308"
  },
  {
   "kind": "parse",

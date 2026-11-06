@@ -371,7 +371,7 @@ const PICADO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 68"><pat
 document.documentElement.style.setProperty('--picado', 'url("data:image/svg+xml,' + encodeURIComponent(PICADO) + '")');
 
 const CATS = [
-  ["desayunos","Desayunos"],["caldos","Caldos y Pozoles"],["guisos","Guisos y Carnes"],["moles","Moles"],["masa","Masa y Tortilla"],
+  ["desayunos","Desayunos"],["caldos","Caldos y Pozoles"],["guisos","Guisos y Carnes"],["mariscos","Mariscos"],["moles","Moles"],["masa","Masa y Tortilla"],
   ["frijoles","Frijoles y Arroz"],["salsas","Salsas"],["bebidas","Bebidas"],["pan","Panadería"],["postres","Postres"]
 ];
 
@@ -657,6 +657,122 @@ const R = [
   note:"Stuffed with picadillo instead of cheese.",
   ing:["6 roasted, peeled poblanos","3 cups picadillo (see Picadillo)","Batter and caldillo from the base"],
   steps:["Fill the chiles with picadillo instead of cheese.","Batter, fry and serve in caldillo as in the base."]}]},
+
+/* ---------------- MARISCOS ---------------- */
+{id:"aguachile", name:"Aguachile Verde", en:"Raw shrimp cured in lime and chile", cat:"mariscos", region:"Sinaloa", time:"30 min", yield:"4 personas",
+ story:"From the coast of Sinaloa: raw shrimp, butterflied and bathed in a blend of lime juice, serrano or chiltepín and cilantro, with cucumber and red onion. It's eaten right away and cold, with tostadas and a cold beer, while the shrimp are still translucent in the middle. The name means chile water.",
+ ing:[["El camarón",["1 lb very fresh raw shrimp (about 20 medium), peeled and deveined","Salt, al gusto"]],
+      ["El agua",["1 cup fresh lime juice (about 10 limes)","3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)","½ bunch cilantro","1 garlic clove, optional","½ tsp salt","¼ cup cold water"]],
+      ["Encima",["1 cucumber, peeled and thinly sliced","½ red onion, very thinly sliced"]],
+      ["Para servir",["1 avocado, sliced","Tostadas or saladitas (saltine crackers)","Salsa negra or Huichol, optional"]]],
+ steps:["Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the agua.",
+  "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+  "Pour the agua over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+  "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+  "Serve right away with avocado, tostadas and a little salsa negra."],
+ pc:null, pcNote:"No pressure-cooker version. Aguachile isn't cooked at all: the lime does the work.",
+ tips:["Use the freshest shrimp you can find, or shrimp frozen at sea and thawed in the fridge. Raw seafood isn't for pregnant women, small children or anyone with a weak immune system.","Make it right before you eat. Aguachile waits for no one."],
+ vars:[{name:"Aguachile Rojo", en:"Red aguachile with chiltepín and chile de árbol", region:"Sinaloa · Sonora",
+   note:"The hotter red version, with dried chiles in the agua.",
+   ing:["The shrimp, cucumber and red onion from the base","1 cup fresh lime juice","1 tbsp chiltepín","4 chiles de árbol","1 garlic clove","½ tsp salt","¼ cup cold water"],
+   steps:["Toast the chiles de árbol a few seconds in a dry pan.","Blend them with the chiltepín, lime juice, garlic, salt and water.","Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."]}]},
+
+{id:"coctel-de-camaron", name:"Coctel de Camarón", en:"Mexican shrimp cocktail", cat:"mariscos", region:"Sinaloa · Veracruz · la costa", time:"30 min", yield:"4 personas",
+ story:"The coctel of every marisquería and beach stand: cooked shrimp in a cold, tangy sauce of catsup, lime and the shrimp's own cooking water, with onion, cilantro, chile and avocado. It comes in a tall glass with saltines and hot sauce, and it's the cure for a hot afternoon.",
+ ing:[["El camarón",["1 lb medium shrimp, shell on","4 cups water","1 tsp salt","¼ white onion","1 bay leaf"]],
+      ["La salsa",["½ cup catsup","1 cup of the shrimp cooking water, chilled","¼ cup fresh lime juice","1 tbsp Valentina or Huichol hot sauce, plus more al gusto","Salt, al gusto"]],
+      ["Con el camarón",["¼ white onion, finely chopped","2 Roma tomatoes, diced","1–2 serranos, minced","¼ cup chopped cilantro","1 cucumber, diced, optional"]],
+      ["Para servir",["1 avocado, diced","Limes","Saladitas (saltine crackers) or tostadas"]]],
+ steps:["Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+  "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+  "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+  "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+  "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+  "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."],
+ pc:null, pcNote:"No pressure-cooker version. Shrimp cook in two minutes and turn rubbery under pressure.",
+ tips:["The shrimp cooking water is the secret: it makes the sauce taste of the sea instead of catsup.","Some marisquerías add a splash of Clamato or orange juice. Every puesto has its own."],
+ vars:[{name:"Vuelve a la Vida", en:"Back-to-life seafood cocktail", region:"Veracruz",
+   note:"Veracruz's campechana of shrimp, octopus, oysters and crab, famous as the cure for la cruda.",
+   ing:["½ lb cooked shrimp","½ lb cooked octopus, sliced","12 fresh oysters, shucked, with their liquor","½ cup crab meat","The sauce and chopped vegetables from the base"],
+   steps:["Make the sauce and chopped vegetables as in the base, steps 4–5.","Fold in the shrimp, octopus, crab and the oysters with their liquor.","Chill 15 minutes and serve in tall glasses with avocado and saladitas."]}]},
+
+{id:"pescado-veracruzana", name:"Pescado a la Veracruzana", en:"Fish in tomato, olive and caper sauce", cat:"mariscos", region:"Veracruz", time:"45 min", yield:"4 personas",
+ story:"Veracruz's best-known dish: huachinango (red snapper), whole or in fillets, simmered in tomato with olives, capers, bay and pickled chiles güeros. The olives and capers came with the Spanish through the port of Veracruz; the chiles are Mexican. It's the classic Friday fish of Cuaresma.",
+ ing:[["El pescado",["2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned","1 lime, juiced","Salt and pepper"]],
+      ["La salsa",["¼ cup olive oil","1 white onion, thinly sliced","4 garlic cloves, sliced","2 lb ripe tomatoes, chopped (or 8 Roma)","3 bay leaves","½ tsp Mexican oregano","¼ tsp dried thyme","½ cup green olives (manzanilla), pitted","2 tbsp capers, rinsed","4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"]],
+      ["Para servir",["Arroz blanco","Bolillos"]]],
+ steps:["Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+  "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+  "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+  "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+  "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+  "Serve with arroz blanco, and bolillo for the sauce."],
+ pc:null, pcNote:"No pressure-cooker version. Fish cooks in minutes, and the sauce is quick on the stove.",
+ tips:["Use ripe, soft tomatoes. In winter, good canned whole tomatoes beat pale fresh ones.","Once the fish is in, don't stir or it falls apart. Shake the pan instead."],
+ vars:[
+  {name:"Tikin Xic", en:"Achiote fish in banana leaf", region:"Yucatán",
+   note:"The Maya fish dish: fish rubbed with recado rojo and naranja agria, wrapped in banana leaf with tomato, onion and chile, then grilled or baked.",
+   ing:["2 lb firm white fish fillets, or 1 whole fish, butterflied","2 oz achiote paste","½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)","2 garlic cloves","1 tsp salt","Banana leaves","1 tomato, sliced","1 red onion, sliced","1 chile x'catic or güero, sliced"],
+   steps:["Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.","Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.","Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.","Serve with tortillas, cebolla morada encurtida and habanero salsa."]},
+  {name:"Pescado Zarandeado", en:"Nayarit grilled butterflied fish", region:"Nayarit · Sinaloa",
+   note:"From Mexcaltitán and San Blas: a whole fish split open, brushed with a chile adobo sharpened with soy sauce and lime, and grilled in a hinged basket over mangrove wood.",
+   ing:["1 whole snapper or robalo (about 3 lb), butterflied, bones in","4 chiles guajillo","2 chiles ancho","3 garlic cloves","2 tbsp mayonnaise","2 tbsp soy sauce","2 tbsp lime juice","1 tsp salt"],
+   steps:["Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.","Brush it over the flesh side of the fish.","Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.","Serve on the grill with tortillas, salsa, cucumber and red onion."]}
+ ]},
+
+{id:"caldo-de-camaron", name:"Caldo de Camarón", en:"Spicy shrimp soup", cat:"mariscos", region:"Sinaloa · Sonora · Jalisco", time:"50 min", yield:"6 personas",
+ story:"A brick-red shrimp soup from the Pacific coast, built on dried shrimp and the heads and shells of fresh ones, with guajillo, potatoes and carrots. Marisquerías bring it in a small cup before the meal, and it's what you want after a long night.",
+ ing:[["El camarón",["1 lb medium shrimp, shell on (heads on if you can get them)","2 oz dried shrimp (camarón seco), heads and legs pulled off","8 cups water"]],
+      ["El caldillo",["4 chiles guajillo","1–2 chiles de árbol, optional","3 Roma tomatoes","¼ white onion","3 garlic cloves","2 tbsp oil","1 tsp Mexican oregano","Salt, al gusto"]],
+      ["Las verduras",["2 potatoes, diced","2 carrots, sliced","1 chayote or zucchini, diced, optional"]],
+      ["Para servir",["Chopped onion and cilantro","Limes","Tostadas or bolillo"]]],
+ steps:["Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+  "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+  "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+  "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+  "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+  "Serve with onion, cilantro, lime and tostadas."],
+ pc:{time:"5 min high pressure + 10 min natural release (broth)", total:"35 min",
+  steps:["Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.","Make and fry the chile purée on Sauté as in steps 2–3.","Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.","On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."],
+  note:"Never pressure-cook the shrimp themselves; they turn rubbery."},
+ tips:["Dried shrimp are salty. Taste before adding any salt.","The heads hold most of the flavor. Ask the fish counter for head-on shrimp."],
+ vars:[{name:"Caldo Siete Mares", en:"Seven-seas seafood soup", region:"Toda la costa",
+   note:"The big soup of the marisquería: the same red caldillo loaded with fish, shrimp, octopus, crab and clams.",
+   ing:["The broth, caldillo and vegetables from the base","½ lb firm white fish, in chunks","½ lb shrimp","½ lb cooked octopus, sliced","2 crab legs (or ½ lb crab)","1 lb clams or mussels, scrubbed"],
+   steps:["Make the broth, caldillo and vegetables as in the base, steps 1–4.","Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.","Add the fish and octopus for 3 minutes, then the shrimp for 2.","Serve in big bowls with onion, cilantro, lime and tostadas."]}]},
+
+{id:"camarones-a-la-diabla", name:"Camarones a la Diabla", en:"Shrimp in fiery red chile sauce", cat:"mariscos", region:"Toda la costa", time:"30 min", yield:"4 personas",
+ story:"Shrimp in a hot, glossy sauce of guajillo, chile de árbol and chipotle, fried in butter. A la diabla means devil-style: as hot as you dare. Arroz blanco on the side puts out the fire.",
+ ing:[["El camarón",["1½ lb large shrimp, peeled and deveined, tails on","Salt, al gusto"]],
+      ["La salsa diabla",["4 chiles guajillo","4–8 chiles de árbol","2 chipotles en adobo","3 Roma tomatoes","¼ white onion","3 garlic cloves","½ cup water or shrimp broth","½ tsp Mexican oregano","2 tbsp butter","1 tbsp oil"]],
+      ["Para servir",["Arroz blanco or arroz rojo","Limes","Bolillo or tortillas"]]],
+ steps:["Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+  "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+  "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+  "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+  "Serve right away with rice, lime and bolillo."],
+ pc:null, pcNote:"No pressure-cooker version. Shrimp need only a few minutes in the pan.",
+ tips:["Set the heat with the chiles de árbol: 4 is spicy, 8 is a la diabla.","Don't crowd the pan, and pull the shrimp as soon as they curl into a C. An O means overcooked."],
+ vars:[{name:"Camarones al Mojo de Ajo", en:"Garlic butter shrimp", region:"Toda la costa",
+   note:"The mild one at the marisquería: shrimp in golden garlic, butter and lime.",
+   ing:["1½ lb large shrimp, peeled","8 garlic cloves, minced","3 tbsp butter","2 tbsp oil","1 chile guajillo, cut in thin rings, optional","1 lime, juiced","Chopped parsley or cilantro","Salt, al gusto"],
+   steps:["Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.","Raise the heat, add the shrimp and cook 2–3 minutes per side.","Add the lime juice, salt and parsley, toss and serve with rice."]}]},
+
+{id:"tostadas-de-ceviche", name:"Tostadas de Ceviche", en:"Lime-cured fish on crisp tostadas", cat:"mariscos", region:"Guerrero · Sinaloa · la costa", time:"1 h", yield:"6 personas",
+ story:"On the Mexican coast, ceviche is fish cured in lime until white, then mixed with tomato, onion, cilantro and chile and piled on a crisp tostada with avocado and hot sauce. In Acapulco it gets a splash of catsup; in Sinaloa, cucumber, carrot and a swipe of mayonnaise.",
+ ing:[["El pescado",["1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced","1½ cups fresh lime juice","1 tsp salt"]],
+      ["Con el pescado",["3 Roma tomatoes, finely diced","½ white onion, finely chopped","2–3 serranos, minced","½ cup chopped cilantro","1 cucumber, finely diced, optional"]],
+      ["Para servir",["12 tostadas","2 avocados, sliced","Mayonnaise, optional, the Sinaloa way","Valentina or Huichol hot sauce","Limes"]]],
+ steps:["Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+  "Drain off most of the lime juice.",
+  "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+  "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."],
+ pc:null, pcNote:"No pressure-cooker version. The lime cooks the fish.",
+ tips:["Cut the fish small and even so it all cures at the same time.","Use a glass or ceramic bowl, not metal, for the lime.","Very fresh fish only. Raw seafood isn't for pregnant women or small children."],
+ vars:[{name:"Ceviche de Camarón", en:"Shrimp ceviche", region:"Sinaloa",
+   note:"With shrimp instead of fish, cured raw like aguachile or poached a minute first.",
+   ing:["1 lb shrimp, peeled, deveined and chopped","1 cup fresh lime juice","The tomato, onion, serrano, cilantro and cucumber from the base","1 carrot, finely grated"],
+   steps:["Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.","Drain and fold in the vegetables and carrot.","Serve on tostadas with avocado."]}]},
 
 /* ---------------- MOLES ---------------- */
 {id:"mole-poblano", name:"Mole Poblano", en:"Chile, chocolate and spice sauce with turkey", cat:"moles", region:"Puebla", time:"4 h", yield:"12 personas",
@@ -1112,7 +1228,8 @@ const ARTICLE = {
   "picadillo":"El","chiles-rellenos":"Los","mole-poblano":"El","tamales-rojos":"Los","enchiladas-rojas":"Las","chilaquiles":"Los",
   "frijoles-de-olla":"Los","arroz-rojo":"El","salsa-roja":"La","cafe-de-olla":"El","champurrado":"El","agua-de-jamaica":"El",
   "arroz-con-leche":"El","flan":"El","capirotada":"La","huevos-rancheros":"Los","huevos-a-la-mexicana":"Los","molletes":"Los",
-  "machaca-con-huevo":"La","conchas":"Las","bolillos":"Los"
+  "machaca-con-huevo":"La","conchas":"Las","bolillos":"Los",
+  "aguachile":"El","coctel-de-camaron":"El","pescado-veracruzana":"El","caldo-de-camaron":"El","camarones-a-la-diabla":"Los","tostadas-de-ceviche":"Las"
 };
 /* La cantada: the line the lotería caller sings for each card. Real refranes where one fits. */
 const VERSO = {
@@ -1148,10 +1265,16 @@ const VERSO = {
   "flan":"Tiembla, tiembla, pero no se cae: así es el flan de la abuela.",
   "capirotada":"Capirotada en Cuaresma: cada capa, una promesa.",
   "conchas":"A la hora del cafecito, una concha y un ratito.",
-  "bolillos":"Pa'l susto, un bolillo."
+  "bolillos":"Pa'l susto, un bolillo.",
+  "aguachile":"Camarón que se duerme, se lo lleva la corriente.",
+  "coctel-de-camaron":"Para todo mal, un coctel; y para todo bien, también.",
+  "pescado-veracruzana":"Aceituna, chile güero y jitomate: Veracruz en un plato de remate.",
+  "caldo-de-camaron":"Caldo de camarón: para la cruda, la mejor razón.",
+  "camarones-a-la-diabla":"Camarón a la diabla: el que lo prueba, ni habla.",
+  "tostadas-de-ceviche":"Limón, pescado y tostada: la playa sin pagar nada."
 };
 /* Each category's card color, from the market: cempasúchil, chile, rosa mexicano, mole, maíz, nopal, turquesa, cobalto, concha pink, jacaranda */
-const CATCOLOR = {desayunos:"#F29F05", caldos:"#D7262E", guisos:"#E4007C", moles:"#7A3E1D", masa:"#E9B21C", frijoles:"#2E8B57", salsas:"#0E9C9C", bebidas:"#1F4FB5", pan:"#EE7FAE", postres:"#7B4FB5"};
+const CATCOLOR = {desayunos:"#F29F05", caldos:"#D7262E", guisos:"#E4007C", mariscos:"#E8613C", moles:"#7A3E1D", masa:"#E9B21C", frijoles:"#2E8B57", salsas:"#0E9C9C", bebidas:"#1F4FB5", pan:"#EE7FAE", postres:"#7B4FB5"};
 
 const LEXICON = [
   ["puerco","Puerco","Pork","protein",null,["pork","pork shoulder","espaldilla","pork neck bones","espinazo","pig's feet","manitas","country ribs","cerdo","puerco","carne de cerdo","carne de puerco","ground pork","pork leg","pierna"]],
@@ -1166,6 +1289,21 @@ const LEXICON = [
   ["tocino","Tocino","Bacon","main",null,["bacon","tocino"]],
   ["huevo","Huevo","Eggs","main",null,["egg","eggs","huevo","huevos","yolk","yolks","yema","yemas"]],
   ["chicharron","Chicharrón","Chicharrón","main",null,["chicharron","pork rinds"]],
+  ["camaron","Camarón","Shrimp","protein",null,["shrimp","camaron","camarones","prawns","raw shrimp","large shrimp","medium shrimp"]],
+  ["camaron-seco","Camarón seco","Dried shrimp","main",null,["dried shrimp","camaron seco"]],
+  ["pescado","Pescado","Fish","protein",null,["fish","pescado","red snapper","snapper","huachinango","white fish","firm white fish","fish fillets","tilapia","mahi-mahi","sierra","robalo","whole fish","whole snapper","filete de pescado"]],
+  ["pulpo","Pulpo","Octopus","main",null,["octopus","pulpo","cooked octopus"]],
+  ["jaiba","Jaiba","Crab","main",null,["crab","crab meat","crab legs","jaiba","cangrejo"]],
+  ["almejas","Almejas","Clams or mussels","main",null,["clams","mussels","almejas","mejillones"]],
+  ["ostiones","Ostiones","Oysters","main",null,["oysters","fresh oysters","ostiones"]],
+  ["pepino","Pepino","Cucumber","main",null,["cucumber","cucumbers","pepino"]],
+  ["aceitunas","Aceitunas","Olives","main",null,["olives","green olives","aceitunas","manzanilla"]],
+  ["alcaparras","Alcaparras","Capers","season",null,["capers","alcaparras"]],
+  ["catsup","Catsup","Catsup","main",null,["catsup","ketchup"]],
+  ["mayonesa","Mayonesa","Mayonnaise","main",null,["mayonnaise","mayonesa"]],
+  ["salsa-picante","Salsa picante","Bottled hot sauce","season",null,["valentina","huichol","hot sauce","salsa negra"]],
+  ["soya","Salsa de soya","Soy sauce","season",null,["soy sauce","salsa de soya"]],
+  ["perejil","Perejil","Parsley","season",null,["parsley","perejil"]],
   ["queso","Queso","Cheese","main",null,["cheese","queso","quesos"]],
   ["queso-fresco","Queso fresco","Fresh cheese","main","queso",["queso fresco","queso ranchero","panela","queso panela"]],
   ["queso-oaxaca","Queso Oaxaca","Melting cheese","main","queso",["queso oaxaca","oaxaca cheese","quesillo","asadero","queso chihuahua","chihuahua cheese","manchego","mozzarella","monterey jack"]],
@@ -1219,6 +1357,7 @@ const LEXICON = [
   ["chile","Chiles","Chiles","main",null,["chile","chiles","chili","chilies","chilis"]],
   ["chile-fresco","Chiles frescos","Fresh chiles","main","chile",["fresh chiles","chiles frescos","chile verde"]],
   ["serrano","Serrano","Serrano chiles","main","chile-fresco",["serrano chiles","serrano chile","serrano","serranos","chile serrano"]],
+  ["chile-guero","Chile güero","Güero chiles","main","chile-fresco",["chiles gueros","chile guero","gueros","guero","x'catic","xcatic","chile x'catic"]],
   ["jalapeno","Jalapeño","Jalapeños","main","chile-fresco",["jalapeno","jalapenos","chile jalapeno","anaheim"]],
   ["poblano","Poblano","Poblano chiles","main","chile-fresco",["poblano chiles","poblano chile","poblano","poblanos","chile poblano"]],
   ["habanero","Habanero","Habaneros","main","chile-fresco",["habanero chiles","habanero chile","habanero","habaneros"]],
@@ -1250,7 +1389,7 @@ const LEXICON = [
   ["vinagre","Vinagre","Vinegar","season",null,["vinegar","vinagre","apple cider vinegar"]],
   ["vainilla","Vainilla","Vanilla","season",null,["vanilla","vainilla"]],
   ["cascara","Cáscara de cítrico","Citrus peel","season",null,["lime peel","orange peel","lime zest","orange zest","zest of 2 oranges","zest of an orange","strip lime peel","cascara de limon"]],
-  ["_","","","ignore",null,["chile seeds","red chile sauce","chile sauce","the red chile","soaking water","soaking liquid","cooking water","salsa verde","salsa ranchera","the base","the base recipe","picadillo","beef or chicken broth"]],
+  ["_","","","ignore",null,["shrimp cooking water","their brine","their liquor","chile seeds","red chile sauce","chile sauce","the red chile","soaking water","soaking liquid","cooking water","salsa verde","salsa ranchera","the base","the base recipe","picadillo","beef or chicken broth"]],
   ["azahar","Agua de azahar","Orange blossom water","season",null,["orange blossom water","agua de azahar"]],
   ["levadura","Levadura","Yeast","main",null,["yeast","instant yeast","levadura"]],
   ["chocolate","Chocolate","Mexican chocolate","main",null,["chocolate","mexican chocolate","cocoa","cocoa powder","chocolate de metate","abuelita"]],
@@ -1260,12 +1399,12 @@ const LEXICON = [
   ["cerveza","Cerveza","Beer","main",null,["beer","cerveza","pulque"]],
   ["sal","Sal","Salt","basic",null,["salt","sal","coarse salt"]],
   ["agua","Agua","Water","basic",null,["water","agua"]],
-  ["aceite","Aceite","Oil","basic",null,["oil","aceite","vegetable oil"]],
+  ["aceite","Aceite","Oil","basic",null,["oil","aceite","vegetable oil","olive oil","aceite de oliva"]],
   ["manteca","Manteca","Lard or shortening","basic",null,["lard","manteca","pork lard","shortening","vegetable shortening","manteca vegetal"]],
   ["mantequilla","Mantequilla","Butter","basic",null,["butter","mantequilla","soft butter"]],
   ["azucar","Azúcar","Sugar","basic",null,["sugar","azucar","powdered sugar"]],
   ["pimienta","Pimienta","Black pepper","basic",null,["black pepper","pepper","peppercorns","black peppercorns","pimienta"]],
-  ["caldo","Caldo","Broth","basic",null,["broth","chicken broth","beef broth","caldo","stock","pork broth","cooking broth"]],
+  ["caldo","Caldo","Broth","basic",null,["broth","chicken broth","beef broth","caldo","stock","pork broth","shrimp broth","fish broth","cooking broth"]],
   ["polvo-hornear","Polvo para hornear","Baking powder","basic",null,["baking powder","polvo para hornear","royal"]]
 ];
 
@@ -1333,6 +1472,10 @@ const ART = (() => {
   const hominy = dots([[32, 47], [42, 44], [54, 46], [64, 44], [48, 49]], 3.4, CREAM);
   const cinnamon = (x, y, r, len = 28) => `<rect x="${x}" y="${y}" width="${len}" height="6" rx="3" fill="#8A4B22" ${S2} transform="rotate(${r} ${x + len / 2} ${y + 3})"/>`;
 
+  // A curled shrimp (a C), centered on x,y, scale k, turned r degrees
+  const shrimp = (x, y, k = 1, r = 0) => `<g transform="translate(${x} ${y}) rotate(${r}) scale(${k})"><path d="M-1 -9A9 9 0 1 0 9 0H4.5A4.5 4.5 0 1 1 -1 -4.5Z" fill="#F4845F" ${S2}/><path d="M-6.5 -3.5l3 1.2M-7.5 2.5l3.2-.3M-4.5 7l2.4-2M2 8.5l.4-3" stroke="#C9502F" stroke-width="1.4" stroke-linecap="round"/><path d="M-1 -9l6-3.5-1.2 5.2z" fill="#F4845F" ${S2}/></g>`;
+  // A fish facing left, body length w
+  const fishShape = (x, y, w, fill, extra = '') => `<path d="M${x - w / 2} ${y}C${x - w / 4} ${y - w / 3.2} ${x + w / 4} ${y - w / 3.2} ${x + w / 3} ${y}C${x + w / 4} ${y + w / 3.2} ${x - w / 4} ${y + w / 3.2} ${x - w / 2} ${y}Z" fill="${fill}" ${S}/><path d="M${x + w / 3.4} ${y}L${x + w / 2} ${y - w / 6}L${x + w / 2} ${y + w / 6}Z" fill="${fill}" ${S}/><circle cx="${x - w / 3.2}" cy="${y - w / 22}" r="${w / 26}" fill="${K}"/>` + extra;
   const byId = {
     "pozole-rojo": `<g transform="rotate(-14 78 38)"><ellipse cx="78" cy="38" rx="15" ry="15" fill="#E9B44C" ${S}/></g>` + bowl('#C8261E', hominy + `<circle cx="70" cy="47" r="3.8" fill="#E4007C" ${S2}/>` + herbs([[38, 45], [58, 43]])),
     "menudo-rojo": bowl('#B3221B', bits([[34, 41], [56, 40]], 7, '#F1E3C7') + dots([[46, 46], [66, 45], [28, 47]], 3.4, CREAM) + `<path d="M74 40a8 8 0 0 1 12 6z" fill="#7BC043" ${S2}/>`, 'peltre'),
@@ -1368,12 +1511,18 @@ const ART = (() => {
     "molletes": half(32, 52, -8) + half(66, 64, 6) + bits([[28, 47], [36, 50], [62, 60], [70, 62]], 3.4, '#E5402B') + dots([[32, 52], [66, 58]], 1.8, '#3FA34D', '') + bits([[40, 46], [58, 64]], 2.8, CREAM),
     "machaca-con-huevo": `<ellipse cx="50" cy="62" rx="43" ry="21" fill="#F4E6C8" ${S}/><g fill="#C9A46A"><ellipse cx="22" cy="60" rx="3" ry="2"/><ellipse cx="80" cy="66" rx="3.5" ry="2"/><ellipse cx="66" cy="76" rx="2.5" ry="1.6"/><ellipse cx="30" cy="74" rx="3" ry="1.8"/></g>` + scramble(`<path d="M34 56l6 3M48 52l5 4M58 60l6 2M42 63l5-2M62 54l4 3" stroke="#7A3E1D" stroke-width="3" stroke-linecap="round"/>` + dots([[52, 59], [38, 58]], 2.3, '#3FA34D')),
     "conchas": `<g transform="translate(32 6) scale(.68)">${concha('#6B3A1E', '#3E1F0E')}</g><g transform="translate(-4 18) scale(.86)">${concha('#F7B6CF', '#D9779C')}</g>`,
-    "bolillos": `<g transform="translate(-2 -16) rotate(-8 50 58)">${bolillo}</g><g transform="translate(2 12)">${bolillo}</g>`
+    "bolillos": `<g transform="translate(-2 -16) rotate(-8 50 58)">${bolillo}</g><g transform="translate(2 12)">${bolillo}</g>`,
+    "aguachile": plate(`<ellipse cx="50" cy="61" rx="32" ry="12" fill="#7BC043" ${S2}/>` + [[30, 58, .9, -30], [44, 53, .9, 10], [60, 56, .9, 40], [70, 64, .8, 80], [38, 66, .8, -60]].map(a => shrimp(...a)).join('') + `<g fill="none" stroke="#B3123E" stroke-width="2.2"><ellipse cx="52" cy="64" rx="6" ry="3"/><ellipse cx="34" cy="52" rx="5" ry="2.5"/></g>` + [[64, 48], [26, 66]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="5" ry="3.5" fill="#E3F2C8" ${S2}/>`).join('')),
+    "coctel-de-camaron": `<path d="M42 88h16M50 72v16" stroke="${K}" stroke-width="5" stroke-linecap="round"/><path d="M42 88h16M50 72v16" stroke="#E3F4F8" stroke-width="2" stroke-linecap="round"/><path d="M24 26h52l-6 34c-2 9-10 13-20 13s-18-4-20-13z" fill="#D9532B" ${S}/>` + dots([[40, 44], [58, 50], [48, 58]], 3.4, '#7BC043') + bits([[34, 52], [62, 40], [44, 36]], 3.4, CREAM) + `<path d="M24 26h52l-6 34c-2 9-10 13-20 13s-18-4-20-13z" fill="none" ${S}/>` + shrimp(30, 24, 1.1, -40) + shrimp(70, 24, 1.1, 130) + shrimp(50, 21, 1, 90) + `<path d="M74 34a9 9 0 0 1 14 -8z" fill="#7BC043" ${S2}/>`,
+    "pescado-veracruzana": plate(`<ellipse cx="50" cy="62" rx="33" ry="12" fill="#D2402B"/>` + fishShape(50, 57, 54, '#E9E1CF', `<path d="M38 52c4 2 8 2 12 0s8-2 12 0" fill="none" stroke="#C9502F" stroke-width="3" stroke-linecap="round"/>`) + dots([[30, 66], [44, 68], [62, 66], [70, 58]], 2.8, '#6E9B2E') + `<path d="M58 68c3-5 7-6 9-3" stroke="#E8C547" stroke-width="4" stroke-linecap="round" fill="none"/>` + herbs([[36, 60], [66, 50]])),
+    "caldo-de-camaron": bowl('#C8261E', shrimp(36, 45, .85, 20) + shrimp(56, 43, .85, 160) + bits([[44, 46], [64, 47]], 4, '#F29F05') + bits([[28, 47]], 4, '#F3DFA0') + herbs([[50, 49]]), 'barro'),
+    "camarones-a-la-diabla": cazuela('#B3221B', shrimp(30, 47, .8, 0) + shrimp(44, 49, .8, 60) + shrimp(58, 47, .8, 120) + shrimp(70, 50, .7, 200) + `<path d="M40 44c3-2 6-2 8 0" stroke="#F29F05" stroke-width="2" fill="none" stroke-linecap="round"/>`),
+    "tostadas-de-ceviche": `<ellipse cx="50" cy="62" rx="42" ry="20" fill="#E9B44C" ${S}/><path d="M18 60c4-10 18-15 32-15s28 5 32 15c-6 8-20 11-32 11s-26-3-32-11z" fill="#F3EEDD" ${S}/>` + bits([[28, 56], [36, 52], [46, 55], [58, 52], [66, 57], [40, 62], [54, 61], [62, 64], [32, 63]], 4.2, '#FFFDF7') + bits([[30, 52], [50, 50], [64, 52], [44, 66], [58, 58]], 3.4, '#E5402B') + herbs([[38, 58], [56, 56], [48, 63], [68, 61]]) + `<path d="M56 46c6-6 16-6 20 0-4 6-14 6-20 0z" fill="#7BC043" ${S2}/><path d="M58 46c5-3 11-3 16 0" fill="none" stroke="#E7F3C2" stroke-width="2"/>`
   };
   const byCat = {
     desayunos: byId["huevos-rancheros"], caldos: bowl('#D9532B'), guisos: taco('#EBCB7A', '#B86B2E', tacoTop), moles: cazuela('#3E1A10'),
     masa: byId["tamales-rojos"], frijoles: byId["frijoles-de-olla"], salsas: byId["salsa-roja"], bebidas: jarrito('#3B1F14'),
-    pan: byId["conchas"], postres: byId["flan"]
+    pan: byId["conchas"], postres: byId["flan"], mariscos: byId["coctel-de-camaron"]
   };
   return r => `<svg viewBox="0 0 100 100" aria-hidden="true">${byId[r.id] || byCat[r.cat] || ''}</svg>`;
 })();
@@ -1768,6 +1917,7 @@ function today(){
   if (md >= 1212 && md <= 1224) return ['tamales-rojos', 'Hoy hay tamalada', 'Tamales para la Nochebuena'];
   if (md >= 125 && md <= 202) return ['tamales-rojos', 'Hoy hay tamales', 'Día de la Candelaria, el 2 de febrero'];
   if (md >= 901 && md <= 916) return ['pozole-rojo', 'Hoy hay pozole', 'Para el 15 de septiembre'];
+  if (d >= ash && d <= e && dow === 5) return ['pescado-veracruzana', 'Hoy hay pescado', 'Viernes de Cuaresma'];
   if (d >= ash && d <= e) return ['capirotada', 'Hoy hay capirotada', 'Es Cuaresma'];
   if (dow === 4) return ['pozole-rojo', 'Hoy hay pozole', 'Jueves pozolero, como en Guerrero'];
   if (dow === 0) return ['barbacoa', 'Hoy hay barbacoa', 'El almuerzo del domingo'];
@@ -1952,7 +2102,7 @@ function detail(id){
 const qt = { have: store.get('ra.have', []).filter(id => PANTRY.byId[id]), basics: store.get('ra.basics', true), unknown: [] };
 const saveQt = () => { store.set('ra.have', qt.have); store.set('ra.basics', qt.basics); };
 const PICKS = [
-  ['Carnes y huevo', ['puerco', 'pollo', 'res', 'chivo', 'chorizo', 'panza', 'machaca', 'huevo']],
+  ['Carnes, mariscos y huevo', ['puerco', 'pollo', 'res', 'chivo', 'chorizo', 'panza', 'machaca', 'camaron', 'pescado', 'huevo']],
   ['Verduras y fruta', ['jitomate', 'tomatillo', 'cebolla', 'ajo', 'papa', 'zanahoria', 'calabacita', 'chayote', 'elote', 'aguacate', 'limon', 'naranja', 'nopales', 'platano']],
   ['De la despensa', ['tortillas', 'tortilla-harina', 'masa', 'arroz', 'frijol', 'fideo', 'pan', 'harina', 'maiz-pozolero', 'queso', 'crema', 'leche', 'chocolate', 'piloncillo', 'cafe', 'jamaica', 'levadura', 'hojas-maiz']],
   ['Chiles', ['guajillo', 'ancho', 'pasilla', 'chipotle', 'arbol', 'serrano', 'jalapeno', 'poblano', 'habanero']]

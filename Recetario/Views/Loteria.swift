@@ -231,6 +231,7 @@ enum Today {
         if (1212...1224).contains(md) { return ("tamales-rojos", "Hoy hay tamalada", "Tamales para la Nochebuena") }
         if (125...202).contains(md) { return ("tamales-rojos", "Hoy hay tamales", "Día de la Candelaria, el 2 de febrero") }
         if (901...916).contains(md) { return ("pozole-rojo", "Hoy hay pozole", "Para el 15 de septiembre") }
+        if day >= ashWednesday && day <= easter && c.weekday == 6 { return ("pescado-veracruzana", "Hoy hay pescado", "Viernes de Cuaresma") }
         if day >= ashWednesday && day <= easter { return ("capirotada", "Hoy hay capirotada", "Es Cuaresma") }
         switch c.weekday {
         case 5: return ("pozole-rojo", "Hoy hay pozole", "Jueves pozolero, como en Guerrero")

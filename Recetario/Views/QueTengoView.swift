@@ -8,7 +8,7 @@ struct QueTengoView: View {
     @FocusState private var focused: Bool
 
     private let picks: [(String, [String])] = [
-        ("Carnes y huevo", ["puerco", "pollo", "res", "chivo", "chorizo", "panza", "machaca", "huevo"]),
+        ("Carnes, mariscos y huevo", ["puerco", "pollo", "res", "chivo", "chorizo", "panza", "machaca", "camaron", "pescado", "huevo"]),
         ("Verduras y fruta", ["jitomate", "tomatillo", "cebolla", "ajo", "papa", "zanahoria", "calabacita", "chayote", "elote", "aguacate", "limon", "naranja", "nopales", "platano"]),
         ("De la despensa", ["tortillas", "tortilla-harina", "masa", "arroz", "frijol", "fideo", "pan", "harina", "maiz-pozolero", "queso", "crema", "leche", "chocolate", "piloncillo", "cafe", "jamaica", "levadura", "hojas-maiz"]),
         ("Chiles", ["guajillo", "ancho", "pasilla", "chipotle", "arbol", "serrano", "jalapeno", "poblano", "habanero"])
