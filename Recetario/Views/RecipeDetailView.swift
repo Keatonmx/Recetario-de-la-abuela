@@ -70,7 +70,7 @@ struct RecipeDetailView: View {
             }
         }
         }
-        .background(Color.paper)
+        .background(WallBackground())
         .navigationTitle(recipe.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {

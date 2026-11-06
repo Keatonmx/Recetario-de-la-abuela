@@ -61,7 +61,7 @@ struct QueTengoView: View {
             .padding(.bottom, 32)
         }
         .scrollDismissesKeyboard(.interactively)
-        .background(Color.paper)
+        .background(WallBackground())
         .navigationTitle(store.t("¿Qué tengo?", "What do I have?"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { ToolbarItem(placement: .topBarTrailing) { SettingsButtons() } }

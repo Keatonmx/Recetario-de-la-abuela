@@ -85,18 +85,27 @@ struct Chip: View {
     let title: String
     let isOn: Bool
     var onColor: Color = .primary
+    /// Paint the chip in a category's color ("#RRGGBB"), like a market stall sign.
+    var paint: String? = nil
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.subheadline.weight(.medium))
+                .font(.subheadline.weight(isOn ? .bold : .medium))
                 .padding(.horizontal, 13)
                 .padding(.vertical, 7)
                 .frame(minHeight: 44)
-                .foregroundStyle(isOn ? Color(.systemBackground) : Color.primary)
-                .background(Capsule().fill(isOn ? onColor : Color.card))
-                .overlay(Capsule().strokeBorder(Color.hairline, lineWidth: isOn ? 0 : 1))
+                .foregroundStyle(paint.map { Color.chipText($0, isOn: isOn) } ?? (isOn ? Color(.systemBackground) : Color.primary))
+                .background(Capsule().fill(paint.map { Color.chipFill($0, isOn: isOn) } ?? (isOn ? onColor : Color.card)))
+                .overlay(
+                    Capsule().strokeBorder(paint == nil ? Color.hairline : Color.ink,
+                                           lineWidth: paint == nil ? (isOn ? 0 : 1) : (isOn ? 2.5 : 1.5))
+                )
+                .background(
+                    // A painted chip that's on casts the same hard shadow as the cards.
+                    Capsule().fill(Color.inkShadow).offset(x: 2, y: 2).opacity(paint != nil && isOn ? 1 : 0)
+                )
         }
         .buttonStyle(.plain)
         .accessibilityAddTraits(isOn ? .isSelected : [])

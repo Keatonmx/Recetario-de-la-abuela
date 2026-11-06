@@ -55,7 +55,7 @@ struct PantryView: View {
             case .guide: guide
             }
         }
-        .background(Color.paper)
+        .background(WallBackground())
         .navigationTitle(store.t("Despensa", "Pantry"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {

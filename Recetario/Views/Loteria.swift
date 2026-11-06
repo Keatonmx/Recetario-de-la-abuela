@@ -175,9 +175,10 @@ struct DealtCardStyle: ButtonStyle {
 
 struct TileStrip: View {
     var body: some View {
+        // Two rows of 12-pt tiles, like a band of azulejos set into the wall.
         Image("talavera-tile")
             .resizable(resizingMode: .tile)
-            .frame(height: 12)
+            .frame(height: 24)
             .overlay(alignment: .top) { Rectangle().fill(Color.ink).frame(height: 2) }
             .overlay(alignment: .bottom) { Rectangle().fill(Color.ink).frame(height: 2) }
             .clipShape(RoundedRectangle(cornerRadius: 2))

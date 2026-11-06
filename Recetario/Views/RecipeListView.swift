@@ -82,12 +82,15 @@ struct RecipeListView: View {
                             }
                         }
                     }
+                    // The deck is dealt on the kitchen table's hule.
+                    .padding(.vertical, 16)
+                    .background(Hule().padding(.horizontal, -8))
                 }
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 32)
         }
-        .background(Color.paper)
+        .background(WallBackground())
         .refreshable {
             if !reduceMotion { swing += 1 }
             try? await Task.sleep(for: .milliseconds(600))
@@ -193,10 +196,10 @@ struct RecipeListView: View {
     private var chips: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                Chip(title: store.t("Olla exprés", "Pressure cooker"), isOn: pressureOnly, onColor: .nopal) { pressureOnly.toggle() }
-                Chip(title: store.t("Todas", "All"), isOn: category == nil) { category = nil }
+                Chip(title: store.t("Olla exprés", "Pressure cooker"), isOn: pressureOnly, paint: "#1F6B3F") { pressureOnly.toggle() }
+                Chip(title: store.t("Todas", "All"), isOn: category == nil, paint: "#C70067") { category = nil }
                 ForEach(store.book.categories) { cat in
-                    Chip(title: cat.name(store.lang), isOn: category == cat.id) { category = cat.id }
+                    Chip(title: cat.name(store.lang), isOn: category == cat.id, paint: cat.color) { category = cat.id }
                 }
             }
             .padding(.vertical, 4)
