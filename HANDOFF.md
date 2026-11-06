@@ -57,24 +57,24 @@ Go to App Store Connect, then **Apps**, then **+**, then **New App**, and fill i
 - **SKU**: recetario-abuela-001
 - **User access**: Full Access
 
-### 2. Create an API key and put it in GitHub
+### 2. Put the signing secrets in GitHub
 
-1. In App Store Connect, go to **Users and Access**, then **Integrations**, then **App Store
-   Connect API**, and click **+**.
-2. Name the key anything (for example, "GitHub TestFlight") and give it the **Admin** role.
-   Admin is needed so the build can create its own signing certificate.
-3. Download the `.p8` file. **Apple only lets you download it once**, so keep it somewhere safe.
-4. In this GitHub repo, go to **Settings**, then **Secrets and variables**, then **Actions**,
-   then **New repository secret**. Add these three:
+The TestFlight workflow is the same lane Packmule's `release.yml` uses, so it takes the same
+App Store Connect API key and Apple Distribution certificate (`.p12`) you already set up for
+Packmule, plus one profile made for this app. Set each with `gh secret set NAME -R
+Keatonmx/Recetario-de-la-abuela --body "..."` (don't pipe values in: Windows adds a hidden CR).
 
-| Secret name | What to paste |
+| Secret name | What it is |
 |---|---|
-| `ASC_KEY_ID` | The key's **Key ID** from the keys list (10 characters) |
-| `ASC_ISSUER_ID` | The **Issuer ID** shown above the keys list (a long ID with dashes) |
-| `ASC_KEY_P8` | Open the `.p8` file in a text editor and paste **all** of it, including the `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----` lines |
+| `ASC_KEY_ID` | Same as Packmule: the API key's Key ID |
+| `ASC_ISSUER_ID` | Same as Packmule: the Issuer ID |
+| `ASC_KEY_P8` | Same as Packmule: the `.p8`, base64 encoded (raw PEM also works) |
+| `DIST_P12_B64` | Same as Packmule: the Apple Distribution `.p12`, base64 encoded |
+| `DIST_P12_PASSWORD` | Same as Packmule: that `.p12`'s password |
+| `PROFILE_APP_B64` | New for this app: run `python scripts/mint_profile.py` (instructions at its top) |
 
 Don't paste these into a chat. GitHub secrets are the only place they should go.
-You don't need a Team ID variable, because the Team ID is already in the workflow.
+You don't need a Team ID, because it's already in the workflow.
 
 ### 3. Turn on the contact form
 

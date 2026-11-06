@@ -1,42 +1,71 @@
 name: TestFlight
 
 # Builds a signed release and uploads it to App Store Connect, where it shows up in TestFlight.
-# Run it from the Actions tab (Run workflow). No Mac needed: signing is done by Xcode's
-# cloud-managed signing, using an App Store Connect API key.
+# Run it from the Actions tab (Run workflow). This is the same lane as Packmule's release.yml:
+# build unsigned, sign by hand with the distribution identity and an App Store profile, then
+# upload with altool. No Mac and no Xcode account needed.
 #
-# One-time setup (repository Settings > Secrets and variables > Actions):
-#   (Team ID NHYD37TC9V is built in; set the APPLE_TEAM_ID variable only to override it)
-#   Secret    ASC_KEY_ID         the API key's Key ID
-#   Secret    ASC_ISSUER_ID      the Issuer ID shown above the keys list
-#   Secret    ASC_KEY_P8         the full contents of the downloaded AuthKey_XXXX.p8 file
-# The key is created in App Store Connect > Users and Access > Integrations > App Store Connect API,
-# with the Admin role (needed so Xcode can create the signing certificate and profile).
+# Repository secrets (Settings > Secrets and variables > Actions). The first five are the same
+# values Packmule and Tinbox use. Set them with  gh secret set NAME --body "..."  (never pipe:
+# piped values carry CRLF on Windows).
+#   ASC_KEY_ID          App Store Connect API key ID
+#   ASC_ISSUER_ID       Issuer ID shown above the keys list
+#   ASC_KEY_P8          the .p8 private key, base64 encoded (raw PEM also accepted)
+#   DIST_P12_B64        Apple Distribution certificate + private key, .p12, base64 encoded
+#   DIST_P12_PASSWORD   password of that .p12
+#   PROFILE_APP_B64     App Store provisioning profile for com.keatonmx.recetario, base64
+#                       (make it with scripts/mint_profile.py)
+# Team ID NHYD37TC9V is built in; set the APPLE_TEAM_ID secret only to override it.
 
 on:
   workflow_dispatch:
+    inputs:
+      marketing_version:
+        description: "Version shown on the store (like 1.0.0)"
+        required: true
+        default: "1.0.0"
   push:
     tags: ["testflight-*"]   # or push a tag like testflight-1 to upload from any branch
 
+concurrency:
+  group: testflight
+  cancel-in-progress: false
+
 jobs:
   upload:
+    # App Store validation requires the current iOS SDK, so this lane rides the newest
+    # runner image and the newest stable Xcode on it.
     runs-on: macos-15
     timeout-minutes: 45
+    env:
+      APP_PATH: ${{ github.workspace }}/DerivedData/Build/Products/Release-iphoneos/Recetario.app
+      MARKETING_VERSION: ${{ github.event.inputs.marketing_version || '1.0.0' }}
     steps:
       - uses: actions/checkout@v4
 
       - name: Check setup
         env:
-          TEAM: ${{ vars.APPLE_TEAM_ID || 'NHYD37TC9V' }}
           KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ISSUER: ${{ secrets.ASC_ISSUER_ID }}
           P8: ${{ secrets.ASC_KEY_P8 }}
+          P12: ${{ secrets.DIST_P12_B64 }}
+          P12_PASSWORD: ${{ secrets.DIST_P12_PASSWORD }}
+          PROFILE: ${{ secrets.PROFILE_APP_B64 }}
         run: |
           missing=""
-          [ -n "$TEAM" ] || missing="$missing APPLE_TEAM_ID(variable)"
           [ -n "$KEY_ID" ] || missing="$missing ASC_KEY_ID"
           [ -n "$ISSUER" ] || missing="$missing ASC_ISSUER_ID"
           [ -n "$P8" ] || missing="$missing ASC_KEY_P8"
-          if [ -n "$missing" ]; then echo "::error::Missing:$missing. See the comment at the top of testflight.yml."; exit 1; fi
+          [ -n "$P12" ] || missing="$missing DIST_P12_B64"
+          [ -n "$P12_PASSWORD" ] || missing="$missing DIST_P12_PASSWORD"
+          [ -n "$PROFILE" ] || missing="$missing PROFILE_APP_B64"
+          if [ -n "$missing" ]; then echo "::error::Missing secrets:$missing. See the comment at the top of testflight.yml."; exit 1; fi
+
+      - name: Select the newest stable Xcode
+        run: |
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_*.app | grep -viE "beta|rc" | sort -V | tail -n 1)"
+          xcodebuild -version
+          xcodebuild -showsdks | grep iphoneos
 
       - name: Validate recipe data
         run: |
@@ -50,67 +79,112 @@ jobs:
           brew install xcodegen
           xcodegen generate
 
-      - name: Write the API key
+      - name: Write the App Store Connect API key
         env:
           P8: ${{ secrets.ASC_KEY_P8 }}
           KEY_ID: ${{ secrets.ASC_KEY_ID }}
         run: |
-          mkdir -p "$RUNNER_TEMP/keys"
-          printf '%s\n' "$P8" > "$RUNNER_TEMP/keys/AuthKey_${KEY_ID}.p8"
-          echo "KEY_PATH=$RUNNER_TEMP/keys/AuthKey_${KEY_ID}.p8" >> "$GITHUB_ENV"
+          mkdir -p "$HOME/private_keys"
+          # Strip any stray CR a Windows-side secret set may carry.
+          KEY_ID=$(printf '%s' "$KEY_ID" | tr -d '\r\n\t ')
+          KEY_FILE="$HOME/private_keys/AuthKey_${KEY_ID}.p8"
+          # Packmule stores the key base64 encoded; accept the raw PEM too.
+          if printf '%s' "$P8" | grep -q "BEGIN PRIVATE KEY"; then
+            printf '%s\n' "$P8" | tr -d '\r' > "$KEY_FILE"
+          else
+            printf '%s' "$P8" | tr -d '\r\n\t ' | base64 --decode > "$KEY_FILE"
+          fi
+          head -c 27 "$KEY_FILE" | grep -q "BEGIN PRIVATE KEY" && echo "key decodes cleanly"
 
-      - name: Archive
+      - name: Install the signing identity and profile
         env:
-          TEAM: ${{ vars.APPLE_TEAM_ID || 'NHYD37TC9V' }}
-          KEY_ID: ${{ secrets.ASC_KEY_ID }}
-          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+          P12: ${{ secrets.DIST_P12_B64 }}
+          P12_PASSWORD: ${{ secrets.DIST_P12_PASSWORD }}
+          PROFILE: ${{ secrets.PROFILE_APP_B64 }}
         run: |
-          # Each upload needs a new build number; the workflow run number always goes up.
+          printf '%s' "$P12" | tr -d '\r\n\t ' | base64 --decode > "$RUNNER_TEMP/dist.p12"
+          printf '%s' "$PROFILE" | tr -d '\r\n\t ' | base64 --decode > "$RUNNER_TEMP/app.mobileprovision"
+          KEYCHAIN="$RUNNER_TEMP/build.keychain"
+          security create-keychain -p ci "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p ci "$KEYCHAIN"
+          security default-keychain -s "$KEYCHAIN"
+          # Default is not enough: codesign only consults the search list.
+          security list-keychains -d user -s "$KEYCHAIN" "$HOME/Library/Keychains/login.keychain-db"
+          security import "$RUNNER_TEMP/dist.p12" -k "$KEYCHAIN" -P "$(printf '%s' "$P12_PASSWORD" | tr -d '\r\n')" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k ci "$KEYCHAIN" > /dev/null
+          security cms -D -i "$RUNNER_TEMP/app.mobileprovision" > "$RUNNER_TEMP/app-profile.plist"
+          echo "profile: $(plutil -extract Name raw -o - "$RUNNER_TEMP/app-profile.plist")"
+          security find-identity -v -p codesigning "$KEYCHAIN"
+
+      - name: Build (unsigned, the proven lane)
+        run: |
+          set -o pipefail
           BUILD_NUMBER=$((100 + GITHUB_RUN_NUMBER))
-          xcodebuild archive \
-            -project Recetario.xcodeproj \
-            -scheme Recetario \
-            -configuration Release \
+          echo "Building $MARKETING_VERSION ($BUILD_NUMBER)"
+          xcodebuild build \
+            -project Recetario.xcodeproj -scheme Recetario -configuration Release \
             -destination 'generic/platform=iOS' \
-            -archivePath "$RUNNER_TEMP/Recetario.xcarchive" \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$KEY_PATH" \
-            -authenticationKeyID "$KEY_ID" \
-            -authenticationKeyIssuerID "$ISSUER" \
-            DEVELOPMENT_TEAM="$TEAM" \
-            CODE_SIGN_STYLE=Automatic \
-            CURRENT_PROJECT_VERSION="$BUILD_NUMBER"
-          echo "Archived build $BUILD_NUMBER"
+            -derivedDataPath "$GITHUB_WORKSPACE/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            MARKETING_VERSION="$MARKETING_VERSION" \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER" \
+            2>&1 | tee xcodebuild-build.log | (grep -E "error:|BUILD " || true)
+          test -x "$APP_PATH/Recetario"
+
+      - name: Sign by hand and pack the IPA
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/build.keychain"
+          IDENTITY=$(security find-identity -v -p codesigning "$KEYCHAIN" | awk '/Apple Distribution/ {print $2; exit}')
+          echo "signing with identity $IDENTITY"
+          cp "$RUNNER_TEMP/app.mobileprovision" "$APP_PATH/embedded.mobileprovision"
+          # Sign with exactly the entitlements the profile grants.
+          plutil -extract Entitlements xml1 -o "$RUNNER_TEMP/app-ents.plist" "$RUNNER_TEMP/app-profile.plist"
+          for FW in "$APP_PATH/Frameworks/"*; do
+            [ -e "$FW" ] || continue
+            codesign --force --sign "$IDENTITY" --timestamp=none "$FW"
+          done
+          codesign --force --sign "$IDENTITY" --entitlements "$RUNNER_TEMP/app-ents.plist" \
+            --timestamp=none "$APP_PATH"
+          codesign --verify --deep --strict "$APP_PATH"
+          echo "signature verifies"
+          rm -rf ipa && mkdir -p ipa/Payload
+          cp -R "$APP_PATH" ipa/Payload/
+          (cd ipa && zip -qry ../Recetario-signed.ipa Payload)
+          ls -la Recetario-signed.ipa
 
       - name: Upload to App Store Connect
         env:
-          TEAM: ${{ vars.APPLE_TEAM_ID || 'NHYD37TC9V' }}
           KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ISSUER: ${{ secrets.ASC_ISSUER_ID }}
         run: |
-          cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
-          <?xml version="1.0" encoding="UTF-8"?>
-          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-          <plist version="1.0">
-          <dict>
-            <key>method</key><string>app-store-connect</string>
-            <key>destination</key><string>upload</string>
-            <key>teamID</key><string>${TEAM}</string>
-            <key>signingStyle</key><string>automatic</string>
-            <key>manageAppVersionAndBuildNumber</key><false/>
-          </dict>
-          </plist>
-          EOF
-          xcodebuild -exportArchive \
-            -archivePath "$RUNNER_TEMP/Recetario.xcarchive" \
-            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
-            -exportPath "$RUNNER_TEMP/export" \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$KEY_PATH" \
-            -authenticationKeyID "$KEY_ID" \
-            -authenticationKeyIssuerID "$ISSUER"
-          echo "::notice::Uploaded. It appears in App Store Connect > TestFlight after Apple finishes processing (usually 10–30 minutes)."
+          set -o pipefail
+          KEY_ID=$(printf '%s' "$KEY_ID" | tr -d '\r\n\t ')
+          ISSUER=$(printf '%s' "$ISSUER" | tr -d '\r\n\t ')
+          # Newer Xcodes dropped altool; borrow it from an older install if needed.
+          if xcrun -f altool > /dev/null 2>&1; then
+            UPLOAD="xcrun altool"
+          else
+            OLD=$(ls -d /Applications/Xcode_1[5-9]*.app 2>/dev/null | sort -V | tail -n 1)
+            echo "altool missing in selected Xcode, borrowing from: $OLD"
+            UPLOAD="env DEVELOPER_DIR=$OLD xcrun altool"
+          fi
+          $UPLOAD --upload-app -f Recetario-signed.ipa -t ios \
+            --apiKey "$KEY_ID" --apiIssuer "$ISSUER" \
+            2>&1 | tee altool-upload.log | (grep -vE "^\s*$" | tail -n 20)
+          echo "::notice::Uploaded. It appears in App Store Connect > TestFlight after Apple finishes processing (usually 10 to 30 minutes)."
 
-      - name: Remove the API key
+      - name: Remove keys
         if: always()
-        run: rm -rf "$RUNNER_TEMP/keys"
+        run: rm -rf "$HOME/private_keys" "$RUNNER_TEMP/dist.p12" "$RUNNER_TEMP/build.keychain"
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testflight-logs
+          path: |
+            xcodebuild-build.log
+            altool-upload.log
+          if-no-files-found: ignore
