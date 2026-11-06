@@ -6,3 +6,9 @@ build/
 *.xcuserstate
 xcuserdata/
 .DS_Store
+
+# Signing keys never go in the repo
+*.p8
+*.p12
+*.mobileprovision
+*.b64
