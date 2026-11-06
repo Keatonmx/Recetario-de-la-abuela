@@ -273,7 +273,7 @@ struct HoyHayCard: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(today.title)
                             .font(.rotulo(22, relativeTo: .title3))
-                            .foregroundStyle(Color.lifted(store.book.categories.first { $0.id == recipe.category }?.color ?? "#C8261E"))
+                            .foregroundStyle(Color.lifted(store.book.categories.first { $0.id == recipe.category }?.color ?? "#C8261E", deepen: 0.32))
                             .environment(\.colorScheme, .light)
                         Text(today.why)
                             .font(.footnote)

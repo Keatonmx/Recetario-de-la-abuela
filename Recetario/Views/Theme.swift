@@ -43,12 +43,13 @@ extension Color {
 
     /// A category color for text on the page: deepened a little on cream, lifted
     /// toward white on black, so it stays readable in both.
-    static func lifted(_ hexString: String) -> Color {
+    /// `deepen` is how much darker normal colors get on cream; small text needs more than headings.
+    static func lifted(_ hexString: String, deepen: CGFloat = 0.24) -> Color {
         Color(uiColor: UIColor { traits in
             let base = UIColor(hexString: hexString)
             if traits.userInterfaceStyle == .dark { return base.mixed(with: .white, amount: 0.38) }
             // Bright colors (cempasúchil, maíz, concha pink) need more deepening to read on cream.
-            let amount: CGFloat = base.relativeLuminance > 0.3 ? 0.50 : 0.24
+            let amount: CGFloat = base.relativeLuminance > 0.3 ? 0.50 : deepen
             return base.mixed(with: UIColor(hex: 0x2A1608), amount: amount)
         })
     }
