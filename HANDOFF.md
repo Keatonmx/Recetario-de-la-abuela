@@ -31,9 +31,9 @@ An iPhone app of traditional Mexican home cooking. Each recipe is a lotería car
 | Privacy policy and support pages (GitHub Pages) | ✅ Live, see the links below |
 | Bundle ID `com.keatonmx.recetario` | ✅ Registered (Team ID `NHYD37TC9V`) |
 | App record in App Store Connect | ✅ Created 2026-11-05, Apple ID `6831412202`, version 1.0 |
-| App Store Connect API key in GitHub secrets | ⬜ **You**, step 2 below |
+| App Store Connect API key in GitHub secrets | ✅ RecetarioAPI key; all six signing secrets set by `scripts/setup_signing.py` |
 | Contact form on the support page | ⬜ **You**, step 3 below |
-| First TestFlight upload | ⬜ After step 2, run the **TestFlight** workflow |
+| First TestFlight upload | ✅ Build 1.0 (102) uploaded 2026-11-05; next, add testers in App Store Connect > TestFlight |
 
 Pages:
 
