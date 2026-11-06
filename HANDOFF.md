@@ -59,19 +59,26 @@ Done on 2026-11-05 (Apple ID `6831412202`). For the record, it was made by going
 
 ### 2. Put the signing secrets in GitHub
 
-The TestFlight workflow is the same lane Packmule's `release.yml` uses, so it takes the same
-App Store Connect API key and Apple Distribution certificate (`.p12`) you already set up for
-Packmule, plus one profile made for this app. Set each with `gh secret set NAME -R
-Keatonmx/Recetario-de-la-abuela --body "..."` (don't pipe values in: Windows adds a hidden CR).
+The TestFlight workflow is the same lane Packmule's `release.yml` uses. Its API key is
+**RecetarioAPI** (App Manager), in App Store Connect under Users and Access, Integrations,
+App Store Connect API. One script does the rest from the key's `.p8` file:
+
+```sh
+pip install pyjwt cryptography requests
+python scripts/setup_signing.py --key C:/path/AuthKey_<KEYID>.p8 --issuer-id <Issuer ID>
+```
+
+It makes a distribution certificate (saved with its password in `~/RecetarioSigning`, outside
+the repo), makes the App Store profile, and sets these secrets:
 
 | Secret name | What it is |
 |---|---|
-| `ASC_KEY_ID` | Same as Packmule: the API key's Key ID |
-| `ASC_ISSUER_ID` | Same as Packmule: the Issuer ID |
-| `ASC_KEY_P8` | Same as Packmule: the `.p8`, base64 encoded (raw PEM also works) |
-| `DIST_P12_B64` | Same as Packmule: the Apple Distribution `.p12`, base64 encoded |
-| `DIST_P12_PASSWORD` | Same as Packmule: that `.p12`'s password |
-| `PROFILE_APP_B64` | New for this app: run `python scripts/mint_profile.py` (instructions at its top) |
+| `ASC_KEY_ID` | The API key's Key ID |
+| `ASC_ISSUER_ID` | The Issuer ID |
+| `ASC_KEY_P8` | The `.p8`, base64 encoded (raw PEM also works) |
+| `DIST_P12_B64` | The Apple Distribution `.p12`, base64 encoded |
+| `DIST_P12_PASSWORD` | That `.p12`'s password |
+| `PROFILE_APP_B64` | The App Store profile for `com.keatonmx.recetario`, base64 |
 
 Don't paste these into a chat. GitHub secrets are the only place they should go.
 You don't need a Team ID, because it's already in the workflow.

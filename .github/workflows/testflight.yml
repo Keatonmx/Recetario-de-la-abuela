@@ -5,16 +5,14 @@ name: TestFlight
 # build unsigned, sign by hand with the distribution identity and an App Store profile, then
 # upload with altool. No Mac and no Xcode account needed.
 #
-# Repository secrets (Settings > Secrets and variables > Actions). The first five are the same
-# values Packmule and Tinbox use. Set them with  gh secret set NAME --body "..."  (never pipe:
-# piped values carry CRLF on Windows).
+# Repository secrets (Settings > Secrets and variables > Actions). scripts/setup_signing.py
+# sets all six from the RecetarioAPI .p8.
 #   ASC_KEY_ID          App Store Connect API key ID
 #   ASC_ISSUER_ID       Issuer ID shown above the keys list
 #   ASC_KEY_P8          the .p8 private key, base64 encoded (raw PEM also accepted)
 #   DIST_P12_B64        Apple Distribution certificate + private key, .p12, base64 encoded
 #   DIST_P12_PASSWORD   password of that .p12
 #   PROFILE_APP_B64     App Store provisioning profile for com.keatonmx.recetario, base64
-#                       (make it with scripts/mint_profile.py)
 # Team ID NHYD37TC9V is built in; set the APPLE_TEAM_ID secret only to override it.
 
 on:
