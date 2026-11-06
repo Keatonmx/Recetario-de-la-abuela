@@ -21,9 +21,9 @@ on:
   workflow_dispatch:
     inputs:
       marketing_version:
-        description: "Version shown on the store (like 1.0.0)"
+        description: "Version shown on the store; matches the App Store Connect version (like 1.0)"
         required: true
-        default: "1.0.0"
+        default: "1.0"
   push:
     tags: ["testflight-*"]   # or push a tag like testflight-1 to upload from any branch
 
@@ -39,7 +39,7 @@ jobs:
     timeout-minutes: 45
     env:
       APP_PATH: ${{ github.workspace }}/DerivedData/Build/Products/Release-iphoneos/Recetario.app
-      MARKETING_VERSION: ${{ github.event.inputs.marketing_version || '1.0.0' }}
+      MARKETING_VERSION: ${{ github.event.inputs.marketing_version || '1.0' }}
     steps:
       - uses: actions/checkout@v4
 

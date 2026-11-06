@@ -30,7 +30,7 @@ An iPhone app of traditional Mexican home cooking. Each recipe is a lotería car
 | App Store text (name, subtitle, description, keywords, privacy answers) | ✅ In `docs/app-store.md` |
 | Privacy policy and support pages (GitHub Pages) | ✅ Live, see the links below |
 | Bundle ID `com.keatonmx.recetario` | ✅ Registered (Team ID `NHYD37TC9V`) |
-| App record in App Store Connect | ⬜ **You**, step 1 below |
+| App record in App Store Connect | ✅ Created 2026-11-05, Apple ID `6831412202`, version 1.0 |
 | App Store Connect API key in GitHub secrets | ⬜ **You**, step 2 below |
 | Contact form on the support page | ⬜ **You**, step 3 below |
 | First TestFlight upload | ⬜ After step 2, run the **TestFlight** workflow |
@@ -46,9 +46,9 @@ Pages:
 Steps 1 and 2 need your Apple login. Apple doesn't let anyone else create an app, and only
 you can download an API key, so a chat can't do these for you.
 
-### 1. Create the app in App Store Connect
+### 1. Create the app in App Store Connect (done)
 
-Go to App Store Connect, then **Apps**, then **+**, then **New App**, and fill in:
+Done on 2026-11-05 (Apple ID `6831412202`). For the record, it was made by going to App Store Connect, then **Apps**, then **+**, then **New App**, and fill in:
 
 - **Platform**: iOS
 - **Name**: Recetario de la Abuela
