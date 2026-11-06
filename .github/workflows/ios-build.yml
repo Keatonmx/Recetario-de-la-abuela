@@ -71,6 +71,8 @@ jobs:
             shot "$mode-07-que-tengo" -screenshotTab 1 -screenshotHave "puerco,chile-seco,maiz-pozolero,cebolla,ajo"
             shot "$mode-08-guardadas" "${FAV[@]}" -screenshotTab 2
             shot "$mode-09-despensa" -screenshotTab 3
+            shot "$mode-10-mariscos" -screenshotCategory mariscos
+            shot "$mode-11-aguachile" -screenshotRecipe aguachile
           done
           ls -la screenshots
 
