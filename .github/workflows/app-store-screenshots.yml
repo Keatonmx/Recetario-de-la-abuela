@@ -6,7 +6,7 @@ name: App Store screenshots
 on:
   workflow_dispatch:
   push:
-    branches: [claude/recetario-ios, main]
+    branches: [main]
     paths: [.github/workflows/app-store-screenshots.yml, docs/app-store.md]
 
 jobs:

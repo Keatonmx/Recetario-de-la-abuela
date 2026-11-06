@@ -2,7 +2,7 @@ name: iOS build
 
 on:
   push:
-    branches: [claude/recetario-ios, main]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
