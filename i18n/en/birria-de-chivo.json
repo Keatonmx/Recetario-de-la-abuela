@@ -1,0 +1,108 @@
+{
+  "id": "birria-de-chivo",
+  "subtitle": "Goat in chile adobo with consomé",
+  "verso": "They say birria's a thing of no worth… but in Jalisco it's the best flavor on earth!",
+  "region": "Jalisco",
+  "servings": "10 servings",
+  "story": "Birria comes from Jalisco, where goat was cooked in a pit or in a pot sealed shut with masa. The adobo is dried chiles, vinegar and warm spices, and the meat is served in a bowl of its own consomé. 'Birria' means something worthless: popular history says the Spaniards scorned goat, and Jalisco (Cocula claims the honor) turned it into a feast.",
+  "ingredients": [
+    {
+      "title": "The meat",
+      "items": [
+        "5 lb bone-in goat (or lamb shoulder, or a mix of beef chuck and short rib)",
+        "1 tbsp salt"
+      ]
+    },
+    {
+      "title": "The adobo",
+      "items": [
+        "8 chiles guajillo",
+        "4 chiles ancho",
+        "2–4 chiles de árbol, optional",
+        "½ cup apple cider vinegar",
+        "6 garlic cloves",
+        "½ white onion",
+        "1 tsp Mexican oregano",
+        "½ tsp cumin seed",
+        "4 whole cloves",
+        "½ tsp black peppercorns",
+        "1-inch stick Mexican cinnamon (canela)",
+        "½-inch piece fresh ginger",
+        "½ tsp dried thyme",
+        "½ tsp dried marjoram (mejorana)"
+      ]
+    },
+    {
+      "title": "The consomé",
+      "items": [
+        "2 Roma tomatoes, charred",
+        "3 bay leaves",
+        "2 cups water, plus more for the consomé (about 6 cups in all)"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Chopped onion and cilantro",
+        "Mexican oregano",
+        "Limes",
+        "Chile de árbol salsa",
+        "Corn tortillas"
+      ]
+    }
+  ],
+  "steps": [
+    "Stem and seed the chiles. Toast them on a comal a few seconds per side and soak in hot water 15 minutes.",
+    "Toast the cumin, cloves, peppercorns and cinnamon in a dry pan for 30 seconds.",
+    "Blend the chiles with the vinegar, spices, garlic, onion, oregano, ginger, thyme, marjoram and salt, adding just enough soaking water to make a thick paste.",
+    "Rub the paste all over the meat. Cover and refrigerate overnight, or at least 4 hours.",
+    "Put a rack in a large Dutch oven with [[2 cups]] water and the bay leaves underneath. Set the meat on the rack and scrape in all the adobo. Cover with foil and then the lid, sealing as tightly as you can. That's the home version of sealing the pot with masa.",
+    "Cook in a 325°F oven 3½–4 hours, until the meat falls off the bone.",
+    "Lift out the meat. Skim the red fat from the juices and save it. Blend the charred tomatoes with some of the juices, add them back, add water to make about [[6 cups]] of consomé, and simmer 10 minutes. Season.",
+    "Serve the meat in bowls with hot consomé, onion, cilantro, oregano, lime, salsa and tortillas."
+  ],
+  "pressureCooker": {
+    "time": "50 min high pressure + 20 min natural release",
+    "total": "1 h 30 + overnight",
+    "steps": [
+      "Make the adobo and marinate as in steps 1–4.",
+      "Put the meat, all the adobo, the bay leaves and [[2 cups]] water in the pot.",
+      "High pressure 50 minutes for goat or lamb, 60 for beef chuck. Natural release 20 minutes.",
+      "Lift out the meat. Skim and save the fat. Blend in the tomatoes and simmer the consomé on Sauté 10 minutes."
+    ],
+    "note": "Don't skip the overnight marinade. The pressure cooker saves cooking time, not flavor time."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Save the red fat from the top of the consomé to fry tortillas for tacos.",
+    "The vinegar matters. It cuts the richness and helps tenderize the meat.",
+    "Birria tatemada: brown the drained meat in a hot oven or on the comal for roasted edges before serving."
+  ],
+  "variations": [
+    {
+      "name": "Birria de Res estilo Tijuana",
+      "subtitle": "Beef birria quesatacos",
+      "region": "Tijuana, Baja California",
+      "note": "The version that took over social media: the same adobo with beef, and tacos crisped in the red fat with melted cheese, dipped in consomé. Not grandma's original, but nobody complains.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Adobo and consomé from the base",
+            "2 lb beef chuck, 2 lb short ribs, 1 lb oxtail",
+            "Queso Oaxaca or mozzarella, shredded",
+            "Corn tortillas",
+            "Chopped onion and cilantro"
+          ]
+        }
+      ],
+      "steps": [
+        "Marinate and cook the beef as in the base (4 hours in the oven or 60 minutes under pressure).",
+        "Shred the meat and keep the consomé hot.",
+        "Dip a tortilla in the red fat, lay it on a hot griddle, add cheese and meat, fold, and cook until crisp on both sides.",
+        "Serve with a cup of consomé topped with onion and cilantro for dipping."
+      ],
+      "pressureNote": "High pressure 60 minutes, natural release 20."
+    }
+  ]
+}

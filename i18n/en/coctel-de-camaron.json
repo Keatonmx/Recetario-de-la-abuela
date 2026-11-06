@@ -1,0 +1,88 @@
+{
+  "id": "coctel-de-camaron",
+  "subtitle": "Mexican shrimp cocktail",
+  "verso": "For every ill, a cocktail; and for every good thing, one too.",
+  "region": "Sinaloa · Veracruz · the coast",
+  "servings": "4 servings",
+  "story": "The cocktail of every seafood restaurant and beach stand: cooked shrimp in a cold, tangy sauce of catsup, lime and the shrimp's own cooking water, with onion, cilantro, chile and avocado. It comes in a tall glass with saltines and hot sauce, and it's the cure for a hot afternoon.",
+  "ingredients": [
+    {
+      "title": "The shrimp",
+      "items": [
+        "1 lb medium shrimp, shell on",
+        "4 cups water",
+        "1 tsp salt",
+        "¼ white onion",
+        "1 bay leaf"
+      ]
+    },
+    {
+      "title": "The sauce",
+      "items": [
+        "½ cup catsup",
+        "1 cup of the shrimp cooking water, chilled",
+        "¼ cup fresh lime juice",
+        "1 tbsp Valentina or Huichol hot sauce, plus more to taste",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "With the shrimp",
+      "items": [
+        "¼ white onion, finely chopped",
+        "2 Roma tomatoes, diced",
+        "1–2 serranos, minced",
+        "¼ cup chopped cilantro",
+        "1 cucumber, diced, optional"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "1 avocado, diced",
+        "Limes",
+        "Saladitas (saltine crackers) or tostadas"
+      ]
+    }
+  ],
+  "steps": [
+    "Bring the water to a boil with the salt, onion and bay leaf. Add the shrimp and cook just until pink, 2–3 minutes.",
+    "Lift out the shrimp and drop them into ice water. Strain the cooking water, save it and chill it.",
+    "Peel the shrimp. Leave a few whole for the top and cut the rest in half if they're large.",
+    "Stir together the catsup, [[1 cup]] of the chilled cooking water, the lime juice, hot sauce and salt. It should be loose enough to drink.",
+    "Add the shrimp, onion, tomato, serrano, cilantro and cucumber. Chill 15 minutes.",
+    "Serve in tall glasses topped with avocado, with limes, saladitas and more hot sauce."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Shrimp cook in two minutes and turn rubbery under pressure.",
+  "tips": [
+    "The shrimp cooking water is the secret: it makes the sauce taste of the sea instead of catsup.",
+    "Some seafood restaurants add a splash of Clamato or orange juice. Every stand has its own."
+  ],
+  "variations": [
+    {
+      "name": "Vuelve a la Vida",
+      "subtitle": "Back-to-life seafood cocktail",
+      "region": "Veracruz",
+      "note": "Veracruz's campechana of shrimp, octopus, oysters and crab, famous as the cure for a hangover.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "½ lb cooked shrimp",
+            "½ lb cooked octopus, sliced",
+            "12 fresh oysters, shucked, with their liquor",
+            "½ cup crab meat",
+            "The sauce and chopped vegetables from the base"
+          ]
+        }
+      ],
+      "steps": [
+        "Make the sauce and chopped vegetables as in the base, steps 4–5.",
+        "Fold in the shrimp, octopus, crab and the oysters with their liquor.",
+        "Chill 15 minutes and serve in tall glasses with avocado and saladitas."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

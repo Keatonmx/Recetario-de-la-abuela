@@ -1,0 +1,92 @@
+{
+  "id": "barbacoa",
+  "subtitle": "Slow-steamed beef cheeks",
+  "verso": "A Sunday without barbacoa is a Sunday without joy.",
+  "region": "Northern Mexico · Hidalgo",
+  "servings": "8 servings",
+  "story": "In Hidalgo, barbacoa is lamb wrapped in maguey leaves and cooked overnight in a pit, with a pot underneath catching the juices for consomé. This home version steams beef with avocado leaves. Barbacoa is the Sunday late breakfast: in the north, families buy cachete (cheek), lengua (tongue) and cabeza (head) by the kilo on Sunday mornings.",
+  "ingredients": [
+    {
+      "title": "The meat",
+      "items": [
+        "3 lb beef cheeks (cachete), or chuck roast in large pieces",
+        "1 tbsp salt",
+        "1 tsp black pepper",
+        "1 tsp ground cumin",
+        "6 garlic cloves, mashed",
+        "1 white onion, quartered",
+        "3 bay leaves",
+        "6 dried avocado leaves, toasted (or 1 tsp anise seed)",
+        "4 cups water, for steaming",
+        "Banana leaves, optional, for wrapping"
+      ]
+    },
+    {
+      "title": "Consomé",
+      "items": [
+        "1 cup cooked chickpeas",
+        "¼ cup rice",
+        "1 carrot, diced",
+        "Chopped onion, cilantro, lime and salsa"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Salsa borracha (see Variations)",
+        "Corn tortillas"
+      ]
+    }
+  ],
+  "steps": [
+    "Rub the meat with the salt, pepper, cumin and garlic. Let stand 1 hour, or overnight in the fridge.",
+    "Put a rack or steamer basket in a tall pot with 4 cups water, the onion and the bay leaves underneath.",
+    "Lay banana leaves on the rack if you have them, add the avocado leaves and the meat, and fold the banana leaves over.",
+    "Cover tightly and steam on low 4–5 hours, adding hot water when needed, until the meat shreds easily.",
+    "Shred the meat. For the consomé, strain the liquid from under the rack, add the chickpeas, rice and carrot, and simmer 20 minutes.",
+    "Serve the barbacoa in tortillas with salsa, and the consomé in a cup on the side with chopped onion, cilantro and lime."
+  ],
+  "pressureCooker": {
+    "time": "65 min high pressure + 20 min natural release",
+    "total": "1 h 40",
+    "steps": [
+      "Season the meat. Put the onion, bay leaves, avocado leaves and 1½ cups water in the pot and add the meat.",
+      "High pressure 65 minutes, natural release 20.",
+      "Shred the meat with a little of the liquid.",
+      "Strain the remaining liquid, add the chickpeas, rice and carrot, and cook on Sauté 15 minutes for consomé."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Mexican avocado leaves taste of anise. Toast them a few seconds on the comal before using.",
+    "Cheeks are full of collagen. Don't trim them too lean or you'll lose the silky texture."
+  ],
+  "variations": [
+    {
+      "name": "Salsa Borracha",
+      "subtitle": "Pasilla salsa with beer or pulque",
+      "region": "Hidalgo",
+      "note": "The classic partner for barbacoa, traditionally made with pulque.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "6 chiles pasilla",
+            "2 garlic cloves",
+            "¼ white onion",
+            "½ cup pulque or light Mexican beer",
+            "Salt, to taste",
+            "Crumbled queso añejo and chopped onion, to finish"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast the pasillas briefly and soak 10 minutes.",
+        "Grind in the molcajete or blend with the garlic, onion, beer and salt. Keep it a little coarse.",
+        "Top with queso añejo and chopped onion."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "tamales-rojos",
+  "subtitle": "Red chile pork tamales",
+  "verso": "Whoever's born to be a tamal, the husks fall to him from heaven.",
+  "region": "Northern Mexico · Central Mexico",
+  "servings": "About 48",
+  "story": "Tamales are a group effort. The tamalada, usually before Christmas, puts the whole family at the table spreading masa. Red pork tamales are the classic.",
+  "ingredients": [
+    {
+      "title": "The filling",
+      "items": [
+        "2½ lb pork shoulder, in large chunks",
+        "½ onion, 3 garlic cloves and 1 tbsp salt",
+        "8 chiles guajillo",
+        "3 chiles ancho",
+        "2 garlic cloves, ½ tsp cumin and ½ tsp Mexican oregano",
+        "2 tbsp lard"
+      ]
+    },
+    {
+      "title": "The masa",
+      "items": [
+        "4 lb fresh unprepared masa for tamales (from a tortilla shop), or 6 cups masa harina for tamales mixed with about 5 cups warm broth",
+        "2 cups (450 g) fresh pork lard, not hydrogenated",
+        "2 tsp baking powder",
+        "1 tbsp salt",
+        "1–2 cups warm pork broth",
+        "½ cup of the red chile sauce, for color"
+      ]
+    },
+    {
+      "title": "The husks",
+      "items": [
+        "60 dried corn husks, soaked in hot water 1 hour"
+      ]
+    }
+  ],
+  "steps": [
+    "Cover the pork with water, add the onion, garlic and salt, and simmer 2 hours until tender. Shred and keep the broth.",
+    "Toast, soak and blend the chiles with the garlic, cumin, oregano and [[1½ cups]] broth. Strain.",
+    "Fry the sauce in the lard 5 minutes. Set aside [[½ cup]] for the masa. Add the pork to the rest and simmer 15 minutes until thick, not soupy. Let cool.",
+    "Beat the lard with a mixer 3–5 minutes until white and fluffy.",
+    "Add the masa a handful at a time, alternating with the broth, baking powder, salt and reserved chile. Beat 10 minutes. It should feel like soft peanut butter.",
+    "Do the float test: drop ½ tsp of masa into a glass of cold water. If it floats, it's ready. If it sinks, beat longer or add a little more lard.",
+    "Take a husk, smooth side up, wide end toward you. Spread 2–3 tbsp masa thinly over the top two-thirds, leaving a border at the sides. Add a spoonful of filling.",
+    "Fold the sides over each other, then fold the narrow tail up.",
+    "Fill the bottom of a tamalera with water below the rack. Stand the tamales upright, open end up. Cover with extra husks and a damp towel, then the lid.",
+    "Steam over medium 1¼–1½ hours. They're done when the husk peels away cleanly from the masa. Let rest 15 minutes before serving."
+  ],
+  "pressureCooker": {
+    "time": "25 min high pressure + 15 min natural release",
+    "total": "1 h after assembly",
+    "steps": [
+      "Make the filling and masa and assemble the tamales as above. The pork can also go under pressure: 35 minutes high, natural release 10.",
+      "Put the trivet in the pot with 1½ cups water. Stand the tamales upright, open end up, snug but not tight. A 6-qt pot holds 12–15.",
+      "High pressure 25 minutes, natural release 15.",
+      "Let rest 10 minutes. They firm up as they cool."
+    ],
+    "note": "Reheat frozen tamales at high pressure 15 minutes with 1 cup water."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Drop a coin in the water under the rack. While it rattles there's water; when it goes quiet, add more hot water.",
+    "Grandmas say tamales have feelings: make them while angry and they won't cook through, and lift the lid too often and they come out pintos (half raw). A pregnant helper ties a red ribbon around her belly, and some cooks sing to the pot.",
+    "The old way to leaven: instead of baking powder, boil tomatillo husks with a pinch of tequesquite, strain, and beat that water into the masa.",
+    "Fresh lard from the butcher makes the masa taste right. The white blocks from the supermarket shelf don't."
+  ],
+  "variations": [
+    {
+      "name": "Tamales de Rajas con Queso",
+      "subtitle": "Poblano strip and cheese tamales",
+      "region": "Central Mexico",
+      "note": "The meatless favorite, for Lent or for anyone.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Masa from the base, made without the chile and with chicken or vegetable broth",
+            "4 poblanos, roasted, peeled and cut in strips",
+            "12 oz queso Oaxaca or panela, in sticks",
+            "1 cup salsa verde"
+          ]
+        }
+      ],
+      "steps": [
+        "Spread masa on each husk.",
+        "Add a few poblano strips, a stick of cheese and a spoonful of salsa verde.",
+        "Fold and steam as in the base."
+      ],
+      "pressureNote": "Same as the base: high pressure 25 minutes, natural release 15."
+    },
+    {
+      "name": "Tamales de Dulce",
+      "subtitle": "Sweet pink tamales",
+      "region": "Central Mexico",
+      "note": "Sweet tamales for Christmas and Día de la Candelaria, served with champurrado. On February 2, whoever found the baby figurine in the Rosca de Reyes on January 6 pays for the tamales.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb fresh masa (half the base)",
+            "⅔ cup lard",
+            "¾ cup sugar",
+            "1 tsp baking powder and ½ tsp salt",
+            "½ cup raisins",
+            "1 tsp ground cinnamon",
+            "A few drops of red food coloring (the traditional pink) or a little beet juice"
+          ]
+        }
+      ],
+      "steps": [
+        "Beat the lard until fluffy. Beat in the masa, sugar, baking powder, salt, cinnamon and color until a little ball floats in water.",
+        "Fold in the raisins.",
+        "Spread on husks with no filling, fold, and steam 1 hour."
+      ],
+      "pressureNote": "High pressure 20 minutes, natural release 15."
+    }
+  ]
+}

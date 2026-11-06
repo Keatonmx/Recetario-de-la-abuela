@@ -1,0 +1,142 @@
+{
+  "id": "pozole-rojo",
+  "subtitle": "Pozole rojo de puerco con maíz cacahuazintle",
+  "verso": "Maíz que revienta en flor: el pozole del quince, ¡qué sabor!",
+  "region": "Jalisco",
+  "servings": "10 personas",
+  "story": "El pozole viene del México prehispánico, cuando el maíz cacahuazintle se cocinaba para las ceremonias. En Jalisco es rojo, con guajillo y ancho, y se hace con cabeza de puerco o con una mezcla de espaldilla y cortes con hueso. Es lo que se hace para el 15 de septiembre, la Nochebuena y el Año Nuevo. El caldo debe quedar rojo ladrillo y ligero, nunca espeso como un chili con carne, y cada quien lo adorna en la mesa.",
+  "ingredients": [
+    {
+      "title": "La carne",
+      "items": [
+        "2 lb de espaldilla de puerco, en trozos de 3 pulgadas",
+        "2 lb de huesos de cuello o espinazo de puerco",
+        "2 manitas de puerco, partidas, opcionales pero le dan cuerpo",
+        "1 cebolla blanca, partida a la mitad",
+        "1 cabeza de ajo, partida a la mitad a lo ancho",
+        "5 qt de agua",
+        "1 cucharada de sal, y más al gusto"
+      ]
+    },
+    {
+      "title": "El maíz",
+      "items": [
+        "2 lb de maíz cacahuazintle precocido (maíz pozolero, se vende en bolsa en los mercados mexicanos), enjuagado, o 2 latas (29 oz cada una) de maíz pozolero, escurrido y enjuagado"
+      ]
+    },
+    {
+      "title": "El chile",
+      "items": [
+        "6 chiles guajillo",
+        "3 chiles ancho",
+        "1–2 chiles de árbol, opcionales, para que pique",
+        "4 dientes de ajo",
+        "¼ de cebolla blanca",
+        "1 cucharadita de orégano mexicano",
+        "Una pizca de comino, solo si en tu familia lo usan"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Repollo verde rebanado muy fino, o lechuga, como la prefieren muchos tapatíos",
+        "Rábanos rebanados",
+        "Cebolla blanca picada fina",
+        "Orégano mexicano seco",
+        "Chile piquín molido",
+        "Limones, en gajos",
+        "Tostadas"
+      ]
+    }
+  ],
+  "steps": [
+    "Pon las carnes, la cebolla y el ajo con el agua en tu olla más grande. Deja que suelte el hervor y espúmala durante los primeros 15 minutos para que el caldo quede limpio.",
+    "Si usas maíz de bolsa, agrégalo ahora. Baja a fuego lento, con la olla medio tapada, y cocina de 2 a 2½ horas, hasta que la carne esté muy suave y los granos se hayan abierto como flor (revienta). Ponle la sal solo cuando el maíz ya haya reventado; si lo salas antes, se queda duro.",
+    "Mientras, quítales los tallos y las semillas a los chiles. Tuéstalos en un comal caliente 10–20 segundos por lado, solo hasta que suelten su aroma y estén flexibles. Cúbrelos con agua caliente y déjalos remojar 15 minutos.",
+    "Licúa los chiles con el ajo, la cebolla, el orégano, el comino (si lo usas) y [[1½ tazas]] del caldo de puerco hasta que quede completamente liso. Pásalo por un colador fino, apretando con una cuchara. Tira los pellejos.",
+    "Saca la carne. Deshébrala o córtala en trozos de un bocado, quita la carne de los huesos y las manitas, y regrésala a la olla. Tira los huesos, la cebolla y el ajo.",
+    "Si usas maíz de lata, agrégalo ahora. Incorpora el chile colado y deja hervir a fuego lento 30 minutos. Sazona bien con sal. Debe quedar rojo y caldoso, no espeso.",
+    "Sirve en platos hondos. Cada quien adorna el suyo: repollo, rábano, cebolla, orégano frotado entre las palmas, chile piquín y un buen chorro de limón. Tostadas al lado."
+  ],
+  "pressureCooker": {
+    "time": "45 min a presión alta + 20 min de liberación natural",
+    "total": "1 h 45",
+    "steps": [
+      "Tuesta, remoja, licúa y cuela los chiles igual que en el método tradicional.",
+      "Pon las carnes, la cebolla y el ajo en la olla. Si usas maíz de bolsa, agrégalo ahora. Agrega agua hasta la línea de llenado máximo (unos 3½ qt en una olla de 8 qt; usa como dos tercios de la carne en una de 6 qt).",
+      "Sella y cocina a presión alta 45 minutos (55 si usas manitas). Deja que la presión baje sola durante 20 minutos y luego libera el vapor.",
+      "Saca la carne, deshébrala, tira los huesos y los aromáticos, y regresa la carne a la olla.",
+      "Cambia a la función Saltear. Agrega el chile colado, el maíz de lata si lo usas, y la sal (sala después de que el maíz haya reventado). Deja hervir a fuego lento sin tapar 20–30 minutos. Prueba y sirve."
+    ],
+    "note": "Muchas abuelas ya hacen el pozole en olla exprés de estufa. Cuenta unos 35 minutos desde que la válvula empieza a bailar."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Cuela el chile. Los pellejos dejan el caldo arenoso y amargo.",
+    "Tuesta los chiles hasta que los huelas, solo unos segundos. Si echan humo, van a saber amargos: tíralos y vuelve a empezar.",
+    "El pozole sabe mejor al día siguiente. Enfríalo y quítale la grasa si quieres.",
+    "Una versión entre semana que la mayoría de las familias acepta: muslos de pollo con hueso en lugar de puerco, más o menos 1 hora en la estufa."
+  ],
+  "variations": [
+    {
+      "name": "Pozole Verde",
+      "subtitle": "Pozole verde con pepitas",
+      "region": "Guerrero",
+      "note": "En Guerrero los jueves son jueves pozolero. Lo verde viene de las pepitas, el tomate verde y las hierbas frescas. En la mesa se pone chicharrón y aguacate y, según la región, un huevo crudo que se quiebra en el caldo caliente o sardinas, con mezcal al lado.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "El puerco y el maíz de la receta base (o 1 pollo entero)",
+            "1 taza de pepitas crudas peladas",
+            "1 lb de tomates verdes, sin cáscara",
+            "2–3 serranos o jalapeños",
+            "½ cebolla blanca",
+            "3 dientes de ajo",
+            "2 hojas de hoja santa (o 1 cucharadita de semillas de anís)",
+            "1 rama grande de epazote",
+            "½ manojo de cilantro",
+            "4 hojas de lechuga romana o de rábano",
+            "2 cucharadas de manteca",
+            "Para servir: chicharrón, aguacate, cebolla, orégano, limón, tostadas"
+          ]
+        }
+      ],
+      "steps": [
+        "Cuece la carne y el maíz como en la receta base, pasos 1, 2 y 5 (agrega ahora el maíz de lata si lo usas). No le pongas el chile rojo.",
+        "Tuesta las pepitas en una sartén sin grasa, moviendo, hasta que se inflen y truenen pero sin que se doren. Déjalas enfriar.",
+        "Hierve los tomates verdes y los chiles en agua 8 minutos, hasta que tomen color verde olivo. Escúrrelos.",
+        "Licúa las pepitas, los tomates verdes, los chiles, la cebolla, el ajo, la hoja santa, el epazote, el cilantro y las hojas de lechuga o de rábano con [[2 tazas]] de caldo hasta que quede muy liso.",
+        "Calienta la manteca en una sartén y fríe la salsa verde 5 minutos, moviendo.",
+        "Incorpórala a la olla y mantenla apenas hirviendo 15 minutos. Si hierve fuerte, la salsa de pepita se corta.",
+        "Sirve con los acompañamientos."
+      ],
+      "pressureNote": "Los mismos tiempos a presión para la carne. Agrega la salsa verde en la función Saltear en bajo y no dejes que hierva."
+    },
+    {
+      "name": "Pozole Blanco",
+      "subtitle": "Pozole blanco",
+      "region": "Guerrero · Michoacán",
+      "note": "El estilo más antiguo: puerco, maíz y sal en el caldo, nada más. Todo el chile se sirve aparte para que cada plato se sazone en la mesa.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Todo lo de la receta base menos el chile rojo",
+            "Para la salsa: 10 chiles de árbol",
+            "2 chiles guajillo",
+            "2 dientes de ajo",
+            "½ cucharadita de sal",
+            "¾ taza de agua"
+          ]
+        }
+      ],
+      "steps": [
+        "Cuece la carne y el maíz como en la receta base, pasos 1, 2 y 5 (agrega ahora el maíz de lata si lo usas). Sáltate el chile.",
+        "Para la salsa, tuesta los chiles unos segundos, remójalos 10 minutos, licúalos con el ajo, la sal y el agua, y cuela.",
+        "Sirve el caldo blanco con la salsa, la cebolla, el orégano, el limón, el repollo y el rábano en la mesa."
+      ],
+      "pressureNote": "Los mismos tiempos a presión que la receta base."
+    }
+  ]
+}

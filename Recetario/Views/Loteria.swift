@@ -109,7 +109,7 @@ struct LoteriaCard: View {
                 numberSize: big ? 24 : 17
             )
             .overlay(alignment: .bottomTrailing) {
-                if recipe.pressureCooker != nil && !big { OllaBadge().padding(4) }
+                if recipe.hasPressureCooker && !big { OllaBadge().padding(4) }
             }
             .overlay(alignment: .topTrailing) {
                 if isFavorite {
@@ -145,9 +145,10 @@ struct LoteriaCard: View {
     }
 
     private var accessibilityText: String {
-        var text = "\(recipe.cardName), \(recipe.en), \(recipe.region)"
-        if recipe.pressureCooker != nil { text += ", pressure-cooker version" }
-        if isFavorite { text += ", saved" }
+        let t = recipe.text(store.lang)
+        var text = "\(recipe.cardName), \(t.subtitle), \(t.region)"
+        if recipe.hasPressureCooker { text += store.t(", con versión en olla exprés", ", pressure-cooker version") }
+        if isFavorite { text += store.t(", guardada", ", saved") }
         return text
     }
 }
@@ -218,7 +219,7 @@ enum Season {
 /// What's cooking today, by the calendar: jueves pozolero, Sunday barbacoa,
 /// tamales on la Candelaria, pan de muerto for the ofrenda.
 enum Today {
-    static func pick(from recipes: [Recipe], on date: Date = Date()) -> (id: String, title: String, why: String)? {
+    static func pick(from recipes: [Recipe], on date: Date = Date(), lang: Lang = .es) -> (id: String, title: String, why: String)? {
         guard !recipes.isEmpty else { return nil }
         let cal = Calendar(identifier: .gregorian)
         let c = cal.dateComponents([.year, .month, .day, .weekday], from: date)
@@ -226,21 +227,34 @@ enum Today {
         let day = cal.startOfDay(for: date)
         let easter = easterSunday(c.year ?? 2026)
         let ashWednesday = cal.date(byAdding: .day, value: -46, to: easter) ?? easter
+        let es = lang == .es
 
-        if (1020...1102).contains(md) { return ("conchas", "Hoy hay pan de muerto", "Para la ofrenda del Día de Muertos") }
-        if (1212...1224).contains(md) { return ("tamales-rojos", "Hoy hay tamalada", "Tamales para la Nochebuena") }
-        if (125...202).contains(md) { return ("tamales-rojos", "Hoy hay tamales", "Día de la Candelaria, el 2 de febrero") }
-        if (901...916).contains(md) { return ("pozole-rojo", "Hoy hay pozole", "Para el 15 de septiembre") }
-        if day >= ashWednesday && day <= easter && c.weekday == 6 { return ("pescado-veracruzana", "Hoy hay pescado", "Viernes de Cuaresma") }
-        if day >= ashWednesday && day <= easter { return ("capirotada", "Hoy hay capirotada", "Es Cuaresma") }
+        if (1020...1102).contains(md) {
+            return ("conchas", es ? "Hoy hay pan de muerto" : "Today: pan de muerto", es ? "Para la ofrenda del Día de Muertos" : "For the Day of the Dead altar")
+        }
+        if (1212...1224).contains(md) {
+            return ("tamales-rojos", es ? "Hoy hay tamalada" : "Today: a tamalada", es ? "Tamales para la Nochebuena" : "Tamales for Christmas Eve")
+        }
+        if (125...202).contains(md) {
+            return ("tamales-rojos", es ? "Hoy hay tamales" : "Today: tamales", es ? "Día de la Candelaria, el 2 de febrero" : "Candlemas, February 2")
+        }
+        if (901...916).contains(md) {
+            return ("pozole-rojo", es ? "Hoy hay pozole" : "Today: pozole", es ? "Para el 15 de septiembre" : "For Independence Day, September 15")
+        }
+        if day >= ashWednesday && day <= easter && c.weekday == 6 {
+            return ("pescado-veracruzana", es ? "Hoy hay pescado" : "Today: fish", es ? "Viernes de Cuaresma" : "A Friday in Lent")
+        }
+        if day >= ashWednesday && day <= easter {
+            return ("capirotada", es ? "Hoy hay capirotada" : "Today: capirotada", es ? "Es Cuaresma" : "It's Lent")
+        }
         switch c.weekday {
-        case 5: return ("pozole-rojo", "Hoy hay pozole", "Jueves pozolero, como en Guerrero")
-        case 1: return ("barbacoa", "Hoy hay barbacoa", "El almuerzo del domingo")
-        case 7: return ("menudo-rojo", "Hoy hay menudo", "Para levantar a los muertos")
+        case 5: return ("pozole-rojo", es ? "Hoy hay pozole" : "Today: pozole", es ? "Jueves pozolero, como en Guerrero" : "Pozole Thursday, as in Guerrero")
+        case 1: return ("barbacoa", es ? "Hoy hay barbacoa" : "Today: barbacoa", es ? "El almuerzo del domingo" : "The Sunday late breakfast")
+        case 7: return ("menudo-rojo", es ? "Hoy hay menudo" : "Today: menudo", es ? "Para levantar a los muertos" : "To raise the dead (and cure the hangover)")
         default:
             let index = Int(date.timeIntervalSince1970 / 86_400) % recipes.count
             let r = recipes[index]
-            return (r.id, "La carta del día", r.cardName)
+            return (r.id, es ? "La carta del día" : "Card of the day", r.cardName)
         }
     }
 
@@ -258,7 +272,7 @@ struct HoyHayCard: View {
     @EnvironmentObject private var store: RecipeStore
 
     var body: some View {
-        if let today = Today.pick(from: store.book.recipes),
+        if let today = Today.pick(from: store.book.recipes, lang: store.lang),
            let recipe = store.book.recipes.first(where: { $0.id == today.id }) {
             NavigationLink(value: recipe) {
                 HStack(spacing: 12) {
@@ -309,21 +323,53 @@ enum Appearance: String {
     }
 }
 
+/// The language switch and the light/dark switch, side by side in every screen's toolbar.
+struct SettingsButtons: View {
+    var body: some View {
+        HStack(spacing: 14) {
+            LanguageButton()
+            AppearanceButton()
+        }
+    }
+}
+
+/// Español (México) or English.
+struct LanguageButton: View {
+    @EnvironmentObject private var store: RecipeStore
+
+    var body: some View {
+        Menu {
+            Picker(store.t("Idioma", "Language"), selection: Binding(get: { store.lang }, set: { store.setLang($0) })) {
+                Text("Español (México)").tag(Lang.es)
+                Text("English").tag(Lang.en)
+            }
+        } label: {
+            Text(store.lang == .es ? "ES" : "EN")
+                .font(.system(.footnote, design: .rounded).weight(.heavy))
+                .padding(.horizontal, 6)
+                .padding(.vertical, 3)
+                .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color.primary, lineWidth: 1.5))
+        }
+        .accessibilityLabel(store.t("Idioma: español", "Language: English"))
+    }
+}
+
 /// Light, dark, or follow the phone.
 struct AppearanceButton: View {
+    @EnvironmentObject private var store: RecipeStore
     @AppStorage("appearance") private var appearance = Appearance.system.rawValue
 
     var body: some View {
         Menu {
-            Picker("Appearance", selection: $appearance) {
-                Label("Like the phone", systemImage: "circle.lefthalf.filled").tag(Appearance.system.rawValue)
-                Label("Light", systemImage: "sun.max").tag(Appearance.light.rawValue)
-                Label("Dark", systemImage: "moon").tag(Appearance.dark.rawValue)
+            Picker(store.t("Apariencia", "Appearance"), selection: $appearance) {
+                Label(store.t("Como el teléfono", "Like the phone"), systemImage: "circle.lefthalf.filled").tag(Appearance.system.rawValue)
+                Label(store.t("Claro", "Light"), systemImage: "sun.max").tag(Appearance.light.rawValue)
+                Label(store.t("Oscuro", "Dark"), systemImage: "moon").tag(Appearance.dark.rawValue)
             }
         } label: {
             Image(systemName: icon)
         }
-        .accessibilityLabel("Appearance")
+        .accessibilityLabel(store.t("Apariencia", "Appearance"))
     }
 
     private var icon: String {

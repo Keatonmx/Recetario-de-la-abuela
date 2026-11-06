@@ -1,0 +1,82 @@
+{
+  "id": "camarones-a-la-diabla",
+  "subtitle": "Shrimp in fiery red chile sauce",
+  "verso": "Shrimp a la diabla: one bite and you can't say a word.",
+  "region": "All along the coast",
+  "servings": "4 servings",
+  "story": "Shrimp in a hot, glossy sauce of guajillo, chile de árbol and chipotle, fried in butter. A la diabla means devil-style: as hot as you dare. White rice on the side puts out the fire.",
+  "ingredients": [
+    {
+      "title": "The shrimp",
+      "items": [
+        "1½ lb large shrimp, peeled and deveined, tails on",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "The diabla sauce",
+      "items": [
+        "4 chiles guajillo",
+        "4–8 chiles de árbol",
+        "2 chipotles en adobo",
+        "3 Roma tomatoes",
+        "¼ white onion",
+        "3 garlic cloves",
+        "½ cup water or shrimp broth",
+        "½ tsp Mexican oregano",
+        "2 tbsp butter",
+        "1 tbsp oil"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "White rice or arroz rojo",
+        "Limes",
+        "Bolillo or tortillas"
+      ]
+    }
+  ],
+  "steps": [
+    "Toast the guajillos and chiles de árbol a few seconds in a dry pan. Soak in hot water 10 minutes.",
+    "Blend the soaked chiles with the chipotles, tomatoes, onion, garlic, oregano and [[½ cup]] water until smooth. Strain.",
+    "Heat the butter and oil in a wide pan. Pour in the sauce and fry it 6–8 minutes, stirring, until it darkens and thickens. Season with salt.",
+    "Add the shrimp in one layer and cook 2–3 minutes per side, until pink and curled.",
+    "Serve right away with rice, lime and bolillo."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Shrimp need only a few minutes in the pan.",
+  "tips": [
+    "Set the heat with the chiles de árbol: 4 is spicy, 8 is a la diabla.",
+    "Don't crowd the pan, and pull the shrimp as soon as they curl into a C. An O means overcooked."
+  ],
+  "variations": [
+    {
+      "name": "Camarones al Mojo de Ajo",
+      "subtitle": "Garlic butter shrimp",
+      "region": "All along the coast",
+      "note": "The mild one at the seafood restaurant: shrimp in golden garlic, butter and lime.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1½ lb large shrimp, peeled",
+            "8 garlic cloves, minced",
+            "3 tbsp butter",
+            "2 tbsp oil",
+            "1 chile guajillo, cut in thin rings, optional",
+            "1 lime, juiced",
+            "Chopped parsley or cilantro",
+            "Salt, to taste"
+          ]
+        }
+      ],
+      "steps": [
+        "Warm the oil and butter over low heat and cook the garlic and guajillo slowly, 5–6 minutes, until the garlic is golden. Don't let it burn.",
+        "Raise the heat, add the shrimp and cook 2–3 minutes per side.",
+        "Add the lime juice, salt and parsley, toss and serve with rice."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

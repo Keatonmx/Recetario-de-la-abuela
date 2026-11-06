@@ -1,0 +1,82 @@
+{
+  "id": "cafe-de-olla",
+  "subtitle": "Café de olla de barro con piloncillo y canela",
+  "verso": "Café de olla y pan dulce: la tarde no pide más.",
+  "region": "Centro · Sur",
+  "servings": "4 tazas",
+  "story": "Café hecho en olla de barro con piloncillo y canela. La historia popular cuenta que las Adelitas de la Revolución lo preparaban para las tropas. El café llegó a México apenas en el siglo XVIII, así que no es prehispánico, pero es el que la abuela todavía sirve con pan dulce.",
+  "ingredients": [
+    {
+      "title": "El café",
+      "items": [
+        "4 tazas de agua",
+        "3 oz de piloncillo, picado o rallado (o ⅓ taza de azúcar morena oscura)",
+        "1 raja de canela",
+        "½ taza de café de tueste oscuro, molido grueso (mexicano, de Veracruz, Chiapas u Oaxaca, si puedes)",
+        "2 clavos de olor enteros, opcional",
+        "1 tira de cáscara de naranja, opcional",
+        "1 anís estrella, opcional"
+      ]
+    }
+  ],
+  "steps": [
+    "Pon el agua, el piloncillo, la canela y las especias que uses en una olla de barro o una cacerola. Deja que hierva y cocina hasta que el piloncillo se disuelva, unos 5 minutos.",
+    "Apaga el fuego. Agrega el café, revuelve, tapa y deja reposar 5 minutos.",
+    "Cuela con un colador fino o con una manta de cielo.",
+    "Sirve bien caliente en jarritos de barro o en tazas, con pan dulce."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Son solo 15 minutos de reposo.",
+  "tips": [
+    "No dejes que el café siga hirviendo. Agrégalo ya fuera del fuego, o deja que suelte el hervor una sola vez y apágalo; el café hervido se amarga.",
+    "Compra ollas y jarritos marcados Sin Plomo. La prueba de Profeco: remoja parte de la pieza en vinagre blanco durante 24 horas; si el vidriado se pone opaco o áspero, no cocines en ella.",
+    "La olla de barro le da al café su sabor a tierra. Cura una nueva hirviendo agua en ella varias veces antes del primer café.",
+    "Usa café molido grueso, como para prensa francesa, para que cuele limpio."
+  ],
+  "variations": [
+    {
+      "name": "Chocolate Caliente",
+      "subtitle": "Chocolate caliente mexicano",
+      "region": "Oaxaca · Centro",
+      "note": "En Oaxaca se hace con agua; en casi todos los demás lugares, con leche. Se bate con molinillo hasta que haga espuma.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 tazas de leche entera o agua",
+            "1 tableta (3 oz) de chocolate mexicano, picada",
+            "1 raja de canela",
+            "Una pizca de sal"
+          ]
+        }
+      ],
+      "steps": [
+        "Calienta la leche (o el agua) con la canela y la sal hasta que eche vapor. No dejes que se derrame.",
+        "Agrega el chocolate y bate hasta que se derrita.",
+        "Saca la canela y bate con el molinillo, frotándolo entre las palmas, o con un batidor, hasta que se haga espuma encima.",
+        "Sirve de inmediato con pan dulce."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Café con Leche",
+      "subtitle": "Café con leche caliente",
+      "region": "Toda la República",
+      "note": "Mitad café, mitad leche caliente, para remojar las conchas.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 tazas de café de olla",
+            "2 tazas de leche entera"
+          ]
+        }
+      ],
+      "steps": [
+        "Calienta la leche hasta que eche vapor.",
+        "Sirve mitad café y mitad leche en cada taza y endulza al gusto."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

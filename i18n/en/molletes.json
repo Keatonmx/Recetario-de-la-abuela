@@ -1,0 +1,96 @@
+{
+  "id": "molletes",
+  "subtitle": "Open-face bean and cheese bolillos",
+  "verso": "Bolillo, beans and cheese: the recess breakfast, if you please.",
+  "region": "Ciudad de México · Central Mexico",
+  "servings": "4 servings",
+  "story": "Bolillos split open, toasted with butter, spread with refried beans and broiled under melted cheese, then topped with cold pico de gallo. The breakfast of cafés and school mornings in the capital, and the best use for yesterday's bread.",
+  "ingredients": [
+    {
+      "title": "Molletes",
+      "items": [
+        "4 bolillos (day-old is fine), or crusty French rolls",
+        "3 tbsp soft butter",
+        "2 cups frijoles refritos, warm and thick",
+        "2 cups shredded melting cheese: queso Chihuahua, manchego mexicano or Oaxaca"
+      ]
+    },
+    {
+      "title": "Pico de gallo",
+      "items": [
+        "2 Roma tomatoes, finely diced",
+        "¼ white onion, finely diced",
+        "1 serrano, minced",
+        "¼ cup chopped cilantro",
+        "Juice of 1 lime",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Salsa verde or salsa roja",
+        "Sliced avocado, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the broiler (or the oven to 425°F). Mix all the pico de gallo ingredients and let stand while you make the molletes.",
+    "Split the bolillos lengthwise. Pull out a little of the soft crumb so the beans have room.",
+    "Butter the cut sides and toast them, cut side up, 2–3 minutes until the edges are golden.",
+    "Spread each half generously with refritos, edge to edge so the bread doesn't burn.",
+    "Cover with cheese and broil 2–4 minutes, until melted and bubbling in spots.",
+    "Top with pico de gallo and serve with salsa on the side."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version for the molletes themselves, but the beans can come from the pressure cooker (see Frijoles de la Olla, then Frijoles Refritos).",
+  "tips": [
+    "The refritos should be thick enough to hold a line. Runny beans make soggy bread.",
+    "Butter first, then toast, then beans. That way the bread stays crisp underneath."
+  ],
+  "variations": [
+    {
+      "name": "Molletes con Chorizo",
+      "subtitle": "Molletes with chorizo",
+      "region": "Central Mexico",
+      "note": "The most common add-on at fondas.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Everything from the base",
+            "6 oz Mexican chorizo, casing removed"
+          ]
+        }
+      ],
+      "steps": [
+        "Fry the chorizo, breaking it up, until crisp. Drain off most of the fat (or fry the beans in it).",
+        "Spread the beans on the toasted bread, scatter chorizo over them, add the cheese and broil.",
+        "Top with pico de gallo."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Molletes Dulces",
+      "subtitle": "Butter, sugar and cinnamon molletes",
+      "region": "Central Mexico",
+      "note": "The sweet version kids ask for, with a cup of café con leche or champurrado.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 bolillos, split",
+            "4 tbsp soft butter",
+            "¼ cup sugar mixed with 1 tsp ground cinnamon"
+          ]
+        }
+      ],
+      "steps": [
+        "Butter the cut sides generously.",
+        "Sprinkle with the cinnamon sugar.",
+        "Broil 2–3 minutes, until the sugar melts and bubbles. Watch closely; it burns fast."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

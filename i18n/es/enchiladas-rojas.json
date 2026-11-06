@@ -1,0 +1,84 @@
+{
+  "id": "enchiladas-rojas",
+  "subtitle": "Enchiladas de chile rojo con queso fresco",
+  "verso": "Pásala por el chile y dórala al momento: así se hace el sustento.",
+  "region": "Guanajuato · Centro",
+  "servings": "4–6 personas",
+  "story": "Tortillas pasadas por chile rojo, fritas y enrolladas con queso y cebolla. En Guanajuato llevan encima papas y zanahorias fritas: son las enchiladas mineras, que dicen que eran lo que las esposas de los mineros les subían a las minas. En Real del Monte, Hidalgo, las mineras se hacen con salsa verde.",
+  "ingredients": [
+    {
+      "title": "La salsa",
+      "items": [
+        "6 chiles guajillo",
+        "2 chiles ancho",
+        "2 dientes de ajo",
+        "¼ de cebolla blanca",
+        "½ cucharadita de orégano mexicano",
+        "Una pizca de comino",
+        "2 tazas de caldo o del agua de remojo",
+        "1 cucharada de manteca",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Las enchiladas",
+      "items": [
+        "12 tortillas de maíz",
+        "Aceite o manteca para freír",
+        "2 tazas de queso fresco desmoronado (o queso ranchero)",
+        "1 cebolla blanca, finamente picada"
+      ]
+    },
+    {
+      "title": "Encima",
+      "items": [
+        "2 papas y 2 zanahorias, en cubitos y cocidas",
+        "Lechuga picada",
+        "Chiles en vinagre (jalapeños con zanahoria)",
+        "Crema, opcional",
+        "Una pieza de pollo frito, opcional"
+      ]
+    }
+  ],
+  "steps": [
+    "Tuesta y remoja los chiles. Lícualos con el ajo, la cebolla, el orégano, el comino y [[2 tazas]] de líquido. Cuela.",
+    "Fríe la salsa en la manteca 5 minutos y sazona. Debe quedar más o menos tan espesa como la crema. Mantenla caliente.",
+    "Mezcla el queso con la cebolla para el relleno, y aparta un poco para encima.",
+    "Calienta ½ pulgada de aceite en un sartén. Pasa cada tortilla por la salsa caliente y luego fríela 10 segundos por lado. (Para que salpique menos, fríela primero y luego pásala por la salsa.)",
+    "Rellénalas de queso y cebolla, enróllalas y acomódalas en un plato.",
+    "Fríe las papas y las zanahorias cocidas en el mismo aceite hasta que se doren.",
+    "Ponles encima más salsa, las papas y zanahorias, la lechuga, los chiles en vinagre, la crema y el resto del queso."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Las enchiladas se hacen en el sartén, una tortilla a la vez.",
+  "tips": [
+    "Trabaja rápido y sirve de inmediato. A las enchiladas no les gusta esperar."
+  ],
+  "variations": [
+    {
+      "name": "Enfrijoladas",
+      "subtitle": "Tortillas bañadas en salsa de frijol negro",
+      "region": "Oaxaca",
+      "note": "Tortillas bañadas en una salsa sazonada de frijol negro en lugar de chile.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "3 tazas de frijoles negros de la olla con su caldo",
+            "1 chile pasilla o chipotle, tostado",
+            "2 hojas de aguacate secas, tostadas",
+            "12 tortillas de maíz",
+            "Queso fresco, crema y cebolla; pollo deshebrado, opcional"
+          ]
+        }
+      ],
+      "steps": [
+        "Licúa los frijoles con su caldo, el chile y las hojas de aguacate hasta que quede terso, como una crema ligera.",
+        "Deja hervir a fuego bajo 5 minutos y sazona.",
+        "Fríe las tortillas ligeramente, pásalas por la salsa de frijol y dóblalas en cuartos o rellénalas de queso o pollo.",
+        "Ponles encima crema, queso y cebolla."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

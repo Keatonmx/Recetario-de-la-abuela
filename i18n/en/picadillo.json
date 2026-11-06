@@ -1,0 +1,68 @@
+{
+  "id": "picadillo",
+  "subtitle": "Ground beef with potato and carrot",
+  "verso": "Grandma's picadillo: it stretches, it fills, it consoles.",
+  "region": "All of Mexico",
+  "servings": "6 servings",
+  "story": "Ground meat cooked with tomato, potato and carrot. Every family has its own, and it fills tacos dorados, gorditas, empanadas and chiles rellenos.",
+  "ingredients": [
+    {
+      "title": "Picadillo",
+      "items": [
+        "1½ lb ground beef (or half beef, half pork)",
+        "2 tbsp oil",
+        "½ white onion, chopped",
+        "2 garlic cloves, minced",
+        "3 Roma tomatoes, blended",
+        "2 potatoes, in small cubes",
+        "2 carrots, in small cubes",
+        "½ cup peas, optional",
+        "1 serrano, minced, optional",
+        "½ tsp ground cumin",
+        "1 tsp salt and ¼ tsp pepper",
+        "1 cup water or broth"
+      ]
+    }
+  ],
+  "steps": [
+    "Brown the meat in the oil, breaking it up, until no pink remains. Spoon off the extra fat.",
+    "Add the onion, garlic and serrano and cook 3 minutes.",
+    "Add the tomato, cumin, salt and pepper and cook 5 minutes.",
+    "Add the potatoes, carrots and water. Cover and simmer 15 minutes until tender, adding the peas for the last 5.",
+    "Serve with rice, beans and tortillas, or use it as a filling."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Picadillo is done in 40 minutes in a skillet, and the browning is where the flavor comes from.",
+  "tips": [
+    "Cut the potatoes and carrots small, about the size of a pea, so every bite gets some."
+  ],
+  "variations": [
+    {
+      "name": "Picadillo de Fiesta",
+      "subtitle": "Sweet-savory festive picadillo",
+      "region": "Puebla",
+      "note": "The fruit-and-nut filling for chiles en nogada, made July to September when the orchards around Puebla bear fruit. More work, and very good.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 lb ground pork plus ½ lb ground beef",
+            "½ onion and 2 garlic cloves, chopped; 3 tomatoes, blended",
+            "1 ripe plantain, 1 pear (pera de leche), 1 peach (durazno criollo) and 1 apple (manzana panochera), all diced small",
+            "¼ cup raisins and ¼ cup slivered almonds",
+            "¼ cup candied pineapple (real acitrón comes from a protected cactus)",
+            "½ tsp cinnamon and a pinch of cloves",
+            "Salt and 1 tsp sugar"
+          ]
+        }
+      ],
+      "steps": [
+        "Brown the meat with the onion and garlic.",
+        "Add the tomato and cook 5 minutes.",
+        "Add the apple first, then the pear and peach, then the plantain, nuts, raisins, candied fruit and spices. Cook 15 minutes, until the fruit is tender but holds its shape.",
+        "Season with salt and a little sugar. Use to stuff roasted poblanos."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

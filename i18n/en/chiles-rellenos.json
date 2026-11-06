@@ -1,0 +1,79 @@
+{
+  "id": "chiles-rellenos",
+  "subtitle": "Cheese-stuffed poblanos in egg batter",
+  "verso": "Battered the way God intended: fluffy and never greasy.",
+  "region": "Puebla",
+  "servings": "6 chiles",
+  "story": "Roasted poblanos stuffed with cheese, wrapped in a fluffy egg batter, fried, and served in a thin tomato broth. They take patience. Grandma's are light and puffy, never greasy.",
+  "ingredients": [
+    {
+      "title": "Chiles",
+      "items": [
+        "6 large poblano chiles, flat and straight",
+        "12 oz queso Oaxaca, Chihuahua or asadero, cut in sticks",
+        "Toothpicks"
+      ]
+    },
+    {
+      "title": "Capeado (batter)",
+      "items": [
+        "5 eggs, separated, at room temperature",
+        "Pinch of salt",
+        "½ cup flour, for dusting",
+        "Oil for frying, about 1 inch deep"
+      ]
+    },
+    {
+      "title": "Caldillo",
+      "items": [
+        "5 Roma tomatoes",
+        "¼ white onion",
+        "1 garlic clove",
+        "1 cup chicken broth",
+        "1 tbsp oil",
+        "1 bay leaf",
+        "Salt, to taste"
+      ]
+    }
+  ],
+  "steps": [
+    "Roast the poblanos directly over a gas flame (or under the broiler), turning, until blackened all over.",
+    "Put them in a bowl, cover with a plate or a plastic bag, and let them sweat 10 minutes.",
+    "Peel off the charred skin with your fingers. Don't rinse them, or you'll wash away the flavor. Cut a slit down one side and carefully pull out the seeds, leaving the stem on.",
+    "Stuff each chile with cheese and close the slit with a toothpick.",
+    "Make the caldillo: blend the tomatoes, onion and garlic, fry in the oil 5 minutes, add the broth and bay leaf, and simmer 10 minutes. It should be thin. Season.",
+    "Beat the egg whites with the salt to stiff peaks. Beat in the yolks one at a time, just until mixed.",
+    "Heat the oil to 350°F. Dust each chile with flour, shake off the extra, and dip in the batter to coat.",
+    "Fry 2–3 minutes per side, spooning hot oil over the top, until golden. Drain on paper towels and pull out the toothpicks.",
+    "Set the chiles in the hot caldillo for a minute and serve with arroz rojo and beans."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. This one belongs to the open flame and the skillet.",
+  "tips": [
+    "The flour is what makes the batter stick. Don't skip it.",
+    "Pick poblanos that are smooth and flat. They roast and peel evenly."
+  ],
+  "variations": [
+    {
+      "name": "Rellenos de Picadillo",
+      "subtitle": "Picadillo-stuffed chiles",
+      "region": "Northern Mexico · Puebla",
+      "note": "Stuffed with picadillo instead of cheese.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "6 roasted, peeled poblanos",
+            "3 cups picadillo (see Picadillo)",
+            "Batter and caldillo from the base"
+          ]
+        }
+      ],
+      "steps": [
+        "Fill the chiles with picadillo instead of cheese.",
+        "Batter, fry and serve in caldillo as in the base."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

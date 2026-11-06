@@ -1,0 +1,80 @@
+{
+  "id": "flan",
+  "subtitle": "Milk and egg caramel custard",
+  "verso": "It wobbles and wobbles, but it never falls: that's grandma's flan.",
+  "region": "All of Mexico",
+  "servings": "8 slices",
+  "story": "The old-style flan: whole milk infused with cinnamon and lime peel, plus eggs and sugar, baked in a water bath under a layer of dark caramel.",
+  "ingredients": [
+    {
+      "title": "Caramel",
+      "items": [
+        "¾ cup sugar",
+        "2 tbsp water"
+      ]
+    },
+    {
+      "title": "Flan",
+      "items": [
+        "4 cups whole milk",
+        "¾ cup sugar",
+        "1 stick Mexican cinnamon",
+        "1 strip lime peel",
+        "6 eggs plus 3 yolks",
+        "1 tsp vanilla"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the milk with the sugar, cinnamon and lime peel until steaming. Turn off the heat and steep 15 minutes. Remove the cinnamon and peel and let cool until warm.",
+    "Make the caramel: cook the sugar and water in a small pan without stirring, swirling the pan, until deep amber. Pour into an 8- or 9-inch flan mold and tilt to coat the bottom.",
+    "Whisk the eggs and yolks gently. You don't want bubbles. Slowly whisk in the warm milk and the vanilla. Strain into the mold.",
+    "Cover with foil. Set the mold in a larger pan and pour in hot water halfway up the sides (a water bath).",
+    "Bake at 350°F 50–60 minutes, until the edges are set and the center jiggles like gelatin.",
+    "Cool, then chill at least 6 hours, ideally overnight.",
+    "Run a knife around the edge, put a plate on top and flip it in one quick move."
+  ],
+  "pressureCooker": {
+    "time": "9 min high pressure + 10 min natural release (ramekins)",
+    "total": "35 min + chilling",
+    "steps": [
+      "Make the custard and caramel as above, but divide among 6 heatproof ramekins that fit in your pot. Cover each with foil.",
+      "Put the trivet in the pot with 1½ cups water and stack the ramekins on it.",
+      "High pressure 9 minutes, natural release 10.",
+      "Cool, then chill at least 4 hours before unmolding."
+    ],
+    "note": "For one mold that fits your pot, time depends on its size and depth. In a stovetop olla exprés, Mexican cooks count about 10–15 minutes from the whistle for the classic and about 25 for napolitano. In an electric pot, start at 15–20 minutes for the classic and 25 for napolitano, then check: the center should jiggle, not slosh."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Strain the custard. That's what makes a flan smooth, with no holes.",
+    "Low and slow. An oven that's too hot gives a spongy flan full of bubbles."
+  ],
+  "variations": [
+    {
+      "name": "Flan Napolitano",
+      "subtitle": "Cream cheese flan",
+      "region": "All of Mexico",
+      "note": "The popular modern flan: richer, denser and blended in a minute. Most families make this one now, and they argue about whether it needs cream cheese.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Caramel from the base",
+            "1 can (14 oz) sweetened condensed milk",
+            "1 can (12 oz) evaporated milk",
+            "4 oz cream cheese, softened",
+            "5 eggs",
+            "1 tsp vanilla"
+          ]
+        }
+      ],
+      "steps": [
+        "Blend everything 1 minute.",
+        "Pour over the caramel, cover, and bake in a water bath at 350°F 50–60 minutes.",
+        "Chill overnight and unmold."
+      ],
+      "pressureNote": "Same as the base: ramekins at high pressure 9 minutes, natural release 10."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "champurrado",
+  "subtitle": "Atole de chocolate con masa",
+  "verso": "Champurrado y tamal, ¡ni el frío nos hace mal!",
+  "region": "Centro · Oaxaca",
+  "servings": "6 tazas",
+  "story": "Un atole espeso de chocolate hecho con masa, endulzado con piloncillo y batido con molinillo de madera. Es para las mañanas frías, las posadas y el Día de Muertos, con tamales.",
+  "ingredients": [
+    {
+      "title": "El champurrado",
+      "items": [
+        "½ taza de harina de maíz nixtamalizado (o 4 oz de masa fresca)",
+        "2 tazas de agua tibia",
+        "4 tazas de agua (como se hace tradicionalmente), leche, o mitad agua y mitad leche",
+        "1 tableta (3 oz) de chocolate mexicano, picada (chocolate de metate, si lo encuentras)",
+        "3–4 oz de piloncillo, rallado (o ⅓ taza de azúcar morena)",
+        "1 raja de canela",
+        "Una pizca de sal",
+        "¼ cucharadita de anís en grano, opcional"
+      ]
+    }
+  ],
+  "steps": [
+    "Bate la masa con el agua tibia hasta que no queden grumos. Cuélala.",
+    "En una olla, hierve a fuego bajo el agua o la leche con la canela, el piloncillo, la sal y el anís durante 10 minutos.",
+    "Agrega el chocolate y bate hasta que se derrita.",
+    "Vierte la mezcla de masa poco a poco, sin dejar de batir.",
+    "Cocina a fuego bajo, moviendo sin parar, 10 minutos, hasta que espese lo bastante para cubrir una cuchara. Saca la canela.",
+    "Bátelo con el molinillo, frotándolo entre las palmas, o con un batidor. Sirve caliente."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El atole hay que moverlo todo el tiempo, y la masa se quema a presión.",
+  "tips": [
+    "No dejes de mover. La masa se pega al fondo y se quema rápido."
+  ],
+  "variations": [
+    {
+      "name": "Atole Blanco con Canela",
+      "subtitle": "Atole de masa con canela",
+      "region": "Centro",
+      "note": "El atole sencillo que está detrás de todos los atoles de sabor.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "½ taza de harina de maíz nixtamalizado",
+            "6 tazas de agua o leche",
+            "1 raja de canela",
+            "½ taza de azúcar o piloncillo",
+            "1 cucharadita de vainilla"
+          ]
+        }
+      ],
+      "steps": [
+        "Disuelve la masa en [[2 tazas]] del líquido y cuélala.",
+        "Hierve a fuego bajo el resto del líquido con la canela y el azúcar.",
+        "Agrega la masa batiendo y cocina, moviendo, 10 minutos, hasta que espese. Agrega la vainilla."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

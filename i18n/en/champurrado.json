@@ -1,0 +1,62 @@
+{
+  "id": "champurrado",
+  "subtitle": "Chocolate masa atole",
+  "verso": "Champurrado and a tamal: the cold can't hurt us at all!",
+  "region": "Central Mexico · Oaxaca",
+  "servings": "6 cups",
+  "story": "A thick chocolate atole made with masa, sweetened with piloncillo and frothed with a wooden molinillo. It's for cold mornings, posadas and Día de Muertos, with tamales.",
+  "ingredients": [
+    {
+      "title": "Champurrado",
+      "items": [
+        "½ cup masa harina (or 4 oz fresh masa)",
+        "2 cups warm water",
+        "4 cups water (the traditional way), milk, or half and half",
+        "1 tablet (3 oz) Mexican chocolate, chopped (chocolate de metate if you can find it)",
+        "3–4 oz piloncillo, grated (or ⅓ cup brown sugar)",
+        "1 stick Mexican cinnamon",
+        "Pinch of salt",
+        "¼ tsp anise seed, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Whisk the masa into the warm water until there are no lumps. Strain.",
+    "In a pot, simmer the water or milk with the cinnamon, piloncillo, salt and anise for 10 minutes.",
+    "Add the chocolate and whisk until melted.",
+    "Pour in the masa mixture slowly, whisking constantly.",
+    "Simmer on low, stirring constantly, 10 minutes until thick enough to coat a spoon. Take out the cinnamon.",
+    "Froth with a molinillo, rolling it between your palms, or with a whisk. Serve hot."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Atole needs constant stirring, and masa scorches under pressure.",
+  "tips": [
+    "Keep stirring. Masa sticks to the bottom and burns fast."
+  ],
+  "variations": [
+    {
+      "name": "Atole Blanco con Canela",
+      "subtitle": "Cinnamon masa atole",
+      "region": "Central Mexico",
+      "note": "The plain atole underneath every flavored one.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "½ cup masa harina",
+            "6 cups water or milk",
+            "1 stick Mexican cinnamon",
+            "½ cup sugar or piloncillo",
+            "1 tsp vanilla"
+          ]
+        }
+      ],
+      "steps": [
+        "Dissolve the masa in [[2 cups]] of the liquid and strain.",
+        "Simmer the rest of the liquid with the cinnamon and sugar.",
+        "Whisk in the masa and cook, stirring, 10 minutes until thick. Add the vanilla."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

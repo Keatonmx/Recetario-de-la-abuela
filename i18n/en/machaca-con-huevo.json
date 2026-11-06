@@ -1,0 +1,95 @@
+{
+  "id": "machaca-con-huevo",
+  "subtitle": "Dried shredded beef scrambled with eggs",
+  "verso": "Dried beef and eggs scrambled through, in a flour tortilla wrapped for you.",
+  "region": "Sonora · Chihuahua · Nuevo León",
+  "servings": "3 servings",
+  "story": "Machaca is beef that was salted, sun-dried and pounded so it would keep for months on the ranches of the north. A small handful fried with onion, tomato and chile and scrambled with eggs makes a breakfast wrapped in flour tortillas, the tortilla of the north.",
+  "ingredients": [
+    {
+      "title": "Machaca",
+      "items": [
+        "1 cup (about 2 oz) machaca (dried shredded beef, sold in bags at Mexican markets, or see Machaca Casera)",
+        "6 eggs",
+        "1 tbsp lard or oil",
+        "½ white onion, chopped",
+        "1 Roma tomato, chopped",
+        "1–2 jalapeños or serranos, chopped, or 1 roasted chile verde (Anaheim), in strips, the Sonora way",
+        "Salt, only if needed"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Warm flour tortillas",
+        "Frijoles de la olla or refritos",
+        "Salsa roja or chiltepín salsa"
+      ]
+    }
+  ],
+  "steps": [
+    "If your machaca is in big strands, pull it apart with your fingers. Taste a piece. If it's very salty or hard, soak it in warm water 5 minutes and squeeze it dry.",
+    "Heat the lard in a skillet over medium. Fry the machaca 1–2 minutes, stirring, until it smells toasty and crisps a little.",
+    "Add the onion and chile and cook 3 minutes until soft. Add the tomato and cook 2 minutes more.",
+    "Beat the eggs lightly without salt; the machaca is already salty.",
+    "Pour the eggs into the pan and stir gently over medium-low until just set, still soft and moist.",
+    "Taste, add salt only if needed, and serve right away with flour tortillas, beans and salsa."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "The eggs are a quick skillet job, but you can make the machaca itself in the pressure cooker. See Machaca Casera under Variations.",
+  "tips": [
+    "Go easy on the salt. Taste the machaca first; most of it is salted.",
+    "In Monterrey they call this machacado con huevo and make it with more tomato and chile, almost saucy. Nuevo León traces it to Ciénega de Flores, where Tía Lencha fed it to road crews in the 1920s.",
+    "Leftover machaca keeps for weeks in a jar in the fridge."
+  ],
+  "variations": [
+    {
+      "name": "Machaca Casera",
+      "subtitle": "Homemade dried beef",
+      "region": "Sonora · Northern Mexico",
+      "note": "Real sun-dried machaca is hard to find outside the north. This oven-dried version gets close.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb beef flank or skirt steak, in 3 pieces",
+            "½ onion and 3 garlic cloves",
+            "1 tbsp salt, plus more to taste",
+            "Juice of 1 lime",
+            "½ tsp black pepper"
+          ]
+        }
+      ],
+      "steps": [
+        "Simmer the beef with the onion, garlic, salt and water to cover 2 hours, until it shreds easily.",
+        "Drain and shred it very finely with two forks or your fingers.",
+        "Toss with the lime juice, pepper and a little more salt.",
+        "Spread thinly on sheet pans and dry in a 200°F oven 2–3 hours, stirring every 30 minutes, until dry and leathery but not burnt.",
+        "Pound it in a molcajete or pulse briefly in a food processor until it's fluffy and fine. Store in a jar in the fridge."
+      ],
+      "pressureNote": "Cook the beef with the onion, garlic, salt and 2 cups water at high pressure 35 minutes, natural release 15. Then shred, season and oven-dry as above."
+    },
+    {
+      "name": "Burritos de Machaca",
+      "subtitle": "Machaca breakfast burritos",
+      "region": "Sonora · Chihuahua",
+      "note": "In Sonora and Ciudad Juárez burritos are slim and simple, just a filling and a thin flour tortilla. No rice inside.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Machaca con huevo from the base",
+            "Large thin flour tortillas (sobaqueras if you can find them)",
+            "Frijoles refritos, optional"
+          ]
+        }
+      ],
+      "steps": [
+        "Warm the tortillas on the comal until soft and spotted.",
+        "Spread a thin line of beans if using, add a line of machaca con huevo, and roll tightly.",
+        "Set seam side down on the comal 30 seconds to seal. Eat with salsa."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

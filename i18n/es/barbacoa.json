@@ -1,0 +1,92 @@
+{
+  "id": "barbacoa",
+  "subtitle": "Cachete de res cocido despacio al vapor",
+  "verso": "Domingo sin barbacoa, domingo que no se goza.",
+  "region": "Norte · Hidalgo",
+  "servings": "8 personas",
+  "story": "En Hidalgo, la barbacoa es borrego envuelto en pencas de maguey y cocido toda la noche en un hoyo, con una olla debajo que recoge el jugo para el consomé. Esta versión casera cuece la res al vapor con hojas de aguacate. La barbacoa es el almuerzo dominguero: en el norte, las familias compran cachete, lengua y cabeza por kilo los domingos en la mañana.",
+  "ingredients": [
+    {
+      "title": "La carne",
+      "items": [
+        "3 lb de cachete de res, o diezmillo en trozos grandes",
+        "1 cucharada de sal",
+        "1 cucharadita de pimienta negra",
+        "1 cucharadita de comino molido",
+        "6 dientes de ajo, machacados",
+        "1 cebolla blanca, en cuartos",
+        "3 hojas de laurel",
+        "6 hojas de aguacate secas, tostadas (o 1 cucharadita de anís en grano)",
+        "4 tazas de agua, para el vapor",
+        "Hojas de plátano, opcional, para envolver"
+      ]
+    },
+    {
+      "title": "Consomé",
+      "items": [
+        "1 taza de garbanzos cocidos",
+        "¼ taza de arroz",
+        "1 zanahoria, en cubitos",
+        "Cebolla picada, cilantro, limón y salsa"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Salsa borracha (ver Variantes)",
+        "Tortillas de maíz"
+      ]
+    }
+  ],
+  "steps": [
+    "Unta la carne con la sal, la pimienta, el comino y el ajo. Déjala reposar 1 hora, o toda la noche en el refrigerador.",
+    "Pon una rejilla o una canastilla vaporera en una olla alta con 4 tazas de agua, la cebolla y las hojas de laurel debajo.",
+    "Acomoda hojas de plátano sobre la rejilla si las tienes, agrega las hojas de aguacate y la carne, y dobla las hojas de plátano encima.",
+    "Tapa bien y cuece al vapor a fuego bajo 4–5 horas, agregando agua caliente cuando haga falta, hasta que la carne se deshebre fácilmente.",
+    "Deshebra la carne. Para el consomé, cuela el líquido que quedó debajo de la rejilla, agrega los garbanzos, el arroz y la zanahoria, y deja hervir a fuego bajo 20 minutos.",
+    "Sirve la barbacoa en tortillas con salsa, y el consomé en una taza aparte con cebolla picada, cilantro y limón."
+  ],
+  "pressureCooker": {
+    "time": "65 min a presión alta + 20 min de liberación natural",
+    "total": "1 h 40",
+    "steps": [
+      "Sazona la carne. Pon en la olla la cebolla, las hojas de laurel, las hojas de aguacate y 1½ tazas de agua, y agrega la carne.",
+      "Presión alta 65 minutos, liberación natural 20.",
+      "Deshebra la carne con un poco del líquido.",
+      "Cuela el líquido que sobró, agrega los garbanzos, el arroz y la zanahoria, y cocina en la función Saltear 15 minutos para hacer el consomé."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Las hojas de aguacate mexicano saben a anís. Tuéstalas unos segundos en el comal antes de usarlas.",
+    "El cachete está lleno de colágeno. No le quites demasiado o perderás esa textura sedosa."
+  ],
+  "variations": [
+    {
+      "name": "Salsa Borracha",
+      "subtitle": "Salsa de chile pasilla con cerveza o pulque",
+      "region": "Hidalgo",
+      "note": "La compañera clásica de la barbacoa, hecha tradicionalmente con pulque.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "6 chiles pasilla",
+            "2 dientes de ajo",
+            "¼ de cebolla blanca",
+            "½ taza de pulque o cerveza clara mexicana",
+            "Sal, al gusto",
+            "Queso añejo desmoronado y cebolla picada, para terminar"
+          ]
+        }
+      ],
+      "steps": [
+        "Tuesta los pasillas un momento y remójalos 10 minutos.",
+        "Muélelos en el molcajete o licúalos con el ajo, la cebolla, la cerveza y la sal. Déjala un poco martajada.",
+        "Termina con queso añejo y cebolla picada."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

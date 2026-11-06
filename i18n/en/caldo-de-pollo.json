@@ -1,0 +1,92 @@
+{
+  "id": "caldo-de-pollo",
+  "subtitle": "Chicken soup",
+  "verso": "For the flu and for heartbreak, a little soup is the best thing you can make.",
+  "region": "All of Mexico",
+  "servings": "6 servings",
+  "story": "The soup for colds, for heartbreak and for Sundays. Grandma used an old laying hen, which has more flavor than a young chicken. The broth should be clear and golden.",
+  "ingredients": [
+    {
+      "title": "The broth",
+      "items": [
+        "1 whole chicken (or stewing hen), cut in pieces, skin on",
+        "½ white onion",
+        "3 garlic cloves",
+        "1 Roma tomato",
+        "1 celery stalk, optional",
+        "3 quarts water",
+        "2 tsp salt"
+      ]
+    },
+    {
+      "title": "The vegetables",
+      "items": [
+        "2 carrots, in rounds",
+        "2 potatoes, in chunks",
+        "1 chayote, in wedges",
+        "2 zucchini, in chunks",
+        "½ cup cooked chickpeas, optional",
+        "Handful of cilantro"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Limes, chopped onion and cilantro, serrano",
+        "Diced avocado",
+        "Arroz rojo or white rice"
+      ]
+    }
+  ],
+  "steps": [
+    "Put the chicken, onion, garlic, tomato and celery in a pot with the water. Bring to a boil and skim well.",
+    "Add the salt and simmer gently 40 minutes (1½–2 hours for a hen). Keep it at a lazy bubble so the broth stays clear.",
+    "Remove the tomato and onion. Add the carrots and potatoes and cook 10 minutes. Add the chayote, zucchini and chickpeas and cook 8 minutes.",
+    "Add the cilantro off the heat. Serve with lime, onion, chile, avocado and rice."
+  ],
+  "pressureCooker": {
+    "time": "15 min high pressure + 10 min natural release",
+    "total": "35 min",
+    "steps": [
+      "Put the chicken, aromatics, salt and [[2½ quarts]] water in the pot. High pressure 15 minutes (30 for a hen), natural release 10.",
+      "Remove the aromatics. Add the carrots, potatoes and chayote. High pressure 2 minutes, quick release.",
+      "On Sauté, add the zucchini and chickpeas for 4 minutes. Finish with cilantro."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Once the foam is skimmed, never let it boil hard or the broth turns cloudy.",
+    "Add a handful of rice or fideo to the pot for a heartier soup."
+  ],
+  "variations": [
+    {
+      "name": "Caldo Tlalpeño",
+      "subtitle": "Smoky chipotle chicken soup",
+      "region": "Tlalpan, Ciudad de México",
+      "note": "A chipotle chicken soup named for Tlalpan, in the south of the capital. Local legend says it was made for Santa Anna as a hangover cure, and Tlalpan still holds a Festival del Caldo Tlalpeño.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Broth and shredded chicken from the base",
+            "2 chipotles en adobo (or 2 dried chipotles, toasted and soaked)",
+            "2 Roma tomatoes, ¼ onion, 1 garlic clove",
+            "1 tbsp oil",
+            "1 cup cooked chickpeas",
+            "2 carrots, diced, and ½ lb green beans, cut",
+            "2 sprigs epazote",
+            "To serve: avocado, cubes of queso panela or Oaxaca, lime"
+          ]
+        }
+      ],
+      "steps": [
+        "Shred the chicken from the base, discarding the skin and bones. Blend the tomatoes, onion, garlic and chipotle with a cup of broth and fry in the oil 5 minutes.",
+        "Add to the broth with the carrots and chickpeas and simmer 10 minutes.",
+        "Add the green beans, epazote and shredded chicken and simmer 5 minutes.",
+        "Serve over cubes of cheese and avocado, with lime."
+      ],
+      "pressureNote": "Use the base pressure steps and add the chipotle sauce with the carrots."
+    }
+  ]
+}

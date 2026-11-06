@@ -1,0 +1,84 @@
+{
+  "id": "salsa-roja",
+  "subtitle": "Salsa de jitomate asado",
+  "verso": "Sin salsa no hay taco, y sin molcajete no hay salsa.",
+  "region": "Centro",
+  "servings": "1½ tazas",
+  "story": "Asada en el comal y molida en el molcajete de piedra volcánica. Martajada, ahumada y en la mesa en cada comida.",
+  "ingredients": [
+    {
+      "title": "La salsa",
+      "items": [
+        "4 jitomates guaje",
+        "2–3 chiles serranos (o 4 chiles de árbol, tostados)",
+        "2 dientes de ajo, sin pelar",
+        "¼ de cebolla blanca, en un solo trozo",
+        "Sal de grano",
+        "2–4 cucharadas de agua"
+      ]
+    }
+  ],
+  "steps": [
+    "Calienta un comal seco o un sartén de hierro a fuego medio-alto. Asa los jitomates, los chiles, el ajo y la cebolla, volteándolos, hasta que estén ampollados y suaves: unos 8 minutos el ajo y los chiles, 12–15 los jitomates.",
+    "Pela el ajo y muélelo con sal en el molcajete hasta hacer una pasta. (Si usaste chiles de árbol, tuéstalos solo unos segundos; se queman rápido.)",
+    "Agrega los chiles y muélelos. Agrega los jitomates uno por uno y machácalos, y luego la cebolla.",
+    "Aguádala con un poco de agua y déjala martajada. Pruébala de sal.",
+    "¿No tienes molcajete? Muélela en la licuadora pulsando unas cuantas veces. No la hagas puré."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Las salsas salen del comal en minutos.",
+  "tips": [
+    "Cura un molcajete nuevo moliendo en él un puñado de arroz crudo, una y otra vez, hasta que el arroz salga blanco en vez de gris."
+  ],
+  "variations": [
+    {
+      "name": "Salsa Verde Cocida",
+      "subtitle": "Salsa de tomate verde cocido",
+      "region": "Centro",
+      "note": "La salsa verde de todos los días para tacos, carnitas y chilaquiles.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 lb de tomates verdes, sin cáscara",
+            "2–4 chiles serranos",
+            "1 diente de ajo",
+            "¼ de cebolla blanca",
+            "Un puñado de cilantro",
+            "Sal, al gusto"
+          ]
+        }
+      ],
+      "steps": [
+        "Hierve a fuego bajo los tomates verdes y los chiles 8 minutos, hasta que tomen un color verde olivo.",
+        "Licúa con el ajo, la cebolla, el cilantro, la sal y unas cucharadas del agua en que se cocieron."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Salsa de Chile de Árbol",
+      "subtitle": "Salsa de chile de árbol de taquería",
+      "region": "Jalisco · Centro",
+      "note": "La salsa roja, aguada y bien picosa, de la taquería.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "20 chiles de árbol, sin rabo",
+            "4 tomates verdes",
+            "2 dientes de ajo",
+            "½ cucharadita de sal",
+            "½ taza de agua",
+            "1 cucharadita de vinagre, opcional"
+          ]
+        }
+      ],
+      "steps": [
+        "Tuesta los chiles en un sartén seco 30 segundos, moviéndolos, hasta que suelten su aroma. No dejes que se ennegrezcan.",
+        "Hierve a fuego bajo los tomates verdes 8 minutos.",
+        "Licúa todo hasta que quede terso. Cuélala si la quieres sedosa."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

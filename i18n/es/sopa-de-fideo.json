@@ -1,0 +1,67 @@
+{
+  "id": "sopa-de-fideo",
+  "subtitle": "Sopa de fideo dorado en caldillo de jitomate",
+  "verso": "Fideo dorado, nunca quemado.",
+  "region": "Toda la República",
+  "servings": "6 personas",
+  "story": "La primera sopa que aprenden a querer casi todos los niños mexicanos. Todo depende de dorar el fideo hasta que tenga el color de la cáscara de cacahuate antes de echarle el jitomate.",
+  "ingredients": [
+    {
+      "title": "Sopa",
+      "items": [
+        "7 oz de fideo (fideo delgado enrollado)",
+        "3 cucharadas de aceite o manteca",
+        "3 jitomates guaje",
+        "¼ de cebolla blanca",
+        "1 diente de ajo",
+        "6 tazas de caldo de pollo caliente",
+        "1 cucharadita de sal, o al gusto",
+        "1 rama de cilantro (o unas hojas de epazote)"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Limones",
+        "Crema y queso fresco desmoronado",
+        "Chipotles en adobo picados, opcional"
+      ]
+    }
+  ],
+  "steps": [
+    "Licúa los jitomates, la cebolla y el ajo con [[1 taza]] del caldo hasta que quede liso.",
+    "Calienta el aceite en una olla a fuego medio. Agrega el fideo, deshaciendo los nidos, y mueve sin parar hasta que esté bien dorado. No te alejes; se quema rápido.",
+    "Vierte el puré de jitomate a la olla pasándolo por un colador. Va a chisporrotear. Fríelo, moviendo, 3 minutos hasta que se oscurezca.",
+    "Agrega el resto del caldo, la sal y el cilantro. Deja hervir a fuego lento 8–10 minutos, hasta que el fideo esté suave.",
+    "Sirve con limón, y con crema y queso si quieres."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Esta sopa queda en 30 minutos en la estufa, y el fideo se haría puré.",
+  "tips": [
+    "Si el fideo se dora demasiado rápido, retira la olla del fuego. Se sigue cocinando en el aceite caliente."
+  ],
+  "variations": [
+    {
+      "name": "Sopa Seca de Fideo",
+      "subtitle": "Fideo seco con chipotle",
+      "region": "Centro",
+      "note": "Una sopa seca, cocinada hasta que el fideo absorbe todo el caldo. Es el segundo tiempo de una comida corrida: sopa aguada, luego sopa seca, luego el guisado.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Lo mismo que la receta base, pero solo 3 tazas de caldo (1 para el puré, 2 para cocinar)",
+            "1–2 chipotles en adobo, licuados con el jitomate",
+            "Crema, queso fresco y aguacate"
+          ]
+        }
+      ],
+      "steps": [
+        "Dora el fideo y fríe el puré de jitomate con chipotle como en la receta base.",
+        "Agrega [[2 tazas]] de caldo, tapa y cocina a fuego bajo 10 minutos hasta que se absorba.",
+        "Ponle encima crema, queso y aguacate."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "enchiladas-rojas",
+  "subtitle": "Red chile enchiladas with queso fresco",
+  "verso": "Dip it in the chile and fry it on the spot: that's how a living is got.",
+  "region": "Guanajuato · Central Mexico",
+  "servings": "4–6 servings",
+  "story": "Tortillas dipped in red chile, fried and rolled around cheese and onion. In Guanajuato they come topped with fried potatoes and carrots: enchiladas mineras, said to be what miners' wives carried up to the mines. In Real del Monte, Hidalgo, the mineras are made with salsa verde.",
+  "ingredients": [
+    {
+      "title": "The sauce",
+      "items": [
+        "6 chiles guajillo",
+        "2 chiles ancho",
+        "2 garlic cloves",
+        "¼ white onion",
+        "½ tsp Mexican oregano",
+        "Pinch of cumin",
+        "2 cups broth or soaking water",
+        "1 tbsp lard",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "The enchiladas",
+      "items": [
+        "12 corn tortillas",
+        "Oil or lard for frying",
+        "2 cups crumbled queso fresco (or queso ranchero)",
+        "1 white onion, finely chopped"
+      ]
+    },
+    {
+      "title": "On top",
+      "items": [
+        "2 potatoes and 2 carrots, diced and boiled",
+        "Shredded lettuce",
+        "Pickled chiles (jalapeños with carrot)",
+        "Crema, optional",
+        "A piece of fried chicken, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Toast and soak the chiles. Blend with the garlic, onion, oregano, cumin and [[2 cups]] liquid. Strain.",
+    "Fry the sauce in the lard 5 minutes and season. It should be about as thick as cream. Keep warm.",
+    "Mix the cheese and onion for the filling, saving some for the top.",
+    "Heat ½ inch of oil in a skillet. Pass each tortilla through the warm sauce, then fry it 10 seconds per side. (For less splatter, fry first and then dip.)",
+    "Fill with cheese and onion, roll, and set on a plate.",
+    "Fry the boiled potatoes and carrots in the same oil until golden.",
+    "Top with more sauce, the potatoes and carrots, lettuce, pickled chiles, crema and the rest of the cheese."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Enchiladas are made at the skillet, one tortilla at a time.",
+  "tips": [
+    "Work fast and serve right away. Enchiladas don't like to wait."
+  ],
+  "variations": [
+    {
+      "name": "Enfrijoladas",
+      "subtitle": "Tortillas in black bean sauce",
+      "region": "Oaxaca",
+      "note": "Tortillas bathed in a seasoned black bean sauce instead of chile.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "3 cups black pot beans (frijoles de la olla) with their broth",
+            "1 chile pasilla or chipotle, toasted",
+            "2 dried avocado leaves, toasted",
+            "12 corn tortillas",
+            "Queso fresco, crema and onion; shredded chicken optional"
+          ]
+        }
+      ],
+      "steps": [
+        "Blend the beans with their broth, the chile and the avocado leaves until smooth, like thin cream.",
+        "Simmer 5 minutes and season.",
+        "Fry the tortillas lightly, dip them in the bean sauce, and fold in quarters or fill with cheese or chicken.",
+        "Top with crema, cheese and onion."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

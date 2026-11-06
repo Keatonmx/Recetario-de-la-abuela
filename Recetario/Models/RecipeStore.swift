@@ -13,6 +13,8 @@ final class RecipeStore: ObservableObject {
     @Published var toast: String?
     /// Show grams and liters instead of cups and pounds.
     @Published private(set) var metric: Bool
+    /// The language everything is shown in: Spanish (Mexico) unless the cook switches to English.
+    @Published private(set) var lang: Lang
     /// ¿Qué tengo?: ingredient ids the cook has, and whether basics count as on hand.
     @Published private(set) var have: [String]
     @Published private(set) var haveBasics: Bool
@@ -40,6 +42,8 @@ final class RecipeStore: ObservableObject {
         checks = Set(defaults.stringArray(forKey: Self.checksKey) ?? [])
         factors = (defaults.dictionary(forKey: Self.factorsKey) as? [String: Double]) ?? [:]
         metric = defaults.bool(forKey: "metric")
+        // CI screenshots can pass -lang en.
+        lang = Lang(rawValue: defaults.string(forKey: "lang") ?? "") ?? .es
         have = defaults.stringArray(forKey: "have") ?? []
         haveBasics = defaults.object(forKey: "haveBasics") as? Bool ?? true
         if let ids = defaults.string(forKey: "screenshotHave") {
@@ -60,10 +64,20 @@ final class RecipeStore: ObservableObject {
     // MARK: Lookups
 
     func categoryName(_ id: String) -> String {
-        book.categories.first { $0.id == id }?.name ?? ""
+        book.categories.first { $0.id == id }?.name(lang) ?? ""
     }
 
-    var pressureCookerCount: Int { book.recipes.filter { $0.pressureCooker != nil }.count }
+    // MARK: Language
+
+    /// Interface text in the current language.
+    func t(_ es: String, _ en: String) -> String { lang == .es ? es : en }
+
+    func setLang(_ new: Lang) {
+        lang = new
+        defaults.set(new.rawValue, forKey: "lang")
+    }
+
+    var pressureCookerCount: Int { book.recipes.filter { $0.hasPressureCooker }.count }
     var variationCount: Int { book.recipes.reduce(0) { $0 + $1.variations.count } }
 
     // MARK: Favorites
@@ -95,7 +109,7 @@ final class RecipeStore: ObservableObject {
 
     /// Steps the servings up or down: by 1 for small yields, by a few for big batches (30 tamales).
     func stepServings(_ recipe: Recipe, by direction: Double) {
-        guard let base = Scaler.base(recipe.servings) else { return }
+        guard let base = Scaler.base(recipe.text(lang).servings, lang: lang) else { return }
         let step = base < 4 ? base / 2 : (base <= 12 ? 1 : (base / 12).rounded(.up))
         let next = min(base * 4, max(step, base * factor(for: recipe.id) + direction * step))
         setFactor(next / base, for: recipe.id)
@@ -127,7 +141,18 @@ final class RecipeStore: ObservableObject {
     }
 
     /// Text as the cook should see it: metric when that's switched on.
-    func shown(_ text: String) -> String { metric ? Units.metric(text) : text }
+    func shown(_ text: String) -> String { metric ? Units.metric(text, lang: lang) : text }
+
+    /// An ingredient line, scaled and in the cook's units.
+    func line(_ text: String, factor: Double) -> String { shown(Scaler.text(text, factor: factor, lang: lang)) }
+
+    /// A step, with its marked amounts scaled, in the cook's units.
+    func step(_ text: String, factor: Double) -> String { shown(Scaler.stepText(text, factor: factor, lang: lang)) }
+
+    /// A recipe's yield, scaled.
+    func servings(_ recipe: Recipe) -> String {
+        shown(Scaler.yieldText(recipe.text(lang).servings, factor: factor(for: recipe.id), lang: lang))
+    }
 
     func showToast(_ text: String) {
         toast = text

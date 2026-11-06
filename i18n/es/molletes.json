@@ -1,0 +1,96 @@
+{
+  "id": "molletes",
+  "subtitle": "Bolillos abiertos con frijoles y queso gratinado",
+  "verso": "Bolillo, frijol y queso: el desayuno del recreo.",
+  "region": "Ciudad de México · Centro",
+  "servings": "4 personas",
+  "story": "Bolillos abiertos, tostados con mantequilla, untados con frijoles refritos y gratinados con queso derretido, y luego con pico de gallo frío encima. El desayuno de los cafés y de las mañanas de escuela en la capital, y el mejor uso para el pan de ayer.",
+  "ingredients": [
+    {
+      "title": "Molletes",
+      "items": [
+        "4 bolillos (de un día antes están bien), o panes franceses de corteza crujiente",
+        "3 cucharadas de mantequilla suave",
+        "2 tazas de frijoles refritos, calientes y espesos",
+        "2 tazas de queso para fundir rallado: queso Chihuahua, manchego mexicano u Oaxaca"
+      ]
+    },
+    {
+      "title": "Pico de gallo",
+      "items": [
+        "2 jitomates guaje, picados finos",
+        "¼ de cebolla blanca, picada fina",
+        "1 serrano, picado muy fino",
+        "¼ taza de cilantro picado",
+        "Jugo de 1 limón",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Salsa verde o salsa roja",
+        "Aguacate en rebanadas, opcional"
+      ]
+    }
+  ],
+  "steps": [
+    "Prende el asador del horno (o el horno a 425°F). Mezcla todos los ingredientes del pico de gallo y déjalo reposar mientras haces los molletes.",
+    "Parte los bolillos a lo largo. Quítales un poco del migajón para que quepan los frijoles.",
+    "Unta con mantequilla los lados cortados y tuéstalos, con el corte hacia arriba, 2–3 minutos, hasta que las orillas estén doradas.",
+    "Unta cada mitad con bastantes refritos, de orilla a orilla para que el pan no se queme.",
+    "Cubre con queso y gratina 2–4 minutos, hasta que se derrita y burbujee en algunas partes.",
+    "Ponles pico de gallo encima y sirve con salsa al lado."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés para los molletes en sí, pero los frijoles pueden salir de la olla exprés (ver Frijoles de la Olla y luego Frijoles Refritos).",
+  "tips": [
+    "Los refritos deben estar tan espesos que aguanten la forma de una línea. Los frijoles aguados dejan el pan remojado.",
+    "Primero la mantequilla, luego a tostar y luego los frijoles. Así el pan se queda crujiente por debajo."
+  ],
+  "variations": [
+    {
+      "name": "Molletes con Chorizo",
+      "subtitle": "Molletes con chorizo",
+      "region": "Centro",
+      "note": "El agregado más común en las fondas.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Todo lo de la receta base",
+            "6 oz de chorizo mexicano, sin tripa"
+          ]
+        }
+      ],
+      "steps": [
+        "Fríe el chorizo, desmoronándolo, hasta que quede crujiente. Quítale casi toda la grasa (o fríe los frijoles en ella).",
+        "Unta los frijoles en el pan tostado, esparce el chorizo encima, agrega el queso y gratina.",
+        "Termina con pico de gallo."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Molletes Dulces",
+      "subtitle": "Molletes de mantequilla, azúcar y canela",
+      "region": "Centro",
+      "note": "La versión dulce que piden los niños, con una taza de café con leche o champurrado.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 bolillos, abiertos",
+            "4 cucharadas de mantequilla suave",
+            "¼ taza de azúcar mezclada con 1 cucharadita de canela molida"
+          ]
+        }
+      ],
+      "steps": [
+        "Unta bien los lados cortados con mantequilla.",
+        "Espolvorea con el azúcar con canela.",
+        "Gratina 2–3 minutos, hasta que el azúcar se derrita y burbujee. No les quites la vista; se queman rápido."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

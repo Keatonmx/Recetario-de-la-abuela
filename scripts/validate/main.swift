@@ -1,6 +1,6 @@
 import Foundation
 
-// Decodes recipes.json with the app's own models and checks basic integrity.
+// Decodes recipes.json with the app's own models and checks basic integrity, in both languages.
 // It also checks the Swift scaler against the web scaler's output in scaling-fixtures.json.
 // CI: swiftc Recetario/Models/*.swift scripts/validate/main.swift (except RecipeStore.swift, which needs SwiftUI) -o validate && ./validate
 
@@ -13,18 +13,38 @@ do {
     var problems: [String] = []
     let categoryIDs = Set(book.categories.map(\.id))
 
+    /// The parts that must line up between Spanish and English, line for line.
+    func shape(_ t: RecipeText) -> [Int] {
+        var s = t.ingredients.map(\.items.count) + [t.steps.count, t.tips.count, t.variations.count]
+        s.append(t.pressureCooker?.steps.count ?? -1)
+        for v in t.variations { s += v.ingredients.map(\.items.count) + [v.steps.count] }
+        return s
+    }
+
     for recipe in book.recipes {
         if !categoryIDs.contains(recipe.category) {
             problems.append("\(recipe.id): unknown category \(recipe.category)")
         }
-        if recipe.ingredients.isEmpty || recipe.steps.isEmpty {
-            problems.append("\(recipe.id): missing ingredients or steps")
+        if shape(recipe.es) != shape(recipe.en) {
+            problems.append("\(recipe.id): Spanish and English don't line up")
         }
-        if recipe.pressureCooker == nil && recipe.pressureNote == nil {
-            problems.append("\(recipe.id): needs a pressure-cooker version or a note saying why not")
+        if recipe.es.variations.map(\.name) != recipe.en.variations.map(\.name) {
+            problems.append("\(recipe.id): variation names differ between Spanish and English")
         }
-        for variation in recipe.variations where variation.steps.isEmpty {
-            problems.append("\(recipe.id) / \(variation.name): variation has no steps")
+        for lang in Lang.allCases {
+            let t = recipe.text(lang)
+            if t.ingredients.isEmpty || t.steps.isEmpty {
+                problems.append("\(recipe.id) (\(lang.rawValue)): missing ingredients or steps")
+            }
+            if t.pressureCooker == nil && t.pressureNote == nil {
+                problems.append("\(recipe.id) (\(lang.rawValue)): needs a pressure-cooker version or a note saying why not")
+            }
+            for variation in t.variations where variation.steps.isEmpty {
+                problems.append("\(recipe.id) / \(variation.name) (\(lang.rawValue)): variation has no steps")
+            }
+            if recipe.totalTime(lang).isEmpty {
+                problems.append("\(recipe.id) (\(lang.rawValue)): no total time")
+            }
         }
     }
     let duplicates = Dictionary(grouping: book.recipes, by: \.id).filter { $0.value.count > 1 }.keys
@@ -42,12 +62,13 @@ do {
         }
         return true
     }
-    struct ScalingCase: Decodable { let kind: String; let input: String; let factor: Double; let output: String }
+    struct ScalingCase: Decodable { let kind: String; let lang: Lang?; let input: String; let factor: Double; let output: String }
     let fixturesPath = CommandLine.arguments.count > 2 ? CommandLine.arguments[2] : "scripts/validate/scaling-fixtures.json"
     let cases = try JSONDecoder().decode([ScalingCase].self, from: Data(contentsOf: URL(fileURLWithPath: fixturesPath)))
     var mismatches = 0
     let pantry = PantrySearch(lexicon: book.lexicon)
     for c in cases {
+        let lang = c.lang ?? .en
         let got: String
         switch c.kind {
         case "ids": got = pantry.ids(in: c.input).joined(separator: ",")
@@ -58,17 +79,17 @@ do {
             let have = c.input.split(separator: ",").map(String.init)
             got = pantry.rank(book.recipes, have: have, haveBasics: c.kind == "rank")
                 .prefix(5).map { "\($0.recipe.id):\(String(format: "%.3f", $0.score))" }.joined(separator: ",")
-        case "yield": got = Scaler.yieldText(c.input, factor: c.factor)
-        case "metric": got = Units.metric(c.input)
-        case "step": got = Scaler.stepText(c.input, factor: c.factor)
-        case "step-metric": got = Units.metric(Scaler.stepText(c.input, factor: c.factor))
-        case "scaled-metric": got = Units.metric(Scaler.text(c.input, factor: c.factor))
-        default: got = Scaler.text(c.input, factor: c.factor)
+        case "yield": got = Scaler.yieldText(c.input, factor: c.factor, lang: lang)
+        case "metric": got = Units.metric(c.input, lang: lang)
+        case "step": got = Scaler.stepText(c.input, factor: c.factor, lang: lang)
+        case "step-metric": got = Units.metric(Scaler.stepText(c.input, factor: c.factor, lang: lang), lang: lang)
+        case "scaled-metric": got = Units.metric(Scaler.text(c.input, factor: c.factor, lang: lang), lang: lang)
+        default: got = Scaler.text(c.input, factor: c.factor, lang: lang)
         }
         if got != c.output && !(c.kind.hasPrefix("rank") && sameRanking(got, c.output)) {
             mismatches += 1
             if mismatches <= 15 {
-                problems.append("scaling ×\(c.factor) of \"\(c.input)\": web gives \"\(c.output)\", Swift gives \"\(got)\"")
+                problems.append("\(c.kind) (\(lang.rawValue)) ×\(c.factor) of \"\(c.input)\": web gives \"\(c.output)\", Swift gives \"\(got)\"")
             }
         }
     }
@@ -76,7 +97,7 @@ do {
 
     if problems.isEmpty {
         let variations = book.recipes.reduce(0) { $0 + $1.variations.count }
-        print("OK: \(book.recipes.count) recipes, \(variations) variations, \(book.categories.count) categories, \(cases.count) scaling cases match")
+        print("OK: \(book.recipes.count) recipes, \(variations) variations, \(book.categories.count) categories, in Spanish and English; \(cases.count) scaling cases match")
     } else {
         problems.forEach { print("ERROR: \($0)") }
         exit(1)

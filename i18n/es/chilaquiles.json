@@ -1,0 +1,115 @@
+{
+  "id": "chilaquiles",
+  "subtitle": "Totopos hervidos en salsa verde",
+  "verso": "Crujientes o aguaditos, pero siempre bien bañaditos.",
+  "region": "Toda la República",
+  "servings": "4 personas",
+  "story": "Desayuno hecho con las tortillas que haya en la cocina: fritas, revueltas en salsa o chile y cubiertas con crema y queso, o cocinadas junto con huevo. El nombre viene del náhuatl chīlāquilitl, más o menos 'remojado en chile'. ¿Crujientes o aguados? ¿Frijoles encima o al lado? Cada casa decide.",
+  "ingredients": [
+    {
+      "title": "Totopos",
+      "items": [
+        "12 tortillas de maíz, cortadas en 6 triángulos: las de un día antes son lo clásico, pero las de la tienda o las de esa misma mañana funcionan bien",
+        "Aceite para freír",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Salsa verde",
+      "items": [
+        "1 lb de tomates verdes, sin cáscara",
+        "2–3 serranos",
+        "¼ de cebolla blanca",
+        "1 diente de ajo",
+        "Un puño de cilantro",
+        "1 taza de caldo de pollo",
+        "1 cucharada de aceite",
+        "1 rama de epazote, opcional"
+      ]
+    },
+    {
+      "title": "Encima",
+      "items": [
+        "Crema",
+        "Queso fresco desmoronado",
+        "Aros delgados de cebolla",
+        "Aguacate",
+        "Huevos estrellados o pollo deshebrado",
+        "Frijoles refritos al lado"
+      ]
+    }
+  ],
+  "steps": [
+    "Corta las tortillas. Las de la tienda se fríen bien tal como vienen. Las hechas en casa muy frescas y húmedas salpican menos si las dejas unos minutos afuera sobre la mesa antes.",
+    "Fríelas en aceite caliente por tandas hasta que se doren. Para chilaquiles crujientes fríelas bien doraditas; para suaves, sácalas cuando todavía estén un poco correosas. Escúrrelas y sálalas.",
+    "Hierve los tomates verdes y los serranos 8 minutos. Licúalos con la cebolla, el ajo, el cilantro y el caldo.",
+    "Calienta el aceite en una cacerola ancha y fríe la salsa 5 minutos con el epazote.",
+    "Agrega los totopos y revuelve: 1 minuto para crujientes, 3 para suaves.",
+    "Sirve de inmediato con crema, queso, cebolla, aguacate y un huevo o pollo, con frijoles al lado."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Los chilaquiles se hacen en 30 minutos y hay que comerlos en cuanto están listos.",
+  "tips": [
+    "Escurre bien las tortillas fritas. Las tortillas más frescas absorben un poco más de aceite.",
+    "El chile rojo que sobra de las enchiladas o los tamales hace unos chilaquiles buenísimos."
+  ],
+  "variations": [
+    {
+      "name": "Chilaquiles con Huevo, Estilo de Casa",
+      "subtitle": "Chilaquiles suaves con chile rojo y huevo",
+      "region": "Mexicoamericano · Texas · California",
+      "note": "Así los hacen muchas familias mexicoamericanas: tortillas de la tienda o de esa misma mañana fritas suaves, no crujientes como totopos, y luego cocinadas en la sartén con chile rojo y huevo.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "10–12 tortillas de maíz, de la tienda o hechas en casa, cortadas o rotas en tiras o pedazos",
+            "¼ taza de aceite",
+            "4–6 huevos",
+            "1½ tazas de chile rojo (abajo), o chile de enchiladas o salsa que haya sobrado",
+            "Sal, al gusto",
+            "Para el chile rojo: 6 chiles secos de Nuevo México, California o guajillo",
+            "2 dientes de ajo",
+            "Una pizca de comino",
+            "½ cucharadita de orégano mexicano",
+            "½ cucharadita de sal",
+            "2 tazas de agua",
+            "Para servir: queso rallado o queso fresco, frijoles, tortillas calientes"
+          ]
+        }
+      ],
+      "steps": [
+        "Haz el chile: quítales los tallos y las semillas a los chiles, hiérvelos en el agua 10 minutos y luego licúalos con el ajo, el comino, el orégano y la sal. Cuélalo.",
+        "Calienta el aceite en una sartén grande a fuego medio-alto. Fríe los pedazos de tortilla, moviendo, 3–4 minutos, hasta que estén dorados en partes pero todavía suaves y un poco correosos. Quita el aceite que sobre.",
+        "Para huevos fritos primero: haz las tortillas a un lado, quiebra los huevos en la sartén y deja que se frían un minuto hasta que las claras empiecen a cuajar. Luego rómpelos y mézclalos con las tortillas.",
+        "Para revueltos: bate los huevos con una pizca de sal, viértelos sobre las tortillas y revuelve hasta que apenas cuajen.",
+        "Vierte el chile y revuelve todo junto. Deja hervir a fuego bajo 1–2 minutos, hasta que las tortillas lo absorban.",
+        "Ponles queso encima y sirve con frijoles y tortillas."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Chilaquiles Rojos",
+      "subtitle": "Chilaquiles rojos",
+      "region": "Toda la República",
+      "note": "El mismo método con una salsa roja de jitomate y chiles secos.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Totopos de la receta base",
+            "4 jitomates guaje",
+            "3 chiles guajillo y 2 chiles de árbol, tostados y remojados",
+            "1 diente de ajo, ¼ de cebolla y 1 taza de caldo"
+          ]
+        }
+      ],
+      "steps": [
+        "Licúa los jitomates, los chiles, el ajo, la cebolla y el caldo, y cuela.",
+        "Fríe la salsa 5 minutos y sazona.",
+        "Revuelve con los totopos y ponles encima lo mismo que en la receta base."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

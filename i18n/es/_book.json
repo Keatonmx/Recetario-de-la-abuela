@@ -1,0 +1,45 @@
+{
+  "categories": {
+    "desayunos": "Desayunos",
+    "caldos": "Caldos y Pozoles",
+    "guisos": "Guisos y Carnes",
+    "mariscos": "Mariscos",
+    "moles": "Moles",
+    "masa": "Masa y Tortilla",
+    "frijoles": "Frijoles y Arroz",
+    "salsas": "Salsas",
+    "bebidas": "Bebidas",
+    "pan": "Panadería",
+    "postres": "Postres"
+  },
+  "chiles": [
+    { "name": "Guajillo", "form": "Chile mirasol seco", "taste": "Brillante, ácido, un poco a frutos rojos", "uses": "Pozole, menudo, birria, enchiladas, tamales" },
+    { "name": "Ancho", "form": "Chile poblano seco", "taste": "Dulce, a pasa, profundo", "uses": "Moles, adobos, pozole" },
+    { "name": "Pasilla", "form": "Chilaca seca", "taste": "Herbal, a cacao, a ciruela pasa", "uses": "Mole poblano, mole de olla, salsa borracha" },
+    { "name": "Mulato", "form": "Poblano oscuro seco", "taste": "A chocolate, a regaliz", "uses": "Mole poblano" },
+    { "name": "Chipotle", "form": "Jalapeño secado al humo (mora o meco)", "taste": "Ahumado, picor dulce", "uses": "Tinga, caldo tlalpeño, salsas" },
+    { "name": "De árbol", "form": "Seco, delgado y rojo", "taste": "Picor agudo y limpio", "uses": "Salsa de taquería, pozole blanco" },
+    { "name": "Piquín · Chiltepín", "form": "Chiles silvestres diminutos, secos", "taste": "Fuego rápido y vivo", "uses": "Martajado sobre el menudo y el pozole, en la fruta" },
+    { "name": "Poblano", "form": "Fresco", "taste": "Verde, terroso", "uses": "Chiles rellenos, rajas, arroz verde" },
+    { "name": "Serrano", "form": "Fresco", "taste": "A hierba fresca, crujiente", "uses": "Salsa verde, salsa roja, caldos" },
+    { "name": "Habanero", "form": "Fresco", "taste": "Afrutado, floral", "uses": "Xnipec, cebolla encurtida, Yucatán" }
+  ],
+  "glossary": [
+    { "term": "Masa", "definition": "Masa de maíz nixtamalizado. La mejor es la masa fresca de la tortillería. Para tamales pide masa para tamal, sin preparar, que se muele más gruesa que la masa para tortillas. La harina de maíz nixtamalizado es la versión seca, en polvo." },
+    { "term": "Manteca", "definition": "Manteca de cerdo derretida. Cómprala fresca y suavecita en la carnicería. Los bloques blancos que no necesitan refrigeración están hidrogenados y no saben a nada." },
+    { "term": "Orégano mexicano", "definition": "Una planta distinta del orégano del Mediterráneo, más cítrica y herbácea. Frótalo entre las palmas sobre la olla o el plato." },
+    { "term": "Canela", "definition": "Canela mexicana (de Ceilán): corteza suave, en capas delgadas que se quiebran entre los dedos. Más suave y más dulce que la casia." },
+    { "term": "Epazote", "definition": "Una hierba de olor fuerte para los frijoles negros, las quesadillas, los chilaquiles y el pozole verde. No hay sustituto de verdad; si no lo encuentras, no lo pongas." },
+    { "term": "Hoja santa", "definition": "Una hoja grande en forma de corazón que sabe a anís y a sasafrás. Se usa en el pozole verde, el pipián y los moles oaxaqueños." },
+    { "term": "Hoja de aguacate", "definition": "Hojas secas de aguacate criollo, que se tuestan antes de usarlas. Le dan un toque anisado a la barbacoa y a los frijoles negros." },
+    { "term": "Piloncillo", "definition": "Azúcar de caña sin refinar, prensada en conos. Rállalo o derrítelo en agua. El azúcar morena oscura es lo que más se le parece." },
+    { "term": "Achiote", "definition": "Semillas de achiote molidas con especias para hacer la pasta de recado rojo. Se vende en barras; es la base de la cochinita pibil." },
+    { "term": "Naranja agria", "definition": "La naranja agria de Sevilla, que se usa en Yucatán. Para sustituirla: dos partes de jugo de naranja por una de jugo de limón." },
+    { "term": "Cacahuazintle", "definition": "El maíz blanco grande para el pozole. El maíz pozolero precocido de bolsa es mejor que el de lata." },
+    { "term": "Xoconostle", "definition": "Una tuna agria para el mole de olla y las salsas. Se puede sustituir con jugo de limón." },
+    { "term": "Quesos", "definition": "El queso fresco se desmorona; el cotija y el añejo son secos y salados; el Oaxaca y el asadero se derriten y hacen hebra; el panela no pierde su forma cuando se calienta." },
+    { "term": "Crema", "definition": "Crema mexicana, fermentada, más ligera y más salada que la crema ácida. Si no la encuentras, aligera la crema ácida con un poco de leche." },
+    { "term": "Barro", "definition": "Ollas, cazuelas y jarritos de barro vidriado para los frijoles, el café y el atole. Compra piezas marcadas Sin Plomo; los vidriados viejos o sin marca pueden soltar plomo." },
+    { "term": "Tequesquite", "definition": "Una sal mineral natural de los antiguos lechos de los lagos del centro de México, el leudante tradicional de los tamales, que se disuelve en agua (muchas veces con cáscaras de tomate verde)." }
+  ]
+}

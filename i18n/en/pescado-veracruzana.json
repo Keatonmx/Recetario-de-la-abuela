@@ -1,0 +1,113 @@
+{
+  "id": "pescado-veracruzana",
+  "subtitle": "Fish in tomato, olive and caper sauce",
+  "verso": "Olives, chile güero and tomato: Veracruz on one plate, to top it all off.",
+  "region": "Veracruz",
+  "servings": "4 servings",
+  "story": "Veracruz's best-known dish: huachinango (red snapper), whole or in fillets, simmered in tomato with olives, capers, bay and pickled chiles güeros. The olives and capers came with the Spanish through the port of Veracruz; the chiles are Mexican. It's the classic Friday fish of Lent.",
+  "ingredients": [
+    {
+      "title": "The fish",
+      "items": [
+        "2 lb red snapper fillets (huachinango), or 1 whole snapper, cleaned",
+        "1 lime, juiced",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "title": "The sauce",
+      "items": [
+        "¼ cup olive oil",
+        "1 white onion, thinly sliced",
+        "4 garlic cloves, sliced",
+        "2 lb ripe tomatoes, chopped (or 8 Roma)",
+        "3 bay leaves",
+        "½ tsp Mexican oregano",
+        "¼ tsp dried thyme",
+        "½ cup green olives (manzanilla), pitted",
+        "2 tbsp capers, rinsed",
+        "4 chiles güeros en escabeche (or pickled jalapeños), plus a splash of their brine"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "White rice",
+        "Bolillos"
+      ]
+    }
+  ],
+  "steps": [
+    "Rub the fish with the lime juice, salt and pepper and let it sit 15 minutes.",
+    "Heat the oil in a wide pan and cook the onion until soft, 5 minutes. Add the garlic for 1 minute.",
+    "Add the tomatoes, bay leaves, oregano and thyme. Cook 10–12 minutes, until the tomatoes break down into a chunky sauce.",
+    "Stir in the olives, capers, chiles güeros and a splash of their brine. Season.",
+    "Nestle the fish in the sauce and spoon some over the top. Cover and simmer gently 8–12 minutes, until the fish flakes.",
+    "Serve with white rice, and bolillo for the sauce."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Fish cooks in minutes, and the sauce is quick on the stove.",
+  "tips": [
+    "Use ripe, soft tomatoes. In winter, good canned whole tomatoes beat pale fresh ones.",
+    "Once the fish is in, don't stir or it falls apart. Shake the pan instead."
+  ],
+  "variations": [
+    {
+      "name": "Tikin Xic",
+      "subtitle": "Achiote fish in banana leaf",
+      "region": "Yucatán",
+      "note": "The Maya fish dish: fish rubbed with recado rojo and naranja agria, wrapped in banana leaf with tomato, onion and chile, then grilled or baked.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb firm white fish fillets, or 1 whole fish, butterflied",
+            "2 oz achiote paste",
+            "½ cup naranja agria (or ⅓ cup orange juice plus 3 tbsp lime juice)",
+            "2 garlic cloves",
+            "1 tsp salt",
+            "Banana leaves",
+            "1 tomato, sliced",
+            "1 red onion, sliced",
+            "1 chile x'catic or güero, sliced"
+          ]
+        }
+      ],
+      "steps": [
+        "Blend the achiote, juice, garlic and salt into a smooth paste and rub it all over the fish. Marinate 30 minutes.",
+        "Lay the fish on softened banana leaves, top with the tomato, onion and chile, and fold the leaves into a package.",
+        "Grill over medium coals or bake at 400°F for 20–25 minutes, until the fish flakes.",
+        "Serve with tortillas, pickled red onion and habanero salsa."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Pescado Zarandeado",
+      "subtitle": "Nayarit grilled butterflied fish",
+      "region": "Nayarit · Sinaloa",
+      "note": "From Mexcaltitán and San Blas: a whole fish split open, brushed with a chile adobo sharpened with soy sauce and lime, and grilled in a hinged basket over mangrove wood.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 whole snapper or robalo (about 3 lb), butterflied, bones in",
+            "4 chiles guajillo",
+            "2 chiles ancho",
+            "3 garlic cloves",
+            "2 tbsp mayonnaise",
+            "2 tbsp soy sauce",
+            "2 tbsp lime juice",
+            "1 tsp salt"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast and soak the chiles, then blend them with the garlic, mayonnaise, soy sauce, lime juice and salt into a paste.",
+        "Brush it over the flesh side of the fish.",
+        "Grill in a hinged basket over medium-hot coals, flesh side down first, 12–15 minutes per side, or broil 6 inches from the heat about 20 minutes.",
+        "Serve on the grill with tortillas, salsa, cucumber and red onion."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

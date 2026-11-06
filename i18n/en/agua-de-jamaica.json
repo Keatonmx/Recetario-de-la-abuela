@@ -1,0 +1,59 @@
+{
+  "id": "agua-de-jamaica",
+  "subtitle": "Hibiscus agua fresca",
+  "verso": "Agua de jamaica, red and icy cold: the one you sip all day long.",
+  "region": "All of Mexico",
+  "servings": "2 quarts",
+  "story": "Deep red hibiscus water, tart and cold. A jug of agua fresca sits on the table at the big midday meal.",
+  "ingredients": [
+    {
+      "title": "Agua fresca",
+      "items": [
+        "1 cup dried jamaica (hibiscus) flowers",
+        "8 cups water",
+        "½–¾ cup sugar or grated piloncillo",
+        "1 stick Mexican cinnamon, optional",
+        "Ice"
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse the flowers.",
+    "Boil [[4 cups]] of the water with the flowers and cinnamon 5 minutes. Turn off the heat and steep 15 minutes.",
+    "Strain, pressing on the flowers. Stir in the sugar while it's warm.",
+    "Add the remaining [[4 cups]] of cold water. Taste and adjust. Serve over ice."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version needed. It's a quick steep.",
+  "tips": [
+    "The flowers make a second, lighter batch. Or sauté them with onion and garlic for tacos de jamaica."
+  ],
+  "variations": [
+    {
+      "name": "Horchata de Arroz",
+      "subtitle": "Rice and cinnamon horchata",
+      "region": "Central Mexico · Southern Mexico",
+      "note": "Mexican horchata is made from rice and cinnamon.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 cup long-grain white rice",
+            "1 stick Mexican cinnamon, broken",
+            "8 cups water, divided",
+            "½–¾ cup sugar",
+            "1 tsp vanilla",
+            "½ cup milk or evaporated milk, optional"
+          ]
+        }
+      ],
+      "steps": [
+        "Soak the rice and cinnamon in [[4 cups]] hot water overnight.",
+        "Blend the rice, cinnamon and soaking water 2 minutes until very fine.",
+        "Strain through a cloth or a very fine strainer.",
+        "Add the remaining water, the sugar, vanilla and milk. Serve over ice, stirring before you pour because it settles."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

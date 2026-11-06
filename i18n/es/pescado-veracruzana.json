@@ -1,0 +1,113 @@
+{
+  "id": "pescado-veracruzana",
+  "subtitle": "Pescado en salsa de jitomate con aceitunas y alcaparras",
+  "verso": "Aceituna, chile güero y jitomate: Veracruz en un plato de remate.",
+  "region": "Veracruz",
+  "servings": "4 personas",
+  "story": "El platillo más conocido de Veracruz: huachinango, entero o en filetes, cocido a fuego lento en jitomate con aceitunas, alcaparras, laurel y chiles güeros en escabeche. Las aceitunas y las alcaparras llegaron con los españoles por el puerto de Veracruz; los chiles son mexicanos. Es el pescado clásico de los viernes de Cuaresma.",
+  "ingredients": [
+    {
+      "title": "El pescado",
+      "items": [
+        "2 lb de filetes de huachinango, o 1 huachinango entero, limpio",
+        "1 limón, exprimido",
+        "Sal y pimienta"
+      ]
+    },
+    {
+      "title": "La salsa",
+      "items": [
+        "¼ taza de aceite de oliva",
+        "1 cebolla blanca, en rebanadas delgadas",
+        "4 dientes de ajo, rebanados",
+        "2 lb de jitomates maduros, picados (o 8 jitomates guaje)",
+        "3 hojas de laurel",
+        "½ cucharadita de orégano mexicano",
+        "¼ cucharadita de tomillo seco",
+        "½ taza de aceitunas verdes (manzanilla), sin hueso",
+        "2 cucharadas de alcaparras, enjuagadas",
+        "4 chiles güeros en escabeche (o jalapeños en escabeche), más un chorrito de su vinagre"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Arroz blanco",
+        "Bolillos"
+      ]
+    }
+  ],
+  "steps": [
+    "Unta el pescado con el jugo de limón, sal y pimienta y déjalo reposar 15 minutos.",
+    "Calienta el aceite en una cacerola ancha y acitrona la cebolla hasta que esté suave, 5 minutos. Agrega el ajo por 1 minuto.",
+    "Agrega los jitomates, el laurel, el orégano y el tomillo. Cocina 10–12 minutos, hasta que los jitomates se deshagan en una salsa con trozos.",
+    "Incorpora las aceitunas, las alcaparras, los chiles güeros y un chorrito de su vinagre. Sazona.",
+    "Acomoda el pescado en la salsa y báñalo con un poco por encima. Tapa y deja hervir a fuego bajo 8–12 minutos, hasta que el pescado se desmenuce fácilmente.",
+    "Sirve con arroz blanco, y bolillo para la salsa."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El pescado se cuece en minutos, y la salsa sale rápido en la estufa.",
+  "tips": [
+    "Usa jitomates maduros y suaves. En invierno, unos buenos jitomates enteros de lata son mejores que unos frescos y pálidos.",
+    "Ya que metiste el pescado, no muevas o se desbarata. Mejor sacude la cacerola."
+  ],
+  "variations": [
+    {
+      "name": "Tikin Xic",
+      "subtitle": "Pescado en achiote envuelto en hoja de plátano",
+      "region": "Yucatán",
+      "note": "El pescado maya: pescado untado con recado rojo y naranja agria, envuelto en hoja de plátano con jitomate, cebolla y chile, y luego asado a la parrilla u horneado.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb de filetes de pescado blanco firme, o 1 pescado entero, abierto en mariposa",
+            "2 oz de pasta de achiote",
+            "½ taza de naranja agria (o ⅓ taza de jugo de naranja más 3 cucharadas de jugo de limón)",
+            "2 dientes de ajo",
+            "1 cucharadita de sal",
+            "Hojas de plátano",
+            "1 jitomate, en rebanadas",
+            "1 cebolla morada, en rebanadas",
+            "1 chile x'catic o güero, en rebanadas"
+          ]
+        }
+      ],
+      "steps": [
+        "Licúa el achiote, el jugo, el ajo y la sal hasta tener una pasta tersa y úntala por todo el pescado. Déjalo marinar 30 minutos.",
+        "Acomoda el pescado sobre hojas de plátano suavizadas, ponle encima el jitomate, la cebolla y el chile, y dobla las hojas para formar un paquete.",
+        "Ásalo sobre brasas medianas u hornéalo a 400°F por 20–25 minutos, hasta que el pescado se desmenuce fácilmente.",
+        "Sirve con tortillas, cebolla morada encurtida y salsa de habanero."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Pescado Zarandeado",
+      "subtitle": "Pescado abierto a la parrilla, estilo Nayarit",
+      "region": "Nayarit · Sinaloa",
+      "note": "De Mexcaltitán y San Blas: un pescado entero abierto, barnizado con un adobo de chile avivado con salsa de soya y limón, y asado en una zaranda sobre leña de mangle.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 huachinango o robalo entero (como 3 lb), abierto en mariposa, con espinas",
+            "4 chiles guajillo",
+            "2 chiles ancho",
+            "3 dientes de ajo",
+            "2 cucharadas de mayonesa",
+            "2 cucharadas de salsa de soya",
+            "2 cucharadas de jugo de limón",
+            "1 cucharadita de sal"
+          ]
+        }
+      ],
+      "steps": [
+        "Tuesta y remoja los chiles, luego lícualos con el ajo, la mayonesa, la salsa de soya, el jugo de limón y la sal hasta formar una pasta.",
+        "Barnízala sobre el lado de la carne del pescado.",
+        "Ásalo en una zaranda sobre brasas medio fuertes, primero con el lado de la carne hacia abajo, 12–15 minutos por lado, o en el asador del horno a 6 pulgadas del fuego unos 20 minutos.",
+        "Sirve sobre la parrilla con tortillas, salsa, pepino y cebolla morada."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

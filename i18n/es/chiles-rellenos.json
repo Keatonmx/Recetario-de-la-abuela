@@ -1,0 +1,79 @@
+{
+  "id": "chiles-rellenos",
+  "subtitle": "Chiles poblanos rellenos de queso y capeados con huevo",
+  "verso": "Capeado como Dios manda: esponjadito y sin grasa.",
+  "region": "Puebla",
+  "servings": "6 chiles",
+  "story": "Chiles poblanos asados, rellenos de queso, envueltos en un capeado esponjoso de huevo, fritos y servidos en un caldillo ligero de jitomate. Piden paciencia. Los de la abuela quedan ligeros y esponjados, nunca grasosos.",
+  "ingredients": [
+    {
+      "title": "Los chiles",
+      "items": [
+        "6 chiles poblanos grandes, planos y derechos",
+        "12 oz de queso Oaxaca, Chihuahua o asadero, cortado en tiras",
+        "Palillos"
+      ]
+    },
+    {
+      "title": "El capeado",
+      "items": [
+        "5 huevos, separados, a temperatura ambiente",
+        "Una pizca de sal",
+        "½ taza de harina, para enharinar",
+        "Aceite para freír, como 1 pulgada de hondo"
+      ]
+    },
+    {
+      "title": "El caldillo",
+      "items": [
+        "5 jitomates guaje",
+        "¼ de cebolla blanca",
+        "1 diente de ajo",
+        "1 taza de caldo de pollo",
+        "1 cucharada de aceite",
+        "1 hoja de laurel",
+        "Sal, al gusto"
+      ]
+    }
+  ],
+  "steps": [
+    "Asa los poblanos directamente sobre la flama de la estufa (o en el gratinador del horno), volteándolos, hasta que estén negros por todos lados.",
+    "Ponlos en un tazón, tápalos con un plato o una bolsa de plástico y déjalos sudar 10 minutos.",
+    "Quítales la piel quemada con los dedos. No los enjuagues, o se les va el sabor. Hazles un corte a lo largo de un lado y sácales las semillas con cuidado, dejándoles el rabito.",
+    "Rellena cada chile con queso y cierra el corte con un palillo.",
+    "Prepara el caldillo: licúa los jitomates, la cebolla y el ajo, fríe en el aceite 5 minutos, agrega el caldo y el laurel, y deja hervir a fuego bajo 10 minutos. Debe quedar ligero. Sazona.",
+    "Bate las claras con la sal a punto de turrón. Agrega las yemas una por una, batiendo solo hasta que se incorporen.",
+    "Calienta el aceite a 350°F. Enharina cada chile, sacúdele el exceso y pásalo por el capeado para cubrirlo.",
+    "Fríe 2–3 minutos por lado, bañándolos por encima con el aceite caliente, hasta que estén dorados. Escúrrelos sobre papel absorbente y quítales los palillos.",
+    "Pon los chiles en el caldillo caliente un minuto y sirve con arroz rojo y frijoles."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Esta receta es de la flama y la sartén.",
+  "tips": [
+    "La harina es lo que hace que el capeado se pegue. No te la saltes.",
+    "Escoge poblanos lisos y planos. Se asan y se pelan parejo."
+  ],
+  "variations": [
+    {
+      "name": "Rellenos de Picadillo",
+      "subtitle": "Chiles rellenos de picadillo",
+      "region": "Norte · Puebla",
+      "note": "Rellenos de picadillo en lugar de queso.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "6 poblanos asados y pelados",
+            "3 tazas de picadillo (ver Picadillo)",
+            "Capeado y caldillo de la receta base"
+          ]
+        }
+      ],
+      "steps": [
+        "Rellena los chiles con picadillo en lugar de queso.",
+        "Capéalos, fríelos y sírvelos en caldillo como en la receta base."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

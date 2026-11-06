@@ -1,0 +1,59 @@
+{
+  "id": "carnitas",
+  "subtitle": "Puerco cocido despacio en manteca",
+  "verso": "En el cazo de cobre, la carnita nunca es pobre.",
+  "region": "Michoacán",
+  "servings": "10 personas",
+  "story": "En Quiroga, Michoacán, la capital de las carnitas, se hacen en grandes cazos de cobre de Santa Clara del Cobre, con el puerco hirviendo en manteca hasta que queda suave por dentro y crujiente por fuera. La naranja y un chorrito de leche o de Coca-Cola le ayudan a dorarse. Es comida de fiesta para los fines de semana, los bautizos y los cumpleaños.",
+  "ingredients": [
+    {
+      "title": "Carnitas",
+      "items": [
+        "5 lb de espaldilla de puerco, en trozos de 3 pulgadas (agrega costilla o cuero si puedes)",
+        "2 lb de manteca, suficiente para casi cubrir",
+        "1 cucharada de sal",
+        "1 naranja, partida a la mitad",
+        "½ taza de leche entera o Coca-Cola mexicana, opcional",
+        "4 dientes de ajo, opcional",
+        "2 hojas de laurel, opcional",
+        "½ cucharadita de orégano mexicano, opcional"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Tortillas de maíz",
+        "Salsa verde",
+        "Cebolla y cilantro picados",
+        "Limones",
+        "Chiles jalapeños en escabeche"
+      ]
+    }
+  ],
+  "steps": [
+    "Derrite la manteca en una olla gruesa (de hierro fundido o una cacerola pesada con tapa) a fuego medio.",
+    "Agrega el puerco, la sal, y el ajo y las hierbas si los usas. La manteca debe burbujear suavecito, no freír con fuerza. Cocina 2 horas, moviendo de vez en cuando, hasta que la carne esté suave.",
+    "Exprime la naranja dentro de la olla y echa también las mitades. Agrega la leche o la Coca. Cocina 15 minutos.",
+    "Sube el fuego a medio-alto los últimos 15–20 minutos para que el puerco se dore bien y quede crujiente en las orillas. Cuidado con las salpicaduras.",
+    "Saca la carne con una espumadera y escúrrela. Pícala y sírvela con tortillas, salsa, cebolla, cilantro y limón.",
+    "Cuela la manteca cuando se enfríe y guárdala en el refrigerador. Es oro para los frijoles y los tamales."
+  ],
+  "pressureCooker": {
+    "time": "40 min a presión alta + 15 min de liberación natural, y luego al gratinador",
+    "total": "1 h 10",
+    "steps": [
+      "Pon en la olla el puerco, la sal, el jugo y las mitades de la naranja, el ajo, las hojas de laurel, ½ taza de agua y [[3 cucharadas]] de manteca.",
+      "Presión alta 40 minutos, liberación natural 15.",
+      "Extiende la carne en una charola para hornear, rómpela en trozos y báñala con unas cucharadas de la grasa y el jugo.",
+      "Métela al gratinador del horno 5–8 minutos hasta que las orillas queden crujientes, o fríela por tandas en una sartén de hierro fundido bien caliente con manteca."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Pídele al carnicero carnitas surtidas: maciza (la parte magra), cuerito (la piel), costilla y buche (el estómago).",
+    "Al principio no muevas mucho. Deja que el puerco se confite tranquilo.",
+    "Los puristas usan solo manteca, sal y tiempo. La naranja, la leche y la Coca-Cola son trucos de carnitero para dar color, y cada uno tiene su propia fórmula. Si usas Coca, que sea la mexicana, la de azúcar de caña."
+  ],
+  "variations": []
+}

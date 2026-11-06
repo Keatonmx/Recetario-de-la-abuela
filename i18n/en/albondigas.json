@@ -1,0 +1,72 @@
+{
+  "id": "albondigas",
+  "subtitle": "Meatball soup with mint",
+  "verso": "With its rice and its mint so green, the best albóndiga you've ever seen.",
+  "region": "Northern Mexico · Central Mexico",
+  "servings": "6 servings",
+  "story": "Mexican meatballs carry raw rice inside, which swells as they cook and keeps them tender, and fresh mint, which is the flavor everyone remembers.",
+  "ingredients": [
+    {
+      "title": "Meatballs",
+      "items": [
+        "1 lb ground beef",
+        "½ lb ground pork",
+        "¼ cup long-grain rice, soaked 15 minutes in hot water and drained",
+        "1 egg",
+        "2 tbsp finely chopped hierbabuena (mint)",
+        "2 tbsp finely chopped onion",
+        "1 garlic clove, minced",
+        "½ tsp ground cumin",
+        "1 tsp salt and ¼ tsp black pepper"
+      ]
+    },
+    {
+      "title": "Broth",
+      "items": [
+        "4 Roma tomatoes",
+        "¼ white onion",
+        "2 garlic cloves",
+        "1–2 chipotles en adobo, optional",
+        "1 tbsp oil",
+        "8 cups beef or chicken broth (or water)",
+        "2 carrots, diced",
+        "1 potato, diced",
+        "1 zucchini, diced",
+        "1 sprig hierbabuena",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Corn tortillas",
+        "Limes"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix all the meatball ingredients with your hands just until combined. Wet your hands and roll balls the size of a golf ball.",
+    "Blend the tomatoes, onion, garlic and chipotle. Heat the oil in a wide pot and fry the purée 5 minutes, until it darkens.",
+    "Add the broth and the mint sprig. Bring to a boil and add the carrots and potato.",
+    "Lower in the meatballs one at a time. Don't stir for the first 10 minutes so they can set.",
+    "Simmer 25–30 minutes, adding the zucchini for the last 10. Taste for salt.",
+    "Serve with tortillas and lime."
+  ],
+  "pressureCooker": {
+    "time": "8 min high pressure + 10 min natural release",
+    "total": "30 min",
+    "steps": [
+      "On Sauté, fry the tomato purée 5 minutes.",
+      "Add the broth, mint, carrots and potato. Gently set in the meatballs.",
+      "High pressure 8 minutes, natural release 10.",
+      "Add the zucchini and simmer on Sauté 3 minutes."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Some families tuck a piece of hard-boiled egg inside each meatball. Kids love finding it.",
+    "Keep your hands wet while rolling and the meat won't stick."
+  ],
+  "variations": []
+}

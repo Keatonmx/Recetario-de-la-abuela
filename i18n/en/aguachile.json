@@ -1,0 +1,84 @@
+{
+  "id": "aguachile",
+  "subtitle": "Raw shrimp cured in lime and chile",
+  "verso": "The shrimp that falls asleep gets carried off by the current.",
+  "region": "Sinaloa",
+  "servings": "4 servings",
+  "story": "From the coast of Sinaloa: raw shrimp, butterflied and bathed in a blend of lime juice, serrano or chiltepín and cilantro, with cucumber and red onion. It's eaten right away and cold, with tostadas and a cold beer, while the shrimp are still translucent in the middle. The name means chile water.",
+  "ingredients": [
+    {
+      "title": "The shrimp",
+      "items": [
+        "1 lb very fresh raw shrimp (about 20 medium), peeled and deveined",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "The chile water",
+      "items": [
+        "1 cup fresh lime juice (about 10 limes)",
+        "3–5 serranos (or 1 tbsp chiltepín, the Sinaloa way)",
+        "½ bunch cilantro",
+        "1 garlic clove, optional",
+        "½ tsp salt",
+        "¼ cup cold water"
+      ]
+    },
+    {
+      "title": "On top",
+      "items": [
+        "1 cucumber, peeled and thinly sliced",
+        "½ red onion, very thinly sliced"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "1 avocado, sliced",
+        "Tostadas or saladitas (saltine crackers)",
+        "Salsa negra or Huichol, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Butterfly each shrimp: cut along the back almost all the way through and open it flat. Lay them in one layer on a cold plate, salt lightly and refrigerate while you make the chile water.",
+    "Blend the lime juice, chiles, cilantro, garlic, salt and water until bright green and smooth.",
+    "Pour the chile water over the shrimp so they're covered. Scatter the cucumber and red onion over the top.",
+    "Let it sit 5–10 minutes in the fridge, just until the shrimp turn pink outside but stay translucent in the middle. Longer and they toughen.",
+    "Serve right away with avocado, tostadas and a little salsa negra."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Aguachile isn't cooked at all: the lime does the work.",
+  "tips": [
+    "Use the freshest shrimp you can find, or shrimp frozen at sea and thawed in the fridge. Raw seafood isn't for pregnant women, small children or anyone with a weak immune system.",
+    "Make it right before you eat. Aguachile waits for no one."
+  ],
+  "variations": [
+    {
+      "name": "Aguachile Rojo",
+      "subtitle": "Red aguachile with chiltepín and chile de árbol",
+      "region": "Sinaloa · Sonora",
+      "note": "The hotter red version, with dried chiles in the chile water.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "The shrimp, cucumber and red onion from the base",
+            "1 cup fresh lime juice",
+            "1 tbsp chiltepín",
+            "4 chiles de árbol",
+            "1 garlic clove",
+            "½ tsp salt",
+            "¼ cup cold water"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast the chiles de árbol a few seconds in a dry pan.",
+        "Blend them with the chiltepín, lime juice, garlic, salt and water.",
+        "Pour over the butterflied shrimp with the cucumber and onion, wait 5–10 minutes and serve."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

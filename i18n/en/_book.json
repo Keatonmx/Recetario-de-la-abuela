@@ -1,0 +1,45 @@
+{
+  "categories": {
+    "desayunos": "Breakfast",
+    "caldos": "Soups and Pozoles",
+    "guisos": "Stews and Meats",
+    "mariscos": "Seafood",
+    "moles": "Moles",
+    "masa": "Masa and Tortillas",
+    "frijoles": "Beans and Rice",
+    "salsas": "Salsas",
+    "bebidas": "Drinks",
+    "pan": "Bread",
+    "postres": "Desserts"
+  },
+  "chiles": [
+    { "name": "Guajillo", "form": "Dried mirasol chile", "taste": "Bright, tangy, a little berry", "uses": "Pozole, menudo, birria, enchiladas, tamales" },
+    { "name": "Ancho", "form": "Dried poblano", "taste": "Sweet, raisin, deep", "uses": "Moles, adobos, pozole" },
+    { "name": "Pasilla", "form": "Dried chilaca", "taste": "Herbal, cocoa, prune", "uses": "Mole poblano, mole de olla, salsa borracha" },
+    { "name": "Mulato", "form": "Dried dark poblano", "taste": "Chocolate, licorice", "uses": "Mole poblano" },
+    { "name": "Chipotle", "form": "Smoke-dried jalapeño (mora or meco)", "taste": "Smoky, sweet heat", "uses": "Tinga, caldo tlalpeño, salsas" },
+    { "name": "De árbol", "form": "Dried, thin and red", "taste": "Sharp, clean heat", "uses": "Taquería salsa, pozole blanco" },
+    { "name": "Piquín · Chiltepín", "form": "Tiny wild chiles, dried", "taste": "Quick, bright fire", "uses": "Crushed over menudo and pozole, on fruit" },
+    { "name": "Poblano", "form": "Fresh", "taste": "Green, earthy", "uses": "Chiles rellenos, rajas, green rice" },
+    { "name": "Serrano", "form": "Fresh", "taste": "Grassy, crisp", "uses": "Salsa verde, salsa roja, soups" },
+    { "name": "Habanero", "form": "Fresh", "taste": "Fruity, floral", "uses": "Xnipec, pickled onion, Yucatán" }
+  ],
+  "glossary": [
+    { "term": "Masa", "definition": "Dough of nixtamalized corn. Fresh masa from a tortillería is best. For tamales ask for masa para tamal, sin preparar (unprepared), ground coarser than tortilla masa. Masa harina is the dried flour version." },
+    { "term": "Manteca", "definition": "Rendered pork lard. Buy it fresh and soft from a butcher shop. The shelf-stable white blocks are hydrogenated and taste flat." },
+    { "term": "Orégano mexicano", "definition": "A different plant from Mediterranean oregano, more citrusy and grassy. Rub it between your palms over the pot or bowl." },
+    { "term": "Canela", "definition": "Mexican (Ceylon) cinnamon: soft, flaky layered bark that breaks in your fingers. Milder and sweeter than cassia." },
+    { "term": "Epazote", "definition": "A pungent herb for black beans, quesadillas, chilaquiles and pozole verde. There's no real substitute; leave it out if you can't find it." },
+    { "term": "Hoja santa", "definition": "A big heart-shaped leaf that tastes of anise and sassafras. Used in pozole verde, pipián and Oaxacan moles." },
+    { "term": "Hoja de aguacate", "definition": "Dried Mexican avocado leaves, toasted before using. They add an anise note to barbacoa and black beans." },
+    { "term": "Piloncillo", "definition": "Unrefined cane sugar pressed into cones. Grate it or melt it in water. Dark brown sugar is the closest swap." },
+    { "term": "Achiote", "definition": "Annatto seeds ground with spices into recado rojo paste. Sold in bricks; the base of cochinita pibil." },
+    { "term": "Naranja agria", "definition": "Seville sour orange, used in the Yucatán. Swap: two parts orange juice to one part lime juice." },
+    { "term": "Cacahuazintle", "definition": "The large white corn for pozole. Bagged precooked maíz pozolero beats canned hominy." },
+    { "term": "Xoconostle", "definition": "A sour cactus fruit for mole de olla and salsas. Lime juice can stand in." },
+    { "term": "Quesos", "definition": "Queso fresco crumbles; cotija and añejo are dry and salty; Oaxaca and asadero melt and stretch; panela holds its shape when warm." },
+    { "term": "Crema", "definition": "Mexican cultured cream, thinner and saltier than sour cream. Thin sour cream with a little milk if you can't find it." },
+    { "term": "Barro", "definition": "Glazed clay ollas, cazuelas and jarritos for beans, coffee and atole. Buy pieces marked Sin Plomo (lead-free); old or unmarked glazes can leach lead." },
+    { "term": "Tequesquite", "definition": "A natural mineral salt from the old lakebeds of central Mexico, the traditional leavening for tamales, dissolved in water (often with tomatillo husks)." }
+  ]
+}

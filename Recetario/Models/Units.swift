@@ -16,36 +16,57 @@ enum Units {
 
     private typealias Rule = (NSRegularExpression, ([String?]) -> String)
 
-    private static let rules: [Rule] = [
-        // volume with its weight in parentheses → the weight
-        (regex("\(qty) (?:cups?|tbsp|tsp) \\((about )?(\(num)) ?(g|oz|ml)\\)"), { g in
-            let about = g[3] ?? ""
-            let w = parse(g[4] ?? "")
-            let unit = g[5] ?? "g"
-            return about + (unit == "ml" ? mls(w) : grams(w * (unit == "oz" ? 28.35 : 1)))
-        }),
-        (regex("\(qty) ?(?:lb|lbs)\\b"), { g in range(values(g, times: 453.6), grams) }),
-        (regex("\(qty) ?oz\\b"), { g in range(values(g, times: 28.35), grams) }),
-        (regex("\(qty) quarts?\\b"), { g in range(values(g, times: 946), mls) }),
-        (regex("\(qty) cups?\\b"), { g in range(values(g, times: 240), mls) }),
-        (regex("\\b(an? )?(\\d+)-qt\\b"), { g in
-            "\(g[1] != nil ? "a " : "")\(dec((Double(g[2] ?? "") ?? 0) * 0.946, 1))-liter"
-        }),
-        (regex("\\b(an? )?(\\d+)- or (\\d+)-inch\\b"), { g in
-            let a = Double(g[2] ?? "") ?? 0, b = Double(g[3] ?? "") ?? 0
-            return "\(g[1] != nil ? "a " : "")\(Int((a * 2.54).rounded())) or \(Int((b * 2.54).rounded())) cm"
-        }),
-        (regex("(\(num))-inch\\b"), { g in "\(cm(parse(g[1] ?? ""))) cm" }),
-        (regex("(\(num)) inch(?:es)?\\b"), { g in "\(cm(parse(g[1] ?? ""))) cm" }),
-        (regex("(\\d+)°F"), { g in
-            let f = Double(g[1] ?? "") ?? 0
-            return "\(Int(((f - 32) * 5 / 9 / 10).rounded()) * 10)°C"
-        })
+    /// A volume with its weight in parentheses → the weight.
+    private static func weight(_ g: [String?]) -> String {
+        let about = g[3] ?? ""
+        let w = parse(g[4] ?? "")
+        let unit = g[5] ?? "g"
+        return about + (unit == "ml" ? mls(w) : grams(w * (unit == "oz" ? 28.35 : 1)))
+    }
+    private static let pounds: Rule = (regex("\(qty) ?(?:lb|lbs)\\b"), { g in range(values(g, times: 453.6), grams) })
+    private static let ounces: Rule = (regex("\(qty) ?oz\\b"), { g in range(values(g, times: 28.35), grams) })
+    private static let fahrenheit: Rule = (regex("(\\d+)°F"), { g in
+        let f = Double(g[1] ?? "") ?? 0
+        return "\(Int(((f - 32) * 5 / 9 / 10).rounded()) * 10)°C"
+    })
+
+    private static let rules: [Lang: [Rule]] = [
+        .en: [
+            (regex("\(qty) (?:cups?|tbsp|tsp) \\((about )?(\(num)) ?(g|oz|ml)\\)"), weight),
+            pounds,
+            ounces,
+            (regex("\(qty) quarts?\\b"), { g in range(values(g, times: 946), mls) }),
+            (regex("\(qty) cups?\\b"), { g in range(values(g, times: 240), mls) }),
+            (regex("\\b(an? )?(\\d+)-qt\\b"), { g in
+                "\(g[1] != nil ? "a " : "")\(dec((Double(g[2] ?? "") ?? 0) * 0.946, 1))-liter"
+            }),
+            (regex("\\b(an? )?(\\d+)- or (\\d+)-inch\\b"), { g in
+                let a = Double(g[2] ?? "") ?? 0, b = Double(g[3] ?? "") ?? 0
+                return "\(g[1] != nil ? "a " : "")\(Int((a * 2.54).rounded())) or \(Int((b * 2.54).rounded())) cm"
+            }),
+            (regex("(\(num))-inch\\b"), { g in "\(cm(parse(g[1] ?? ""))) cm" }),
+            (regex("(\(num)) inch(?:es)?\\b"), { g in "\(cm(parse(g[1] ?? ""))) cm" }),
+            fahrenheit
+        ],
+        .es: [
+            // "¼ de taza", "½ de pulgada": Spanish may put "de" after a fraction
+            (regex("\(qty) (?:de )?(?:tazas?|cucharadas?|cucharaditas?) \\((como )?(\(num)) ?(g|oz|ml)\\)"), weight),
+            pounds,
+            ounces,
+            (regex("\(qty) qt\\b"), { g in range(values(g, times: 946), mls) }),
+            (regex("\(qty) (?:de )?tazas?(?![A-Za-zÀ-ÿ])"), { g in range(values(g, times: 240), mls) }),
+            (regex("(\\d+) o (\\d+) pulgadas(?![A-Za-zÀ-ÿ])"), { g in
+                let a = Double(g[1] ?? "") ?? 0, b = Double(g[2] ?? "") ?? 0
+                return "\(Int((a * 2.54).rounded())) o \(Int((b * 2.54).rounded())) cm"
+            }),
+            (regex("(\(num)) (?:de )?pulgadas?(?![A-Za-zÀ-ÿ])"), { g in "\(cm(parse(g[1] ?? ""))) cm" }),
+            fahrenheit
+        ]
     ]
 
     /// The line with US measures converted to metric.
-    static func metric(_ s: String) -> String {
-        rules.reduce(s) { text, rule in replace(rule.0, in: text, with: rule.1) }
+    static func metric(_ s: String, lang: Lang = .en) -> String {
+        (rules[lang] ?? []).reduce(s) { text, rule in replace(rule.0, in: text, with: rule.1) }
     }
 
     // MARK: Helpers

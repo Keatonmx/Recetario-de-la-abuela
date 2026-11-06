@@ -1,0 +1,59 @@
+{
+  "id": "bolillos",
+  "subtitle": "Bolillos mexicanos de corteza crujiente",
+  "verso": "Pa'l susto, un bolillo.",
+  "region": "Toda la República",
+  "servings": "10 bolillos",
+  "story": "El pan de todos los días en México: corteza que truena, suave por dentro y con punta en los dos extremos. Es para molletes, tortas, capirotada y para remojar en el caldo. Las abuelas también dicen que una mordida de bolillo es buena para el susto. Nació de la panadería francesa durante la Intervención de la década de 1860. En Guadalajara su primo es el birote salado, un poco agrio y de corteza firme: el pan de la torta ahogada.",
+  "ingredients": [
+    {
+      "title": "Los bolillos",
+      "items": [
+        "4 tazas (500 g) de harina para pan",
+        "1½ tazas (350 ml) de agua tibia",
+        "2¼ cucharaditas (1 sobre) de levadura instantánea",
+        "1 cucharada de azúcar",
+        "2 cucharaditas de sal",
+        "2 cucharadas de manteca o mantequilla suave"
+      ]
+    }
+  ],
+  "steps": [
+    "Mezcla la harina, la levadura, el azúcar y la sal. Agrega el agua y la manteca y mezcla hasta formar una masa.",
+    "Amasa 10 minutos, hasta que esté tersa y elástica. Tapa y deja que crezca 1–1½ horas, hasta que doble su tamaño.",
+    "Divide en [[10 piezas]] (como 85 g). Aplana cada una en forma de óvalo y luego enróllala apretada desde un lado largo para formar un cilindro, presionando la unión para cerrarla.",
+    "Rueda las puntas bajo las palmas para que se adelgacen en punta. Acomódalos con la unión hacia abajo en una charola con papel.",
+    "Tapa y deja que crezcan 45 minutos, hasta que se esponjen.",
+    "Calienta el horno a 425°F con una charola vacía en la rejilla de abajo. Hazle a cada bolillo un corte a lo largo, de unas ¼ pulgada de profundidad.",
+    "Rocía o barniza los bolillos con agua. Mételos al horno y vierte una taza de agua caliente en la charola vacía para que haga vapor. Cierra la puerta rápido.",
+    "Hornea 20–25 minutos, hasta que estén dorados y suenen huecos al golpearlos por abajo. Déjalos enfriar sobre una rejilla."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El pan necesita horno, y el vapor dentro del horno es lo que hace que la corteza truene.",
+  "tips": [
+    "El vapor es el secreto de la corteza delgada que truena. No te saltes la charola con agua.",
+    "Los bolillos del día anterior son perfectos para molletes y capirotada."
+  ],
+  "variations": [
+    {
+      "name": "Teleras",
+      "subtitle": "Pan plano para tortas",
+      "region": "Ciudad de México",
+      "note": "El pan suave y plano para tortas, con dos surcos encima.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Masa de bolillo de la receta base"
+          ]
+        }
+      ],
+      "steps": [
+        "Divide la masa en [[8 piezas]] y dales forma de óvalos planos de unas ¾ pulgada de grueso.",
+        "Marca dos líneas hondas a lo largo de cada una con el mango de una cuchara de madera, casi hasta abajo.",
+        "Deja que crezcan 45 minutos y hornéalas a 400°F durante 18–20 minutos, sin vapor, para que la corteza quede suave."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

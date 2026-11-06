@@ -1,0 +1,89 @@
+{
+  "id": "tinga-de-pollo",
+  "subtitle": "Chipotle shredded chicken",
+  "verso": "Tinga on a tostada, and the party's all set!",
+  "region": "Puebla",
+  "servings": "6 servings",
+  "story": "Tinga is from Puebla: lots of soft onion, tomato and smoky chipotle. It goes on tostadas with beans, crema and queso, and it's what you bring to a fiesta. Tostadas de tinga are on nearly every table at the Noche Mexicana on September 15, next to the pozole.",
+  "ingredients": [
+    {
+      "title": "The chicken",
+      "items": [
+        "2 lb chicken thighs or breasts",
+        "¼ onion, 2 garlic cloves, 1 bay leaf and salt, for poaching"
+      ]
+    },
+    {
+      "title": "The sauce",
+      "items": [
+        "2 tbsp lard or oil",
+        "2 white onions, thinly sliced",
+        "2 garlic cloves, minced",
+        "1½ lb ripe tomatoes (or 5 Roma)",
+        "2–4 chipotles en adobo, plus 1 tbsp of the adobo sauce",
+        "½ tsp Mexican oregano",
+        "2 bay leaves",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Tostadas",
+        "Refried beans",
+        "Shredded lettuce",
+        "Crema, queso fresco and avocado"
+      ]
+    }
+  ],
+  "steps": [
+    "Simmer the chicken in water with the onion, garlic, bay leaf and salt for 20 minutes. Cool, shred and save [[1 cup]] of the broth.",
+    "Blend the tomatoes with the chipotles and adobo sauce.",
+    "Heat the lard and cook the sliced onions over medium-low 8 minutes, until soft and translucent but not brown. Add the garlic for 1 minute.",
+    "Add the tomato-chipotle purée, oregano and bay leaves. Cook 8 minutes, until it darkens.",
+    "Add the chicken and [[½ cup]] of the broth. Simmer 10 minutes until juicy but not soupy. Season.",
+    "Spread tostadas with beans, pile on the tinga, and top with lettuce, crema, queso and avocado."
+  ],
+  "pressureCooker": {
+    "time": "10 min high pressure + 5 min natural release",
+    "total": "25 min",
+    "steps": [
+      "On Sauté, soften the onions in the lard, then add the garlic.",
+      "Add the purée, oregano, bay leaves and ½ cup water. Nestle in the raw chicken thighs.",
+      "High pressure 10 minutes (8 for breasts), natural release 5.",
+      "Shred the chicken right in the sauce. Simmer on Sauté a few minutes to thicken."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Be generous with the onion. Tinga should be half onion.",
+    "Start with 2 chipotles and add more after tasting. The heat varies from can to can."
+  ],
+  "variations": [
+    {
+      "name": "Tinga Poblana de Puerco",
+      "subtitle": "Pork and chorizo tinga",
+      "region": "Puebla",
+      "note": "The oldest printed tingas (La cocinera poblana, 1881) are pork with chorizo and longaniza, sometimes with potato.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb pork shoulder, cooked and shredded",
+            "6 oz Mexican chorizo",
+            "The same tinga sauce as the base",
+            "1 potato, diced and boiled, optional",
+            "Avocado, to serve"
+          ]
+        }
+      ],
+      "steps": [
+        "Fry the chorizo until it releases its fat. Add the onions and cook until soft.",
+        "Add the tomato-chipotle purée and cook 8 minutes, then add the pork and potato.",
+        "Simmer 10 minutes. Serve on tostadas with avocado."
+      ],
+      "pressureNote": "Cook the pork shoulder chunks at high pressure 35 minutes, natural release 10, then shred."
+    }
+  ]
+}

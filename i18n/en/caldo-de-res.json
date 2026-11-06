@@ -1,0 +1,102 @@
+{
+  "id": "caldo-de-res",
+  "subtitle": "Beef & vegetable soup",
+  "verso": "Beef soup with its bone: taste it once and you'll keep coming home.",
+  "region": "Central Mexico · Northern Mexico",
+  "servings": "8 servings",
+  "story": "The everyday soup of every Mexican home: beef shank with the bone and marrow, corn on the cob and whatever vegetables the market has. The rice goes in the bowl, not the pot.",
+  "ingredients": [
+    {
+      "title": "The meat",
+      "items": [
+        "3 lb beef shank (chambarete), bone-in with marrow",
+        "1 lb beef short ribs (costilla de res), optional",
+        "½ white onion",
+        "4 garlic cloves",
+        "4 quarts water",
+        "1 tbsp salt"
+      ]
+    },
+    {
+      "title": "The vegetables",
+      "items": [
+        "2 Roma tomatoes",
+        "3 ears of corn, each cut in 3 rounds",
+        "3 carrots, in thick pieces",
+        "2 medium potatoes, quartered",
+        "1 chayote, peeled and cut in wedges",
+        "2 Mexican zucchini (calabacitas), in thick pieces",
+        "¼ green cabbage, in wedges",
+        "Handful of cilantro sprigs",
+        "1 sprig hierbabuena (mint)"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Arroz rojo",
+        "Limes",
+        "Chopped onion and cilantro",
+        "Sliced serranos or salsa",
+        "Corn tortillas"
+      ]
+    }
+  ],
+  "steps": [
+    "Put the meat, onion and garlic in a big pot with the water. Bring to a boil and skim the foam for 15 minutes.",
+    "Add the salt, lower the heat and simmer partly covered 2 hours, until the meat is tender.",
+    "Blend the tomatoes with a cup of broth and strain into the pot. It gives the caldo a light color.",
+    "Add the vegetables by how long they take: corn and carrots first, 15 minutes; then potatoes and chayote, 10 minutes; then zucchini and cabbage, 8 minutes.",
+    "Turn off the heat and drop in the cilantro and mint. Taste for salt.",
+    "Put a spoon of arroz rojo in each bowl, add meat and vegetables, and ladle the broth over. Lime and chile at the table."
+  ],
+  "pressureCooker": {
+    "time": "40 min high pressure + 15 min natural release",
+    "total": "1 h 10",
+    "steps": [
+      "Put the meat, onion, garlic, salt and [[3 quarts]] water in the pot. High pressure 40 minutes, natural release 15.",
+      "Add the strained tomato, corn, carrots, potatoes and chayote. High pressure 3 minutes, quick release.",
+      "Switch to Sauté, add the zucchini and cabbage, and simmer 5 minutes. Add the cilantro and mint off the heat."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Scoop the marrow out of the bone onto a hot tortilla with salt and salsa. That's the cook's reward.",
+    "Mint is the quiet secret in a lot of family caldos. One sprig is enough."
+  ],
+  "variations": [
+    {
+      "name": "Mole de Olla",
+      "subtitle": "Chile-red beef soup with xoconostle",
+      "region": "Ciudad de México · Central Mexico",
+      "note": "Caldo de res's spicier cousin. The broth is tinted with dried chiles and soured with xoconostle, a tart cactus fruit. Many central families drop in chochoyotes, little masa-and-epazote dumplings pressed with a thumb, for the last 10 minutes. The saying «¡A darle, que es mole de olla!» means let's get to it.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Meat and broth from the base, steps 1–2",
+            "4 chiles guajillo, 2 chiles pasilla (1 ancho, optional)",
+            "2 Roma tomatoes, 2 garlic cloves, ¼ onion",
+            "1 tbsp lard",
+            "2 xoconostles, peeled, seeded and quartered (or the juice of 1 lime at the end)",
+            "2 ears of corn",
+            "½ lb green beans",
+            "2 zucchini",
+            "1 chayote",
+            "2 potatoes",
+            "2 sprigs epazote"
+          ]
+        }
+      ],
+      "steps": [
+        "Cook the meat as in the base.",
+        "Toast and soak the chiles. Blend with the tomatoes, garlic and onion, strain, and fry in the lard 5 minutes.",
+        "Add the chile to the broth with the corn, potatoes, chayote and xoconostle. Cook 15 minutes.",
+        "Add the green beans, zucchini and epazote and cook 8 minutes more.",
+        "Serve with chopped onion, serrano and lime."
+      ],
+      "pressureNote": "Same pressure steps as the base. Add the fried chile with the first batch of vegetables."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "tostadas-de-ceviche",
+  "subtitle": "Lime-cured fish on crisp tostadas",
+  "verso": "Lime, fish and a tostada: the beach, and it costs you nothing.",
+  "region": "Guerrero · Sinaloa · the coast",
+  "servings": "6 servings",
+  "story": "On the Mexican coast, ceviche is fish cured in lime until white, then mixed with tomato, onion, cilantro and chile and piled on a crisp tostada with avocado and hot sauce. In Acapulco it gets a splash of catsup; in Sinaloa, cucumber, carrot and a swipe of mayonnaise.",
+  "ingredients": [
+    {
+      "title": "The fish",
+      "items": [
+        "1 lb very fresh firm white fish (sierra, mahi-mahi, snapper or tilapia), finely diced",
+        "1½ cups fresh lime juice",
+        "1 tsp salt"
+      ]
+    },
+    {
+      "title": "With the fish",
+      "items": [
+        "3 Roma tomatoes, finely diced",
+        "½ white onion, finely chopped",
+        "2–3 serranos, minced",
+        "½ cup chopped cilantro",
+        "1 cucumber, finely diced, optional"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "12 tostadas",
+        "2 avocados, sliced",
+        "Mayonnaise, optional, the Sinaloa way",
+        "Valentina or Huichol hot sauce",
+        "Limes"
+      ]
+    }
+  ],
+  "steps": [
+    "Put the fish in a glass bowl with the salt and enough lime juice to cover. Refrigerate 30–40 minutes, stirring once, until the fish is white all the way through.",
+    "Drain off most of the lime juice.",
+    "Fold in the tomato, onion, serrano, cilantro and cucumber. Taste for salt.",
+    "Spread each tostada thinly with mayonnaise if you like, pile on the ceviche and top with avocado and hot sauce."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. The lime cooks the fish.",
+  "tips": [
+    "Cut the fish small and even so it all cures at the same time.",
+    "Use a glass or ceramic bowl, not metal, for the lime.",
+    "Very fresh fish only. Raw seafood isn't for pregnant women or small children."
+  ],
+  "variations": [
+    {
+      "name": "Ceviche de Camarón",
+      "subtitle": "Shrimp ceviche",
+      "region": "Sinaloa",
+      "note": "With shrimp instead of fish, cured raw like aguachile or poached a minute first.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 lb shrimp, peeled, deveined and chopped",
+            "1 cup fresh lime juice",
+            "The tomato, onion, serrano, cilantro and cucumber from the base",
+            "1 carrot, finely grated"
+          ]
+        }
+      ],
+      "steps": [
+        "Cure the shrimp in the lime juice 20 minutes in the fridge, or poach them 1 minute and chill them first.",
+        "Drain and fold in the vegetables and carrot.",
+        "Serve on tostadas with avocado."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

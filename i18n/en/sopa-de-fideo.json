@@ -1,0 +1,67 @@
+{
+  "id": "sopa-de-fideo",
+  "subtitle": "Toasted noodle soup in tomato broth",
+  "verso": "Golden fideo, never burnt: that's the lesson to be learnt.",
+  "region": "All of Mexico",
+  "servings": "6 servings",
+  "story": "The first soup most Mexican kids learn to love. Everything depends on toasting the noodles to the color of a peanut shell before the tomato goes in.",
+  "ingredients": [
+    {
+      "title": "Soup",
+      "items": [
+        "7 oz fideo (thin coiled vermicelli)",
+        "3 tbsp oil or lard",
+        "3 Roma tomatoes",
+        "¼ white onion",
+        "1 garlic clove",
+        "6 cups hot chicken broth",
+        "1 tsp salt, or to taste",
+        "1 sprig cilantro (or a few leaves of epazote)"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Limes",
+        "Crema and crumbled queso fresco",
+        "Chopped chipotles en adobo, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Blend the tomatoes, onion and garlic with [[1 cup]] of the broth until smooth.",
+    "Heat the oil in a pot over medium. Add the fideo, breaking up the coils, and stir constantly until deep golden. Don't walk away; it burns fast.",
+    "Pour the tomato purée through a strainer into the pot. It will sizzle. Fry, stirring, 3 minutes until it darkens.",
+    "Add the rest of the broth, the salt and the cilantro. Simmer 8–10 minutes, until the fideo is soft.",
+    "Serve with lime, and crema and queso if you like."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. This soup is done in 30 minutes on the stove, and the noodles would turn to mush.",
+  "tips": [
+    "If the fideo browns too fast, pull the pot off the heat. It keeps cooking in the hot oil."
+  ],
+  "variations": [
+    {
+      "name": "Sopa Seca de Fideo",
+      "subtitle": "Dry fideo with chipotle",
+      "region": "Central Mexico",
+      "note": "A dry soup, cooked until the noodles absorb all the broth. It's the second course of a comida corrida: sopa aguada, then sopa seca, then the main stew.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Same as the base, but only 3 cups broth (1 for the purée, 2 to cook)",
+            "1–2 chipotles en adobo, blended with the tomato",
+            "Crema, queso fresco and avocado"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast the fideo and fry the tomato-chipotle purée as in the base.",
+        "Add [[2 cups]] broth, cover and cook on low 10 minutes until absorbed.",
+        "Top with crema, queso and avocado."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

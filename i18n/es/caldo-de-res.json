@@ -1,0 +1,102 @@
+{
+  "id": "caldo-de-res",
+  "subtitle": "Caldo de res con verduras",
+  "verso": "Caldo de res con su hueso: el que lo prueba regresa por eso.",
+  "region": "Centro · Norte",
+  "servings": "8 personas",
+  "story": "El caldo de todos los días en cualquier casa mexicana: chambarete con su hueso y su tuétano, elote en trozos y las verduras que haya en el mercado. El arroz va en el plato, no en la olla.",
+  "ingredients": [
+    {
+      "title": "La carne",
+      "items": [
+        "3 lb de chambarete de res, con hueso y tuétano",
+        "1 lb de costilla de res, opcional",
+        "½ cebolla blanca",
+        "4 dientes de ajo",
+        "4 qt de agua",
+        "1 cucharada de sal"
+      ]
+    },
+    {
+      "title": "Las verduras",
+      "items": [
+        "2 jitomates guaje",
+        "3 elotes, cada uno cortado en 3 ruedas",
+        "3 zanahorias, en trozos gruesos",
+        "2 papas medianas, en cuartos",
+        "1 chayote, pelado y cortado en gajos",
+        "2 calabacitas, en trozos gruesos",
+        "¼ de repollo verde, en gajos",
+        "Un puño de ramitas de cilantro",
+        "1 rama de hierbabuena"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Arroz rojo",
+        "Limones",
+        "Cebolla y cilantro picados",
+        "Serranos rebanados o salsa",
+        "Tortillas de maíz"
+      ]
+    }
+  ],
+  "steps": [
+    "Pon la carne, la cebolla y el ajo en una olla grande con el agua. Deja que suelte el hervor y espúmala durante 15 minutos.",
+    "Agrega la sal, baja el fuego y deja hervir a fuego lento, con la olla medio tapada, 2 horas, hasta que la carne esté suave.",
+    "Licúa los jitomates con una taza de caldo y cuélalos sobre la olla. Le dan al caldo un color ligero.",
+    "Agrega las verduras según lo que tardan: primero el elote y las zanahorias, 15 minutos; luego las papas y el chayote, 10 minutos; luego las calabacitas y el repollo, 8 minutos.",
+    "Apaga el fuego y échale el cilantro y la hierbabuena. Prueba de sal.",
+    "Pon una cucharada de arroz rojo en cada plato, agrega carne y verduras, y sirve el caldo encima. Limón y chile en la mesa."
+  ],
+  "pressureCooker": {
+    "time": "40 min a presión alta + 15 min de liberación natural",
+    "total": "1 h 10",
+    "steps": [
+      "Pon la carne, la cebolla, el ajo, la sal y [[3 qt]] de agua en la olla. Presión alta 40 minutos, liberación natural 15.",
+      "Agrega el jitomate colado, el elote, las zanahorias, las papas y el chayote. Presión alta 3 minutos, liberación rápida.",
+      "Cambia a la función Saltear, agrega las calabacitas y el repollo, y deja hervir a fuego lento 5 minutos. Agrega el cilantro y la hierbabuena fuera del fuego."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Saca el tuétano del hueso sobre una tortilla caliente con sal y salsa. Es el premio de quien cocina.",
+    "La hierbabuena es el secreto callado de muchos caldos de familia. Con una rama basta."
+  ],
+  "variations": [
+    {
+      "name": "Mole de Olla",
+      "subtitle": "Caldo de res rojo de chile con xoconostle",
+      "region": "Ciudad de México · Centro",
+      "note": "El primo más picoso del caldo de res. El caldo se pinta con chiles secos y se agria con xoconostle, una tuna ácida. Muchas familias del centro le echan chochoyotes, bolitas de masa con epazote aplastadas con el pulgar, en los últimos 10 minutos. El dicho «¡A darle, que es mole de olla!» quiere decir manos a la obra.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Carne y caldo de la receta base, pasos 1–2",
+            "4 chiles guajillo, 2 chiles pasilla (1 ancho, opcional)",
+            "2 jitomates guaje, 2 dientes de ajo, ¼ de cebolla",
+            "1 cucharada de manteca",
+            "2 xoconostles, pelados, sin semillas y en cuartos (o el jugo de 1 limón al final)",
+            "2 elotes",
+            "½ lb de ejotes",
+            "2 calabacitas",
+            "1 chayote",
+            "2 papas",
+            "2 ramas de epazote"
+          ]
+        }
+      ],
+      "steps": [
+        "Cuece la carne como en la receta base.",
+        "Tuesta y remoja los chiles. Licúalos con los jitomates, el ajo y la cebolla, cuela, y fríe en la manteca 5 minutos.",
+        "Agrega el chile al caldo con los elotes, las papas, el chayote y el xoconostle. Cocina 15 minutos.",
+        "Agrega los ejotes, las calabacitas y el epazote y cocina 8 minutos más.",
+        "Sirve con cebolla picada, serrano y limón."
+      ],
+      "pressureNote": "Los mismos pasos a presión que la receta base. Agrega el chile frito con la primera tanda de verduras."
+    }
+  ]
+}

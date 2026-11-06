@@ -1,0 +1,115 @@
+{
+  "id": "chilaquiles",
+  "subtitle": "Tortilla chips simmered in green salsa",
+  "verso": "Crunchy or soupy, take your pick, but always bathed in salsa thick.",
+  "region": "All of Mexico",
+  "servings": "4 servings",
+  "story": "Breakfast made from whatever tortillas are in the kitchen: fried, tossed in salsa or chile, and covered with crema and cheese, or cooked together with eggs. The name comes from the Nahuatl chīlāquilitl, roughly 'soaked in chile'. Crunchy or soft? Beans on top or on the side? Every house decides.",
+  "ingredients": [
+    {
+      "title": "Totopos",
+      "items": [
+        "12 corn tortillas, cut in 6 wedges: day-old is the classic, but store-bought or same-morning work fine",
+        "Oil for frying",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "Salsa verde",
+      "items": [
+        "1 lb tomatillos, husked",
+        "2–3 serranos",
+        "¼ white onion",
+        "1 garlic clove",
+        "Handful of cilantro",
+        "1 cup chicken broth",
+        "1 tbsp oil",
+        "1 sprig epazote, optional"
+      ]
+    },
+    {
+      "title": "On top",
+      "items": [
+        "Crema",
+        "Crumbled queso fresco",
+        "Thin onion rings",
+        "Avocado",
+        "Fried eggs or shredded chicken",
+        "Frijoles refritos on the side"
+      ]
+    }
+  ],
+  "steps": [
+    "Cut the tortillas. Store-bought tortillas fry fine as they are. Very fresh, moist homemade ones splatter less if they sit out on the counter a few minutes first.",
+    "Fry in hot oil in batches until golden. For crunchy chilaquiles fry them crisp; for soft ones, take them out while they're still a little chewy. Drain and salt.",
+    "Simmer the tomatillos and serranos 8 minutes. Blend with the onion, garlic, cilantro and broth.",
+    "Heat the oil in a wide pan and fry the salsa 5 minutes with the epazote.",
+    "Add the totopos and toss: 1 minute for crunchy, 3 for soft.",
+    "Serve right away with crema, queso, onion, avocado and an egg or chicken, with beans on the side."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Chilaquiles take 30 minutes and have to be eaten the moment they're ready.",
+  "tips": [
+    "Drain the fried tortillas well. Fresher tortillas hold a little more oil.",
+    "Leftover red chile from enchiladas or tamales makes great chilaquiles."
+  ],
+  "variations": [
+    {
+      "name": "Chilaquiles con Huevo, Estilo de Casa",
+      "subtitle": "Soft chilaquiles with red chile and eggs",
+      "region": "Mexican-American · Texas · California",
+      "note": "How a lot of Mexican-American families make them: store-bought or same-morning tortillas fried soft, not crunchy like chips, then cooked in the pan with red chile and eggs.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "10–12 corn tortillas, store-bought or homemade, cut or torn into strips or pieces",
+            "¼ cup oil",
+            "4–6 eggs",
+            "1½ cups red chile (below), or leftover enchilada chile or salsa",
+            "Salt, to taste",
+            "For the red chile: 6 dried New Mexico, California or guajillo chiles",
+            "2 garlic cloves",
+            "Pinch of cumin",
+            "½ tsp Mexican oregano",
+            "½ tsp salt",
+            "2 cups water",
+            "To serve: shredded cheese or queso fresco, frijoles, warm tortillas"
+          ]
+        }
+      ],
+      "steps": [
+        "Make the chile: stem and seed the chiles, simmer them in the water 10 minutes, then blend with the garlic, cumin, oregano and salt. Strain.",
+        "Heat the oil in a large skillet over medium-high. Fry the tortilla pieces, stirring, 3–4 minutes, until golden in spots but still soft and a little chewy. Pour off extra oil.",
+        "For eggs fried first: push the tortillas to the side, crack the eggs into the pan and let them fry a minute until the whites start to set. Then break them up and mix them through the tortillas.",
+        "For scrambled: beat the eggs with a pinch of salt, pour them over the tortillas and stir until just set.",
+        "Pour in the chile and toss everything together. Simmer 1–2 minutes, until the tortillas soak it up.",
+        "Top with cheese and serve with beans and tortillas."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Chilaquiles Rojos",
+      "subtitle": "Red chilaquiles",
+      "region": "All of Mexico",
+      "note": "The same method with a red salsa of tomato and dried chiles.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Totopos from the base",
+            "4 Roma tomatoes",
+            "3 chiles guajillo and 2 chiles de árbol, toasted and soaked",
+            "1 garlic clove, ¼ onion and 1 cup broth"
+          ]
+        }
+      ],
+      "steps": [
+        "Blend the tomatoes, chiles, garlic, onion and broth, and strain.",
+        "Fry the salsa 5 minutes and season.",
+        "Toss with the totopos and top as in the base."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

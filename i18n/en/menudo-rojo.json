@@ -1,0 +1,98 @@
+{
+  "id": "menudo-rojo",
+  "subtitle": "Red tripe & hominy soup",
+  "verso": "When your head is sore, eating sets you right once more.",
+  "region": "Chihuahua · Northern Mexico",
+  "servings": "8 servings",
+  "story": "Sunday morning menudo, the levantamuertos, is the norteño cure for a long Saturday night. In central Mexico the same soup is pancita, and in Yucatán mondongo. The tripe is cleaned with lime and cooked slowly with pata de res, the beef foot that makes the broth sticky. Families start it on Saturday so it's ready for breakfast.",
+  "ingredients": [
+    {
+      "title": "The meat",
+      "items": [
+        "4 lb beef honeycomb tripe (panal)",
+        "2 lb beef foot (pata de res), cut in pieces by the butcher",
+        "2 limes or ¼ cup white vinegar, plus a handful of coarse salt, for cleaning",
+        "1 white onion, halved",
+        "1 head garlic, halved",
+        "6 quarts water",
+        "2 tbsp salt"
+      ]
+    },
+    {
+      "title": "The chile",
+      "items": [
+        "8 chiles guajillo",
+        "2 chiles ancho",
+        "3 garlic cloves",
+        "1 tsp Mexican oregano",
+        "½ tsp cumin seed"
+      ]
+    },
+    {
+      "title": "The corn",
+      "items": [
+        "1 can (29 oz) hominy, drained and rinsed"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Chopped white onion",
+        "Mexican oregano",
+        "Crushed chile piquín or chiltepín",
+        "Limes",
+        "Warm corn tortillas or bolillos"
+      ]
+    }
+  ],
+  "steps": [
+    "Clean the tripe: rinse it, rub it all over with lime halves (or vinegar) and a handful of salt, and rinse again under cold water. Trim excess fat and cut into 1½-inch squares.",
+    "Put the beef foot, tripe, onion and garlic in a large pot with the water. Bring to a boil and skim for 15 minutes.",
+    "Lower to a gentle simmer, partly covered, and cook 3½–4 hours. The tripe is ready when it's tender with a little chew and the beef foot is soft and gelatinous. Add hot water if it reduces too much.",
+    "Toast, soak and blend the chiles with the garlic, oregano, cumin and [[1½ cups]] broth. Strain into the pot.",
+    "Add the hominy and salt. Simmer 30 minutes more. Pick the meat off the foot bones if you like, and discard the bones and aromatics.",
+    "Serve very hot with onion, oregano, chile piquín, lime and tortillas."
+  ],
+  "pressureCooker": {
+    "time": "60 min high pressure + 20 min natural release",
+    "total": "1 h 45",
+    "steps": [
+      "Clean and cut the tripe as in step 1.",
+      "Put the tripe, beef foot, onion, garlic and salt in the pot. Add water to the max-fill line.",
+      "Meanwhile, toast, soak, blend and strain the chiles as in step 4.",
+      "High pressure 60 minutes. Natural release 20 minutes. If the tripe is still tough, seal again for 15 minutes.",
+      "Add the strained chile and the hominy. Simmer on Sauté 20 minutes."
+    ],
+    "note": "Tripe varies a lot. Pre-cooked white tripe from the store needs only about 30 minutes."
+  },
+  "pressureNote": null,
+  "tips": [
+    "The pata is what makes your lips stick together. Don't skip it.",
+    "Lime and salt take away the barnyard smell. Rinse until the water runs clear.",
+    "Make it a day ahead. The fat sets on top and lifts right off."
+  ],
+  "variations": [
+    {
+      "name": "Menudo Blanco",
+      "subtitle": "White menudo",
+      "region": "Sonora",
+      "note": "In Sonora and Sinaloa menudo is white by default: no chile in the pot, and the heat comes from crushed chiltepín at the table, with buttered birote or bolillo.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Everything from the base recipe except the chile",
+            "Chiltepín, crushed between your fingers",
+            "Chopped cilantro and onion"
+          ]
+        }
+      ],
+      "steps": [
+        "Cook the tripe and beef foot as in the base, steps 1–3.",
+        "Add the hominy and salt and simmer 30 minutes.",
+        "Serve with chiltepín, oregano, onion, cilantro and lime."
+      ],
+      "pressureNote": "Same pressure time as the base."
+    }
+  ]
+}

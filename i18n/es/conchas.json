@@ -1,0 +1,99 @@
+{
+  "id": "conchas",
+  "subtitle": "Pan dulce con cubierta de azúcar en forma de concha",
+  "verso": "A la hora del cafecito, una concha y un ratito.",
+  "region": "Toda la República",
+  "servings": "12 conchas",
+  "story": "El pan dulce más conocido: un pan suave, apenas dulce, bajo una cubierta de azúcar crujiente rayada como concha de mar. Se escoge calientito en la panadería, con pinzas y charola, y se come con café o chocolate.",
+  "ingredients": [
+    {
+      "title": "La masa",
+      "items": [
+        "4 tazas (500 g) de harina de trigo o harina para pan",
+        "½ taza (100 g) de azúcar",
+        "2¼ cucharaditas (1 sobre) de levadura instantánea",
+        "1 cucharadita de sal",
+        "¾ taza (180 ml) de leche entera tibia",
+        "3 huevos, a temperatura ambiente",
+        "1 cucharadita de vainilla",
+        "6 cucharadas (85 g) de mantequilla suave, más un poco de mantequilla derretida para barnizar"
+      ]
+    },
+    {
+      "title": "La cubierta",
+      "items": [
+        "½ taza (65 g) de harina de trigo",
+        "½ taza (65 g) de azúcar glas",
+        "⅓ taza (65 g) de manteca vegetal; la mantequilla también sirve, pero se extiende y borra la concha",
+        "½ cucharadita de vainilla"
+      ]
+    }
+  ],
+  "steps": [
+    "Mezcla la harina, el azúcar, la levadura y la sal en un tazón grande o en la batidora de pie. Agrega la leche, los huevos y la vainilla y mezcla hasta formar una masa grumosa.",
+    "Amasa 8–10 minutos (o con el gancho a velocidad media) hasta que esté tersa. Agrega la mantequilla de cucharada en cucharada, amasando hasta que cada trozo desaparezca. La masa debe quedar suave, un poco pegajosa y elástica.",
+    "Tapa y deja que crezca en un lugar tibio 1½–2 horas, hasta que doble su tamaño.",
+    "Haz la cubierta: mezcla la harina, el azúcar glas, la manteca vegetal y la vainilla hasta tener una pasta tersa, como plastilina. Divídela en [[12 bolitas]].",
+    "Divide la masa en [[12 piezas]] (como 85 g cada una). Bolea cada una hasta que quede lisa y acomódalas en charolas con papel para hornear, a 3 pulgadas de distancia. Aplánalas un poco y barnízalas con un poco de mantequilla derretida.",
+    "Aplana cada bolita de cubierta entre dos plásticos hasta formar un disco de 3½ pulgadas. Ponlo sobre un pan y presiona suavemente para que se pegue.",
+    "Marca la cubierta en forma de concha con un marcador para conchas o un cuchillo filoso: líneas curvas que se abren en abanico desde un lado. Corta solo la cubierta, no la masa.",
+    "Tapa sin apretar y deja que crezcan 1 hora, hasta que se esponjen. La cubierta se abrirá sobre las líneas.",
+    "Hornea a 350°F durante 18–20 minutos, hasta que estén doradas por abajo. La parte de arriba debe quedar pálida.",
+    "Deja enfriar unos minutos y cómelas calientitas."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El pan necesita horno.",
+  "tips": [
+    "Barnizar los panes con mantequilla antes de ponerles la cubierta evita que se resbale.",
+    "Los panaderos hacen la cubierta 1:1:1 por peso: harina, azúcar glas y manteca vegetal. Cuando hay mucha humedad, agrega una cucharada más de harina para que no se resbale.",
+    "Si tu cocina está fría, deja crecer la masa dentro del horno con solo la luz prendida.",
+    "Las conchas se endurecen rápido. Congela las que sobren el mismo día y caliéntalas 5 minutos en el horno."
+  ],
+  "variations": [
+    {
+      "name": "Pan de Muerto",
+      "subtitle": "Pan del Día de Muertos",
+      "region": "Centro",
+      "note": "Se hace para la ofrenda a fines de octubre y principios de noviembre. Un pan dulce de azahar adornado con huesitos de masa y una bolita redonda como cráneo, barnizado con mantequilla y revolcado en azúcar. Los cuatro huesos en cruz señalan los cuatro rumbos; hay quien dice que son lágrimas. En Oaxaca es pan de yema con una carita encima.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Masa de conchas de la receta base, con estos cambios: agrega la ralladura de 2 naranjas, 1 cucharada de agua de azahar y, si quieres, ½ cucharadita de anís en grano, molido; usa ½ taza de leche más ¼ taza de jugo de naranja en lugar de ¾ taza de leche",
+            "1 huevo, batido, para barnizar",
+            "4 cucharadas de mantequilla derretida",
+            "½ taza de azúcar, para revolcar"
+          ]
+        }
+      ],
+      "steps": [
+        "Haz la masa y déjala crecer como en la receta base, pasos 1–3.",
+        "Aparta más o menos una cuarta parte de la masa. Divide el resto en 2 o 3 piezas y forma con cada una un pan redondo y liso sobre una charola con papel.",
+        "Con la masa que apartaste, haz tiras y presiónalas con los dedos para formar huesos con nudos. Pon 4 en cruz sobre cada pan y una bolita (el cráneo) en el centro. Pégalos con un poco de huevo batido.",
+        "Deja que crezcan 1 hora, barnízalos con huevo batido y hornéalos a 350°F durante 30–35 minutos, hasta que estén bien dorados.",
+        "Todavía calientes, barnízalos por todos lados con mantequilla derretida y revuélcalos en azúcar o espolvoréales azúcar encima."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Conchas de Chocolate",
+      "subtitle": "Conchas con cubierta de chocolate",
+      "region": "Toda la República",
+      "note": "En toda charola de panadería hay conchas blancas y de chocolate, una junto a otra. Haz mitad y mitad.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Masa de la receta base",
+            "Cubierta de la receta base, cambiando 2 cucharadas de la harina por cocoa en polvo"
+          ]
+        }
+      ],
+      "steps": [
+        "Haz la cubierta con la cocoa.",
+        "Cubre, marca, deja crecer y hornea como en la receta base."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

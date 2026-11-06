@@ -11,20 +11,35 @@ struct RecipeDetailView: View {
     @State private var cookMode = false
     @State private var openVariations: Set<String> = []
 
+    // Raw values stay Spanish: CI screenshots pick a tab with -screenshotDetailTab.
     enum DetailTab: String, CaseIterable, Identifiable {
         case traditional = "Tradicional"
         case pressure = "Olla exprés"
         case variations = "Variantes"
         var id: String { rawValue }
+
+        func title(_ lang: Lang) -> String {
+            guard lang == .en else { return rawValue }
+            switch self {
+            case .traditional: return "Traditional"
+            case .pressure: return "Pressure cooker"
+            case .variations: return "Variations"
+            }
+        }
     }
 
     private var tabs: [DetailTab] {
         recipe.variations.isEmpty ? [.traditional, .pressure] : DetailTab.allCases
     }
 
-    static let pressureDisclaimer = "Times are for an electric pressure cooker at high pressure (about 10–12 psi). A stovetop olla exprés runs hotter (15 psi), so take off about 20% and start timing when the valve begins to rock."
+    static func pressureDisclaimer(_ lang: Lang) -> String {
+        lang == .es
+            ? "Los tiempos son para una olla exprés eléctrica a presión alta (unos 10–12 psi). Una olla exprés de estufa trabaja más caliente (15 psi), así que quita como un 20% y empieza a contar cuando la válvula empiece a bailar."
+            : "Times are for an electric pressure cooker at high pressure (about 10–12 psi). A stovetop olla exprés runs hotter (15 psi), so take off about 20% and start timing when the valve begins to rock."
+    }
 
     private var factor: Double { store.factor(for: recipe.id) }
+    private var text: RecipeText { recipe.text(store.lang) }
 
     var body: some View {
         ScrollViewReader { proxy in
@@ -33,8 +48,8 @@ struct RecipeDetailView: View {
                 header
                 ServingsCard(recipe: recipe)
                     .id("servings")
-                Picker("Version", selection: $tab) {
-                    ForEach(tabs) { Text($0.rawValue).tag($0) }
+                Picker(store.t("Versión", "Version"), selection: $tab) {
+                    ForEach(tabs) { Text($0.title(store.lang)).tag($0) }
                 }
                 .pickerStyle(.segmented)
                 .id("tabs")
@@ -66,7 +81,9 @@ struct RecipeDetailView: View {
                     Image("olla")
                         .foregroundStyle(cookMode ? Color.talavera : Color.primary)
                 }
-                .accessibilityLabel(cookMode ? "Turn off cook mode" : "Cook mode: bigger text, screen stays on")
+                .accessibilityLabel(cookMode
+                    ? store.t("Apagar el modo cocina", "Turn off cook mode")
+                    : store.t("Modo cocina: letra más grande y la pantalla no se apaga", "Cook mode: bigger text, screen stays on"))
 
                 Button {
                     store.toggleFavorite(recipe.id)
@@ -77,9 +94,11 @@ struct RecipeDetailView: View {
                         Image("milagro")
                     }
                 }
-                .accessibilityLabel(store.isFavorite(recipe.id) ? "Remove from saved" : "Save recipe")
+                .accessibilityLabel(store.isFavorite(recipe.id)
+                    ? store.t("Quitar de guardadas", "Remove from saved")
+                    : store.t("Guardar receta", "Save recipe"))
 
-                ShareLink(item: recipe.shareText) {
+                ShareLink(item: recipe.shareText(store.lang)) {
                     Image(systemName: "square.and.arrow.up")
                 }
             }
@@ -109,7 +128,8 @@ struct RecipeDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             if cookMode {
                 Label {
-                    Text("Cook mode on: bigger text, and the screen stays awake.")
+                    Text(store.t("Modo cocina: letra más grande, y la pantalla se queda encendida.",
+                                 "Cook mode on: bigger text, and the screen stays awake."))
                 } icon: {
                     Image("olla")
                 }
@@ -122,7 +142,7 @@ struct RecipeDetailView: View {
                 .rotationEffect(.degrees(-1.5))
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 6)
-            if let verso = recipe.verso {
+            if let verso = text.verso {
                 Text("«\(verso)»")
                     .font(.subheadline.italic())
                     .foregroundStyle(.secondary)
@@ -130,9 +150,9 @@ struct RecipeDetailView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 24)
                     .padding(.bottom, 8)
-                    .accessibilityLabel("La cantada: \(verso)")
+                    .accessibilityLabel(store.t("La cantada: \(verso)", "The caller's line: \(verso)"))
             }
-            Text("\(recipe.region) · \(store.categoryName(recipe.category))".uppercased())
+            Text("\(text.region) · \(store.categoryName(recipe.category))".uppercased())
                 .font(.caption.weight(.bold))
                 .tracking(1)
                 .foregroundStyle(Color.chile)
@@ -144,15 +164,15 @@ struct RecipeDetailView: View {
             }
             .accessibilityElement(children: .combine)
             .accessibilityAddTraits(.isHeader)
-            Text(recipe.en)
+            Text(text.subtitle)
                 .font(.body.italic())
                 .foregroundStyle(.secondary)
-            Text(recipe.story)
+            Text(text.story)
                 .padding(.top, 4)
             MetaGrid(items: [
-                ("Tiempo", recipe.time),
-                ("Rinde", store.shown(Scaler.yieldText(recipe.servings, factor: factor))),
-                ("Olla exprés", recipe.pressureCooker?.total ?? "—")
+                (store.t("Tiempo", "Time"), recipe.totalTime(store.lang)),
+                (store.t("Rinde", "Makes"), store.servings(recipe)),
+                (store.t("Olla exprés", "Pressure cooker"), text.pressureCooker?.total ?? "—")
             ])
             .padding(.top, 8)
         }
@@ -162,7 +182,7 @@ struct RecipeDetailView: View {
     // MARK: Tabs
 
     private var resetButton: some View {
-        Button("Desmarcar") {
+        Button(store.t("Desmarcar", "Uncheck all")) {
             store.resetChecks(prefix: "\(recipe.id):t:i")
         }
         .font(.subheadline.weight(.semibold))
@@ -171,55 +191,59 @@ struct RecipeDetailView: View {
     private var traditional: some View {
         VStack(alignment: .leading, spacing: 24) {
             VStack(alignment: .leading, spacing: 12) {
-                SectionHeader(title: "Ingredientes") { resetButton }
-                IngredientList(groups: recipe.ingredients, scope: "\(recipe.id):t:i", factor: factor)
+                SectionHeader(title: store.t("Ingredientes", "Ingredients")) { resetButton }
+                IngredientList(groups: text.ingredients, keyGroups: recipe.en.ingredients, scope: "\(recipe.id):t:i", factor: factor)
             }
             VStack(alignment: .leading, spacing: 12) {
-                SectionHeader(title: "Preparación")
-                StepList(steps: recipe.steps, scope: "\(recipe.id):t:s", factor: factor)
-                Text("Tap a step when it's done.")
+                SectionHeader(title: store.t("Preparación", "Preparation"))
+                StepList(steps: text.steps, keySteps: recipe.en.steps, scope: "\(recipe.id):t:s", factor: factor)
+                Text(store.t("Toca un paso cuando lo termines.", "Tap a step when it's done."))
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
-            if !recipe.tips.isEmpty {
-                TipsBox(tips: recipe.tips.map(store.shown))
+            if !text.tips.isEmpty {
+                TipsBox(tips: text.tips.map(store.shown))
             }
         }
     }
 
     @ViewBuilder
     private var pressure: some View {
-        if let pc = recipe.pressureCooker {
+        if let pc = text.pressureCooker, let keyPC = recipe.en.pressureCooker {
             VStack(alignment: .leading, spacing: 24) {
-                InfoBox(label: "Olla exprés · Instant Pot", background: .nopalSoft) {
+                InfoBox(label: store.t("Olla exprés · Instant Pot", "Pressure cooker · Instant Pot"), background: .nopalSoft) {
                     Text(pc.time)
                         .font(.system(.title3, design: .monospaced))
                         .foregroundStyle(Color.nopal)
-                    Text("Total about \(pc.total). Use the ingredients from the Tradicional tab.")
+                    Text(store.t("En total, unos \(pc.total). Usa los ingredientes de la pestaña Tradicional.",
+                                 "Total about \(pc.total). Use the ingredients from the Traditional tab."))
                 }
                 VStack(alignment: .leading, spacing: 12) {
-                    SectionHeader(title: "Ingredientes") { resetButton }
-                    IngredientList(groups: recipe.ingredients, scope: "\(recipe.id):t:i", factor: factor)
+                    SectionHeader(title: store.t("Ingredientes", "Ingredients")) { resetButton }
+                    IngredientList(groups: text.ingredients, keyGroups: recipe.en.ingredients, scope: "\(recipe.id):t:i", factor: factor)
                 }
                 VStack(alignment: .leading, spacing: 12) {
-                    SectionHeader(title: "Preparación")
-                    StepList(steps: pc.steps, scope: "\(recipe.id):p:s", factor: factor)
+                    SectionHeader(title: store.t("Preparación", "Preparation"))
+                    StepList(steps: pc.steps, keySteps: keyPC.steps, scope: "\(recipe.id):p:s", factor: factor)
                 }
                 if factor > 1 {
-                    NoteBox(text: "Scaling up? Pressure times stay the same, but never fill the pot past the max-fill line. Cook in two batches if it won't fit.")
+                    NoteBox(text: store.t(
+                        "¿Vas a hacer más? Los tiempos a presión no cambian, pero nunca llenes la olla más arriba de la marca máxima. Si no cabe, cocina en dos tandas.",
+                        "Scaling up? Pressure times stay the same, but never fill the pot past the max-fill line. Cook in two batches if it won't fit."))
                 }
                 if let note = pc.note {
                     NoteBox(text: store.shown(note))
                 }
-                NoteBox(text: Self.pressureDisclaimer)
+                NoteBox(text: Self.pressureDisclaimer(store.lang))
             }
         } else {
             VStack(alignment: .leading, spacing: 16) {
-                InfoBox(label: "Olla exprés", background: .nopalSoft) {
-                    Text(recipe.pressureNote ?? "No pressure-cooker version for this one.")
+                InfoBox(label: store.t("Olla exprés", "Pressure cooker"), background: .nopalSoft) {
+                    Text(text.pressureNote ?? store.t("Esta receta no tiene versión en olla exprés.", "No pressure-cooker version for this one."))
                 }
-                if recipe.variations.contains(where: { $0.pressureNote != nil }) {
-                    NoteBox(text: "Some of the variations have pressure-cooker notes. Look under Variantes.")
+                if text.variations.contains(where: { $0.pressureNote != nil }) {
+                    NoteBox(text: store.t("Algunas variantes tienen notas para olla exprés. Búscalas en Variantes.",
+                                          "Some of the variations have pressure-cooker notes. Look under Variations."))
                 }
             }
         }
@@ -227,10 +251,11 @@ struct RecipeDetailView: View {
 
     private var variations: some View {
         VStack(spacing: 12) {
-            ForEach(Array(recipe.variations.enumerated()), id: \.element.id) { index, variation in
+            ForEach(Array(text.variations.enumerated()), id: \.element.id) { index, variation in
                 VariationCard(
                     recipe: recipe,
                     variation: variation,
+                    keyVariation: recipe.en.variations[index],
                     index: index,
                     factor: factor,
                     isOpen: Binding(
@@ -273,9 +298,12 @@ struct MetaGrid: View {
     }
 }
 
+/// Ingredient groups as a checklist. Checkmarks are keyed to the English lines (`keyGroups`,
+/// the same lines in the same order), so they stay put when the cook switches languages.
 struct IngredientList: View {
     @EnvironmentObject private var store: RecipeStore
     let groups: [IngredientGroup]
+    let keyGroups: [IngredientGroup]
     let scope: String
     var factor: Double = 1
 
@@ -291,11 +319,16 @@ struct IngredientList: View {
                         .padding(.bottom, 4)
                 }
                 ForEach(Array(group.items.enumerated()), id: \.offset) { itemIndex, item in
-                    IngredientRow(text: store.shown(Scaler.text(item, factor: factor)), key: "\(scope):\(StableKey.of(item))")
+                    IngredientRow(text: store.line(item, factor: factor), key: "\(scope):\(StableKey.of(keyLine(groupIndex, itemIndex, item)))")
                     Divider()
                 }
             }
         }
+    }
+
+    private func keyLine(_ g: Int, _ i: Int, _ fallback: String) -> String {
+        guard keyGroups.indices.contains(g), keyGroups[g].items.indices.contains(i) else { return fallback }
+        return keyGroups[g].items[i]
     }
 }
 
@@ -326,15 +359,21 @@ struct IngredientRow: View {
     }
 }
 
+/// Steps as a checklist, keyed to the English steps like `IngredientList`.
 struct StepList: View {
     let steps: [String]
+    let keySteps: [String]
     let scope: String
     var factor: Double = 1
+
+    private func key(_ i: Int) -> String {
+        "\(scope):\(StableKey.of(keySteps.indices.contains(i) ? keySteps[i] : steps[i]))"
+    }
 
     var body: some View {
         VStack(spacing: 10) {
             ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                StepRow(number: index + 1, text: step, key: "\(scope):\(StableKey.of(step))", siblingKeys: steps.map { "\(scope):\(StableKey.of($0))" }, factor: factor)
+                StepRow(number: index + 1, text: step, key: key(index), siblingKeys: steps.indices.map(key), factor: factor)
             }
         }
     }
@@ -370,7 +409,7 @@ struct StepRow: View {
                     }
                 }
                 .frame(width: 30, height: 30)
-                Text(store.shown(Scaler.stepText(text, factor: factor)))
+                Text(store.step(text, factor: factor))
                     .foregroundStyle(isOn ? Color.secondary : Color.primary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .fixedSize(horizontal: false, vertical: true)
@@ -381,17 +420,18 @@ struct StepRow: View {
             .contentShape(RoundedRectangle(cornerRadius: 14))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Step \(number): \(store.shown(Scaler.stepText(text, factor: factor)))")
+        .accessibilityLabel(store.t("Paso \(number): ", "Step \(number): ") + store.step(text, factor: factor))
         .accessibilityAddTraits(isOn ? .isSelected : [])
     }
 }
 
 struct TipsBox: View {
+    @EnvironmentObject private var store: RecipeStore
     let tips: [String]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Secretos de la abuela")
+            Text(store.t("Secretos de la abuela", "Grandma's secrets"))
                 .font(.display(.title3))
                 .foregroundStyle(Color.chile)
             ForEach(tips, id: \.self) { tip in
@@ -411,6 +451,8 @@ struct VariationCard: View {
     @EnvironmentObject private var store: RecipeStore
     let recipe: Recipe
     let variation: Variation
+    /// The same variation in English, for checkmark keys.
+    let keyVariation: Variation
     let index: Int
     var factor: Double = 1
     @Binding var isOpen: Bool
@@ -422,7 +464,7 @@ struct VariationCard: View {
             } label: {
                 HStack(alignment: .center) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text((variation.region ?? recipe.region).uppercased())
+                        Text((variation.region ?? recipe.text(store.lang).region).uppercased())
                             .font(.caption2.weight(.bold))
                             .tracking(1)
                             .foregroundStyle(Color.chile)
@@ -430,7 +472,7 @@ struct VariationCard: View {
                             .font(.display(.title3))
                             .foregroundStyle(Color.primary)
                             .multilineTextAlignment(.leading)
-                        Text(variation.en)
+                        Text(variation.subtitle)
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                             .multilineTextAlignment(.leading)
@@ -444,8 +486,8 @@ struct VariationCard: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityValue(isOpen ? "Expanded" : "Collapsed")
-            .accessibilityHint("Shows the ingredients and steps")
+            .accessibilityValue(isOpen ? store.t("Abierta", "Expanded") : store.t("Cerrada", "Collapsed"))
+            .accessibilityHint(store.t("Muestra los ingredientes y los pasos", "Shows the ingredients and steps"))
 
             if isOpen {
                 VStack(alignment: .leading, spacing: 20) {
@@ -453,15 +495,16 @@ struct VariationCard: View {
                         Text(store.shown(note))
                     }
                     VStack(alignment: .leading, spacing: 12) {
-                        SectionHeader(title: "Ingredientes")
-                        IngredientList(groups: variation.ingredients, scope: "\(recipe.id):v\(index):i", factor: factor)
+                        SectionHeader(title: store.t("Ingredientes", "Ingredients"))
+                        IngredientList(groups: variation.ingredients, keyGroups: keyVariation.ingredients,
+                                       scope: "\(recipe.id):v\(index):i", factor: factor)
                     }
                     VStack(alignment: .leading, spacing: 12) {
-                        SectionHeader(title: "Preparación")
-                        StepList(steps: variation.steps, scope: "\(recipe.id):v\(index):s", factor: factor)
+                        SectionHeader(title: store.t("Preparación", "Preparation"))
+                        StepList(steps: variation.steps, keySteps: keyVariation.steps, scope: "\(recipe.id):v\(index):s", factor: factor)
                     }
                     if let pressureNote = variation.pressureNote {
-                        InfoBox(label: "Olla exprés", background: .nopalSoft) {
+                        InfoBox(label: store.t("Olla exprés", "Pressure cooker"), background: .nopalSoft) {
                             Text(store.shown(pressureNote))
                         }
                     }
@@ -479,24 +522,26 @@ struct ServingsCard: View {
     @EnvironmentObject private var store: RecipeStore
     let recipe: Recipe
 
-    private let quick: [(Double, String)] = [(0.5, "Mitad"), (1, "Original"), (2, "Doble")]
+    private var quick: [(Double, String)] {
+        [(0.5, store.t("Mitad", "Half")), (1, "Original"), (2, store.t("Doble", "Double"))]
+    }
 
     var body: some View {
         let factor = store.factor(for: recipe.id)
         VStack(alignment: .leading, spacing: 12) {
-            Text("¿PARA CUÁNTOS?")
+            Text(store.t("¿PARA CUÁNTOS?", "HOW MANY?"))
                 .font(.slab(15, relativeTo: .headline))
-            if Scaler.base(recipe.servings) != nil {
+            if Scaler.base(recipe.text(store.lang).servings, lang: store.lang) != nil {
                 HStack {
                     HStack(spacing: 10) {
-                        stepButton("minus", label: "Fewer servings", direction: -1)
-                        Text(store.shown(Scaler.yieldText(recipe.servings, factor: factor)))
+                        stepButton("minus", label: store.t("Menos porciones", "Fewer servings"), direction: -1)
+                        Text(store.servings(recipe))
                             .font(.system(.subheadline, design: .monospaced))
                             .monospacedDigit()
                             .frame(minWidth: 92)
                             .contentTransition(.numericText())
-                            .accessibilityLabel("Makes \(store.shown(Scaler.yieldText(recipe.servings, factor: factor)))")
-                        stepButton("plus", label: "More servings", direction: 1)
+                            .accessibilityLabel(store.t("Rinde ", "Makes ") + store.servings(recipe))
+                        stepButton("plus", label: store.t("Más porciones", "More servings"), direction: 1)
                     }
                     Spacer(minLength: 0)
                 }
@@ -523,14 +568,15 @@ struct ServingsCard: View {
             }
             Divider()
             HStack(spacing: 8) {
-                Text("MEDIDAS")
+                Text(store.t("MEDIDAS", "UNITS"))
                     .font(.slab(12, relativeTo: .caption))
                     .foregroundStyle(.secondary)
-                unitsButton("Tazas · lb", metric: false, label: "Cups and pounds")
-                unitsButton("Gramos · l", metric: true, label: "Grams and liters")
+                unitsButton(store.t("Tazas · lb", "Cups · lb"), metric: false, label: store.t("Tazas y libras", "Cups and pounds"))
+                unitsButton(store.t("Gramos · l", "Grams · l"), metric: true, label: store.t("Gramos y litros", "Grams and liters"))
             }
             if factor != 1 {
-                Text("Amounts in the steps change too. Cooking times stay as written.")
+                Text(store.t("Las cantidades en los pasos también cambian. Los tiempos de cocción se quedan igual.",
+                             "Amounts in the steps change too. Cooking times stay as written."))
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }

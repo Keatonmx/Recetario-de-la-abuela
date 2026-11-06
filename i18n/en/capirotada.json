@@ -1,0 +1,45 @@
+{
+  "id": "capirotada",
+  "subtitle": "Lenten bread pudding with piloncillo",
+  "verso": "Capirotada in Lent: every layer, a promise.",
+  "region": "Jalisco · Michoacán · Northern Mexico",
+  "servings": "8 servings",
+  "story": "The bread pudding of Lent: layers of fried bolillo, raisins, nuts and cheese soaked in spiced piloncillo syrup. Old recipes from Jalisco and Colima simmer a tomato and an onion in the syrup. It sounds strange and tastes right. Every layer means something: the bread is the body of Christ, the syrup his blood, the cinnamon the wood of the cross, the cloves the nails, and the white cheese the holy shroud. It's eaten on the Fridays of Lent and on Good Friday.",
+  "ingredients": [
+    {
+      "title": "The syrup",
+      "items": [
+        "8 oz piloncillo",
+        "3 cups water",
+        "2 sticks Mexican cinnamon",
+        "4 whole cloves",
+        "1 Roma tomato and ¼ onion, optional, the old way"
+      ]
+    },
+    {
+      "title": "The layers",
+      "items": [
+        "6 day-old bolillos, sliced ½ inch thick",
+        "4 tbsp butter or lard",
+        "½ cup raisins",
+        "½ cup peanuts or slivered almonds",
+        "2 cups shredded queso añejo, cotija or Chihuahua",
+        "Colored sprinkles, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Simmer the piloncillo, water, cinnamon and cloves (and the tomato and onion) 15 minutes, until syrupy. Strain.",
+    "Fry the bread slices in butter until golden on both sides, or brush them with butter and toast in the oven.",
+    "Butter a baking dish. Layer bread, raisins, nuts and cheese, and repeat for 3 layers.",
+    "Pour the syrup slowly over everything so it all soaks in.",
+    "Cover with foil and bake at 350°F for 30 minutes. Uncover and bake 10 minutes more.",
+    "Let rest 15 minutes and top with sprinkles. Serve warm or at room temperature."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Capirotada needs the dry heat of the oven to set.",
+  "tips": [
+    "Toast the bread well. Pale bread turns to mush."
+  ],
+  "variations": []
+}

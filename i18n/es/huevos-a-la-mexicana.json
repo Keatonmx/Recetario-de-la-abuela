@@ -1,0 +1,91 @@
+{
+  "id": "huevos-a-la-mexicana",
+  "subtitle": "Huevos revueltos con jitomate, cebolla y chile",
+  "verso": "Verde, blanco y colorado: la bandera en el plato.",
+  "region": "Toda la República",
+  "servings": "2 personas",
+  "story": "Jitomate rojo, cebolla blanca y chile verde, los colores de la bandera, revueltos con huevo. Es el desayuno que se hace en todas las casas de México sin receta, y es lo que va en un taco para comérselo saliendo por la puerta.",
+  "ingredients": [
+    {
+      "title": "Huevos",
+      "items": [
+        "4 huevos",
+        "1 cucharada de manteca o aceite",
+        "¼ de cebolla blanca, picada fina",
+        "1–2 serranos, picados finos (con semillas si lo quieres más picoso)",
+        "1 jitomate guaje, picado",
+        "Sal, al gusto",
+        "1 cucharada de cilantro picado, opcional"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Frijoles de la olla o refritos",
+        "Tortillas de maíz o de harina calientes",
+        "Salsa"
+      ]
+    }
+  ],
+  "steps": [
+    "Calienta la manteca en una sartén a fuego medio. Agrega la cebolla y el serrano y cocina 2 minutos, hasta que se suavicen sin dorarse.",
+    "Agrega el jitomate y una pizca de sal. Cocina 2–3 minutos, hasta que se suavice y se consuma casi todo su jugo.",
+    "Bate los huevos ligeramente con una pizca de sal y viértelos en la sartén.",
+    "Revuelve suavemente con una espátula a fuego medio-bajo hasta que apenas cuajen, todavía suaves y jugosos.",
+    "Agrega el cilantro si lo usas y sirve de inmediato con frijoles, tortillas y salsa."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Es un desayuno de sartén de 10 minutos.",
+  "tips": [
+    "Deja que el jitomate se cocine y se reduzca primero, o los huevos quedan aguados.",
+    "Algunas abuelas no baten los huevos antes: los quiebran directo en la sartén y los revuelven, para que queden vetas de clara y de yema.",
+    "Lo que sobra hace los mejores tacos de huevo para la comida."
+  ],
+  "variations": [
+    {
+      "name": "Huevos con Chorizo",
+      "subtitle": "Huevos revueltos con chorizo",
+      "region": "Toda la República",
+      "note": "El otro taco de desayuno de todos los días. Algunas familias le agregan una papa en cubitos frita con el chorizo.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 huevos, ligeramente batidos",
+            "4 oz de chorizo mexicano, sin tripa",
+            "¼ de cebolla, picada, opcional",
+            "1 papa chica, en cubitos pequeños, opcional",
+            "Sal, solo si hace falta"
+          ]
+        }
+      ],
+      "steps": [
+        "Fríe el chorizo en una sartén sin grasa, desmoronándolo, hasta que suelte su grasa roja, unos 4 minutos. Agrega la cebolla y la papa y cocina hasta que la papa esté suave, unos 8 minutos.",
+        "Si hay mucha grasa, quita lo que sobre. Agrega los huevos y revuelve hasta que apenas cuajen.",
+        "Prueba antes de ponerle sal; el chorizo es salado."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Huevos con Nopales",
+      "subtitle": "Huevos con nopales",
+      "region": "Centro",
+      "note": "Un favorito de Cuaresma, y una forma de rendir los huevos.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 huevos, ligeramente batidos",
+            "1 taza de nopales cocidos, en tiras (de frasco, enjuagados, o frescos y hervidos)",
+            "Todo lo demás de la receta base"
+          ]
+        }
+      ],
+      "steps": [
+        "Haz la receta base hasta el paso 2, agregando los nopales con el jitomate y cocinando hasta que se consuma toda la baba.",
+        "Agrega los huevos y revuelve hasta que apenas cuajen."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

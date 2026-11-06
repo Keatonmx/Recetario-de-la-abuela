@@ -1,0 +1,108 @@
+{
+  "id": "frijoles-de-olla",
+  "subtitle": "Frijoles de olla con epazote",
+  "verso": "Donde come uno, comen dos.",
+  "region": "Toda la República",
+  "servings": "8 personas",
+  "story": "La olla que siempre está en la estufa de la abuela. Pintos y bayos en el norte; en el centro, bayos, flor de mayo y peruanos tanto como negros; frijoles negros en el sur y por el Golfo. Todos cocidos despacio con cebolla, manteca y epazote. El caldo importa tanto como los frijoles.",
+  "ingredients": [
+    {
+      "title": "Frijoles",
+      "items": [
+        "1 lb de frijoles pintos o negros secos",
+        "10 tazas de agua",
+        "¼ de cebolla blanca",
+        "2 dientes de ajo",
+        "2 cucharadas de manteca",
+        "2 cucharaditas de sal",
+        "1 rama de epazote (indispensable para los frijoles negros)"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Cebolla y cilantro picados",
+        "Serrano en rodajas",
+        "Queso fresco desmoronado"
+      ]
+    }
+  ],
+  "steps": [
+    "Extiende los frijoles en una charola y quítales las piedritas y los frijoles quebrados. Enjuágalos bien.",
+    "Pon los frijoles, el agua, la cebolla, el ajo y la manteca en una olla gruesa (una olla de barro sin plomo si tienes). Ponlos a hervir.",
+    "Baja el fuego para que hiervan suavecito, con la olla medio tapada, por 1½–2 horas. Si les falta agua, agrégales solo agua caliente. El agua fría endurece la cáscara.",
+    "Cuando los frijoles estén suaves, agrega la sal y el epazote. Déjalos hervir a fuego bajo 30 minutos más para que agarren la sal.",
+    "Sírvelos en platos hondos con su caldo, cebolla picada, cilantro, serrano y queso fresco, o úsalos para refritos."
+  ],
+  "pressureCooker": {
+    "time": "45 min a presión alta + liberación natural completa",
+    "total": "1 h 45",
+    "steps": [
+      "Enjuaga y escoge los frijoles. No hace falta remojarlos.",
+      "Pon en la olla los frijoles, [[8 tazas]] de agua, la cebolla, el ajo y la manteca.",
+      "Presión alta 45 minutos para los pintos, 35 para los negros (10–12 si los remojaste toda la noche). Deja que la presión baje sola, unos 25 minutos.",
+      "Agrega la sal y el epazote y deja hervir a fuego bajo en la función Saltear 10–15 minutos."
+    ],
+    "note": "No llenes más allá de la línea de la mitad con frijoles y agua. Los frijoles hacen espuma."
+  },
+  "pressureNote": null,
+  "tips": [
+    "La sal va después de que los frijoles estén suaves.",
+    "Las ollas de barro dan los mejores frijoles, pero compra las que digan Sin Plomo. Los vidriados viejos o sin marca pueden soltar plomo.",
+    "Los frijoles viejos tardan una eternidad. Cómpralos donde mucha gente compre frijol."
+  ],
+  "variations": [
+    {
+      "name": "Frijoles Refritos",
+      "subtitle": "Frijoles refritos",
+      "region": "Toda la República",
+      "note": "Fritos una sola vez, en bastante manteca. Refritos quiere decir bien fritos, no fritos dos veces.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 tazas de frijoles cocidos más 1 taza de su caldo",
+            "3–4 cucharadas de manteca (o grasa de tocino o de chorizo)",
+            "¼ de cebolla blanca, picada",
+            "Queso fresco o Chihuahua, opcional"
+          ]
+        }
+      ],
+      "steps": [
+        "Calienta la manteca en un sartén ancho y fríe la cebolla hasta que se dore. Saca la cebolla si quieres.",
+        "Agrega los frijoles y el caldo y machácalos con el machacador mientras se cuecen.",
+        "Sigue cocinando y moviendo unos 10 minutos, hasta que estén tan espesos que al pasar una cuchara quede marcada la raya. Agrega caldo si se espesan demasiado.",
+        "Ponles queso encima."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Frijoles Charros",
+      "subtitle": "Frijoles al estilo vaquero",
+      "region": "Nuevo León · Norte",
+      "note": "Para los domingos de carne asada. En Monterrey, el chicharrón se agrega al final. Con una cerveza, algunos les dicen frijoles borrachos; las familias discuten dónde terminan unos y empiezan los otros.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "6 tazas de frijoles pintos de la olla con su caldo",
+            "4 rebanadas de tocino, picadas",
+            "4 oz de chorizo mexicano",
+            "2 salchichas y 2 rebanadas de jamón, picadas",
+            "½ cebolla, 2 jitomates y 2 jalapeños, picados",
+            "Un puño de cilantro",
+            "1 cerveza mexicana, opcional",
+            "2 oz de chicharrón, en trozos"
+          ]
+        }
+      ],
+      "steps": [
+        "Fríe el tocino hasta que esté crujiente. Agrega el chorizo, luego la salchicha y el jamón, y dóralos.",
+        "Agrega la cebolla, el jitomate y el jalapeño y cocina 5 minutos.",
+        "Agrega los frijoles con su caldo (y la cerveza). Deja hervir a fuego bajo 20 minutos.",
+        "Incorpora el cilantro y el chicharrón justo antes de servir."
+      ],
+      "pressureNote": "Cuece los frijoles a presión como en la receta base y luego termínalos en la función Saltear."
+    }
+  ]
+}

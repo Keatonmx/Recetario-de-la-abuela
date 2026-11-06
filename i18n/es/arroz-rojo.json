@@ -1,0 +1,77 @@
+{
+  "id": "arroz-rojo",
+  "subtitle": "Arroz rojo a la mexicana",
+  "verso": "Al arroz, ni lo mires: tápalo y déjalo.",
+  "region": "Toda la República",
+  "servings": "6 personas",
+  "story": "Se fríe hasta dorar antes de echarle cualquier líquido, luego se cuece en caldo de jitomate y se deja en paz. Va al lado de todo, y dentro del caldo.",
+  "ingredients": [
+    {
+      "title": "Arroz",
+      "items": [
+        "1½ tazas de arroz blanco de grano largo",
+        "3 cucharadas de aceite",
+        "2 jitomates guaje",
+        "¼ de cebolla blanca",
+        "1 diente de ajo",
+        "2¾ tazas de caldo de pollo caliente",
+        "1 cucharadita de sal",
+        "1 zanahoria, en cubitos, y ½ taza de chícharos, opcional",
+        "1 rama de cilantro",
+        "1 serrano, entero"
+      ]
+    }
+  ],
+  "steps": [
+    "Remoja el arroz en agua caliente 10 minutos. Enjuágalo hasta que el agua salga clara y luego escúrrelo muy bien.",
+    "Calienta el aceite en una olla ancha a fuego medio. Agrega el arroz y muévelo hasta que se ponga opaco y ligeramente dorado y suene como arena, unos 8 minutos.",
+    "Licúa los jitomates, la cebolla y el ajo con [[½ taza]] del caldo. Cuélalo sobre el arroz y mueve 2–3 minutos, hasta que se absorba y el color se intensifique.",
+    "Agrega el resto del caldo, la sal, la zanahoria, los chícharos, el cilantro y el serrano. Deja que suelte el hervor.",
+    "Tapa, baja el fuego al mínimo y cocina 18 minutos. No levantes la tapa ni lo muevas.",
+    "Apaga el fuego y déjalo reposar 10 minutos, tapado. Espónjalo con un tenedor."
+  ],
+  "pressureCooker": {
+    "time": "4 min a presión alta + 10 min de liberación natural",
+    "total": "25 min",
+    "steps": [
+      "Remoja, enjuaga y escurre el arroz. Fríelo en el aceite en la función Saltear hasta que se dore.",
+      "Agrega el puré de jitomate colado y mueve 2 minutos.",
+      "Agrega caldo hasta que el líquido total (puré más caldo) sea [[1¾ tazas]], y luego la sal, las verduras, el cilantro y el serrano. Raspa bien el fondo para que no salte el aviso de quemado.",
+      "Presión alta 4 minutos, liberación natural 10. Espónjalo."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Muchas abuelas cambian parte de la sal por una cucharada de Knorr caldo de tomate. Nadie tiene por qué saberlo.",
+    "Si levantas la tapa se sale el vapor, y te queda un arroz crudo arriba y batido abajo."
+  ],
+  "variations": [
+    {
+      "name": "Arroz Verde",
+      "subtitle": "Arroz verde con poblano",
+      "region": "Centro",
+      "note": "El mismo método con un puré verde en lugar del de jitomate.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "El mismo arroz, caldo y método de la receta base",
+            "En lugar del jitomate:",
+            "1 poblano, asado y pelado",
+            "½ manojo de cilantro",
+            "1 diente de ajo",
+            "¼ de cebolla",
+            "½ taza de caldo, para licuar"
+          ]
+        }
+      ],
+      "steps": [
+        "Fríe el arroz como en la receta base.",
+        "Agrega el puré verde en lugar del de jitomate y cocina 2 minutos.",
+        "Sigue con el caldo como en la receta base."
+      ],
+      "pressureNote": "El mismo tiempo de presión que la receta base."
+    }
+  ]
+}

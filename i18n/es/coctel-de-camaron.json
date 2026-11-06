@@ -1,0 +1,88 @@
+{
+  "id": "coctel-de-camaron",
+  "subtitle": "Coctel de camarón a la mexicana",
+  "verso": "Para todo mal, un coctel; y para todo bien, también.",
+  "region": "Sinaloa · Veracruz · la costa",
+  "servings": "4 personas",
+  "story": "El coctel de toda marisquería y todo puesto de playa: camarón cocido en una salsa fría y ácida de catsup, limón y el agua donde se coció el propio camarón, con cebolla, cilantro, chile y aguacate. Llega en un vaso alto con galletas saladas y salsa picante, y es la cura para una tarde de calor.",
+  "ingredients": [
+    {
+      "title": "El camarón",
+      "items": [
+        "1 lb de camarón mediano, con cáscara",
+        "4 tazas de agua",
+        "1 cucharadita de sal",
+        "¼ de cebolla blanca",
+        "1 hoja de laurel"
+      ]
+    },
+    {
+      "title": "La salsa",
+      "items": [
+        "½ taza de catsup",
+        "1 taza del agua donde se coció el camarón, fría",
+        "¼ taza de jugo de limón recién exprimido",
+        "1 cucharada de salsa Valentina o Huichol, más otro poco al gusto",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Con el camarón",
+      "items": [
+        "¼ de cebolla blanca, finamente picada",
+        "2 jitomates guaje, en cubitos",
+        "1–2 serranos, finamente picados",
+        "¼ taza de cilantro picado",
+        "1 pepino, en cubitos, opcional"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "1 aguacate, en cubitos",
+        "Limones",
+        "Saladitas (galletas saladas) o tostadas"
+      ]
+    }
+  ],
+  "steps": [
+    "Pon a hervir el agua con la sal, la cebolla y el laurel. Agrega los camarones y cuécelos solo hasta que se pongan rosados, 2–3 minutos.",
+    "Saca los camarones y échalos en agua con hielo. Cuela el agua de cocción, guárdala y enfríala en el refrigerador.",
+    "Pela los camarones. Deja algunos enteros para adornar y parte los demás a la mitad si están grandes.",
+    "Mezcla la catsup, [[1 taza]] del agua de cocción fría, el jugo de limón, la salsa picante y la sal. Debe quedar tan suelta que se pueda beber.",
+    "Agrega los camarones, la cebolla, el jitomate, el serrano, el cilantro y el pepino. Refrigera 15 minutos.",
+    "Sirve en vasos altos con aguacate encima, con limones, saladitas y más salsa picante."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El camarón se cuece en dos minutos y a presión se pone correoso.",
+  "tips": [
+    "El agua donde se coció el camarón es el secreto: hace que la salsa sepa a mar y no a catsup.",
+    "Algunas marisquerías le ponen un chorrito de Clamato o de jugo de naranja. Cada puesto tiene el suyo."
+  ],
+  "variations": [
+    {
+      "name": "Vuelve a la Vida",
+      "subtitle": "Coctel de mariscos que te regresa a la vida",
+      "region": "Veracruz",
+      "note": "La campechana veracruzana de camarón, pulpo, ostiones y jaiba, famosa como cura para la cruda.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "½ lb de camarón cocido",
+            "½ lb de pulpo cocido, en rebanadas",
+            "12 ostiones frescos, abiertos, con su jugo",
+            "½ taza de carne de jaiba",
+            "La salsa y las verduras picadas de la receta base"
+          ]
+        }
+      ],
+      "steps": [
+        "Prepara la salsa y las verduras picadas como en la receta base, pasos 4–5.",
+        "Incorpora el camarón, el pulpo, la jaiba y los ostiones con su jugo.",
+        "Refrigera 15 minutos y sirve en vasos altos con aguacate y saladitas."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

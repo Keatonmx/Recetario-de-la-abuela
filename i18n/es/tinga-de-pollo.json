@@ -1,0 +1,89 @@
+{
+  "id": "tinga-de-pollo",
+  "subtitle": "Pollo deshebrado en salsa de chipotle",
+  "verso": "Tinga en tostada, la fiesta está armada.",
+  "region": "Puebla",
+  "servings": "6 personas",
+  "story": "La tinga es de Puebla: mucha cebolla suavecita, jitomate y chipotle ahumado. Va sobre tostadas con frijoles, crema y queso, y es lo que llevas a una fiesta. Las tostadas de tinga están en casi todas las mesas de la Noche Mexicana del 15 de septiembre, junto al pozole.",
+  "ingredients": [
+    {
+      "title": "El pollo",
+      "items": [
+        "2 lb de muslos o pechugas de pollo",
+        "¼ de cebolla, 2 dientes de ajo, 1 hoja de laurel y sal, para cocer"
+      ]
+    },
+    {
+      "title": "La salsa",
+      "items": [
+        "2 cucharadas de manteca o aceite",
+        "2 cebollas blancas, en rebanadas delgadas",
+        "2 dientes de ajo, picados finamente",
+        "1½ lb de jitomates maduros (o 5 guaje)",
+        "2–4 chipotles en adobo, más 1 cucharada del adobo de la lata",
+        "½ cucharadita de orégano mexicano",
+        "2 hojas de laurel",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Tostadas",
+        "Frijoles refritos",
+        "Lechuga rebanada finita",
+        "Crema, queso fresco y aguacate"
+      ]
+    }
+  ],
+  "steps": [
+    "Hierve el pollo a fuego bajo en agua con la cebolla, el ajo, el laurel y la sal durante 20 minutos. Déjalo enfriar, deshébralo y guarda [[1 taza]] del caldo.",
+    "Licúa los jitomates con los chipotles y el adobo.",
+    "Calienta la manteca y cocina las cebollas rebanadas a fuego medio-bajo 8 minutos, hasta que estén suaves y transparentes pero sin dorar. Agrega el ajo y cocina 1 minuto.",
+    "Agrega el puré de jitomate y chipotle, el orégano y las hojas de laurel. Cocina 8 minutos, hasta que oscurezca.",
+    "Agrega el pollo y [[½ taza]] del caldo. Deja hervir a fuego bajo 10 minutos, hasta que quede jugoso pero no caldoso. Sazona.",
+    "Unta las tostadas con frijoles, pon encima bastante tinga y termina con lechuga, crema, queso y aguacate."
+  ],
+  "pressureCooker": {
+    "time": "10 min a presión alta + 5 min de liberación natural",
+    "total": "25 min",
+    "steps": [
+      "En la función Saltear, acitrona las cebollas en la manteca y luego agrega el ajo.",
+      "Agrega el puré, el orégano, las hojas de laurel y ½ taza de agua. Acomoda los muslos de pollo crudos dentro de la salsa.",
+      "Presión alta 10 minutos (8 si son pechugas), liberación natural 5.",
+      "Deshebra el pollo ahí mismo en la salsa. Deja hervir en la función Saltear unos minutos para que espese."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "No le escatimes a la cebolla. La tinga debe ser mitad cebolla.",
+    "Empieza con 2 chipotles y agrega más después de probar. Lo picante cambia de lata a lata."
+  ],
+  "variations": [
+    {
+      "name": "Tinga Poblana de Puerco",
+      "subtitle": "Tinga de puerco con chorizo",
+      "region": "Puebla",
+      "note": "Las tingas impresas más antiguas (La cocinera poblana, 1881) son de puerco con chorizo y longaniza, a veces con papa.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb de espaldilla de puerco, cocida y deshebrada",
+            "6 oz de chorizo mexicano",
+            "La misma salsa de tinga de la receta base",
+            "1 papa, en cubitos y cocida, opcional",
+            "Aguacate, para servir"
+          ]
+        }
+      ],
+      "steps": [
+        "Fríe el chorizo hasta que suelte su grasa. Agrega las cebollas y cocínalas hasta que estén suaves.",
+        "Agrega el puré de jitomate y chipotle y cocina 8 minutos, luego agrega el puerco y la papa.",
+        "Deja hervir a fuego bajo 10 minutos. Sirve sobre tostadas con aguacate."
+      ],
+      "pressureNote": "Cuece los trozos de espaldilla de puerco a presión alta 35 minutos, liberación natural 10, y luego deshébralos."
+    }
+  ]
+}

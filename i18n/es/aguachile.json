@@ -1,0 +1,84 @@
+{
+  "id": "aguachile",
+  "subtitle": "Camarón crudo curado en limón y chile",
+  "verso": "Camarón que se duerme, se lo lleva la corriente.",
+  "region": "Sinaloa",
+  "servings": "4 personas",
+  "story": "De la costa de Sinaloa: camarón crudo, abierto en mariposa y bañado en una mezcla de jugo de limón, serrano o chiltepín y cilantro, con pepino y cebolla morada. Se come al momento y bien frío, con tostadas y una cerveza helada, mientras el camarón sigue translúcido por dentro. El nombre quiere decir agua de chile.",
+  "ingredients": [
+    {
+      "title": "El camarón",
+      "items": [
+        "1 lb de camarón crudo muy fresco (como 20 medianos), pelado y desvenado",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "El agua",
+      "items": [
+        "1 taza de jugo de limón recién exprimido (como 10 limones)",
+        "3–5 serranos (o 1 cucharada de chiltepín, a la sinaloense)",
+        "½ manojo de cilantro",
+        "1 diente de ajo, opcional",
+        "½ cucharadita de sal",
+        "¼ taza de agua fría"
+      ]
+    },
+    {
+      "title": "Encima",
+      "items": [
+        "1 pepino, pelado y en rebanadas delgadas",
+        "½ cebolla morada, en rebanadas muy delgadas"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "1 aguacate, en rebanadas",
+        "Tostadas o saladitas (galletas saladas)",
+        "Salsa negra o Huichol, opcional"
+      ]
+    }
+  ],
+  "steps": [
+    "Abre cada camarón en mariposa: córtalo por el lomo casi hasta atravesarlo y ábrelo plano. Acomódalos en una sola capa en un plato frío, sálalos ligeramente y refrigéralos mientras preparas el agua.",
+    "Licúa el jugo de limón, los chiles, el cilantro, el ajo, la sal y el agua hasta que quede verde brillante y terso.",
+    "Vierte el agua sobre los camarones para que queden cubiertos. Esparce el pepino y la cebolla morada encima.",
+    "Déjalo reposar 5–10 minutos en el refrigerador, solo hasta que los camarones se pongan rosados por fuera pero sigan translúcidos por dentro. Si pasa más tiempo, se ponen duros.",
+    "Sirve de inmediato con aguacate, tostadas y un poco de salsa negra."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El aguachile no se cuece para nada: el limón hace el trabajo.",
+  "tips": [
+    "Usa el camarón más fresco que encuentres, o camarón congelado en altamar y descongelado en el refrigerador. Los mariscos crudos no son para embarazadas, niños pequeños ni personas con las defensas bajas.",
+    "Prepáralo justo antes de comer. El aguachile no espera a nadie."
+  ],
+  "variations": [
+    {
+      "name": "Aguachile Rojo",
+      "subtitle": "Aguachile rojo con chiltepín y chile de árbol",
+      "region": "Sinaloa · Sonora",
+      "note": "La versión roja, más picosa, con chiles secos en el agua.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "El camarón, el pepino y la cebolla morada de la receta base",
+            "1 taza de jugo de limón recién exprimido",
+            "1 cucharada de chiltepín",
+            "4 chiles de árbol",
+            "1 diente de ajo",
+            "½ cucharadita de sal",
+            "¼ taza de agua fría"
+          ]
+        }
+      ],
+      "steps": [
+        "Tuesta los chiles de árbol unos segundos en un sartén seco.",
+        "Lícualos con el chiltepín, el jugo de limón, el ajo, la sal y el agua.",
+        "Vierte sobre los camarones abiertos en mariposa con el pepino y la cebolla, espera 5–10 minutos y sirve."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "picadillo",
+  "subtitle": "Carne molida con papa y zanahoria",
+  "verso": "Picadillo de la abuela: rinde, llena y consuela.",
+  "region": "Toda la República",
+  "servings": "6 personas",
+  "story": "Carne molida guisada con jitomate, papa y zanahoria. Cada familia tiene el suyo, y con él se rellenan tacos dorados, gorditas, empanadas y chiles rellenos.",
+  "ingredients": [
+    {
+      "title": "Picadillo",
+      "items": [
+        "1½ lb de carne molida de res (o mitad res, mitad puerco)",
+        "2 cucharadas de aceite",
+        "½ cebolla blanca, picada",
+        "2 dientes de ajo, picados finamente",
+        "3 jitomates guaje, licuados",
+        "2 papas, en cubitos",
+        "2 zanahorias, en cubitos",
+        "½ taza de chícharos, opcional",
+        "1 serrano, picado finamente, opcional",
+        "½ cucharadita de comino molido",
+        "1 cucharadita de sal y ¼ cucharadita de pimienta",
+        "1 taza de agua o caldo"
+      ]
+    }
+  ],
+  "steps": [
+    "Dora la carne en el aceite, desbaratándola, hasta que ya no se vea rosada. Retira con una cuchara el exceso de grasa.",
+    "Agrega la cebolla, el ajo y el serrano y cocina 3 minutos.",
+    "Agrega el jitomate, el comino, la sal y la pimienta y cocina 5 minutos.",
+    "Agrega las papas, las zanahorias y el agua. Tapa y deja hervir a fuego bajo 15 minutos hasta que estén suaves, y agrega los chícharos los últimos 5.",
+    "Sirve con arroz, frijoles y tortillas, o úsalo como relleno."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El picadillo queda listo en 40 minutos en la sartén, y el sabor sale justamente del dorado.",
+  "tips": [
+    "Corta las papas y las zanahorias chiquitas, más o menos del tamaño de un chícharo, para que cada bocado lleve un poco."
+  ],
+  "variations": [
+    {
+      "name": "Picadillo de Fiesta",
+      "subtitle": "Picadillo dulce y salado de fiesta",
+      "region": "Puebla",
+      "note": "El relleno de frutas y almendras para los chiles en nogada, que se hace de julio a septiembre, cuando dan fruto las huertas alrededor de Puebla. Es más trabajo, y queda muy bueno.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 lb de carne molida de puerco más ½ lb de carne molida de res",
+            "½ cebolla y 2 dientes de ajo, picados; 3 jitomates, licuados",
+            "1 plátano macho maduro, 1 pera de leche, 1 durazno criollo y 1 manzana panochera, todo en cubitos chiquitos",
+            "¼ taza de pasitas y ¼ taza de almendras fileteadas",
+            "¼ taza de piña cristalizada (el acitrón de verdad viene de un cactus protegido)",
+            "½ cucharadita de canela y una pizca de clavo",
+            "Sal y 1 cucharadita de azúcar"
+          ]
+        }
+      ],
+      "steps": [
+        "Dora la carne con la cebolla y el ajo.",
+        "Agrega el jitomate y cocina 5 minutos.",
+        "Agrega primero la manzana, luego la pera y el durazno, y después el plátano, las almendras, las pasitas, la fruta cristalizada y las especias. Cocina 15 minutos, hasta que la fruta esté suave pero conserve su forma.",
+        "Sazona con sal y un poco de azúcar. Úsalo para rellenar chiles poblanos asados."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

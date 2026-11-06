@@ -1,0 +1,111 @@
+{
+  "id": "huevos-rancheros",
+  "subtitle": "Huevos estrellados sobre tortilla, bañados en salsa ranchera",
+  "verso": "Al que madruga, Dios lo ayuda… con sus huevos rancheros.",
+  "region": "Centro · Norte",
+  "servings": "2 personas",
+  "story": "El almuerzo del rancho: huevos estrellados sobre tortillas suaves pasadas por la grasa, cubiertos con una salsa cocida de jitomate y chile asados. La salsa se sirve caliente, no cruda como el pico de gallo, y los frijoles van a un lado.",
+  "ingredients": [
+    {
+      "title": "Salsa ranchera",
+      "items": [
+        "4 jitomates guaje (como 1 lb)",
+        "2 serranos o 1 jalapeño",
+        "¼ de cebolla blanca, más 2 rebanadas delgadas de cebolla",
+        "1 diente de ajo, sin pelar",
+        "1 cucharada de manteca o aceite",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Los huevos",
+      "items": [
+        "4 tortillas de maíz",
+        "4 huevos",
+        "3–4 cucharadas de manteca o aceite, para las tortillas y los huevos",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Frijoles refritos",
+        "Queso fresco desmoronado",
+        "Aguacate en rebanadas",
+        "Cilantro picado",
+        "Más tortillas calientes"
+      ]
+    }
+  ],
+  "steps": [
+    "Asa los jitomates, los chiles, el trozo de cebolla y el ajo en un comal seco, volteándolos, hasta que estén ampollados y suaves: unos 8 minutos para el ajo y los chiles, 12 para los jitomates. Pela el ajo.",
+    "Licúalos o muélelos en el molcajete con una pizca de sal. Déjala un poco martajada.",
+    "Calienta la manteca en una sartén chica y fríe las rebanadas de cebolla hasta que se suavicen. Vierte la salsa (va a chisporrotear) y déjala hervir a fuego bajo 5–8 minutos, hasta que se oscurezca y espese un poco. Sazona y mantenla caliente.",
+    "En una sartén, calienta una capa delgada de manteca. Fríe cada tortilla unos 10 segundos por lado, para que se suavice y se infle un poco sin volverse tostada. Escúrrelas y pon dos en cada plato.",
+    "En la misma sartén, fríe los huevos a fuego medio-alto, bañando las claras con la grasa caliente hasta que cuajen con orillas crujientes como encaje y las yemas queden tiernas. Sálalos.",
+    "Pon un huevo sobre cada tortilla y baña las claras con la salsa caliente, dejando las yemas a la vista.",
+    "Sirve de inmediato con los refritos, el queso fresco, el aguacate y el cilantro."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Los huevos rancheros quedan en 25 minutos entre el comal y la sartén. Si quieres refritos al lado, los frijoles pueden salir de la olla exprés (ver Frijoles de la Olla).",
+  "tips": [
+    "Fríe las tortillas suaves, no crujientes. Deberías poder cortarlas con el canto del tenedor.",
+    "Haz doble tanda de salsa ranchera. Dura 4 días en el refri y te resuelve el siguiente desayuno.",
+    "La manteca para los huevos les da las orillas crujientes que tenían los de la abuela."
+  ],
+  "variations": [
+    {
+      "name": "Huevos Divorciados",
+      "subtitle": "Dos huevos, dos salsas",
+      "region": "Ciudad de México · Centro",
+      "note": "Los huevos divorciados: uno en salsa roja y otro en verde, separados por una línea de frijoles refritos. Desayuno de cafetería en todo México.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 tortillas fritas y 4 huevos estrellados, como en la receta base",
+            "1 taza de salsa ranchera (de la receta base)",
+            "1 taza de salsa verde cocida (ver Salsa Roja de Molcajete, Variantes)",
+            "1 taza de frijoles refritos",
+            "Queso fresco y chilaquiles o totopos al lado, opcional"
+          ]
+        }
+      ],
+      "steps": [
+        "Para cada plato, pon dos tortillas lado a lado y un huevo sobre cada una.",
+        "Cubre uno con salsa roja y el otro con verde.",
+        "Pon una línea de frijoles refritos entre los dos para separarlos.",
+        "Termina con queso fresco."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Huevos Motuleños",
+      "subtitle": "Huevos yucatecos en capas con jamón y plátano macho",
+      "region": "Motul, Yucatán",
+      "note": "Del pueblo de Motul: una tortilla dorada untada con frijoles negros, un huevo estrellado, salsa de jitomate, jamón y chícharos, con plátano macho frito al lado. Casi siempre se le atribuyen a Jorge Siqueff, de La Sin Rival en Motul, hacia 1921.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 tortillas de maíz, fritas hasta quedar doradas",
+            "1 taza de frijoles negros refritos",
+            "4 huevos, estrellados",
+            "1 taza de salsa ranchera hecha con habanero en vez de serrano (o salsa de jitomate sencilla)",
+            "½ taza de jamón en cubitos",
+            "½ taza de chícharos cocidos",
+            "½ taza de queso fresco desmoronado",
+            "1 plátano macho maduro, rebanado y frito"
+          ]
+        }
+      ],
+      "steps": [
+        "Calienta la salsa con el jamón y los chícharos 3 minutos.",
+        "Unta cada tortilla dorada con frijoles negros y ponle encima un huevo estrellado.",
+        "Baña los huevos con la salsa de jamón y chícharos y espolvorea con queso.",
+        "Sirve con el plátano macho frito."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

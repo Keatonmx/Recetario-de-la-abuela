@@ -1,0 +1,99 @@
+{
+  "id": "caldo-de-camaron",
+  "subtitle": "Spicy shrimp soup",
+  "verso": "Shrimp soup: for a hangover, the best excuse.",
+  "region": "Sinaloa · Sonora · Jalisco",
+  "servings": "6 servings",
+  "story": "A brick-red shrimp soup from the Pacific coast, built on dried shrimp and the heads and shells of fresh ones, with guajillo, potatoes and carrots. Seafood restaurants bring it in a small cup before the meal, and it's what you want after a long night.",
+  "ingredients": [
+    {
+      "title": "The shrimp",
+      "items": [
+        "1 lb medium shrimp, shell on (heads on if you can get them)",
+        "2 oz dried shrimp (camarón seco), heads and legs pulled off",
+        "8 cups water"
+      ]
+    },
+    {
+      "title": "The chile base",
+      "items": [
+        "4 chiles guajillo",
+        "1–2 chiles de árbol, optional",
+        "3 Roma tomatoes",
+        "¼ white onion",
+        "3 garlic cloves",
+        "2 tbsp oil",
+        "1 tsp Mexican oregano",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "The vegetables",
+      "items": [
+        "2 potatoes, diced",
+        "2 carrots, sliced",
+        "1 chayote or zucchini, diced, optional"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Chopped onion and cilantro",
+        "Limes",
+        "Tostadas or bolillo"
+      ]
+    }
+  ],
+  "steps": [
+    "Peel the fresh shrimp and refrigerate them. Put the shells and heads in a pot with the dried shrimp and [[8 cups]] water. Simmer 20 minutes and strain. This is the broth.",
+    "Meanwhile, stem and seed the chiles, toast them a few seconds and soak 10 minutes. Blend with the tomatoes, onion, garlic and [[1 cup]] of the broth, and strain.",
+    "Heat the oil in the pot and fry the chile purée 5 minutes, until it darkens.",
+    "Add the broth, oregano, potatoes and carrots. Simmer 15 minutes, until tender, adding the chayote for the last 8.",
+    "Add the peeled shrimp and cook 2–3 minutes, just until pink. Season with salt.",
+    "Serve with onion, cilantro, lime and tostadas."
+  ],
+  "pressureCooker": {
+    "time": "5 min high pressure + 10 min natural release (broth)",
+    "total": "35 min",
+    "steps": [
+      "Peel the shrimp and refrigerate them. Put the shells, heads, dried shrimp and [[8 cups]] water in the pot. High pressure 5 minutes, natural release 10. Strain and keep the broth.",
+      "Make and fry the chile purée on Sauté as in steps 2–3.",
+      "Add the broth, oregano, potatoes and carrots. High pressure 3 minutes, quick release.",
+      "On Sauté, add the shrimp and cook 2–3 minutes, just until pink. Season."
+    ],
+    "note": "Never pressure-cook the shrimp themselves; they turn rubbery."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Dried shrimp are salty. Taste before adding any salt.",
+    "The heads hold most of the flavor. Ask the fish counter for head-on shrimp."
+  ],
+  "variations": [
+    {
+      "name": "Caldo Siete Mares",
+      "subtitle": "Seven-seas seafood soup",
+      "region": "All along the coast",
+      "note": "The big soup of the seafood restaurant: the same red chile base loaded with fish, shrimp, octopus, crab and clams.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "The broth, chile base and vegetables from the base",
+            "½ lb firm white fish, in chunks",
+            "½ lb shrimp",
+            "½ lb cooked octopus, sliced",
+            "2 crab legs (or ½ lb crab)",
+            "1 lb clams or mussels, scrubbed"
+          ]
+        }
+      ],
+      "steps": [
+        "Make the broth, chile base and vegetables as in the base, steps 1–4.",
+        "Add the crab and clams and cook 4 minutes, until the clams open. Throw out any that don't.",
+        "Add the fish and octopus for 3 minutes, then the shrimp for 2.",
+        "Serve in big bowls with onion, cilantro, lime and tostadas."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

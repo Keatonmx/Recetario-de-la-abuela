@@ -1,0 +1,69 @@
+{
+  "id": "puerco-salsa-verde",
+  "subtitle": "Pork in tomatillo salsa with purslane",
+  "verso": "Pork, tomatillo and purslane: the meal that never cloys.",
+  "region": "Central Mexico",
+  "servings": "6 servings",
+  "story": "A weekday guisado (stew). The pork cooks in a little water until the water is gone and it fries in its own fat, and then the salsa goes in. Verdolagas (purslane) add a lemony, juicy bite. Potatoes or nopales are just as common.",
+  "ingredients": [
+    {
+      "title": "The pork",
+      "items": [
+        "2½ lb pork shoulder or country ribs, in 1½-inch pieces",
+        "1 cup water",
+        "1 tsp salt",
+        "1 tbsp lard"
+      ]
+    },
+    {
+      "title": "The salsa",
+      "items": [
+        "1½ lb tomatillos, husked",
+        "3–4 serranos",
+        "¼ white onion",
+        "2 garlic cloves",
+        "½ bunch cilantro",
+        "Pinch of cumin, optional",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "The greens",
+      "items": [
+        "1 lb verdolagas (purslane), thick stems removed, or 3 potatoes, cubed, or 2 cups cooked nopales"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Frijoles de la olla (pot beans)",
+        "Corn tortillas"
+      ]
+    }
+  ],
+  "steps": [
+    "Put the pork, water and salt in a wide pan. Cook uncovered over medium, stirring now and then, until the water is gone and the pork browns in its own fat, about 40 minutes. Add the lard if the pork is lean.",
+    "Meanwhile, simmer the tomatillos and serranos in water 8 minutes, until they turn olive green. Drain.",
+    "Blend them with the onion, garlic, cilantro and cumin.",
+    "Pour the salsa over the pork. It will sizzle. Season and simmer 20 minutes, until slightly thickened. (Potatoes go in now.)",
+    "Blanch the purslane 1 minute in boiling water, drain, and stir it into the pot for the last 5 minutes (or add the cooked nopales).",
+    "Serve with beans and tortillas."
+  ],
+  "pressureCooker": {
+    "time": "20 min high pressure + 10 min natural release",
+    "total": "45 min",
+    "steps": [
+      "Brown the pork in the lard on Sauté, in batches.",
+      "Blend the raw tomatillos, serranos, onion, garlic and cumin (no need to boil them first). Pour over the pork with ½ cup water. Add potatoes now if using.",
+      "High pressure 20 minutes, natural release 10.",
+      "Stir in the blanched purslane and the cilantro and simmer on Sauté 5 minutes."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Don't over-boil tomatillos. As soon as they turn from bright to olive green, take them out, or they burst and turn sour.",
+    "Purslane grows wild in a lot of gardens. It's free food."
+  ],
+  "variations": []
+}

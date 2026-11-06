@@ -1,0 +1,111 @@
+{
+  "id": "huevos-rancheros",
+  "subtitle": "Ranch-style fried eggs in salsa ranchera",
+  "verso": "God helps those who rise early… with their huevos rancheros.",
+  "region": "Central Mexico · Northern Mexico",
+  "servings": "2 servings",
+  "story": "The late breakfast of the ranch: fried eggs on soft fried tortillas, covered with a cooked salsa of charred tomato and chile. The salsa is served warm, not raw like pico de gallo, and the beans go on the side.",
+  "ingredients": [
+    {
+      "title": "Salsa ranchera",
+      "items": [
+        "4 Roma tomatoes (about 1 lb)",
+        "2 serranos or 1 jalapeño",
+        "¼ white onion, plus 2 thin slices of onion",
+        "1 garlic clove, unpeeled",
+        "1 tbsp lard or oil",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "The eggs",
+      "items": [
+        "4 corn tortillas",
+        "4 eggs",
+        "3–4 tbsp lard or oil, for the tortillas and eggs",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Frijoles refritos",
+        "Crumbled queso fresco",
+        "Sliced avocado",
+        "Chopped cilantro",
+        "More warm tortillas"
+      ]
+    }
+  ],
+  "steps": [
+    "Char the tomatoes, chiles, onion chunk and garlic on a dry comal, turning, until blistered and soft: about 8 minutes for the garlic and chiles, 12 for the tomatoes. Peel the garlic.",
+    "Blend or grind them in the molcajete with a pinch of salt. Keep it a little chunky.",
+    "Heat the lard in a small pan and fry the onion slices until soft. Pour in the salsa (it will sizzle) and simmer 5–8 minutes, until it darkens and thickens slightly. Season and keep warm.",
+    "In a skillet, heat a thin layer of lard. Fry each tortilla about 10 seconds per side, so it softens and puffs a little but doesn't turn into a tostada. Drain and set two on each plate.",
+    "In the same skillet, fry the eggs over medium-high, spooning hot fat over the whites until they set with lacy, crisp edges and the yolks stay runny. Salt them.",
+    "Set an egg on each tortilla and spoon the hot salsa over the whites, leaving the yolks showing.",
+    "Serve right away with refritos, queso fresco, avocado and cilantro."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Huevos rancheros are done in 25 minutes at the comal and skillet. If you want refritos on the side, the beans can come from the pressure cooker (see Frijoles de la Olla).",
+  "tips": [
+    "Fry the tortillas soft, not crisp. You should be able to cut them with the side of your fork.",
+    "Make a double batch of salsa ranchera. It keeps 4 days in the fridge and saves the next breakfast.",
+    "Lard for the eggs gives the crisp edges grandma's had."
+  ],
+  "variations": [
+    {
+      "name": "Huevos Divorciados",
+      "subtitle": "Two eggs, two salsas",
+      "region": "Ciudad de México · Central Mexico",
+      "note": "The divorced eggs: one in red salsa, one in green, kept apart by a line of refried beans. Diner breakfast all over Mexico.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 fried tortillas and 4 fried eggs, as in the base",
+            "1 cup salsa ranchera (from the base)",
+            "1 cup salsa verde cocida (see Salsa Roja de Molcajete, Variations)",
+            "1 cup frijoles refritos",
+            "Queso fresco and chilaquiles or totopos on the side, optional"
+          ]
+        }
+      ],
+      "steps": [
+        "For each plate, set two tortillas side by side and put an egg on each.",
+        "Cover one with red salsa and the other with green.",
+        "Spoon a line of refried beans between them to keep them apart.",
+        "Top with queso fresco."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Huevos Motuleños",
+      "subtitle": "Yucatecan stacked eggs with ham and plantain",
+      "region": "Motul, Yucatán",
+      "note": "From the town of Motul: a crisp tortilla spread with black beans, a fried egg, tomato sauce, ham and peas, with fried plantain on the side. Usually credited to Jorge Siqueff at La Sin Rival in Motul, around 1921.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 corn tortillas, fried crisp",
+            "1 cup refried black beans",
+            "4 eggs, fried",
+            "1 cup salsa ranchera made with habanero instead of serrano (or plain tomato sauce)",
+            "½ cup diced ham",
+            "½ cup cooked peas",
+            "½ cup crumbled queso fresco",
+            "1 ripe plantain, sliced and fried"
+          ]
+        }
+      ],
+      "steps": [
+        "Warm the salsa with the ham and peas for 3 minutes.",
+        "Spread each crisp tortilla with black beans and top with a fried egg.",
+        "Spoon the salsa with ham and peas over the eggs and sprinkle with queso.",
+        "Serve with the fried plantain."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

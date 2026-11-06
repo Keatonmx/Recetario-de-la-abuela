@@ -24,7 +24,7 @@ struct RecipeListView: View {
         return store.book.recipes.filter { recipe in
             if savedOnly && !store.isFavorite(recipe.id) { return false }
             if let category, recipe.category != category { return false }
-            if pressureOnly && recipe.pressureCooker == nil { return false }
+            if pressureOnly && !recipe.hasPressureCooker { return false }
             if !trimmed.isEmpty {
                 let index = store.searchIndex[recipe.id] ?? recipe.searchIndex
                 if !trimmed.folded.split(separator: " ").allSatisfy({ index.contains($0) }) { return false }
@@ -42,19 +42,21 @@ struct RecipeListView: View {
                 if savedOnly && store.book.recipes.allSatisfy({ !store.isFavorite($0.id) }) {
                     ContentUnavailableView {
                         Label {
-                            Text("No milagros yet")
+                            Text(store.t("Todavía no hay milagros", "No milagros yet"))
                         } icon: {
                             Image("milagro").foregroundStyle(Color.chile)
                         }
                     } description: {
-                        Text("Open any recipe and tap the heart to save it here.")
+                        Text(store.t("Abre cualquier receta y toca el corazón para guardarla aquí.",
+                                     "Open any recipe and tap the heart to save it here."))
                     }
                     .padding(.top, 24)
                 } else if recipes.isEmpty {
                     Group {
                         if query.trimmingCharacters(in: .whitespaces).isEmpty {
-                            ContentUnavailableView("No recipes here", systemImage: "line.3.horizontal.decrease",
-                                                   description: Text("Nothing matches these filters. Try Todas."))
+                            ContentUnavailableView(store.t("No hay recetas aquí", "No recipes here"), systemImage: "line.3.horizontal.decrease",
+                                                   description: Text(store.t("Nada coincide con estos filtros. Prueba con Todas.",
+                                                                             "Nothing matches these filters. Try All.")))
                         } else {
                             ContentUnavailableView.search(text: query)
                         }
@@ -62,7 +64,8 @@ struct RecipeListView: View {
                     .padding(.top, 24)
                 } else {
                     if isFiltering {
-                        Text("\(recipes.count) \(recipes.count == 1 ? "receta" : "recetas")")
+                        Text(store.t("\(recipes.count) \(recipes.count == 1 ? "receta" : "recetas")",
+                                     "\(recipes.count) \(recipes.count == 1 ? "recipe" : "recipes")"))
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                     }
@@ -83,21 +86,21 @@ struct RecipeListView: View {
         .searchable(
             text: $query,
             placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "Buscar: pozole, guajillo, Yucatán…"
+            prompt: Text(store.t("Buscar: pozole, guajillo, Yucatán…", "Search: pozole, guajillo, Yucatán…"))
         )
-        .navigationTitle(savedOnly ? "Guardadas" : "Recetas")
+        .navigationTitle(savedOnly ? store.t("Guardadas", "Saved") : store.t("Recetas", "Recipes"))
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(for: Recipe.self) { recipe in
             RecipeDetailView(recipe: recipe)
         }
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) { AppearanceButton() }
+            ToolbarItem(placement: .topBarTrailing) { SettingsButtons() }
         }
     }
 
     private func section(_ cat: RecipeCategory, recipes: [Recipe]) -> some View {
         VStack(alignment: .leading, spacing: 16) {
-            RotuloHeader(title: cat.name, color: store.headingColor(forCategory: cat.id))
+            RotuloHeader(title: cat.name(store.lang), color: store.headingColor(forCategory: cat.id))
             LazyVGrid(columns: typeSize.isAccessibilitySize ? [GridItem(.flexible())] : columns, alignment: .leading, spacing: 18) {
                 ForEach(Array(recipes.enumerated()), id: \.element.id) { index, recipe in
                     NavigationLink(value: recipe) {
@@ -114,14 +117,15 @@ struct RecipeListView: View {
             PapelPicado()
                 .padding(.top, 4)
             if savedOnly {
-                Text("Guardadas")
+                Text(store.t("Guardadas", "Saved"))
                     .font(.rotulo(44))
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
                     .foregroundStyle(Color.mxRosa)
                     .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
                     .padding(.top, 10)
-                Text("Your milagros: the recipes you've saved with the heart, kept on this phone.")
+                Text(store.t("Tus milagros: las recetas que guardaste con el corazón, en este teléfono.",
+                             "Your milagros: the recipes you've saved with the heart, kept on this phone."))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             } else {
@@ -141,7 +145,7 @@ struct RecipeListView: View {
                 .padding(.top, 10)
                 .accessibilityElement(children: .combine)
                 .accessibilityAddTraits(.isHeader)
-                Text("COCINA DE CASA · REGIÓN POR REGIÓN")
+                Text(store.t("COCINA DE CASA · REGIÓN POR REGIÓN", "HOME COOKING · REGION BY REGION"))
                     .font(.slab(13, relativeTo: .caption))
                     .tracking(1.1)
                     .foregroundStyle(Color.chile)
@@ -154,10 +158,10 @@ struct RecipeListView: View {
     private var chips: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                Chip(title: "Olla exprés", isOn: pressureOnly, onColor: .nopal) { pressureOnly.toggle() }
-                Chip(title: "Todas", isOn: category == nil) { category = nil }
+                Chip(title: store.t("Olla exprés", "Pressure cooker"), isOn: pressureOnly, onColor: .nopal) { pressureOnly.toggle() }
+                Chip(title: store.t("Todas", "All"), isOn: category == nil) { category = nil }
                 ForEach(store.book.categories) { cat in
-                    Chip(title: cat.name, isOn: category == cat.id) { category = cat.id }
+                    Chip(title: cat.name(store.lang), isOn: category == cat.id) { category = cat.id }
                 }
             }
             .padding(.vertical, 4)

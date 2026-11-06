@@ -1,0 +1,99 @@
+{
+  "id": "caldo-de-camaron",
+  "subtitle": "Caldo picoso de camarón",
+  "verso": "Caldo de camarón: para la cruda, la mejor razón.",
+  "region": "Sinaloa · Sonora · Jalisco",
+  "servings": "6 personas",
+  "story": "Un caldo de camarón rojo ladrillo de la costa del Pacífico, hecho con camarón seco y las cabezas y cáscaras del camarón fresco, con guajillo, papas y zanahorias. En las marisquerías lo traen en una tacita antes de la comida, y es lo que se te antoja después de una noche larga.",
+  "ingredients": [
+    {
+      "title": "El camarón",
+      "items": [
+        "1 lb de camarón mediano, con cáscara (con cabeza si lo consigues)",
+        "2 oz de camarón seco, sin cabezas ni patitas",
+        "8 tazas de agua"
+      ]
+    },
+    {
+      "title": "El caldillo",
+      "items": [
+        "4 chiles guajillo",
+        "1–2 chiles de árbol, opcional",
+        "3 jitomates guaje",
+        "¼ de cebolla blanca",
+        "3 dientes de ajo",
+        "2 cucharadas de aceite",
+        "1 cucharadita de orégano mexicano",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Las verduras",
+      "items": [
+        "2 papas, en cubitos",
+        "2 zanahorias, en rodajas",
+        "1 chayote o calabacita, en cubitos, opcional"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Cebolla y cilantro picados",
+        "Limones",
+        "Tostadas o bolillo"
+      ]
+    }
+  ],
+  "steps": [
+    "Pela el camarón fresco y refrigéralo. Pon las cáscaras y las cabezas en una olla con el camarón seco y [[8 tazas]] de agua. Hierve a fuego bajo 20 minutos y cuela. Este es el caldo.",
+    "Mientras tanto, quítales el rabo y las semillas a los chiles, tuéstalos unos segundos y remójalos 10 minutos. Lícualos con los jitomates, la cebolla, el ajo y [[1 taza]] del caldo, y cuela.",
+    "Calienta el aceite en la olla y fríe el puré de chile 5 minutos, hasta que se oscurezca.",
+    "Agrega el caldo, el orégano, las papas y las zanahorias. Deja hervir a fuego bajo 15 minutos, hasta que estén suaves, y agrega el chayote en los últimos 8.",
+    "Agrega el camarón pelado y cuécelo 2–3 minutos, solo hasta que se ponga rosado. Sazona con sal.",
+    "Sirve con cebolla, cilantro, limón y tostadas."
+  ],
+  "pressureCooker": {
+    "time": "5 min a presión alta + 10 min de liberación natural (caldo)",
+    "total": "35 min",
+    "steps": [
+      "Pela el camarón y refrigéralo. Pon en la olla las cáscaras, las cabezas, el camarón seco y [[8 tazas]] de agua. Presión alta 5 minutos, liberación natural 10. Cuela y guarda el caldo.",
+      "Prepara y fríe el puré de chile en la función Saltear como en los pasos 2–3.",
+      "Agrega el caldo, el orégano, las papas y las zanahorias. Presión alta 3 minutos, liberación rápida.",
+      "En la función Saltear, agrega el camarón y cuécelo 2–3 minutos, solo hasta que se ponga rosado. Sazona."
+    ],
+    "note": "Nunca cuezas el camarón mismo a presión; se pone correoso."
+  },
+  "pressureNote": null,
+  "tips": [
+    "El camarón seco es salado. Prueba antes de agregar sal.",
+    "Las cabezas tienen casi todo el sabor. Pide camarón con cabeza en la pescadería."
+  ],
+  "variations": [
+    {
+      "name": "Caldo Siete Mares",
+      "subtitle": "Caldo de mariscos de los siete mares",
+      "region": "Toda la costa",
+      "note": "El caldo grande de la marisquería: el mismo caldillo rojo cargado de pescado, camarón, pulpo, jaiba y almejas.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "El caldo, el caldillo y las verduras de la receta base",
+            "½ lb de pescado blanco firme, en trozos",
+            "½ lb de camarón",
+            "½ lb de pulpo cocido, en rebanadas",
+            "2 patas de jaiba (o ½ lb de jaiba)",
+            "1 lb de almejas o mejillones, tallados"
+          ]
+        }
+      ],
+      "steps": [
+        "Prepara el caldo, el caldillo y las verduras como en la receta base, pasos 1–4.",
+        "Agrega la jaiba y las almejas y cocina 4 minutos, hasta que las almejas se abran. Tira las que no se abran.",
+        "Agrega el pescado y el pulpo por 3 minutos, luego el camarón por 2.",
+        "Sirve en tazones grandes con cebolla, cilantro, limón y tostadas."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

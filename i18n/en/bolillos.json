@@ -1,0 +1,59 @@
+{
+  "id": "bolillos",
+  "subtitle": "Crusty Mexican rolls",
+  "verso": "For a scare, a bolillo.",
+  "region": "All of Mexico",
+  "servings": "10 rolls",
+  "story": "Mexico's everyday bread: crackly crust, soft inside, pointed at both ends. It's for molletes, tortas, capirotada and dunking in caldo. Grandmas also say a bite of bolillo calms a scare. It came out of French baking during the Intervention of the 1860s. In Guadalajara its cousin is the birote salado, slightly sour and firm-crusted: the bread of the torta ahogada.",
+  "ingredients": [
+    {
+      "title": "Bolillos",
+      "items": [
+        "4 cups (500 g) bread flour",
+        "1½ cups (350 ml) warm water",
+        "2¼ tsp (1 packet) instant yeast",
+        "1 tbsp sugar",
+        "2 tsp salt",
+        "2 tbsp lard or soft butter"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix the flour, yeast, sugar and salt. Add the water and lard and mix into a dough.",
+    "Knead 10 minutes until smooth and elastic. Cover and let rise 1–1½ hours, until doubled.",
+    "Divide into [[10 pieces]] (about 85 g). Flatten each into an oval, then roll it up tightly from a long side into a log, pressing the seam closed.",
+    "Roll the ends under your palms so they taper to points. Set seam side down on a lined sheet pan.",
+    "Cover and let rise 45 minutes, until puffy.",
+    "Heat the oven to 425°F with an empty pan on the bottom rack. Slash each roll once down the length, about ¼ inch deep.",
+    "Spray or brush the rolls with water. Put them in the oven and pour a cup of hot water into the empty pan for steam. Close the door fast.",
+    "Bake 20–25 minutes, until golden and they sound hollow when you tap the bottom. Cool on a rack."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Bread needs the oven, and steam in the oven is what makes the crust crackle.",
+  "tips": [
+    "The steam is the secret to the thin, crackly crust. Don't skip the pan of water.",
+    "Day-old bolillos are perfect for molletes and capirotada."
+  ],
+  "variations": [
+    {
+      "name": "Teleras",
+      "subtitle": "Flat torta rolls",
+      "region": "Ciudad de México",
+      "note": "The soft, flat roll for tortas, with two grooves across the top.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Bolillo dough from the base"
+          ]
+        }
+      ],
+      "steps": [
+        "Divide the dough into [[8 pieces]] and shape into flat ovals about ¾ inch thick.",
+        "Press two deep lines along the length of each with the handle of a wooden spoon, almost to the bottom.",
+        "Rise 45 minutes and bake at 400°F for 18–20 minutes, without steam, so the crust stays soft."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

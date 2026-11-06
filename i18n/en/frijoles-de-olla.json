@@ -1,0 +1,108 @@
+{
+  "id": "frijoles-de-olla",
+  "subtitle": "Pot beans with epazote",
+  "verso": "Where one can eat, two can eat.",
+  "region": "All of Mexico",
+  "servings": "8 servings",
+  "story": "The pot that's always on grandma's stove. Pintos and bayos in the north; bayos, flor de mayo and peruanos as much as black in the center; black beans in the south and along the Gulf. All of them cooked slowly with onion, lard and epazote. The broth matters as much as the beans.",
+  "ingredients": [
+    {
+      "title": "Beans",
+      "items": [
+        "1 lb dried pinto or black beans",
+        "10 cups water",
+        "¼ white onion",
+        "2 garlic cloves",
+        "2 tbsp lard",
+        "2 tsp salt",
+        "1 sprig epazote (essential for black beans)"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Chopped onion and cilantro",
+        "Sliced serrano",
+        "Crumbled queso fresco"
+      ]
+    }
+  ],
+  "steps": [
+    "Spread the beans on a tray and pick out stones and broken beans. Rinse well.",
+    "Put the beans, water, onion, garlic and lard in a heavy pot (a lead-free clay olla if you have one). Bring to a boil.",
+    "Lower to a gentle simmer, partly covered, for 1½–2 hours. If you need more water, add hot water only. Cold water toughens the skins.",
+    "When the beans are soft, add the salt and epazote. Simmer 30 minutes more so the salt gets in.",
+    "Serve in bowls with their broth, chopped onion, cilantro, serrano and queso fresco, or use them for refried beans."
+  ],
+  "pressureCooker": {
+    "time": "45 min high pressure + full natural release",
+    "total": "1 h 45",
+    "steps": [
+      "Rinse and pick over the beans. No soaking needed.",
+      "Put the beans, [[8 cups]] water, onion, garlic and lard in the pot.",
+      "High pressure 45 minutes for pintos, 35 for black beans (10–12 if soaked overnight). Let the pressure release naturally, about 25 minutes.",
+      "Add the salt and epazote and simmer on Sauté 10–15 minutes."
+    ],
+    "note": "Don't fill past the halfway line with beans and water. Beans foam."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Salt goes in after the beans are soft.",
+    "Clay ollas give the best beans, but buy ones marked Sin Plomo (lead-free). Old or unmarked glazes can leach lead.",
+    "Old beans take forever. Buy them where a lot of people buy beans."
+  ],
+  "variations": [
+    {
+      "name": "Frijoles Refritos",
+      "subtitle": "Refried beans",
+      "region": "All of Mexico",
+      "note": "Fried once, in plenty of lard. Refritos means well-fried, not fried twice.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 cups cooked beans plus 1 cup of their broth",
+            "3–4 tbsp lard (or bacon or chorizo fat)",
+            "¼ white onion, chopped",
+            "Queso fresco or Chihuahua, optional"
+          ]
+        }
+      ],
+      "steps": [
+        "Heat the lard in a wide skillet and fry the onion until golden. Take the onion out if you like.",
+        "Add the beans and broth and mash with a bean masher as they cook.",
+        "Keep cooking and stirring about 10 minutes, until thick enough to hold a line when you drag a spoon through. Add broth if it gets too thick.",
+        "Top with cheese."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Frijoles Charros",
+      "subtitle": "Cowboy beans",
+      "region": "Nuevo León · Northern Mexico",
+      "note": "For carne asada Sundays. In Monterrey, chicharrón goes in at the end. Add a beer and some call them frijoles borrachos; families argue about where one ends and the other begins.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "6 cups pinto pot beans with their broth",
+            "4 slices bacon, chopped",
+            "4 oz Mexican chorizo",
+            "2 hot dogs and 2 slices ham, chopped",
+            "½ onion, 2 tomatoes and 2 jalapeños, chopped",
+            "Handful of cilantro",
+            "1 Mexican beer, optional",
+            "2 oz chicharrón, broken up"
+          ]
+        }
+      ],
+      "steps": [
+        "Fry the bacon until crisp. Add the chorizo, then the hot dogs and ham, and brown.",
+        "Add the onion, tomato and jalapeño and cook 5 minutes.",
+        "Add the beans with their broth (and the beer). Simmer 20 minutes.",
+        "Stir in the cilantro and the chicharrón right before serving."
+      ],
+      "pressureNote": "Cook the beans under pressure as in the base, then finish on Sauté."
+    }
+  ]
+}

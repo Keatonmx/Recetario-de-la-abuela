@@ -1,0 +1,80 @@
+{
+  "id": "flan",
+  "subtitle": "Flan de leche y huevo con caramelo",
+  "verso": "Tiembla, tiembla, pero no se cae: así es el flan de la abuela.",
+  "region": "Toda la República",
+  "servings": "8 rebanadas",
+  "story": "El flan a la antigua: leche entera infusionada con canela y cáscara de limón, más huevos y azúcar, horneado a baño maría bajo una capa de caramelo oscuro.",
+  "ingredients": [
+    {
+      "title": "El caramelo",
+      "items": [
+        "¾ taza de azúcar",
+        "2 cucharadas de agua"
+      ]
+    },
+    {
+      "title": "El flan",
+      "items": [
+        "4 tazas de leche entera",
+        "¾ taza de azúcar",
+        "1 raja de canela",
+        "1 tira de cáscara de limón",
+        "6 huevos más 3 yemas",
+        "1 cucharadita de vainilla"
+      ]
+    }
+  ],
+  "steps": [
+    "Calienta la leche con el azúcar, la canela y la cáscara de limón hasta que eche vapor. Apaga el fuego y deja reposar 15 minutos. Saca la canela y la cáscara y deja que se entibie.",
+    "Haz el caramelo: cocina el azúcar y el agua en una ollita sin mover, solo girando la olla, hasta que tome un color ámbar oscuro. Viértelo en un molde para flan de 8 o 9 pulgadas e inclínalo para cubrir el fondo.",
+    "Bate los huevos y las yemas con suavidad. No quieres que se hagan burbujas. Agrega poco a poco la leche tibia y la vainilla, batiendo. Cuela la mezcla dentro del molde.",
+    "Tapa con papel aluminio. Pon el molde dentro de un recipiente más grande y vierte agua caliente hasta la mitad de los lados (baño maría).",
+    "Hornea a 350°F 50–60 minutos, hasta que las orillas estén firmes y el centro tiemble como gelatina.",
+    "Deja enfriar y luego refrigera por lo menos 6 horas, de preferencia toda la noche.",
+    "Pasa un cuchillo por la orilla, pon un plato encima y voltéalo con un solo movimiento rápido."
+  ],
+  "pressureCooker": {
+    "time": "9 min a presión alta + 10 min de liberación natural (en moldecitos)",
+    "total": "35 min + refrigeración",
+    "steps": [
+      "Prepara la mezcla del flan y el caramelo como arriba, pero repártelos en 6 moldecitos resistentes al calor que quepan en tu olla. Tapa cada uno con papel aluminio.",
+      "Pon la rejilla en la olla con 1½ tazas de agua y acomoda los moldecitos encima, unos sobre otros.",
+      "Presión alta 9 minutos, liberación natural 10.",
+      "Deja enfriar y luego refrigera por lo menos 4 horas antes de desmoldar."
+    ],
+    "note": "Para un solo molde que quepa en tu olla, el tiempo depende de su tamaño y su profundidad. En una olla exprés de estufa, las cocineras mexicanas cuentan unos 10–15 minutos desde que empieza a silbar para el clásico y unos 25 para el napolitano. En una olla eléctrica, empieza con 15–20 minutos para el clásico y 25 para el napolitano, y luego revisa: el centro debe temblar, no chapotear."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Cuela la mezcla. Eso es lo que hace que el flan quede terso, sin hoyitos.",
+    "A fuego bajo y despacio. Un horno demasiado caliente da un flan esponjoso y lleno de burbujas."
+  ],
+  "variations": [
+    {
+      "name": "Flan Napolitano",
+      "subtitle": "Flan con queso crema",
+      "region": "Toda la República",
+      "note": "El flan moderno y popular: más rico, más denso y licuado en un minuto. Hoy la mayoría de las familias hace este, y discuten si debe llevar queso crema o no.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Caramelo de la receta base",
+            "1 lata (14 oz) de leche condensada",
+            "1 lata (12 oz) de leche evaporada",
+            "4 oz de queso crema, suavizado",
+            "5 huevos",
+            "1 cucharadita de vainilla"
+          ]
+        }
+      ],
+      "steps": [
+        "Licúa todo 1 minuto.",
+        "Vierte sobre el caramelo, tapa y hornea a baño maría a 350°F 50–60 minutos.",
+        "Refrigera toda la noche y desmolda."
+      ],
+      "pressureNote": "Igual que la receta base: moldecitos a presión alta 9 minutos, liberación natural 10."
+    }
+  ]
+}

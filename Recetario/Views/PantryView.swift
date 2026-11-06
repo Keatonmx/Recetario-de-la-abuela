@@ -3,14 +3,23 @@ import SwiftUI
 struct PantryView: View {
     @EnvironmentObject private var store: RecipeStore
 
-    private let howTo = [
-        "Buy chiles that bend without cracking and look a little shiny. Brittle, dusty ones are old.",
-        "Wipe them with a damp towel. Pull off the stems, slit them open and shake out the seeds and veins.",
-        "Toast on a medium-hot comal 10–20 seconds per side, pressing flat, until they smell good and blister a little. If they smoke, they'll be bitter.",
-        "Soak in hot (not boiling) water 15–20 minutes, until soft.",
-        "Blend with a little fresh water or broth instead of the soaking water if it tastes bitter.",
-        "Strain through a fine sieve. This is the step most people skip, and the one abuela never does."
-    ]
+    private var howTo: [String] {
+        store.lang == .es ? [
+            "Compra chiles que se doblen sin romperse y que brillen un poco. Los quebradizos y empolvados son viejos.",
+            "Límpialos con un trapo húmedo. Quítales el rabito, ábrelos y sacúdeles las semillas y las venas.",
+            "Tuéstalos en un comal a fuego medio-alto 10–20 segundos por lado, aplanándolos, hasta que huelan rico y se ampollen un poco. Si echan humo, van a amargar.",
+            "Remójalos en agua caliente (no hirviendo) 15–20 minutos, hasta que estén suaves.",
+            "Muélelos con un poco de agua limpia o caldo en vez del agua del remojo si ésta sabe amarga.",
+            "Cuélalos por un colador fino. Es el paso que casi todos se saltan, y el que la abuela nunca se salta."
+        ] : [
+            "Buy chiles that bend without cracking and look a little shiny. Brittle, dusty ones are old.",
+            "Wipe them with a damp towel. Pull off the stems, slit them open and shake out the seeds and veins.",
+            "Toast on a medium-hot comal 10–20 seconds per side, pressing flat, until they smell good and blister a little. If they smoke, they'll be bitter.",
+            "Soak in hot (not boiling) water 15–20 minutes, until soft.",
+            "Blend with a little fresh water or broth instead of the soaking water if it tastes bitter.",
+            "Strain through a fine sieve. This is the step most people skip, and the one grandma never does."
+        ]
+    }
 
     static let chileColors: [String: Color] = [
         "Guajillo": Color(hexString: "#9E1B1B"), "Ancho": Color(hexString: "#5A2016"),
@@ -20,6 +29,7 @@ struct PantryView: View {
         "Serrano": Color(hexString: "#3FA34D"), "Habanero": Color(hexString: "#F29F05")
     ]
 
+    // Book titles stay as published.
     private let reading = [
         "Diana Kennedy, The Essential Cuisines of Mexico",
         "Diana Kennedy, Oaxaca al Gusto",
@@ -30,13 +40,15 @@ struct PantryView: View {
     var body: some View {
         List {
             Section {
-                Text("The chiles and pantry staples these recipes depend on, and how to handle them.")
+                Text(store.t("Los chiles y los básicos de la despensa de los que dependen estas recetas, y cómo manejarlos.",
+                             "The chiles and pantry staples these recipes depend on, and how to handle them."))
                     .foregroundStyle(.secondary)
                     .listRowBackground(Color.clear)
             }
 
-            Section("Los chiles") {
+            Section(store.t("Los chiles", "The chiles")) {
                 ForEach(store.book.chiles) { chile in
+                    let t = chile.text(store.lang)
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(spacing: 10) {
                             Image("chile")
@@ -46,19 +58,19 @@ struct PantryView: View {
                             Spacer()
                             HeatMeter(level: chile.heat)
                         }
-                        Text(chile.form)
+                        Text(t.form)
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                        Text(chile.taste)
+                        Text(t.taste)
                             .font(.subheadline.weight(.semibold))
-                        Text(chile.uses)
+                        Text(t.uses)
                             .font(.subheadline)
                     }
                     .padding(.vertical, 2)
                 }
             }
 
-            Section("Cómo preparar chiles secos") {
+            Section(store.t("Cómo preparar chiles secos", "How to prepare dried chiles")) {
                 ForEach(Array(howTo.enumerated()), id: \.offset) { index, step in
                     HStack(alignment: .firstTextBaseline, spacing: 10) {
                         Text("\(index + 1)")
@@ -69,11 +81,11 @@ struct PantryView: View {
                 }
             }
 
-            Section("Ingredientes de la abuela") {
+            Section(store.t("Ingredientes de la abuela", "Grandma's ingredients")) {
                 ForEach(store.book.glossary) { entry in
                     VStack(alignment: .leading, spacing: 2) {
                         Text(entry.term).font(.headline)
-                        Text(entry.definition)
+                        Text(entry.definition(store.lang))
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
@@ -81,7 +93,7 @@ struct PantryView: View {
                 }
             }
 
-            Section("Para leer más") {
+            Section(store.t("Para leer más", "Further reading")) {
                 ForEach(reading, id: \.self) { book in
                     Text(book).font(.subheadline)
                 }
@@ -90,12 +102,12 @@ struct PantryView: View {
         .listStyle(.insetGrouped)
         .scrollContentBackground(.hidden)
         .background(Color.paper)
-        .navigationTitle("Despensa")
+        .navigationTitle(store.t("Despensa", "Pantry"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) { AppearanceButton() }
+            ToolbarItem(placement: .topBarTrailing) { SettingsButtons() }
             ToolbarItem(placement: .principal) {
-                Text("Despensa").font(.rotulo(22, relativeTo: .headline)).foregroundStyle(Color.mxRosa)
+                Text(store.t("Despensa", "Pantry")).font(.rotulo(22, relativeTo: .headline)).foregroundStyle(Color.mxRosa)
             }
         }
     }

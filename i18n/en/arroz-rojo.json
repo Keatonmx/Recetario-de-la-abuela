@@ -1,0 +1,77 @@
+{
+  "id": "arroz-rojo",
+  "subtitle": "Mexican red rice",
+  "verso": "Don't even look at the rice: cover it and leave it be.",
+  "region": "All of Mexico",
+  "servings": "6 servings",
+  "story": "Fried until golden before any liquid goes in, then cooked in tomato broth and left alone. It goes next to everything, and into soup.",
+  "ingredients": [
+    {
+      "title": "Rice",
+      "items": [
+        "1½ cups long-grain white rice",
+        "3 tbsp oil",
+        "2 Roma tomatoes",
+        "¼ white onion",
+        "1 garlic clove",
+        "2¾ cups hot chicken broth",
+        "1 tsp salt",
+        "1 carrot, diced, and ½ cup peas, optional",
+        "1 sprig cilantro",
+        "1 serrano, whole"
+      ]
+    }
+  ],
+  "steps": [
+    "Soak the rice in hot water 10 minutes. Rinse until the water runs clear, then drain very well.",
+    "Heat the oil in a wide pot over medium. Add the rice and stir until it turns opaque and light golden and sounds like sand, about 8 minutes.",
+    "Blend the tomatoes, onion and garlic with [[½ cup]] of the broth. Strain onto the rice and stir 2–3 minutes, until absorbed and the color deepens.",
+    "Add the rest of the broth, the salt, carrot, peas, cilantro and serrano. Bring to a boil.",
+    "Cover, turn the heat to its lowest setting and cook 18 minutes. Don't lift the lid or stir.",
+    "Turn off the heat and let rest 10 minutes, covered. Fluff with a fork."
+  ],
+  "pressureCooker": {
+    "time": "4 min high pressure + 10 min natural release",
+    "total": "25 min",
+    "steps": [
+      "Soak, rinse and drain the rice. Fry it in the oil on Sauté until golden.",
+      "Add the strained tomato purée and stir 2 minutes.",
+      "Add broth so the total liquid (purée plus broth) is [[1¾ cups]], then the salt, vegetables, cilantro and serrano. Scrape the bottom well so it won't set off the burn warning.",
+      "High pressure 4 minutes, natural release 10. Fluff."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Plenty of grandmas swap some of the salt for a spoon of Knorr tomato bouillon. Nobody has to know.",
+    "Lifting the lid lets out the steam, and you get rice that's raw on top and mushy underneath."
+  ],
+  "variations": [
+    {
+      "name": "Arroz Verde",
+      "subtitle": "Green poblano rice",
+      "region": "Central Mexico",
+      "note": "The same method with a green purée instead of tomato.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "The same rice, broth and method as the base",
+            "Instead of the tomato:",
+            "1 poblano, roasted and peeled",
+            "½ bunch cilantro",
+            "1 garlic clove",
+            "¼ onion",
+            "½ cup broth, to blend"
+          ]
+        }
+      ],
+      "steps": [
+        "Fry the rice as in the base.",
+        "Add the green purée instead of the tomato and cook 2 minutes.",
+        "Continue with the broth as in the base."
+      ],
+      "pressureNote": "Same pressure time as the base."
+    }
+  ]
+}

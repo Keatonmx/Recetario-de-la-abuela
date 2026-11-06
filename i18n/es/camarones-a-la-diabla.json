@@ -1,0 +1,82 @@
+{
+  "id": "camarones-a-la-diabla",
+  "subtitle": "Camarones en salsa roja de chile, bien picosa",
+  "verso": "Camarón a la diabla: el que lo prueba, ni habla.",
+  "region": "Toda la costa",
+  "servings": "4 personas",
+  "story": "Camarones en una salsa picosa y brillante de guajillo, chile de árbol y chipotle, frita en mantequilla. A la diabla quiere decir al estilo del diablo: tan picoso como te atrevas. El arroz blanco al lado apaga el fuego.",
+  "ingredients": [
+    {
+      "title": "El camarón",
+      "items": [
+        "1½ lb de camarones grandes, pelados y desvenados, con cola",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "La salsa diabla",
+      "items": [
+        "4 chiles guajillo",
+        "4–8 chiles de árbol",
+        "2 chipotles en adobo",
+        "3 jitomates guaje",
+        "¼ de cebolla blanca",
+        "3 dientes de ajo",
+        "½ taza de agua o caldo de camarón",
+        "½ cucharadita de orégano mexicano",
+        "2 cucharadas de mantequilla",
+        "1 cucharada de aceite"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Arroz blanco o arroz rojo",
+        "Limones",
+        "Bolillo o tortillas"
+      ]
+    }
+  ],
+  "steps": [
+    "Tuesta los guajillos y los chiles de árbol unos segundos en un sartén seco. Remójalos en agua caliente 10 minutos.",
+    "Licúa los chiles remojados con los chipotles, los jitomates, la cebolla, el ajo, el orégano y [[½ taza]] de agua hasta que quede terso. Cuela.",
+    "Calienta la mantequilla y el aceite en un sartén ancho. Vierte la salsa y fríela 6–8 minutos, moviendo, hasta que se oscurezca y espese. Sazona con sal.",
+    "Agrega los camarones en una sola capa y cocínalos 2–3 minutos por lado, hasta que estén rosados y enroscados.",
+    "Sirve de inmediato con arroz, limón y bolillo."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. Los camarones solo necesitan unos minutos en el sartén.",
+  "tips": [
+    "Gradúa el picor con los chiles de árbol: con 4 pica, con 8 es a la diabla.",
+    "No llenes de más el sartén, y saca los camarones en cuanto se enrosquen en forma de C. Si forman una O, ya se pasaron."
+  ],
+  "variations": [
+    {
+      "name": "Camarones al Mojo de Ajo",
+      "subtitle": "Camarones en mantequilla con ajo",
+      "region": "Toda la costa",
+      "note": "El suavecito de la marisquería: camarones en ajo dorado, mantequilla y limón.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1½ lb de camarones grandes, pelados",
+            "8 dientes de ajo, finamente picados",
+            "3 cucharadas de mantequilla",
+            "2 cucharadas de aceite",
+            "1 chile guajillo, en rodajas delgadas, opcional",
+            "1 limón, exprimido",
+            "Perejil o cilantro picado",
+            "Sal, al gusto"
+          ]
+        }
+      ],
+      "steps": [
+        "Calienta el aceite y la mantequilla a fuego bajo y cocina el ajo y el guajillo despacio, 5–6 minutos, hasta que el ajo esté dorado. No dejes que se queme.",
+        "Sube el fuego, agrega los camarones y cocínalos 2–3 minutos por lado.",
+        "Agrega el jugo de limón, la sal y el perejil, revuelve y sirve con arroz."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

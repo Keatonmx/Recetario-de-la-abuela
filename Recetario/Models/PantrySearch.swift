@@ -224,7 +224,10 @@ final class PantrySearch {
         return results.map { $0.match }
     }
 
-    func label(_ id: String) -> String { entries[id]?.es ?? id }
+    func label(_ id: String, lang: Lang = .es) -> String {
+        guard let entry = entries[id] else { return id }
+        return lang == .es ? entry.es : entry.en
+    }
 
     // MARK: Damerau–Levenshtein (optimal string alignment): a swapped pair of letters is one typo.
 

@@ -1,0 +1,125 @@
+{
+  "id": "mole-poblano",
+  "subtitle": "Salsa de chiles, chocolate y especias con guajolote",
+  "verso": "¡Aquí sí estamos en nuestro mero mole!",
+  "region": "Puebla",
+  "servings": "12 personas",
+  "story": "El mole poblano es el platillo de las bodas, los bautizos y el Día de Muertos. Lleva decenas de ingredientes, cada uno frito o tostado por separado, que luego se muelen juntos y se cuecen despacio hasta que la grasa sube a la superficie. Las abuelas lo hacen en grandes cantidades, con toda la familia ayudando. La leyenda poblana se lo atribuye a sor Andrea de la Asunción, del Convento de Santa Rosa, hacia 1680, aunque ningún documento lo prueba.",
+  "ingredients": [
+    {
+      "title": "La carne",
+      "items": [
+        "1 guajolote, en piezas, o 2 pollos",
+        "1 cebolla blanca, 1 cabeza de ajo y sal",
+        "Unas 10 tazas del caldo de cocción"
+      ]
+    },
+    {
+      "title": "Los chiles",
+      "items": [
+        "8 chiles mulato",
+        "6 chiles ancho",
+        "6 chiles pasilla",
+        "2 chiles chipotle mora, opcional",
+        "1 cucharada de las semillas de los chiles, reservadas"
+      ]
+    },
+    {
+      "title": "Semillas y frutas",
+      "items": [
+        "⅓ taza de ajonjolí, más el necesario para adornar",
+        "¼ taza de almendras con piel",
+        "¼ taza de cacahuates",
+        "2 cucharadas de pepitas",
+        "¼ taza de pasitas",
+        "1 plátano macho muy maduro (con la cáscara negra), rebanado",
+        "1 tortilla de maíz dura",
+        "1 rebanada de bolillo del día anterior o de pan blanco"
+      ]
+    },
+    {
+      "title": "Especias",
+      "items": [
+        "Un trozo de 1 pulgada de canela en raja",
+        "4 clavos de olor enteros",
+        "6 pimientas negras enteras",
+        "3 pimientas gordas",
+        "¼ cucharadita de anís en grano",
+        "¼ cucharadita de semillas de cilantro",
+        "½ cucharadita de tomillo seco",
+        "½ cucharadita de orégano mexicano"
+      ]
+    },
+    {
+      "title": "Lo demás",
+      "items": [
+        "2 jitomates guaje y 2 tomates verdes, asados",
+        "½ cebolla blanca y 4 dientes de ajo, asados",
+        "¾ taza de manteca",
+        "2 oz de chocolate de mesa mexicano (½ tableta)",
+        "1–2 cucharadas de azúcar, al gusto",
+        "Sal, al gusto"
+      ]
+    }
+  ],
+  "steps": [
+    "Hierve el guajolote a fuego bajo con la cebolla, el ajo y la sal hasta que esté suave, más o menos 1½ horas (40 minutos si es pollo). Guarda el caldo.",
+    "Quítales los tallos y las semillas a los chiles, guardando [[1 cucharada]] de semillas. Fríe los chiles unos segundos por lado en manteca caliente, solo hasta que se ampollen y cambien de color. Remójalos en caldo caliente 30 minutos.",
+    "En la misma manteca, fríe por separado cada uno de estos y apártalos: las almendras, los cacahuates, las pepitas, las pasitas (hasta que se inflen), el plátano (hasta que esté bien dorado), la tortilla (hasta que esté crujiente) y el pan (hasta que esté dorado).",
+    "En un comal seco, tuesta el ajonjolí hasta que esté dorado, las semillas de chile reservadas hasta que estén muy oscuras, y las especias durante 30 segundos.",
+    "Licúa los chiles con suficiente líquido del remojo para hacer un puré terso.",
+    "Licúa las almendras y los cacahuates, las semillas, la fruta, la tortilla, el pan, las especias, los jitomates, los tomates verdes, la cebolla y el ajo con caldo, por tandas, hasta que todo quede completamente terso. Cuela los dos purés si quieres un mole sedoso.",
+    "Calienta [[3 cucharadas]] de manteca en una olla grande y gruesa o en una cazuela hasta que esté muy caliente. Vierte de golpe el puré de chiles (hazte para atrás, porque salpica). Fríelo, moviendo sin parar, 15 minutos, hasta que oscurezca y espese. A esto se le llama freír el mole.",
+    "Agrega el puré de almendras y semillas y cocina 20 minutos, moviendo seguido.",
+    "Agrega el chocolate, el azúcar y la sal, y suficiente caldo para que cubra el dorso de una cuchara. Deja hervir a fuego bajo 45–60 minutos, moviendo seguido para que no se pegue, hasta que suba a la superficie un brillo de grasa.",
+    "Agrega el guajolote y deja que se caliente bien. Sirve con ajonjolí, arroz rojo y tortillas."
+  ],
+  "pressureCooker": {
+    "time": "Guajolote: 25 min a presión alta + 15 min de liberación natural",
+    "total": "Unas 2 h 30",
+    "steps": [
+      "Cuece a presión las piezas de guajolote con la cebolla, el ajo, la sal y agua hasta la línea de llenado: presión alta 25 minutos (12 si es pollo), liberación natural 15. Guarda el caldo.",
+      "Prepara la salsa del mole en la estufa como en los pasos 2–9. El freído y el hervor lento no se pueden apurar a presión, y un mole espeso hará que salte el aviso de quemado."
+    ],
+    "note": "La salsa de todos modos lleva unas 2 horas en la estufa. Haz bastante pasta de mole frita; se congela por meses."
+  },
+  "pressureNote": null,
+  "tips": [
+    "El mole sabe mejor al día siguiente.",
+    "Muchas familias poblanas llevan los chiles fritos y las semillas al molino del barrio para que se los muelan.",
+    "Si usas pasta de mole comprada, fríela primero en manteca, luego aflójala con caldo y agrégale un trozo de chocolate mexicano. No es el de la abuela, pero es honesto.",
+    "La grasa que sube a la superficie es la señal de que ya está."
+  ],
+  "variations": [
+    {
+      "name": "Pipián Verde",
+      "subtitle": "Mole verde de pepita",
+      "region": "Puebla · Tlaxcala · Centro",
+      "note": "Un mole verde prehispánico espesado con pepitas en lugar de nueces y chiles secos. Más ligero y rápido que el mole poblano. Muchas cocineras le dicen mole verde a casi el mismo platillo.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb de piezas de pollo, cocidas, más el caldo",
+            "1 taza de pepitas crudas peladas",
+            "1 lb de tomates verdes",
+            "2–3 serranos",
+            "¼ de cebolla y 2 dientes de ajo",
+            "4 hojas de lechuga orejona o de rábano",
+            "1 rama de epazote, 2 hojas santas y un puño de cilantro",
+            "2 cucharadas de manteca",
+            "Sal, al gusto"
+          ]
+        }
+      ],
+      "steps": [
+        "Tuesta las pepitas hasta que truenen, pero sin que se doren. Déjalas enfriar.",
+        "Hierve a fuego bajo los tomates verdes y los serranos 8 minutos y escúrrelos.",
+        "Licúa todo menos el pollo, la manteca y la sal con [[2 tazas]] de caldo hasta que quede muy terso.",
+        "Fríe la salsa en la manteca a fuego medio 5 minutos, moviendo, y luego aflójala con caldo.",
+        "Deja hervir suavemente 15 minutos, nunca a hervor fuerte o se corta. Agrega el pollo y sazona."
+      ],
+      "pressureNote": "Cuece el pollo a presión alta 12 minutos, liberación natural 10. Prepara la salsa en la estufa."
+    }
+  ]
+}

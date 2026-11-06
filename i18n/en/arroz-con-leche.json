@@ -1,0 +1,71 @@
+{
+  "id": "arroz-con-leche",
+  "subtitle": "Cinnamon rice pudding",
+  "verso": "Arroz con leche, I want to get married…",
+  "region": "All of Mexico",
+  "servings": "6 cups",
+  "story": "Rice cooked first in water with cinnamon and lime peel, then slowly in milk. Every grandma has a strong opinion about raisins. Kids know it from the playground song: «Arroz con leche, me quiero casar con una señorita de San Nicolás…»",
+  "ingredients": [
+    {
+      "title": "Arroz con leche",
+      "items": [
+        "1 cup long-grain white rice",
+        "2 cups water",
+        "1 stick Mexican cinnamon",
+        "1 strip lime peel, no white pith",
+        "Pinch of salt",
+        "4 cups whole milk",
+        "¾ cup sugar",
+        "1 tsp vanilla",
+        "⅓ cup raisins, optional",
+        "Ground cinnamon, to finish"
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse the rice and soak 15 minutes. Drain.",
+    "Simmer the rice in the water with the cinnamon, lime peel and salt until the water is absorbed, about 15 minutes.",
+    "Add the milk and sugar. Simmer on low, stirring often, 25–30 minutes until creamy.",
+    "Take out the peel and cinnamon. Stir in the vanilla and raisins and cook 5 minutes more.",
+    "It thickens as it cools. Serve warm or cold with ground cinnamon."
+  ],
+  "pressureCooker": {
+    "time": "12 min high pressure + 10 min natural release",
+    "total": "35 min",
+    "steps": [
+      "Put the rice, water, cinnamon, lime peel and salt in the pot.",
+      "High pressure 12 minutes, natural release 10.",
+      "Switch to Sauté. Add the milk and sugar and stir constantly 8–10 minutes until creamy; it scorches easily.",
+      "Finish with the vanilla and raisins."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Use Mexican cinnamon (Ceylon cinnamon), the soft, flaky kind. Cassia sticks are harder and spicier."
+  ],
+  "variations": [
+    {
+      "name": "Arroz con Leche Cremoso",
+      "subtitle": "Extra-creamy rice pudding",
+      "region": "All of Mexico",
+      "note": "The richer version many families make now.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "The same rice, water and spices as the base",
+            "2 cups whole milk (instead of 4)",
+            "1 can (14 oz) sweetened condensed milk (instead of the sugar)",
+            "1 can (12 oz) evaporated milk"
+          ]
+        }
+      ],
+      "steps": [
+        "Cook the rice in the water as in the base.",
+        "Add [[2 cups]] milk, the condensed milk and the evaporated milk. Simmer, stirring, 20 minutes."
+      ],
+      "pressureNote": "Same as the base. Add the canned milks on Sauté."
+    }
+  ]
+}

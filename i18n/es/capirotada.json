@@ -1,0 +1,45 @@
+{
+  "id": "capirotada",
+  "subtitle": "Budín de pan de Cuaresma con piloncillo",
+  "verso": "Capirotada en Cuaresma: cada capa, una promesa.",
+  "region": "Jalisco · Michoacán · Norte",
+  "servings": "8 personas",
+  "story": "El budín de pan de la Cuaresma: capas de bolillo frito, pasas, cacahuates o almendras y queso, remojadas en miel de piloncillo con especias. Las recetas antiguas de Jalisco y Colima hierven un jitomate y una cebolla en la miel. Suena raro y sabe como debe. Cada capa significa algo: el pan es el cuerpo de Cristo, la miel su sangre, la canela la madera de la cruz, los clavos de olor los clavos, y el queso blanco el santo sudario. Se come los viernes de Cuaresma y el Viernes Santo.",
+  "ingredients": [
+    {
+      "title": "La miel",
+      "items": [
+        "8 oz de piloncillo",
+        "3 tazas de agua",
+        "2 rajas de canela",
+        "4 clavos de olor enteros",
+        "1 jitomate guaje y ¼ de cebolla, opcional, a la antigua"
+      ]
+    },
+    {
+      "title": "Las capas",
+      "items": [
+        "6 bolillos del día anterior, en rebanadas de ½ pulgada de grueso",
+        "4 cucharadas de mantequilla o manteca",
+        "½ taza de pasas",
+        "½ taza de cacahuates o almendras fileteadas",
+        "2 tazas de queso añejo, cotija o Chihuahua, rallado",
+        "Grageas de colores, opcional"
+      ]
+    }
+  ],
+  "steps": [
+    "Hierve a fuego bajo el piloncillo, el agua, la canela y los clavos (y el jitomate y la cebolla) 15 minutos, hasta que espese como miel. Cuela.",
+    "Fríe las rebanadas de pan en mantequilla hasta que estén doradas por los dos lados, o barnízalas con mantequilla y dóralas en el horno.",
+    "Unta con mantequilla un refractario. Acomoda capas de pan, pasas, cacahuates o almendras y queso, y repite hasta tener 3 capas.",
+    "Vierte la miel despacio sobre todo para que se remoje bien.",
+    "Tapa con papel aluminio y hornea a 350°F durante 30 minutos. Destapa y hornea 10 minutos más.",
+    "Deja reposar 15 minutos y adorna con las grageas. Sirve tibia o a temperatura ambiente."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. La capirotada necesita el calor seco del horno para cuajar.",
+  "tips": [
+    "Dora bien el pan. El pan pálido se hace una masa aguada."
+  ],
+  "variations": []
+}

@@ -3,9 +3,10 @@ import Foundation
 /// Scales the amounts written in ingredient lines, for cooking for more or fewer people.
 ///
 /// It multiplies the quantity that starts each clause ("2 lb pork", ", 3 garlic cloves",
-/// " and 1 tbsp salt", " or 2 cans"), metric and packet amounts in parentheses ("(500 g)",
-/// "(1 packet)"), and fixes singular/plural on the word after the number. Numbers such as
-/// "3-inch", "350°F" or "(29 oz each)" are left alone.
+/// " and 1 tbsp salt", " or 2 cans"; in Spanish ", 3 dientes de ajo", " y 1 cucharada"),
+/// metric and packet amounts in parentheses ("(500 g)", "(1 packet)"), and fixes
+/// singular/plural on the words after the number. Numbers such as "3-inch", "350°F" or
+/// "(29 oz each)" are left alone.
 ///
 /// This is a port of `SCALE` in web/recetario.html. CI checks both against
 /// scripts/validate/scaling-fixtures.json, so keep them in step.
@@ -16,15 +17,33 @@ enum Scaler {
         "⅝": 5.0 / 8, "⅔": 2.0 / 3, "¾": 3.0 / 4, "⅞": 7.0 / 8
     ]
     private static let num = "(?:\\d+(?:\\.\\d+)?[⅛¼⅓⅜½⅝⅔¾⅞]?|[⅛¼⅓⅜½⅝⅔¾⅞])"
-    private static let clause = regex("(^|, | and | or | plus | with |— )(about )?(\(num))(?:–(\(num)))?(?= ?[A-Za-zÀ-ÿ(])", caseInsensitive: true)
-    private static let paren = regex("\\((about )?(\(num)) ?(g|ml|kg|oz|packets?|tablets?)\\)", caseInsensitive: true)
-    private static let sizeWordBefore = regex("\\b(cans?|tablets?|jars?|bags?)\\s*$", caseInsensitive: true)
-    private static let packetUnit = regex("^(packet|tablet)s?$", caseInsensitive: true)
+    private static let aboutWords: [Lang: String] = [.en: "(about )", .es: "(unos |unas |como )"]
+    private static let clause: [Lang: NSRegularExpression] = [
+        .en: regex("(^|, | and | or | plus | with |— )(about )?(\(num))(?:–(\(num)))?(?= ?[A-Za-zÀ-ÿ(])", caseInsensitive: true),
+        .es: regex("(^|, | y | o | más | con |— )(unos |unas |como )?(\(num))(?:–(\(num)))?(?= ?[A-Za-zÀ-ÿ(])", caseInsensitive: true)
+    ]
+    private static let paren: [Lang: NSRegularExpression] = [
+        .en: regex("\\((about )?(\(num)) ?(g|ml|kg|oz|packets?|tablets?)\\)", caseInsensitive: true),
+        .es: regex("\\((como )?(\(num)) ?(g|ml|kg|oz|sobres?|tabletas?)\\)", caseInsensitive: true)
+    ]
+    private static let sizeWordBefore: [Lang: NSRegularExpression] = [
+        .en: regex("\\b(cans?|tablets?|jars?|bags?)\\s*$", caseInsensitive: true),
+        .es: regex("(?:^|[^A-Za-zÀ-ÿ])(latas?|tabletas?|frascos?|bolsas?)\\s*$", caseInsensitive: true)
+    ]
+    private static let packetUnit: [Lang: NSRegularExpression] = [
+        .en: regex("^(packet|tablet)s?$", caseInsensitive: true),
+        .es: regex("^(sobre|tableta)s?$", caseInsensitive: true)
+    ]
+    private static let baseRegex: [Lang: NSRegularExpression] = aboutWords.mapValues {
+        regex("^(?:\($0))?(\(num))(?:–(\(num)))?", caseInsensitive: true)
+    }
+    private static let yieldRegex: [Lang: NSRegularExpression] = aboutWords.mapValues {
+        regex("^\($0)?(\(num))(?:–(\(num)))?(.*)$", caseInsensitive: true)
+    }
     private static let oneWord = regex("^ ?[A-Za-zÀ-ÿ'-]+")
     private static let twoWords = regex("^ ?[A-Za-zÀ-ÿ'-]+ [A-Za-zÀ-ÿ'-]+")
     private static let agreeWords = regex("^( ?)([A-Za-zÀ-ÿ'-]+)( ([A-Za-zÀ-ÿ'-]+))?")
-    private static let baseRegex = regex("^(?:about )?(\(num))(?:–(\(num)))?", caseInsensitive: true)
-    private static let yieldRegex = regex("^(about )?(\(num))(?:–(\(num)))?(.*)$", caseInsensitive: true)
+    private static let agreeWordsEs = regex("^( ?)(de )?([A-Za-zÀ-ÿ'-]+)((?: [A-Za-zÀ-ÿ'-]+){0,2})")
 
     private static let plural: [String: String] = [
         "cup": "cups", "can": "cans", "tablet": "tablets", "stick": "sticks", "sprig": "sprigs", "slice": "slices",
@@ -43,6 +62,51 @@ enum Scaler {
         "roma", "white", "red", "large", "small", "medium", "whole", "ripe", "dried", "fresh", "garlic", "corn",
         "flour", "green", "day-old", "mexican", "bay", "avocado", "hoja", "thin", "stewing", "sour", "romaine"
     ]
+    // Spanish: the noun comes right after the number, then up to two adjectives that agree with it.
+    // Keep these tables the same as ES_PLURAL and ES_ADJ in web/recetario.html.
+    private static let esPlural: [String: String] = [
+        "taza": "tazas", "cucharada": "cucharadas", "cucharadita": "cucharaditas", "lata": "latas", "sobre": "sobres",
+        "tableta": "tabletas", "frasco": "frascos", "bolsa": "bolsas", "paquete": "paquetes", "diente": "dientes",
+        "cabeza": "cabezas", "rama": "ramas", "ramita": "ramitas", "rebanada": "rebanadas", "raja": "rajas", "tira": "tiras",
+        "manojo": "manojos", "hoja": "hojas", "huevo": "huevos", "yema": "yemas", "clara": "claras", "limón": "limones",
+        "lima": "limas", "naranja": "naranjas", "tortilla": "tortillas", "bolillo": "bolillos", "telera": "teleras",
+        "concha": "conchas", "papa": "papas", "jitomate": "jitomates", "tomate": "tomates", "tomatillo": "tomatillos",
+        "zanahoria": "zanahorias", "chayote": "chayotes", "calabacita": "calabacitas", "cebolla": "cebollas",
+        "chile": "chiles", "jalapeño": "jalapeños", "serrano": "serranos", "habanero": "habaneros", "poblano": "poblanos",
+        "guajillo": "guajillos", "ancho": "anchos", "pasilla": "pasillas", "mulato": "mulatos", "chipotle": "chipotles",
+        "plátano": "plátanos", "pera": "peras", "durazno": "duraznos", "manzana": "manzanas", "pieza": "piezas",
+        "trozo": "trozos", "disco": "discos", "bola": "bolas", "bolita": "bolitas", "pan": "panes", "taco": "tacos",
+        "tostada": "tostadas", "tallo": "tallos", "persona": "personas", "porción": "porciones", "tazón": "tazones",
+        "plato": "platos", "pollo": "pollos", "pechuga": "pechugas", "pierna": "piernas", "muslo": "muslos",
+        "camarón": "camarones", "filete": "filetes", "aguacate": "aguacates", "pepino": "pepinos", "rábano": "rábanos",
+        "xoconostle": "xoconostles", "clavo": "clavos", "pimienta": "pimientas", "elote": "elotes", "mazorca": "mazorcas",
+        "nopal": "nopales", "costilla": "costillas", "chorizo": "chorizos", "rollo": "rollos", "barra": "barras",
+        "vara": "varas", "varita": "varitas", "litro": "litros", "pulgada": "pulgadas", "vaso": "vasos",
+        "galleta": "galletas", "ejote": "ejotes", "pimiento": "pimientos", "cono": "conos", "rueda": "ruedas",
+        "ajo": "ajos", "mango": "mangos", "guayaba": "guayabas", "tejocote": "tejocotes", "rebanadita": "rebanaditas",
+        "cuadro": "cuadros", "cubo": "cubos", "bistec": "bistecs", "sardina": "sardinas", "aceituna": "aceitunas",
+        "alcaparra": "alcaparras", "almendra": "almendras", "nuez": "nueces", "pasa": "pasas", "ciruela": "ciruelas",
+        "tamal": "tamales", "hojuela": "hojuelas", "grano": "granos", "semilla": "semillas", "cucharón": "cucharones",
+        "pizca": "pizcas", "chorrito": "chorritos", "cerveza": "cervezas", "guajolote": "guajolotes",
+        "huachinango": "huachinangos", "pescado": "pescados", "manita": "manitas", "pata": "patas", "ostión": "ostiones",
+        "salchicha": "salchichas"
+    ]
+    private static let esSingular: [String: String] = Dictionary(esPlural.map { ($0.value, $0.key) }, uniquingKeysWith: { first, _ in first })
+    private static let esAdjectives: [String: String] = [
+        "blanca": "blancas", "blanco": "blancos", "morada": "moradas", "morado": "morados", "roja": "rojas", "rojo": "rojos",
+        "verde": "verdes", "amarilla": "amarillas", "amarillo": "amarillos", "grande": "grandes", "mediana": "medianas",
+        "mediano": "medianos", "chica": "chicas", "chico": "chicos", "pequeña": "pequeñas", "pequeño": "pequeños",
+        "madura": "maduras", "maduro": "maduros", "seca": "secas", "seco": "secos", "fresca": "frescas", "fresco": "frescos",
+        "entera": "enteras", "entero": "enteros", "delgada": "delgadas", "delgado": "delgados", "gruesa": "gruesas",
+        "grueso": "gruesos", "pelada": "peladas", "pelado": "pelados", "cocida": "cocidas", "cocido": "cocidos",
+        "asada": "asadas", "asado": "asados", "frita": "fritas", "frito": "fritos", "molida": "molidas", "molido": "molidos",
+        "picada": "picadas", "picado": "picados", "rallada": "ralladas", "rallado": "rallados", "duro": "duros",
+        "dura": "duras", "crudo": "crudos", "cruda": "crudas", "limpio": "limpios", "limpia": "limpias",
+        "mexicano": "mexicanos", "mexicana": "mexicanas", "guaje": "guaje", "criollo": "criollos", "criolla": "criollas",
+        "tierno": "tiernos", "tierna": "tiernas", "dulce": "dulces", "agria": "agrias", "agrio": "agrios",
+        "viejo": "viejos", "vieja": "viejas"
+    ]
+    private static let esAdjectivesSingular: [String: String] = Dictionary(esAdjectives.map { ($0.value, $0.key) }, uniquingKeysWith: { first, _ in first })
     private static let steps: [(Double, String)] = [
         (0, ""), (1.0 / 8, "⅛"), (1.0 / 4, "¼"), (1.0 / 3, "⅓"), (1.0 / 2, "½"), (2.0 / 3, "⅔"), (3.0 / 4, "¾"), (1, "")
     ]
@@ -50,15 +114,15 @@ enum Scaler {
     // MARK: Public
 
     /// One ingredient line, scaled.
-    static func text(_ s: String, factor: Double) -> String {
+    static func text(_ s: String, factor: Double, lang: Lang = .en) -> String {
         if factor == 1 { return s }
         let ns = s as NSString
         var out = ""
         var last = 0
         var searchFrom = 0
         while searchFrom <= ns.length,
-              let m = clause.firstMatch(in: s, options: [.withoutAnchoringBounds],
-                                        range: NSRange(location: searchFrom, length: ns.length - searchFrom)) {
+              let m = clause[lang]?.firstMatch(in: s, options: [.withoutAnchoringBounds],
+                                               range: NSRange(location: searchFrom, length: ns.length - searchFrom)) {
             let lead = group(m, 1, in: ns) ?? ""
             let about = group(m, 2, in: ns) ?? ""
             guard let a = group(m, 3, in: ns) else { break }
@@ -74,6 +138,13 @@ enum Scaler {
             out += ns.substring(with: NSRange(location: last, length: m.range.location - last)) + lead + about + qty
             last = m.range.location + m.range.length
 
+            if lang == .es {
+                let (fixed, used) = agreeEs(ns.substring(from: last), value: nb ?? na)
+                out += fixed
+                last += used
+                searchFrom = last
+                continue
+            }
             // One word, or two when the first is an adjective ("Roma tomatoes", "garlic cloves").
             let rest = ns.substring(from: last)
             var words = firstMatch(oneWord, in: rest)
@@ -87,20 +158,20 @@ enum Scaler {
             searchFrom = last
         }
         out += ns.substring(from: last)
-        return scaleParentheses(out, factor: factor)
+        return scaleParentheses(out, factor: factor, lang: lang)
     }
 
     private static let marked = regex("\\[\\[(.+?)\\]\\]")
 
     /// A step, scaled: only amounts marked [[like this]] change (batch amounts). Times,
     /// temperatures, pot sizes, trivet water and per-piece amounts are left unmarked on purpose.
-    static func stepText(_ s: String, factor: Double) -> String {
+    static func stepText(_ s: String, factor: Double, lang: Lang = .en) -> String {
         let ns = s as NSString
         var out = ""
         var last = 0
         for m in marked.matches(in: s, range: NSRange(location: 0, length: ns.length)) {
             out += ns.substring(with: NSRange(location: last, length: m.range.location - last))
-            out += text(ns.substring(with: m.range(at: 1)), factor: factor)
+            out += text(ns.substring(with: m.range(at: 1)), factor: factor, lang: lang)
             last = m.range.location + m.range.length
         }
         out += ns.substring(from: last)
@@ -108,24 +179,29 @@ enum Scaler {
     }
 
     /// The yield, scaled: "10 bowls" ×½ → "5 bowls", "About 30" ×½ → "About 15".
-    static func yieldText(_ y: String, factor: Double) -> String {
+    static func yieldText(_ y: String, factor: Double, lang: Lang = .en) -> String {
         let ns = y as NSString
         guard factor != 1,
-              let m = yieldRegex.firstMatch(in: y, range: NSRange(location: 0, length: ns.length)),
+              let m = yieldRegex[lang]?.firstMatch(in: y, range: NSRange(location: 0, length: ns.length)),
               let aText = group(m, 2, in: ns) else { return y }
         let a = parse(aText) * factor
         let b = group(m, 3, in: ns).map { parse($0) * factor }
         let qty = b.map { "\(format(a))–\(format($0))" } ?? format(a)
-        return (group(m, 1, in: ns) ?? "") + qty + agree(group(m, 4, in: ns) ?? "", value: b ?? a)
+        let rest = group(m, 4, in: ns) ?? ""
+        if lang == .es {
+            let (fixed, used) = agreeEs(rest, value: b ?? a)
+            return (group(m, 1, in: ns) ?? "") + qty + fixed + (rest as NSString).substring(from: used)
+        }
+        return (group(m, 1, in: ns) ?? "") + qty + agree(rest, value: b ?? a)
     }
 
     /// The number of servings a yield describes: "10 bowls" → 10, "4–6 plates" → 5.
-    static func base(_ y: String) -> Double? {
+    static func base(_ y: String, lang: Lang = .en) -> Double? {
         let ns = y as NSString
-        guard let m = baseRegex.firstMatch(in: y, range: NSRange(location: 0, length: ns.length)),
-              let aText = group(m, 1, in: ns) else { return nil }
+        guard let m = baseRegex[lang]?.firstMatch(in: y, range: NSRange(location: 0, length: ns.length)),
+              let aText = group(m, 2, in: ns) else { return nil }
         let a = parse(aText)
-        if let bText = group(m, 2, in: ns) { return (a + parse(bText)) / 2 }
+        if let bText = group(m, 3, in: ns) { return (a + parse(bText)) / 2 }
         return a
     }
 
@@ -178,6 +254,12 @@ enum Scaler {
         return n + value
     }
 
+    private static func caseLike(_ w: String, _ replacement: String) -> String {
+        guard let first = w.first else { return replacement }
+        let isUpper = String(first).uppercased() == String(first)
+        return isUpper ? replacement.prefix(1).uppercased() + replacement.dropFirst() : replacement
+    }
+
     /// Makes the word (or adjective + word) after a number agree with it: "1 cup" ⇄ "2 cups".
     private static func agree(_ rest: String, value: Double) -> String {
         let ns = rest as NSString
@@ -188,9 +270,7 @@ enum Scaler {
         func fix(_ w: String) -> String? {
             let lower = w.lowercased()
             guard let replacement = value > 1 ? plural[lower] : singular[lower] else { return nil }
-            guard let first = w.first else { return replacement }
-            let isUpper = String(first).uppercased() == String(first)
-            return isUpper ? replacement.prefix(1).uppercased() + replacement.dropFirst() : replacement
+            return caseLike(w, replacement)
         }
 
         if let fixed = fix(w1) {
@@ -203,7 +283,36 @@ enum Scaler {
         return rest
     }
 
-    private static func scaleParentheses(_ s: String, factor: Double) -> String {
+    /// Spanish: the noun after a number and up to two adjectives after it, made to agree:
+    /// "1 cebolla blanca" ⇄ "2 cebollas blancas". "¼ de cebolla" scaled to 2 drops the "de".
+    /// Returns the new words and how many UTF-16 units of `rest` they replace.
+    private static func agreeEs(_ rest: String, value: Double) -> (String, Int) {
+        let ns = rest as NSString
+        guard let m = agreeWordsEs.firstMatch(in: rest, range: NSRange(location: 0, length: ns.length)),
+              let word = group(m, 3, in: ns) else { return ("", 0) }
+        let space = group(m, 1, in: ns) ?? ""
+        let de = group(m, 2, in: ns) ?? ""
+
+        func pick(_ w: String, plurals: [String: String], singulars: [String: String]) -> String? {
+            let lower = w.lowercased()
+            if value > 1 { return plurals[lower] ?? (singulars[lower] != nil ? lower : nil) }
+            return singulars[lower] ?? (plurals[lower] != nil ? lower : nil)
+        }
+
+        guard let noun = pick(word, plurals: esPlural, singulars: esSingular) else { return ("", 0) }
+        var out = space + (value < 1 ? de : "") + caseLike(word, noun)
+        var used = (space as NSString).length + (de as NSString).length + (word as NSString).length
+        let following = (group(m, 4, in: ns) ?? "").split(separator: " ").map(String.init)
+        for w in following {
+            guard let adjective = pick(w, plurals: esAdjectives, singulars: esAdjectivesSingular) else { break }
+            out += " " + caseLike(w, adjective)
+            used += 1 + (w as NSString).length
+        }
+        return (out, used)
+    }
+
+    private static func scaleParentheses(_ s: String, factor: Double, lang: Lang) -> String {
+        guard let paren = paren[lang], let sizeWord = sizeWordBefore[lang], let packet = packetUnit[lang] else { return s }
         let ns = s as NSString
         var out = ""
         var last = 0
@@ -212,14 +321,14 @@ enum Scaler {
             last = m.range.location + m.range.length
             let before = ns.substring(to: m.range.location)
             let original = ns.substring(with: m.range)
-            if firstMatch(sizeWordBefore, in: before) != nil {
+            if firstMatch(sizeWord, in: before) != nil {
                 out += original
                 continue
             }
             let about = group(m, 1, in: ns) ?? ""
             let value = parse(group(m, 2, in: ns) ?? "") * factor
             var unit = group(m, 3, in: ns) ?? ""
-            if packetUnit.firstMatch(in: unit, range: NSRange(location: 0, length: (unit as NSString).length)) != nil {
+            if packet.firstMatch(in: unit, range: NSRange(location: 0, length: (unit as NSString).length)) != nil {
                 if unit.lowercased().hasSuffix("s") { unit.removeLast() }
                 if value > 1 { unit += "s" }
             }

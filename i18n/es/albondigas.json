@@ -1,0 +1,72 @@
+{
+  "id": "albondigas",
+  "subtitle": "Albóndigas en caldillo de jitomate con hierbabuena",
+  "verso": "Con su arroz y su hierbabuena, la albóndiga sale buena.",
+  "region": "Norte · Centro",
+  "servings": "6 personas",
+  "story": "Las albóndigas mexicanas llevan arroz crudo adentro, que se hincha al cocerse y las mantiene suaves, y hierbabuena fresca, que es el sabor que todos recuerdan.",
+  "ingredients": [
+    {
+      "title": "Albóndigas",
+      "items": [
+        "1 lb de carne molida de res",
+        "½ lb de carne molida de puerco",
+        "¼ taza de arroz de grano largo, remojado 15 minutos en agua caliente y escurrido",
+        "1 huevo",
+        "2 cucharadas de hierbabuena picada fina",
+        "2 cucharadas de cebolla picada fina",
+        "1 diente de ajo, picado muy fino",
+        "½ cucharadita de comino molido",
+        "1 cucharadita de sal y ¼ cucharadita de pimienta negra"
+      ]
+    },
+    {
+      "title": "Caldillo",
+      "items": [
+        "4 jitomates guaje",
+        "¼ de cebolla blanca",
+        "2 dientes de ajo",
+        "1–2 chipotles en adobo, opcional",
+        "1 cucharada de aceite",
+        "8 tazas de caldo de res o de pollo (o agua)",
+        "2 zanahorias, en cubitos",
+        "1 papa, en cubitos",
+        "1 calabacita, en cubitos",
+        "1 rama de hierbabuena",
+        "Sal, al gusto"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Tortillas de maíz",
+        "Limones"
+      ]
+    }
+  ],
+  "steps": [
+    "Mezcla con las manos todos los ingredientes de las albóndigas solo hasta que se integren. Mójate las manos y forma bolitas del tamaño de una pelota de golf.",
+    "Licúa los jitomates, la cebolla, el ajo y el chipotle. Calienta el aceite en una olla ancha y fríe el puré 5 minutos, hasta que se oscurezca.",
+    "Agrega el caldo y la rama de hierbabuena. Deja que suelte el hervor y agrega las zanahorias y la papa.",
+    "Mete las albóndigas una por una. No muevas durante los primeros 10 minutos para que se afirmen.",
+    "Deja hervir a fuego lento 25–30 minutos, agregando la calabacita en los últimos 10. Prueba de sal.",
+    "Sirve con tortillas y limón."
+  ],
+  "pressureCooker": {
+    "time": "8 min a presión alta + 10 min de liberación natural",
+    "total": "30 min",
+    "steps": [
+      "En la función Saltear, fríe el puré de jitomate 5 minutos.",
+      "Agrega el caldo, la hierbabuena, las zanahorias y la papa. Acomoda las albóndigas con cuidado.",
+      "Presión alta 8 minutos, liberación natural 10.",
+      "Agrega la calabacita y deja hervir a fuego lento en la función Saltear 3 minutos."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Algunas familias le meten un pedacito de huevo cocido a cada albóndiga. A los niños les encanta encontrarlo.",
+    "Mantén las manos mojadas al formar las bolitas y la carne no se pega."
+  ],
+  "variations": []
+}

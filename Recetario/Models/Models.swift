@@ -3,6 +3,11 @@ import Foundation
 // Foundation-only on purpose: scripts/validate compiles this file on its own
 // to check recipes.json in CI.
 
+/// The two languages the recetario is written in.
+enum Lang: String, Codable, CaseIterable {
+    case es, en
+}
+
 struct RecipeBook: Codable {
     let categories: [RecipeCategory]
     let recipes: [Recipe]
@@ -21,9 +26,12 @@ struct RecipeBook: Codable {
 
 struct RecipeCategory: Codable, Identifiable, Hashable {
     let id: String
-    let name: String
     /// Card color for the category, as "#RRGGBB".
     let color: String
+    let es: String
+    let en: String
+
+    func name(_ lang: Lang) -> String { lang == .es ? es : en }
 }
 
 struct IngredientGroup: Codable, Hashable {
@@ -41,12 +49,28 @@ struct PressureCooker: Codable, Hashable {
 struct Variation: Codable, Hashable, Identifiable {
     var id: String { name }
     let name: String
-    let en: String
+    let subtitle: String
     let region: String?
     let note: String?
     let ingredients: [IngredientGroup]
     let steps: [String]
     let pressureNote: String?
+}
+
+/// Everything about a recipe that is written in words, in one language.
+struct RecipeText: Codable, Hashable {
+    let subtitle: String
+    /// La cantada: the line the lotería caller sings for this card.
+    let verso: String?
+    let region: String
+    let servings: String
+    let story: String
+    let ingredients: [IngredientGroup]
+    let steps: [String]
+    let pressureCooker: PressureCooker?
+    let pressureNote: String?
+    let tips: [String]
+    let variations: [Variation]
 }
 
 struct Recipe: Codable, Hashable, Identifiable {
@@ -55,38 +79,47 @@ struct Recipe: Codable, Hashable, Identifiable {
     let number: Int
     /// The article the card is called with: "El", "La", "Los", "Las".
     let article: String?
-    /// La cantada: the line the lotería caller sings for this card.
-    let verso: String?
+    /// The dish's name, the same in both languages.
     let name: String
-    let en: String
     let category: String
-    let region: String
-    let time: String
-    let servings: String
-    let story: String
-    let ingredients: [IngredientGroup]
-    let steps: [String]
-    let pressureCooker: PressureCooker?
-    let pressureNote: String?
-    let tips: [String]
+    let time: [String: String]
     /// What the recipe needs, for ¿Qué tengo?: each entry is a set of alternatives ("pork or chicken").
     let needs: [[String]]
-    let variations: [Variation]
+    let es: RecipeText
+    let en: RecipeText
+
+    /// The recipe's text in a language. Both languages have the same lines in the same order.
+    func text(_ lang: Lang) -> RecipeText { lang == .es ? es : en }
+
+    func totalTime(_ lang: Lang) -> String { time[lang.rawValue] ?? time["en"] ?? "" }
+
+    var hasPressureCooker: Bool { en.pressureCooker != nil }
+    var variations: [Variation] { en.variations }
+}
+
+struct ChileText: Codable, Hashable {
+    let form: String
+    let taste: String
+    let uses: String
 }
 
 struct Chile: Codable, Hashable, Identifiable {
     var id: String { name }
     let name: String
-    let form: String
     let heat: Int
-    let taste: String
-    let uses: String
+    let es: ChileText
+    let en: ChileText
+
+    func text(_ lang: Lang) -> ChileText { lang == .es ? es : en }
 }
 
 struct GlossaryEntry: Codable, Hashable, Identifiable {
     var id: String { term }
     let term: String
-    let definition: String
+    let es: String
+    let en: String
+
+    func definition(_ lang: Lang) -> String { lang == .es ? es : en }
 }
 
 extension String {
@@ -103,10 +136,14 @@ extension Recipe {
         return name
     }
 
+    /// Search finds a recipe by its words in either language.
     var searchIndex: String {
-        var parts = [name, en, region]
-        parts += ingredients.flatMap { $0.items }
-        parts += variations.flatMap { [$0.name, $0.en] }
+        var parts = [name]
+        for t in [es, en] {
+            parts += [t.subtitle, t.region]
+            parts += t.ingredients.flatMap { $0.items }
+            parts += t.variations.flatMap { [$0.name, $0.subtitle] }
+        }
         return parts.joined(separator: " ").folded
     }
 
@@ -116,19 +153,20 @@ extension Recipe {
     }
 
     /// Plain-text version for the share sheet.
-    var shareText: String {
-        var lines: [String] = ["\(name) (\(en))", region, ""]
-        for group in ingredients {
+    func shareText(_ lang: Lang) -> String {
+        let t = text(lang)
+        var lines: [String] = ["\(name) (\(t.subtitle))", t.region, ""]
+        for group in t.ingredients {
             if !group.title.isEmpty { lines.append(group.title.uppercased()) }
             lines += group.items.map { "• \($0)" }
             lines.append("")
         }
-        lines.append("PREPARACIÓN")
-        for (i, step) in steps.enumerated() {
-            lines.append("\(i + 1). \(Scaler.stepText(step, factor: 1))")
+        lines.append(lang == .es ? "PREPARACIÓN" : "PREPARATION")
+        for (i, step) in t.steps.enumerated() {
+            lines.append("\(i + 1). \(Scaler.stepText(step, factor: 1, lang: lang))")
         }
         lines.append("")
-        lines.append("From Recetario de la Abuela")
+        lines.append(lang == .es ? "Del Recetario de la Abuela" : "From Recetario de la Abuela")
         return lines.joined(separator: "\n")
     }
 }

@@ -1,0 +1,76 @@
+{
+  "id": "tostadas-de-ceviche",
+  "subtitle": "Pescado curado en limón sobre tostadas crujientes",
+  "verso": "Limón, pescado y tostada: la playa sin pagar nada.",
+  "region": "Guerrero · Sinaloa · la costa",
+  "servings": "6 personas",
+  "story": "En la costa mexicana, el ceviche es pescado curado en limón hasta que se pone blanco, luego mezclado con jitomate, cebolla, cilantro y chile y servido en montón sobre una tostada crujiente con aguacate y salsa picante. En Acapulco le ponen un chorrito de catsup; en Sinaloa, pepino, zanahoria y una untadita de mayonesa.",
+  "ingredients": [
+    {
+      "title": "El pescado",
+      "items": [
+        "1 lb de pescado blanco firme muy fresco (sierra, dorado, huachinango o tilapia), en cubitos finos",
+        "1½ tazas de jugo de limón recién exprimido",
+        "1 cucharadita de sal"
+      ]
+    },
+    {
+      "title": "Con el pescado",
+      "items": [
+        "3 jitomates guaje, en cubitos finos",
+        "½ cebolla blanca, finamente picada",
+        "2–3 serranos, finamente picados",
+        "½ taza de cilantro picado",
+        "1 pepino, en cubitos finos, opcional"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "12 tostadas",
+        "2 aguacates, en rebanadas",
+        "Mayonesa, opcional, a la sinaloense",
+        "Salsa Valentina o Huichol",
+        "Limones"
+      ]
+    }
+  ],
+  "steps": [
+    "Pon el pescado en un tazón de vidrio con la sal y suficiente jugo de limón para cubrirlo. Refrigera 30–40 minutos, moviendo una vez, hasta que el pescado esté blanco por completo.",
+    "Escurre casi todo el jugo de limón.",
+    "Incorpora el jitomate, la cebolla, el serrano, el cilantro y el pepino. Prueba de sal.",
+    "Unta cada tostada con una capa delgada de mayonesa si quieres, ponle encima un montón de ceviche y corónala con aguacate y salsa picante."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hay versión en olla exprés. El limón cuece el pescado.",
+  "tips": [
+    "Corta el pescado chico y parejo para que todo se cure al mismo tiempo.",
+    "Usa un tazón de vidrio o de cerámica, no de metal, para el limón.",
+    "Solo pescado muy fresco. Los mariscos crudos no son para embarazadas ni niños pequeños."
+  ],
+  "variations": [
+    {
+      "name": "Ceviche de Camarón",
+      "subtitle": "Ceviche de camarón",
+      "region": "Sinaloa",
+      "note": "Con camarón en lugar de pescado, curado crudo como el aguachile o cocido un minuto antes.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 lb de camarón, pelado, desvenado y picado",
+            "1 taza de jugo de limón recién exprimido",
+            "El jitomate, la cebolla, el serrano, el cilantro y el pepino de la receta base",
+            "1 zanahoria, finamente rallada"
+          ]
+        }
+      ],
+      "steps": [
+        "Cura el camarón en el jugo de limón 20 minutos en el refrigerador, o cuécelo 1 minuto y enfríalo antes.",
+        "Escurre e incorpora las verduras y la zanahoria.",
+        "Sirve sobre tostadas con aguacate."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

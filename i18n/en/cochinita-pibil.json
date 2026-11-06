@@ -1,0 +1,112 @@
+{
+  "id": "cochinita-pibil",
+  "subtitle": "Achiote pork in banana leaf",
+  "verso": "Wrapped in banana leaf, it's true, the cochinita comes out tender through and through.",
+  "region": "Yucatán",
+  "servings": "8 servings",
+  "story": "Pibil means cooked in the pib, the Maya earth oven. Pork marinates in achiote and sour orange, then cooks wrapped in banana leaves until it falls apart. In Mérida it's breakfast, eaten in tacos and tortas.",
+  "ingredients": [
+    {
+      "title": "The meat",
+      "items": [
+        "4 lb pork shoulder, in 3-inch chunks",
+        "1 lb banana leaves (frozen are fine)",
+        "2 tbsp lard, optional"
+      ]
+    },
+    {
+      "title": "The recado",
+      "items": [
+        "3½ oz achiote paste (recado rojo)",
+        "1 cup naranja agria (sour orange) juice, or ⅔ cup orange juice plus ⅓ cup lime juice",
+        "4 garlic cloves",
+        "1 tsp salt",
+        "½ tsp Mexican oregano",
+        "¼ tsp ground cumin",
+        "¼ tsp ground allspice",
+        "¼ tsp black pepper"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Pickled red onion (see Variations)",
+        "Xnipec or another habanero salsa",
+        "Corn tortillas or bolillos"
+      ]
+    }
+  ],
+  "steps": [
+    "Blend the achiote with the juice, garlic, salt and spices until smooth.",
+    "Coat the pork with it and marinate overnight, covered, in the fridge.",
+    "Pass the banana leaves quickly over a flame or burner until they turn shiny and soft. Line a Dutch oven or deep baking dish with them, letting them hang over the sides.",
+    "Add the pork and all the marinade, dot with the lard, and fold the leaves over to close the package. Cover with foil and the lid.",
+    "Bake at 325°F for 3½–4 hours, until the pork pulls apart with a fork.",
+    "Open the leaves and shred the pork in its juices. Serve with pickled onion and habanero salsa."
+  ],
+  "pressureCooker": {
+    "time": "50 min high pressure + 20 min natural release",
+    "total": "1 h 15 + overnight",
+    "steps": [
+      "Marinate the pork overnight.",
+      "Line the pot with softened banana leaves. Add the pork, the marinade and ½ cup water, and fold the leaves over.",
+      "High pressure 50 minutes, natural release 20.",
+      "Shred the pork. If the juices are thin, lift out the meat and reduce them on Sauté 5 minutes."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Seville oranges (naranja agria) are the real thing. Latin markets sell the juice bottled if you can't find fresh.",
+    "For tortas de cochinita, split a bolillo and fill it with pork, onions and a spoon of the juices. That's breakfast in Mérida."
+  ],
+  "variations": [
+    {
+      "name": "Cebolla Morada Encurtida",
+      "subtitle": "Pickled red onion with habanero",
+      "region": "Yucatán",
+      "note": "Always on the table with cochinita.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 red onions, thinly sliced",
+            "1 habanero, thinly sliced (seeds out for less heat)",
+            "½ cup sour orange or lime juice",
+            "½ tsp salt",
+            "¼ tsp Mexican oregano"
+          ]
+        }
+      ],
+      "steps": [
+        "Pour boiling water over the onions, wait 10 seconds and drain. It softens the bite and turns them bright pink.",
+        "Toss with the habanero, juice, salt and oregano.",
+        "Let stand at least 1 hour. Keeps a week in the fridge."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Xnipec",
+      "subtitle": "Yucatecan habanero salsa",
+      "region": "Yucatán",
+      "note": "Its Maya name means dog's nose, because it's spicy enough to make your nose wet.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 tomatoes, finely diced",
+            "½ red onion, finely diced",
+            "1–2 habaneros, minced",
+            "¼ cup chopped cilantro",
+            "2 sour oranges or limes, juiced",
+            "Salt, to taste"
+          ]
+        }
+      ],
+      "steps": [
+        "Mix everything and let it sit 15 minutes before serving."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

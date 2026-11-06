@@ -1542,8 +1542,18 @@ const app = document.getElementById('app');
 const SCALE = (() => {
   const FR = { '⅛': 1 / 8, '¼': 1 / 4, '⅓': 1 / 3, '⅜': 3 / 8, '½': 1 / 2, '⅝': 5 / 8, '⅔': 2 / 3, '¾': 3 / 4, '⅞': 7 / 8 };
   const NUM = '(?:\\d+(?:\\.\\d+)?[⅛¼⅓⅜½⅝⅔¾⅞]?|[⅛¼⅓⅜½⅝⅔¾⅞])';
-  const CLAUSE = new RegExp(`(^|, | and | or | plus | with |— )(about )?(${NUM})(?:–(${NUM}))?(?=( ?)([A-Za-zÀ-ÿ(]))`, 'gi');
-  const PAREN = new RegExp(`\\((about )?(${NUM}) ?(g|ml|kg|oz|packets?|tablets?)\\)`, 'gi');
+  // Each language has its own clause words, "about" words and package units (lang: 'en' or 'es').
+  const CLAUSE = {
+    en: new RegExp(`(^|, | and | or | plus | with |— )(about )?(${NUM})(?:–(${NUM}))?(?=( ?)([A-Za-zÀ-ÿ(]))`, 'gi'),
+    es: new RegExp(`(^|, | y | o | más | con |— )(unos |unas |como )?(${NUM})(?:–(${NUM}))?(?=( ?)([A-Za-zÀ-ÿ(]))`, 'gi')
+  };
+  const PAREN = {
+    en: new RegExp(`\\((about )?(${NUM}) ?(g|ml|kg|oz|packets?|tablets?)\\)`, 'gi'),
+    es: new RegExp(`\\((como )?(${NUM}) ?(g|ml|kg|oz|sobres?|tabletas?)\\)`, 'gi')
+  };
+  const SIZE_WORD = { en: /\b(cans?|tablets?|jars?|bags?)\s*$/i, es: /(?:^|[^A-Za-zÀ-ÿ])(latas?|tabletas?|frascos?|bolsas?)\s*$/i };
+  const PACKET = { en: /^(packet|tablet)s?$/i, es: /^(sobre|tableta)s?$/i };
+  const ABOUT = { en: '(about )', es: '(unos |unas |como )' };
   const PLURAL = {
     cup: 'cups', can: 'cans', tablet: 'tablets', stick: 'sticks', sprig: 'sprigs', slice: 'slices', strip: 'strips',
     quart: 'quarts', packet: 'packets', bunch: 'bunches', ear: 'ears', head: 'heads', clove: 'cloves', egg: 'eggs',
@@ -1556,6 +1566,65 @@ const SCALE = (() => {
   };
   const SINGULAR = Object.fromEntries(Object.entries(PLURAL).map(([s, p]) => [p, s]));
   const ADJ = new Set(['roma', 'white', 'red', 'large', 'small', 'medium', 'whole', 'ripe', 'dried', 'fresh', 'garlic', 'corn', 'flour', 'green', 'day-old', 'mexican', 'bay', 'avocado', 'hoja', 'thin', 'stewing', 'sour', 'romaine']);
+  // Spanish: the noun comes right after the number, then up to two adjectives that agree with it
+  // ("1 cebolla blanca mediana" ⇄ "2 cebollas blancas medianas").
+  const ES_PLURAL = {
+    taza: 'tazas', cucharada: 'cucharadas', cucharadita: 'cucharaditas', lata: 'latas', sobre: 'sobres', tableta: 'tabletas',
+    frasco: 'frascos', bolsa: 'bolsas', paquete: 'paquetes', diente: 'dientes', cabeza: 'cabezas', rama: 'ramas', ramita: 'ramitas',
+    rebanada: 'rebanadas', raja: 'rajas', tira: 'tiras', manojo: 'manojos', hoja: 'hojas', huevo: 'huevos', yema: 'yemas',
+    clara: 'claras', limón: 'limones', lima: 'limas', naranja: 'naranjas', tortilla: 'tortillas', bolillo: 'bolillos', telera: 'teleras',
+    concha: 'conchas', papa: 'papas', jitomate: 'jitomates', tomate: 'tomates', tomatillo: 'tomatillos', zanahoria: 'zanahorias',
+    chayote: 'chayotes', calabacita: 'calabacitas', cebolla: 'cebollas', chile: 'chiles', jalapeño: 'jalapeños', serrano: 'serranos',
+    habanero: 'habaneros', poblano: 'poblanos', guajillo: 'guajillos', ancho: 'anchos', pasilla: 'pasillas', mulato: 'mulatos',
+    chipotle: 'chipotles', plátano: 'plátanos', pera: 'peras', durazno: 'duraznos', manzana: 'manzanas', pieza: 'piezas',
+    trozo: 'trozos', disco: 'discos', bola: 'bolas', bolita: 'bolitas', pan: 'panes', taco: 'tacos', tostada: 'tostadas',
+    tallo: 'tallos', persona: 'personas', porción: 'porciones', tazón: 'tazones', plato: 'platos', pollo: 'pollos',
+    pechuga: 'pechugas', pierna: 'piernas', muslo: 'muslos', camarón: 'camarones', filete: 'filetes', aguacate: 'aguacates',
+    pepino: 'pepinos', rábano: 'rábanos', xoconostle: 'xoconostles', clavo: 'clavos', pimienta: 'pimientas', elote: 'elotes',
+    mazorca: 'mazorcas', nopal: 'nopales', costilla: 'costillas', chorizo: 'chorizos', rollo: 'rollos', barra: 'barras',
+    vara: 'varas', varita: 'varitas', litro: 'litros', pulgada: 'pulgadas', vaso: 'vasos', galleta: 'galletas', ejote: 'ejotes',
+    pimiento: 'pimientos', cono: 'conos', rueda: 'ruedas', ajo: 'ajos', mango: 'mangos', guayaba: 'guayabas', tejocote: 'tejocotes',
+    rebanadita: 'rebanaditas', cuadro: 'cuadros', cubo: 'cubos', bistec: 'bistecs', sardina: 'sardinas', aceituna: 'aceitunas',
+    alcaparra: 'alcaparras', almendra: 'almendras', nuez: 'nueces', pasa: 'pasas', ciruela: 'ciruelas', tamal: 'tamales',
+    hojuela: 'hojuelas', grano: 'granos', semilla: 'semillas', cucharón: 'cucharones', pizca: 'pizcas', chorrito: 'chorritos',
+    cerveza: 'cervezas', guajolote: 'guajolotes', huachinango: 'huachinangos', pescado: 'pescados', manita: 'manitas',
+    pata: 'patas', ostión: 'ostiones', salchicha: 'salchichas'
+  };
+  const ES_SINGULAR = Object.fromEntries(Object.entries(ES_PLURAL).map(([s, p]) => [p, s]));
+  const ES_ADJ = {
+    blanca: 'blancas', blanco: 'blancos', morada: 'moradas', morado: 'morados', roja: 'rojas', rojo: 'rojos', verde: 'verdes',
+    amarilla: 'amarillas', amarillo: 'amarillos', grande: 'grandes', mediana: 'medianas', mediano: 'medianos', chica: 'chicas',
+    chico: 'chicos', pequeña: 'pequeñas', pequeño: 'pequeños', madura: 'maduras', maduro: 'maduros', seca: 'secas', seco: 'secos',
+    fresca: 'frescas', fresco: 'frescos', entera: 'enteras', entero: 'enteros', delgada: 'delgadas', delgado: 'delgados',
+    gruesa: 'gruesas', grueso: 'gruesos', pelada: 'peladas', pelado: 'pelados', cocida: 'cocidas', cocido: 'cocidos',
+    asada: 'asadas', asado: 'asados', frita: 'fritas', frito: 'fritos', molida: 'molidas', molido: 'molidos', picada: 'picadas',
+    picado: 'picados', rallada: 'ralladas', rallado: 'rallados', duro: 'duros', dura: 'duras', crudo: 'crudos', cruda: 'crudas',
+    limpio: 'limpios', limpia: 'limpias', mexicano: 'mexicanos', mexicana: 'mexicanas', guaje: 'guaje', criollo: 'criollos',
+    criolla: 'criollas', tierno: 'tiernos', tierna: 'tiernas', dulce: 'dulces', agria: 'agrias', agrio: 'agrios',
+    viejo: 'viejos', vieja: 'viejas'
+  };
+  const ES_ADJ_SINGULAR = Object.fromEntries(Object.entries(ES_ADJ).map(([s, p]) => [p, s]));
+  const caseLike = (w, out) => w[0] === w[0].toUpperCase() ? out[0].toUpperCase() + out.slice(1) : out;
+  // The Spanish words after a number, made to agree with it. Returns the new text and how much it replaced.
+  const agreeEs = (rest, value) => {
+    const m = /^( ?)(de )?([A-Za-zÀ-ÿ'-]+)((?: [A-Za-zÀ-ÿ'-]+){0,2})/.exec(rest);
+    if (!m) return ['', 0];
+    const lower = m[3].toLowerCase();
+    const noun = value > 1 ? ES_PLURAL[lower] || (ES_SINGULAR[lower] ? lower : null) : ES_SINGULAR[lower] || (ES_PLURAL[lower] ? lower : null);
+    if (!noun) return ['', 0];
+    // "¼ de cebolla" scaled to 2 drops the "de": "2 cebollas"
+    const de = m[2] && value < 1 ? m[2] : '';
+    let out = m[1] + de + caseLike(m[3], noun);
+    let used = m[1].length + (m[2] || '').length + m[3].length;
+    for (const w of m[4].split(' ').slice(1)) {
+      const lw = w.toLowerCase();
+      const adj = value > 1 ? ES_ADJ[lw] || (ES_ADJ_SINGULAR[lw] ? lw : null) : ES_ADJ_SINGULAR[lw] || (ES_ADJ[lw] ? lw : null);
+      if (!adj) break;
+      out += ' ' + caseLike(w, adj);
+      used += 1 + w.length;
+    }
+    return [out, used];
+  };
 
   const parse = t => {
     const m = /^(\d+(?:\.\d+)?)?([⅛¼⅓⅜½⅝⅔¾⅞])?$/.exec(t);
@@ -1592,12 +1661,13 @@ const SCALE = (() => {
     return rest;
   };
 
-  const text = (s, factor) => {
+  const text = (s, factor, lang = 'en') => {
     if (factor === 1) return s;
     let out = '', last = 0;
-    CLAUSE.lastIndex = 0;
+    const clause = CLAUSE[lang];
+    clause.lastIndex = 0;
     let m;
-    while ((m = CLAUSE.exec(s))) {
+    while ((m = clause.exec(s))) {
       const [all, lead, about = '', a, b] = m;
       const va = parse(a), vb = b ? parse(b) : NaN;
       if (isNaN(va)) continue;
@@ -1606,6 +1676,13 @@ const SCALE = (() => {
       out += s.slice(last, m.index) + lead + about + qty;
       last = m.index + all.length;
       // make the next word or two agree with the new amount
+      if (lang === 'es') {
+        const [fixed, used] = agreeEs(s.slice(last), b ? nb : na);
+        out += fixed;
+        last += used;
+        clause.lastIndex = last;
+        continue;
+      }
       // one word, or two when the first is an adjective ("Roma tomatoes", "garlic cloves")
       let words = /^ ?[A-Za-zÀ-ÿ'-]+/.exec(s.slice(last));
       if (words && ADJ.has(words[0].trim().toLowerCase())) {
@@ -1615,36 +1692,41 @@ const SCALE = (() => {
         out += agree(words[0], b ? nb : na);
         last += words[0].length;
       }
-      CLAUSE.lastIndex = last;
+      clause.lastIndex = last;
     }
     out += s.slice(last);
     // metric and packet amounts in parentheses, unless they describe a can, tablet, jar or bag size
-    return out.replace(PAREN, (all, about = '', n, unit, offset, whole) => {
-      if (/\b(cans?|tablets?|jars?|bags?)\s*$/i.test(whole.slice(0, offset))) return all;
+    return out.replace(PAREN[lang], (all, about = '', n, unit, offset, whole) => {
+      if (SIZE_WORD[lang].test(whole.slice(0, offset))) return all;
       const v = parse(n) * factor;
-      const u = /^(packet|tablet)s?$/i.test(unit) ? unit.replace(/s$/i, '') + (v > 1 ? 's' : '') : unit;
+      const u = PACKET[lang].test(unit) ? unit.replace(/s$/i, '') + (v > 1 ? 's' : '') : unit;
       return `(${about}${format(v)} ${u})`;
     });
   };
 
   // "10 bowls" → 10, "About 30" → 30, "4–6 plates" → 5, "1½ cups" → 1.5
-  const base = y => {
-    const m = new RegExp(`^(?:about )?(${NUM})(?:–(${NUM}))?`, 'i').exec(y || '');
+  const base = (y, lang = 'en') => {
+    const m = new RegExp(`^(?:${ABOUT[lang]})?(${NUM})(?:–(${NUM}))?`, 'i').exec(y || '');
     if (!m) return null;
-    const a = parse(m[1]);
-    return m[2] ? (a + parse(m[2])) / 2 : a;
+    const a = parse(m[2]);
+    return m[3] ? (a + parse(m[3])) / 2 : a;
   };
   // "10 bowls" ×½ → "5 bowls", "About 30" ×½ → "About 15"
-  const yieldText = (y, factor) => {
-    const m = new RegExp(`^(about )?(${NUM})(?:–(${NUM}))?(.*)$`, 'i').exec(y || '');
+  const yieldText = (y, factor, lang = 'en') => {
+    const m = new RegExp(`^${ABOUT[lang]}?(${NUM})(?:–(${NUM}))?(.*)$`, 'i').exec(y || '');
     if (!m || factor === 1) return y;
     const a = parse(m[2]) * factor, b = m[3] ? parse(m[3]) * factor : NaN;
     const qty = m[3] ? `${format(a)}–${format(b)}` : format(a);
-    return (m[1] || '') + qty + agree(m[4], m[3] ? b : a);
+    const value = m[3] ? b : a;
+    if (lang === 'es') {
+      const [fixed, used] = agreeEs(m[4], value);
+      return (m[1] || '') + qty + fixed + m[4].slice(used);
+    }
+    return (m[1] || '') + qty + agree(m[4], value);
   };
   // Steps: only amounts marked [[like this]] scale (batch amounts). Times, temperatures, pot sizes,
   // trivet water and per-piece amounts are left unmarked on purpose.
-  const stepText = (st, factor) => st.replace(/\[\[(.+?)\]\]/g, (m, inner) => text(inner, factor));
+  const stepText = (st, factor, lang = 'en') => st.replace(/\[\[(.+?)\]\]/g, (m, inner) => text(inner, factor, lang));
   return { text, base, format, yieldText, stepText };
 })();
 
@@ -1668,21 +1750,37 @@ const UNITS = (() => {
     const [x, y] = vals.map(fmt), ux = x.split(' ')[1], uy = y.split(' ')[1];
     return ux === uy ? `${x.split(' ')[0]}–${y}` : `${x}–${y}`;
   };
-  const rules = [
-    // volume with its weight in parentheses → the weight
-    [new RegExp(`${QTY} (?:cups?|tbsp|tsp) \\((about )?(${NUM}) ?(g|oz|ml)\\)`, 'g'),
-      (m, a, b, about, w, u) => (about || '') + (u === 'ml' ? mls(parse(w)) : grams(parse(w) * (u === 'oz' ? 28.35 : 1)))],
-    [new RegExp(`${QTY} ?(?:lb|lbs)\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 453.6), grams)],
-    [new RegExp(`${QTY} ?oz\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 28.35), grams)],
-    [new RegExp(`${QTY} quarts?\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 946), mls)],
-    [new RegExp(`${QTY} cups?\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 240), mls)],
-    [/\b(an? )?(\d+)-qt\b/g, (m, art, a) => `${art ? 'a ' : ''}${dec(parseFloat(a) * 0.946, 1)}-liter`],
-    [/\b(an? )?(\d+)- or (\d+)-inch\b/g, (m, art, a, b) => `${art ? 'a ' : ''}${Math.round(a * 2.54)} or ${Math.round(b * 2.54)} cm`],
-    [new RegExp(`(${NUM})-inch\\b`, 'g'), (m, a) => `${cm(parse(a))} cm`],
-    [new RegExp(`(${NUM}) inch(?:es)?\\b`, 'g'), (m, a) => `${cm(parse(a))} cm`],
-    [/(\d+)°F/g, (m, a) => `${Math.round((a - 32) * 5 / 9 / 10) * 10}°C`]
-  ];
-  const metric = s => rules.reduce((t, [re, fn]) => t.replace(re, fn), s);
+  const weight = (m, a, b, about, w, u) => (about || '') + (u === 'ml' ? mls(parse(w)) : grams(parse(w) * (u === 'oz' ? 28.35 : 1)));
+  const pounds = [new RegExp(`${QTY} ?(?:lb|lbs)\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 453.6), grams)];
+  const ounces = [new RegExp(`${QTY} ?oz\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 28.35), grams)];
+  const fahrenheit = [/(\d+)°F/g, (m, a) => `${Math.round((a - 32) * 5 / 9 / 10) * 10}°C`];
+  const rules = {
+    en: [
+      // volume with its weight in parentheses → the weight
+      [new RegExp(`${QTY} (?:cups?|tbsp|tsp) \\((about )?(${NUM}) ?(g|oz|ml)\\)`, 'g'), weight],
+      pounds,
+      ounces,
+      [new RegExp(`${QTY} quarts?\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 946), mls)],
+      [new RegExp(`${QTY} cups?\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 240), mls)],
+      [/\b(an? )?(\d+)-qt\b/g, (m, art, a) => `${art ? 'a ' : ''}${dec(parseFloat(a) * 0.946, 1)}-liter`],
+      [/\b(an? )?(\d+)- or (\d+)-inch\b/g, (m, art, a, b) => `${art ? 'a ' : ''}${Math.round(a * 2.54)} or ${Math.round(b * 2.54)} cm`],
+      [new RegExp(`(${NUM})-inch\\b`, 'g'), (m, a) => `${cm(parse(a))} cm`],
+      [new RegExp(`(${NUM}) inch(?:es)?\\b`, 'g'), (m, a) => `${cm(parse(a))} cm`],
+      fahrenheit
+    ],
+    es: [
+      // "¼ de taza", "½ de pulgada": Spanish may put "de" after a fraction
+      [new RegExp(`${QTY} (?:de )?(?:tazas?|cucharadas?|cucharaditas?) \\((como )?(${NUM}) ?(g|oz|ml)\\)`, 'g'), weight],
+      pounds,
+      ounces,
+      [new RegExp(`${QTY} qt\\b`, 'g'), (m, a, b) => range(qty(a, b, x => x * 946), mls)],
+      [new RegExp(`${QTY} (?:de )?tazas?(?![A-Za-zÀ-ÿ])`, 'g'), (m, a, b) => range(qty(a, b, x => x * 240), mls)],
+      [/(\d+) o (\d+) pulgadas(?![A-Za-zÀ-ÿ])/g, (m, a, b) => `${Math.round(a * 2.54)} o ${Math.round(b * 2.54)} cm`],
+      [new RegExp(`(${NUM}) (?:de )?pulgadas?(?![A-Za-zÀ-ÿ])`, 'g'), (m, a) => `${cm(parse(a))} cm`],
+      fahrenheit
+    ]
+  };
+  const metric = (s, lang = 'en') => rules[lang].reduce((t, [re, fn]) => t.replace(re, fn), s);
   return { metric };
 })();
 

@@ -1,0 +1,84 @@
+{
+  "id": "salsa-roja",
+  "subtitle": "Charred tomato salsa",
+  "verso": "No salsa, no taco; and no molcajete, no salsa.",
+  "region": "Central Mexico",
+  "servings": "1½ cups",
+  "story": "Charred on the comal and ground in the volcanic-stone molcajete. Chunky, smoky, and on the table at every meal.",
+  "ingredients": [
+    {
+      "title": "Salsa",
+      "items": [
+        "4 Roma tomatoes",
+        "2–3 serranos (or 4 chiles de árbol, toasted)",
+        "2 garlic cloves, unpeeled",
+        "¼ white onion, in one piece",
+        "Coarse salt",
+        "2–4 tbsp water"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat a dry comal or cast-iron pan over medium-high. Char the tomatoes, chiles, garlic and onion, turning, until blistered and soft: about 8 minutes for the garlic and chiles, 12–15 for the tomatoes.",
+    "Peel the garlic and grind it with salt in the molcajete into a paste. (If you used chiles de árbol, toast them only a few seconds; they burn fast.)",
+    "Add the chiles and grind them. Add the tomatoes one at a time and crush, then the onion.",
+    "Thin with a little water and keep it chunky. Taste for salt.",
+    "No molcajete? Pulse a few times in a blender. Don't purée."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. Salsas come off the comal in minutes.",
+  "tips": [
+    "Season a new molcajete by grinding a handful of raw rice in it, again and again, until the rice comes out white instead of gray."
+  ],
+  "variations": [
+    {
+      "name": "Salsa Verde Cocida",
+      "subtitle": "Cooked tomatillo salsa",
+      "region": "Central Mexico",
+      "note": "The everyday green salsa for tacos, carnitas and chilaquiles.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 lb tomatillos, husked",
+            "2–4 serranos",
+            "1 garlic clove",
+            "¼ white onion",
+            "Handful of cilantro",
+            "Salt, to taste"
+          ]
+        }
+      ],
+      "steps": [
+        "Simmer the tomatillos and chiles 8 minutes, until olive green.",
+        "Blend with the garlic, onion, cilantro, salt and a few spoons of the cooking water."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Salsa de Chile de Árbol",
+      "subtitle": "Taquería árbol salsa",
+      "region": "Jalisco · Central Mexico",
+      "note": "The thin, fiery red salsa from the taquería.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "20 chiles de árbol, stems removed",
+            "4 tomatillos",
+            "2 garlic cloves",
+            "½ tsp salt",
+            "½ cup water",
+            "1 tsp vinegar, optional"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast the chiles in a dry pan 30 seconds, stirring, until fragrant. Don't let them blacken.",
+        "Simmer the tomatillos 8 minutes.",
+        "Blend everything until smooth. Strain if you want it silky."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

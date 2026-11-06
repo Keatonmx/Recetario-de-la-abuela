@@ -1,0 +1,91 @@
+{
+  "id": "huevos-a-la-mexicana",
+  "subtitle": "Eggs scrambled with tomato, onion and chile",
+  "verso": "Green, white and red: the flag on your plate is spread.",
+  "region": "All of Mexico",
+  "servings": "2 servings",
+  "story": "Red tomato, white onion and green chile, the colors of the flag, scrambled with eggs. It's the breakfast every Mexican home makes without a recipe, and it's what goes into a taco on the way out the door.",
+  "ingredients": [
+    {
+      "title": "Eggs",
+      "items": [
+        "4 eggs",
+        "1 tbsp lard or oil",
+        "¼ white onion, finely chopped",
+        "1–2 serranos, finely chopped (seeds in for more heat)",
+        "1 Roma tomato, chopped",
+        "Salt, to taste",
+        "1 tbsp chopped cilantro, optional"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Frijoles de la olla or refritos",
+        "Warm corn or flour tortillas",
+        "Salsa"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the lard in a skillet over medium. Add the onion and serrano and cook 2 minutes, until soft but not browned.",
+    "Add the tomato and a pinch of salt. Cook 2–3 minutes, until it softens and most of its juice cooks off.",
+    "Beat the eggs lightly with a pinch of salt and pour them into the pan.",
+    "Stir gently with a spatula over medium-low until just set, still soft and moist.",
+    "Add the cilantro if using and serve right away with beans, tortillas and salsa."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. It's a 10-minute skillet breakfast.",
+  "tips": [
+    "Let the tomato cook down first, or the eggs turn watery.",
+    "Some grandmas don't beat the eggs first: they crack them right into the pan and stir, so you get streaks of white and yolk.",
+    "Leftovers make the best egg tacos for lunch."
+  ],
+  "variations": [
+    {
+      "name": "Huevos con Chorizo",
+      "subtitle": "Eggs scrambled with chorizo",
+      "region": "All of Mexico",
+      "note": "The other everyday breakfast taco. Some families add a diced potato fried with the chorizo.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 eggs, lightly beaten",
+            "4 oz Mexican chorizo, casing removed",
+            "¼ onion, chopped, optional",
+            "1 small potato, diced small, optional",
+            "Salt, only if needed"
+          ]
+        }
+      ],
+      "steps": [
+        "Fry the chorizo in a dry skillet, breaking it up, until it releases its red fat, about 4 minutes. Add the onion and potato and cook until the potato is tender, about 8 minutes.",
+        "Pour off extra fat if there's a lot. Add the eggs and stir until just set.",
+        "Taste before salting; chorizo is salty."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Huevos con Nopales",
+      "subtitle": "Eggs with cactus paddles",
+      "region": "Central Mexico",
+      "note": "A Lent favorite, and a way to stretch the eggs.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 eggs, lightly beaten",
+            "1 cup cooked nopales, in strips (from a jar, rinsed, or fresh and boiled)",
+            "Everything else from the base"
+          ]
+        }
+      ],
+      "steps": [
+        "Make the base through step 2, adding the nopales with the tomato and cooking until any slime has cooked off.",
+        "Add the eggs and stir until just set."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

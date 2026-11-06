@@ -1,0 +1,125 @@
+{
+  "id": "mole-poblano",
+  "subtitle": "Chile, chocolate and spice sauce with turkey",
+  "verso": "Now we're right in our mero mole: truly in our element!",
+  "region": "Puebla",
+  "servings": "12 servings",
+  "story": "Mole poblano is the dish for weddings, baptisms and Día de Muertos. Dozens of ingredients, each one fried or toasted on its own, then ground together and cooked slowly until the fat rises to the top. Grandmas make it in big batches with the whole family helping. Puebla's legend credits Sor Andrea de la Asunción at the Convento de Santa Rosa around 1680, though no document proves it.",
+  "ingredients": [
+    {
+      "title": "The meat",
+      "items": [
+        "1 turkey (guajolote), in pieces, or 2 chickens",
+        "1 white onion, 1 head garlic and salt",
+        "About 10 cups of the cooking broth"
+      ]
+    },
+    {
+      "title": "The chiles",
+      "items": [
+        "8 chiles mulato",
+        "6 chiles ancho",
+        "6 chiles pasilla",
+        "2 chiles chipotle mora, optional",
+        "1 tbsp of the chile seeds, saved"
+      ]
+    },
+    {
+      "title": "Seeds and fruit",
+      "items": [
+        "⅓ cup sesame seeds, plus more for garnish",
+        "¼ cup almonds, skin on",
+        "¼ cup peanuts",
+        "2 tbsp pepitas",
+        "¼ cup raisins",
+        "1 very ripe plantain (black skin), sliced",
+        "1 stale corn tortilla",
+        "1 slice day-old bolillo or white bread"
+      ]
+    },
+    {
+      "title": "Spices",
+      "items": [
+        "1-inch stick Mexican cinnamon (canela)",
+        "4 whole cloves",
+        "6 black peppercorns",
+        "3 allspice berries",
+        "¼ tsp anise seed",
+        "¼ tsp coriander seed",
+        "½ tsp dried thyme",
+        "½ tsp Mexican oregano"
+      ]
+    },
+    {
+      "title": "Everything else",
+      "items": [
+        "2 Roma tomatoes and 2 tomatillos, charred",
+        "½ white onion and 4 garlic cloves, charred",
+        "¾ cup lard",
+        "2 oz Mexican chocolate (½ tablet)",
+        "1–2 tbsp sugar, to taste",
+        "Salt, to taste"
+      ]
+    }
+  ],
+  "steps": [
+    "Simmer the turkey with the onion, garlic and salt until tender, about 1½ hours (40 minutes for chicken). Keep the broth.",
+    "Stem and seed the chiles, saving [[1 tbsp]] of seeds. Fry the chiles a few seconds per side in hot lard, just until they blister and change color. Soak in hot broth 30 minutes.",
+    "In the same lard, fry each of these separately and set aside: almonds, peanuts, pepitas, raisins (until they puff), plantain (until dark golden), tortilla (until crisp) and bread (until golden).",
+    "On a dry comal, toast the sesame until golden, the saved chile seeds until very dark, and the spices for 30 seconds.",
+    "Blend the chiles with enough soaking liquid to make a smooth purée.",
+    "Blend the nuts, seeds, fruit, tortilla, bread, spices, tomatoes, tomatillos, onion and garlic with broth, in batches, until completely smooth. Strain both purées if you want a silky mole.",
+    "Heat [[3 tbsp]] lard in a large heavy pot or cazuela until very hot. Pour in the chile purée all at once (stand back, it splatters). Fry it, stirring constantly, 15 minutes until it darkens and thickens. This is called frying the mole.",
+    "Add the nut purée and cook 20 minutes, stirring often.",
+    "Add the chocolate, sugar and salt, and enough broth that it coats the back of a spoon. Simmer on low 45–60 minutes, stirring often so it doesn't stick, until a sheen of fat rises to the surface.",
+    "Add the turkey and heat through. Serve with sesame seeds, arroz rojo and tortillas."
+  ],
+  "pressureCooker": {
+    "time": "Turkey: 25 min high pressure + 15 min natural release",
+    "total": "About 2 h 30",
+    "steps": [
+      "Pressure-cook the turkey pieces with the onion, garlic, salt and water to the fill line: high pressure 25 minutes (12 for chicken), natural release 15. Keep the broth.",
+      "Make the mole sauce on the stove as in steps 2–9. The frying and slow simmer can't be rushed under pressure, and a thick mole will set off the burn warning."
+    ],
+    "note": "The sauce still takes about 2 hours on the stove. Make a big batch of the fried mole paste; it freezes for months."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Mole is better on the second day.",
+    "Many families in Puebla take the fried chiles and seeds to the neighborhood mill (molino) to be ground.",
+    "If you use store-bought mole paste, fry it in lard first, then thin it with broth and add a piece of Mexican chocolate. Not grandma's, but honest.",
+    "The fat rising to the top is how you know it's done."
+  ],
+  "variations": [
+    {
+      "name": "Pipián Verde",
+      "subtitle": "Green pumpkin-seed mole",
+      "region": "Puebla · Tlaxcala · Central Mexico",
+      "note": "A pre-Hispanic green mole thickened with pepitas instead of nuts and dried chiles. Lighter and quicker than mole poblano. Many cooks call nearly the same dish mole verde.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb chicken pieces, poached, plus the broth",
+            "1 cup raw hulled pepitas",
+            "1 lb tomatillos",
+            "2–3 serranos",
+            "¼ onion and 2 garlic cloves",
+            "4 romaine or radish leaves",
+            "1 sprig epazote, 2 hoja santa leaves and a handful of cilantro",
+            "2 tbsp lard",
+            "Salt, to taste"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast the pepitas until they pop but don't brown. Let cool.",
+        "Simmer the tomatillos and serranos 8 minutes and drain.",
+        "Blend everything except the chicken, lard and salt with [[2 cups]] broth until very smooth.",
+        "Fry the sauce in the lard over medium 5 minutes, stirring, then thin with broth.",
+        "Simmer gently 15 minutes, never at a hard boil or it will split. Add the chicken and season."
+      ],
+      "pressureNote": "Cook the chicken at high pressure 12 minutes, natural release 10. Make the sauce on the stove."
+    }
+  ]
+}

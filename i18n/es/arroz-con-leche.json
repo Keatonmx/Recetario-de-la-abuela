@@ -1,0 +1,71 @@
+{
+  "id": "arroz-con-leche",
+  "subtitle": "Arroz con leche y canela",
+  "verso": "Arroz con leche, me quiero casar…",
+  "region": "Toda la República",
+  "servings": "6 tazas",
+  "story": "Arroz cocido primero en agua con canela y cáscara de limón, y luego despacito en leche. Cada abuela tiene una opinión muy firme sobre las pasas. Los niños lo conocen por la canción del recreo: «Arroz con leche, me quiero casar con una señorita de San Nicolás…»",
+  "ingredients": [
+    {
+      "title": "El arroz con leche",
+      "items": [
+        "1 taza de arroz blanco de grano largo",
+        "2 tazas de agua",
+        "1 raja de canela",
+        "1 tira de cáscara de limón, sin la parte blanca",
+        "Una pizca de sal",
+        "4 tazas de leche entera",
+        "¾ taza de azúcar",
+        "1 cucharadita de vainilla",
+        "⅓ taza de pasas, opcional",
+        "Canela molida, para terminar"
+      ]
+    }
+  ],
+  "steps": [
+    "Enjuaga el arroz y déjalo remojar 15 minutos. Escúrrelo.",
+    "Cuece el arroz a fuego bajo en el agua con la canela, la cáscara de limón y la sal hasta que absorba el agua, unos 15 minutos.",
+    "Agrega la leche y el azúcar. Cocina a fuego bajo, moviendo seguido, 25–30 minutos, hasta que esté cremoso.",
+    "Saca la cáscara y la canela. Agrega la vainilla y las pasas y cocina 5 minutos más.",
+    "Espesa al enfriarse. Sírvelo tibio o frío con canela molida."
+  ],
+  "pressureCooker": {
+    "time": "12 min a presión alta + 10 min de liberación natural",
+    "total": "35 min",
+    "steps": [
+      "Pon en la olla el arroz, el agua, la canela, la cáscara de limón y la sal.",
+      "Presión alta 12 minutos, liberación natural 10.",
+      "Cambia a la función Saltear. Agrega la leche y el azúcar y mueve sin parar 8–10 minutos, hasta que esté cremoso; se pega y se quema con facilidad.",
+      "Termina con la vainilla y las pasas."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Usa canela mexicana (canela de Ceilán), la suave que se deshace en hojitas. Las rajas de casia son más duras y más picantes."
+  ],
+  "variations": [
+    {
+      "name": "Arroz con Leche Cremoso",
+      "subtitle": "Arroz con leche extra cremoso",
+      "region": "Toda la República",
+      "note": "La versión más rica que hoy hacen muchas familias.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "El mismo arroz, agua y especias de la receta base",
+            "2 tazas de leche entera (en lugar de 4)",
+            "1 lata (14 oz) de leche condensada (en lugar del azúcar)",
+            "1 lata (12 oz) de leche evaporada"
+          ]
+        }
+      ],
+      "steps": [
+        "Cuece el arroz en el agua como en la receta base.",
+        "Agrega [[2 tazas]] de leche, la leche condensada y la leche evaporada. Cocina a fuego bajo, moviendo, 20 minutos."
+      ],
+      "pressureNote": "Igual que la receta base. Agrega las leches de lata en la función Saltear."
+    }
+  ]
+}

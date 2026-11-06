@@ -1,0 +1,112 @@
+{
+  "id": "cochinita-pibil",
+  "subtitle": "Puerco en achiote envuelto en hoja de plátano",
+  "verso": "En hoja de plátano envuelta, sale la cochinita bien suelta.",
+  "region": "Yucatán",
+  "servings": "8 personas",
+  "story": "Pibil quiere decir cocinado en el pib, el horno de tierra maya. El puerco se marina en achiote y naranja agria, y luego se cocina envuelto en hojas de plátano hasta que se deshace. En Mérida es desayuno, y se come en tacos y tortas.",
+  "ingredients": [
+    {
+      "title": "La carne",
+      "items": [
+        "4 lb de espaldilla de puerco, en trozos de 3 pulgadas",
+        "1 lb de hojas de plátano (las congeladas sirven)",
+        "2 cucharadas de manteca, opcional"
+      ]
+    },
+    {
+      "title": "El recado",
+      "items": [
+        "3½ oz de pasta de achiote (recado rojo)",
+        "1 taza de jugo de naranja agria, o ⅔ taza de jugo de naranja más ⅓ taza de jugo de limón",
+        "4 dientes de ajo",
+        "1 cucharadita de sal",
+        "½ cucharadita de orégano mexicano",
+        "¼ cucharadita de comino molido",
+        "¼ cucharadita de pimienta gorda molida",
+        "¼ cucharadita de pimienta negra"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Cebolla morada encurtida (ver Variantes)",
+        "Xnipec u otra salsa de habanero",
+        "Tortillas de maíz o bolillos"
+      ]
+    }
+  ],
+  "steps": [
+    "Licúa el achiote con el jugo, el ajo, la sal y las especias hasta que quede terso.",
+    "Cubre el puerco con la mezcla y déjalo marinar toda la noche, tapado, en el refrigerador.",
+    "Pasa las hojas de plátano rápidamente sobre la flama o la hornilla hasta que se pongan brillosas y suaves. Forra con ellas una olla de hierro fundido o un refractario hondo, dejando que cuelguen por los lados.",
+    "Agrega el puerco y toda la marinada, pon encima trocitos de manteca y dobla las hojas para cerrar el paquete. Cubre con papel aluminio y la tapa.",
+    "Hornea a 325°F durante 3½–4 horas, hasta que el puerco se deshebre con un tenedor.",
+    "Abre las hojas y deshebra el puerco en su jugo. Sirve con cebolla encurtida y salsa de habanero."
+  ],
+  "pressureCooker": {
+    "time": "50 min a presión alta + 20 min de liberación natural",
+    "total": "1 h 15 + una noche",
+    "steps": [
+      "Marina el puerco toda la noche.",
+      "Forra la olla con hojas de plátano suavizadas. Agrega el puerco, la marinada y ½ taza de agua, y dobla las hojas encima.",
+      "Presión alta 50 minutos, liberación natural 20.",
+      "Deshebra el puerco. Si el jugo quedó aguado, saca la carne y redúcelo en la función Saltear 5 minutos."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "La naranja agria (naranja de Sevilla) es lo auténtico. En los mercados latinos venden el jugo embotellado si no la consigues fresca.",
+    "Para las tortas de cochinita, abre un bolillo y rellénalo con puerco, cebolla y una cucharada del jugo. Así se desayuna en Mérida."
+  ],
+  "variations": [
+    {
+      "name": "Cebolla Morada Encurtida",
+      "subtitle": "Cebolla morada encurtida con habanero",
+      "region": "Yucatán",
+      "note": "Nunca falta en la mesa junto a la cochinita.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 cebollas moradas, en rebanadas delgadas",
+            "1 habanero, en rebanadas delgadas (sin semillas para que pique menos)",
+            "½ taza de jugo de naranja agria o de limón",
+            "½ cucharadita de sal",
+            "¼ cucharadita de orégano mexicano"
+          ]
+        }
+      ],
+      "steps": [
+        "Vierte agua hirviendo sobre la cebolla, espera 10 segundos y escúrrela. Así se le quita lo picante y se pone de un rosa brillante.",
+        "Mézclala con el habanero, el jugo, la sal y el orégano.",
+        "Déjala reposar al menos 1 hora. Dura una semana en el refrigerador."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Xnipec",
+      "subtitle": "Salsa yucateca de habanero",
+      "region": "Yucatán",
+      "note": "Su nombre maya quiere decir nariz de perro, porque pica tanto que hasta te moja la nariz.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 jitomates, picados finamente",
+            "½ cebolla morada, picada finamente",
+            "1–2 habaneros, picados muy finos",
+            "¼ taza de cilantro picado",
+            "2 naranjas agrias o limones, exprimidos",
+            "Sal, al gusto"
+          ]
+        }
+      ],
+      "steps": [
+        "Mezcla todo y deja reposar 15 minutos antes de servir."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

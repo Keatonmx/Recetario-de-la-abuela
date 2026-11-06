@@ -1,0 +1,92 @@
+{
+  "id": "caldo-de-pollo",
+  "subtitle": "Caldo de pollo con verduras",
+  "verso": "Pa' la gripa y pa'l desamor, un caldito es lo mejor.",
+  "region": "Toda la República",
+  "servings": "6 personas",
+  "story": "El caldo para las gripas, para el desamor y para los domingos. La abuela usaba gallina, una gallina ponedora vieja con más sabor que un pollo joven. El caldo debe quedar claro y dorado.",
+  "ingredients": [
+    {
+      "title": "El caldo",
+      "items": [
+        "1 pollo entero (o gallina), en piezas, con piel",
+        "½ cebolla blanca",
+        "3 dientes de ajo",
+        "1 jitomate guaje",
+        "1 rama de apio, opcional",
+        "3 qt de agua",
+        "2 cucharaditas de sal"
+      ]
+    },
+    {
+      "title": "Las verduras",
+      "items": [
+        "2 zanahorias, en rodajas",
+        "2 papas, en trozos",
+        "1 chayote, en gajos",
+        "2 calabacitas, en trozos",
+        "½ taza de garbanzos cocidos, opcional",
+        "Un puño de cilantro"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Limones, cebolla y cilantro picados, serrano",
+        "Aguacate en cubitos",
+        "Arroz rojo o arroz blanco"
+      ]
+    }
+  ],
+  "steps": [
+    "Pon el pollo, la cebolla, el ajo, el jitomate y el apio en una olla con el agua. Deja que suelte el hervor y espúmala bien.",
+    "Agrega la sal y deja hervir suavemente 40 minutos (1½–2 horas si es gallina). Mantenlo en un hervor flojito para que el caldo quede claro.",
+    "Saca el jitomate y la cebolla. Agrega las zanahorias y las papas y cocina 10 minutos. Agrega el chayote, las calabacitas y los garbanzos y cocina 8 minutos.",
+    "Agrega el cilantro fuera del fuego. Sirve con limón, cebolla, chile, aguacate y arroz."
+  ],
+  "pressureCooker": {
+    "time": "15 min a presión alta + 10 min de liberación natural",
+    "total": "35 min",
+    "steps": [
+      "Pon el pollo, los aromáticos, la sal y [[2½ qt]] de agua en la olla. Presión alta 15 minutos (30 si es gallina), liberación natural 10.",
+      "Saca los aromáticos. Agrega las zanahorias, las papas y el chayote. Presión alta 2 minutos, liberación rápida.",
+      "En la función Saltear, agrega las calabacitas y los garbanzos por 4 minutos. Termina con cilantro."
+    ],
+    "note": null
+  },
+  "pressureNote": null,
+  "tips": [
+    "Una vez que quites la espuma, nunca lo dejes hervir fuerte o el caldo se pone turbio.",
+    "Agrega un puño de arroz o fideo a la olla para un caldo más sustancioso."
+  ],
+  "variations": [
+    {
+      "name": "Caldo Tlalpeño",
+      "subtitle": "Caldo de pollo ahumado con chipotle",
+      "region": "Tlalpan, Ciudad de México",
+      "note": "Un caldo de pollo con chipotle que lleva el nombre de Tlalpan, en el sur de la capital. La leyenda local dice que se hizo para Santa Anna como remedio para la cruda, y en Tlalpan todavía se celebra un Festival del Caldo Tlalpeño.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Caldo y pollo deshebrado de la receta base",
+            "2 chipotles en adobo (o 2 chipotles secos, tostados y remojados)",
+            "2 jitomates guaje, ¼ de cebolla, 1 diente de ajo",
+            "1 cucharada de aceite",
+            "1 taza de garbanzos cocidos",
+            "2 zanahorias, en cubitos, y ½ lb de ejotes, cortados",
+            "2 ramas de epazote",
+            "Para servir: aguacate, cubos de queso panela u Oaxaca, limón"
+          ]
+        }
+      ],
+      "steps": [
+        "Deshebra el pollo de la receta base, quitando la piel y los huesos. Licúa los jitomates, la cebolla, el ajo y el chipotle con una taza de caldo y fríe en el aceite 5 minutos.",
+        "Agrégalo al caldo con las zanahorias y los garbanzos y deja hervir a fuego lento 10 minutos.",
+        "Agrega los ejotes, el epazote y el pollo deshebrado y deja hervir a fuego lento 5 minutos.",
+        "Sirve sobre cubos de queso y aguacate, con limón."
+      ],
+      "pressureNote": "Usa los pasos a presión de la receta base y agrega la salsa de chipotle con las zanahorias."
+    }
+  ]
+}

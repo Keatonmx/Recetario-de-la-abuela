@@ -7,14 +7,20 @@ struct QueTengoView: View {
     @State private var unknown: [String] = []
     @FocusState private var focused: Bool
 
-    private let picks: [(String, [String])] = [
-        ("Carnes, mariscos y huevo", ["puerco", "pollo", "res", "chivo", "chorizo", "panza", "machaca", "camaron", "pescado", "huevo"]),
-        ("Verduras y fruta", ["jitomate", "tomatillo", "cebolla", "ajo", "papa", "zanahoria", "calabacita", "chayote", "elote", "aguacate", "limon", "naranja", "nopales", "platano"]),
-        ("De la despensa", ["tortillas", "tortilla-harina", "masa", "arroz", "frijol", "fideo", "pan", "harina", "maiz-pozolero", "queso", "crema", "leche", "chocolate", "piloncillo", "cafe", "jamaica", "levadura", "hojas-maiz"]),
-        ("Chiles", ["guajillo", "ancho", "pasilla", "chipotle", "arbol", "serrano", "jalapeno", "poblano", "habanero"])
-    ]
+    private var picks: [(String, [String])] {
+        [
+            (store.t("Carnes, mariscos y huevo", "Meat, seafood and eggs"), ["puerco", "pollo", "res", "chivo", "chorizo", "panza", "machaca", "camaron", "pescado", "huevo"]),
+            (store.t("Verduras y fruta", "Vegetables and fruit"), ["jitomate", "tomatillo", "cebolla", "ajo", "papa", "zanahoria", "calabacita", "chayote", "elote", "aguacate", "limon", "naranja", "nopales", "platano"]),
+            (store.t("De la despensa", "From the pantry"), ["tortillas", "tortilla-harina", "masa", "arroz", "frijol", "fideo", "pan", "harina", "maiz-pozolero", "queso", "crema", "leche", "chocolate", "piloncillo", "cafe", "jamaica", "levadura", "hojas-maiz"]),
+            ("Chiles", ["guajillo", "ancho", "pasilla", "chipotle", "arbol", "serrano", "jalapeno", "poblano", "habanero"])
+        ]
+    }
     private let seasonings = ["oregano", "comino", "canela", "clavo", "laurel", "epazote", "cilantro", "hierbabuena", "achiote", "hoja-aguacate", "anis", "tomillo", "vinagre", "vainilla"]
-    private let examples = ["puerco, chiles secos, maíz pozolero", "huevos, tortillas, tomate verde", "chicken, tomatoes, onion, chipotle", "harina, levadura, leche, huevo"]
+    private var examples: [String] {
+        store.lang == .es
+            ? ["puerco, chiles secos, maíz pozolero", "huevos, tortillas, tomate verde", "pollo, jitomate, cebolla, chipotle", "harina, levadura, leche, huevo"]
+            : ["pork, dried chiles, hominy", "eggs, tortillas, tomatillos", "chicken, tomatoes, onion, chipotle", "flour, yeast, milk, eggs"]
+    }
 
     private var suggestions: [LexEntry] {
         let last = text.components(separatedBy: CharacterSet(charactersIn: ",;")).last ?? ""
@@ -37,12 +43,13 @@ struct QueTengoView: View {
                 }
                 if !store.have.isEmpty { selected }
                 if !unknown.isEmpty {
-                    Text("I didn't recognize: \(unknown.joined(separator: ", ")).")
+                    Text(store.t("No reconocí: ", "I didn't recognize: ") + unknown.joined(separator: ", ") + ".")
                         .font(.footnote)
                         .foregroundStyle(Color.chile)
                 }
                 Toggle(isOn: Binding(get: { store.haveBasics }, set: { store.setHaveBasics($0) })) {
-                    Text("I have the basics: salt, oil, lard, sugar and broth")
+                    Text(store.t("Tengo lo básico: sal, aceite, manteca, azúcar y caldo",
+                                 "I have the basics: salt, oil, lard, sugar and broth"))
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
@@ -55,9 +62,9 @@ struct QueTengoView: View {
         }
         .scrollDismissesKeyboard(.interactively)
         .background(Color.paper)
-        .navigationTitle("¿Qué tengo?")
+        .navigationTitle(store.t("¿Qué tengo?", "What do I have?"))
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar { ToolbarItem(placement: .topBarTrailing) { AppearanceButton() } }
+        .toolbar { ToolbarItem(placement: .topBarTrailing) { SettingsButtons() } }
         .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
     }
 
@@ -66,7 +73,7 @@ struct QueTengoView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
             PapelPicado().padding(.top, 4)
-            Text("¿Qué tengo?")
+            Text(store.t("¿Qué tengo?", "What do I have?"))
                 .font(.rotulo(44))
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
@@ -74,7 +81,8 @@ struct QueTengoView: View {
                 .shadow(color: Color.inkShadow, radius: 0, x: 3, y: 3)
                 .padding(.top, 10)
                 .accessibilityAddTraits(.isHeader)
-            Text("Write what's in your kitchen, in English or Spanish, and see what you can cook.")
+            Text(store.t("Escribe lo que hay en tu cocina, en español o en inglés, y mira qué puedes cocinar.",
+                         "Write what's in your kitchen, in English or Spanish, and see what you can cook."))
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }
@@ -85,19 +93,19 @@ struct QueTengoView: View {
             HStack(spacing: 8) {
                 HStack(spacing: 8) {
                     Image("tab-quetengo").foregroundStyle(.secondary).accessibilityHidden(true)
-                    TextField("puerco, jitomate, tortillas…", text: $text)
+                    TextField(store.t("puerco, jitomate, tortillas…", "pork, tomatoes, tortillas…"), text: $text)
                         .focused($focused)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                         .submitLabel(.done)
                         .onSubmit { addText(text) }
-                        .accessibilityLabel("Ingredients you have")
+                        .accessibilityLabel(store.t("Ingredientes que tienes", "Ingredients you have"))
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 11)
                 .background(RoundedRectangle(cornerRadius: 12).fill(Color.card))
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(focused ? Color.mxRosa : Color.hairline, lineWidth: focused ? 2 : 1))
-                Button("Agregar") { addText(text) }
+                Button(store.t("Agregar", "Add")) { addText(text) }
                     .font(.subheadline.weight(.bold))
                     .foregroundStyle(Color.onRosa)
                     .padding(.horizontal, 14)
@@ -106,7 +114,7 @@ struct QueTengoView: View {
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.ink, lineWidth: 2))
                     .buttonStyle(.plain)
             }
-            Text("Separate with commas. Typos are fine.")
+            Text(store.t("Sepáralos con comas. No importan las faltas de ortografía.", "Separate with commas. Typos are fine."))
                 .font(.footnote)
                 .foregroundStyle(.secondary)
         }
@@ -118,10 +126,10 @@ struct QueTengoView: View {
                 if let entry = store.pantry.entries[id] {
                     Button { store.toggleHave(id) } label: { IngredientChip(entry: entry, style: .selected) }
                         .buttonStyle(.plain)
-                        .accessibilityLabel("Remove \(entry.en)")
+                        .accessibilityLabel(store.t("Quitar ", "Remove ") + store.pantry.label(id, lang: store.lang))
                 }
             }
-            Button("Borrar todo") {
+            Button(store.t("Borrar todo", "Clear all")) {
                 store.clearHave()
                 unknown = []
             }
@@ -135,8 +143,9 @@ struct QueTengoView: View {
     private var results: some View {
         if store.have.isEmpty {
             VStack(alignment: .leading, spacing: 10) {
-                Text("¿Qué hay en la cocina?").font(.display(.title3))
-                Text("Add a few main ingredients, like a meat, a vegetable or two and what's in the pantry. Try one of these:")
+                Text(store.t("¿Qué hay en la cocina?", "What's in the kitchen?")).font(.display(.title3))
+                Text(store.t("Agrega unos ingredientes principales, como una carne, una o dos verduras y lo que hay en la despensa. Prueba con uno de estos:",
+                             "Add a few main ingredients, like a meat, a vegetable or two and what's in the pantry. Try one of these:"))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                 FlowLayout(spacing: 6) {
@@ -160,14 +169,15 @@ struct QueTengoView: View {
             let close = all.filter { $0.score < 0.85 && realMissing($0).count <= 2 }
             let more = Array(all.filter { $0.score < 0.85 && realMissing($0).count > 2 }.prefix(8))
             if all.isEmpty {
-                Text("None of the recipes use those yet. Try adding a meat, a chile or something from the pantry.")
+                Text(store.t("Ninguna receta usa eso todavía. Prueba agregando una carne, un chile o algo de la despensa.",
+                             "None of the recipes use those yet. Try adding a meat, a chile or something from the pantry."))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .padding(.top, 8)
             }
-            resultSection("Puedes hacer", can, note: nil)
-            resultSection("Te falta poquito", close, note: "One or two things from the tienda.")
-            resultSection("Con más mandado", more, note: nil)
+            resultSection(store.t("Puedes hacer", "You can make"), can, note: nil)
+            resultSection(store.t("Te falta poquito", "Almost there"), close, note: store.t("Una o dos cosas de la tienda.", "One or two things from the store."))
+            resultSection(store.t("Con más mandado", "With more shopping"), more, note: nil)
         }
     }
 
@@ -203,14 +213,16 @@ struct QueTengoView: View {
             }
             DisclosureGroup {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Only add these if you want them to count. Otherwise recipes aren't marked down for them.")
+                    Text(store.t("Agrégalas solo si quieres que cuenten. Si no, no se les resta a las recetas por ellas.",
+                                 "Only add these if you want them to count. Otherwise recipes aren't marked down for them."))
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                     pickRow(seasonings)
                 }
                 .padding(.top, 6)
             } label: {
-                Text("Especias y hierbas ").font(.subheadline.weight(.bold)) + Text("(optional)").font(.subheadline).foregroundColor(.secondary)
+                Text(store.t("Especias y hierbas ", "Spices and herbs ")).font(.subheadline.weight(.bold))
+                    + Text(store.t("(opcional)", "(optional)")).font(.subheadline).foregroundColor(.secondary)
             }
             .tint(Color.primary)
             .padding(.top, 6)
@@ -264,18 +276,16 @@ struct QueTengoView: View {
 
 // MARK: - Chips and rows
 
+/// One ingredient, named in the cook's language.
 struct IngredientChip: View {
+    @EnvironmentObject private var store: RecipeStore
     enum Style { case off, on, selected, suggestion }
     let entry: LexEntry
     let style: Style
 
     var body: some View {
-        let showEnglish = PantrySearch.fold(entry.es) != PantrySearch.fold(entry.en)
         HStack(spacing: 6) {
-            Text(entry.es).fontWeight(style == .selected ? .bold : .regular)
-            if showEnglish {
-                Text(entry.en.lowercased()).foregroundStyle(englishColor)
-            }
+            Text(store.lang == .es ? entry.es : entry.en).fontWeight(style == .selected ? .bold : .regular)
             if style == .selected {
                 Image(systemName: "xmark").font(.caption2.weight(.bold)).foregroundStyle(Color.stockMuted)
             }
@@ -287,15 +297,6 @@ struct IngredientChip: View {
         .frame(minHeight: 44)
         .background(Capsule().fill(background))
         .overlay(Capsule().strokeBorder(border, style: StrokeStyle(lineWidth: style == .selected ? 2 : 1.5, dash: style == .suggestion ? [4, 3] : [])))
-    }
-
-    /// Selected chips are cream card stock in both themes, so their English stays dark.
-    private var englishColor: Color {
-        switch style {
-        case .on: return Color(.systemBackground).opacity(0.75)
-        case .selected: return .stockMuted
-        default: return .secondary
-        }
     }
 
     private var background: Color {
@@ -345,13 +346,15 @@ struct MatchRow: View {
                     }
                 }
                 .frame(height: 6)
-                Text("Tienes \(have) de \(need)")
+                Text(store.t("Tienes \(have) de \(need)", "You have \(have) of \(need)"))
                     .font(.system(.caption, design: .monospaced))
                     .foregroundStyle(.secondary)
                 if match.missing.isEmpty {
-                    Text("¡Tienes todo!").font(.subheadline.weight(.bold)).foregroundStyle(Color.nopal)
+                    Text(store.t("¡Tienes todo!", "You have everything!")).font(.subheadline.weight(.bold)).foregroundStyle(Color.nopal)
                 } else {
-                    Text("Te falta: " + match.missing.map { $0.map(store.pantry.label).joined(separator: " o ") }.joined(separator: ", "))
+                    Text(store.t("Te falta: ", "You need: ") + match.missing.map { need in
+                        need.map { store.pantry.label($0, lang: store.lang) }.joined(separator: store.t(" o ", " or "))
+                    }.joined(separator: ", "))
                         .font(.subheadline)
                         .foregroundStyle(Color.primary)
                         .multilineTextAlignment(.leading)

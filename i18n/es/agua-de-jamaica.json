@@ -1,0 +1,59 @@
+{
+  "id": "agua-de-jamaica",
+  "subtitle": "Agua fresca de flor de jamaica",
+  "verso": "Agua de jamaica, roja y bien fría: la que se toma todo el día.",
+  "region": "Toda la República",
+  "servings": "2 qt",
+  "story": "Agua de flor de jamaica, de un rojo profundo, ácida y fría. En la mesa, a la hora de la comida, la comida fuerte del mediodía, siempre hay una jarra de agua fresca.",
+  "ingredients": [
+    {
+      "title": "El agua",
+      "items": [
+        "1 taza de flor de jamaica seca",
+        "8 tazas de agua",
+        "½–¾ taza de azúcar o piloncillo rallado",
+        "1 raja de canela, opcional",
+        "Hielo"
+      ]
+    }
+  ],
+  "steps": [
+    "Enjuaga las flores.",
+    "Hierve [[4 tazas]] del agua con las flores y la canela 5 minutos. Apaga el fuego y deja reposar 15 minutos.",
+    "Cuela, exprimiendo las flores. Agrega el azúcar mientras todavía está tibia y revuelve.",
+    "Agrega las [[4 tazas]] restantes de agua fría. Prueba y ajusta. Sirve con hielo."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No hace falta versión en olla exprés. Es un reposo rápido.",
+  "tips": [
+    "Con las mismas flores sale una segunda tanda, más ligera. O sofríelas con cebolla y ajo para hacer tacos de jamaica."
+  ],
+  "variations": [
+    {
+      "name": "Horchata de Arroz",
+      "subtitle": "Horchata de arroz con canela",
+      "region": "Centro · Sur",
+      "note": "La horchata mexicana se hace con arroz y canela.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "1 taza de arroz blanco de grano largo",
+            "1 raja de canela, en trozos",
+            "8 tazas de agua, en dos partes",
+            "½–¾ taza de azúcar",
+            "1 cucharadita de vainilla",
+            "½ taza de leche o leche evaporada, opcional"
+          ]
+        }
+      ],
+      "steps": [
+        "Remoja el arroz y la canela en [[4 tazas]] de agua caliente toda la noche.",
+        "Licúa el arroz, la canela y el agua del remojo 2 minutos, hasta que quede muy fino.",
+        "Cuela con una manta de cielo o un colador muy fino.",
+        "Agrega el agua restante, el azúcar, la vainilla y la leche. Sirve con hielo, y revuelve antes de servir porque se asienta."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

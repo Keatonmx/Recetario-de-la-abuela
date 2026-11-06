@@ -89,6 +89,7 @@ struct Chip: View {
 }
 
 struct HeatMeter: View {
+    @EnvironmentObject private var store: RecipeStore
     let level: Int
 
     var body: some View {
@@ -100,7 +101,7 @@ struct HeatMeter: View {
             }
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Heat \(level) of 5")
+        .accessibilityLabel(store.t("Picor \(level) de 5", "Heat \(level) of 5"))
     }
 }
 

@@ -1,0 +1,95 @@
+{
+  "id": "machaca-con-huevo",
+  "subtitle": "Carne seca deshebrada revuelta con huevo",
+  "verso": "Carne seca y huevo revuelto, en tortilla de harina envuelto.",
+  "region": "Sonora · Chihuahua · Nuevo León",
+  "servings": "3 personas",
+  "story": "La machaca es carne de res salada, secada al sol y machacada para que durara meses en los ranchos del norte. Un puñito frito con cebolla, jitomate y chile y revuelto con huevo da un desayuno que se envuelve en tortillas de harina, la tortilla del norte.",
+  "ingredients": [
+    {
+      "title": "Machaca",
+      "items": [
+        "1 taza (como 2 oz) de machaca (carne seca deshebrada, se vende en bolsa en los mercados mexicanos, o ver Machaca Casera)",
+        "6 huevos",
+        "1 cucharada de manteca o aceite",
+        "½ cebolla blanca, picada",
+        "1 jitomate guaje, picado",
+        "1–2 jalapeños o serranos, picados, o 1 chile verde (Anaheim) asado, en rajas, al estilo de Sonora",
+        "Sal, solo si hace falta"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Tortillas de harina calientes",
+        "Frijoles de la olla o refritos",
+        "Salsa roja o salsa de chiltepín"
+      ]
+    }
+  ],
+  "steps": [
+    "Si tu machaca viene en hebras grandes, sepárala con los dedos. Prueba un pedacito. Si está muy salada o dura, remójala en agua tibia 5 minutos y exprímela bien.",
+    "Calienta la manteca en una sartén a fuego medio. Fríe la machaca 1–2 minutos, moviendo, hasta que huela a tostado y se ponga un poco crujiente.",
+    "Agrega la cebolla y el chile y cocina 3 minutos hasta que se suavicen. Agrega el jitomate y cocina 2 minutos más.",
+    "Bate los huevos ligeramente sin sal; la machaca ya es salada.",
+    "Vierte los huevos en la sartén y revuelve suavemente a fuego medio-bajo hasta que apenas cuajen, todavía suaves y jugosos.",
+    "Prueba, ponle sal solo si hace falta, y sirve de inmediato con tortillas de harina, frijoles y salsa."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "Los huevos son cosa rápida de sartén, pero la machaca en sí la puedes hacer en la olla exprés. Ver Machaca Casera en Variantes.",
+  "tips": [
+    "Cuidado con la sal. Prueba primero la machaca; casi toda viene salada.",
+    "En Monterrey le dicen machacado con huevo y lo hacen con más jitomate y chile, casi caldoso. Nuevo León dice que nació en Ciénega de Flores, donde la Tía Lencha se lo daba de comer a las cuadrillas de caminos en la década de 1920.",
+    "La machaca que sobra dura semanas en un frasco en el refri."
+  ],
+  "variations": [
+    {
+      "name": "Machaca Casera",
+      "subtitle": "Carne seca hecha en casa",
+      "region": "Sonora · Norte",
+      "note": "La machaca de verdad, secada al sol, es difícil de encontrar fuera del norte. Esta versión secada en el horno se le acerca.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb de falda o arrachera de res, en 3 trozos",
+            "½ cebolla y 3 dientes de ajo",
+            "1 cucharada de sal, y más al gusto",
+            "Jugo de 1 limón",
+            "½ cucharadita de pimienta negra"
+          ]
+        }
+      ],
+      "steps": [
+        "Cuece la carne a fuego lento con la cebolla, el ajo, la sal y agua que la cubra 2 horas, hasta que se deshebre fácil.",
+        "Escúrrela y deshébrala muy fina con dos tenedores o con los dedos.",
+        "Mézclala con el jugo de limón, la pimienta y un poco más de sal.",
+        "Extiéndela en capa delgada en charolas para hornear y sécala en el horno a 200°F 2–3 horas, moviéndola cada 30 minutos, hasta que esté seca y correosa pero no quemada.",
+        "Machácala en el molcajete o muélela unos segundos en el procesador de alimentos hasta que quede esponjada y fina. Guárdala en un frasco en el refri."
+      ],
+      "pressureNote": "Cuece la carne con la cebolla, el ajo, la sal y 2 tazas de agua a presión alta 35 minutos, con liberación natural de 15. Luego deshébrala, sazónala y sécala en el horno como arriba."
+    },
+    {
+      "name": "Burritos de Machaca",
+      "subtitle": "Burritos de machaca para el desayuno",
+      "region": "Sonora · Chihuahua",
+      "note": "En Sonora y Ciudad Juárez los burritos son delgados y sencillos, solo un relleno y una tortilla de harina delgada. Nada de arroz adentro.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Machaca con huevo de la receta base",
+            "Tortillas de harina grandes y delgadas (sobaqueras si las encuentras)",
+            "Frijoles refritos, opcional"
+          ]
+        }
+      ],
+      "steps": [
+        "Calienta las tortillas en el comal hasta que estén suaves y con pintitas.",
+        "Unta una línea delgada de frijoles si los usas, agrega una línea de machaca con huevo y enrolla apretado.",
+        "Ponlo en el comal con la unión hacia abajo 30 segundos para sellarlo. Cómelo con salsa."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

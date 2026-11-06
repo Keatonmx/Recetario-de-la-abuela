@@ -1,0 +1,108 @@
+{
+  "id": "birria-de-chivo",
+  "subtitle": "Chivo en adobo de chiles con su consomé",
+  "verso": "Dicen que birria es cosa sin valor… ¡pero en Jalisco es puro sabor!",
+  "region": "Jalisco",
+  "servings": "10 personas",
+  "story": "La birria viene de Jalisco, donde el chivo se cocinaba en un hoyo o en una olla sellada con masa. El adobo lleva chiles secos, vinagre y especias de olor, y la carne se sirve en un plato hondo con su propio consomé. 'Birria' quiere decir algo sin valor: la historia popular cuenta que los españoles despreciaban el chivo, y Jalisco (Cocula reclama el honor) lo convirtió en un banquete.",
+  "ingredients": [
+    {
+      "title": "La carne",
+      "items": [
+        "5 lb de chivo con hueso (o paleta de borrego, o una mezcla de diezmillo y costilla de res)",
+        "1 cucharada de sal"
+      ]
+    },
+    {
+      "title": "El adobo",
+      "items": [
+        "8 chiles guajillo",
+        "4 chiles ancho",
+        "2–4 chiles de árbol, opcional",
+        "½ taza de vinagre de manzana",
+        "6 dientes de ajo",
+        "½ cebolla blanca",
+        "1 cucharadita de orégano mexicano",
+        "½ cucharadita de comino en grano",
+        "4 clavos de olor enteros",
+        "½ cucharadita de pimienta negra entera",
+        "Un trozo de 1 pulgada de canela en raja",
+        "Un trozo de ½ pulgada de jengibre fresco",
+        "½ cucharadita de tomillo seco",
+        "½ cucharadita de mejorana seca"
+      ]
+    },
+    {
+      "title": "El consomé",
+      "items": [
+        "2 jitomates guaje, asados",
+        "3 hojas de laurel",
+        "2 tazas de agua, más la necesaria para el consomé (como 6 tazas en total)"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Cebolla y cilantro picados",
+        "Orégano mexicano",
+        "Limones",
+        "Salsa de chile de árbol",
+        "Tortillas de maíz"
+      ]
+    }
+  ],
+  "steps": [
+    "Quítales los tallos y las semillas a los chiles. Tuéstalos en el comal unos segundos por lado y remójalos en agua caliente 15 minutos.",
+    "Tuesta el comino, los clavos, la pimienta y la canela en una sartén seca durante 30 segundos.",
+    "Licúa los chiles con el vinagre, las especias, el ajo, la cebolla, el orégano, el jengibre, el tomillo, la mejorana y la sal, agregando solo el agua del remojo necesaria para hacer una pasta espesa.",
+    "Unta la pasta por toda la carne. Tápala y refrigérala toda la noche, o al menos 4 horas.",
+    "Pon una rejilla dentro de una olla grande de hierro fundido con [[2 tazas]] de agua y las hojas de laurel debajo. Acomoda la carne sobre la rejilla y raspa encima todo el adobo. Cubre con papel aluminio y luego con la tapa, sellando lo mejor que puedas. Es la versión casera de sellar la olla con masa.",
+    "Hornea a 325°F durante 3½–4 horas, hasta que la carne se desprenda del hueso.",
+    "Saca la carne. Retira la grasa roja del jugo y guárdala. Licúa los jitomates asados con un poco del jugo, regrésalos a la olla, agrega agua para tener unas [[6 tazas]] de consomé y deja hervir a fuego bajo 10 minutos. Sazona.",
+    "Sirve la carne en platos hondos con consomé caliente, cebolla, cilantro, orégano, limón, salsa y tortillas."
+  ],
+  "pressureCooker": {
+    "time": "50 min a presión alta + 20 min de liberación natural",
+    "total": "1 h 30 + una noche",
+    "steps": [
+      "Prepara el adobo y marina la carne como en los pasos 1–4.",
+      "Pon en la olla la carne, todo el adobo, las hojas de laurel y [[2 tazas]] de agua.",
+      "Presión alta 50 minutos para chivo o borrego, 60 para diezmillo de res. Liberación natural 20 minutos.",
+      "Saca la carne. Retira la grasa y guárdala. Licúa e incorpora los jitomates y deja hervir el consomé en la función Saltear 10 minutos."
+    ],
+    "note": "No te saltes la marinada de toda la noche. La olla exprés ahorra tiempo de cocción, no tiempo de sabor."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Guarda la grasa roja de encima del consomé para freír las tortillas de los tacos.",
+    "El vinagre importa. Corta lo grasoso y ayuda a suavizar la carne.",
+    "Birria tatemada: dora la carne escurrida en el horno bien caliente o en el comal para que tenga las orillas doradas antes de servir."
+  ],
+  "variations": [
+    {
+      "name": "Birria de Res estilo Tijuana",
+      "subtitle": "Quesatacos de birria de res",
+      "region": "Tijuana, Baja California",
+      "note": "La versión que conquistó las redes sociales: el mismo adobo con res, y tacos dorados en la grasa roja con queso derretido, para remojar en el consomé. No es la original de la abuela, pero nadie se queja.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Adobo y consomé de la receta base",
+            "2 lb de diezmillo de res, 2 lb de costilla de res, 1 lb de cola de res",
+            "Queso Oaxaca o mozzarella, deshebrado",
+            "Tortillas de maíz",
+            "Cebolla y cilantro picados"
+          ]
+        }
+      ],
+      "steps": [
+        "Marina y cocina la res como en la receta base (4 horas en el horno o 60 minutos a presión).",
+        "Deshebra la carne y mantén el consomé caliente.",
+        "Pasa una tortilla por la grasa roja, ponla en un comal caliente, agrégale queso y carne, dóblala y cocínala hasta que esté crujiente por los dos lados.",
+        "Sirve con una taza de consomé con cebolla y cilantro para remojar."
+      ],
+      "pressureNote": "Presión alta 60 minutos, liberación natural 20."
+    }
+  ]
+}

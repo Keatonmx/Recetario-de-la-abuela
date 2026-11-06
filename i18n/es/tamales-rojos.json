@@ -1,0 +1,119 @@
+{
+  "id": "tamales-rojos",
+  "subtitle": "Tamales de puerco en chile rojo",
+  "verso": "El que nace pa' tamal, del cielo le caen las hojas.",
+  "region": "Norte · Centro",
+  "servings": "Unos 48",
+  "story": "Los tamales son trabajo de equipo. La tamalada, casi siempre antes de Navidad, sienta a toda la familia a la mesa a untar masa. Los tamales rojos de puerco son los clásicos.",
+  "ingredients": [
+    {
+      "title": "El relleno",
+      "items": [
+        "2½ lb de espaldilla de puerco, en trozos grandes",
+        "½ cebolla, 3 dientes de ajo y 1 cucharada de sal",
+        "8 chiles guajillo",
+        "3 chiles ancho",
+        "2 dientes de ajo, ½ cucharadita de comino y ½ cucharadita de orégano mexicano",
+        "2 cucharadas de manteca"
+      ]
+    },
+    {
+      "title": "La masa",
+      "items": [
+        "4 lb de masa fresca sin preparar para tamales (de la tortillería), o 6 tazas de harina de maíz para tamales mezclada con unas 5 tazas de caldo tibio",
+        "2 tazas (450 g) de manteca de puerco fresca, no hidrogenada",
+        "2 cucharaditas de polvo para hornear",
+        "1 cucharada de sal",
+        "1–2 tazas de caldo de puerco tibio",
+        "½ taza de la salsa de chile rojo, para el color"
+      ]
+    },
+    {
+      "title": "Las hojas",
+      "items": [
+        "60 hojas de maíz secas, remojadas en agua caliente 1 hora"
+      ]
+    }
+  ],
+  "steps": [
+    "Cubre el puerco con agua, agrega la cebolla, el ajo y la sal, y deja hervir a fuego bajo 2 horas hasta que esté suave. Deshébralo y guarda el caldo.",
+    "Tuesta, remoja y licúa los chiles con el ajo, el comino, el orégano y [[1½ tazas]] de caldo. Cuela.",
+    "Fríe la salsa en la manteca 5 minutos. Aparta [[½ taza]] para la masa. Agrega el puerco al resto y deja hervir a fuego bajo 15 minutos hasta que espese, sin que quede caldoso. Deja enfriar.",
+    "Bate la manteca con la batidora 3–5 minutos hasta que esté blanca y esponjosa.",
+    "Agrega la masa a puños, alternando con el caldo, el polvo para hornear, la sal y el chile que apartaste. Bate 10 minutos. Debe sentirse como crema de cacahuate suave.",
+    "Haz la prueba de la bolita: echa ½ cucharadita de masa en un vaso de agua fría. Si flota, está lista. Si se hunde, bate más o agrega un poco más de manteca.",
+    "Toma una hoja, con el lado liso hacia arriba y la parte ancha hacia ti. Unta 2–3 cucharadas de masa en una capa delgada sobre los dos tercios de arriba, dejando un borde a los lados. Agrega una cucharada de relleno.",
+    "Dobla los lados uno sobre otro y luego dobla la colita hacia arriba.",
+    "Llena el fondo de una tamalera con agua, por debajo de la rejilla. Acomoda los tamales parados, con la parte abierta hacia arriba. Cúbrelos con hojas extra y un trapo húmedo, y luego con la tapa.",
+    "Cuécelos al vapor a fuego medio 1¼–1½ horas. Están listos cuando la hoja se despega limpiamente de la masa. Déjalos reposar 15 minutos antes de servir."
+  ],
+  "pressureCooker": {
+    "time": "25 min a presión alta + 15 min de liberación natural",
+    "total": "1 h después de armarlos",
+    "steps": [
+      "Prepara el relleno y la masa y arma los tamales como arriba. El puerco también se puede cocer a presión: 35 minutos a presión alta, liberación natural 10.",
+      "Pon la rejilla en la olla con 1½ tazas de agua. Acomoda los tamales parados, con la parte abierta hacia arriba, juntos pero no apretados. En una olla de 6 qt caben 12–15.",
+      "Presión alta 25 minutos, liberación natural 15.",
+      "Déjalos reposar 10 minutos. Se afirman al enfriarse."
+    ],
+    "note": "Recalienta los tamales congelados a presión alta 15 minutos con 1 taza de agua."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Echa una moneda en el agua debajo de la rejilla. Mientras suene, hay agua; cuando se calle, agrega más agua caliente.",
+    "Las abuelas dicen que los tamales se sienten: si los haces enojada no se cuecen, y si levantas la tapa muy seguido salen pintos (medio crudos). Si ayuda una embarazada, se amarra un listón rojo en la panza, y algunas cocineras le cantan a la olla.",
+    "La manera antigua de esponjar: en lugar de polvo para hornear, hierve cáscaras de tomate verde con una pizca de tequesquite, cuela y bate esa agua con la masa.",
+    "La manteca fresca de la carnicería hace que la masa sepa como debe. Los bloques blancos del anaquel del supermercado no."
+  ],
+  "variations": [
+    {
+      "name": "Tamales de Rajas con Queso",
+      "subtitle": "Tamales de rajas de poblano con queso",
+      "region": "Centro",
+      "note": "El favorito sin carne, para la Cuaresma o para quien sea.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Masa de la receta base, hecha sin el chile y con caldo de pollo o de verduras",
+            "4 poblanos, asados, pelados y en rajas",
+            "12 oz de queso Oaxaca o panela, en tiras",
+            "1 taza de salsa verde"
+          ]
+        }
+      ],
+      "steps": [
+        "Unta masa en cada hoja.",
+        "Agrega unas rajas de poblano, una tira de queso y una cucharada de salsa verde.",
+        "Dobla y cuece al vapor como en la receta base."
+      ],
+      "pressureNote": "Igual que la receta base: presión alta 25 minutos, liberación natural 15."
+    },
+    {
+      "name": "Tamales de Dulce",
+      "subtitle": "Tamales dulces color de rosa",
+      "region": "Centro",
+      "note": "Tamales dulces para Navidad y el Día de la Candelaria, servidos con champurrado. El 2 de febrero, a quien le salió el muñeco en la Rosca de Reyes el 6 de enero le toca pagar los tamales.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 lb de masa fresca (la mitad de la receta base)",
+            "⅔ taza de manteca",
+            "¾ taza de azúcar",
+            "1 cucharadita de polvo para hornear y ½ cucharadita de sal",
+            "½ taza de pasas",
+            "1 cucharadita de canela molida",
+            "Unas gotas de colorante vegetal rojo (el rosa tradicional) o un poco de jugo de betabel"
+          ]
+        }
+      ],
+      "steps": [
+        "Bate la manteca hasta que esté esponjosa. Incorpora batiendo la masa, el azúcar, el polvo para hornear, la sal, la canela y el colorante hasta que una bolita flote en el agua.",
+        "Incorpora las pasas.",
+        "Úntala en las hojas sin relleno, dobla y cuece al vapor 1 hora."
+      ],
+      "pressureNote": "Presión alta 20 minutos, liberación natural 15."
+    }
+  ]
+}

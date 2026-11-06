@@ -1,0 +1,82 @@
+{
+  "id": "cafe-de-olla",
+  "subtitle": "Clay-pot coffee with piloncillo and cinnamon",
+  "verso": "Café de olla and pan dulce: the afternoon asks for nothing more.",
+  "region": "Central Mexico · Southern Mexico",
+  "servings": "4 cups",
+  "story": "Coffee brewed in a clay olla with piloncillo and Mexican cinnamon. Popular history credits the Adelitas of the Revolution with brewing it for the troops. Coffee only reached Mexico in the 1700s, so it isn't pre-Hispanic, but it is what grandma still pours with pan dulce.",
+  "ingredients": [
+    {
+      "title": "Coffee",
+      "items": [
+        "4 cups water",
+        "3 oz piloncillo, chopped or grated (or ⅓ cup dark brown sugar)",
+        "1 stick Mexican cinnamon",
+        "½ cup coarsely ground dark-roast coffee (Mexican, from Veracruz, Chiapas or Oaxaca, if you can)",
+        "2 whole cloves, optional",
+        "1 strip orange peel, optional",
+        "1 star anise, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Put the water, piloncillo, cinnamon and any spices in a clay olla or a saucepan. Bring to a boil and cook until the piloncillo dissolves, about 5 minutes.",
+    "Turn off the heat. Stir in the coffee, cover and let it steep 5 minutes.",
+    "Strain through a fine strainer or a cloth.",
+    "Serve hot in clay jarritos or mugs, with pan dulce."
+  ],
+  "pressureCooker": null,
+  "pressureNote": "No pressure-cooker version. It's a 15-minute steep.",
+  "tips": [
+    "Don't let the coffee keep boiling. Add it off the heat, or let it rise to a boil once and turn it off; boiled coffee turns bitter.",
+    "Buy ollas and jarritos marked Sin Plomo (lead-free). Profeco's test: soak part of the piece in white vinegar for 24 hours; if the glaze turns dull or rough, don't cook in it.",
+    "A clay olla gives the coffee its earthy taste. Season a new one by boiling water in it a few times before the first coffee.",
+    "Use a coarse grind, like for a French press, so it strains clean."
+  ],
+  "variations": [
+    {
+      "name": "Chocolate Caliente",
+      "subtitle": "Mexican hot chocolate",
+      "region": "Oaxaca · Central Mexico",
+      "note": "Made with water in Oaxaca, with milk most other places. Frothed with a molinillo until foamy.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "4 cups whole milk or water",
+            "1 tablet (3 oz) Mexican chocolate, chopped",
+            "1 stick Mexican cinnamon",
+            "Pinch of salt"
+          ]
+        }
+      ],
+      "steps": [
+        "Heat the milk (or water) with the cinnamon and salt until steaming. Don't let it boil over.",
+        "Add the chocolate and whisk until melted.",
+        "Take out the cinnamon and froth with a molinillo, rolling it between your palms, or a whisk, until the top is foamy.",
+        "Serve right away with pan dulce."
+      ],
+      "pressureNote": null
+    },
+    {
+      "name": "Café con Leche",
+      "subtitle": "Coffee with hot milk",
+      "region": "All of Mexico",
+      "note": "Half coffee, half hot milk, for dunking conchas.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "2 cups café de olla",
+            "2 cups whole milk"
+          ]
+        }
+      ],
+      "steps": [
+        "Heat the milk until steaming.",
+        "Pour half coffee, half milk into each cup and sweeten to taste."
+      ],
+      "pressureNote": null
+    }
+  ]
+}

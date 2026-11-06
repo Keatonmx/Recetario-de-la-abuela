@@ -1,0 +1,142 @@
+{
+  "id": "pozole-rojo",
+  "subtitle": "Red pork & hominy stew",
+  "verso": "Corn that bursts into bloom: pozole for the fifteenth, its flavor fills the room!",
+  "region": "Jalisco",
+  "servings": "10 servings",
+  "story": "Pozole goes back to pre-Hispanic Mexico, when cacahuazintle corn was cooked for ceremonies. In Jalisco it's red with guajillo and ancho, made with pork head or a mix of shoulder and bony cuts. It's what you make for September 15, Christmas Eve and New Year's. The broth should be brick red and thin, never a thick chili, and the garnish happens at the table.",
+  "ingredients": [
+    {
+      "title": "The meat",
+      "items": [
+        "2 lb pork shoulder (espaldilla), in 3-inch chunks",
+        "2 lb pork neck bones or spine (espinazo)",
+        "2 pig's feet (manitas), split, optional but they give body",
+        "1 white onion, halved",
+        "1 head garlic, halved crosswise",
+        "5 quarts water",
+        "1 tbsp salt, plus more to taste"
+      ]
+    },
+    {
+      "title": "The corn",
+      "items": [
+        "2 lb precooked cacahuazintle hominy (maíz pozolero, sold in bags at Mexican markets), rinsed, or 2 cans (29 oz each) hominy, drained and rinsed"
+      ]
+    },
+    {
+      "title": "The chile",
+      "items": [
+        "6 chiles guajillo",
+        "3 chiles ancho",
+        "1–2 chiles de árbol, optional, for heat",
+        "4 garlic cloves",
+        "¼ white onion",
+        "1 tsp Mexican oregano",
+        "Pinch of cumin, only if your family uses it"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Finely shredded green cabbage, or lettuce as many tapatíos prefer",
+        "Sliced radishes",
+        "Finely chopped white onion",
+        "Dried Mexican oregano",
+        "Ground chile piquín",
+        "Limes, in wedges",
+        "Tostadas"
+      ]
+    }
+  ],
+  "steps": [
+    "Put the meats, onion and garlic in your biggest pot with the water. Bring to a boil and skim the gray foam for the first 15 minutes so the broth stays clean.",
+    "If using bagged hominy, add it now. Lower to a gentle simmer, partly covered, and cook 2 to 2½ hours, until the meat is very tender and the kernels have opened like flowers (revienta). Add the salt only once the corn has bloomed; salting early keeps it hard.",
+    "Meanwhile, stem and seed the chiles. Toast them on a hot comal 10–20 seconds per side, just until fragrant and pliable. Cover with hot water and soak 15 minutes.",
+    "Blend the chiles with the garlic, onion, oregano, cumin (if using) and [[1½ cups]] of the pork broth until completely smooth. Pour through a fine strainer, pressing with a spoon. Discard the skins.",
+    "Lift out the meat. Shred or cut it into bite-size pieces, pick the meat off the bones and feet, and return it to the pot. Discard bones, onion and garlic.",
+    "If using canned hominy, add it now. Stir in the strained chile and simmer 30 minutes. Season well with salt. It should be red and brothy, not thick.",
+    "Serve in deep bowls. Everyone garnishes their own: cabbage, radish, onion, oregano rubbed between the palms, chile piquín and a good squeeze of lime. Tostadas on the side."
+  ],
+  "pressureCooker": {
+    "time": "45 min high pressure + 20 min natural release",
+    "total": "1 h 45",
+    "steps": [
+      "Toast, soak, blend and strain the chiles exactly as in the traditional method.",
+      "Put the meats, onion and garlic in the pot. Add bagged hominy now if using. Add water to the max-fill line (about 3½ quarts in an 8-qt pot; use about two-thirds of the meat in a 6-qt).",
+      "Seal and cook at high pressure 45 minutes (55 if using pig's feet). Let the pressure release naturally for 20 minutes, then vent.",
+      "Remove the meat, shred it, discard the bones and aromatics, and return the meat.",
+      "Switch to Sauté. Add the strained chile, canned hominy if using, and the salt (salt after the corn has bloomed). Simmer uncovered 20–30 minutes. Taste and serve."
+    ],
+    "note": "Plenty of grandmas already make pozole in a stovetop olla exprés. Count about 35 minutes from when the valve starts to rock."
+  },
+  "pressureNote": null,
+  "tips": [
+    "Strain the chile. The skins make the broth gritty and bitter.",
+    "Toast chiles until you smell them, only seconds. If they smoke, they'll taste bitter: throw them out and start over.",
+    "Pozole is better the next day. Chill it and lift off the fat if you like.",
+    "A weeknight version most families accept: bone-in chicken thighs instead of pork, about 1 hour on the stove."
+  ],
+  "variations": [
+    {
+      "name": "Pozole Verde",
+      "subtitle": "Green pozole with pumpkin seeds",
+      "region": "Guerrero",
+      "note": "Thursdays in Guerrero are jueves pozolero. The green comes from pepitas, tomatillo and fresh herbs. The table gets chicharrón and avocado and, depending on the region, a raw egg cracked into the hot broth or sardines, with mezcal on the side.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Pork and hominy from the base recipe (or 1 whole chicken)",
+            "1 cup raw hulled pepitas",
+            "1 lb tomatillos, husked",
+            "2–3 serranos or jalapeños",
+            "½ white onion",
+            "3 garlic cloves",
+            "2 hoja santa leaves (or 1 tsp anise seed)",
+            "1 large sprig epazote",
+            "½ bunch cilantro",
+            "4 romaine or radish leaves",
+            "2 tbsp lard",
+            "To serve: chicharrón, avocado, onion, oregano, lime, tostadas"
+          ]
+        }
+      ],
+      "steps": [
+        "Cook the meat and hominy as in the base recipe, steps 1, 2 and 5 (add canned hominy now if using). Leave out the red chile.",
+        "Toast the pepitas in a dry pan, stirring, until they puff and pop but don't brown. Let cool.",
+        "Simmer the tomatillos and chiles in water 8 minutes, until olive green. Drain.",
+        "Blend the pepitas, tomatillos, chiles, onion, garlic, hoja santa, epazote, cilantro and romaine or radish leaves with [[2 cups]] broth until very smooth.",
+        "Heat the lard in a skillet and fry the green sauce 5 minutes, stirring.",
+        "Stir it into the pot and keep at a bare simmer 15 minutes. A hard boil makes the pepita sauce split.",
+        "Serve with the garnishes."
+      ],
+      "pressureNote": "Same pressure times for the meat. Add the green sauce on Sauté-Low and don't let it boil."
+    },
+    {
+      "name": "Pozole Blanco",
+      "subtitle": "White pozole",
+      "region": "Guerrero · Michoacán",
+      "note": "The oldest style: pork, corn and salt in the broth, nothing else. All the chile is served on the side so each bowl is seasoned at the table.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Everything from the base recipe except the red chile",
+            "For the salsa: 10 chiles de árbol",
+            "2 chiles guajillo",
+            "2 garlic cloves",
+            "½ tsp salt",
+            "¾ cup water"
+          ]
+        }
+      ],
+      "steps": [
+        "Cook the meat and hominy as in the base, steps 1, 2 and 5 (add canned hominy now if using). Skip the chile.",
+        "For the salsa, toast the chiles a few seconds, soak 10 minutes, blend with garlic, salt and water, and strain.",
+        "Serve the white broth with the salsa, onion, oregano, lime, cabbage and radish on the table."
+      ],
+      "pressureNote": "Same pressure times as the base recipe."
+    }
+  ]
+}

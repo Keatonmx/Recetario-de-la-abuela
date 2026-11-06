@@ -1,0 +1,98 @@
+{
+  "id": "menudo-rojo",
+  "subtitle": "Caldo rojo de pancita con maíz pozolero",
+  "verso": "Al dolor de cabeza, el comer le endereza.",
+  "region": "Chihuahua · Norte",
+  "servings": "8 personas",
+  "story": "El menudo del domingo en la mañana, el levantamuertos, es el remedio norteño para una larga noche de sábado. En el centro de México la misma sopa es pancita, y en Yucatán, mondongo. La pancita se limpia con limón y se cuece despacio con pata de res, que es la que hace pegajoso el caldo. Las familias lo empiezan el sábado para que esté listo para el desayuno.",
+  "ingredients": [
+    {
+      "title": "La carne",
+      "items": [
+        "4 lb de pancita de res (panal)",
+        "2 lb de pata de res, cortada en trozos por el carnicero",
+        "2 limones o ¼ taza de vinagre blanco, más un puño de sal gruesa, para limpiar",
+        "1 cebolla blanca, partida a la mitad",
+        "1 cabeza de ajo, partida a la mitad",
+        "6 qt de agua",
+        "2 cucharadas de sal"
+      ]
+    },
+    {
+      "title": "El chile",
+      "items": [
+        "8 chiles guajillo",
+        "2 chiles ancho",
+        "3 dientes de ajo",
+        "1 cucharadita de orégano mexicano",
+        "½ cucharadita de comino en grano"
+      ]
+    },
+    {
+      "title": "El maíz",
+      "items": [
+        "1 lata (29 oz) de maíz pozolero, escurrido y enjuagado"
+      ]
+    },
+    {
+      "title": "Para servir",
+      "items": [
+        "Cebolla blanca picada",
+        "Orégano mexicano",
+        "Chile piquín o chiltepín triturado",
+        "Limones",
+        "Tortillas de maíz calientes o bolillos"
+      ]
+    }
+  ],
+  "steps": [
+    "Limpia la pancita: enjuágala, tállala toda con mitades de limón (o con vinagre) y un puño de sal, y vuelve a enjuagarla con agua fría. Quítale el exceso de grasa y córtala en cuadros de 1½ pulgadas.",
+    "Pon la pata de res, la pancita, la cebolla y el ajo en una olla grande con el agua. Deja que suelte el hervor y espúmala durante 15 minutos.",
+    "Baja a fuego lento, con la olla medio tapada, y cocina 3½–4 horas. La pancita está lista cuando está suave pero todavía un poco masticable y la pata está blanda y gelatinosa. Agrega agua caliente si se reduce demasiado.",
+    "Tuesta, remoja y licúa los chiles con el ajo, el orégano, el comino y [[1½ tazas]] de caldo. Cuélalo sobre la olla.",
+    "Agrega el maíz y la sal. Deja hervir a fuego lento 30 minutos más. Si quieres, quita la carne de los huesos de la pata, y tira los huesos y los aromáticos.",
+    "Sirve bien caliente con cebolla, orégano, chile piquín, limón y tortillas."
+  ],
+  "pressureCooker": {
+    "time": "60 min a presión alta + 20 min de liberación natural",
+    "total": "1 h 45",
+    "steps": [
+      "Limpia y corta la pancita como en el paso 1.",
+      "Pon la pancita, la pata de res, la cebolla, el ajo y la sal en la olla. Agrega agua hasta la línea de llenado máximo.",
+      "Mientras, tuesta, remoja, licúa y cuela los chiles como en el paso 4.",
+      "Presión alta 60 minutos. Liberación natural 20 minutos. Si la pancita sigue dura, vuelve a sellar 15 minutos.",
+      "Agrega el chile colado y el maíz. Deja hervir a fuego lento en la función Saltear 20 minutos."
+    ],
+    "note": "La pancita varía mucho. La pancita blanca precocida de la tienda solo necesita unos 30 minutos."
+  },
+  "pressureNote": null,
+  "tips": [
+    "La pata es la que hace que se te peguen los labios. No te la saltes.",
+    "El limón y la sal le quitan el olor a corral. Enjuaga hasta que el agua salga limpia.",
+    "Hazlo un día antes. La grasa se cuaja arriba y se quita fácil."
+  ],
+  "variations": [
+    {
+      "name": "Menudo Blanco",
+      "subtitle": "Menudo blanco",
+      "region": "Sonora",
+      "note": "En Sonora y Sinaloa el menudo es blanco de entrada: nada de chile en la olla, y lo picante viene del chiltepín triturado en la mesa, con birote o bolillo con mantequilla.",
+      "ingredients": [
+        {
+          "title": "",
+          "items": [
+            "Todo lo de la receta base menos el chile",
+            "Chiltepín, triturado entre los dedos",
+            "Cilantro y cebolla picados"
+          ]
+        }
+      ],
+      "steps": [
+        "Cuece la pancita y la pata de res como en la receta base, pasos 1–3.",
+        "Agrega el maíz y la sal y deja hervir a fuego lento 30 minutos.",
+        "Sirve con chiltepín, orégano, cebolla, cilantro y limón."
+      ],
+      "pressureNote": "El mismo tiempo a presión que la receta base."
+    }
+  ]
+}
