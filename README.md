@@ -68,8 +68,8 @@ The privacy policy and support pages are `docs/privacy.html` and `docs/support.h
 ### TestFlight without a Mac
 
 `.github/workflows/testflight.yml` archives, signs (Xcode cloud-managed signing) and uploads
-to App Store Connect. One-time setup is described at the top of that file: a repository
-variable `APPLE_TEAM_ID` and three secrets from an App Store Connect API key. Then run the
+to App Store Connect. One-time setup is described at the top of that file: three repository
+secrets from an App Store Connect API key (the Team ID is built in). Then run the
 workflow from the Actions tab, or push a tag like `testflight-1`.
 
 `.github/workflows/app-store-screenshots.yml` makes the 6.9-inch screenshots App Store Connect

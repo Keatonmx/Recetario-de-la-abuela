@@ -5,7 +5,7 @@ name: TestFlight
 # cloud-managed signing, using an App Store Connect API key.
 #
 # One-time setup (repository Settings > Secrets and variables > Actions):
-#   Variable  APPLE_TEAM_ID      your 10-character Team ID (developer.apple.com > Membership)
+#   (Team ID NHYD37TC9V is built in; set the APPLE_TEAM_ID variable only to override it)
 #   Secret    ASC_KEY_ID         the API key's Key ID
 #   Secret    ASC_ISSUER_ID      the Issuer ID shown above the keys list
 #   Secret    ASC_KEY_P8         the full contents of the downloaded AuthKey_XXXX.p8 file
@@ -26,7 +26,7 @@ jobs:
 
       - name: Check setup
         env:
-          TEAM: ${{ vars.APPLE_TEAM_ID }}
+          TEAM: ${{ vars.APPLE_TEAM_ID || 'NHYD37TC9V' }}
           KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ISSUER: ${{ secrets.ASC_ISSUER_ID }}
           P8: ${{ secrets.ASC_KEY_P8 }}
@@ -61,7 +61,7 @@ jobs:
 
       - name: Archive
         env:
-          TEAM: ${{ vars.APPLE_TEAM_ID }}
+          TEAM: ${{ vars.APPLE_TEAM_ID || 'NHYD37TC9V' }}
           KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ISSUER: ${{ secrets.ASC_ISSUER_ID }}
         run: |
@@ -84,7 +84,7 @@ jobs:
 
       - name: Upload to App Store Connect
         env:
-          TEAM: ${{ vars.APPLE_TEAM_ID }}
+          TEAM: ${{ vars.APPLE_TEAM_ID || 'NHYD37TC9V' }}
           KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ISSUER: ${{ secrets.ASC_ISSUER_ID }}
         run: |
