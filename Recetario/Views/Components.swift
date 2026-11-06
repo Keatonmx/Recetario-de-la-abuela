@@ -43,6 +43,8 @@ struct FlagShape: Shape {
 
 struct PapelPicado: View {
     var count = 10
+    /// Change it to set the flags swaying on the string, like a breeze went through (pull to refresh).
+    var swing = 0
     private var colors: [Color] {
         Season.picadoColors ?? [Color(hexString: "#C8261E"), Color(hexString: "#F29F05"), Color(hexString: "#1F4FB5"), Color(hexString: "#E4007C"), Color(hexString: "#1F6B3F")]
     }
@@ -57,6 +59,19 @@ struct PapelPicado: View {
                     FlagShape()
                         .fill(colors[i % colors.count], style: FillStyle(eoFill: true))
                         .aspectRatio(60.0 / 68.0, contentMode: .fit)
+                        .keyframeAnimator(initialValue: 0.0, trigger: swing) { flag, angle in
+                            flag.rotationEffect(.degrees(angle), anchor: .top)
+                        } keyframes: { _ in
+                            // A wave down the string: each flag starts a beat after the one before,
+                            // and they swing a little differently, damping out.
+                            let amp = (i.isMultiple(of: 2) ? 1.0 : -1.0) * (9 + Double(i % 3) * 3)
+                            LinearKeyframe(0, duration: Double(i) * 0.04)
+                            CubicKeyframe(amp, duration: 0.2)
+                            CubicKeyframe(-amp * 0.7, duration: 0.24)
+                            CubicKeyframe(amp * 0.4, duration: 0.24)
+                            CubicKeyframe(-amp * 0.15, duration: 0.22)
+                            CubicKeyframe(0, duration: 0.22)
+                        }
                 }
             }
         }

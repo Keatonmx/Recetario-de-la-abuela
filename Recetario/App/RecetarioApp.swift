@@ -21,6 +21,7 @@ struct RootView: View {
     // CI screenshots can open a tab (-screenshotTab 1) or a recipe (-screenshotRecipe pozole-rojo).
     @State private var selection = UserDefaults.standard.integer(forKey: "screenshotTab")
     @State private var path: [Recipe] = []
+    @State private var savedPath: [Recipe] = []
     @AppStorage("appearance") private var appearance = Appearance.system.rawValue
 
     var body: some View {
@@ -31,11 +32,12 @@ struct RootView: View {
             NavigationStack { QueTengoView() }
                 .tabItem { Label { Text(store.t("¿Qué tengo?", "What do I have?")) } icon: { Image("tab-quetengo") } }
                 .tag(1)
-            NavigationStack { RecipeListView(savedOnly: true) }
+            NavigationStack(path: $savedPath) { RecipeListView(savedOnly: true) }
                 .tabItem { Label { Text(store.t("Guardadas", "Saved")) } icon: { Image("milagro") } }
                 .tag(2)
             NavigationStack { PantryView() }
                 .tabItem { Label { Text(store.t("Despensa", "Pantry")) } icon: { Image("tab-despensa") } }
+                .badge(store.mandado.filter { !$0.bought }.count)
                 .tag(3)
         }
         .onAppear {
@@ -47,6 +49,18 @@ struct RootView: View {
         .environment(\.locale, Locale(identifier: store.lang == .es ? "es_MX" : "en_US"))
         .tint(Color.mxRosa)
         .preferredColorScheme((Appearance(rawValue: appearance) ?? .system).colorScheme)
+        // ¡Buenas! and the card turned over sit above everything, tab bar included.
+        .overlay {
+            if let deck = store.shuffleDeck {
+                BuenasShuffle(deck: deck) { drawn in
+                    store.shuffleDeck = nil
+                    store.tableCard = drawn
+                }
+            } else if let card = store.tableCard {
+                CardFlipView(recipe: card, onOpen: { open(card) }, onClose: { store.tableCard = nil })
+                    .id(card.id)
+            }
+        }
         .overlay(alignment: .bottom) {
             if let toast = store.toast {
                 ToastView(text: toast)
@@ -55,5 +69,16 @@ struct RootView: View {
             }
         }
         .animation(.snappy, value: store.toast)
+    }
+
+    /// From the card's back to the full recipe, in the tab the card was picked up in.
+    private func open(_ recipe: Recipe) {
+        store.tableCard = nil
+        if selection == 2 {
+            savedPath.append(recipe)
+        } else {
+            selection = 0
+            path.append(recipe)
+        }
     }
 }

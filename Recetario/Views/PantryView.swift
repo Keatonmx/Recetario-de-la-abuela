@@ -37,7 +37,47 @@ struct PantryView: View {
         "Alicia Gironella De'Angeli et al., Larousse de la Cocina Mexicana"
     ]
 
+    enum Page: Hashable { case mandado, guide }
+    // CI screenshots open the guide with -screenshotTab 3; the list starts empty there anyway.
+    @State private var page: Page = .mandado
+
     var body: some View {
+        VStack(spacing: 0) {
+            Picker(store.t("Despensa", "Pantry"), selection: $page) {
+                Text(store.t("Mandado", "Shopping list")).tag(Page.mandado)
+                Text(store.t("Guía de chiles", "Chile guide")).tag(Page.guide)
+            }
+            .pickerStyle(.segmented)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+            switch page {
+            case .mandado: MandadoList()
+            case .guide: guide
+            }
+        }
+        .background(Color.paper)
+        .navigationTitle(store.t("Despensa", "Pantry"))
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) { SettingsButtons() }
+            ToolbarItem(placement: .principal) {
+                Text(store.t("Despensa", "Pantry")).font(.rotulo(22, relativeTo: .headline)).foregroundStyle(Color.mxRosa)
+            }
+            if page == .mandado && !store.mandado.isEmpty {
+                ToolbarItem(placement: .topBarLeading) {
+                    ShareLink(item: store.mandadoShareText) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .accessibilityLabel(store.t("Compartir el mandado", "Share the shopping list"))
+                }
+            }
+        }
+        .onAppear {
+            if store.mandado.isEmpty && UserDefaults.standard.object(forKey: "screenshotTab") != nil { page = .guide }
+        }
+    }
+
+    private var guide: some View {
         List {
             Section {
                 Text(store.t("Los chiles y los básicos de la despensa de los que dependen estas recetas, y cómo manejarlos.",
@@ -101,14 +141,5 @@ struct PantryView: View {
         }
         .listStyle(.insetGrouped)
         .scrollContentBackground(.hidden)
-        .background(Color.paper)
-        .navigationTitle(store.t("Despensa", "Pantry"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) { SettingsButtons() }
-            ToolbarItem(placement: .principal) {
-                Text(store.t("Despensa", "Pantry")).font(.rotulo(22, relativeTo: .headline)).foregroundStyle(Color.mxRosa)
-            }
-        }
     }
 }

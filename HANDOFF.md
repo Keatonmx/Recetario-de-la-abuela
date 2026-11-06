@@ -19,6 +19,14 @@ An iPhone app of traditional Mexican home cooking. Each recipe is a lotería car
 - **Guardadas** (saved recipes), **Despensa** (chile and pantry guide), and a light/dark switch.
 - **Two languages**: everything in Spanish (Mexico) by default, or all in English, with the
   ES/EN button in the top bar. Recipe text is in `i18n/es` and `i18n/en`.
+- **Cards that flip**: tapping a card lifts it and turns it over in 3D. The back has
+  Ingredientes / Preparación tabs, the Consejos de la Abuela on parchment, and a button to the
+  full recipe (`Views/CardFlipView.swift`).
+- **El Tablero**: the grid button at top left shows the deck four small cards across.
+- **¡Buenas!**: shuffles the cards on screen and draws one (`Views/BuenasView.swift`).
+- **El mandado**: the cart next to any ingredient adds it to a shopping list in Despensa,
+  sorted by market aisle and shareable (`Models/Mandado.swift`, `Views/MandadoView.swift`).
+- Pull down on the recipe list and the papel picado sways.
 - A **"Hoy hay…"** card that follows the calendar: pozole for September 15, tamales for
   Candelaria, fish on Lenten Fridays, and so on.
 

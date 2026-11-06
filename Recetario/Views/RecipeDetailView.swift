@@ -192,7 +192,7 @@ struct RecipeDetailView: View {
         VStack(alignment: .leading, spacing: 24) {
             VStack(alignment: .leading, spacing: 12) {
                 SectionHeader(title: store.t("Ingredientes", "Ingredients")) { resetButton }
-                IngredientList(groups: text.ingredients, keyGroups: recipe.en.ingredients, scope: "\(recipe.id):t:i", factor: factor)
+                IngredientList(groups: text.ingredients, keyGroups: recipe.en.ingredients, scope: "\(recipe.id):t:i", factor: factor, cart: (recipe, nil))
             }
             VStack(alignment: .leading, spacing: 12) {
                 SectionHeader(title: store.t("Preparación", "Preparation"))
@@ -220,7 +220,7 @@ struct RecipeDetailView: View {
                 }
                 VStack(alignment: .leading, spacing: 12) {
                     SectionHeader(title: store.t("Ingredientes", "Ingredients")) { resetButton }
-                    IngredientList(groups: text.ingredients, keyGroups: recipe.en.ingredients, scope: "\(recipe.id):t:i", factor: factor)
+                    IngredientList(groups: text.ingredients, keyGroups: recipe.en.ingredients, scope: "\(recipe.id):t:i", factor: factor, cart: (recipe, nil))
                 }
                 VStack(alignment: .leading, spacing: 12) {
                     SectionHeader(title: store.t("Preparación", "Preparation"))
@@ -306,6 +306,8 @@ struct IngredientList: View {
     let keyGroups: [IngredientGroup]
     let scope: String
     var factor: Double = 1
+    /// When set, each row gets a cart button that puts the line on el mandado.
+    var cart: (recipe: Recipe, variation: Int?)? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -319,7 +321,14 @@ struct IngredientList: View {
                         .padding(.bottom, 4)
                 }
                 ForEach(Array(group.items.enumerated()), id: \.offset) { itemIndex, item in
-                    IngredientRow(text: store.line(item, factor: factor), key: "\(scope):\(StableKey.of(keyLine(groupIndex, itemIndex, item)))")
+                    IngredientRow(
+                        text: store.line(item, factor: factor),
+                        key: "\(scope):\(StableKey.of(keyLine(groupIndex, itemIndex, item)))",
+                        cartKey: cart.map { MandadoItem.key($0.recipe.id, $0.variation, groupIndex, itemIndex) },
+                        onCart: cart.map { c -> () -> Void in
+                            { store.toggleMandado(recipe: c.recipe, variation: c.variation, group: groupIndex, item: itemIndex) }
+                        }
+                    )
                     Divider()
                 }
             }
@@ -336,26 +345,44 @@ struct IngredientRow: View {
     @EnvironmentObject private var store: RecipeStore
     let text: String
     let key: String
+    var cartKey: String? = nil
+    var onCart: (() -> Void)? = nil
 
     var body: some View {
         let isOn = store.isChecked(key)
-        Button {
-            store.toggleCheck(key)
-        } label: {
-            HStack(alignment: .firstTextBaseline, spacing: 12) {
-                Image(systemName: isOn ? "checkmark.square.fill" : "square")
-                    .foregroundStyle(isOn ? Color.nopal : Color.secondary)
-                Text(text)
-                    .strikethrough(isOn, color: .secondary)
-                    .foregroundStyle(isOn ? Color.secondary : Color.primary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
+        HStack(alignment: .firstTextBaseline, spacing: 4) {
+            Button {
+                store.toggleCheck(key)
+            } label: {
+                HStack(alignment: .firstTextBaseline, spacing: 12) {
+                    Image(systemName: isOn ? "checkmark.square.fill" : "square")
+                        .foregroundStyle(isOn ? Color.nopal : Color.secondary)
+                    Text(text)
+                        .strikethrough(isOn, color: .secondary)
+                        .foregroundStyle(isOn ? Color.secondary : Color.primary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(.vertical, 9)
+                .contentShape(Rectangle())
             }
-            .padding(.vertical, 9)
-            .contentShape(Rectangle())
+            .buttonStyle(.plain)
+            .accessibilityAddTraits(isOn ? .isSelected : [])
+
+            if let cartKey, let onCart {
+                let inList = store.inMandado(cartKey)
+                Button(action: onCart) {
+                    Image(systemName: inList ? "cart.fill" : "cart.badge.plus")
+                        .foregroundStyle(inList ? Color.nopal : Color.secondary)
+                        .frame(width: 44, height: 36)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(inList
+                    ? store.t("Quitar del mandado: ", "Remove from shopping list: ") + text
+                    : store.t("Agregar al mandado: ", "Add to shopping list: ") + text)
+            }
         }
-        .buttonStyle(.plain)
-        .accessibilityAddTraits(isOn ? .isSelected : [])
     }
 }
 
@@ -497,7 +524,7 @@ struct VariationCard: View {
                     VStack(alignment: .leading, spacing: 12) {
                         SectionHeader(title: store.t("Ingredientes", "Ingredients"))
                         IngredientList(groups: variation.ingredients, keyGroups: keyVariation.ingredients,
-                                       scope: "\(recipe.id):v\(index):i", factor: factor)
+                                       scope: "\(recipe.id):v\(index):i", factor: factor, cart: (recipe, index))
                     }
                     VStack(alignment: .leading, spacing: 12) {
                         SectionHeader(title: store.t("Preparación", "Preparation"))

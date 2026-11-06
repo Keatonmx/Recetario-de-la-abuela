@@ -18,6 +18,12 @@ final class RecipeStore: ObservableObject {
     /// ¿Qué tengo?: ingredient ids the cook has, and whether basics count as on hand.
     @Published private(set) var have: [String]
     @Published private(set) var haveBasics: Bool
+    /// El mandado: the shopping list, in the order things were added.
+    @Published private(set) var mandado: [MandadoItem]
+    /// The card picked up off the table and turned over, if any.
+    @Published var tableCard: Recipe?
+    /// ¡Buenas!: the cards being shuffled to draw from, while the shuffle runs.
+    @Published var shuffleDeck: [Recipe]?
     let pantry: PantrySearch
     /// Folded search text per recipe, built once.
     private(set) var searchIndex: [String: String] = [:]
@@ -46,6 +52,7 @@ final class RecipeStore: ObservableObject {
         lang = Lang(rawValue: defaults.string(forKey: "lang") ?? "") ?? .es
         have = defaults.stringArray(forKey: "have") ?? []
         haveBasics = defaults.object(forKey: "haveBasics") as? Bool ?? true
+        mandado = (defaults.data(forKey: "mandado")).flatMap { try? JSONDecoder().decode([MandadoItem].self, from: $0) } ?? []
         if let ids = defaults.string(forKey: "screenshotHave") {
             have = ids.split(separator: ",").map(String.init)
         }
@@ -133,6 +140,80 @@ final class RecipeStore: ObservableObject {
     func setHaveBasics(_ on: Bool) {
         haveBasics = on
         defaults.set(on, forKey: "haveBasics")
+    }
+
+    // MARK: Mandado
+
+    func inMandado(_ key: String) -> Bool { mandado.contains { $0.id == key } }
+
+    /// Adds an ingredient line to the shopping list, or takes it off if it's already there.
+    func toggleMandado(recipe: Recipe, variation: Int?, group: Int, item: Int) {
+        let key = MandadoItem.key(recipe.id, variation, group, item)
+        if inMandado(key) {
+            mandado.removeAll { $0.id == key }
+        } else {
+            mandado.append(MandadoItem(recipeID: recipe.id, variation: variation, group: group, item: item, factor: factor(for: recipe.id)))
+            showToast(t("Agregado al mandado", "Added to the shopping list"))
+        }
+        saveMandado()
+    }
+
+    func toggleBought(_ key: String) {
+        guard let i = mandado.firstIndex(where: { $0.id == key }) else { return }
+        mandado[i].bought.toggle()
+        saveMandado()
+    }
+
+    func removeMandado(_ keys: Set<String>) {
+        mandado.removeAll { keys.contains($0.id) }
+        saveMandado()
+    }
+
+    func clearBought() {
+        mandado.removeAll { $0.bought }
+        saveMandado()
+    }
+
+    func clearMandado() {
+        mandado = []
+        saveMandado()
+    }
+
+    private func saveMandado() {
+        defaults.set(try? JSONEncoder().encode(mandado), forKey: "mandado")
+    }
+
+    /// A shopping-list line as the cook should see it: in their language, scaled and in their units.
+    func mandadoText(_ item: MandadoItem) -> String? {
+        guard let recipe = book.recipes.first(where: { $0.id == item.recipeID }),
+              let line = item.line(in: recipe, lang) else { return nil }
+        return shown(Scaler.text(line, factor: item.factor, lang: lang))
+    }
+
+    func aisle(of item: MandadoItem) -> Aisle {
+        guard let recipe = book.recipes.first(where: { $0.id == item.recipeID }),
+              let english = item.line(in: recipe, .en) else { return .abarrotes }
+        return Aisle.of(english, pantry: pantry)
+    }
+
+    /// The list grouped by aisle, in the order you walk the market.
+    var mandadoByAisle: [(aisle: Aisle, items: [MandadoItem])] {
+        let grouped = Dictionary(grouping: mandado) { aisle(of: $0) }
+        return Aisle.allCases.compactMap { aisle in grouped[aisle].map { (aisle, $0) } }
+    }
+
+    /// What's still to buy, as plain text to send to whoever is going to the store.
+    var mandadoShareText: String {
+        var lines = [t("El mandado", "Shopping list"), ""]
+        for (aisle, items) in mandadoByAisle {
+            let toBuy = items.filter { !$0.bought }.compactMap(mandadoText)
+            guard !toBuy.isEmpty else { continue }
+            lines.append(aisle.name(lang).uppercased())
+            lines += toBuy.map { "☐ \($0)" }
+            lines.append("")
+        }
+        lines.append(t("Del Recetario de la Abuela", "From Recetario de la Abuela"))
+        return lines.joined(separator: "\n")
     }
 
     func setMetric(_ on: Bool) {

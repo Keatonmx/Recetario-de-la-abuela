@@ -8,12 +8,17 @@ struct RecipeListView: View {
     @State private var query = ""
     @State private var category: String? = UserDefaults.standard.string(forKey: "screenshotCategory")
     @State private var pressureOnly = false
+    /// Pull to refresh sets the papel picado swaying.
+    @State private var swing = 0
+    /// El Tablero: four small cards across instead of two.
+    @AppStorage("tablero") private var tablero = false
     @Environment(\.dynamicTypeSize) private var typeSize
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private let columns = [
-        GridItem(.flexible(), spacing: 14, alignment: .top),
-        GridItem(.flexible(), spacing: 14, alignment: .top)
-    ]
+    private var columns: [GridItem] {
+        let across = typeSize.isAccessibilitySize ? (tablero ? 2 : 1) : (tablero ? 4 : 2)
+        return Array(repeating: GridItem(.flexible(), spacing: tablero ? 8 : 14, alignment: .top), count: across)
+    }
 
     private var isFiltering: Bool {
         !query.trimmingCharacters(in: .whitespaces).isEmpty || category != nil || pressureOnly
@@ -83,6 +88,10 @@ struct RecipeListView: View {
             .padding(.bottom, 32)
         }
         .background(Color.paper)
+        .refreshable {
+            if !reduceMotion { swing += 1 }
+            try? await Task.sleep(for: .milliseconds(600))
+        }
         .searchable(
             text: $query,
             placement: .navigationBarDrawer(displayMode: .always),
@@ -94,27 +103,47 @@ struct RecipeListView: View {
             RecipeDetailView(recipe: recipe)
         }
         .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    withAnimation(.snappy) { tablero.toggle() }
+                } label: {
+                    Image(systemName: tablero ? "square.grid.2x2" : "square.grid.3x3")
+                }
+                .accessibilityLabel(tablero
+                    ? store.t("Ver cartas grandes", "Show big cards")
+                    : store.t("El Tablero: ver todas las cartas chiquitas", "El Tablero: show small cards"))
+            }
             ToolbarItem(placement: .topBarTrailing) { SettingsButtons() }
         }
     }
 
     private func section(_ cat: RecipeCategory, recipes: [Recipe]) -> some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: tablero ? 10 : 16) {
             RotuloHeader(title: cat.name(store.lang), color: store.headingColor(forCategory: cat.id))
-            LazyVGrid(columns: typeSize.isAccessibilitySize ? [GridItem(.flexible())] : columns, alignment: .leading, spacing: 18) {
+            LazyVGrid(columns: columns, alignment: .leading, spacing: tablero ? 10 : 18) {
                 ForEach(Array(recipes.enumerated()), id: \.element.id) { index, recipe in
-                    NavigationLink(value: recipe) {
-                        LoteriaCard(recipe: recipe, isFavorite: store.isFavorite(recipe.id))
+                    // Tapping a card picks it up and turns it over.
+                    Button {
+                        store.tableCard = recipe
+                    } label: {
+                        LoteriaCard(recipe: recipe, isFavorite: store.isFavorite(recipe.id), compact: tablero)
                     }
                     .buttonStyle(DealtCardStyle(index: index))
+                    .accessibilityHint(store.t("Voltea la carta", "Turns the card over"))
                 }
             }
         }
     }
 
+    /// ¡Buenas! draws from what's on screen: the filtered cards, or the whole deck.
+    private func shuffle() {
+        let deck = results
+        store.shuffleDeck = deck.count >= 2 ? deck : store.book.recipes
+    }
+
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
-            PapelPicado()
+            PapelPicado(swing: swing)
                 .padding(.top, 4)
             if savedOnly {
                 Text(store.t("Guardadas", "Saved"))
@@ -128,6 +157,10 @@ struct RecipeListView: View {
                              "Your milagros: the recipes you've saved with the heart, kept on this phone."))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+                if store.favorites.count >= 2 {
+                    BuenasButton(action: shuffle)
+                        .padding(.top, 6)
+                }
             } else {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Recetario")
@@ -151,6 +184,8 @@ struct RecipeListView: View {
                     .foregroundStyle(Color.chile)
                 HoyHayCard()
                     .padding(.top, 6)
+                BuenasButton(action: shuffle)
+                    .padding(.top, 4)
             }
         }
     }

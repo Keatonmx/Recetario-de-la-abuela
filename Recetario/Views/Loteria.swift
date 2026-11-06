@@ -99,39 +99,41 @@ struct LoteriaCard: View {
     let recipe: Recipe
     var isFavorite = false
     var big = false
+    /// El Tablero: a small thumbnail, four across.
+    var compact = false
 
     var body: some View {
-        VStack(spacing: 5) {
+        VStack(spacing: compact ? 3 : 5) {
             CardArt(
                 recipe: recipe,
                 field: store.color(forCategory: recipe.category),
                 ground: store.groundColor(forCategory: recipe.category),
-                numberSize: big ? 24 : 17
+                numberSize: big ? 24 : (compact ? 11 : 17)
             )
             .overlay(alignment: .bottomTrailing) {
-                if recipe.hasPressureCooker && !big { OllaBadge().padding(4) }
+                if recipe.hasPressureCooker && !big && !compact { OllaBadge().padding(4) }
             }
             .overlay(alignment: .topTrailing) {
                 if isFavorite {
                     Image("milagro-fill")
                         .renderingMode(.original)
                         .resizable()
-                        .frame(width: 22, height: 22)
-                        .padding(4)
+                        .frame(width: compact ? 13 : 22, height: compact ? 13 : 22)
+                        .padding(compact ? 2 : 4)
                 }
             }
             Text(recipe.cardName.uppercased())
-                .font(.slab(big ? 17 : 13.5))
-                .tracking(0.5)
+                .font(.slab(big ? 17 : (compact ? 8.5 : 13.5)))
+                .tracking(compact ? 0 : 0.5)
                 .foregroundStyle(Color.ink)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
-                .minimumScaleFactor(0.75)
-                .frame(maxWidth: .infinity, minHeight: big ? 46 : 36)
+                .minimumScaleFactor(0.7)
+                .frame(maxWidth: .infinity, minHeight: big ? 46 : (compact ? 22 : 36))
         }
-        .padding(.horizontal, 9)
-        .padding(.top, 9)
-        .padding(.bottom, 6)
+        .padding(.horizontal, compact ? 5 : 9)
+        .padding(.top, compact ? 5 : 9)
+        .padding(.bottom, compact ? 3 : 6)
         .background(RoundedRectangle(cornerRadius: 8).fill(Color.stock))
         .overlay(RoundedRectangle(cornerRadius: 5).strokeBorder(Color.ink, lineWidth: 1.5).padding(4))
         .background(
