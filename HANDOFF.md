@@ -143,6 +143,14 @@ node scripts/render-assets.cjs "$PWD/web/recetario.html" "$PWD/Recetario/Assets.
 
 Then commit everything. The build fails if `recipes.json` is out of date.
 
+**App icons.** La abuela's lotería card on a sarape. The main icon and the four alternates
+(picked in the app under Ícono de la app, in the light/dark menu) are drawn by one script:
+
+```sh
+npm i --no-save @resvg/resvg-js@2.6.2
+node scripts/app-icons.cjs     # every AppIcon*.appiconset + the picker previews
+```
+
 **Writing recipe steps.** Wrap an amount in a step in double brackets when it should scale
 with servings, for example `Add [[1½ cups]] of the broth`. Leave times, temperatures, pot
 sizes and per-piece amounts unwrapped, because those shouldn't change.

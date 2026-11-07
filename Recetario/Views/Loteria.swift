@@ -438,10 +438,11 @@ struct LanguageButton: View {
     }
 }
 
-/// Light, dark, or follow the phone.
+/// Light, dark, or follow the phone. The app icon is picked from here too.
 struct AppearanceButton: View {
     @EnvironmentObject private var store: RecipeStore
     @AppStorage("appearance") private var appearance = Appearance.system.rawValue
+    @State private var pickingIcon = false
 
     var body: some View {
         Menu {
@@ -450,10 +451,22 @@ struct AppearanceButton: View {
                 Label(store.t("Claro", "Light"), systemImage: "sun.max").tag(Appearance.light.rawValue)
                 Label(store.t("Oscuro", "Dark"), systemImage: "moon").tag(Appearance.dark.rawValue)
             }
+            if UIApplication.shared.supportsAlternateIcons {
+                Divider()
+                Button {
+                    pickingIcon = true
+                } label: {
+                    Label(store.t("Ícono de la app", "App icon"), systemImage: "app.badge")
+                }
+            }
         } label: {
             Image(systemName: icon)
         }
         .accessibilityLabel(store.t("Apariencia", "Appearance"))
+        .sheet(isPresented: $pickingIcon) {
+            AppIconPicker()
+                .presentationDetents([.medium, .large])
+        }
     }
 
     private var icon: String {
@@ -461,6 +474,84 @@ struct AppearanceButton: View {
         case .system: return "circle.lefthalf.filled"
         case .light: return "sun.max"
         case .dark: return "moon"
+        }
+    }
+}
+
+// MARK: - Ícono de la app
+
+/// La abuela's card on the main sarape, or one of the other blankets.
+/// Keep in step with ICONS in scripts/app-icons.cjs.
+struct AppIconChoice: Identifiable {
+    /// The alternate icon's asset name; nil is the main icon.
+    let name: String?
+    let preview: String
+    let es: String
+    let en: String
+    var id: String { preview }
+
+    static let all = [
+        AppIconChoice(name: nil, preview: "icon-principal", es: "Sarape con flecos", en: "Fringed sarape"),
+        AppIconChoice(name: "AppIconClasico", preview: "icon-clasico", es: "Sarape clásico", en: "Classic sarape"),
+        AppIconChoice(name: "AppIconRombo", preview: "icon-rombo", es: "Rombo de Saltillo", en: "Saltillo diamond"),
+        AppIconChoice(name: "AppIconNegro", preview: "icon-negro", es: "Sarape negro", en: "Black sarape"),
+        AppIconChoice(name: "AppIconTricolor", preview: "icon-tricolor", es: "Verde, blanco y rojo", en: "Green, white and red"),
+    ]
+}
+
+struct AppIconPicker: View {
+    @EnvironmentObject private var store: RecipeStore
+    @Environment(\.dismiss) private var dismiss
+    @State private var current = UIApplication.shared.alternateIconName
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 120), spacing: 18)], spacing: 22) {
+                    ForEach(AppIconChoice.all) { choice in
+                        Button {
+                            choose(choice)
+                        } label: {
+                            VStack(spacing: 8) {
+                                Image(choice.preview)
+                                    .resizable()
+                                    .frame(width: 90, height: 90)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                            .strokeBorder(Color.mxRosa, lineWidth: current == choice.name ? 4 : 0)
+                                            .padding(-6)
+                                    }
+                                    .padding(6)
+                                Text(store.t(choice.es, choice.en))
+                                    .font(.footnote.weight(current == choice.name ? .bold : .regular))
+                                    .foregroundStyle(.primary)
+                                    .multilineTextAlignment(.center)
+                            }
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel(store.t(choice.es, choice.en))
+                        .accessibilityAddTraits(current == choice.name ? .isSelected : [])
+                    }
+                }
+                .padding(20)
+            }
+            .navigationTitle(store.t("Ícono de la app", "App icon"))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button(store.t("Listo", "Done")) { dismiss() }
+                }
+            }
+        }
+    }
+
+    private func choose(_ choice: AppIconChoice) {
+        guard choice.name != current else { return }
+        UIApplication.shared.setAlternateIconName(choice.name) { error in
+            if error == nil {
+                DispatchQueue.main.async { current = choice.name }
+            }
         }
     }
 }
