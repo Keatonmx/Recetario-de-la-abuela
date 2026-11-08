@@ -35,6 +35,8 @@ jobs:
     # runner image and the newest stable Xcode on it.
     runs-on: macos-15
     timeout-minutes: 45
+    outputs:
+      build: ${{ steps.build.outputs.number }}
     env:
       APP_PATH: ${{ github.workspace }}/DerivedData/Build/Products/Release-iphoneos/Recetario.app
       MARKETING_VERSION: ${{ github.event.inputs.marketing_version || '1.0' }}
@@ -116,10 +118,12 @@ jobs:
           security find-identity -v -p codesigning "$KEYCHAIN"
 
       - name: Build (unsigned, the proven lane)
+        id: build
         run: |
           set -o pipefail
           BUILD_NUMBER=$((100 + GITHUB_RUN_NUMBER))
           echo "Building $MARKETING_VERSION ($BUILD_NUMBER)"
+          echo "number=$BUILD_NUMBER" >> "$GITHUB_OUTPUT"
           xcodebuild build \
             -project Recetario.xcodeproj -scheme Recetario -configuration Release \
             -destination 'generic/platform=iOS' \
@@ -186,3 +190,11 @@ jobs:
             xcodebuild-build.log
             altool-upload.log
           if-no-files-found: ignore
+
+  # Waits for Apple to process the upload, then hands it to every tester group.
+  distribute:
+    needs: upload
+    uses: ./.github/workflows/distribute.yml
+    with:
+      build: ${{ needs.upload.outputs.build }}
+    secrets: inherit

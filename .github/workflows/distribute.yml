@@ -1,0 +1,45 @@
+name: Distribute
+
+# Hands a build that is already in App Store Connect to every TestFlight tester group, and
+# sends it to Beta App Review when a group has external testers (scripts/distribute_build.py).
+# testflight.yml runs this after every upload. Run it by hand to redo a build, like 106.
+
+on:
+  workflow_dispatch:
+    inputs:
+      build:
+        description: "Build number, the number in parentheses in TestFlight (like 106)"
+        required: true
+      what_to_test:
+        description: "What to Test note shown to testers (optional)"
+        required: false
+        default: ""
+  workflow_call:
+    inputs:
+      build:
+        required: true
+        type: string
+      what_to_test:
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install API helpers
+        run: pip install pyjwt cryptography requests
+      - name: Add the build to the tester groups
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          BUILD: ${{ inputs.build }}
+          WHAT_TO_TEST: ${{ inputs.what_to_test }}
+        run: python scripts/distribute_build.py --build "$BUILD" --what-to-test "$WHAT_TO_TEST"

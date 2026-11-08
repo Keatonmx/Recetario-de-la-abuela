@@ -114,6 +114,11 @@ number automatically.
 
 If it fails at **Check setup**, a secret is missing or misnamed. The error message says which one.
 
+After the upload, its **distribute** job waits for Apple to finish processing, then adds the
+build to every tester group and sends it to Beta App Review if a group has external testers
+(`scripts/distribute_build.py`). To hand out a build that's already uploaded, run the
+**Distribute** workflow with its build number.
+
 ## Continuing in a new chat
 
 A cloud chat can't be moved to your computer. You can continue in either of two ways:
