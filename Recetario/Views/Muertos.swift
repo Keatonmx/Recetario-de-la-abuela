@@ -46,7 +46,6 @@ private enum Noche {
     static let wick = Color(hex6: 0x3A2414)
 
     static let mantel = Color(hex6: 0x1F1533)
-    static let stitch = Color(hex6: 0x4A3470)
 }
 
 // MARK: - The night behind every screen
@@ -384,9 +383,8 @@ struct OfrendaEdge: View {
 
 // MARK: - The mantel under the deck
 
-/// The dark mantel the cards are laid on at night, with a running-stitch hem and a faint
-/// camino de pétalos wandering down the middle, faint enough that the headings and cards
-/// stay the thing you read.
+/// The dark mantel the cards are laid on at night, with a faint camino de pétalos wandering
+/// down the middle, faint enough that the headings and cards stay the thing you read.
 struct MantelDeOfrenda: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 18)
@@ -398,11 +396,6 @@ struct MantelDeOfrenda: View {
                 }
                 .opacity(0.22)
                 .clipShape(RoundedRectangle(cornerRadius: 18))
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 13)
-                    .strokeBorder(Noche.stitch.opacity(0.6), style: StrokeStyle(lineWidth: 1, dash: [3, 4]))
-                    .padding(5)
             )
             .overlay(RoundedRectangle(cornerRadius: 18).strokeBorder(Color.hairline, lineWidth: 1.5))
             .accessibilityHidden(true)

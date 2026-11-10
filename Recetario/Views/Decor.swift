@@ -20,24 +20,44 @@ struct WallBackground: View {
     @Environment(\.colorScheme) private var scheme
 
     var body: some View {
-        GeometryReader { geo in
-            // The band starts a little above the tab bar and runs under it.
-            let bandHeight = geo.safeAreaInsets.bottom + 24
-            ZStack(alignment: .bottom) {
-                Color.paper
-                if scheme == .light {
-                    Limewash()
-                    Guardapolvo(underBar: geo.safeAreaInsets.bottom).frame(height: bandHeight)
-                } else {
-                    NocheDeVelas()
-                    OfrendaEdge().frame(height: bandHeight)
-                }
-            }
-            .ignoresSafeArea()
+        ZStack {
+            Color.paper
+            if scheme == .light { Limewash() } else { NocheDeVelas() }
         }
-        .ignoresSafeArea(.keyboard)
+        .ignoresSafeArea()
         .accessibilityHidden(true)
     }
+}
+
+/// The bottom of every tab, just above the tab bar: the guardapolvo by day, the edge of the
+/// ofrenda by night. It sits in front of the page, which ends above it and scrolls out from
+/// behind it, and the tab bar under it is solid on every screen so the tab names stay clear.
+struct KitchenFloor: ViewModifier {
+    @Environment(\.colorScheme) private var scheme
+    private let band: CGFloat = 24
+    /// How far the ofrenda's candles stand above its band.
+    private let reach: CGFloat = 40
+
+    func body(content: Content) -> some View {
+        content
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Group {
+                    if scheme == .light {
+                        Guardapolvo().frame(height: band)
+                    } else {
+                        OfrendaEdge().frame(height: band).frame(height: band + reach, alignment: .bottom)
+                    }
+                }
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+            }
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarBackground(Color.tabBar, for: .tabBar)
+    }
+}
+
+extension View {
+    func kitchenFloor() -> some View { modifier(KitchenFloor()) }
 }
 
 /// Lime wash: soft, uneven patches of whiter and warmer white, and a fine grit.
@@ -65,13 +85,8 @@ struct Limewash: View {
 }
 
 /// The painted band along the bottom of the wall: a deep añil cenefa under a cempasúchil
-/// stripe, showing just above the tab bar, then a pale añil wash. The glass tab bar takes
-/// on the color behind it, so under the bar the wall stays light and the tab names stay
-/// readable.
+/// stripe, just above the tab bar, which is the pale añil wash below it (Color.tabBar).
 struct Guardapolvo: View {
-    /// How much of the band the tab bar covers.
-    var underBar: CGFloat = 0
-
     var body: some View {
         VStack(spacing: 0) {
             Rectangle().fill(Color.ink).frame(height: 1.5)
@@ -79,8 +94,6 @@ struct Guardapolvo: View {
             Rectangle().fill(Color.ink).frame(height: 1.5)
             LinearGradient(colors: [Color(hex6: 0x2348A6), Color(hex6: 0x1A3580)], startPoint: .top, endPoint: .bottom)
             Rectangle().fill(Color(hex6: 0x1A3580).opacity(0.55)).frame(height: 1)
-            LinearGradient(colors: [Color(hex6: 0xDCE4F4), Color(hex6: 0xE9EEF8)], startPoint: .top, endPoint: .bottom)
-                .frame(height: underBar)
         }
     }
 }

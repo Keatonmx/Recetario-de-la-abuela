@@ -27,15 +27,19 @@ struct RootView: View {
     var body: some View {
         TabView(selection: $selection) {
             NavigationStack(path: $path) { RecipeListView(savedOnly: false) }
+                .kitchenFloor()
                 .tabItem { Label { Text(store.t("Recetas", "Recipes")) } icon: { Image("tab-recetas") } }
                 .tag(0)
             NavigationStack { QueTengoView() }
+                .kitchenFloor()
                 .tabItem { Label { Text(store.t("¿Qué tengo?", "What do I have?")) } icon: { Image("tab-quetengo") } }
                 .tag(1)
             NavigationStack(path: $savedPath) { RecipeListView(savedOnly: true) }
+                .kitchenFloor()
                 .tabItem { Label { Text(store.t("Guardadas", "Saved")) } icon: { Image("milagro") } }
                 .tag(2)
             NavigationStack { PantryView() }
+                .kitchenFloor()
                 .tabItem { Label { Text(store.t("Despensa", "Pantry")) } icon: { Image("tab-despensa") } }
                 .badge(store.mandado.filter { !$0.bought }.count)
                 .tag(3)

@@ -160,7 +160,8 @@ struct QueTengoView: View {
                 }
             }
             .padding(16)
-            .background(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.hairline, style: StrokeStyle(lineWidth: 1.5, dash: [5, 4])))
+            .background(RoundedRectangle(cornerRadius: 14).fill(Color.card.opacity(0.6)))
+            .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.hairline, lineWidth: 1.5))
         } else {
             let all = store.pantry.rank(store.book.recipes, have: store.have, haveBasics: store.haveBasics)
             let can = all.filter { $0.score >= 0.85 }
@@ -294,7 +295,7 @@ struct IngredientChip: View {
         .padding(.vertical, 7)
         .frame(minHeight: 44)
         .background(Capsule().fill(background))
-        .overlay(Capsule().strokeBorder(border, style: StrokeStyle(lineWidth: style == .selected ? 2 : 1.5, dash: style == .suggestion ? [4, 3] : [])))
+        .overlay(Capsule().strokeBorder(border, lineWidth: style == .selected ? 2 : 1.5))
     }
 
     private var background: Color {

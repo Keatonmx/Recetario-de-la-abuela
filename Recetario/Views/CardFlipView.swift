@@ -202,7 +202,7 @@ struct ConsejosBox: View {
             RoundedRectangle(cornerRadius: 6)
                 .fill(LinearGradient(colors: [Color(hexString: "#F6E7C1"), Color(hexString: "#EBD3A0")], startPoint: .topLeading, endPoint: .bottomTrailing))
         )
-        .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color(hexString: "#C9A66B"), style: StrokeStyle(lineWidth: 1.5, dash: [6, 3])))
+        .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color(hexString: "#C9A66B"), lineWidth: 1.5))
         .rotationEffect(.degrees(-0.6))
     }
 }
