@@ -42,7 +42,7 @@ An iPhone app of traditional Mexican home cooking. Each recipe is a lotería car
 | Bundle ID `com.keatonmx.recetario` | ✅ Registered (Team ID `NHYD37TC9V`) |
 | App record in App Store Connect | ✅ Created 2026-11-05, Apple ID `6831412202`, version 1.0 |
 | App Store Connect API key in GitHub secrets | ✅ RecetarioAPI key; all six signing secrets set by `scripts/setup_signing.py` |
-| Contact form on the support page | ⬜ **You**, step 3 below |
+| Contact form on the support page | ✅ Formspree form `xaeeroge`, on since 2026-11-09 |
 | First TestFlight upload | ✅ Build 1.0 (102) uploaded 2026-11-05; next, add testers in App Store Connect > TestFlight |
 
 Pages:
@@ -93,7 +93,9 @@ the repo), makes the App Store profile, and sets these secrets:
 Don't paste these into a chat. GitHub secrets are the only place they should go.
 You don't need a Team ID, because it's already in the workflow.
 
-### 3. Turn on the contact form
+### 3. Turn on the contact form (done)
+
+Done on 2026-11-09 with form `xaeeroge`. For the record:
 
 The support page has a contact form. It stays hidden until it's connected, so your email
 never appears on the page or in this public repo.
