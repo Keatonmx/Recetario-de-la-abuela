@@ -143,16 +143,6 @@ struct RecipeDetailView: View {
                 .rotationEffect(.degrees(-1.5))
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 6)
-            if let verso = text.verso {
-                Text("«\(verso)»")
-                    .font(.subheadline.italic())
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 8)
-                    .accessibilityLabel(store.t("La cantada: \(verso)", "The caller's line: \(verso)"))
-            }
             Text("\(text.region) · \(store.categoryName(recipe.category))".uppercased())
                 .font(.caption.weight(.bold))
                 .tracking(1)
