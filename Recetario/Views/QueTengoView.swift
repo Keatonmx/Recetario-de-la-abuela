@@ -79,13 +79,7 @@ struct QueTengoView: View {
     // MARK: Pieces
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            PapelPicado().padding(.top, 4)
-            Text(store.t("Escribe lo que hay en tu cocina, en español o en inglés, y mira qué puedes cocinar.",
-                         "Write what's in your kitchen, in English or Spanish, and see what you can cook."))
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-        }
+        PapelPicado().padding(.top, 4)
     }
 
     private var inputRow: some View {

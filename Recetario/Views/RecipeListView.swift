@@ -167,11 +167,6 @@ struct RecipeListView: View {
                 .padding(.horizontal, -16)
             // The wordmark lives in the top bar now, so the deck shows on first open.
             if savedOnly {
-                Text(store.t("Tus milagros: las recetas que guardaste con el corazón, en este teléfono.",
-                             "Your milagros: the recipes you've saved with the heart, kept on this phone."))
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .padding(.top, 6)
                 if store.favorites.count >= 2 {
                     BuenasButton(action: shuffle)
                         .padding(.top, 6)
