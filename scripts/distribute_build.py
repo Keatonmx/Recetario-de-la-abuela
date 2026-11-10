@@ -114,8 +114,17 @@ def main():
         if attrs.get("isInternalGroup") and attrs.get("hasAccessToAllBuilds"):
             print(f"{name}: internal, already gets every build")
             continue
-        call("POST", f"/betaGroups/{g['id']}/relationships/builds",
-             json={"data": [{"type": "builds", "id": bid}]})
+        # TestFlight can answer 404 for a few minutes after a build finishes processing.
+        for _ in range(20):
+            status, _ = call("POST", f"/betaGroups/{g['id']}/relationships/builds", ok=(404,),
+                             json={"data": [{"type": "builds", "id": bid}]})
+            if status != 404:
+                break
+            print(f"{name}: TestFlight doesn't know build {a.build} yet, trying again in 30 seconds")
+            time.sleep(30)
+        else:
+            sys.exit(f"::error::TestFlight still didn't know build {a.build} after 10 minutes. "
+                     "Run the Distribute workflow again later.")
         print(f"{name}: added build {a.build}")
         external = external or not attrs.get("isInternalGroup")
     if not data["data"]:
