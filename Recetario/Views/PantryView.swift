@@ -87,7 +87,7 @@ struct PantryView: View {
                             Image("chile")
                                 .foregroundStyle(Self.chileColors[chile.name] ?? Color.chile)
                                 .accessibilityHidden(true)
-                            Text(chile.name).font(.slab(17, relativeTo: .headline))
+                            Text(chile.name).font(.fonda(17, relativeTo: .headline))
                             Spacer()
                             HeatMeter(level: chile.heat)
                         }

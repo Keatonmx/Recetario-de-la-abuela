@@ -151,7 +151,6 @@ struct RecipeDetailView: View {
                 Text(recipe.name)
                     .font(.rotulo(38, relativeTo: .largeTitle))
                     .foregroundStyle(store.rotuloColor(forCategory: recipe.category))
-                    .shadow(color: Color.inkShadow, radius: 0, x: 2, y: 2)
             }
             .accessibilityElement(children: .combine)
             .accessibilityAddTraits(.isHeader)
@@ -553,7 +552,7 @@ struct ServingsCard: View {
         let factor = store.factor(for: recipe.id)
         VStack(alignment: .leading, spacing: 12) {
             Text(store.t("¿PARA CUÁNTOS?", "HOW MANY?"))
-                .font(.slab(15, relativeTo: .headline))
+                .font(.fonda(15, relativeTo: .headline))
             if Scaler.base(recipe.text(store.lang).servings, lang: store.lang) != nil {
                 HStack {
                     HStack(spacing: 10) {
@@ -592,7 +591,7 @@ struct ServingsCard: View {
             Divider()
             HStack(spacing: 8) {
                 Text(store.t("MEDIDAS", "UNITS"))
-                    .font(.slab(12, relativeTo: .caption))
+                    .font(.fonda(12, relativeTo: .caption))
                     .foregroundStyle(.secondary)
                 unitsButton(store.t("Tazas · lb", "Cups · lb"), metric: false, label: store.t("Tazas y libras", "Cups and pounds"))
                 unitsButton(store.t("Gramos · l", "Grams · l"), metric: true, label: store.t("Gramos y litros", "Grams and liters"))

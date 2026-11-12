@@ -97,13 +97,13 @@ struct CardFlipView: View {
             // Header: number and name, smaller than the front.
             HStack(alignment: .center, spacing: 10) {
                 Text("\(recipe.number)")
-                    .font(.system(size: 20, weight: .regular, design: .serif))
+                    .font(.fonda(19, semibold: true))
                     .monospacedDigit()
                     .frame(width: 34, height: 34)
                     .overlay(Circle().strokeBorder(Color.ink, lineWidth: 1.5))
                 VStack(alignment: .leading, spacing: 1) {
                     Text(recipe.cardName.uppercased())
-                        .font(.slab(15))
+                        .font(.fonda(15))
                         .lineLimit(2)
                         .minimumScaleFactor(0.7)
                     Text(store.servings(recipe))

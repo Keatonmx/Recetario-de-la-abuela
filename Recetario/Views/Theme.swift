@@ -24,8 +24,11 @@ extension Color {
     static let paper = Color(light: 0xF5EDDF, dark: 0x140F21)
     static let card = Color(light: 0xFFFAF1, dark: 0x221A33)
     static let hairline = Color(light: 0xE2D5C1, dark: 0x3D3156)
-    /// The tab bar: the guardapolvo's pale añil wash by day, the ofrenda's morado cloth by night.
-    static let tabBar = Color(light: 0xE9EEF8, dark: 0x1A1030)
+    /// The tab bar: the painted añil guardapolvo by day, the ofrenda's morado cloth by night.
+    static let tabBar = Color(light: 0x1A3580, dark: 0x1A1030)
+    static let tabItem = Color(light: 0xC9D2EA, dark: 0x9A90AE)
+    /// The chosen tab: cempasúchil on the añil by day, rosa by night.
+    static let tabItemChosen = Color(light: 0xF2A900, dark: 0xFF5FAE)
 
     // Lotería cards are physical objects: light card stock and black ink in both themes.
     static let stock = Color(light: 0xFFFDF7, dark: 0xF5EDDF)

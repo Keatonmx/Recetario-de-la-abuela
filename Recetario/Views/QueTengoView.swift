@@ -329,7 +329,7 @@ struct MatchRow: View {
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 4) {
                 Text(recipe.cardName.uppercased())
-                    .font(.slab(14))
+                    .font(.fonda(14))
                     .foregroundStyle(Color.primary)
                     .multilineTextAlignment(.leading)
                 GeometryReader { geo in

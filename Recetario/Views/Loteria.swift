@@ -4,11 +4,11 @@ import CoreText
 
 // MARK: - Fonts
 
-/// Registers the bundled display faces: Shrikhand (hand-painted sign lettering)
-/// and Alfa Slab One (lotería card names).
+/// Registers the bundled display faces: Abril Fatface (big titles) and Oswald, the tall
+/// fonda-menu capitals (headings, lotería card names, numbers).
 enum BundledFonts {
     static func register() {
-        let names = ["Shrikhand-Regular", "AlfaSlabOne-Regular"]
+        let names = ["AbrilFatface-Regular", "Oswald-Medium", "Oswald-SemiBold"]
         for name in names {
             guard let url = Bundle.main.url(forResource: name, withExtension: "ttf") else {
                 assertionFailure("Missing font \(name).ttf in the app bundle")
@@ -20,14 +20,15 @@ enum BundledFonts {
 }
 
 extension Font {
-    /// Rótulo: hand-painted market-sign lettering, for big titles.
+    /// Rótulo: the big display serif, for titles.
     static func rotulo(_ size: CGFloat, relativeTo style: Font.TextStyle = .largeTitle) -> Font {
-        .custom("Shrikhand-Regular", size: size, relativeTo: style)
+        .custom("AbrilFatface-Regular", size: size, relativeTo: style)
     }
 
-    /// Heavy slab used for lotería card names, numbers and stamps.
-    static func slab(_ size: CGFloat, relativeTo style: Font.TextStyle = .headline) -> Font {
-        .custom("AlfaSlabOne-Regular", size: size, relativeTo: style)
+    /// Fonda: tall, narrow menu capitals for headings, lotería card names, numbers and stamps.
+    /// Set it in capitals with a little tracking.
+    static func fonda(_ size: CGFloat, relativeTo style: Font.TextStyle = .headline, semibold: Bool = false) -> Font {
+        .custom(semibold ? "Oswald-SemiBold" : "Oswald-Medium", size: size, relativeTo: style)
     }
 }
 
@@ -66,7 +67,7 @@ struct CardArt: View {
             }
             .overlay(alignment: .topLeading) {
                 Text("\(recipe.number)")
-                    .font(.system(size: numberSize, weight: .regular, design: .serif))
+                    .font(.fonda(numberSize, semibold: true))
                     .monospacedDigit()
                     .foregroundStyle(Color.ink)
                     .padding(.top, 4)
@@ -123,8 +124,8 @@ struct LoteriaCard: View {
                 }
             }
             Text(recipe.cardName.uppercased())
-                .font(.slab(big ? 17 : (compact ? 8.5 : 13.5)))
-                .tracking(compact ? 0 : 0.5)
+                .font(.fonda(big ? 18 : (compact ? 9 : 14)))
+                .tracking(compact ? 0.3 : 0.9)
                 .foregroundStyle(Color.ink)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
@@ -192,10 +193,10 @@ struct RotuloHeader: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(title)
-                .font(.rotulo(32, relativeTo: .title))
+            Text(title.uppercased())
+                .font(.fonda(26, relativeTo: .title, semibold: true))
+                .tracking(3)
                 .foregroundStyle(color)
-                .shadow(color: Color.inkShadow, radius: 0, x: 2, y: 2)
             TileStrip()
         }
         .accessibilityElement(children: .combine)

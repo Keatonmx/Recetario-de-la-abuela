@@ -32,6 +32,7 @@ struct WallBackground: View {
 /// The bottom of every tab, just above the tab bar: the guardapolvo by day, the edge of the
 /// ofrenda by night. It sits in front of the page, which ends above it and scrolls out from
 /// behind it, and the tab bar under it is solid on every screen so the tab names stay clear.
+/// By day the trim is thin: the añil tab bar under it is the rest of the guardapolvo.
 struct KitchenFloor: ViewModifier {
     @Environment(\.colorScheme) private var scheme
     private let band: CGFloat = 24
@@ -43,7 +44,7 @@ struct KitchenFloor: ViewModifier {
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 Group {
                     if scheme == .light {
-                        Guardapolvo().frame(height: band)
+                        Guardapolvo().frame(height: 9)
                     } else {
                         OfrendaEdge().frame(height: band).frame(height: band + reach, alignment: .bottom)
                     }
@@ -51,8 +52,26 @@ struct KitchenFloor: ViewModifier {
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
             }
-            .toolbarBackground(.visible, for: .tabBar)
-            .toolbarBackground(Color.tabBar, for: .tabBar)
+    }
+}
+
+/// The tab bar, solid on every screen (no see-through edge): añil with cempasúchil for the
+/// chosen tab by day, the ofrenda's morado by night, with the names in Oswald.
+enum TabBarStyle {
+    static func apply() {
+        let look = UITabBarAppearance()
+        look.configureWithOpaqueBackground()
+        look.backgroundColor = UIColor(Color.tabBar)
+        look.shadowColor = .clear
+        let name = UIFont(name: "Oswald-Medium", size: 11) ?? .systemFont(ofSize: 10, weight: .medium)
+        for item in [look.stackedLayoutAppearance, look.inlineLayoutAppearance, look.compactInlineLayoutAppearance] {
+            item.normal.iconColor = UIColor(Color.tabItem)
+            item.normal.titleTextAttributes = [.foregroundColor: UIColor(Color.tabItem), .font: name, .kern: 0.6]
+            item.selected.iconColor = UIColor(Color.tabItemChosen)
+            item.selected.titleTextAttributes = [.foregroundColor: UIColor(Color.tabItemChosen), .font: name, .kern: 0.6]
+        }
+        UITabBar.appearance().standardAppearance = look
+        UITabBar.appearance().scrollEdgeAppearance = look
     }
 }
 
@@ -84,16 +103,15 @@ struct Limewash: View {
     }
 }
 
-/// The painted band along the bottom of the wall: a deep añil cenefa under a cempasúchil
-/// stripe, just above the tab bar, which is the pale añil wash below it (Color.tabBar).
+/// The top of the painted band along the bottom of the wall: a cempasúchil stripe between
+/// two ink lines, then the añil that carries on as the tab bar (Color.tabBar).
 struct Guardapolvo: View {
     var body: some View {
         VStack(spacing: 0) {
             Rectangle().fill(Color.ink).frame(height: 1.5)
             Rectangle().fill(Color(hex6: 0xF2A900)).frame(height: 4)
             Rectangle().fill(Color.ink).frame(height: 1.5)
-            LinearGradient(colors: [Color(hex6: 0x2348A6), Color(hex6: 0x1A3580)], startPoint: .top, endPoint: .bottom)
-            Rectangle().fill(Color(hex6: 0x1A3580).opacity(0.55)).frame(height: 1)
+            Color.tabBar
         }
     }
 }

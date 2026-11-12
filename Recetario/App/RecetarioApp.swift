@@ -6,6 +6,7 @@ struct RecetarioApp: App {
 
     init() {
         BundledFonts.register()
+        TabBarStyle.apply()
     }
 
     var body: some Scene {
