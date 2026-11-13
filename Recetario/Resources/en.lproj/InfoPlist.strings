@@ -1,0 +1,2 @@
+/* Declares the app's en localization, so system text such as the back button follows the device language. */
+"CFBundleDisplayName" = "Recetario";
