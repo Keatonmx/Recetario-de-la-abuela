@@ -58,9 +58,9 @@ mexican,recipes,cocina,pozole,tamales,mole,birria,mariscos,aguachile,abuela,pres
 
 | Field | Value |
 |---|---|
-| Privacy Policy URL | https://keatonmx.github.io/Recetario-de-la-abuela/privacy.html |
-| Support URL | https://keatonmx.github.io/Recetario-de-la-abuela/support.html |
-| Marketing URL | https://keatonmx.github.io/Recetario-de-la-abuela/ (optional) |
+| Privacy Policy URL | https://redfernsoutpost.github.io/Recetario-de-la-abuela/privacy.html |
+| Support URL | https://redfernsoutpost.github.io/Recetario-de-la-abuela/support.html |
+| Marketing URL | https://redfernsoutpost.github.io/Recetario-de-la-abuela/ (optional) |
 
 ## App Privacy
 

@@ -1,0 +1,31 @@
+name: Store URLs
+
+# Shows the privacy, support and marketing links App Store Connect holds for the app, and with
+# fix on, moves any still on keatonmx.github.io to redfernsoutpost.github.io (scripts/store_urls.py).
+
+on:
+  workflow_dispatch:
+    inputs:
+      fix:
+        description: "Move old keatonmx.github.io links to the new address"
+        type: boolean
+        default: false
+
+jobs:
+  urls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install API helpers
+        run: pip install pyjwt cryptography requests
+      - name: Check the links
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          FIX: ${{ inputs.fix }}
+        run: python scripts/store_urls.py $([ "$FIX" = "true" ] && echo --fix)

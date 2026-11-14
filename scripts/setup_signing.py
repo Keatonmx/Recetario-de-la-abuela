@@ -37,7 +37,7 @@ from cryptography.x509.oid import NameOID
 
 API = "https://api.appstoreconnect.apple.com/v1"
 BUNDLE_ID = "com.keatonmx.recetario"
-REPO = "Keatonmx/Recetario-de-la-abuela"
+REPO = "RedfernsOutpost/Recetario-de-la-abuela"
 OUT_DIR = pathlib.Path.home() / "RecetarioSigning"
 
 

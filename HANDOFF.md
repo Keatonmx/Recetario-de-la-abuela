@@ -47,9 +47,13 @@ An iPhone app of traditional Mexican home cooking. Each recipe is a lotería car
 
 Pages:
 
-- Home: https://keatonmx.github.io/Recetario-de-la-abuela/
-- Privacy policy: https://keatonmx.github.io/Recetario-de-la-abuela/privacy.html
-- Support: https://keatonmx.github.io/Recetario-de-la-abuela/support.html
+- Home: https://redfernsoutpost.github.io/Recetario-de-la-abuela/
+- Privacy policy: https://redfernsoutpost.github.io/Recetario-de-la-abuela/privacy.html
+- Support: https://redfernsoutpost.github.io/Recetario-de-la-abuela/support.html
+
+The GitHub account was renamed from Keatonmx to RedfernsOutpost on 2026-11-13. GitHub Pages
+does not redirect, so the old keatonmx.github.io links are dead. The bundle ID stays
+`com.keatonmx.recetario` on purpose: it is tied to the App Store record and can't change.
 
 ## What you need to do
 
@@ -179,7 +183,7 @@ sizes and per-piece amounts unwrapped, because those shouldn't change.
 | `Recetario/Models/` | Recipe data, servings scaling, units, pantry search, and saved state |
 | `Recetario/Views/` | Lotería cards, recipe page, lists, ¿Qué tengo?, Despensa, and the theme |
 | `project.yml` | Xcode project definition (XcodeGen). The `.xcodeproj` is generated, not committed |
-| `.github/workflows/` | `ios-build.yml` (every push), `app-store-screenshots.yml`, `testflight.yml` |
+| `.github/workflows/` | `ios-build.yml` (every push), `app-store-screenshots.yml`, `testflight.yml`, `distribute.yml`, `store-urls.yml` (checks the App Store Connect links) |
 | `docs/` | GitHub Pages site (privacy, support) and `app-store.md`, which has the listing text |
 
 **Hand-written spots that need updating with new recipes or sections.**
